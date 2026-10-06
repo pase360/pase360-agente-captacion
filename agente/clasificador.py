@@ -1,3 +1,4 @@
+```python
 from .util import normalizar_texto
 
 
@@ -229,12 +230,12 @@ EXCLUDE_WORDS = (
     "nacional",
     "jardin de infantes",
     "jardín de infantes",
-    "escuela",
     "instituto de enseñanza",
     "instituto educativo",
     "instituto educacional",
     "universidad",
     "facultad",
+    "escuela",
     "colegio secundario",
     "colegio primario",
 )
@@ -297,7 +298,6 @@ COMMERCE_AMENITIES = {
 }
 
 GENERATOR_AMENITIES = {
-    # Organizaciones reales de afiliados/asociados.
     "social_centre",
 }
 
@@ -346,6 +346,7 @@ def _tags(c):
         "office": normalizar_texto(tags.get("office", "")),
         "sport": normalizar_texto(tags.get("sport", "")),
         "sports": normalizar_texto(tags.get("sports", "")),
+        "tourism": normalizar_texto(tags.get("tourism", "")),
         "craft": normalizar_texto(tags.get("craft", "")),
     }
 
@@ -391,7 +392,7 @@ def _es_club_deportivo(c, texto):
     if _contiene(texto, CLUB_WORDS):
         return True
 
-    # Un leisure=sports_centre o stadium puede ser una institución
+    # Un sports_centre o stadium puede ser una institución
     # deportiva, pero no cualquier gimnasio comercial.
     if tags["leisure"] in GENERATOR_LEISURE:
         return True
@@ -465,8 +466,7 @@ def clasificar(c):
     excluidos = _contiene(texto, EXCLUDE_WORDS)
 
     if excluidos:
-        # Excepción importante:
-        # "colegio profesional" NO debe caer por la palabra colegio.
+        # "colegio profesional" sí es un generador válido.
         if not _es_colegio_profesional(texto):
             return "descartado", f"categoria_excluida:{','.join(excluidos[:3])}"
 
@@ -474,10 +474,8 @@ def clasificar(c):
     # 2. CÁMARAS
     # --------------------------------------------------------
     # Una cámara NO es generador.
-    #
-    # La dejamos como dudosa para que eventualmente pueda servir
-    # como fuente para encontrar sus comercios, pero nunca como
-    # contacto generador.
+    # Se conserva como dudosa para una futura etapa de
+    # captación de comercios asociados a cámaras.
     # --------------------------------------------------------
     camaras = _contiene(
         texto,
@@ -571,3 +569,4 @@ def clasificar(c):
     # 12. TODO LO DEMÁS QUEDA EN REVISIÓN
     # --------------------------------------------------------
     return "dudoso", "sin_indicio_suficiente"
+```
