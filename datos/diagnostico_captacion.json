@@ -1,20 +1,20 @@
 {
   "por_tipo": {
-    "comercio": 253,
-    "generador": 67,
-    "dudoso": 145,
+    "comercio": 255,
+    "generador": 34,
+    "dudoso": 177,
     "descartado": 28,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 13,
-    "sin_email": 307,
-    "requiere_decision": 145,
+    "listo_para_contactar": 12,
+    "sin_email": 277,
+    "requiere_decision": 177,
     "descartado": 28
   },
   "sin_email_por_tipo": {
-    "comercio": 242,
-    "generador": 65,
+    "comercio": 244,
+    "generador": 33,
     "otro": 0
   },
   "descartados_por_motivo": {
@@ -97,62 +97,12 @@
       "motivo": "colegio_profesional"
     },
     {
-      "name": "Club Estudiantes",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Polideportivo Carlos Ceruti",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "TDS",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Movimiento Activo",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Asociación Cordobesa de Aikido",
-      "email": "aikidomedina@gmail.com",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Centro Vecinal de Villa Adela - Playón deportivo",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "María Pía Gym",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
       "name": "Club Atlético Yapeyú",
       "email": "",
       "motivo": "club_deportivo"
     },
     {
-      "name": "Polideportivo Corral de Palos",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
       "name": "Club Atlético General Paz -Junior´s",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Soccer World. Complejo deportivo Las Casuarinas",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Polideportivo UTN",
       "email": "",
       "motivo": "club_deportivo"
     },
@@ -172,12 +122,62 @@
       "motivo": "club_deportivo"
     },
     {
-      "name": "Avista",
+      "name": "Córdoba Rugby Club",
       "email": "",
       "motivo": "club_deportivo"
     },
     {
-      "name": "Córdoba Rugby Club",
+      "name": "Club Atlético Palermo",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Club de Boxeadores",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Estadio Francisco Cabasés",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Club Universitario de Córdoba",
+      "email": "administracion@clubuniversitariocba.com",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Club Argentino Peñarol",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Club General Paz Juniors",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Club Atlético Libertad",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Club Barrio Parque",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Club Atlético Las Palmas",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Club Quilmes - Villa Allende",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Tala Rugby Club",
       "email": "",
       "motivo": "club_deportivo"
     }
@@ -488,22 +488,22 @@
       "motivo": "sin_indicio_suficiente"
     }
   ],
-  "duplicados": 33,
+  "duplicados": 32,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "clasificados": 493,
+  "clasificados": 494,
   "cuadre": {
-    "clasificacion_total": 493,
-    "estado_total": 493,
+    "clasificacion_total": 494,
+    "estado_total": 494,
     "cuadra": true
   },
-  "listos_detectados": 13,
-  "listos_seleccionados": 13,
+  "listos_detectados": 12,
+  "listos_seleccionados": 12,
   "listos_comercio": 11,
-  "listos_generador": 2,
+  "listos_generador": 1,
   "encontrados": 526,
   "procesados": 526,
-  "nuevos": 465,
+  "nuevos": 466,
   "descartados": 28,
-  "excluidos": 33
+  "excluidos": 32
 }

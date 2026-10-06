@@ -1,33 +1,6 @@
 [
   {
     "source": "OpenStreetMap",
-    "source_id": "3043602734",
-    "name": "Asociación Cordobesa de Aikido",
-    "website": "http://www.aikidoaikido.com.ar/",
-    "email": "aikidomedina@gmail.com",
-    "phone": "",
-    "direccion": "Avenida Marcelo T. de Alvear 577",
-    "lat": -31.4212527,
-    "lon": -64.1906053,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "577",
-      "addr:street": "Avenida Marcelo T. de Alvear",
-      "leisure": "sports_centre",
-      "name": "Asociación Cordobesa de Aikido",
-      "opening_hours": "Mo,We,Fr 18:30-20:45; Tu,Th 11:00-12:00",
-      "source": "http://www.aikidoaikido.com.ar/",
-      "sport": "aikido;judo;kendo;iaido",
-      "website": "http://www.aikidoaikido.com.ar/"
-    },
-    "website_final": "http://www.aikidoaikido.com.ar/",
-    "email_source": "sitio_web",
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "listo_para_contactar"
-  },
-  {
-    "source": "OpenStreetMap",
     "source_id": "163732495",
     "name": "Club Universitario de Córdoba",
     "website": "https://clubuniversitariocba.com/",
@@ -413,25 +386,6 @@
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "164874619",
-    "name": "ACV",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.2807059,
-    "lon": -64.2357453,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "ACV",
-      "sport": "motor"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
     "source_id": "287164410",
     "name": "Anexo Tala Rugby Club",
     "website": "",
@@ -443,100 +397,6 @@
     "tags": {
       "leisure": "sports_centre",
       "name": "Anexo Tala Rugby Club"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "12138112970",
-    "name": "Avista",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4252461,
-    "lon": -64.1933687,
-    "tags": {
-      "check_date": "2024-08-24",
-      "leisure": "sports_centre",
-      "name": "Avista",
-      "sport": "climbing"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "239154835",
-    "name": "Campo de Deportes La Salle",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3548226,
-    "lon": -64.2626468,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Campo de Deportes La Salle",
-      "wheelchair": "limited"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3085039447",
-    "name": "Centro Vecinal de Villa Adela - Playón deportivo",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4369698,
-    "lon": -64.2472271,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Centro Vecinal de Villa Adela - Playón deportivo",
-      "sport": "basketball"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "286710524",
-    "name": "Club Alas Argentinas",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4190885,
-    "lon": -64.2285762,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Club Alas Argentinas"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "286697254",
-    "name": "Club All Boys",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.439678,
-    "lon": -64.2264513,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Club All Boys"
     },
     "tipo": "generador",
     "clasificacion_motivo": "club_deportivo",
@@ -767,24 +627,6 @@
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "238822107",
-    "name": "Club Banco de Córdoba",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3395536,
-    "lon": -64.2755281,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Club Banco de Córdoba"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
     "source_id": "189400292",
     "name": "Club Barrio Parque",
     "website": "",
@@ -872,24 +714,6 @@
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "1502351834",
-    "name": "Club Estudiantes",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3655204,
-    "lon": -64.1974984,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Club Estudiantes"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
     "source_id": "182768557",
     "name": "Club General Paz Juniors",
     "website": "",
@@ -902,24 +726,6 @@
       "leisure": "sports_centre",
       "name": "Club General Paz Juniors",
       "sport": "multi"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "208508478",
-    "name": "Club La Tablada",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3867091,
-    "lon": -64.2334506,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Club La Tablada"
     },
     "tipo": "generador",
     "clasificacion_motivo": "club_deportivo",
@@ -987,48 +793,6 @@
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "154253279",
-    "name": "Complejo Don Balon",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3554324,
-    "lon": -64.2304242,
-    "tags": {
-      "landuse": "meadow",
-      "leisure": "sports_centre",
-      "name": "Complejo Don Balon",
-      "sport": "soccer"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "295761430",
-    "name": "Córdoba Paddle",
-    "website": "",
-    "email": "",
-    "phone": "+543514649853",
-    "direccion": "Del Comercio 857",
-    "lat": -31.4432385,
-    "lon": -64.1835664,
-    "tags": {
-      "addr:housenumber": "857",
-      "addr:street": "Del Comercio",
-      "leisure": "sports_centre",
-      "name": "Córdoba Paddle",
-      "phone": "+543514649853",
-      "sport": "paddle_tennis"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
     "source_id": "12456536685",
     "name": "Córdoba Rugby Club",
     "website": "",
@@ -1043,42 +807,6 @@
       "addr:street": "Avenida Juan B. Justo",
       "club": "sport",
       "name": "Córdoba Rugby Club"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "248393806",
-    "name": "Espacio Quality",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4446777,
-    "lon": -64.1953359,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Espacio Quality"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "208364438",
-    "name": "Estadio Club Atalaya",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3376834,
-    "lon": -64.2525086,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Estadio Club Atalaya"
     },
     "tipo": "generador",
     "clasificacion_motivo": "club_deportivo",
@@ -1109,97 +837,6 @@
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "182759265",
-    "name": "Estadio Julio César Villagra",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4034972,
-    "lon": -64.206305,
-    "tags": {
-      "leisure": "stadium",
-      "name": "Estadio Julio César Villagra",
-      "sport": "soccer",
-      "wheelchair": "limited",
-      "wikidata": "Q1369290",
-      "wikimedia_commons": "Category:Estadio Julio César Villagra",
-      "wikipedia": "es:Estadio Julio César Villagra"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "182766546",
-    "name": "Estadio La Talquera",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4206585,
-    "lon": -64.126826,
-    "tags": {
-      "leisure": "stadium",
-      "name": "Estadio La Talquera",
-      "operator": "C.A. Unión San Vicente",
-      "operator:wikidata": "Q5774886",
-      "sport": "soccer"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "154248210",
-    "name": "Estadio Mario Alberto Kempes",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3689196,
-    "lon": -64.2461537,
-    "tags": {
-      "leisure": "stadium",
-      "name": "Estadio Mario Alberto Kempes",
-      "sport": "multi",
-      "wikidata": "Q1062157",
-      "wikimedia_commons": "Category:Estadio Córdoba",
-      "wikipedia": "es:Estadio Mario Alberto Kempes"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "31474812",
-    "name": "Estadio Monumental Presidente Perón",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Jujuy 2602",
-    "lat": -31.38367,
-    "lon": -64.180403,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "2602",
-      "addr:street": "Jujuy",
-      "leisure": "stadium",
-      "name": "Estadio Monumental Presidente Perón",
-      "sport": "soccer",
-      "wikidata": "Q3495828",
-      "wikimedia_commons": "Category:Estadio Juan Domingo Perón (Instituto)",
-      "wikipedia": "es:Estadio Juan Domingo Perón"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
     "source_id": "5052437621",
     "name": "Gremio Galeria",
     "website": "",
@@ -1222,133 +859,6 @@
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "265237835",
-    "name": "Hindu Club",
-    "website": "",
-    "email": "",
-    "phone": "+54 351 451 9402",
-    "direccion": "Sarmiento 1250",
-    "lat": -31.4110822,
-    "lon": -64.1676231,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "1250",
-      "addr:postcode": "X5004EYP",
-      "addr:street": "Sarmiento",
-      "leisure": "sports_centre",
-      "name": "Hindu Club",
-      "phone": "+54 351 451 9402"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "163098853",
-    "name": "Jockey Club Córdoba",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4545858,
-    "lon": -64.1818369,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Jockey Club Córdoba",
-      "wikidata": "Q8430339",
-      "wikipedia": "es:Jockey Club Córdoba"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "183183622",
-    "name": "La Gran 7",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4348503,
-    "lon": -64.1812498,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "La Gran 7",
-      "sport": "soccer"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "14042840990",
-    "name": "La Raquette",
-    "website": "",
-    "email": "",
-    "phone": "+54 9 3512 94-1013",
-    "direccion": "Mariano Moreno 376",
-    "lat": -31.4166034,
-    "lon": -64.199265,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "376",
-      "addr:street": "Mariano Moreno",
-      "leisure": "sports_centre",
-      "name": "La Raquette",
-      "phone": "+54 9 3512 94-1013",
-      "sport": "padel;soccer;squash;table_tennis"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3279552571",
-    "name": "María Pía Gym",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.2994477,
-    "lon": -64.2850267,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "María Pía Gym"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "1912987815",
-    "name": "Movimiento Activo",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Avenida del Piamonte 5022",
-    "lat": -31.3770692,
-    "lon": -64.2561695,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "5022",
-      "addr:postcode": "5021",
-      "addr:street": "Avenida del Piamonte",
-      "leisure": "sports_centre",
-      "name": "Movimiento Activo",
-      "source": "survey",
-      "sport": "gymnastics"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
     "source_id": "4401595795",
     "name": "Mutual de los Docentes",
     "website": "",
@@ -1363,115 +873,6 @@
     },
     "tipo": "generador",
     "clasificacion_motivo": "institucional:mutual",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "241676026",
-    "name": "Natación",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4133436,
-    "lon": -64.2155445,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Natación",
-      "sport": "swimming"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "1502500177",
-    "name": "Polideportivo Carlos Ceruti",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Martín Alonso Pinzón 1050",
-    "lat": -31.3916961,
-    "lon": -64.1937445,
-    "tags": {
-      "addr:city": "Ciudad de Cordoba",
-      "addr:housenumber": "1050",
-      "addr:postcode": "5000",
-      "addr:street": "Martín Alonso Pinzón",
-      "alt_name": "Polideportivo Municipal Carlos Cerutti",
-      "capacity": "3500",
-      "description": "Estadio cubierto. Su atracción principal es basquet, también se pueden practicar deportes como: el voley, gimnasia rítmica y handbal.",
-      "leisure": "sports_centre",
-      "name": "Polideportivo Carlos Ceruti",
-      "sport": "basketball;volleyball;handball",
-      "wikidata": "Q7209718",
-      "wikipedia": "es:Polideportivo Municipal Carlos Cerutti"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4096433529",
-    "name": "Polideportivo Corral de Palos",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Ernesto Enrique Guastoni 3498",
-    "lat": -31.4394202,
-    "lon": -64.1411236,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housename": "Polideportivo Corral de Palos",
-      "addr:housenumber": "3498",
-      "addr:postcode": "5014",
-      "addr:street": "Ernesto Enrique Guastoni",
-      "building": "public",
-      "designation": "Polideportivo",
-      "leisure": "sports_centre",
-      "name": "Polideportivo Corral de Palos"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "208507520",
-    "name": "Polideportivo Padre Luis Maria Monti",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3841484,
-    "lon": -64.2172351,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Polideportivo Padre Luis Maria Monti",
-      "sport": "multi"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "6104758567",
-    "name": "Polideportivo UTN",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.490275,
-    "lon": -64.2514334,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Polideportivo UTN"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
     "estado": "sin_email"
   },
   {
@@ -1573,26 +974,6 @@
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "5972982842",
-    "name": "Soccer World. Complejo deportivo Las Casuarinas",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3042783,
-    "lon": -64.1273894,
-    "tags": {
-      "alt_name": "La Pepa",
-      "leisure": "sports_centre",
-      "name": "Soccer World. Complejo deportivo Las Casuarinas",
-      "sport": "soccer"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
     "source_id": "5606121221",
     "name": "SUTEP Sindicato Espect. públicos",
     "website": "",
@@ -1646,63 +1027,6 @@
       "wikidata": "Q7678745",
       "wikimedia_commons": "Category:Tala Rugby Club",
       "wikipedia": "es:Tala Rugby Club"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "1912984924",
-    "name": "TDS",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3655689,
-    "lon": -64.2788834,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "TDS",
-      "sport": "gymnastics"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "287799146",
-    "name": "UCFA",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3218004,
-    "lon": -64.1896389,
-    "tags": {
-      "int_name": "Union Cordobesa de Fútbol Amateur",
-      "leisure": "sports_centre",
-      "name": "UCFA",
-      "sport": "soccer"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "139314466",
-    "name": "UN Paddle Club",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4368823,
-    "lon": -64.181956,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "UN Paddle Club"
     },
     "tipo": "generador",
     "clasificacion_motivo": "club_deportivo",
@@ -1846,6 +1170,25 @@
     "tipo": "comercio",
     "clasificacion_motivo": "amenity:pharmacy",
     "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "164874619",
+    "name": "ACV",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.2807059,
+    "lon": -64.2357453,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "ACV",
+      "sport": "motor"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
   },
   {
     "source": "OpenStreetMap",
@@ -2174,6 +1517,33 @@
   },
   {
     "source": "OpenStreetMap",
+    "source_id": "3043602734",
+    "name": "Asociación Cordobesa de Aikido",
+    "website": "http://www.aikidoaikido.com.ar/",
+    "email": "aikidomedina@gmail.com",
+    "phone": "",
+    "direccion": "Avenida Marcelo T. de Alvear 577",
+    "lat": -31.4212527,
+    "lon": -64.1906053,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "577",
+      "addr:street": "Avenida Marcelo T. de Alvear",
+      "leisure": "sports_centre",
+      "name": "Asociación Cordobesa de Aikido",
+      "opening_hours": "Mo,We,Fr 18:30-20:45; Tu,Th 11:00-12:00",
+      "source": "http://www.aikidoaikido.com.ar/",
+      "sport": "aikido;judo;kendo;iaido",
+      "website": "http://www.aikidoaikido.com.ar/"
+    },
+    "website_final": "http://www.aikidoaikido.com.ar/",
+    "email_source": "sitio_web",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
     "source_id": "4692975242",
     "name": "ATLARES Crowdfunding Bitcoin & Networking",
     "website": "www.atlares.com",
@@ -2195,6 +1565,26 @@
       "website": "www.atlares.com"
     },
     "email_source": "OpenStreetMap",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "12138112970",
+    "name": "Avista",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4252461,
+    "lon": -64.1933687,
+    "tags": {
+      "check_date": "2024-08-24",
+      "leisure": "sports_centre",
+      "name": "Avista",
+      "sport": "climbing"
+    },
     "tipo": "dudoso",
     "clasificacion_motivo": "sin_indicio_suficiente",
     "estado": "requiere_decision"
@@ -2648,6 +2038,25 @@
   },
   {
     "source": "OpenStreetMap",
+    "source_id": "239154835",
+    "name": "Campo de Deportes La Salle",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3548226,
+    "lon": -64.2626468,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Campo de Deportes La Salle",
+      "wheelchair": "limited"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
     "source_id": "267933636",
     "name": "Cancha Auxiliar",
     "website": "",
@@ -2967,7 +2376,7 @@
       "addr:street": "Leopoldo Lugones",
       "amenity": "community_centre",
       "name": "Centro Cultural Córdoba",
-      "opening_hours": "Tu-Su 10:00-13:00 17:30-20:30",
+      "opening_hours": "Tu-Su 10:00-13:00, 17:30-20:30",
       "phone": "+54 351 434 3518"
     },
     "tipo": "dudoso",
@@ -2978,16 +2387,25 @@
     "source": "OpenStreetMap",
     "source_id": "9208331481",
     "name": "Centro Cultural La Piojera",
-    "website": "",
-    "email": "",
+    "website": "https://linktr.ee/lapiojecc",
+    "email": "press@linktr.ee",
     "phone": "",
-    "direccion": "",
-    "lat": -31.4075691,
-    "lon": -64.2041398,
+    "direccion": "Avenida Colón 1559",
+    "lat": -31.4075809,
+    "lon": -64.2041285,
     "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "1559",
+      "addr:street": "Avenida Colón",
       "amenity": "community_centre",
-      "name": "Centro Cultural La Piojera"
+      "contact:instagram": "lapiojeracc",
+      "name": "Centro Cultural La Piojera",
+      "website": "https://linktr.ee/lapiojecc",
+      "wheelchair": "yes",
+      "wikimedia_commons": "File:Fachada_de_Cine_Moderno_La_Piojera,_2025.jpg"
     },
+    "website_final": "https://linktr.ee/lapiojecc",
+    "email_source": "sitio_web",
     "tipo": "dudoso",
     "clasificacion_motivo": "sin_indicio_suficiente",
     "estado": "requiere_decision"
@@ -3185,6 +2603,25 @@
       "building:levels": "1",
       "community_centre": "community_hall",
       "name": "Centro vecinal de Quintas Capillitas"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3085039447",
+    "name": "Centro Vecinal de Villa Adela - Playón deportivo",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4369698,
+    "lon": -64.2472271,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Centro Vecinal de Villa Adela - Playón deportivo",
+      "sport": "basketball"
     },
     "tipo": "dudoso",
     "clasificacion_motivo": "sin_indicio_suficiente",
@@ -3556,6 +2993,42 @@
   },
   {
     "source": "OpenStreetMap",
+    "source_id": "286710524",
+    "name": "Club Alas Argentinas",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4190885,
+    "lon": -64.2285762,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Alas Argentinas"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "286697254",
+    "name": "Club All Boys",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.439678,
+    "lon": -64.2264513,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club All Boys"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
     "source_id": "262972921",
     "name": "Club Argüello Juniors",
     "website": "",
@@ -3568,6 +3041,24 @@
       "building": "yes",
       "club": "sport",
       "name": "Club Argüello Juniors"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "238822107",
+    "name": "Club Banco de Córdoba",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3395536,
+    "lon": -64.2755281,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Banco de Córdoba"
     },
     "tipo": "dudoso",
     "clasificacion_motivo": "sin_indicio_suficiente",
@@ -3605,6 +3096,42 @@
     "tags": {
       "amenity": "community_centre",
       "name": "Club de Escribanos"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1502351834",
+    "name": "Club Estudiantes",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3655204,
+    "lon": -64.1974984,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Estudiantes"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "208508478",
+    "name": "Club La Tablada",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3867091,
+    "lon": -64.2334506,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club La Tablada"
     },
     "tipo": "dudoso",
     "clasificacion_motivo": "sin_indicio_suficiente",
@@ -3737,6 +3264,26 @@
       "alt_name": "CP",
       "name": "Communication Partner SRL",
       "office": "company"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "154253279",
+    "name": "Complejo Don Balon",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3554324,
+    "lon": -64.2304242,
+    "tags": {
+      "landuse": "meadow",
+      "leisure": "sports_centre",
+      "name": "Complejo Don Balon",
+      "sport": "soccer"
     },
     "tipo": "dudoso",
     "clasificacion_motivo": "sin_indicio_suficiente",
@@ -3995,6 +3542,28 @@
     "tipo": "comercio",
     "clasificacion_motivo": "amenity:fast_food",
     "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "295761430",
+    "name": "Córdoba Paddle",
+    "website": "",
+    "email": "",
+    "phone": "+543514649853",
+    "direccion": "Del Comercio 857",
+    "lat": -31.4432385,
+    "lon": -64.1835664,
+    "tags": {
+      "addr:housenumber": "857",
+      "addr:street": "Del Comercio",
+      "leisure": "sports_centre",
+      "name": "Córdoba Paddle",
+      "phone": "+543514649853",
+      "sport": "paddle_tennis"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
   },
   {
     "source": "OpenStreetMap",
@@ -4405,6 +3974,29 @@
   },
   {
     "source": "OpenStreetMap",
+    "source_id": "4512893281",
+    "name": "El Atajo",
+    "website": "",
+    "email": "",
+    "phone": "+54 351 6207882",
+    "direccion": "Nicanor Carranza 3408",
+    "lat": -31.3826666,
+    "lon": -64.2262966,
+    "tags": {
+      "addr:housenumber": "3408",
+      "addr:street": "Nicanor Carranza",
+      "amenity": "bar",
+      "check_date": "2026-08-01",
+      "contact:instagram": "elatajo",
+      "name": "El Atajo",
+      "phone": "+54 351 6207882"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:bar",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
     "source_id": "4679449839",
     "name": "El Bosque",
     "website": "",
@@ -4676,6 +4268,24 @@
   },
   {
     "source": "OpenStreetMap",
+    "source_id": "248393806",
+    "name": "Espacio Quality",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4446777,
+    "lon": -64.1953359,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Espacio Quality"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "spa",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
     "source_id": "3586965280",
     "name": "Espacio San Miguel",
     "website": "",
@@ -4711,6 +4321,115 @@
     "tipo": "comercio",
     "clasificacion_motivo": "craft:winery",
     "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "208364438",
+    "name": "Estadio Club Atalaya",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3376834,
+    "lon": -64.2525086,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Estadio Club Atalaya"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "182759265",
+    "name": "Estadio Julio César Villagra",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4034972,
+    "lon": -64.206305,
+    "tags": {
+      "leisure": "stadium",
+      "name": "Estadio Julio César Villagra",
+      "sport": "soccer",
+      "wheelchair": "limited",
+      "wikidata": "Q1369290",
+      "wikimedia_commons": "Category:Estadio Julio César Villagra",
+      "wikipedia": "es:Estadio Julio César Villagra"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "182766546",
+    "name": "Estadio La Talquera",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4206585,
+    "lon": -64.126826,
+    "tags": {
+      "leisure": "stadium",
+      "name": "Estadio La Talquera",
+      "operator": "C.A. Unión San Vicente",
+      "operator:wikidata": "Q5774886",
+      "sport": "soccer"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "154248210",
+    "name": "Estadio Mario Alberto Kempes",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3689196,
+    "lon": -64.2461537,
+    "tags": {
+      "leisure": "stadium",
+      "name": "Estadio Mario Alberto Kempes",
+      "sport": "multi",
+      "wikidata": "Q1062157",
+      "wikimedia_commons": "Category:Estadio Córdoba",
+      "wikipedia": "es:Estadio Mario Alberto Kempes"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "31474812",
+    "name": "Estadio Monumental Presidente Perón",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Jujuy 2602",
+    "lat": -31.38367,
+    "lon": -64.180403,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "2602",
+      "addr:street": "Jujuy",
+      "leisure": "stadium",
+      "name": "Estadio Monumental Presidente Perón",
+      "sport": "soccer",
+      "wikidata": "Q3495828",
+      "wikimedia_commons": "Category:Estadio Juan Domingo Perón (Instituto)",
+      "wikipedia": "es:Estadio Juan Domingo Perón"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
   },
   {
     "source": "OpenStreetMap",
@@ -5897,21 +5616,20 @@
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "6693597068",
+    "source_id": "1564545876",
     "name": "Grupo Scout Maestro Scout Adalberto O. López",
     "website": "",
     "email": "",
     "phone": "",
     "direccion": "Juan Sarachaga 1055",
-    "lat": -31.3903181,
-    "lon": -64.1887141,
+    "lat": -31.3902014,
+    "lon": -64.1885822,
     "tags": {
       "addr:housenumber": "1055",
       "addr:street": "Juan Sarachaga",
       "amenity": "community_centre",
       "club": "scout",
       "community_centre": "home_club",
-      "fixme": "revisar posición y direccón",
       "name": "Grupo Scout Maestro Scout Adalberto O. López",
       "network": "Scouts de Argentina",
       "opening_hours": "Sa 15:00-18:00",
@@ -6531,6 +6249,29 @@
   },
   {
     "source": "OpenStreetMap",
+    "source_id": "265237835",
+    "name": "Hindu Club",
+    "website": "",
+    "email": "",
+    "phone": "+54 351 451 9402",
+    "direccion": "Sarmiento 1250",
+    "lat": -31.4110822,
+    "lon": -64.1676231,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "1250",
+      "addr:postcode": "X5004EYP",
+      "addr:street": "Sarmiento",
+      "leisure": "sports_centre",
+      "name": "Hindu Club",
+      "phone": "+54 351 451 9402"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
     "source_id": "241676033",
     "name": "Hockey",
     "website": "",
@@ -6727,6 +6468,247 @@
     },
     "tipo": "comercio",
     "clasificacion_motivo": "amenity:clinic",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3724741996",
+    "name": "Instituto Oulton",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4217545,
+    "lon": -64.1896925,
+    "tags": {
+      "amenity": "clinic",
+      "check_date": "2026-05-14",
+      "healthcare": "clinic",
+      "name": "Instituto Oulton"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:clinic",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4367038592",
+    "name": "IT! Italia",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Avenida Colón 628",
+    "lat": -31.4110111,
+    "lon": -64.191646,
+    "tags": {
+      "addr:housenumber": "628",
+      "addr:street": "Avenida Colón",
+      "amenity": "restaurant",
+      "cuisine": "italian_pizza;italian",
+      "internet_access": "wlan",
+      "name": "IT! Italia",
+      "opening_hours": "Mo-Th 07:00-01:00; Fr 07:00-03:00; Sa 08:00-03:00; Su 08:00-01:00"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:restaurant",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "11336753174",
+    "name": "Iteen Argentina",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4140014,
+    "lon": -64.1696244,
+    "tags": {
+      "craft": "photographer",
+      "name": "Iteen Argentina"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "craft:photographer",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "2795411530",
+    "name": "Jerome Brew Pub Express Córdoba",
+    "website": "",
+    "email": "",
+    "phone": "+54 9 351 518 0354",
+    "direccion": "Avenida Marcelo T. de Alvear 545",
+    "lat": -31.4213376,
+    "lon": -64.1908733,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "545",
+      "addr:postcode": "5000",
+      "addr:street": "Avenida Marcelo T. de Alvear",
+      "amenity": "bar",
+      "name": "Jerome Brew Pub Express Córdoba",
+      "note": "Happy Hour 18:00-21:00 Cash Only",
+      "opening_hours": "Mo-Su 18:00-04:30",
+      "phone": "+54 9 351 518 0354",
+      "source": "https://www.facebook.com/JeromeBrewCba/info"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:bar",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "11338994549",
+    "name": "Jockey Club",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4130733,
+    "lon": -64.1860156,
+    "tags": {
+      "name": "Jockey Club",
+      "office": "company"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "163098853",
+    "name": "Jockey Club Córdoba",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4545858,
+    "lon": -64.1818369,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Jockey Club Córdoba",
+      "wikidata": "Q8430339",
+      "wikipedia": "es:Jockey Club Córdoba"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "10966130232",
+    "name": "Josh",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4357244,
+    "lon": -64.1668929,
+    "tags": {
+      "craft": "blacksmith",
+      "name": "Josh"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "craft:blacksmith",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "6168734418",
+    "name": "José Luis",
+    "website": "",
+    "email": "",
+    "phone": "4743958",
+    "direccion": "",
+    "lat": -31.3895266,
+    "lon": -64.173773,
+    "tags": {
+      "craft": "upholsterer",
+      "name": "José Luis",
+      "phone": "4743958"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "craft:upholsterer",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "12760086447",
+    "name": "Katiusha",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4177384,
+    "lon": -64.1917403,
+    "tags": {
+      "craft": "winery",
+      "name": "Katiusha"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "craft:winery",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "5379864519",
+    "name": "Kinesiología Fisioterapia Odontología",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Bulevar Los Granaderos",
+    "lat": -31.3846697,
+    "lon": -64.1965471,
+    "tags": {
+      "addr:street": "Bulevar Los Granaderos",
+      "amenity": "dentist",
+      "healthcare": "dentist",
+      "name": "Kinesiología Fisioterapia Odontología"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:dentist",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4364098206",
+    "name": "Kiosco y comidas Keko's",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4373524,
+    "lon": -64.1686579,
+    "tags": {
+      "amenity": "restaurant",
+      "cuisine": "pizza",
+      "name": "Kiosco y comidas Keko's"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:restaurant",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4578595892",
+    "name": "Káapeh",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Chile 159",
+    "lat": -31.4303536,
+    "lon": -64.1876128,
+    "tags": {
+      "addr:housenumber": "159",
+      "addr:postcode": "5000",
+      "addr:street": "Chile",
+      "amenity": "cafe",
+      "name": "Káapeh",
+      "opening_hours": "Mo-Fr 07:15-13:00, 17:00-21:00; Sa 08:00-13:00"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:cafe",
     "estado": "sin_email"
   }
 ]
