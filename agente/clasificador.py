@@ -1,4 +1,3 @@
-```python
 from .util import normalizar_texto
 
 
@@ -572,4 +571,3 @@ def clasificar(c):
     # 12. TODO LO DEMÁS QUEDA EN REVISIÓN
     # --------------------------------------------------------
     return "dudoso", "sin_indicio_suficiente"
-```
