@@ -2,17 +2,12 @@
   {
     "name": "Asociación Cordobesa de Aikido",
     "tipo": "generador",
-    "email": "//cdn.jsdelivr.net/npm/photoswipe@5.4.3"
+    "email": "aikidomedina@gmail.com"
   },
   {
-    "name": "Cineclub Municipal Hugo del Carril",
+    "name": "ESCUELA PROVINCIA DE FORMOSA",
     "tipo": "generador",
-    "email": "administracion@cineclubmunicipal.org.ar"
-  },
-  {
-    "name": "Club Milanesa",
-    "tipo": "generador",
-    "email": "info@elclubdelamilanesa.com"
+    "email": "primariaformosa@hotmail.com.ar"
   },
   {
     "name": "Instituto Privado DEÁN FUNES",
@@ -25,9 +20,19 @@
     "email": "info@institutodeanfunes.edu.com"
   },
   {
-    "name": "SushiClub",
+    "name": "Jardín Infantes Juan Mantovani",
     "tipo": "generador",
-    "email": "contacto@sushiclub.com.ar"
+    "email": "informes@mantovani.edu.ar"
+  },
+  {
+    "name": "Puente de Estrellas",
+    "tipo": "generador",
+    "email": "puentedeestrellas.micael@gmail.com"
+  },
+  {
+    "name": "Área de Formación Docente y Producción Educativa",
+    "tipo": "generador",
+    "email": "edudis@eco.unc.edu.ar"
   },
   {
     "name": "Azur Real Hotel Boutique",
@@ -35,14 +40,59 @@
     "email": "info@azurrealhotel.com"
   },
   {
+    "name": "Café Martínez",
+    "tipo": "comercio",
+    "email": "cordoba@cafemartinez.com.ar"
+  },
+  {
+    "name": "Catalina Calzados",
+    "tipo": "comercio",
+    "email": "catalinacalzados@outlook.com.ar"
+  },
+  {
+    "name": "Centro Médico Vitus",
+    "tipo": "comercio",
+    "email": "info@vitus.com.ar"
+  },
+  {
+    "name": "Chevromaxs",
+    "tipo": "comercio",
+    "email": "chevromaxs@gmail.com"
+  },
+  {
+    "name": "Cineclub Municipal Hugo del Carril",
+    "tipo": "comercio",
+    "email": "administracion@cineclubmunicipal.org.ar"
+  },
+  {
+    "name": "Club Milanesa",
+    "tipo": "comercio",
+    "email": "info@elclubdelamilanesa.com"
+  },
+  {
+    "name": "Comedor Universitario",
+    "tipo": "comercio",
+    "email": "comedor@bienestar.unc.edu.ar"
+  },
+  {
+    "name": "Cordoba Inn",
+    "tipo": "comercio",
+    "email": "reservas@cordobainn.com"
+  },
+  {
+    "name": "Deportes Iguazu",
+    "tipo": "comercio",
+    "email": "deportesiguazu@gmail.com"
+  },
+  {
     "name": "Fabrica Pc",
     "tipo": "comercio",
     "email": "rvlevet@gmail.com"
   },
   {
-    "name": "Farmacia Moderna 5",
+    "name": "Gestor de Cordoba. Autos. Motos. Gonzalo 3512205097",
     "tipo": "comercio",
-    "email": "//cdn.jsdelivr.net/npm/bootstrap@5.0.2"
+    "email": "santinogigena@gmail.com"
   },
   {
     "name": "Hotel Garden",
@@ -55,8 +105,43 @@
     "email": "tarlaereo@gmail.com"
   },
   {
+    "name": "Marozzi distribuidora",
+    "tipo": "comercio",
+    "email": "ventas@bateriasmarozzi.com.ar"
+  },
+  {
+    "name": "Mercadito Natural",
+    "tipo": "comercio",
+    "email": "info.mercaditonatural@gmail.com"
+  },
+  {
+    "name": "mini Super",
+    "tipo": "comercio",
+    "email": "minisuperas@gmail.com"
+  },
+  {
+    "name": "Quimica Halac",
+    "tipo": "comercio",
+    "email": "info@quimicahalac.com.ar"
+  },
+  {
+    "name": "Starbucks",
+    "tipo": "comercio",
+    "email": "info@starbucks.com.ar"
+  },
+  {
+    "name": "SushiClub",
+    "tipo": "comercio",
+    "email": "contacto@sushiclub.com.ar"
+  },
+  {
     "name": "Systel S.A Balanzas y Basculas",
     "tipo": "comercio",
     "email": "contacto@systel-global.com"
+  },
+  {
+    "name": "Wöllen",
+    "tipo": "comercio",
+    "email": "info@wollen.com.ar"
   }
 ]

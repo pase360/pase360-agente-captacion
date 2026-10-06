@@ -1,303 +1,320 @@
 {
   "por_tipo": {
-    "comercio": 101,
-    "generador": 39,
-    "dudoso": 700,
-    "descartado": 13,
+    "comercio": 462,
+    "generador": 142,
+    "dudoso": 211,
+    "descartado": 38,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 12,
-    "sin_email": 792,
-    "requiere_decision": 36
+    "listo_para_contactar": 29,
+    "sin_email": 773,
+    "requiere_decision": 13
   },
   "descartados_por_motivo": {
-    "categoria_excluida": 13
+    "categoria_excluida:parking,estacionamiento": 4,
+    "categoria_excluida:comisaria": 9,
+    "categoria_excluida:plaza": 4,
+    "categoria_excluida:parque": 2,
+    "categoria_excluida:municipalidad": 5,
+    "categoria_excluida:parking": 4,
+    "categoria_excluida:ministerio": 2,
+    "categoria_excluida:policia": 1,
+    "categoria_excluida:comisaria,policia": 1,
+    "categoria_excluida:municipalidad,parque": 1,
+    "categoria_excluida:consulado": 3,
+    "categoria_excluida:tribunal": 1,
+    "categoria_excluida:estacionamiento": 1
   },
   "generadores_muestra": [
     {
-      "name": "Cineclub Municipal Hugo del Carril",
-      "email": "administracion@cineclubmunicipal.org.ar",
-      "motivo": "club"
-    },
-    {
-      "name": "Club Milanesa",
-      "email": "info@elclubdelamilanesa.com",
-      "motivo": "club"
-    },
-    {
-      "name": "Bongó Club Saldan",
+      "name": "CorGas",
       "email": "",
-      "motivo": "club"
+      "motivo": "institucional:sociedad"
+    },
+    {
+      "name": "IPEM 150 Juan Larrea",
+      "email": "",
+      "motivo": "institucion_educativa"
     },
     {
       "name": "Colegio San José",
       "email": "",
-      "motivo": "colegio"
+      "motivo": "institucion_educativa"
     },
     {
       "name": "Club Estudiantes",
       "email": "",
-      "motivo": "club"
+      "motivo": "club_deportivo"
     },
     {
       "name": "Instituto Provincial de Enseñanza Media 20 Rodolfo Walsh",
       "email": "",
-      "motivo": "instituto"
+      "motivo": "institucion_educativa"
+    },
+    {
+      "name": "Jardín de Infantes Benadino Rivadavia",
+      "email": "",
+      "motivo": "institucion_educativa"
+    },
+    {
+      "name": "Escuela Primaria Honorato Laconi",
+      "email": "",
+      "motivo": "institucion_educativa"
+    },
+    {
+      "name": "Polideportivo Carlos Ceruti",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Escuela Presidente Roque Saenz Peña",
+      "email": "",
+      "motivo": "institucion_educativa"
+    },
+    {
+      "name": "Museo de Antropología de la Universidad de Córdoba",
+      "email": "",
+      "motivo": "institucion_educativa"
     },
     {
       "name": "Club",
       "email": "",
-      "motivo": "club"
+      "motivo": "club_deportivo"
     },
     {
-      "name": "Zen",
+      "name": "TDS",
       "email": "",
-      "motivo": "club"
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Movimiento Activo",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Secretaría de Planificación y Gestión Institucional",
+      "email": "",
+      "motivo": "institucion_educativa"
+    },
+    {
+      "name": "Hipolito Vieytes",
+      "email": "",
+      "motivo": "institucion_educativa"
     },
     {
       "name": "Colegio San José Parroquial",
       "email": "",
-      "motivo": "colegio"
+      "motivo": "institucion_educativa"
+    },
+    {
+      "name": "Escuela Nogal Histórico",
+      "email": "",
+      "motivo": "institucion_educativa"
+    },
+    {
+      "name": "IEC (secundario)",
+      "email": "",
+      "motivo": "institucion_educativa"
     },
     {
       "name": "Asociación Cordobesa de Aikido",
-      "email": "//cdn.jsdelivr.net/npm/photoswipe@5.4.3",
-      "motivo": "asociacion"
+      "email": "aikidomedina@gmail.com",
+      "motivo": "institucional:asociacion"
+    },
+    {
+      "name": "Centro Vecinal de Villa Adela - Playón deportivo",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Jardín de Infantes \"Al Agua Pato\"",
+      "email": "",
+      "motivo": "institucion_educativa"
+    },
+    {
+      "name": "María Pía Gym",
+      "email": "",
+      "motivo": "club_deportivo"
     },
     {
       "name": "Fundación José Gabriel Condorcanqui",
       "email": "",
-      "motivo": "fundacion"
+      "motivo": "institucional:fundacion"
     },
     {
       "name": "SEP - Sindicato de Empleados Públicos",
       "email": "",
-      "motivo": "sindicato"
+      "motivo": "institucional:sindicato"
     },
     {
-      "name": "Colegio Santo Domingo",
+      "name": "I.P.E.M. N° 310 PUERTO ARGENTINO",
       "email": "",
-      "motivo": "colegio"
+      "motivo": "institucion_educativa"
     },
     {
-      "name": "Instituto Privado DEÁN FUNES",
-      "email": "direccion@institutodeanfunes.edu.ar",
-      "motivo": "instituto"
-    },
-    {
-      "name": "Club Colegio de Ingenieros Civiles",
+      "name": "Escuela Mariano Fragueiro",
       "email": "",
-      "motivo": "colegio de,club,colegio"
+      "motivo": "institucion_educativa"
     },
     {
-      "name": "Club Atlético Yapeyú",
+      "name": "Escuela Primaria Francisco Vidal",
       "email": "",
-      "motivo": "club"
+      "motivo": "institucion_educativa"
     },
     {
-      "name": "Colegio Cristiano Evangelico William C. Morris",
+      "name": "ESCUELA PROVINCIA DE FORMOSA",
+      "email": "primariaformosa@hotmail.com.ar",
+      "motivo": "institucion_educativa"
+    },
+    {
+      "name": "Lorenzo Suárez de Figueroa",
       "email": "",
-      "motivo": "colegio"
+      "motivo": "institucion_educativa"
     },
     {
-      "name": "Instituto Oulton",
+      "name": "Constancio Cecilio Vigil",
       "email": "",
-      "motivo": "instituto"
-    },
-    {
-      "name": "Colegio Nuestra Señora de Loreto",
-      "email": "",
-      "motivo": "colegio"
-    },
-    {
-      "name": "El Sargento",
-      "email": "",
-      "motivo": "club"
-    },
-    {
-      "name": "Colegio Nuestra Señora del Huerto",
-      "email": "",
-      "motivo": "colegio"
-    },
-    {
-      "name": "Instituto de Educación Córdoba (primario)",
-      "email": "",
-      "motivo": "instituto"
-    },
-    {
-      "name": "Instituto Don Orione",
-      "email": "",
-      "motivo": "instituto"
-    },
-    {
-      "name": "SushiClub",
-      "email": "contacto@sushiclub.com.ar",
-      "motivo": "club"
-    },
-    {
-      "name": "Bosco Club",
-      "email": "",
-      "motivo": "club"
-    },
-    {
-      "name": "El Club de la milanesa",
-      "email": "",
-      "motivo": "club"
-    },
-    {
-      "name": "Instituto Inmaculada Concepción",
-      "email": "",
-      "motivo": "instituto"
-    },
-    {
-      "name": "Instituto de Educación Superior \"Doctor Domingo Cabred\"",
-      "email": "",
-      "motivo": "instituto"
-    },
-    {
-      "name": "Instituto Superior Mariano Moreno",
-      "email": "",
-      "motivo": "instituto"
-    },
-    {
-      "name": "Sociedad Arabe Musulmana",
-      "email": "",
-      "motivo": "sociedad"
+      "motivo": "institucion_educativa"
     }
   ],
   "comercios_muestra": [
     {
+      "name": "Aca Villa Allende",
+      "email": "",
+      "motivo": "osm_amenity:fuel"
+    },
+    {
+      "name": "Axion",
+      "email": "",
+      "motivo": "osm_amenity:fuel"
+    },
+    {
+      "name": "Shell",
+      "email": "",
+      "motivo": "osm_amenity:fuel"
+    },
+    {
+      "name": "Puma",
+      "email": "",
+      "motivo": "osm_amenity:fuel"
+    },
+    {
+      "name": "YPF",
+      "email": "",
+      "motivo": "osm_amenity:fuel"
+    },
+    {
+      "name": "Cineclub Municipal Hugo del Carril",
+      "email": "administracion@cineclubmunicipal.org.ar",
+      "motivo": "osm_amenity:cinema"
+    },
+    {
+      "name": "Che Salguero",
+      "email": "",
+      "motivo": "actividad_comercial:hostel"
+    },
+    {
+      "name": "Vea",
+      "email": "",
+      "motivo": "osm_shop:supermarket"
+    },
+    {
+      "name": "Hipermercado La Anonima",
+      "email": "",
+      "motivo": "osm_shop:supermarket"
+    },
+    {
+      "name": "Pachonga",
+      "email": "",
+      "motivo": "actividad_comercial:hostel"
+    },
+    {
+      "name": "Club Milanesa",
+      "email": "info@elclubdelamilanesa.com",
+      "motivo": "osm_amenity:restaurant"
+    },
+    {
+      "name": "Strega",
+      "email": "",
+      "motivo": "osm_amenity:restaurant"
+    },
+    {
+      "name": "Milanesas del Mariscal",
+      "email": "",
+      "motivo": "osm_amenity:restaurant"
+    },
+    {
       "name": "Saint Andrews",
       "email": "",
-      "motivo": "bar"
+      "motivo": "osm_amenity:bar"
     },
     {
       "name": "Bonanza",
       "email": "",
-      "motivo": "bar"
+      "motivo": "osm_amenity:bar"
     },
     {
-      "name": "Electronia",
+      "name": "Grido",
       "email": "",
-      "motivo": "electro"
+      "motivo": "osm_amenity:ice_cream"
     },
     {
-      "name": "Supermercado La Anonima Poeta Lugones",
+      "name": "Mostachis",
       "email": "",
-      "motivo": "supermercado"
+      "motivo": "osm_amenity:fast_food"
     },
     {
-      "name": "Biblioteca Popular Barrio Talleres (Hugo Wast)",
+      "name": "Las mejores del mundo",
       "email": "",
-      "motivo": "bar,taller"
+      "motivo": "osm_shop:alcohol"
     },
     {
-      "name": "El Ruedo",
+      "name": "Campestre",
       "email": "",
-      "motivo": "bar"
+      "motivo": "osm_amenity:restaurant"
     },
     {
-      "name": "Hotel El Fundador",
+      "name": "Disco",
       "email": "",
-      "motivo": "hotel"
-    },
-    {
-      "name": "Farmacia Estrella",
-      "email": "",
-      "motivo": "farmacia"
-    },
-    {
-      "name": "1+1",
-      "email": "",
-      "motivo": "hotel"
-    },
-    {
-      "name": "Supermercado chino",
-      "email": "",
-      "motivo": "supermercado"
-    },
-    {
-      "name": "Ex Cárcel Barrio San Martín",
-      "email": "",
-      "motivo": "bar"
-    },
-    {
-      "name": "Farmacia Moderna 5",
-      "email": "//cdn.jsdelivr.net/npm/bootstrap@5.0.2",
-      "motivo": "farmacia"
-    },
-    {
-      "name": "Farmacias ECONOMED",
-      "email": "",
-      "motivo": "farmacia"
-    },
-    {
-      "name": "Bar CEICIN",
-      "email": "",
-      "motivo": "bar"
-    },
-    {
-      "name": "Peluquería Giorgio",
-      "email": "",
-      "motivo": "peluquer"
-    },
-    {
-      "name": "GPS MUNDO",
-      "email": "",
-      "motivo": "electro"
-    },
-    {
-      "name": "Hotel Garden",
-      "email": "reservas@hotelgarden.com.ar",
-      "motivo": "hotel"
-    },
-    {
-      "name": "Azur Real Hotel Boutique",
-      "email": "info@azurrealhotel.com",
-      "motivo": "hotel"
-    },
-    {
-      "name": "RepensarMe - Consultorio Psicologico",
-      "email": "",
-      "motivo": "consultorio"
-    },
-    {
-      "name": "Consultorios Médicos Privados Tablada",
-      "email": "",
-      "motivo": "consultorio"
+      "motivo": "osm_shop:supermarket"
     }
   ],
   "sin_email_muestra": [
     {
       "name": "Aca Villa Allende",
-      "tipo": "dudoso",
+      "tipo": "comercio",
       "website": ""
     },
     {
       "name": "Axion",
-      "tipo": "dudoso",
+      "tipo": "comercio",
       "website": ""
     },
     {
       "name": "CorGas",
-      "tipo": "dudoso",
+      "tipo": "generador",
       "website": ""
     },
     {
       "name": "Shell",
-      "tipo": "dudoso",
+      "tipo": "comercio",
       "website": ""
     },
     {
       "name": "Puma",
-      "tipo": "dudoso",
+      "tipo": "comercio",
       "website": ""
     },
     {
       "name": "YPF",
-      "tipo": "dudoso",
+      "tipo": "comercio",
       "website": ""
+    },
+    {
+      "name": "Hombre Urbano",
+      "tipo": "dudoso",
+      "website": "https://turismo.cordoba.gob.ar/hombre-urbano/"
     },
     {
       "name": "Basílica de La Merced",
@@ -315,8 +332,13 @@
       "website": ""
     },
     {
-      "name": "Che Salguero",
+      "name": "Mujer Urbana",
       "tipo": "dudoso",
+      "website": "https://turismo.cordoba.gob.ar/mujer-urbana/"
+    },
+    {
+      "name": "Che Salguero",
+      "tipo": "comercio",
       "website": "http://www.chesalguero.com"
     },
     {
@@ -331,12 +353,12 @@
     },
     {
       "name": "Vea",
-      "tipo": "dudoso",
+      "tipo": "comercio",
       "website": ""
     },
     {
       "name": "Hipermercado La Anonima",
-      "tipo": "dudoso",
+      "tipo": "comercio",
       "website": ""
     },
     {
@@ -346,41 +368,21 @@
     },
     {
       "name": "Pachonga",
-      "tipo": "dudoso",
-      "website": ""
-    },
-    {
-      "name": "Strega",
-      "tipo": "dudoso",
-      "website": ""
-    },
-    {
-      "name": "Milanesas del Mariscal",
-      "tipo": "dudoso",
-      "website": ""
-    },
-    {
-      "name": "Saint Andrews",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Bonanza",
+      "name": "Strega",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Milanesas del Mariscal",
       "tipo": "comercio",
       "website": ""
     }
   ],
   "dudosos_muestra": [
-    {
-      "name": "Hombre Urbano",
-      "email": "//cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Mujer Urbana",
-      "email": "//cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1",
-      "motivo": "sin_indicio_suficiente"
-    },
     {
       "name": "Dinosaurio Mall",
       "email": "info@grupodinosaurio.com",
@@ -392,43 +394,13 @@
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Comedor Universitario",
-      "email": "comedor@bienestar.unc.edu.ar",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Banco Nación",
-      "email": "//unpkg.com/leaflet@1.6.0",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
       "name": "Galicia",
       "email": "bancogalicia@bancogalicia.com.ar",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "mini Super",
-      "email": "minisuperas@gmail.com",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Hostel Aldea",
-      "email": "//www.google.com/maps/place/aldea+hostel+%26+caf%c3%a9/@-31.4111095",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Cordoba Inn",
-      "email": "reservas@cordobainn.com",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
       "name": "Correo Argentino",
       "email": "webmaster@correoargentino.com.ar",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Café Martínez",
-      "email": "cordoba@cafemartinez.com.ar",
       "motivo": "sin_indicio_suficiente"
     },
     {
@@ -442,44 +414,49 @@
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Starbucks",
-      "email": "info@starbucks.com.ar",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
       "name": "Manifesto",
       "email": "info@manifesto.com.ar",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "ESCUELA PROVINCIA DE FORMOSA",
-      "email": "primariaformosa@hotmail.com.ar",
+      "name": "Sex Cordoba Shop",
+      "email": "info@sexcordobashop.com.ar",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "APADIM",
-      "email": "apadim@apadim.org",
+      "name": "Banco de Córdoba",
+      "email": "museoybiblioteca@bancor.com.ar",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Jardín Infantes Juan Mantovani",
-      "email": "informes@mantovani.edu.ar",
+      "name": "Capilla Santa Teresita",
+      "email": "vicariasantateresita@gmail.com",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Consulado de Francia",
-      "email": "sonzini@arnet.com.ar",
+      "name": "ATLARES Crowdfunding Bitcoin & Networking",
+      "email": "info@atlares.com",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Poeta Soho",
+      "email": "poetasoho@gmail.com",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Museo Palacio Dionisi",
+      "email": "museopalaciodionisi@gmail.com",
       "motivo": "sin_indicio_suficiente"
     }
   ],
   "duplicados": 147,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "listos_comercio": 6,
-  "listos_generador": 6,
+  "listos_comercio": 22,
+  "listos_generador": 7,
   "encontrados": 5176,
   "procesados": 1000,
-  "nuevos": 840,
-  "listos": 12,
-  "descartados": 13
+  "nuevos": 815,
+  "listos": 29,
+  "descartados": 38
 }
