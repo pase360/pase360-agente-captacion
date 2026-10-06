@@ -16,27 +16,66 @@ from .util import normalizar_texto
 
 GENERATOR_STRONG = (
     "sindicato",
+    "sindicatos",
     "sindical",
+    "sindicales",
     "gremio",
+    "gremial",
+    "gremiales",
     "union de trabajadores",
     "unión de trabajadores",
+    "union obrera",
+    "unión obrera",
+    "union de empleados",
+    "unión de empleados",
+    "union del personal",
+    "unión del personal",
     "mutual",
+    "mutualidad",
+    "mutuales",
     "federacion de trabajadores",
     "federación de trabajadores",
     "federacion sindical",
     "federación sindical",
+    "federacion de sindicatos",
+    "federación de sindicatos",
+    "federacion gremial",
+    "federación gremial",
     "asociacion profesional",
     "asociación profesional",
     "asociacion de profesionales",
     "asociación de profesionales",
     "asociacion civil",
     "asociación civil",
+    "asociacion de trabajadores",
+    "asociación de trabajadores",
+    "asociacion de empleados",
+    "asociación de empleados",
+    "asociacion gremial",
+    "asociación gremial",
     "cooperativa",
+    "cooperativas",
     "fundacion",
     "fundación",
+    "fundaciones",
 )
 
-# Colegio solamente cuando se refiere a profesionales.
+# Palabras genéricas que requieren contexto.
+# NO se consideran generadores por sí solas.
+GENERIC_GENERATOR_WORDS = (
+    "asociacion",
+    "asociación",
+    "federacion",
+    "federación",
+    "union",
+    "unión",
+)
+
+
+# ============================================================
+# COLEGIOS PROFESIONALES
+# ============================================================
+
 PROFESSIONAL_COLLEGE_WORDS = (
     "colegio de abogados",
     "colegio de arquitectos",
@@ -44,24 +83,42 @@ PROFESSIONAL_COLLEGE_WORDS = (
     "colegio de contadores",
     "colegio de escribanos",
     "colegio de procuradores",
-    "colegio de médicos",
     "colegio de medicos",
+    "colegio de médicos",
     "colegio de odontologos",
     "colegio de odontólogos",
     "colegio de psicologos",
     "colegio de psicólogos",
-    "colegio de farmacéuticos",
     "colegio de farmaceuticos",
-    "colegio de kinesiólogos",
+    "colegio de farmacéuticos",
     "colegio de kinesiologos",
+    "colegio de kinesiólogos",
     "colegio de veterinarios",
     "colegio de trabajadores sociales",
+    "colegio de escribanos",
+    "colegio de martilleros",
+    "colegio de corredores inmobiliarios",
+    "colegio de corredores publicos",
+    "colegio de corredores públicos",
+    "colegio de nutricionistas",
+    "colegio de bioquimicos",
+    "colegio de bioquímicos",
+    "colegio de fonoaudiologos",
+    "colegio de fonoaudiólogos",
+    "colegio de instrumentadores",
+    "colegio de enfermeros",
+    "colegio de enfermeras",
+    "colegio de trabajadores de la salud",
     "colegio profesional",
     "colegio de profesionales",
     "colegio profesional de",
 )
 
-# Federaciones/asociaciones profesionales.
+
+# ============================================================
+# ASOCIACIONES PROFESIONALES
+# ============================================================
+
 PROFESSIONAL_ASSOCIATION_WORDS = (
     "asociacion de abogados",
     "asociación de abogados",
@@ -71,19 +128,27 @@ PROFESSIONAL_ASSOCIATION_WORDS = (
     "asociación de ingenieros",
     "asociacion de contadores",
     "asociación de contadores",
-    "asociacion de médicos",
-    "asociación de medicos",
+    "asociacion de escribanos",
+    "asociación de escribanos",
+    "asociacion de medicos",
+    "asociación de médicos",
     "asociacion de odontologos",
     "asociación de odontólogos",
     "asociacion de psicologos",
     "asociación de psicólogos",
+    "asociacion de farmaceuticos",
+    "asociación de farmacéuticos",
     "asociacion profesional",
     "asociación profesional",
     "asociacion de profesionales",
     "asociación de profesionales",
 )
 
-# Clubes que realmente funcionan como instituciones deportivas/sociales.
+
+# ============================================================
+# CLUBES
+# ============================================================
+
 CLUB_WORDS = (
     "club atletico",
     "club atlético",
@@ -98,6 +163,30 @@ CLUB_WORDS = (
     "club de básquet",
     "club de voleibol",
     "club de voley",
+    "club nautico",
+    "club náutico",
+    "club de pesca",
+    "club de golf",
+    "club de tenis",
+)
+
+
+# ============================================================
+# OTROS GENERADORES POR CONTEXTO
+# ============================================================
+
+GENERATOR_CONTEXT_WORDS = (
+    "centro de jubilados",
+    "centro de jubiladas",
+    "centro de pensionados",
+    "centro de pensionadas",
+    "centro de trabajadores",
+    "centro de empleados",
+    "centro de profesionales",
+    "asociacion de vecinos",
+    "asociación de vecinos",
+    "union vecinal",
+    "unión vecinal",
 )
 
 
@@ -280,6 +369,7 @@ SHOP_VALUES = {
     "alcohol",
 }
 
+
 COMMERCE_AMENITIES = {
     "restaurant",
     "cafe",
@@ -296,9 +386,11 @@ COMMERCE_AMENITIES = {
     "hostel",
 }
 
+
 GENERATOR_AMENITIES = {
     "social_centre",
 }
+
 
 GENERATOR_LEISURE = {
     "sports_centre",
@@ -332,26 +424,55 @@ def _texto(c):
         tags.get("craft", ""),
     ]
 
-    return normalizar_texto(" ".join(str(x or "") for x in partes))
+    return normalizar_texto(
+        " ".join(
+            str(x or "")
+            for x in partes
+        )
+    )
 
 
 def _tags(c):
     tags = c.get("tags") or {}
 
     return {
-        "shop": normalizar_texto(tags.get("shop", "")),
-        "amenity": normalizar_texto(tags.get("amenity", "")),
-        "leisure": normalizar_texto(tags.get("leisure", "")),
-        "office": normalizar_texto(tags.get("office", "")),
-        "sport": normalizar_texto(tags.get("sport", "")),
-        "sports": normalizar_texto(tags.get("sports", "")),
-        "tourism": normalizar_texto(tags.get("tourism", "")),
-        "craft": normalizar_texto(tags.get("craft", "")),
+        "shop": normalizar_texto(
+            tags.get("shop", "")
+        ),
+        "amenity": normalizar_texto(
+            tags.get("amenity", "")
+        ),
+        "leisure": normalizar_texto(
+            tags.get("leisure", "")
+        ),
+        "office": normalizar_texto(
+            tags.get("office", "")
+        ),
+        "sport": normalizar_texto(
+            tags.get("sport", "")
+        ),
+        "sports": normalizar_texto(
+            tags.get("sports", "")
+        ),
+        "tourism": normalizar_texto(
+            tags.get("tourism", "")
+        ),
+        "craft": normalizar_texto(
+            tags.get("craft", "")
+        ),
     }
 
 
 def _contiene(texto, palabras):
-    return [p for p in palabras if normalizar_texto(p) in texto]
+    resultado = []
+
+    for palabra in palabras:
+        normalizada = normalizar_texto(palabra)
+
+        if normalizada and normalizada in texto:
+            resultado.append(normalizada)
+
+    return resultado
 
 
 # ============================================================
@@ -359,44 +480,82 @@ def _contiene(texto, palabras):
 # ============================================================
 
 def _es_colegio_profesional(texto):
-    return bool(_contiene(texto, PROFESSIONAL_COLLEGE_WORDS))
+    return bool(
+        _contiene(
+            texto,
+            PROFESSIONAL_COLLEGE_WORDS,
+        )
+    )
 
 
 def _es_asociacion_profesional(texto):
-    return bool(_contiene(texto, PROFESSIONAL_ASSOCIATION_WORDS))
+    return bool(
+        _contiene(
+            texto,
+            PROFESSIONAL_ASSOCIATION_WORDS,
+        )
+    )
 
 
 def _es_generador_institucional(texto):
-    """
-    Detecta organizaciones de afiliados.
+    encontrados = _contiene(
+        texto,
+        GENERATOR_STRONG,
+    )
 
-    NO considera:
-    - cámara
-    - sociedad
-    - corporación
-    - empresa
-    - compañía
+    if encontrados:
+        return encontrados
 
-    porque esas palabras pueden identificar simplemente
-    empresas comerciales.
-    """
-    encontrados = _contiene(texto, GENERATOR_STRONG)
-    return encontrados
+    # Asociaciones / federaciones / uniones necesitan
+    # contexto adicional para evitar falsos positivos.
+    genericos = _contiene(
+        texto,
+        GENERIC_GENERATOR_WORDS,
+    )
+
+    contexto = _contiene(
+        texto,
+        (
+            "trabajadores",
+            "trabajador",
+            "empleados",
+            "empleado",
+            "profesionales",
+            "profesional",
+            "afiliados",
+            "afiliado",
+            "asociados",
+            "asociado",
+            "matriculados",
+            "matriculado",
+            "gremio",
+            "gremial",
+            "sindical",
+            "sindicato",
+            "colegio",
+            "miembros",
+            "miembro",
+        ),
+    )
+
+    if genericos and contexto:
+        return genericos + contexto[:2]
+
+    return []
 
 
 def _es_club_deportivo(c, texto):
     tags = _tags(c)
 
-    # Nombre explícito de club deportivo/social.
-    if _contiene(texto, CLUB_WORDS):
+    if _contiene(
+        texto,
+        CLUB_WORDS,
+    ):
         return True
 
-    # Un sports_centre o stadium puede ser una institución
-    # deportiva, pero no cualquier gimnasio comercial.
     if tags["leisure"] in GENERATOR_LEISURE:
         return True
 
-    # "club" explícito + actividad deportiva.
     if "club" in texto:
         if tags["sport"] or tags["sports"]:
             return True
@@ -416,11 +575,25 @@ def _es_club_deportivo(c, texto):
                 "básquet",
                 "voley",
                 "voleibol",
+                "tenis",
+                "golf",
+                "pesca",
+                "nautico",
+                "náutico",
             )
         ):
             return True
 
     return False
+
+
+def _es_generador_por_contexto(texto):
+    encontrados = _contiene(
+        texto,
+        GENERATOR_CONTEXT_WORDS,
+    )
+
+    return encontrados
 
 
 # ============================================================
@@ -440,7 +613,10 @@ def _es_comercio_estructurado(c):
 
 
 def _es_comercio_por_texto(texto):
-    encontrados = _contiene(texto, COMMERCE_WORDS)
+    encontrados = _contiene(
+        texto,
+        COMMERCE_WORDS,
+    )
 
     if encontrados:
         return encontrados[:3]
@@ -462,20 +638,30 @@ def clasificar(c):
     # --------------------------------------------------------
     # 1. EXCLUSIONES
     # --------------------------------------------------------
-    excluidos = _contiene(texto, EXCLUDE_WORDS)
+
+    excluidos = _contiene(
+        texto,
+        EXCLUDE_WORDS,
+    )
 
     if excluidos:
-        # "colegio profesional" sí es un generador válido.
+        # Los colegios profesionales son una excepción válida.
         if not _es_colegio_profesional(texto):
-            return "descartado", f"categoria_excluida:{','.join(excluidos[:3])}"
+            return (
+                "descartado",
+                "categoria_excluida:"
+                + ",".join(excluidos[:3]),
+            )
 
     # --------------------------------------------------------
     # 2. CÁMARAS
     # --------------------------------------------------------
-    # Una cámara NO es generador.
-    # Se conserva como dudosa para una futura etapa de
-    # captación de comercios asociados a cámaras.
+    # Las cámaras NO son generadores.
+    # No las convertimos automáticamente en comercios.
+    # Quedan disponibles para una futura captación de
+    # comercios asociados.
     # --------------------------------------------------------
+
     camaras = _contiene(
         texto,
         (
@@ -491,69 +677,142 @@ def clasificar(c):
             "cámara de turismo",
             "camara argentina",
             "cámara argentina",
+            "camara de",
+            "cámara de",
         ),
     )
 
     if camaras:
-        return "dudoso", "camara_no_generador"
+        return (
+            "dudoso",
+            "camara_no_generador",
+        )
 
     # --------------------------------------------------------
-    # 3. COMERCIO ESTRUCTURADO
+    # 3. GENERADORES INSTITUCIONALES
     # --------------------------------------------------------
-    es_comercio, motivo_comercio = _es_comercio_estructurado(c)
+    # IMPORTANTE:
+    # Esto va ANTES del comercio.
+    #
+    # Una cooperativa, mutual, sindicato, asociación, etc.
+    # tiene prioridad como generador aunque OSM también
+    # tenga etiquetas comerciales.
+    # --------------------------------------------------------
 
-    if es_comercio:
-        return "comercio", motivo_comercio
-
-    # --------------------------------------------------------
-    # 4. GENERADORES INSTITUCIONALES
-    # --------------------------------------------------------
-    generadores = _es_generador_institucional(texto)
+    generadores = _es_generador_institucional(
+        texto
+    )
 
     if generadores:
-        return "generador", f"institucional:{','.join(generadores[:3])}"
+        return (
+            "generador",
+            "institucional:"
+            + ",".join(generadores[:3]),
+        )
 
     # --------------------------------------------------------
-    # 5. COLEGIOS PROFESIONALES
+    # 4. COLEGIOS PROFESIONALES
     # --------------------------------------------------------
+
     if _es_colegio_profesional(texto):
-        return "generador", "colegio_profesional"
+        return (
+            "generador",
+            "colegio_profesional",
+        )
 
     # --------------------------------------------------------
-    # 6. ASOCIACIONES PROFESIONALES
+    # 5. ASOCIACIONES PROFESIONALES
     # --------------------------------------------------------
+
     if _es_asociacion_profesional(texto):
-        return "generador", "asociacion_profesional"
+        return (
+            "generador",
+            "asociacion_profesional",
+        )
+
+    # --------------------------------------------------------
+    # 6. GENERADORES POR CONTEXTO
+    # --------------------------------------------------------
+
+    generadores_contexto = _es_generador_por_contexto(
+        texto
+    )
+
+    if generadores_contexto:
+        return (
+            "generador",
+            "institucion:"
+            + ",".join(
+                generadores_contexto[:3]
+            ),
+        )
 
     # --------------------------------------------------------
     # 7. CLUBES DEPORTIVOS
     # --------------------------------------------------------
-    if _es_club_deportivo(c, texto):
-        return "generador", "club_deportivo"
+
+    if _es_club_deportivo(
+        c,
+        texto,
+    ):
+        return (
+            "generador",
+            "club_deportivo",
+        )
 
     # --------------------------------------------------------
     # 8. AMENITIES INSTITUCIONALES
     # --------------------------------------------------------
+
     if tags["amenity"] in GENERATOR_AMENITIES:
-        return "generador", f"amenity_institucional:{tags['amenity']}"
+        return (
+            "generador",
+            "amenity_institucional:"
+            + tags["amenity"],
+        )
 
     # --------------------------------------------------------
-    # 9. COMERCIO POR NOMBRE / TEXTO
+    # 9. COMERCIO ESTRUCTURADO
     # --------------------------------------------------------
-    comercios = _es_comercio_por_texto(texto)
+
+    es_comercio, motivo_comercio = (
+        _es_comercio_estructurado(c)
+    )
+
+    if es_comercio:
+        return (
+            "comercio",
+            motivo_comercio,
+        )
+
+    # --------------------------------------------------------
+    # 10. COMERCIO POR NOMBRE / TEXTO
+    # --------------------------------------------------------
+
+    comercios = _es_comercio_por_texto(
+        texto
+    )
 
     if comercios:
-        return "comercio", ",".join(comercios)
+        return (
+            "comercio",
+            ",".join(comercios),
+        )
 
     # --------------------------------------------------------
-    # 10. CRAFT
+    # 11. CRAFT
     # --------------------------------------------------------
+
     if tags["craft"]:
-        return "comercio", f"craft:{tags['craft']}"
+        return (
+            "comercio",
+            f"craft:{tags['craft']}",
+        )
 
     # --------------------------------------------------------
-    # 11. TURISMO COMERCIAL
+    # 12. TURISMO COMERCIAL
     # --------------------------------------------------------
+
     if tags["tourism"] in {
         "hotel",
         "hostel",
@@ -562,9 +821,16 @@ def clasificar(c):
         "camp_site",
         "caravan_site",
     }:
-        return "comercio", f"tourism:{tags['tourism']}"
+        return (
+            "comercio",
+            f"tourism:{tags['tourism']}",
+        )
 
     # --------------------------------------------------------
-    # 12. TODO LO DEMÁS QUEDA EN REVISIÓN
+    # 13. TODO LO DEMÁS
     # --------------------------------------------------------
-    return "dudoso", "sin_indicio_suficiente"
+
+    return (
+        "dudoso",
+        "sin_indicio_suficiente",
+    )
