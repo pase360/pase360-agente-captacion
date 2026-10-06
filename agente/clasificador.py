@@ -1,17 +1,9 @@
+```python
 from .util import normalizar_texto
 
 
 # ============================================================
 # GENERADORES REALES
-# ============================================================
-# Organizaciones que reúnen personas afiliadas, matriculadas,
-# asociadas o adherentes y que pueden distribuir beneficios.
-#
-# IMPORTANTE:
-# - "colegio" significa COLEGIO PROFESIONAL.
-# - cámaras NO son generadores.
-# - empresas/sociedades NO son generadores por su forma jurídica.
-# - escuelas/colegios educativos NO son generadores.
 # ============================================================
 
 GENERATOR_STRONG = (
@@ -45,8 +37,6 @@ GENERATOR_STRONG = (
     "asociación profesional",
     "asociacion de profesionales",
     "asociación de profesionales",
-    "asociacion civil",
-    "asociación civil",
     "asociacion de trabajadores",
     "asociación de trabajadores",
     "asociacion de empleados",
@@ -55,13 +45,10 @@ GENERATOR_STRONG = (
     "asociación gremial",
     "cooperativa",
     "cooperativas",
-    "fundacion",
-    "fundación",
-    "fundaciones",
 )
 
-# Palabras genéricas que requieren contexto.
-# NO se consideran generadores por sí solas.
+
+# Palabras que solas NO alcanzan para ser generador.
 GENERIC_GENERATOR_WORDS = (
     "asociacion",
     "asociación",
@@ -95,7 +82,6 @@ PROFESSIONAL_COLLEGE_WORDS = (
     "colegio de kinesiólogos",
     "colegio de veterinarios",
     "colegio de trabajadores sociales",
-    "colegio de escribanos",
     "colegio de martilleros",
     "colegio de corredores inmobiliarios",
     "colegio de corredores publicos",
@@ -111,7 +97,6 @@ PROFESSIONAL_COLLEGE_WORDS = (
     "colegio de trabajadores de la salud",
     "colegio profesional",
     "colegio de profesionales",
-    "colegio profesional de",
 )
 
 
@@ -146,7 +131,7 @@ PROFESSIONAL_ASSOCIATION_WORDS = (
 
 
 # ============================================================
-# CLUBES
+# CLUBES QUE PUEDEN SER GENERADORES
 # ============================================================
 
 CLUB_WORDS = (
@@ -261,7 +246,6 @@ COMMERCE_WORDS = (
     "repostería",
     "rotiseria",
     "rotisería",
-    "dietética",
     "dietética",
     "vinoteca",
     "cerveceria",
@@ -387,15 +371,17 @@ COMMERCE_AMENITIES = {
 }
 
 
+# Solo social_centre se considera institucional por etiqueta.
+# community_centre queda dudoso salvo que el nombre aporte
+# evidencia suficiente de que reúne miembros/afiliados.
 GENERATOR_AMENITIES = {
     "social_centre",
 }
 
 
-GENERATOR_LEISURE = {
-    "sports_centre",
-    "stadium",
-}
+# NO se consideran generadores automáticamente.
+# sports_centre y stadium pueden ser simples instalaciones.
+GENERATOR_LEISURE = set()
 
 
 # ============================================================
@@ -436,30 +422,14 @@ def _tags(c):
     tags = c.get("tags") or {}
 
     return {
-        "shop": normalizar_texto(
-            tags.get("shop", "")
-        ),
-        "amenity": normalizar_texto(
-            tags.get("amenity", "")
-        ),
-        "leisure": normalizar_texto(
-            tags.get("leisure", "")
-        ),
-        "office": normalizar_texto(
-            tags.get("office", "")
-        ),
-        "sport": normalizar_texto(
-            tags.get("sport", "")
-        ),
-        "sports": normalizar_texto(
-            tags.get("sports", "")
-        ),
-        "tourism": normalizar_texto(
-            tags.get("tourism", "")
-        ),
-        "craft": normalizar_texto(
-            tags.get("craft", "")
-        ),
+        "shop": normalizar_texto(tags.get("shop", "")),
+        "amenity": normalizar_texto(tags.get("amenity", "")),
+        "leisure": normalizar_texto(tags.get("leisure", "")),
+        "office": normalizar_texto(tags.get("office", "")),
+        "sport": normalizar_texto(tags.get("sport", "")),
+        "sports": normalizar_texto(tags.get("sports", "")),
+        "tourism": normalizar_texto(tags.get("tourism", "")),
+        "craft": normalizar_texto(tags.get("craft", "")),
     }
 
 
@@ -506,8 +476,6 @@ def _es_generador_institucional(texto):
     if encontrados:
         return encontrados
 
-    # Asociaciones / federaciones / uniones necesitan
-    # contexto adicional para evitar falsos positivos.
     genericos = _contiene(
         texto,
         GENERIC_GENERATOR_WORDS,
@@ -547,22 +515,19 @@ def _es_generador_institucional(texto):
 def _es_club_deportivo(c, texto):
     tags = _tags(c)
 
-    if _contiene(
-        texto,
-        CLUB_WORDS,
-    ):
+    # Clubes claramente identificables como instituciones.
+    if _contiene(texto, CLUB_WORDS):
         return True
 
-    if tags["leisure"] in GENERATOR_LEISURE:
-        return True
-
+    # Si OSM identifica explícitamente "club" y además
+    # hay deporte asociado, puede ser un club institucional.
     if "club" in texto:
         if tags["sport"] or tags["sports"]:
             return True
 
-        if any(
-            palabra in texto
-            for palabra in (
+        if _contiene(
+            texto,
+            (
                 "atletico",
                 "atlético",
                 "deportivo",
@@ -580,7 +545,7 @@ def _es_club_deportivo(c, texto):
                 "pesca",
                 "nautico",
                 "náutico",
-            )
+            ),
         ):
             return True
 
@@ -588,12 +553,45 @@ def _es_club_deportivo(c, texto):
 
 
 def _es_generador_por_contexto(texto):
-    encontrados = _contiene(
+    return _contiene(
         texto,
         GENERATOR_CONTEXT_WORDS,
     )
 
-    return encontrados
+
+def _es_asociacion_con_miembros(texto):
+    """
+    Asociación civil genérica:
+    solo se acepta cuando el nombre aporta evidencia de
+    personas/colectivos que pueden ser beneficiarios.
+    """
+    if "asociacion civil" not in texto and "asociación civil" not in texto:
+        return False
+
+    contexto = (
+        "afiliados",
+        "afiliado",
+        "asociados",
+        "asociado",
+        "miembros",
+        "miembro",
+        "profesionales",
+        "profesional",
+        "trabajadores",
+        "trabajador",
+        "empleados",
+        "empleado",
+        "vecinos",
+        "vecinal",
+        "jubilados",
+        "jubiladas",
+        "pensionados",
+        "pensionadas",
+        "familias",
+        "deportistas",
+    )
+
+    return bool(_contiene(texto, contexto))
 
 
 # ============================================================
@@ -656,11 +654,6 @@ def clasificar(c):
     # --------------------------------------------------------
     # 2. CÁMARAS
     # --------------------------------------------------------
-    # Las cámaras NO son generadores.
-    # No las convertimos automáticamente en comercios.
-    # Quedan disponibles para una futura captación de
-    # comercios asociados.
-    # --------------------------------------------------------
 
     camaras = _contiene(
         texto,
@@ -691,17 +684,8 @@ def clasificar(c):
     # --------------------------------------------------------
     # 3. GENERADORES INSTITUCIONALES
     # --------------------------------------------------------
-    # IMPORTANTE:
-    # Esto va ANTES del comercio.
-    #
-    # Una cooperativa, mutual, sindicato, asociación, etc.
-    # tiene prioridad como generador aunque OSM también
-    # tenga etiquetas comerciales.
-    # --------------------------------------------------------
 
-    generadores = _es_generador_institucional(
-        texto
-    )
+    generadores = _es_generador_institucional(texto)
 
     if generadores:
         return (
@@ -731,37 +715,40 @@ def clasificar(c):
         )
 
     # --------------------------------------------------------
-    # 6. GENERADORES POR CONTEXTO
+    # 6. ASOCIACIONES CIVILES CON EVIDENCIA
     # --------------------------------------------------------
 
-    generadores_contexto = _es_generador_por_contexto(
-        texto
-    )
+    if _es_asociacion_con_miembros(texto):
+        return (
+            "generador",
+            "asociacion_civil_con_miembros",
+        )
+
+    # --------------------------------------------------------
+    # 7. GENERADORES POR CONTEXTO
+    # --------------------------------------------------------
+
+    generadores_contexto = _es_generador_por_contexto(texto)
 
     if generadores_contexto:
         return (
             "generador",
             "institucion:"
-            + ",".join(
-                generadores_contexto[:3]
-            ),
+            + ",".join(generadores_contexto[:3]),
         )
 
     # --------------------------------------------------------
-    # 7. CLUBES DEPORTIVOS
+    # 8. CLUBES DEPORTIVOS
     # --------------------------------------------------------
 
-    if _es_club_deportivo(
-        c,
-        texto,
-    ):
+    if _es_club_deportivo(c, texto):
         return (
             "generador",
             "club_deportivo",
         )
 
     # --------------------------------------------------------
-    # 8. AMENITIES INSTITUCIONALES
+    # 9. AMENITY INSTITUCIONAL
     # --------------------------------------------------------
 
     if tags["amenity"] in GENERATOR_AMENITIES:
@@ -772,12 +759,10 @@ def clasificar(c):
         )
 
     # --------------------------------------------------------
-    # 9. COMERCIO ESTRUCTURADO
+    # 10. COMERCIO ESTRUCTURADO
     # --------------------------------------------------------
 
-    es_comercio, motivo_comercio = (
-        _es_comercio_estructurado(c)
-    )
+    es_comercio, motivo_comercio = _es_comercio_estructurado(c)
 
     if es_comercio:
         return (
@@ -786,12 +771,10 @@ def clasificar(c):
         )
 
     # --------------------------------------------------------
-    # 10. COMERCIO POR NOMBRE / TEXTO
+    # 11. COMERCIO POR TEXTO
     # --------------------------------------------------------
 
-    comercios = _es_comercio_por_texto(
-        texto
-    )
+    comercios = _es_comercio_por_texto(texto)
 
     if comercios:
         return (
@@ -800,7 +783,7 @@ def clasificar(c):
         )
 
     # --------------------------------------------------------
-    # 11. CRAFT
+    # 12. CRAFT
     # --------------------------------------------------------
 
     if tags["craft"]:
@@ -810,7 +793,7 @@ def clasificar(c):
         )
 
     # --------------------------------------------------------
-    # 12. TURISMO COMERCIAL
+    # 13. TURISMO COMERCIAL
     # --------------------------------------------------------
 
     if tags["tourism"] in {
@@ -827,10 +810,11 @@ def clasificar(c):
         )
 
     # --------------------------------------------------------
-    # 13. TODO LO DEMÁS
+    # 14. TODO LO DEMÁS
     # --------------------------------------------------------
 
     return (
         "dudoso",
         "sin_indicio_suficiente",
     )
+```
