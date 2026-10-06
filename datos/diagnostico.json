@@ -1,0 +1,25 @@
+{
+  "osm": {
+    "ok": true,
+    "lugares": 5176
+  },
+  "gemini": {
+    "ok": true,
+    "configurado": true
+  },
+  "odoo": {
+    "ok": true,
+    "usuario": [
+      {
+        "id": 2,
+        "name": "JORGE VIDELA",
+        "login": "jlvidela@hotmail.com"
+      }
+    ]
+  },
+  "modo_prueba": true,
+  "web": {
+    "comercio": "https://www.pase360.online/adherir-comercio",
+    "generador": "https://www.pase360.online/adherite-como-generador-de-beneficios"
+  }
+}
