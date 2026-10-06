@@ -157,7 +157,19 @@
     "name:plaza espana": "categoria_excluida:plaza",
     "name:plaza hermanos": "categoria_excluida:plaza",
     "name:la plaza": "categoria_excluida:plaza",
-    "name:parque de las tejas": "categoria_excluida:municipalidad,municipal"
+    "name:parque de las tejas": "categoria_excluida:municipalidad,municipal",
+    "name:cpc arguello": "categoria_excluida:gobierno",
+    "name:cpc empalme": "categoria_excluida:municipalidad,municipal",
+    "name:cpc ( centro participacion comunitario) centro america": "categoria_excluida:municipal",
+    "name:centro de capacitacion laboral": "categoria_excluida:gobierno",
+    "name:centro vecinal barrio santa isabel 2": "categoria_excluida:municipalidad,municipal",
+    "name:sindicato de trabajadores de estaciones de servicio, playas de estacionamiento, garages, lavanderos, gomeras y anexos de la provincia de cordoba": "categoria_excluida:estacionamiento",
+    "name:iglesia de jesucristo de los santos de los ultimos dias": "categoria_excluida:iglesia",
+    "email:programa.cbax@gmail.com": "categoria_excluida:gobierno",
+    "name:museo superior de bellas artes evita": "categoria_excluida:museo",
+    "name:centro de salud municipal": "categoria_excluida:municipal",
+    "name:centro de salud 21 - barrio marques de sobremonte": "categoria_excluida:municipal",
+    "name:centro de salud 63 - barrio parque republica": "categoria_excluida:municipal"
   },
   "preguntas": {},
   "seguimientos": {}

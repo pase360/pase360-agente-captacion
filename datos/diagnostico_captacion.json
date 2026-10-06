@@ -1,350 +1,509 @@
 {
   "por_tipo": {
-    "comercio": 678,
-    "generador": 0,
-    "dudoso": 185,
-    "descartado": 7,
+    "comercio": 253,
+    "generador": 67,
+    "dudoso": 145,
+    "descartado": 28,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 27,
-    "sin_email": 651,
-    "requiere_decision": 185,
-    "descartado": 7
+    "listo_para_contactar": 13,
+    "sin_email": 307,
+    "requiere_decision": 145,
+    "descartado": 28
   },
   "sin_email_por_tipo": {
-    "comercio": 651,
-    "generador": 0,
+    "comercio": 242,
+    "generador": 65,
     "otro": 0
   },
   "descartados_por_motivo": {
-    "categoria_excluida:plaza": 5,
+    "categoria_excluida:capilla": 1,
+    "categoria_excluida:plaza": 1,
+    "categoria_excluida:gobierno": 3,
+    "categoria_excluida:municipalidad,municipal": 4,
+    "categoria_excluida:municipal": 12,
+    "categoria_excluida:nacional,universidad": 1,
+    "categoria_excluida:estacionamiento": 1,
+    "categoria_excluida:escuela": 2,
     "categoria_excluida:iglesia": 1,
-    "categoria_excluida:municipalidad,municipal": 1
+    "categoria_excluida:museo": 1,
+    "categoria_excluida:provincial": 1
   },
-  "generadores_muestra": [],
+  "generadores_muestra": [
+    {
+      "name": "SUTEP Sindicato Espect. públicos",
+      "email": "",
+      "motivo": "institucional:sindicato"
+    },
+    {
+      "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
+      "email": "",
+      "motivo": "institucional:mutual"
+    },
+    {
+      "name": "Club Deportivo Alta Córdoba",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "SUTIAGA",
+      "email": "",
+      "motivo": "institucional:sindicato"
+    },
+    {
+      "name": "SEP - Sindicato de Empleados Públicos",
+      "email": "",
+      "motivo": "institucional:sindicato"
+    },
+    {
+      "name": "Mutual de los Docentes",
+      "email": "",
+      "motivo": "institucional:mutual"
+    },
+    {
+      "name": "Gremio Galeria",
+      "email": "",
+      "motivo": "institucional:gremio"
+    },
+    {
+      "name": "Semacor - Mutual de SubOficiales del Ejercito",
+      "email": "",
+      "motivo": "institucional:mutual"
+    },
+    {
+      "name": "Sindicato de Camioneros",
+      "email": "",
+      "motivo": "institucional:sindicato"
+    },
+    {
+      "name": "Sindicato Regional de Luz y Fuerza",
+      "email": "",
+      "motivo": "institucional:sindicato"
+    },
+    {
+      "name": "Sindicato de Farmacia",
+      "email": "",
+      "motivo": "institucional:sindicato"
+    },
+    {
+      "name": "Club Colegio de Ingenieros Civiles",
+      "email": "",
+      "motivo": "colegio_profesional"
+    },
+    {
+      "name": "Colegio de Escribanos",
+      "email": "",
+      "motivo": "colegio_profesional"
+    },
+    {
+      "name": "Club Estudiantes",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Polideportivo Carlos Ceruti",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "TDS",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Movimiento Activo",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Asociación Cordobesa de Aikido",
+      "email": "aikidomedina@gmail.com",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Centro Vecinal de Villa Adela - Playón deportivo",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "María Pía Gym",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Club Atlético Yapeyú",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Polideportivo Corral de Palos",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Club Atlético General Paz -Junior´s",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Soccer World. Complejo deportivo Las Casuarinas",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Polideportivo UTN",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Club Atlético Juvenil Barrio...",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Club Atlético Defensores Central Córdoba",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Club Social STIA",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Avista",
+      "email": "",
+      "motivo": "club_deportivo"
+    },
+    {
+      "name": "Córdoba Rugby Club",
+      "email": "",
+      "motivo": "club_deportivo"
+    }
+  ],
   "comercios_muestra": [
     {
-      "name": "Vea",
+      "name": "Centro Cultural Alta Córdoba. \"Efraín U. Bischoff\"",
       "email": "",
-      "motivo": "shop:supermarket"
+      "motivo": "taller"
     },
     {
-      "name": "Hipermercado La Anonima",
+      "name": "Compostura de Calzado",
       "email": "",
-      "motivo": "shop:supermarket"
+      "motivo": "craft:shoemaker"
     },
     {
-      "name": "Del Sol",
-      "email": "",
-      "motivo": "shop:chemist"
+      "name": "Catalina Calzados",
+      "email": "catalinacalzados@outlook.com.ar",
+      "motivo": "craft:shoemaker"
     },
     {
-      "name": "Las mejores del mundo",
+      "name": "Centro Vecinal Barrio Parque Vélez Sarsfield",
       "email": "",
-      "motivo": "shop:alcohol"
+      "motivo": "bar"
     },
     {
-      "name": "Electronia",
+      "name": "José Luis",
       "email": "",
-      "motivo": "shop:computer"
+      "motivo": "craft:upholsterer"
     },
     {
-      "name": "Disco",
+      "name": "#Taller de oficios Cura Brochero",
       "email": "",
-      "motivo": "shop:supermarket"
+      "motivo": "taller"
     },
     {
-      "name": "Del Pilar",
+      "name": "Gambrinus",
       "email": "",
-      "motivo": "shop:bakery"
+      "motivo": "craft:brewery"
     },
     {
-      "name": "Pafua",
+      "name": "Electronica Brasca",
       "email": "",
-      "motivo": "shop:bakery"
+      "motivo": "craft:electronics_repair"
     },
     {
-      "name": "Buenos Días",
+      "name": "Coretec Valle Mall",
       "email": "",
-      "motivo": "shop:supermarket"
+      "motivo": "craft:electronics_repair"
     },
     {
-      "name": "Todo Suspensión",
+      "name": "Graciano",
       "email": "",
-      "motivo": "shop:car_parts"
+      "motivo": "craft:winery"
     },
     {
-      "name": "El Sotano",
+      "name": "La 14",
       "email": "",
-      "motivo": "shop:hardware"
+      "motivo": "craft:winery"
     },
     {
-      "name": "Supermercado La Anonima Poeta Lugones",
+      "name": "Mae",
       "email": "",
-      "motivo": "shop:supermarket"
+      "motivo": "craft:winery"
     },
     {
-      "name": "Supermercado chino",
+      "name": "Estación Alberdi",
       "email": "",
-      "motivo": "shop:supermarket"
+      "motivo": "craft:winery"
     },
     {
-      "name": "Black sheep",
+      "name": "La Pulpería",
       "email": "",
-      "motivo": "shop:alcohol"
+      "motivo": "craft:winery"
     },
     {
-      "name": "Renault Minuto",
+      "name": "Entre Capas",
       "email": "",
-      "motivo": "shop:car_repair"
+      "motivo": "craft:winery"
     },
     {
-      "name": "mini Super",
-      "email": "minisuperas@gmail.com",
-      "motivo": "shop:supermarket"
+      "name": "Léon Blanco",
+      "email": "",
+      "motivo": "craft:winery"
     },
     {
-      "name": "Cordiez",
+      "name": "Grupo Scout Pedro Ignacio de Castro Barro",
       "email": "",
-      "motivo": "shop:supermarket"
+      "motivo": "bar"
     },
     {
-      "name": "Dinosaurio",
+      "name": "Las Mercedarias",
       "email": "",
-      "motivo": "shop:supermarket"
+      "motivo": "craft:key_cutter"
     },
     {
-      "name": "Don Paco",
+      "name": "Vidriearía Patoco",
       "email": "",
-      "motivo": "shop:butcher"
+      "motivo": "craft:glaziery"
     },
     {
-      "name": "Embragues Córdoba",
+      "name": "Rey de Copas",
       "email": "",
-      "motivo": "shop:car_repair"
+      "motivo": "craft:winery"
     }
   ],
   "sin_email_muestra": [
     {
-      "name": "Vea",
+      "name": "Centro Cultural Alta Córdoba. \"Efraín U. Bischoff\"",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Hipermercado La Anonima",
+      "name": "Compostura de Calzado",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Del Sol",
+      "name": "SUTEP Sindicato Espect. públicos",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Centro Vecinal Barrio Parque Vélez Sarsfield",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Las mejores del mundo",
+      "name": "José Luis",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Electronia",
+      "name": "#Taller de oficios Cura Brochero",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Disco",
+      "name": "Gambrinus",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Del Pilar",
+      "name": "Electronica Brasca",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Pafua",
+      "name": "Coretec Valle Mall",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Buenos Días",
+      "name": "Graciano",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Todo Suspensión",
+      "name": "La 14",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "El Sotano",
+      "name": "Mae",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Supermercado La Anonima Poeta Lugones",
+      "name": "Estación Alberdi",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Supermercado chino",
+      "name": "La Pulpería",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Black sheep",
+      "name": "Entre Capas",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Renault Minuto",
+      "name": "Léon Blanco",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Cordiez",
+      "name": "Grupo Scout Pedro Ignacio de Castro Barro",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Dinosaurio",
+      "name": "Las Mercedarias",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Don Paco",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Embragues Córdoba",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Piaccere",
+      "name": "Vidriearía Patoco",
       "tipo": "comercio",
       "website": ""
     }
   ],
   "dudosos_muestra": [
     {
-      "name": "Dinosaurio Mall",
-      "email": "info@grupodinosaurio.com",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Equus",
+      "name": "CEFOC",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Lave-Rap",
+      "name": "Communication Partner SRL",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Conte Motos",
+      "name": "Centro Vecinal Yofre Sud",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Maxi Vac",
+      "name": "Ciampagna y Asoc. S.A.",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Punto banca tabaqueria",
+      "name": "Chibolo Pelotero",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Motos CR",
+      "name": "Incutex",
+      "email": "info@incutex.com.ar",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "empresa de tanques",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Forrajería",
+      "name": "Centro Vecinal Don Bosco",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Manifesto",
-      "email": "info@manifesto.com.ar",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Gran Rex",
+      "name": "Siscard S.A.",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Wow! Papeleria",
+      "name": "Club 25 de Mayo",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Antiguo",
+      "name": "Gosur",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Lavarropa",
+      "name": "Club Sociedad Belgrano",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Fotocopiadora",
+      "name": "Gestoría del automotor",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Sex Cordoba Shop",
-      "email": "info@sexcordobashop.com.ar",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Los Monos",
+      "name": "Centro vecinal Santa Clara de Asis",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Augustus",
+      "name": "ATLARES Crowdfunding Bitcoin & Networking",
+      "email": "info@atlares.com",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Centro Vecinal Yofre Norte",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Cunde Amor",
+      "name": "Mediatek S. A.",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Kiosko",
+      "name": "Virmanic SA",
+      "email": "jvalles@virmanicsa.com",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Centro Vecinal Marcelo T. De alvear",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Siglo XXI",
+      "name": "centro vecinal Parque República",
       "email": "",
       "motivo": "sin_indicio_suficiente"
     }
   ],
-  "duplicados": 130,
+  "duplicados": 33,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "clasificados": 870,
+  "clasificados": 493,
   "cuadre": {
-    "clasificacion_total": 870,
-    "estado_total": 870,
+    "clasificacion_total": 493,
+    "estado_total": 493,
     "cuadra": true
   },
-  "listos_detectados": 27,
-  "listos_seleccionados": 27,
-  "listos_comercio": 27,
-  "listos_generador": 0,
-  "encontrados": 5176,
-  "procesados": 1000,
-  "nuevos": 863,
-  "descartados": 7,
-  "excluidos": 130
+  "listos_detectados": 13,
+  "listos_seleccionados": 13,
+  "listos_comercio": 11,
+  "listos_generador": 2,
+  "encontrados": 526,
+  "procesados": 526,
+  "nuevos": 465,
+  "descartados": 28,
+  "excluidos": 33
 }
