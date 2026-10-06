@@ -1,4 +1,3 @@
-```python
 from datetime import datetime
 from . import config as C
 from . import fuentes, web, clasificador, ia, correos, github_issues
@@ -382,4 +381,3 @@ def diagnostico():
     guardar("diagnostico.json", out)
 
     return out
-```
