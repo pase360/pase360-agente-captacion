@@ -7,13 +7,13 @@
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 28,
-    "sin_email": 650,
+    "listo_para_contactar": 27,
+    "sin_email": 651,
     "requiere_decision": 185,
     "descartado": 7
   },
   "sin_email_por_tipo": {
-    "comercio": 650,
+    "comercio": 651,
     "generador": 0,
     "otro": 0
   },
@@ -338,9 +338,9 @@
     "estado_total": 870,
     "cuadra": true
   },
-  "listos_detectados": 28,
-  "listos_seleccionados": 28,
-  "listos_comercio": 28,
+  "listos_detectados": 27,
+  "listos_seleccionados": 27,
+  "listos_comercio": 27,
   "listos_generador": 0,
   "encontrados": 5176,
   "procesados": 1000,

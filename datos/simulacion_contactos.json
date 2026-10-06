@@ -80,11 +80,6 @@
     "email": "atencionalcliente@megatone.net"
   },
   {
-    "name": "Mercadito Natural",
-    "tipo": "comercio",
-    "email": "info.mercaditonatural@gmail.com"
-  },
-  {
     "name": "Merlino",
     "tipo": "comercio",
     "email": "vtex.render-server@8.181.0"

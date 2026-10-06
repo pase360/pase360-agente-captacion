@@ -412,27 +412,6 @@
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "2514354008",
-    "name": "Mercadito Natural",
-    "website": "http://www.mercaditonatural.blogspot.com.ar/",
-    "email": "info.mercaditonatural@gmail.com",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.437766,
-    "lon": -64.1422711,
-    "tags": {
-      "name": "Mercadito Natural",
-      "shop": "convenience",
-      "website": "http://www.mercaditonatural.blogspot.com.ar/"
-    },
-    "website_final": "http://mercaditonatural.blogspot.com/",
-    "email_source": "sitio_web",
-    "tipo": "comercio",
-    "clasificacion_motivo": "shop:convenience",
-    "estado": "listo_para_contactar"
-  },
-  {
-    "source": "OpenStreetMap",
     "source_id": "5625458422",
     "name": "Merlino",
     "website": "https://www.merlinosrl.com.ar/",
@@ -1246,7 +1225,7 @@
       "shop": "general"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "almacen,almacén",
+    "clasificacion_motivo": "almacen,almacen",
     "estado": "sin_email"
   },
   {
@@ -1863,7 +1842,7 @@
       "shop": "greengrocer"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "verduleria,verdulería",
+    "clasificacion_motivo": "verduleria,verduleria",
     "estado": "sin_email"
   },
   {
@@ -4494,7 +4473,7 @@
       "shop": "health_food"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "dietética,dietética",
+    "clasificacion_motivo": "dietetica,dietetica",
     "estado": "sin_email"
   },
   {
@@ -4516,7 +4495,7 @@
       "shop": "health_food"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "dietética,dietética",
+    "clasificacion_motivo": "dietetica,dietetica",
     "estado": "sin_email"
   },
   {
@@ -5643,7 +5622,7 @@
       "shop": "greengrocer"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "verduleria,verdulería",
+    "clasificacion_motivo": "verduleria,verduleria",
     "estado": "sin_email"
   },
   {
