@@ -1,81 +1,59 @@
 {
   "por_tipo": {
-    "comercio": 462,
-    "generador": 142,
-    "dudoso": 211,
-    "descartado": 38,
+    "comercio": 476,
+    "generador": 15,
+    "dudoso": 216,
+    "descartado": 146,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 29,
-    "sin_email": 773,
-    "requiere_decision": 13
+    "listo_para_contactar": 21,
+    "sin_email": 669,
+    "requiere_decision": 17
   },
   "descartados_por_motivo": {
+    "categoria_excluida:basílica,basilica": 2,
+    "categoria_excluida:municipal": 14,
+    "categoria_excluida:iglesia": 10,
     "categoria_excluida:parking,estacionamiento": 4,
-    "categoria_excluida:comisaria": 9,
-    "categoria_excluida:plaza": 4,
-    "categoria_excluida:parque": 2,
-    "categoria_excluida:municipalidad": 5,
+    "categoria_excluida:nacional,universidad": 1,
+    "categoria_excluida:comisaria,comisaría": 9,
+    "categoria_excluida:museo": 2,
+    "categoria_excluida:plaza": 3,
+    "categoria_excluida:municipalidad,municipal": 6,
+    "categoria_excluida:provincial": 2,
+    "categoria_excluida:parroquia": 9,
+    "categoria_excluida:jardin de infantes,jardín de infantes": 8,
+    "categoria_excluida:escuela": 48,
+    "categoria_excluida:templo": 1,
+    "categoria_excluida:museo,universidad": 1,
+    "categoria_excluida:secretaria de,secretaría de": 1,
     "categoria_excluida:parking": 4,
-    "categoria_excluida:ministerio": 2,
-    "categoria_excluida:policia": 1,
-    "categoria_excluida:comisaria,policia": 1,
-    "categoria_excluida:municipalidad,parque": 1,
-    "categoria_excluida:consulado": 3,
-    "categoria_excluida:tribunal": 1,
-    "categoria_excluida:estacionamiento": 1
+    "categoria_excluida:ministerio": 1,
+    "categoria_excluida:museo,gobierno": 1,
+    "categoria_excluida:policia,policía": 1,
+    "categoria_excluida:policia,policía,comisaria": 1,
+    "categoria_excluida:parroquia,escuela": 2,
+    "categoria_excluida:municipal,escuela": 2,
+    "categoria_excluida:ministerio,provincial,escuela": 1,
+    "categoria_excluida:jardin de infantes,jardín de infantes,escuela": 1,
+    "categoria_excluida:capilla": 6,
+    "categoria_excluida:iglesia,templo": 1,
+    "categoria_excluida:provincial,escuela": 1,
+    "categoria_excluida:estacionamiento": 1,
+    "categoria_excluida:facultad": 1,
+    "categoria_excluida:parroquia,plaza": 1
   },
   "generadores_muestra": [
-    {
-      "name": "CorGas",
-      "email": "",
-      "motivo": "institucional:sociedad"
-    },
-    {
-      "name": "IPEM 150 Juan Larrea",
-      "email": "",
-      "motivo": "institucion_educativa"
-    },
-    {
-      "name": "Colegio San José",
-      "email": "",
-      "motivo": "institucion_educativa"
-    },
     {
       "name": "Club Estudiantes",
       "email": "",
       "motivo": "club_deportivo"
     },
     {
-      "name": "Instituto Provincial de Enseñanza Media 20 Rodolfo Walsh",
-      "email": "",
-      "motivo": "institucion_educativa"
-    },
-    {
-      "name": "Jardín de Infantes Benadino Rivadavia",
-      "email": "",
-      "motivo": "institucion_educativa"
-    },
-    {
-      "name": "Escuela Primaria Honorato Laconi",
-      "email": "",
-      "motivo": "institucion_educativa"
-    },
-    {
       "name": "Polideportivo Carlos Ceruti",
       "email": "",
       "motivo": "club_deportivo"
-    },
-    {
-      "name": "Escuela Presidente Roque Saenz Peña",
-      "email": "",
-      "motivo": "institucion_educativa"
-    },
-    {
-      "name": "Museo de Antropología de la Universidad de Córdoba",
-      "email": "",
-      "motivo": "institucion_educativa"
     },
     {
       "name": "Club",
@@ -93,44 +71,14 @@
       "motivo": "club_deportivo"
     },
     {
-      "name": "Secretaría de Planificación y Gestión Institucional",
-      "email": "",
-      "motivo": "institucion_educativa"
-    },
-    {
-      "name": "Hipolito Vieytes",
-      "email": "",
-      "motivo": "institucion_educativa"
-    },
-    {
-      "name": "Colegio San José Parroquial",
-      "email": "",
-      "motivo": "institucion_educativa"
-    },
-    {
-      "name": "Escuela Nogal Histórico",
-      "email": "",
-      "motivo": "institucion_educativa"
-    },
-    {
-      "name": "IEC (secundario)",
-      "email": "",
-      "motivo": "institucion_educativa"
-    },
-    {
       "name": "Asociación Cordobesa de Aikido",
       "email": "aikidomedina@gmail.com",
-      "motivo": "institucional:asociacion"
+      "motivo": "club_deportivo"
     },
     {
       "name": "Centro Vecinal de Villa Adela - Playón deportivo",
       "email": "",
       "motivo": "club_deportivo"
-    },
-    {
-      "name": "Jardín de Infantes \"Al Agua Pato\"",
-      "email": "",
-      "motivo": "institucion_educativa"
     },
     {
       "name": "María Pía Gym",
@@ -140,7 +88,7 @@
     {
       "name": "Fundación José Gabriel Condorcanqui",
       "email": "",
-      "motivo": "institucional:fundacion"
+      "motivo": "institucional:fundacion,fundación"
     },
     {
       "name": "SEP - Sindicato de Empleados Públicos",
@@ -148,136 +96,131 @@
       "motivo": "institucional:sindicato"
     },
     {
-      "name": "I.P.E.M. N° 310 PUERTO ARGENTINO",
+      "name": "Club Colegio de Ingenieros Civiles",
       "email": "",
-      "motivo": "institucion_educativa"
+      "motivo": "colegio_profesional"
     },
     {
-      "name": "Escuela Mariano Fragueiro",
+      "name": "Club Atlético Yapeyú",
       "email": "",
-      "motivo": "institucion_educativa"
+      "motivo": "club_deportivo"
     },
     {
-      "name": "Escuela Primaria Francisco Vidal",
+      "name": "Polideportivo Corral de Palos",
       "email": "",
-      "motivo": "institucion_educativa"
+      "motivo": "club_deportivo"
     },
     {
-      "name": "ESCUELA PROVINCIA DE FORMOSA",
-      "email": "primariaformosa@hotmail.com.ar",
-      "motivo": "institucion_educativa"
+      "name": "Club Atlético General Paz -Junior´s",
+      "email": "",
+      "motivo": "club_deportivo"
     },
     {
-      "name": "Lorenzo Suárez de Figueroa",
+      "name": "Cooperativa de Servicios",
       "email": "",
-      "motivo": "institucion_educativa"
-    },
-    {
-      "name": "Constancio Cecilio Vigil",
-      "email": "",
-      "motivo": "institucion_educativa"
+      "motivo": "institucional:cooperativa"
     }
   ],
   "comercios_muestra": [
     {
       "name": "Aca Villa Allende",
       "email": "",
-      "motivo": "osm_amenity:fuel"
+      "motivo": "amenity:fuel"
     },
     {
       "name": "Axion",
       "email": "",
-      "motivo": "osm_amenity:fuel"
+      "motivo": "amenity:fuel"
+    },
+    {
+      "name": "CorGas",
+      "email": "",
+      "motivo": "amenity:fuel"
     },
     {
       "name": "Shell",
       "email": "",
-      "motivo": "osm_amenity:fuel"
+      "motivo": "amenity:fuel"
     },
     {
       "name": "Puma",
       "email": "",
-      "motivo": "osm_amenity:fuel"
+      "motivo": "amenity:fuel"
     },
     {
       "name": "YPF",
       "email": "",
-      "motivo": "osm_amenity:fuel"
-    },
-    {
-      "name": "Cineclub Municipal Hugo del Carril",
-      "email": "administracion@cineclubmunicipal.org.ar",
-      "motivo": "osm_amenity:cinema"
+      "motivo": "amenity:fuel"
     },
     {
       "name": "Che Salguero",
       "email": "",
-      "motivo": "actividad_comercial:hostel"
+      "motivo": "tourism:hostel"
     },
     {
       "name": "Vea",
       "email": "",
-      "motivo": "osm_shop:supermarket"
+      "motivo": "shop:supermarket"
     },
     {
       "name": "Hipermercado La Anonima",
       "email": "",
-      "motivo": "osm_shop:supermarket"
+      "motivo": "shop:supermarket"
+    },
+    {
+      "name": "Del Sol",
+      "email": "",
+      "motivo": "shop:chemist"
     },
     {
       "name": "Pachonga",
       "email": "",
-      "motivo": "actividad_comercial:hostel"
+      "motivo": "tourism:hostel"
     },
     {
       "name": "Club Milanesa",
       "email": "info@elclubdelamilanesa.com",
-      "motivo": "osm_amenity:restaurant"
+      "motivo": "amenity:restaurant"
     },
     {
       "name": "Strega",
       "email": "",
-      "motivo": "osm_amenity:restaurant"
+      "motivo": "amenity:restaurant"
     },
     {
       "name": "Milanesas del Mariscal",
       "email": "",
-      "motivo": "osm_amenity:restaurant"
+      "motivo": "amenity:restaurant"
     },
     {
       "name": "Saint Andrews",
       "email": "",
-      "motivo": "osm_amenity:bar"
+      "motivo": "amenity:bar"
     },
     {
       "name": "Bonanza",
       "email": "",
-      "motivo": "osm_amenity:bar"
+      "motivo": "amenity:bar"
     },
     {
       "name": "Grido",
       "email": "",
-      "motivo": "osm_amenity:ice_cream"
+      "motivo": "amenity:ice_cream"
     },
     {
       "name": "Mostachis",
       "email": "",
-      "motivo": "osm_amenity:fast_food"
+      "motivo": "amenity:fast_food"
     },
     {
       "name": "Las mejores del mundo",
       "email": "",
-      "motivo": "osm_shop:alcohol"
+      "motivo": "shop:alcohol"
     },
     {
-      "name": "Campestre",
+      "name": "Electronia",
       "email": "",
-      "motivo": "osm_amenity:restaurant"
-    },
-    {
-      "name": "Disco",
-      "email": "",
-      "motivo": "osm_shop:supermarket"
+      "motivo": "shop:computer"
     }
   ],
   "sin_email_muestra": [
@@ -293,7 +236,7 @@
     },
     {
       "name": "CorGas",
-      "tipo": "generador",
+      "tipo": "comercio",
       "website": ""
     },
     {
@@ -315,21 +258,6 @@
       "name": "Hombre Urbano",
       "tipo": "dudoso",
       "website": "https://turismo.cordoba.gob.ar/hombre-urbano/"
-    },
-    {
-      "name": "Basílica de La Merced",
-      "tipo": "dudoso",
-      "website": ""
-    },
-    {
-      "name": "Basílica de Santo Domingo",
-      "tipo": "dudoso",
-      "website": ""
-    },
-    {
-      "name": "Iglesia de San Francisco",
-      "tipo": "dudoso",
-      "website": ""
     },
     {
       "name": "Mujer Urbana",
@@ -363,7 +291,7 @@
     },
     {
       "name": "Del Sol",
-      "tipo": "dudoso",
+      "tipo": "comercio",
       "website": ""
     },
     {
@@ -378,6 +306,21 @@
     },
     {
       "name": "Milanesas del Mariscal",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Saint Andrews",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Bonanza",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Grido",
       "tipo": "comercio",
       "website": ""
     }
@@ -419,6 +362,26 @@
       "motivo": "sin_indicio_suficiente"
     },
     {
+      "name": "Instituto Privado DEÁN FUNES",
+      "email": "direccion@institutodeanfunes.edu.ar",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "APADIM",
+      "email": "apadim@apadim.org",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Jardín Infantes Juan Mantovani",
+      "email": "informes@mantovani.edu.ar",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Consulado de Francia",
+      "email": "sonzini@arnet.com.ar",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
       "name": "Sex Cordoba Shop",
       "email": "info@sexcordobashop.com.ar",
       "motivo": "sin_indicio_suficiente"
@@ -429,13 +392,13 @@
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Capilla Santa Teresita",
-      "email": "vicariasantateresita@gmail.com",
+      "name": "ATLARES Crowdfunding Bitcoin & Networking",
+      "email": "info@atlares.com",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "ATLARES Crowdfunding Bitcoin & Networking",
-      "email": "info@atlares.com",
+      "name": "Instituto Privado Deán Funes",
+      "email": "info@institutodeanfunes.edu.com",
       "motivo": "sin_indicio_suficiente"
     },
     {
@@ -444,19 +407,19 @@
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Museo Palacio Dionisi",
-      "email": "museopalaciodionisi@gmail.com",
+      "name": "Puente de Estrellas",
+      "email": "puentedeestrellas.micael@gmail.com",
       "motivo": "sin_indicio_suficiente"
     }
   ],
   "duplicados": 147,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "listos_comercio": 22,
-  "listos_generador": 7,
+  "listos_comercio": 20,
+  "listos_generador": 1,
   "encontrados": 5176,
   "procesados": 1000,
-  "nuevos": 815,
-  "listos": 29,
-  "descartados": 38
+  "nuevos": 707,
+  "listos": 21,
+  "descartados": 146
 }

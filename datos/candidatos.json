@@ -23,159 +23,7 @@
     "website_final": "http://www.aikidoaikido.com.ar/",
     "email_source": "sitio_web",
     "tipo": "generador",
-    "clasificacion_motivo": "institucional:asociacion",
-    "estado": "listo_para_contactar"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3454840057",
-    "name": "ESCUELA PROVINCIA DE FORMOSA",
-    "website": "",
-    "email": "primariaformosa@hotmail.com.ar",
-    "phone": "+54 351 433 6048",
-    "direccion": "Nicolás Rodríguez Peña 1548",
-    "lat": -31.396152,
-    "lon": -64.1902127,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "1548",
-      "addr:postcode": "5012",
-      "addr:street": "Nicolás Rodríguez Peña",
-      "amenity": "school",
-      "email": "primariaformosa@hotmail.com.ar",
-      "name": "ESCUELA PROVINCIA DE FORMOSA",
-      "phone": "+54 351 433 6048"
-    },
-    "email_source": "OpenStreetMap",
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "listo_para_contactar"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3590387289",
-    "name": "Instituto Privado DEÁN FUNES",
-    "website": "https://www.institutodeanfunes.edu.ar",
-    "email": "direccion@institutodeanfunes.edu.ar",
-    "phone": "",
-    "direccion": "Cangallo 1888",
-    "lat": -31.4306865,
-    "lon": -64.1191504,
-    "tags": {
-      "addr:housenumber": "1888",
-      "addr:street": "Cangallo",
-      "amenity": "school",
-      "name": "Instituto Privado DEÁN FUNES",
-      "website": "https://www.institutodeanfunes.edu.ar"
-    },
-    "website_final": "https://www.institutodeanfunes.edu.ar/",
-    "email_source": "sitio_web",
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "listo_para_contactar"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4715773289",
-    "name": "Instituto Privado Deán Funes",
-    "website": "http://www.institutodeanfunes.edu.com",
-    "email": "info@institutodeanfunes.edu.com",
-    "phone": "+54 351 456 8164",
-    "direccion": "Cangallo 1888",
-    "lat": -31.4309057,
-    "lon": -64.119152,
-    "tags": {
-      "addr:housenumber": "1888",
-      "addr:postcode": "5000",
-      "addr:street": "Cangallo",
-      "amenity": "school",
-      "email": "info@institutodeanfunes.edu.com",
-      "name": "Instituto Privado Deán Funes",
-      "name:es": "Instituto Privado Deán Funes",
-      "opening_hours": "Mo-Fr 07:45-19:45",
-      "phone": "+54 351 456 8164",
-      "website": "http://www.institutodeanfunes.edu.com"
-    },
-    "email_source": "OpenStreetMap",
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "listo_para_contactar"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3976628347",
-    "name": "Jardín Infantes Juan Mantovani",
-    "website": "https://mantovani.edu.ar/",
-    "email": "informes@mantovani.edu.ar",
-    "phone": "+54 3543 44 9240",
-    "direccion": "",
-    "lat": -31.3540184,
-    "lon": -64.2504509,
-    "tags": {
-      "amenity": "kindergarten",
-      "name": "Jardín Infantes Juan Mantovani",
-      "phone": "+54 3543 44 9240",
-      "website": "https://mantovani.edu.ar/",
-      "wheelchair": "yes"
-    },
-    "website_final": "https://mantovani.edu.ar/",
-    "email_source": "sitio_web",
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "listo_para_contactar"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4778542022",
-    "name": "Puente de Estrellas",
-    "website": "",
-    "email": "puentedeestrellas.micael@gmail.com",
-    "phone": "+54 3543 42 8329",
-    "direccion": "Isaac Newton 5827",
-    "lat": -31.3674728,
-    "lon": -64.2568157,
-    "tags": {
-      "addr:housenumber": "5827",
-      "addr:postcode": "5000",
-      "addr:street": "Isaac Newton",
-      "amenity": "school",
-      "email": "puentedeestrellas.micael@gmail.com",
-      "name": "Puente de Estrellas",
-      "name:es": "Puente de Estrellas",
-      "opening_hours": "Mo-Fr 07:40-13:30",
-      "phone": "+54 3543 42 8329"
-    },
-    "email_source": "OpenStreetMap",
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "listo_para_contactar"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4217591094",
-    "name": "Área de Formación Docente y Producción Educativa",
-    "website": "https://www.eco.unc.edu.ar/inicio-fype",
-    "email": "edudis@eco.unc.edu.ar",
-    "phone": "+54 0351 433-4088",
-    "direccion": "Avenida Ciudad de Valparaiso",
-    "lat": -31.4349884,
-    "lon": -64.185666,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:postcode": "5000",
-      "addr:street": "Avenida Ciudad de Valparaiso",
-      "amenity": "college",
-      "contact:email": "edudis@eco.unc.edu.ar",
-      "contact:phone": "+54 0351 433-4088",
-      "internet_access": "yes",
-      "name": "Área de Formación Docente y Producción Educativa",
-      "opening_hours": "Mo-Fr 09:00-13:00,15:00-19:00",
-      "operator": "Área de la Facultad de Ciencias Económicas, ex Departamento de Educación a Distancia.",
-      "website": "https://www.eco.unc.edu.ar/inicio-fype"
-    },
-    "email_source": "OpenStreetMap",
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
+    "clasificacion_motivo": "club_deportivo",
     "estado": "listo_para_contactar"
   },
   {
@@ -200,7 +48,7 @@
     "website_final": "https://azurrealhotel.com/",
     "email_source": "sitio_web",
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:hotel,boutique",
+    "clasificacion_motivo": "hotel,boutique",
     "estado": "listo_para_contactar"
   },
   {
@@ -243,7 +91,7 @@
     },
     "email_source": "OpenStreetMap",
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:cafe",
+    "clasificacion_motivo": "amenity:cafe",
     "estado": "listo_para_contactar"
   },
   {
@@ -269,7 +117,7 @@
     },
     "email_source": "OpenStreetMap",
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_craft:shoemaker",
+    "clasificacion_motivo": "craft:shoemaker",
     "estado": "listo_para_contactar"
   },
   {
@@ -296,7 +144,7 @@
     "website_final": "https://www.vitus.com.ar/",
     "email_source": "sitio_web",
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:clinic",
+    "clasificacion_motivo": "amenity:clinic",
     "estado": "listo_para_contactar"
   },
   {
@@ -324,33 +172,7 @@
     },
     "email_source": "OpenStreetMap",
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:car_parts",
-    "estado": "listo_para_contactar"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "279266076",
-    "name": "Cineclub Municipal Hugo del Carril",
-    "website": "http://www.cineclubmunicipal.org.ar/",
-    "email": "administracion@cineclubmunicipal.org.ar",
-    "phone": "+54 351 433 2463; +54 351 434 1609",
-    "direccion": "Boulevard San Juan",
-    "lat": -31.4208569,
-    "lon": -64.1866173,
-    "tags": {
-      "addr:housename": "49",
-      "addr:postcode": "X5000ATA",
-      "addr:street": "Boulevard San Juan",
-      "amenity": "cinema",
-      "contact:phone": "+54 351 433 2463; +54 351 434 1609",
-      "contact:website": "http://www.cineclubmunicipal.org.ar/",
-      "is_in:city": "Córdoba",
-      "name": "Cineclub Municipal Hugo del Carril"
-    },
-    "website_final": "https://cineclubmunicipal.org.ar/",
-    "email_source": "sitio_web",
-    "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:cinema",
+    "clasificacion_motivo": "shop:car_parts",
     "estado": "listo_para_contactar"
   },
   {
@@ -380,36 +202,7 @@
     "website_final": "https://elclubdelamilanesa.com/",
     "email_source": "sitio_web",
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:restaurant",
-    "estado": "listo_para_contactar"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "968287522",
-    "name": "Comedor Universitario",
-    "website": "https://www.unc.edu.ar/vida-estudiantil/direcci%C3%B3n-de-nutrici%C3%B3n-y-servicios-alimentarios",
-    "email": "comedor@bienestar.unc.edu.ar",
-    "phone": "+54 351 535 3910 x1",
-    "direccion": "Juan Filloy s/n",
-    "lat": -31.4398058,
-    "lon": -64.1893701,
-    "tags": {
-      "addr:housenumber": "s/n",
-      "addr:street": "Juan Filloy",
-      "amenity": "fast_food",
-      "diet:gluten_free": "yes",
-      "diet:non-vegetarian": "yes",
-      "diet:vegetarian": "yes",
-      "email": "comedor@bienestar.unc.edu.ar",
-      "fast_food": "cafeteria",
-      "name": "Comedor Universitario",
-      "operator": "Universidad Nacional de Córdoba",
-      "phone": "+54 351 535 3910 x1",
-      "website": "https://www.unc.edu.ar/vida-estudiantil/direcci%C3%B3n-de-nutrici%C3%B3n-y-servicios-alimentarios"
-    },
-    "email_source": "OpenStreetMap",
-    "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:fast_food",
+    "clasificacion_motivo": "amenity:restaurant",
     "estado": "listo_para_contactar"
   },
   {
@@ -433,7 +226,7 @@
     "website_final": "https://www.cordobainn.com.ar/",
     "email_source": "sitio_web",
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:hotel",
+    "clasificacion_motivo": "hotel",
     "estado": "listo_para_contactar"
   },
   {
@@ -458,7 +251,7 @@
     },
     "email_source": "OpenStreetMap",
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:sports",
+    "clasificacion_motivo": "shop:sports",
     "estado": "listo_para_contactar"
   },
   {
@@ -487,7 +280,7 @@
     },
     "email_source": "OpenStreetMap",
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:electronics",
+    "clasificacion_motivo": "shop:electronics",
     "estado": "listo_para_contactar"
   },
   {
@@ -515,7 +308,7 @@
     },
     "email_source": "OpenStreetMap",
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:car",
+    "clasificacion_motivo": "shop:car",
     "estado": "listo_para_contactar"
   },
   {
@@ -540,7 +333,7 @@
     },
     "email_source": "OpenStreetMap",
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:hotel",
+    "clasificacion_motivo": "hotel",
     "estado": "listo_para_contactar"
   },
   {
@@ -565,7 +358,7 @@
     },
     "email_source": "OpenStreetMap",
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:taller",
+    "clasificacion_motivo": "taller",
     "estado": "listo_para_contactar"
   },
   {
@@ -590,7 +383,7 @@
     },
     "email_source": "OpenStreetMap",
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:car_parts",
+    "clasificacion_motivo": "shop:car_parts",
     "estado": "listo_para_contactar"
   },
   {
@@ -611,7 +404,7 @@
     "website_final": "http://mercaditonatural.blogspot.com/",
     "email_source": "sitio_web",
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:convenience",
+    "clasificacion_motivo": "shop:convenience",
     "estado": "listo_para_contactar"
   },
   {
@@ -636,7 +429,7 @@
     },
     "email_source": "OpenStreetMap",
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:supermarket",
+    "clasificacion_motivo": "shop:supermarket",
     "estado": "listo_para_contactar"
   },
   {
@@ -663,7 +456,7 @@
     },
     "email_source": "OpenStreetMap",
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:hardware",
+    "clasificacion_motivo": "shop:hardware",
     "estado": "listo_para_contactar"
   },
   {
@@ -708,7 +501,7 @@
     },
     "email_source": "OpenStreetMap",
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:cafe",
+    "clasificacion_motivo": "amenity:cafe",
     "estado": "listo_para_contactar"
   },
   {
@@ -744,7 +537,7 @@
     },
     "email_source": "OpenStreetMap",
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:restaurant",
+    "clasificacion_motivo": "amenity:restaurant",
     "estado": "listo_para_contactar"
   },
   {
@@ -772,7 +565,7 @@
     "website_final": "https://systel-global.com/argentina/",
     "email_source": "sitio_web",
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:electronics",
+    "clasificacion_motivo": "shop:electronics",
     "estado": "listo_para_contactar"
   },
   {
@@ -798,226 +591,8 @@
     "website_final": "https://wollen.com.ar/",
     "email_source": "sitio_web",
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:cafe",
+    "clasificacion_motivo": "amenity:cafe",
     "estado": "listo_para_contactar"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3742070428",
-    "name": "Almirante G. Brown",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Norberto Zavalía 1441",
-    "lat": -31.3924122,
-    "lon": -64.1382207,
-    "tags": {
-      "addr:city": "Córdoba Capital",
-      "addr:housenumber": "1441",
-      "addr:postcode": "5012",
-      "addr:street": "Norberto Zavalía",
-      "amenity": "college",
-      "name": "Almirante G. Brown"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3623947854",
-    "name": "APADIM",
-    "website": "https://www.apadim.org.ar/",
-    "email": "",
-    "phone": "",
-    "direccion": "Avenida Vélez Sarsfield 5000",
-    "lat": -31.474757,
-    "lon": -64.2030259,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "5000",
-      "addr:street": "Avenida Vélez Sarsfield",
-      "amenity": "school",
-      "name": "APADIM",
-      "website": "https://www.apadim.org.ar/"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4886002421",
-    "name": "Asociación Friulana Cordobesa",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4133472,
-    "lon": -64.1768371,
-    "tags": {
-      "name": "Asociación Friulana Cordobesa",
-      "name:es": "Asociación Friulana Cordobesa",
-      "tourism": "artwork"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucional:asociacion",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4592837596",
-    "name": "Barquitos de Papel",
-    "website": "",
-    "email": "",
-    "phone": "+54 351 425 6956",
-    "direccion": "Avenida Maipú 134",
-    "lat": -31.4157627,
-    "lon": -64.1792391,
-    "tags": {
-      "addr:housenumber": "134",
-      "addr:postcode": "5000",
-      "addr:street": "Avenida Maipú",
-      "amenity": "kindergarten",
-      "name": "Barquitos de Papel",
-      "name:es": "Barquitos de Papel",
-      "phone": "+54 351 425 6956"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3621727932",
-    "name": "Centro Educativo Antártida Argentina",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Rivadavia",
-    "lat": -31.3956562,
-    "lon": -64.272971,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:postcode": "5003",
-      "addr:street": "Rivadavia",
-      "amenity": "school",
-      "name": "Centro Educativo Antártida Argentina"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4098494689",
-    "name": "Centro Educativo Batería Libertad",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Potrerillos",
-    "lat": -31.3989914,
-    "lon": -64.2534421,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:postcode": "5003",
-      "addr:street": "Potrerillos",
-      "amenity": "school",
-      "description": "Escuela Provincial pública estatal, EGB1 y EGB2",
-      "name": "Centro Educativo Batería Libertad"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3818038366",
-    "name": "CENTRO EDUCATIVO OBISPO ESQUIU- 250 alumnos",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3590448,
-    "lon": -64.1076981,
-    "tags": {
-      "name": "CENTRO EDUCATIVO OBISPO ESQUIU- 250 alumnos",
-      "office": "educational_institution"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3758786713",
-    "name": "Centro Educativo Peter Pan",
-    "website": "",
-    "email": "",
-    "phone": "+54 351 477 1912",
-    "direccion": "Pablo de Guzmán 131",
-    "lat": -31.3671097,
-    "lon": -64.2041635,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "131",
-      "addr:postcode": "5008",
-      "addr:street": "Pablo de Guzmán",
-      "amenity": "school",
-      "description": "Nivel inicial y primario",
-      "name": "Centro Educativo Peter Pan",
-      "phone": "+54 351 477 1912"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3591104881",
-    "name": "Centro Educativo Rabindranath Tagore (Ex Municipal N° 33)",
-    "website": "",
-    "email": "",
-    "phone": "+54 351 433 9199",
-    "direccion": "Ocarina 1613",
-    "lat": -31.3894536,
-    "lon": -64.1233107,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "1613",
-      "addr:postcode": "5012",
-      "addr:street": "Ocarina",
-      "amenity": "school",
-      "name": "Centro Educativo Rabindranath Tagore (Ex Municipal N° 33)",
-      "operator": "Elizabeth Di Pasquantonio",
-      "phone": "+54 351 433 9199"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3759232819",
-    "name": "Centro Educativo Terapéutico SULLAI",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Gaspar de Medina 333",
-    "lat": -31.3656371,
-    "lon": -64.2034411,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:country": "AR",
-      "addr:housenumber": "333",
-      "addr:postcode": "5008",
-      "addr:street": "Gaspar de Medina",
-      "amenity": "school",
-      "name": "Centro Educativo Terapéutico SULLAI"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
   },
   {
     "source": "OpenStreetMap",
@@ -1036,24 +611,6 @@
     },
     "tipo": "generador",
     "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4888705932",
-    "name": "Centro Vecinal Marcelo T. De alvear",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3671842,
-    "lon": -64.1725199,
-    "tags": {
-      "name": "Centro Vecinal Marcelo T. De alvear",
-      "office": "association"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
     "estado": "sin_email"
   },
   {
@@ -1140,7 +697,7 @@
       "name": "Club Colegio de Ingenieros Civiles"
     },
     "tipo": "generador",
-    "clasificacion_motivo": "colegio_profesional:colegio de ingenieros",
+    "clasificacion_motivo": "colegio_profesional",
     "estado": "sin_email"
   },
   {
@@ -1159,167 +716,6 @@
     },
     "tipo": "generador",
     "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4376266141",
-    "name": "Club Sociedad Belgrano",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3849638,
-    "lon": -64.1583947,
-    "tags": {
-      "amenity": "community_centre",
-      "name": "Club Sociedad Belgrano"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucional:sociedad",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3703379810",
-    "name": "Colegio Cristiano Evangelico William C. Morris",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4139436,
-    "lon": -64.1967566,
-    "tags": {
-      "amenity": "school",
-      "name": "Colegio Cristiano Evangelico William C. Morris"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3753790427",
-    "name": "Colegio Nuestra Señora de Loreto",
-    "website": "",
-    "email": "",
-    "phone": "+54 351 466 3386",
-    "direccion": "Manuel Gómez Carrillo 2559",
-    "lat": -31.4291424,
-    "lon": -64.2215638,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "2559",
-      "addr:postcode": "5010",
-      "addr:street": "Manuel Gómez Carrillo",
-      "amenity": "school",
-      "name": "Colegio Nuestra Señora de Loreto",
-      "phone": "+54 351 466 3386"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3821490272",
-    "name": "Colegio Nuestra Señora del Huerto",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Belgrano 268",
-    "lat": -31.4176964,
-    "lon": -64.1890754,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "268",
-      "addr:postcode": "5000",
-      "addr:street": "Belgrano",
-      "amenity": "school",
-      "name": "Colegio Nuestra Señora del Huerto"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "1195586263",
-    "name": "Colegio San José",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4194776,
-    "lon": -64.1856758,
-    "tags": {
-      "amenity": "school",
-      "name": "Colegio San José"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "2414723002",
-    "name": "Colegio San José Parroquial",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Vélez 252",
-    "lat": -31.4067623,
-    "lon": -64.2225552,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "252",
-      "addr:postcode": "5003",
-      "addr:street": "Vélez",
-      "amenity": "school",
-      "name": "Colegio San José Parroquial"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3522415671",
-    "name": "Colegio Santo Domingo",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4127714,
-    "lon": -64.1798007,
-    "tags": {
-      "amenity": "school",
-      "name": "Colegio Santo Domingo"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3456794456",
-    "name": "Constancio Cecilio Vigil",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Juan Llerena 5561",
-    "lat": -31.453953,
-    "lon": -64.1095857,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "5561",
-      "addr:postcode": "5123",
-      "addr:street": "Juan Llerena",
-      "amenity": "school",
-      "name": "Constancio Cecilio Vigil"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
     "estado": "sin_email"
   },
   {
@@ -1343,1097 +739,6 @@
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "272172281",
-    "name": "CorGas",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4014859,
-    "lon": -64.1759686,
-    "tags": {
-      "amenity": "fuel",
-      "fuel:cng": "yes",
-      "name": "CorGas",
-      "operator": "CORGAS SOCIEDAD ANOMIMA",
-      "panoramax": "c2990159-36a7-460c-9ad1-2bf72dc01d5d"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucional:sociedad",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4485340680",
-    "name": "DeRose Method - Sede Córdoba",
-    "website": "",
-    "email": "",
-    "phone": "+54 351 422 2781",
-    "direccion": "",
-    "lat": -31.4255064,
-    "lon": -64.1867028,
-    "tags": {
-      "amenity": "college",
-      "name": "DeRose Method - Sede Córdoba",
-      "name:es": "Método DeRose - Sede Córdoba",
-      "network": "DeRose Method",
-      "phone": "+54 351 422 2781",
-      "training": "DeRose Method"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4677518389",
-    "name": "EOL SECCIÓN CORDOBA",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Caseros 950",
-    "lat": -31.4142397,
-    "lon": -64.1977775,
-    "tags": {
-      "addr:housenumber": "950",
-      "addr:street": "Caseros",
-      "amenity": "school",
-      "name": "EOL SECCIÓN CORDOBA"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3462486137",
-    "name": "Escuela 9 de Julio",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "José Antonio Cabrera 5051",
-    "lat": -31.444195,
-    "lon": -64.1212076,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "5051",
-      "addr:postcode": "5020",
-      "addr:street": "José Antonio Cabrera",
-      "amenity": "school",
-      "name": "Escuela 9 de Julio"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3815941798",
-    "name": "Escuela Alas Argentinas",
-    "website": "",
-    "email": "",
-    "phone": "+54 351 434 3145",
-    "direccion": "Bonn 4627",
-    "lat": -31.4509493,
-    "lon": -64.2471526,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:country": "AR",
-      "addr:housenumber": "4627",
-      "addr:postcode": "5000",
-      "addr:street": "Bonn",
-      "amenity": "school",
-      "name": "Escuela Alas Argentinas",
-      "phone": "+54 351 434 3145"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4475861193",
-    "name": "Escuela Artemio Arán",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3187325,
-    "lon": -64.2545237,
-    "tags": {
-      "amenity": "school",
-      "name": "Escuela Artemio Arán"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3584202086",
-    "name": "Escuela Arturo Capdevila",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Nicolás Avellaneda 4098",
-    "lat": -31.3677047,
-    "lon": -64.1870791,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "4098",
-      "addr:street": "Nicolás Avellaneda",
-      "amenity": "school",
-      "name": "Escuela Arturo Capdevila"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4380841071",
-    "name": "Escuela Bandera Argentina",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.471161,
-    "lon": -64.2347049,
-    "tags": {
-      "amenity": "school",
-      "name": "Escuela Bandera Argentina"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4763205187",
-    "name": "Escuela Congreso de Tucumán",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Herminio Malvino 2772",
-    "lat": -31.3770034,
-    "lon": -64.2118625,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "2772",
-      "addr:street": "Herminio Malvino",
-      "amenity": "school",
-      "name": "Escuela Congreso de Tucumán"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3758886162",
-    "name": "Escuela Coronel Olmedo",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Avenida Idelfonso Muñecas",
-    "lat": -31.480358,
-    "lon": -64.1426018,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:street": "Avenida Idelfonso Muñecas",
-      "amenity": "school",
-      "education": "school",
-      "name": "Escuela Coronel Olmedo"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4219904292",
-    "name": "Escuela de Deporte Marcelo Bonetto",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4406107,
-    "lon": -64.1643093,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Escuela de Deporte Marcelo Bonetto"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3458400216",
-    "name": "Escuela Doctor Ernesto Molinari Romero",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Pampayasta 2640",
-    "lat": -31.4496966,
-    "lon": -64.1627677,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "2640",
-      "addr:postcode": "5014",
-      "addr:street": "Pampayasta",
-      "amenity": "school",
-      "isced:level": "1",
-      "name": "Escuela Doctor Ernesto Molinari Romero",
-      "official_name": "Escuela Municipal Primaria de Córdoba Dr. Ernesto Molinari Romero",
-      "operator:type": "public",
-      "ref:cue": "140332600"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3743509229",
-    "name": "Escuela España",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Mario Bravo 1397",
-    "lat": -31.4253726,
-    "lon": -64.1218352,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "1397",
-      "addr:postcode": "5006",
-      "addr:street": "Mario Bravo",
-      "amenity": "school",
-      "name": "Escuela España",
-      "name:etymology:wikidata": "Q29"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4096349088",
-    "name": "Escuela Francisco Antonio Rizzuto",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3751576,
-    "lon": -64.1732934,
-    "tags": {
-      "amenity": "school",
-      "name": "Escuela Francisco Antonio Rizzuto"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3766366015",
-    "name": "Escuela General Manuel Belgrano",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Amboy 3230",
-    "lat": -31.4501129,
-    "lon": -64.1659877,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "3230",
-      "addr:postcode": "5014",
-      "addr:street": "Amboy",
-      "amenity": "school",
-      "isced:level": "1",
-      "name": "Escuela General Manuel Belgrano",
-      "operator:type": "public",
-      "ref:cue": "140332500"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3814734851",
-    "name": "Escuela Grecia",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "General Pedernera 952",
-    "lat": -31.4204253,
-    "lon": -64.1390486,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "952",
-      "addr:postcode": "5000",
-      "addr:street": "General Pedernera",
-      "amenity": "school",
-      "name": "Escuela Grecia"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4126343790",
-    "name": "escuela IPEM 21 Alfonsina Storni",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Avenida de Circunvalación Agustín Tosco 1050",
-    "lat": -31.3594123,
-    "lon": -64.1613691,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "1050",
-      "addr:postcode": "5019",
-      "addr:street": "Avenida de Circunvalación Agustín Tosco",
-      "amenity": "school",
-      "name": "escuela IPEM 21 Alfonsina Storni"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3752950950",
-    "name": "Escuela Japón",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Avenida Pueyrredón 2398",
-    "lat": -31.4200441,
-    "lon": -64.2178478,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "2398",
-      "addr:street": "Avenida Pueyrredón",
-      "amenity": "school",
-      "name": "Escuela Japón"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3818084454",
-    "name": "Escuela Jorge Newbery",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3496934,
-    "lon": -64.1800812,
-    "tags": {
-      "amenity": "school",
-      "name": "Escuela Jorge Newbery"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3744876783",
-    "name": "Escuela Jose Luis Sersic",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Pérez Correa 1498",
-    "lat": -31.366953,
-    "lon": -64.1934633,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "1498",
-      "addr:postcode": "5008",
-      "addr:street": "Pérez Correa",
-      "amenity": "school",
-      "isced:level": "1",
-      "name": "Escuela Jose Luis Sersic"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4377991087",
-    "name": "Escuela Justo Paez Molina",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3762221,
-    "lon": -64.1523856,
-    "tags": {
-      "amenity": "school",
-      "name": "Escuela Justo Paez Molina"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3757646478",
-    "name": "Escuela Leopoldo Lugones",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Leopoldo Lugones 225",
-    "lat": -31.2804105,
-    "lon": -64.1670487,
-    "tags": {
-      "addr:city": "Juárez Celman",
-      "addr:full": "Leopoldo Lugones 225 Villa Los Llanos Barrio Villa Los Llanos - Juarez Celman",
-      "addr:housenumber": "225",
-      "addr:postcode": "5145",
-      "addr:street": "Leopoldo Lugones",
-      "amenity": "school",
-      "isced:level": "1",
-      "name": "Escuela Leopoldo Lugones",
-      "ref:cue": "140477300",
-      "smoking": "no"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3824578325",
-    "name": "Escuela Manuel Eduardo Perez Bulnes",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Arteaga 750",
-    "lat": -31.4100812,
-    "lon": -64.2522915,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "750",
-      "addr:street": "Arteaga",
-      "alt_name": "Centro Educativo Manuel Eduardo Pérez Bulnes",
-      "amenity": "school",
-      "isced:level": "1",
-      "name": "Escuela Manuel Eduardo Perez Bulnes",
-      "operator:type": "public",
-      "ref:cue": "140345200"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3451257646",
-    "name": "Escuela Mariano Fragueiro",
-    "website": "",
-    "email": "",
-    "phone": "+54 351 434 8915",
-    "direccion": "Entre Ríos 3373",
-    "lat": -31.4250648,
-    "lon": -64.1410503,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:country": "AR",
-      "addr:housenumber": "3373",
-      "addr:postcode": "5006",
-      "addr:street": "Entre Ríos",
-      "amenity": "school",
-      "description": "Inaugurada en 1917, escuela mixta, asisten 710 niños y niñas en la actualidad.",
-      "name": "Escuela Mariano Fragueiro",
-      "operator": "Escuela Pública",
-      "phone": "+54 351 434 8915"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4209981365",
-    "name": "Escuela Mateo José Luque",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Jacinto de Altoaguirre 2089",
-    "lat": -31.3846678,
-    "lon": -64.1343208,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "2089",
-      "addr:postcode": "5012",
-      "addr:street": "Jacinto de Altoaguirre",
-      "amenity": "school",
-      "name": "Escuela Mateo José Luque",
-      "operator": "Mercedes Palacios"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4373621374",
-    "name": "Escuela Municipal Julio Gonzalez",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Crespín",
-    "lat": -31.368928,
-    "lon": -64.0610863,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:street": "Crespín",
-      "amenity": "school",
-      "isced:level": "0;1",
-      "name": "Escuela Municipal Julio Gonzalez"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3584167408",
-    "name": "Escuela Nocturna 25 de Mayo",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "24 de Septiembre 2398",
-    "lat": -31.410239,
-    "lon": -64.1525095,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "2398",
-      "addr:street": "24 de Septiembre",
-      "amenity": "school",
-      "name": "Escuela Nocturna 25 de Mayo"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3817754202",
-    "name": "Escuela Nocturna República de Chile - Extensión Áulica SINPECAF",
-    "website": "",
-    "email": "",
-    "phone": "+54 351 4227351",
-    "direccion": "Sucre 466",
-    "lat": -31.4089536,
-    "lon": -64.1870927,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "466",
-      "addr:postcode": "5000",
-      "addr:street": "Sucre",
-      "amenity": "school",
-      "name": "Escuela Nocturna República de Chile - Extensión Áulica SINPECAF",
-      "phone": "+54 351 4227351"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "2722721727",
-    "name": "Escuela Nogal Histórico",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "José Acastelli 252",
-    "lat": -31.3138284,
-    "lon": -64.3094479,
-    "tags": {
-      "addr:city": "Saldán",
-      "addr:housenumber": "252",
-      "addr:street": "José Acastelli",
-      "amenity": "school",
-      "name": "Escuela Nogal Histórico"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3811593593",
-    "name": "Escuela Nuestra Señora de Nieva",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Ayacucho 442",
-    "lat": -31.4197461,
-    "lon": -64.1917946,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "442",
-      "addr:postcode": "5000",
-      "addr:street": "Ayacucho",
-      "alt_name": "Instituto Nuestra Señora de Nieva",
-      "amenity": "school",
-      "check_date": "2025-11-01",
-      "isced:level": "2",
-      "name": "Escuela Nuestra Señora de Nieva",
-      "note": "Institución educativa de nivel inicial, primario y secundario",
-      "operator:type": "private",
-      "ref:cue": "140045200"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3732301456",
-    "name": "Escuela Olegario V. Andrade",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Amalia Celia Figueredo de Pietra km 7.5",
-    "lat": -31.3422873,
-    "lon": -64.1483873,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "km 7.5",
-      "addr:street": "Amalia Celia Figueredo de Pietra",
-      "amenity": "school",
-      "name": "Escuela Olegario V. Andrade"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3822855986",
-    "name": "Escuela Parroquial San Pablo Apostol",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Asturias 1935",
-    "lat": -31.4383467,
-    "lon": -64.1576088,
-    "tags": {
-      "addr:city": "Córdoba Capital",
-      "addr:housenumber": "1935",
-      "addr:street": "Asturias",
-      "amenity": "school",
-      "name": "Escuela Parroquial San Pablo Apostol"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3845706964",
-    "name": "Escuela Pedro Goyena",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Ernesto Enrique Guastoni 3472",
-    "lat": -31.4393649,
-    "lon": -64.1405549,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "3472",
-      "addr:postcode": "5014",
-      "addr:street": "Ernesto Enrique Guastoni",
-      "amenity": "school",
-      "designation": "Escuela Primaria",
-      "name": "Escuela Pedro Goyena"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "1653209810",
-    "name": "Escuela Presidente Roque Saenz Peña",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4266812,
-    "lon": -64.191743,
-    "tags": {
-      "amenity": "school",
-      "name": "Escuela Presidente Roque Saenz Peña"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4403514208",
-    "name": "Escuela Primaria",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4648355,
-    "lon": -64.0981774,
-    "tags": {
-      "amenity": "school",
-      "name": "Escuela Primaria"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3818007777",
-    "name": "Escuela Primaria Aristóbulo del Valle",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Jáuregui 1645",
-    "lat": -31.3915852,
-    "lon": -64.1503946,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "1645",
-      "addr:postcode": "5000",
-      "addr:street": "Jáuregui",
-      "amenity": "school",
-      "name": "Escuela Primaria Aristóbulo del Valle"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3452728124",
-    "name": "Escuela Primaria Francisco Vidal",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Marcos Infante 560",
-    "lat": -31.3695385,
-    "lon": -64.1824505,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "560",
-      "addr:postcode": "5001",
-      "addr:street": "Marcos Infante",
-      "amenity": "school",
-      "name": "Escuela Primaria Francisco Vidal",
-      "operator": "Fernanda Maffei"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4368520529",
-    "name": "Escuela Primaria Gabriela Mistral",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.393898,
-    "lon": -64.2550278,
-    "tags": {
-      "amenity": "school",
-      "name": "Escuela Primaria Gabriela Mistral"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "1502351847",
-    "name": "Escuela Primaria Honorato Laconi",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.363221,
-    "lon": -64.1951434,
-    "tags": {
-      "amenity": "school",
-      "name": "Escuela Primaria Honorato Laconi"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4375930499",
-    "name": "Escuela Primaria Santiago H. del Castillo",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3735305,
-    "lon": -64.1523918,
-    "tags": {
-      "amenity": "school",
-      "name": "Escuela Primaria Santiago H. del Castillo"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3588406287",
-    "name": "Escuela Primaria Víctor Mercante",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Caucete 4008",
-    "lat": -31.432496,
-    "lon": -64.1338344,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:country": "AR",
-      "addr:housenumber": "4008",
-      "addr:postcode": "5006",
-      "addr:street": "Caucete",
-      "amenity": "school",
-      "name": "Escuela Primaria Víctor Mercante",
-      "wheelchair": "yes"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3827536365",
-    "name": "Escuela Provincia La Rioja",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Junín 398",
-    "lat": -31.4283364,
-    "lon": -64.1406349,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "398",
-      "addr:postcode": "5006",
-      "addr:street": "Junín",
-      "amenity": "school",
-      "name": "Escuela Provincia La Rioja"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4213258393",
-    "name": "ESCUELA REMEDIOS DE ESCALADA DE SAN MARTIN",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4351315,
-    "lon": -64.2263842,
-    "tags": {
-      "amenity": "school",
-      "name": "ESCUELA REMEDIOS DE ESCALADA DE SAN MARTIN"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3741205687",
-    "name": "Escuela República de Líbano",
-    "website": "",
-    "email": "",
-    "phone": "+54 351 481 8533",
-    "direccion": "Héctor Álvarez Igarzabal 1248",
-    "lat": -31.3812865,
-    "lon": -64.23847,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "1248",
-      "addr:postcode": "5009",
-      "addr:street": "Héctor Álvarez Igarzabal",
-      "name": "Escuela República de Líbano",
-      "office": "educational_institution",
-      "phone": "+54 351 481 8533"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3464607421",
-    "name": "Escuela República de Perú",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Manuel Gómez Carrillo 2498",
-    "lat": -31.4288757,
-    "lon": -64.2194142,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "2498",
-      "addr:postcode": "5010",
-      "addr:street": "Manuel Gómez Carrillo",
-      "amenity": "school",
-      "name": "Escuela República de Perú"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3976642398",
-    "name": "Escuela Ricardo palma",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3613769,
-    "lon": -64.2522644,
-    "tags": {
-      "amenity": "school",
-      "name": "Escuela Ricardo palma"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4475865664",
-    "name": "Escuela Secundaria Brigadier San Martín",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Onofre Marimón 6850",
-    "lat": -31.3207005,
-    "lon": -64.2568264,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "6850",
-      "addr:street": "Onofre Marimón",
-      "amenity": "school",
-      "name": "Escuela Secundaria Brigadier San Martín"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4368883945",
-    "name": "Escuela Tercilio Gambino",
-    "website": "",
-    "email": "",
-    "phone": "+54 351 4343159",
-    "direccion": "Ángel María Zuloaga 1548",
-    "lat": -31.4247711,
-    "lon": -64.2387365,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "1548",
-      "addr:postcode": "5010",
-      "addr:street": "Ángel María Zuloaga",
-      "amenity": "school",
-      "isced:level": "1",
-      "name": "Escuela Tercilio Gambino",
-      "operator:type": "public",
-      "phone": "+54 351 4343159",
-      "ref:cue": "140343000"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4220731719",
-    "name": "Escuela Vicente Fidel López",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Juan C. Tissera 1551",
-    "lat": -31.3887148,
-    "lon": -64.1599588,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "1551",
-      "addr:postcode": "5012",
-      "addr:street": "Juan C. Tissera",
-      "name": "Escuela Vicente Fidel López",
-      "office": "educational_institution"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3812103260",
-    "name": "Escuela y Jardín de Infantes Ricardo Rojas",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Alfonsina Storni 798",
-    "lat": -31.3547278,
-    "lon": -64.1640223,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "798",
-      "addr:street": "Alfonsina Storni",
-      "amenity": "school",
-      "name": "Escuela y Jardín de Infantes Ricardo Rojas"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4367941296",
-    "name": "Esteban Manuel Pizarro",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.402607,
-    "lon": -64.2383324,
-    "tags": {
-      "amenity": "school",
-      "name": "Esteban Manuel Pizarro"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
     "source_id": "3279622061",
     "name": "Fundación José Gabriel Condorcanqui",
     "website": "",
@@ -2448,890 +753,7 @@
       "name": "Fundación José Gabriel Condorcanqui"
     },
     "tipo": "generador",
-    "clasificacion_motivo": "institucional:fundacion",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3460723797",
-    "name": "GARZÓN AGULLA",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Avenida 24 de Septiembre",
-    "lat": -31.4133884,
-    "lon": -64.1643133,
-    "tags": {
-      "addr:street": "Avenida 24 de Septiembre",
-      "amenity": "kindergarten",
-      "name": "GARZÓN AGULLA"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4904506697",
-    "name": "Guarderia Barrilete",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3340218,
-    "lon": -64.2461356,
-    "tags": {
-      "amenity": "kindergarten",
-      "name": "Guarderia Barrilete"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "2414719308",
-    "name": "Hipolito Vieytes",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Hipólito Vieytes 185",
-    "lat": -31.4089256,
-    "lon": -64.2128045,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "185",
-      "addr:postcode": "5000",
-      "addr:street": "Hipólito Vieytes",
-      "amenity": "school",
-      "name": "Hipolito Vieytes",
-      "source:name": "survey"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4117916093",
-    "name": "Hugo Wast",
-    "website": "",
-    "email": "",
-    "phone": "+03514699912",
-    "direccion": "Santiago Cáceres 2099",
-    "lat": -31.435702,
-    "lon": -64.1981678,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "2099",
-      "addr:street": "Santiago Cáceres",
-      "amenity": "school",
-      "name": "Hugo Wast",
-      "phone": "+03514699912"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3409216908",
-    "name": "I.P.E.M. N° 310 PUERTO ARGENTINO",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.474266,
-    "lon": -64.1924685,
-    "tags": {
-      "amenity": "school",
-      "name": "I.P.E.M. N° 310 PUERTO ARGENTINO"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "2727571446",
-    "name": "IEC (secundario)",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Friuli",
-    "lat": -31.4379348,
-    "lon": -64.1965502,
-    "tags": {
-      "addr:street": "Friuli",
-      "amenity": "school",
-      "name": "IEC (secundario)"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4092877461",
-    "name": "Iglesia Cristiana",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Pedro Nolasco Rodríguez 1305",
-    "lat": -31.3808278,
-    "lon": -64.2374768,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "1305",
-      "addr:postcode": "5009",
-      "addr:street": "Pedro Nolasco Rodríguez",
-      "amenity": "place_of_worship",
-      "description": "Templo de reunión familiar",
-      "name": "Iglesia Cristiana",
-      "religion": "christian"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucional:union",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3743557286",
-    "name": "Ingeniero Regino Manuel Maders",
-    "website": "",
-    "email": "",
-    "phone": "4348931",
-    "direccion": "Francisco Chirinos de Posadas 5398",
-    "lat": -31.4546637,
-    "lon": -64.1276291,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "5398",
-      "addr:postcode": "5014",
-      "addr:street": "Francisco Chirinos de Posadas",
-      "amenity": "school",
-      "name": "Ingeniero Regino Manuel Maders",
-      "note": "Escuela de nivel Inicial y Primario. Turnos: Mañana. Gestión: Pública. Horario: 08:00 hs a 14:10 hs.",
-      "phone": "4348931"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3822492416",
-    "name": "Instituto de Educación Córdoba (primario)",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4379405,
-    "lon": -64.1966438,
-    "tags": {
-      "alt_name": "IEC (primario)",
-      "amenity": "school",
-      "name": "Instituto de Educación Córdoba (primario)"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4224580690",
-    "name": "Instituto de Educación Superior \"Doctor Domingo Cabred\"",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Avenida Deodoro Roca 4998",
-    "lat": -31.4322172,
-    "lon": -64.1709985,
-    "tags": {
-      "addr:housenumber": "4998",
-      "addr:street": "Avenida Deodoro Roca",
-      "name": "Instituto de Educación Superior \"Doctor Domingo Cabred\"",
-      "office": "educational_institution"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3824996620",
-    "name": "Instituto Don Orione",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "José Benito Cottolengo 1955",
-    "lat": -31.4748755,
-    "lon": -64.2365778,
-    "tags": {
-      "addr:city": "Córdoba, Capital",
-      "addr:housenumber": "1955",
-      "addr:postcode": "5016",
-      "addr:street": "José Benito Cottolengo",
-      "amenity": "school",
-      "name": "Instituto Don Orione"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3984348299",
-    "name": "Instituto Inmaculada Concepción",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3930682,
-    "lon": -64.2023049,
-    "tags": {
-      "amenity": "school",
-      "name": "Instituto Inmaculada Concepción"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "1502351839",
-    "name": "Instituto Provincial de Enseñanza Media 20 Rodolfo Walsh",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Juan Barragán 450",
-    "lat": -31.3642104,
-    "lon": -64.1962163,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:full": "Barragan 450 Marques De Sobremonte",
-      "addr:housenumber": "450",
-      "addr:postcode": "5008",
-      "addr:street": "Juan Barragán",
-      "alt_name": "Escuela Secundaria RODOLFO WALLS",
-      "amenity": "school",
-      "isced:level": "1",
-      "name": "Instituto Provincial de Enseñanza Media 20 Rodolfo Walsh",
-      "official_name": "Instituto Provincial de Enseñanza Media Nº 20 Rodolfo Walsh",
-      "operator:type": "public",
-      "ref:cue": "140447100",
-      "short_name": "IPEM 20"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4898435963",
-    "name": "Instituto Superior de Formacón Docenete Reneé Trettel de Fabián",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Manuel Gómez Carrillo 2450",
-    "lat": -31.428874,
-    "lon": -64.2194437,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "2450",
-      "addr:postcode": "5010",
-      "addr:street": "Manuel Gómez Carrillo",
-      "name": "Instituto Superior de Formacón Docenete Reneé Trettel de Fabián",
-      "office": "educational_institution"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4315802892",
-    "name": "Instituto Superior Mariano Moreno",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Nicolás Rodríguez Peña 233",
-    "lat": -31.4092641,
-    "lon": -64.1965735,
-    "tags": {
-      "addr:housenumber": "233",
-      "addr:street": "Nicolás Rodríguez Peña",
-      "amenity": "school",
-      "name": "Instituto Superior Mariano Moreno",
-      "wheelchair": "limited"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4428304289",
-    "name": "IPEF",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.371384,
-    "lon": -64.2487501,
-    "tags": {
-      "amenity": "school",
-      "name": "IPEF",
-      "name:es": "IPEF"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "846254161",
-    "name": "IPEM 150 Juan Larrea",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.43163,
-    "lon": -64.155995,
-    "tags": {
-      "amenity": "school",
-      "name": "IPEM 150 Juan Larrea"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3591095091",
-    "name": "IPEM 174 Trinidad Moreno",
-    "website": "",
-    "email": "",
-    "phone": "+54 351 433 9171",
-    "direccion": "Eduardo San Martín 1282",
-    "lat": -31.3945232,
-    "lon": -64.1376199,
-    "tags": {
-      "addr:city": "Córdoba Capital",
-      "addr:housenumber": "1282",
-      "addr:street": "Eduardo San Martín",
-      "amenity": "school",
-      "name": "IPEM 174 Trinidad Moreno",
-      "phone": "+54 351 433 9171"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3758457090",
-    "name": "IPEM N*5",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4128403,
-    "lon": -64.1492255,
-    "tags": {
-      "amenity": "school",
-      "name": "IPEM N*5"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4095260365",
-    "name": "J.M.de Pueyrredón",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.439631,
-    "lon": -64.1265984,
-    "tags": {
-      "amenity": "school",
-      "name": "J.M.de Pueyrredón"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3742053638",
-    "name": "Jardín Almirante Guillermo Brown",
-    "website": "",
-    "email": "",
-    "phone": "+54 351 433 9173",
-    "direccion": "Eduardo San Martín 1442",
-    "lat": -31.3922784,
-    "lon": -64.1378672,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:country": "AR",
-      "addr:housenumber": "1442",
-      "addr:postcode": "5012",
-      "addr:street": "Eduardo San Martín",
-      "amenity": "kindergarten",
-      "name": "Jardín Almirante Guillermo Brown",
-      "phone": "+54 351 433 9173"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3279536867",
-    "name": "Jardín de Infantes \"Al Agua Pato\"",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.2994752,
-    "lon": -64.2860727,
-    "tags": {
-      "amenity": "kindergarten",
-      "name": "Jardín de Infantes \"Al Agua Pato\""
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4092857701",
-    "name": "Jardín de Infantes \"República del Líbano\"",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Pedro Nolasco Rodríguez 1298",
-    "lat": -31.3806354,
-    "lon": -64.2378201,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "1298",
-      "addr:postcode": "5009",
-      "addr:street": "Pedro Nolasco Rodríguez",
-      "amenity": "school",
-      "description": "Jardín de Infantes - Sala de 4 y de 5 años",
-      "name": "Jardín de Infantes \"República del Líbano\""
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "1502351846",
-    "name": "Jardín de Infantes Benadino Rivadavia",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3635682,
-    "lon": -64.1953146,
-    "tags": {
-      "amenity": "kindergarten",
-      "name": "Jardín de Infantes Benadino Rivadavia"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4222916289",
-    "name": "Jardín de Infantes Estados Unidos de Norte América",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Santa Cruz",
-    "lat": -31.4172001,
-    "lon": -64.2058752,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:postcode": "5000",
-      "addr:street": "Santa Cruz",
-      "amenity": "kindergarten",
-      "isced:level": "0",
-      "name": "Jardín de Infantes Estados Unidos de Norte América",
-      "operator:type": "public"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4126341729",
-    "name": "Jardín de Infantes Eva Duarte",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Bartolomé Hidalgo 998",
-    "lat": -31.3588764,
-    "lon": -64.1615246,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "998",
-      "addr:postcode": "5019",
-      "addr:street": "Bartolomé Hidalgo",
-      "amenity": "school",
-      "name": "Jardín de Infantes Eva Duarte"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3816022492",
-    "name": "Jardín de Infantes Juan Pablo ll",
-    "website": "",
-    "email": "",
-    "phone": "4858870",
-    "direccion": "Manuela Cacigas 650",
-    "lat": -31.4130806,
-    "lon": -64.2431578,
-    "tags": {
-      "addr:city": "Córdoba, Capital",
-      "addr:housenumber": "650",
-      "addr:postcode": "5000",
-      "addr:street": "Manuela Cacigas",
-      "amenity": "school",
-      "name": "Jardín de Infantes Juan Pablo ll",
-      "operator": "Salas de 4 y 5 años",
-      "phone": "4858870"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4789969202",
-    "name": "Jardín de Infantes Juan Ramón Jimenez",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Ernesto Enrique Guastoni 3476",
-    "lat": -31.4393666,
-    "lon": -64.1407114,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "3476",
-      "addr:postcode": "5014",
-      "addr:street": "Ernesto Enrique Guastoni",
-      "amenity": "kindergarten",
-      "designation": "Jardín de Infantes",
-      "name": "Jardín de Infantes Juan Ramón Jimenez"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3818025774",
-    "name": "Jardín de Infantes Obispo Esquiu",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3585265,
-    "lon": -64.1076344,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:full": "Avenida Arturo Capdevila 9500 Villa Esquiu",
-      "amenity": "kindergarten",
-      "isced:level": "0",
-      "name": "Jardín de Infantes Obispo Esquiu",
-      "operator:type": "public",
-      "ref:cue": "140095100"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4368520530",
-    "name": "Jardín Gabriela Mistral.",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3935371,
-    "lon": -64.2549221,
-    "tags": {
-      "amenity": "kindergarten",
-      "name": "Jardín Gabriela Mistral."
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4477622605",
-    "name": "Jardín Infantil",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3174828,
-    "lon": -64.2549417,
-    "tags": {
-      "amenity": "kindergarten",
-      "name": "Jardín Infantil"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3757697825",
-    "name": "Jardín Leopoldo Lugones",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Alamos",
-    "lat": -31.2801998,
-    "lon": -64.1672302,
-    "tags": {
-      "addr:city": "Juárez Celman",
-      "addr:postcode": "5145",
-      "addr:street": "Alamos",
-      "amenity": "kindergarten",
-      "name": "Jardín Leopoldo Lugones"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4763211482",
-    "name": "jardín Maternal",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Ricardo Pedroni 3041",
-    "lat": -31.3747394,
-    "lon": -64.2158381,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "3041",
-      "addr:street": "Ricardo Pedroni",
-      "amenity": "school",
-      "name": "jardín Maternal"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4763212488",
-    "name": "Jardín Maternal Girasoles",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3760921,
-    "lon": -64.2139231,
-    "tags": {
-      "amenity": "school",
-      "name": "Jardín Maternal Girasoles"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4769526226",
-    "name": "Jardín Maternal y pre Jardín PICARDIAS",
-    "website": "",
-    "email": "",
-    "phone": "4535998",
-    "direccion": "Avenida 24 de Septiembre 1854",
-    "lat": -31.4120376,
-    "lon": -64.1592994,
-    "tags": {
-      "addr:housenumber": "1854",
-      "addr:postcode": "5000",
-      "addr:street": "Avenida 24 de Septiembre",
-      "amenity": "school",
-      "name": "Jardín Maternal y pre Jardín PICARDIAS",
-      "name:es": "Jardín Maternal y pre Jardín PICARDIAS",
-      "opening_hours": "Mo-Fr 07:00-20:00",
-      "phone": "4535998"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4377778537",
-    "name": "Jardín Municipal \"Barrilete\"",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Matra",
-    "lat": -31.3235629,
-    "lon": -64.2642905,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:street": "Matra",
-      "amenity": "kindergarten",
-      "name": "Jardín Municipal \"Barrilete\""
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4396757974",
-    "name": "John F. Kennedy",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Héctor Paniza 3619",
-    "lat": -31.4246258,
-    "lon": -64.2336499,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "3619",
-      "addr:postcode": "5010",
-      "addr:street": "Héctor Paniza",
-      "amenity": "school",
-      "description": "ESCUELA DE LA CIUDAD DE CÓRDOBA, PROPENSA A INUNDACIONES, POR SU PROXIMIDAD AL CANAL.",
-      "name": "John F. Kennedy"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3830122827",
-    "name": "José Hernández",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Asturias 1947",
-    "lat": -31.4381217,
-    "lon": -64.1572847,
-    "tags": {
-      "addr:city": "Córdoba Capital",
-      "addr:housenumber": "1947",
-      "addr:postcode": "5014",
-      "addr:street": "Asturias",
-      "amenity": "school",
-      "name": "José Hernández"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4229999226",
-    "name": "José María Paz",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Avenida Colón 2772",
-    "lat": -31.4029857,
-    "lon": -64.2177968,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "2772",
-      "addr:postcode": "5000",
-      "addr:street": "Avenida Colón",
-      "amenity": "school",
-      "description": "La escuela alberga niños de la zona siendo el 30% de ellos de origen peruano.Disminuye la asistencia en epocas de presipitaciones abundantes por estar inundada la avenida donde está ubicada.",
-      "name": "José María Paz"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3756609350",
-    "name": "Juan Pablo II",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Manuela Cacigas 650",
-    "lat": -31.4125998,
-    "lon": -64.2399721,
-    "tags": {
-      "addr:city": "Córdoba, Capital",
-      "addr:housenumber": "650",
-      "addr:postcode": "5000",
-      "addr:street": "Manuela Cacigas",
-      "amenity": "school",
-      "name": "Juan Pablo II"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4093053837",
-    "name": "Juana Manso",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "25 de Mayo",
-    "lat": -31.2906226,
-    "lon": -64.2948635,
-    "tags": {
-      "addr:city": "Villa Allende",
-      "addr:postcode": "5105",
-      "addr:street": "25 de Mayo",
-      "amenity": "school",
-      "name": "Juana Manso"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3456747507",
-    "name": "Lorenzo Suárez de Figueroa",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Defensa",
-    "lat": -31.4721588,
-    "lon": -64.2016381,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:postcode": "5000",
-      "addr:street": "Defensa",
-      "amenity": "school",
-      "name": "Lorenzo Suárez de Figueroa"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
+    "clasificacion_motivo": "institucional:fundacion,fundación",
     "estado": "sin_email"
   },
   {
@@ -3374,49 +796,6 @@
     },
     "tipo": "generador",
     "clasificacion_motivo": "club_deportivo",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "1712830519",
-    "name": "Museo de Antropología de la Universidad de Córdoba",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4226529,
-    "lon": -64.1877451,
-    "tags": {
-      "name": "Museo de Antropología de la Universidad de Córdoba",
-      "tourism": "museum"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4092865605",
-    "name": "Parroquia Marìa Madre del Redentor y de los Santos Juan y Pablo",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Lucas de Figueroa y Mendez 710",
-    "lat": -31.383745,
-    "lon": -64.2454269,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "710",
-      "addr:postcode": "5009",
-      "addr:street": "Lucas de Figueroa y Mendez",
-      "amenity": "place_of_worship",
-      "denomination": "catholic",
-      "description": "Congregación Sociedad San Juan",
-      "name": "Parroquia Marìa Madre del Redentor y de los Santos Juan y Pablo",
-      "religion": "christian"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucional:sociedad",
     "estado": "sin_email"
   },
   {
@@ -3474,144 +853,6 @@
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "4098079395",
-    "name": "Presidente Doctor Arturo Illia.",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4783896,
-    "lon": -64.207458,
-    "tags": {
-      "amenity": "kindergarten",
-      "isced:level": "0",
-      "name": "Presidente Doctor Arturo Illia."
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3748175537",
-    "name": "Presidente Yrigoyen",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Avenida Castro Barros 802",
-    "lat": -31.3978544,
-    "lon": -64.1986407,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:country": "AR",
-      "addr:housenumber": "802",
-      "addr:street": "Avenida Castro Barros",
-      "amenity": "school",
-      "check_date": "2025-11-01",
-      "description": "Escuela Primaria Pública",
-      "name": "Presidente Yrigoyen"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3824554495",
-    "name": "Provincia de Córdoba",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "La Pampa 550",
-    "lat": -31.4174146,
-    "lon": -64.2053266,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "550",
-      "addr:street": "La Pampa",
-      "amenity": "school",
-      "isced:level": "1",
-      "name": "Provincia de Córdoba",
-      "operator:type": "public",
-      "ref:cue": "140045100"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3742053637",
-    "name": "S.U.M de la Escuela Almirante G. Brown",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Zavalía",
-    "lat": -31.392174,
-    "lon": -64.1382594,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:country": "AR",
-      "addr:postcode": "5012",
-      "addr:street": "Zavalía",
-      "leisure": "sports_centre",
-      "lit": "yes",
-      "name": "S.U.M de la Escuela Almirante G. Brown",
-      "source": "María Eugenia Cesar",
-      "sport": "soccer"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3457213687",
-    "name": "San Ramon Nonato",
-    "website": "",
-    "email": "",
-    "phone": "+54 351 451 6315",
-    "direccion": "Avenida Patria 282",
-    "lat": -31.410347,
-    "lon": -64.1572321,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "282",
-      "addr:postcode": "5000",
-      "addr:street": "Avenida Patria",
-      "amenity": "place_of_worship",
-      "description": "Escuela Parroquial San Ramón Nonato",
-      "name": "San Ramon Nonato",
-      "phone": "+54 351 451 6315"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "2294930806",
-    "name": "Secretaría de Planificación y Gestión Institucional",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "General José Gervasio Artigas 160",
-    "lat": -31.4146236,
-    "lon": -64.195606,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "160",
-      "addr:postcode": "x5000kvd",
-      "addr:street": "General José Gervasio Artigas",
-      "amenity": "college",
-      "name": "Secretaría de Planificación y Gestión Institucional"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucion_educativa",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
     "source_id": "3306920013",
     "name": "SEP - Sindicato de Empleados Públicos",
     "website": "",
@@ -3626,30 +867,6 @@
     },
     "tipo": "generador",
     "clasificacion_motivo": "institucional:sindicato",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4339269970",
-    "name": "Sociedad Arabe Musulmana",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Obispo Salguero 265",
-    "lat": -31.4206303,
-    "lon": -64.17995,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "265",
-      "addr:postcode": "5000",
-      "addr:street": "Obispo Salguero",
-      "amenity": "place_of_worship",
-      "denomination": "sunni",
-      "name": "Sociedad Arabe Musulmana",
-      "religion": "muslim"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "institucional:sociedad",
     "estado": "sin_email"
   },
   {
@@ -3687,7 +904,7 @@
       "phone": "+54 9 351 505 0000"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:hotel",
+    "clasificacion_motivo": "hotel",
     "estado": "sin_email"
   },
   {
@@ -3710,7 +927,7 @@
       "shop": "kiosk"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:kiosk",
+    "clasificacion_motivo": "shop:kiosk",
     "estado": "sin_email"
   },
   {
@@ -3734,7 +951,7 @@
       "website": "www.facebook.com/100x100Lomo"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:restaurant",
+    "clasificacion_motivo": "amenity:restaurant",
     "estado": "sin_email"
   },
   {
@@ -3752,7 +969,7 @@
       "name": "5 elementos"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:bar",
+    "clasificacion_motivo": "amenity:bar",
     "estado": "sin_email"
   },
   {
@@ -3771,7 +988,7 @@
       "shop": "bakery"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:bakery",
+    "clasificacion_motivo": "shop:bakery",
     "estado": "sin_email"
   },
   {
@@ -3789,8 +1006,8 @@
       "healthcare": "pharmacy",
       "name": "A Naselli"
     },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
     "estado": "sin_email"
   },
   {
@@ -3811,7 +1028,7 @@
       "name": "A&M"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:cafe",
+    "clasificacion_motivo": "amenity:cafe",
     "estado": "sin_email"
   },
   {
@@ -3844,7 +1061,7 @@
       "phone": "+54 3543 43 7080"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:fuel",
+    "clasificacion_motivo": "amenity:fuel",
     "estado": "sin_email"
   },
   {
@@ -3866,8 +1083,8 @@
       "name": "Adoratrices Españolas Casa de retiro y pensión de estudiantes",
       "social_facility": "group_home"
     },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
+    "tipo": "comercio",
+    "clasificacion_motivo": "spa",
     "estado": "sin_email"
   },
   {
@@ -3886,7 +1103,7 @@
       "name": "Alcorta"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:restaurant",
+    "clasificacion_motivo": "amenity:restaurant",
     "estado": "sin_email"
   },
   {
@@ -3907,7 +1124,7 @@
       "source": "survey"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:hairdresser",
+    "clasificacion_motivo": "shop:hairdresser",
     "estado": "sin_email"
   },
   {
@@ -3925,8 +1142,8 @@
       "healthcare": "pharmacy",
       "name": "Alemana"
     },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
     "estado": "sin_email"
   },
   {
@@ -3946,7 +1163,7 @@
       "name:es": "Algo Light"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:restaurant",
+    "clasificacion_motivo": "amenity:restaurant",
     "estado": "sin_email"
   },
   {
@@ -3970,7 +1187,7 @@
       "takeaway": "yes"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:restaurant",
+    "clasificacion_motivo": "amenity:restaurant",
     "estado": "sin_email"
   },
   {
@@ -3988,7 +1205,7 @@
       "shop": "supermarket"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:supermarket",
+    "clasificacion_motivo": "shop:supermarket",
     "estado": "sin_email"
   },
   {
@@ -4007,7 +1224,7 @@
       "shop": "supermarket"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:supermarket",
+    "clasificacion_motivo": "shop:supermarket",
     "estado": "sin_email"
   },
   {
@@ -4031,7 +1248,7 @@
       "shop": "deli"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:almacen",
+    "clasificacion_motivo": "shop:deli",
     "estado": "sin_email"
   },
   {
@@ -4055,7 +1272,7 @@
       "wheelchair": "yes"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:supermarket",
+    "clasificacion_motivo": "shop:supermarket",
     "estado": "sin_email"
   },
   {
@@ -4076,7 +1293,29 @@
       "shop": "convenience"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:convenience",
+    "clasificacion_motivo": "shop:convenience",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3742070428",
+    "name": "Almirante G. Brown",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Norberto Zavalía 1441",
+    "lat": -31.3924122,
+    "lon": -64.1382207,
+    "tags": {
+      "addr:city": "Córdoba Capital",
+      "addr:housenumber": "1441",
+      "addr:postcode": "5012",
+      "addr:street": "Norberto Zavalía",
+      "amenity": "college",
+      "name": "Almirante G. Brown"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
     "estado": "sin_email"
   },
   {
@@ -4098,7 +1337,7 @@
       "shop": "department_store"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:department_store",
+    "clasificacion_motivo": "shop:department_store",
     "estado": "sin_email"
   },
   {
@@ -4116,8 +1355,8 @@
       "healthcare": "pharmacy",
       "name": "Altos de Argüello"
     },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
     "estado": "sin_email"
   },
   {
@@ -4140,7 +1379,7 @@
       "tourism": "hostel"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:hostel",
+    "clasificacion_motivo": "tourism:hostel",
     "estado": "sin_email"
   },
   {
@@ -4158,8 +1397,8 @@
       "healthcare": "pharmacy",
       "name": "Amazonas 2"
     },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
     "estado": "sin_email"
   },
   {
@@ -4176,8 +1415,8 @@
       "amenity": "theatre",
       "name": "Anfiteatro"
     },
-    "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:theatre",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
     "estado": "sin_email"
   },
   {
@@ -4227,7 +1466,7 @@
       "website": "http://www.cervezaantares.com/shops.php?iId=63"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:bar",
+    "clasificacion_motivo": "amenity:bar",
     "estado": "sin_email"
   },
   {
@@ -4245,7 +1484,7 @@
       "shop": "gift"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:gift",
+    "clasificacion_motivo": "shop:gift",
     "estado": "sin_email"
   },
   {
@@ -4293,8 +1532,32 @@
       "takeaway": "yes"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:restaurant",
+    "clasificacion_motivo": "amenity:restaurant",
     "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3623947854",
+    "name": "APADIM",
+    "website": "https://www.apadim.org.ar/",
+    "email": "apadim@apadim.org",
+    "phone": "",
+    "direccion": "Avenida Vélez Sarsfield 5000",
+    "lat": -31.474757,
+    "lon": -64.2030259,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "5000",
+      "addr:street": "Avenida Vélez Sarsfield",
+      "amenity": "school",
+      "name": "APADIM",
+      "website": "https://www.apadim.org.ar/"
+    },
+    "website_final": "https://www.apadim.org.ar/",
+    "email_source": "sitio_web",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
   },
   {
     "source": "OpenStreetMap",
@@ -4311,7 +1574,7 @@
       "tourism": "hotel"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:hotel",
+    "clasificacion_motivo": "hotel",
     "estado": "sin_email"
   },
   {
@@ -4329,7 +1592,7 @@
       "name": "Apartamento"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:bar",
+    "clasificacion_motivo": "amenity:bar",
     "estado": "sin_email"
   },
   {
@@ -4348,8 +1611,8 @@
       "healthcare": "pharmacy",
       "name": "Aquarius"
     },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
     "estado": "sin_email"
   },
   {
@@ -4368,7 +1631,7 @@
       "tourism": "hotel"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:hotel",
+    "clasificacion_motivo": "hotel",
     "estado": "sin_email"
   },
   {
@@ -4389,8 +1652,8 @@
       "name": "Aries",
       "phone": "+54 351 480 3204"
     },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
     "estado": "sin_email"
   },
   {
@@ -4413,7 +1676,7 @@
       "shop": "kiosk"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:kiosk",
+    "clasificacion_motivo": "shop:kiosk",
     "estado": "sin_email"
   },
   {
@@ -4431,7 +1694,7 @@
       "shop": "car_repair"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:car_repair",
+    "clasificacion_motivo": "shop:car_repair",
     "estado": "sin_email"
   },
   {
@@ -4453,7 +1716,7 @@
       "tourism": "hotel"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:hotel",
+    "clasificacion_motivo": "hotel",
     "estado": "sin_email"
   },
   {
@@ -4477,6 +1740,25 @@
   },
   {
     "source": "OpenStreetMap",
+    "source_id": "4886002421",
+    "name": "Asociación Friulana Cordobesa",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4133472,
+    "lon": -64.1768371,
+    "tags": {
+      "name": "Asociación Friulana Cordobesa",
+      "name:es": "Asociación Friulana Cordobesa",
+      "tourism": "artwork"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
     "source_id": "4210071889",
     "name": "Aspacia",
     "website": "",
@@ -4489,8 +1771,8 @@
       "amenity": "drinking_water",
       "name": "Aspacia"
     },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
+    "tipo": "comercio",
+    "clasificacion_motivo": "spa",
     "estado": "sin_email"
   },
   {
@@ -4511,7 +1793,7 @@
       "tourism": "hotel"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:hotel",
+    "clasificacion_motivo": "hotel",
     "estado": "sin_email"
   },
   {
@@ -4577,7 +1859,7 @@
       "shop": "supermarket"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:supermarket",
+    "clasificacion_motivo": "shop:supermarket",
     "estado": "sin_email"
   },
   {
@@ -4632,7 +1914,7 @@
       "operator": "SERVICENTRO VILLA ALLENDE - 192623"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:fuel",
+    "clasificacion_motivo": "amenity:fuel",
     "estado": "sin_email"
   },
   {
@@ -4661,7 +1943,7 @@
       "source": "https://www.enargas.gov.ar/secciones/gas-natural-comprimido/sujetos.php"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:fuel",
+    "clasificacion_motivo": "amenity:fuel",
     "estado": "sin_email"
   },
   {
@@ -4685,7 +1967,7 @@
       "self_service": "no"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:fuel",
+    "clasificacion_motivo": "amenity:fuel",
     "estado": "sin_email"
   },
   {
@@ -4724,7 +2006,7 @@
       "tourism": "hostel"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:hostel",
+    "clasificacion_motivo": "tourism:hostel",
     "estado": "sin_email"
   },
   {
@@ -5058,7 +2340,7 @@
       "operator": "PAVONE LUIS ANGEL"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:fuel",
+    "clasificacion_motivo": "amenity:fuel",
     "estado": "sin_email"
   },
   {
@@ -5076,7 +2358,7 @@
       "name": "Bar CEICIN"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:restaurant",
+    "clasificacion_motivo": "amenity:restaurant",
     "estado": "sin_email"
   },
   {
@@ -5097,51 +2379,30 @@
       "phone": "+543514227872"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:cafe",
+    "clasificacion_motivo": "amenity:cafe",
     "estado": "sin_email"
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "279258966",
-    "name": "Basílica de La Merced",
+    "source_id": "4592837596",
+    "name": "Barquitos de Papel",
     "website": "",
     "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4150315,
-    "lon": -64.1823918,
+    "phone": "+54 351 425 6956",
+    "direccion": "Avenida Maipú 134",
+    "lat": -31.4157627,
+    "lon": -64.1792391,
     "tags": {
-      "amenity": "place_of_worship",
-      "check_date": "2025-07-19",
-      "name": "Basílica de La Merced",
-      "religion": "christian"
+      "addr:housenumber": "134",
+      "addr:postcode": "5000",
+      "addr:street": "Avenida Maipú",
+      "amenity": "kindergarten",
+      "name": "Barquitos de Papel",
+      "name:es": "Barquitos de Papel",
+      "phone": "+54 351 425 6956"
     },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "282730110",
-    "name": "Basílica de Santo Domingo",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4152184,
-    "lon": -64.1871977,
-    "tags": {
-      "amenity": "place_of_worship",
-      "denomination": "catholic",
-      "name": "Basílica de Santo Domingo",
-      "religion": "christian",
-      "tourism": "attraction",
-      "wikidata": "Q5722059",
-      "wikimedia_commons": "Category:Basílica Santo Domingo (Córdoba, Argentina)",
-      "wikipedia": "es:Basílica de Santo Domingo (Córdoba)"
-    },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
+    "tipo": "comercio",
+    "clasificacion_motivo": "bar",
     "estado": "sin_email"
   },
   {
@@ -5184,7 +2445,7 @@
       "name": "Beto's"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:fast_food",
+    "clasificacion_motivo": "amenity:fast_food",
     "estado": "sin_email"
   },
   {
@@ -5225,26 +2486,6 @@
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "2701612161",
-    "name": "Biblioteca Municipal",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.2916518,
-    "lon": -64.2923381,
-    "tags": {
-      "amenity": "library",
-      "check_date:opening_hours": "2026-04-01",
-      "name": "Biblioteca Municipal",
-      "opening_hours:signed": "no"
-    },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
     "source_id": "4223121390",
     "name": "Biblioteca Popular Alberdi",
     "website": "",
@@ -5259,7 +2500,7 @@
       "name": "Biblioteca Popular Alberdi"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:taller",
+    "clasificacion_motivo": "taller",
     "estado": "sin_email"
   },
   {
@@ -5299,7 +2540,7 @@
       "name": "Biblioteca Popular Barrio Talleres (Hugo Wast)"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:taller,bar",
+    "clasificacion_motivo": "bar,taller",
     "estado": "sin_email"
   },
   {
@@ -5338,8 +2579,8 @@
       "name": "Bicicletas Tomaselli",
       "shop": "bicycle"
     },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:bicycle",
     "estado": "sin_email"
   },
   {
@@ -5357,7 +2598,7 @@
       "shop": "supermarket"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:supermarket",
+    "clasificacion_motivo": "shop:supermarket",
     "estado": "sin_email"
   },
   {
@@ -5379,7 +2620,7 @@
       "shop": "electronics"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:electronics",
+    "clasificacion_motivo": "shop:electronics",
     "estado": "sin_email"
   },
   {
@@ -5397,7 +2638,7 @@
       "shop": "alcohol"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:alcohol",
+    "clasificacion_motivo": "shop:alcohol",
     "estado": "sin_email"
   },
   {
@@ -5471,7 +2712,7 @@
       "takeaway": "yes"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:cafe",
+    "clasificacion_motivo": "amenity:cafe",
     "estado": "sin_email"
   },
   {
@@ -5490,7 +2731,7 @@
       "name": "Bonanza"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:bar",
+    "clasificacion_motivo": "amenity:bar",
     "estado": "sin_email"
   },
   {
@@ -5509,7 +2750,7 @@
       "name": "Bongó Club Saldan"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:pub",
+    "clasificacion_motivo": "amenity:pub",
     "estado": "sin_email"
   },
   {
@@ -5527,7 +2768,7 @@
       "name": "Borocco"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:cafe",
+    "clasificacion_motivo": "amenity:cafe",
     "estado": "sin_email"
   },
   {
@@ -5564,8 +2805,8 @@
       "healthcare": "pharmacy",
       "name": "Brizuela"
     },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
     "estado": "sin_email"
   },
   {
@@ -5607,8 +2848,8 @@
       "is_in": "Córdoba",
       "name": "Buenos Aires"
     },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
     "estado": "sin_email"
   },
   {
@@ -5626,7 +2867,7 @@
       "shop": "supermarket"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:supermarket",
+    "clasificacion_motivo": "shop:supermarket",
     "estado": "sin_email"
   },
   {
@@ -5645,7 +2886,7 @@
       "shop": "supermarket"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:supermarket",
+    "clasificacion_motivo": "shop:supermarket",
     "estado": "sin_email"
   },
   {
@@ -5668,7 +2909,7 @@
       "takeaway": "yes"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:fast_food",
+    "clasificacion_motivo": "amenity:fast_food",
     "estado": "sin_email"
   },
   {
@@ -5687,7 +2928,7 @@
       "shop": "hardware"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:hardware",
+    "clasificacion_motivo": "shop:hardware",
     "estado": "sin_email"
   },
   {
@@ -5705,7 +2946,7 @@
       "name": "Cafe Los Dos Chinos"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:cafe",
+    "clasificacion_motivo": "amenity:cafe",
     "estado": "sin_email"
   },
   {
@@ -5723,7 +2964,7 @@
       "name": "Cafe Panorama"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:cafe",
+    "clasificacion_motivo": "amenity:cafe",
     "estado": "sin_email"
   },
   {
@@ -5741,7 +2982,7 @@
       "name": "Cafeto"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:cafe",
+    "clasificacion_motivo": "amenity:cafe",
     "estado": "sin_email"
   },
   {
@@ -5759,7 +3000,7 @@
       "name": "Caffe company"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:cafe",
+    "clasificacion_motivo": "amenity:cafe",
     "estado": "sin_email"
   },
   {
@@ -5787,7 +3028,7 @@
       "takeaway": "yes"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:cafe",
+    "clasificacion_motivo": "amenity:cafe",
     "estado": "sin_email"
   },
   {
@@ -5824,7 +3065,7 @@
       "shop": "butcher"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:butcher",
+    "clasificacion_motivo": "shop:butcher",
     "estado": "sin_email"
   },
   {
@@ -5842,7 +3083,7 @@
       "shop": "gift"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:gift",
+    "clasificacion_motivo": "shop:gift",
     "estado": "sin_email"
   },
   {
@@ -5861,190 +3102,7 @@
       "name": "Campestre"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:restaurant",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "2005363501",
-    "name": "Camping Municipal",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3599575,
-    "lon": -64.2626431,
-    "tags": {
-      "access": "yes",
-      "name": "Camping Municipal",
-      "tourism": "camp_site"
-    },
-    "tipo": "comercio",
-    "clasificacion_motivo": "osm_tourism:camp_site",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4379961148",
-    "name": "Capilla católica",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3941235,
-    "lon": -64.2715033,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:postcode": "5003",
-      "amenity": "place_of_worship",
-      "denomination": "catholic",
-      "name": "Capilla católica",
-      "religion": "christian"
-    },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4479727150",
-    "name": "Capilla Nuestra Señora de Guadalupe",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Andalgalá 4524",
-    "lat": -31.4385783,
-    "lon": -64.1266907,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "4524",
-      "addr:postcode": "5006",
-      "addr:street": "Andalgalá",
-      "amenity": "place_of_worship",
-      "denomination": "catholic",
-      "name": "Capilla Nuestra Señora de Guadalupe",
-      "religion": "christian"
-    },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4095835527",
-    "name": "Capilla Nuestra Señora de la Paz",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Juana Manso",
-    "lat": -31.4011599,
-    "lon": -64.2658056,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:street": "Juana Manso",
-      "amenity": "place_of_worship",
-      "denomination": "roman_catholic",
-      "name": "Capilla Nuestra Señora de la Paz",
-      "religion": "christian"
-    },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3821479374",
-    "name": "Capilla Nuestra Señora del Huerto",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Caseros 98",
-    "lat": -31.4172918,
-    "lon": -64.1888462,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "98",
-      "addr:postcode": "5000",
-      "addr:street": "Caseros",
-      "amenity": "place_of_worship",
-      "denomination": "catholic",
-      "name": "Capilla Nuestra Señora del Huerto",
-      "religion": "christian"
-    },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4686850390",
-    "name": "Capilla San Roque",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4177421,
-    "lon": -64.1785544,
-    "tags": {
-      "amenity": "place_of_worship",
-      "name": "Capilla San Roque",
-      "name:es": "Capilla San Roque",
-      "religion": "christian"
-    },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4314809290",
-    "name": "Capilla Santa Teresita",
-    "website": "",
-    "email": "vicariasantateresita@gmail.com",
-    "phone": "+54 351 497 4197",
-    "direccion": "Avenida 11 de Septiembre km7",
-    "lat": -31.48342,
-    "lon": -64.1480971,
-    "tags": {
-      "addr:housenumber": "km7",
-      "addr:postcode": "5017",
-      "addr:street": "Avenida 11 de Septiembre",
-      "amenity": "community_centre",
-      "email": "vicariasantateresita@gmail.com",
-      "name": "Capilla Santa Teresita",
-      "opening_hours": "Mo-Su 10:00-22:00",
-      "phone": "+54 351 497 4197"
-    },
-    "email_source": "OpenStreetMap",
-    "tipo": "dudoso",
-    "clasificacion_motivo": "sin_indicio_suficiente",
-    "estado": "requiere_decision"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4477795074",
-    "name": "CAPS Sol Naciente",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.3219526,
-    "lon": -64.2423637,
-    "tags": {
-      "addr:full": "Barrio Ciudad Sol Naciente - Manzana 11",
-      "addr:postcode": "5000",
-      "amenity": "clinic",
-      "emergency": "yes",
-      "healthcare": "clinic",
-      "name": "CAPS Sol Naciente",
-      "operator": "Provincial",
-      "operator:type": "public",
-      "ref:sisa_codigo": "50140142131414",
-      "ref:sisa_tipologia": "ESSIDT",
-      "source": "http://prensa.cba.gov.ar/salud/de-la-sota-inauguro-el-caps-24-horas-de-barrio-sol-naciente/"
-    },
-    "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:clinic",
+    "clasificacion_motivo": "amenity:restaurant",
     "estado": "sin_email"
   },
   {
@@ -6062,7 +3120,7 @@
       "shop": "butcher"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:butcher",
+    "clasificacion_motivo": "shop:butcher",
     "estado": "sin_email"
   },
   {
@@ -6080,7 +3138,7 @@
       "shop": "butcher"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:butcher",
+    "clasificacion_motivo": "shop:butcher",
     "estado": "sin_email"
   },
   {
@@ -6103,7 +3161,7 @@
       "shop": "butcher"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:butcher",
+    "clasificacion_motivo": "shop:butcher",
     "estado": "sin_email"
   },
   {
@@ -6125,7 +3183,7 @@
       "shop": "convenience"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:convenience",
+    "clasificacion_motivo": "shop:convenience",
     "estado": "sin_email"
   },
   {
@@ -6145,7 +3203,7 @@
       "tourism": "guest_house"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_tourism:guest_house",
+    "clasificacion_motivo": "tourism:guest_house",
     "estado": "sin_email"
   },
   {
@@ -6188,7 +3246,7 @@
       "name": "Casa Blanca"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:restaurant",
+    "clasificacion_motivo": "amenity:restaurant",
     "estado": "sin_email"
   },
   {
@@ -6209,7 +3267,7 @@
       "wheelchair": "yes"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:restaurant",
+    "clasificacion_motivo": "amenity:restaurant",
     "estado": "sin_email"
   },
   {
@@ -6250,7 +3308,7 @@
       "tourism": "guest_house"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_tourism:guest_house",
+    "clasificacion_motivo": "tourism:guest_house",
     "estado": "sin_email"
   },
   {
@@ -6269,7 +3327,7 @@
       "tourism": "guest_house"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_tourism:guest_house",
+    "clasificacion_motivo": "tourism:guest_house",
     "estado": "sin_email"
   },
   {
@@ -6288,7 +3346,7 @@
       "tourism": "hostel"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:hostel",
+    "clasificacion_motivo": "tourism:hostel",
     "estado": "sin_email"
   },
   {
@@ -6329,7 +3387,7 @@
       "tourism": "guest_house"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_tourism:guest_house",
+    "clasificacion_motivo": "tourism:guest_house",
     "estado": "sin_email"
   },
   {
@@ -6347,7 +3405,7 @@
       "name": "Caseratto"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:ice_cream",
+    "clasificacion_motivo": "amenity:ice_cream",
     "estado": "sin_email"
   },
   {
@@ -6370,7 +3428,7 @@
       "wheelchair": "limited"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:fast_food",
+    "clasificacion_motivo": "amenity:fast_food",
     "estado": "sin_email"
   },
   {
@@ -6388,7 +3446,7 @@
       "name": "Cassual coffee"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:cafe",
+    "clasificacion_motivo": "amenity:cafe",
     "estado": "sin_email"
   },
   {
@@ -6407,7 +3465,7 @@
       "name": "CDA"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:dentist",
+    "clasificacion_motivo": "amenity:dentist",
     "estado": "sin_email"
   },
   {
@@ -6434,6 +3492,29 @@
   },
   {
     "source": "OpenStreetMap",
+    "source_id": "4126418020",
+    "name": "CENMA PARQUE LICEO",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Bartolomé Hidalgo 1050",
+    "lat": -31.3589267,
+    "lon": -64.1613207,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "1050",
+      "addr:postcode": "5019",
+      "addr:street": "Bartolomé Hidalgo",
+      "amenity": "school",
+      "description": "Secundario de adultos. Funciona en turno nocturno.",
+      "name": "CENMA PARQUE LICEO"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
     "source_id": "4560969893",
     "name": "Centenario",
     "website": "",
@@ -6448,7 +3529,7 @@
       "tourism": "hostel"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:hostel",
+    "clasificacion_motivo": "tourism:hostel",
     "estado": "sin_email"
   },
   {
@@ -6470,7 +3551,7 @@
       "name": "Centro Cultural Alta Córdoba. \"Efraín U. Bischoff\""
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:taller",
+    "clasificacion_motivo": "taller",
     "estado": "sin_email"
   },
   {
@@ -6564,183 +3645,93 @@
       "shop": "supermarket"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:supermarket",
+    "clasificacion_motivo": "shop:supermarket",
     "estado": "sin_email"
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "4376416514",
-    "name": "Centro de Salud 14 - General Bustos",
+    "source_id": "3621727932",
+    "name": "Centro Educativo Antártida Argentina",
     "website": "",
     "email": "",
-    "phone": "+54 351 4336003",
-    "direccion": "Diagonal Ica 990",
-    "lat": -31.387062,
-    "lon": -64.1638021,
+    "phone": "",
+    "direccion": "Rivadavia",
+    "lat": -31.3956562,
+    "lon": -64.272971,
     "tags": {
       "addr:city": "Córdoba",
-      "addr:full": "Diagonal Ica 990",
-      "addr:housenumber": "990",
-      "addr:postcode": "5000",
-      "addr:street": "Diagonal Ica",
-      "amenity": "clinic",
-      "healthcare": "clinic",
-      "name": "Centro de Salud 14 - General Bustos",
-      "opening_hours": "07:00-15:30",
-      "operator": "Municipal",
-      "operator:type": "public",
-      "phone": "+54 351 4336003",
-      "ref:sisa_codigo": "50140142133189",
-      "ref:sisa_tipologia": "ESSIDT"
+      "addr:postcode": "5003",
+      "addr:street": "Rivadavia",
+      "amenity": "school",
+      "name": "Centro Educativo Antártida Argentina"
     },
-    "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:clinic",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
     "estado": "sin_email"
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "4379967292",
-    "name": "Centro de Salud 4 - Barrio Nueva Italia",
+    "source_id": "3818038366",
+    "name": "CENTRO EDUCATIVO OBISPO ESQUIU- 250 alumnos",
     "website": "",
     "email": "",
-    "phone": "+54 351 433 5123",
-    "direccion": "José Quevedo",
-    "lat": -31.3819325,
-    "lon": -64.1425277,
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3590448,
+    "lon": -64.1076981,
+    "tags": {
+      "name": "CENTRO EDUCATIVO OBISPO ESQUIU- 250 alumnos",
+      "office": "educational_institution"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3758786713",
+    "name": "Centro Educativo Peter Pan",
+    "website": "",
+    "email": "",
+    "phone": "+54 351 477 1912",
+    "direccion": "Pablo de Guzmán 131",
+    "lat": -31.3671097,
+    "lon": -64.2041635,
     "tags": {
       "addr:city": "Córdoba",
-      "addr:full": "José De Quevedo S/N Esq. Dos Barrios",
-      "addr:postcode": "5000",
-      "addr:street": "José Quevedo",
-      "amenity": "clinic",
-      "emergency": "no",
-      "healthcare": "clinic",
-      "name": "Centro de Salud 4 - Barrio Nueva Italia",
-      "opening_hours": "07:00-17:00",
-      "operator": "Municipal",
-      "operator:type": "public",
-      "phone": "+54 351 433 5123",
-      "ref:sisa_codigo": "50140142133187",
-      "ref:sisa_tipologia": "ESSIDT"
+      "addr:housenumber": "131",
+      "addr:postcode": "5008",
+      "addr:street": "Pablo de Guzmán",
+      "amenity": "school",
+      "description": "Nivel inicial y primario",
+      "name": "Centro Educativo Peter Pan",
+      "phone": "+54 351 477 1912"
     },
-    "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:clinic",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
     "estado": "sin_email"
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "4777006903",
-    "name": "Centro de Salud 60 -  Marqués Anexo",
+    "source_id": "3759232819",
+    "name": "Centro Educativo Terapéutico SULLAI",
     "website": "",
     "email": "",
-    "phone": "+54 351 4335122",
-    "direccion": "Del Molino",
-    "lat": -31.3720664,
-    "lon": -64.1907158,
+    "phone": "",
+    "direccion": "Gaspar de Medina 333",
+    "lat": -31.3656371,
+    "lon": -64.2034411,
     "tags": {
       "addr:city": "Córdoba",
-      "addr:full": "Del Molino Esq. Del Precursor",
-      "addr:postcode": "5000",
-      "addr:street": "Del Molino",
-      "amenity": "clinic",
-      "healthcare": "clinic",
-      "name": "Centro de Salud 60 -  Marqués Anexo",
-      "operator": "Municipal",
-      "operator:type": "public",
-      "phone": "+54 351 4335122",
-      "ref:sisa_codigo": "50140142233263",
-      "ref:sisa_tipologia": "ESSIDT"
+      "addr:country": "AR",
+      "addr:housenumber": "333",
+      "addr:postcode": "5008",
+      "addr:street": "Gaspar de Medina",
+      "amenity": "school",
+      "name": "Centro Educativo Terapéutico SULLAI"
     },
-    "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:clinic",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4477608017",
-    "name": "Centro de Salud 61 - El Cerrito",
-    "website": "",
-    "email": "",
-    "phone": "+54 3543 449421",
-    "direccion": "Mario Sesarego",
-    "lat": -31.3248407,
-    "lon": -64.2485151,
-    "tags": {
-      "addr:full": "Mario Sesserego Esq Domingo Mariman",
-      "addr:postcode": "5000",
-      "addr:street": "Mario Sesarego",
-      "amenity": "clinic",
-      "healthcare": "clinic",
-      "name": "Centro de Salud 61 - El Cerrito",
-      "operator": "Municipal",
-      "operator:type": "public",
-      "phone": "+54 3543 449421",
-      "ref:sisa_codigo": "50140142233274",
-      "ref:sisa_tipologia": "ESSIDT"
-    },
-    "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:clinic",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4477746123",
-    "name": "Centro de Salud 67 - 16 de Noviembre",
-    "website": "",
-    "email": "",
-    "phone": "+54 3543 44 9431",
-    "direccion": "Cauque SN",
-    "lat": -31.3132449,
-    "lon": -64.2617769,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:full": "Cauque S/N (Al Lado Del Obrador)",
-      "addr:housenumber": "SN",
-      "addr:postcode": "5000",
-      "addr:street": "Cauque",
-      "amenity": "clinic",
-      "description": "Centro de Atención Primaria de la Salud (B° 16 de Noviembre)",
-      "healthcare": "clinic",
-      "name": "Centro de Salud 67 - 16 de Noviembre",
-      "old_name": "UPAS N°3 VILLA CORNÚ",
-      "opening_hours": "07:00-14:00",
-      "operator": "Municipal",
-      "operator:type": "public",
-      "phone": "+54 3543 44 9431",
-      "ref:sisa_codigo": "50140142233265",
-      "ref:sisa_tipologia": "ESSIDT"
-    },
-    "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:clinic",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "4477702612",
-    "name": "Centro de Salud Primaria 33 - Barrio Arguello",
-    "website": "",
-    "email": "",
-    "phone": "+54 351 4338335",
-    "direccion": "Avenida Donato Álvarez 7375",
-    "lat": -31.3369969,
-    "lon": -64.2597385,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:full": "Avenida Donato Alvarez 7375",
-      "addr:housenumber": "7375",
-      "addr:postcode": "5000",
-      "addr:street": "Avenida Donato Álvarez",
-      "amenity": "clinic",
-      "healthcare": "clinic",
-      "name": "Centro de Salud Primaria 33 - Barrio Arguello",
-      "operator": "Municipal",
-      "operator:type": "public",
-      "phone": "+54 351 4338335",
-      "ref:sisa_codigo": "50140142233271",
-      "ref:sisa_tipologia": "ESSIDT"
-    },
-    "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:clinic",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
     "estado": "sin_email"
   },
   {
@@ -6763,30 +3754,7 @@
       "name": "Centro Integral Odontológico"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:dentist",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "3742070426",
-    "name": "Centro Materno Municipal",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Los Nogales",
-    "lat": -31.3922038,
-    "lon": -64.1411308,
-    "tags": {
-      "addr:city": "Córdoba Capital",
-      "addr:postcode": "5012",
-      "addr:street": "Los Nogales",
-      "amenity": "clinic",
-      "healthcare": "clinic",
-      "name": "Centro Materno Municipal",
-      "opening_hours": "07:00-19:00"
-    },
-    "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:clinic",
+    "clasificacion_motivo": "amenity:dentist",
     "estado": "sin_email"
   },
   {
@@ -6870,6 +3838,24 @@
   },
   {
     "source": "OpenStreetMap",
+    "source_id": "4888705932",
+    "name": "Centro Vecinal Marcelo T. De alvear",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3671842,
+    "lon": -64.1725199,
+    "tags": {
+      "name": "Centro Vecinal Marcelo T. De alvear",
+      "office": "association"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
     "source_id": "4379967294",
     "name": "Centro vecinal Santa Clara de Asis",
     "website": "",
@@ -6884,6 +3870,24 @@
       "addr:street": "Oscariz Beaumont",
       "amenity": "community_centre",
       "name": "Centro vecinal Santa Clara de Asis"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1282764790",
+    "name": "Centro Vecinal Villa Allende Parque",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3158778,
+    "lon": -64.2831173,
+    "tags": {
+      "amenity": "townhall",
+      "name": "Centro Vecinal Villa Allende Parque"
     },
     "tipo": "dudoso",
     "clasificacion_motivo": "sin_indicio_suficiente",
@@ -6945,7 +3949,7 @@
       "shop": "hardware"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:hardware",
+    "clasificacion_motivo": "shop:hardware",
     "estado": "sin_email"
   },
   {
@@ -6969,7 +3973,7 @@
     },
     "web_error": "HTTPConnectionPool(host='www.chesalguero.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='www.chesalguero.com', port=80): Faile",
     "tipo": "comercio",
-    "clasificacion_motivo": "actividad_comercial:hostel",
+    "clasificacion_motivo": "tourism:hostel",
     "estado": "sin_email"
   },
   {
@@ -7008,7 +4012,7 @@
       "shop": "gift"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:gift",
+    "clasificacion_motivo": "shop:gift",
     "estado": "sin_email"
   },
   {
@@ -7046,7 +4050,7 @@
       "name": "Choricheto"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:fast_food",
+    "clasificacion_motivo": "amenity:fast_food",
     "estado": "sin_email"
   },
   {
@@ -7064,7 +4068,7 @@
       "shop": "kiosk"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:kiosk",
+    "clasificacion_motivo": "shop:kiosk",
     "estado": "sin_email"
   },
   {
@@ -7083,7 +4087,7 @@
       "name": "Choripanes El Dante"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:fast_food",
+    "clasificacion_motivo": "amenity:fast_food",
     "estado": "sin_email"
   },
   {
@@ -7119,7 +4123,7 @@
       "shop": "shoes"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_shop:shoes",
+    "clasificacion_motivo": "shop:shoes",
     "estado": "sin_email"
   },
   {
@@ -7136,8 +4140,8 @@
       "amenity": "cinema",
       "name": "Cine Treatro Córdoba"
     },
-    "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:cinema",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
     "estado": "sin_email"
   },
   {
@@ -7154,8 +4158,8 @@
       "amenity": "cinema",
       "name": "Cines Dino"
     },
-    "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:cinema",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
     "estado": "sin_email"
   },
   {
@@ -7177,7 +4181,7 @@
       "name": "Cipe"
     },
     "tipo": "comercio",
-    "clasificacion_motivo": "osm_amenity:doctors",
+    "clasificacion_motivo": "estetica,estética",
     "estado": "sin_email"
   },
   {
@@ -7201,6 +4205,2634 @@
     },
     "tipo": "dudoso",
     "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3615107790",
+    "name": "Clark's Irish Pub",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4264675,
+    "lon": -64.1846828,
+    "tags": {
+      "amenity": "pub",
+      "name": "Clark's Irish Pub"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pub",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "2701461424",
+    "name": "Claro",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4139724,
+    "lon": -64.1845386,
+    "tags": {
+      "brand": "Claro",
+      "brand:wikidata": "Q1770208",
+      "brand:wikipedia": "en:Claro (company)",
+      "name": "Claro",
+      "shop": "mobile_phone"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:mobile_phone",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4475365589",
+    "name": "Claro Argentina",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Avenida Sabattini 1417",
+    "lat": -31.4303055,
+    "lon": -64.1674651,
+    "tags": {
+      "addr:housenumber": "1417",
+      "addr:postcode": "5014",
+      "addr:street": "Avenida Sabattini",
+      "name": "Claro Argentina",
+      "name:en": "Claro Argentina",
+      "name:es": "Claro Argentina",
+      "office": "telecommunication",
+      "opening_hours": "Mo-Fr 08:00-18:00"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4363603889",
+    "name": "Club 25 de Mayo",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Avenida Marcelo T. de Alvear 1135",
+    "lat": -31.4276648,
+    "lon": -64.194818,
+    "tags": {
+      "addr:housenumber": "1135",
+      "addr:postcode": "5000",
+      "addr:street": "Avenida Marcelo T. de Alvear",
+      "amenity": "community_centre",
+      "name": "Club 25 de Mayo",
+      "name:es": "Club 25 de Mayo"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4367938674",
+    "name": "Club Las Palmas-LeoniDaniela",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4028748,
+    "lon": -64.2382493,
+    "tags": {
+      "leisure": "pitch",
+      "name": "Club Las Palmas-LeoniDaniela"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4376266141",
+    "name": "Club Sociedad Belgrano",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3849638,
+    "lon": -64.1583947,
+    "tags": {
+      "amenity": "community_centre",
+      "name": "Club Sociedad Belgrano"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3816374024",
+    "name": "CLUB- BAR DE VILLA ESQUIU",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3677139,
+    "lon": -64.109191,
+    "tags": {
+      "amenity": "bar",
+      "name": "CLUB- BAR DE VILLA ESQUIU"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:bar",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3966514897",
+    "name": "CNRT",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4226419,
+    "lon": -64.1754912,
+    "tags": {
+      "name": "CNRT",
+      "office": "government"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4112917395",
+    "name": "Coco Loco",
+    "website": "",
+    "email": "",
+    "phone": "4220268",
+    "direccion": "Jacinto Ríos 1298",
+    "lat": -31.4011434,
+    "lon": -64.1705326,
+    "tags": {
+      "addr:housenumber": "1298",
+      "addr:street": "Jacinto Ríos",
+      "amenity": "fast_food",
+      "name": "Coco Loco",
+      "not:brand:wikidata": "Q65084369",
+      "phone": "4220268"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:fast_food",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3703379810",
+    "name": "Colegio Cristiano Evangelico William C. Morris",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4139436,
+    "lon": -64.1967566,
+    "tags": {
+      "amenity": "school",
+      "name": "Colegio Cristiano Evangelico William C. Morris"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3753790427",
+    "name": "Colegio Nuestra Señora de Loreto",
+    "website": "",
+    "email": "",
+    "phone": "+54 351 466 3386",
+    "direccion": "Manuel Gómez Carrillo 2559",
+    "lat": -31.4291424,
+    "lon": -64.2215638,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "2559",
+      "addr:postcode": "5010",
+      "addr:street": "Manuel Gómez Carrillo",
+      "amenity": "school",
+      "name": "Colegio Nuestra Señora de Loreto",
+      "phone": "+54 351 466 3386"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3821490272",
+    "name": "Colegio Nuestra Señora del Huerto",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Belgrano 268",
+    "lat": -31.4176964,
+    "lon": -64.1890754,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "268",
+      "addr:postcode": "5000",
+      "addr:street": "Belgrano",
+      "amenity": "school",
+      "name": "Colegio Nuestra Señora del Huerto"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1195586263",
+    "name": "Colegio San José",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4194776,
+    "lon": -64.1856758,
+    "tags": {
+      "amenity": "school",
+      "name": "Colegio San José"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3522415671",
+    "name": "Colegio Santo Domingo",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4127714,
+    "lon": -64.1798007,
+    "tags": {
+      "amenity": "school",
+      "name": "Colegio Santo Domingo"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1668135539",
+    "name": "Comedor",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3631015,
+    "lon": -64.2759533,
+    "tags": {
+      "amenity": "restaurant",
+      "name": "Comedor"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:restaurant",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4358164264",
+    "name": "Comedor SUE",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4397135,
+    "lon": -64.1689567,
+    "tags": {
+      "amenity": "restaurant",
+      "name": "Comedor SUE"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:restaurant",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "2074645407",
+    "name": "Communication Partner SRL",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4124535,
+    "lon": -64.1732282,
+    "tags": {
+      "addr:housename": "Samiento 750 Piso 4 Dpto D",
+      "alt_name": "CP",
+      "name": "Communication Partner SRL",
+      "office": "company"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4293332001",
+    "name": "Compostura de Calzado",
+    "website": "",
+    "email": "",
+    "phone": "4581713",
+    "direccion": "Chamical 2319",
+    "lat": -31.4332078,
+    "lon": -64.1259021,
+    "tags": {
+      "addr:housenumber": "2319",
+      "addr:postcode": "5006",
+      "addr:street": "Chamical",
+      "craft": "shoemaker",
+      "name": "Compostura de Calzado",
+      "opening_hours": "Mo-Sa 09:30-22:00",
+      "phone": "4581713"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "craft:shoemaker",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3456794456",
+    "name": "Constancio Cecilio Vigil",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Juan Llerena 5561",
+    "lat": -31.453953,
+    "lon": -64.1095857,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "5561",
+      "addr:postcode": "5123",
+      "addr:street": "Juan Llerena",
+      "amenity": "school",
+      "name": "Constancio Cecilio Vigil"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3846881453",
+    "name": "Consulado de Bolivia",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Figueroa Cáceres 368",
+    "lat": -31.4157458,
+    "lon": -64.2034127,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "368",
+      "addr:street": "Figueroa Cáceres",
+      "consulate": "yes",
+      "country": "BO",
+      "diplomatic": "consulate",
+      "name": "Consulado de Bolivia",
+      "office": "diplomatic"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3986618290",
+    "name": "Consulado de Francia",
+    "website": "",
+    "email": "sonzini@arnet.com.ar",
+    "phone": "+54 351 4290915",
+    "direccion": "Ayacucho 46",
+    "lat": -31.4165153,
+    "lon": -64.1868142,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "46",
+      "addr:postcode": "5000",
+      "addr:street": "Ayacucho",
+      "consulate": "honorary_consul",
+      "country": "FR",
+      "diplomatic": "consulate",
+      "email": "sonzini@arnet.com.ar",
+      "fax": "+54 351 4290915",
+      "name": "Consulado de Francia",
+      "name:de": "Konsulat von Frankreich",
+      "name:en": "Honorary Consulate of France",
+      "name:es": "Consulado Honorario de Francia",
+      "name:fr": "Consulat honoraire de France",
+      "office": "diplomatic",
+      "phone": "+54 351 4290915",
+      "target": "AR"
+    },
+    "email_source": "OpenStreetMap",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3984348297",
+    "name": "Consulado General de Perú",
+    "website": "",
+    "email": "",
+    "phone": "+54 351 4264196",
+    "direccion": "Humberto Primo 680",
+    "lat": -31.4067586,
+    "lon": -64.1908138,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "680",
+      "addr:street": "Humberto Primo",
+      "consulate": "consulate_general",
+      "country": "PE",
+      "diplomatic": "consulate",
+      "name": "Consulado General de Perú",
+      "office": "diplomatic",
+      "phone": "+54 351 4264196"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3279649306",
+    "name": "Consultorio Odontológico",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4335301,
+    "lon": -64.2460575,
+    "tags": {
+      "amenity": "dentist",
+      "healthcare": "dentist",
+      "name": "Consultorio Odontológico"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:dentist",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "2701612179",
+    "name": "Consultorios Médicos Privados Tablada",
+    "website": "",
+    "email": "",
+    "phone": "+54 3543 43 3864",
+    "direccion": "",
+    "lat": -31.2932601,
+    "lon": -64.2968446,
+    "tags": {
+      "amenity": "doctors",
+      "description": "Centro de estética y salud",
+      "healthcare": "doctor",
+      "name": "Consultorios Médicos Privados Tablada",
+      "phone": "+54 3543 43 3864",
+      "wheelchair": "no"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "consultorio,estetica,estética",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "2005363505",
+    "name": "Conte Motos",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4089549,
+    "lon": -64.1826992,
+    "tags": {
+      "name": "Conte Motos",
+      "shop": "motorcycle"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4475953988",
+    "name": "Coraje",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3159529,
+    "lon": -64.2578927,
+    "tags": {
+      "amenity": "pharmacy",
+      "healthcare": "pharmacy",
+      "name": "Coraje"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1712807642",
+    "name": "Cordiez",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Avenida Vélez Sarsfield 334",
+    "lat": -31.4190456,
+    "lon": -64.1884465,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "334",
+      "addr:street": "Avenida Vélez Sarsfield",
+      "name": "Cordiez",
+      "shop": "supermarket"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:supermarket",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4727276115",
+    "name": "Cordobazo. Concentración de SMATA",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4506351,
+    "lon": -64.2003972,
+    "tags": {
+      "description": "Cordobazo, 29 de junio de 1969, 10am. La columna del SMATA de 5000 obreros, se concentra en la Rotonda de La Flores, vienen de la planta de Santa Isabel de IKA-Renault y de FIAT. De allí marchan por la Avenida Vélez Sarsfield hacia el centro.",
+      "name": "Cordobazo. Concentración de SMATA",
+      "tourism": "attraction"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "272172281",
+    "name": "CorGas",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4014859,
+    "lon": -64.1759686,
+    "tags": {
+      "amenity": "fuel",
+      "fuel:cng": "yes",
+      "name": "CorGas",
+      "operator": "CORGAS SOCIEDAD ANOMIMA",
+      "panoramax": "c2990159-36a7-460c-9ad1-2bf72dc01d5d"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:fuel",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "2356511275",
+    "name": "Correo Argentino",
+    "website": "http://www.correoargentino.com.ar/",
+    "email": "webmaster@correoargentino.com.ar",
+    "phone": "+54 351 428 9137",
+    "direccion": "Avenida Colón 210",
+    "lat": -31.4126322,
+    "lon": -64.1858928,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "210",
+      "addr:postcode": "X5000",
+      "addr:street": "Avenida Colón",
+      "amenity": "post_office",
+      "brand": "Correo Argentino",
+      "brand:wikidata": "Q4036566",
+      "brand:wikipedia": "en:Correo Argentino",
+      "contact:website": "http://www.correoargentino.com.ar/",
+      "name": "Correo Argentino",
+      "official_name": "Correo Oficial de la República Argentina",
+      "operator": "Correo Argentino",
+      "operator:type": "public",
+      "operator:wikidata": "Q4036566",
+      "operator:wikipedia": "en:Correo Argentino",
+      "phone": "+54 351 428 9137"
+    },
+    "website_final": "https://www.correoargentino.com.ar/",
+    "email_source": "sitio_web",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4479926959",
+    "name": "Correo Argentino",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4330023,
+    "lon": -64.1339837,
+    "tags": {
+      "amenity": "post_office",
+      "name": "Correo Argentino",
+      "operator": "Correo Argentino",
+      "operator:wikidata": "Q4036566",
+      "operator:wikipedia": "en:Correo Argentino"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3986590797",
+    "name": "Corro",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4141627,
+    "lon": -64.1937135,
+    "tags": {
+      "name": "Corro",
+      "shop": "hardware"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:hardware",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3672397032",
+    "name": "Creambury",
+    "website": "https://creambury.com.ar/",
+    "email": "",
+    "phone": "+54 351 469 3144",
+    "direccion": "Independencia 998",
+    "lat": -31.4274894,
+    "lon": -64.1886976,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "998",
+      "addr:postcode": "5000",
+      "addr:street": "Independencia",
+      "amenity": "cafe",
+      "cuisine": "ice_cream;coffee",
+      "internet_access": "wlan",
+      "name": "Creambury",
+      "opening_hours": "Mo-Th 08:00-02:00; Fr 08:00-04:00; Sa-Su 09:00-04:00",
+      "phone": "+54 351 469 3144",
+      "smoking": "outside",
+      "source": "http://www.creambury.com.ar/locales.php",
+      "website": "https://creambury.com.ar/"
+    },
+    "website_final": "https://creambury.com.ar/",
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:cafe",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1262261345",
+    "name": "Credicoop",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4167259,
+    "lon": -64.1827118,
+    "tags": {
+      "amenity": "bank",
+      "brand": "Credicoop",
+      "brand:wikidata": "Q4854086",
+      "brand:wikipedia": "en:Banco Credicoop",
+      "is_in": "Córdoba",
+      "name": "Credicoop"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "2419109107",
+    "name": "Credicop",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3371062,
+    "lon": -64.207554,
+    "tags": {
+      "amenity": "bank",
+      "name": "Credicop"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1712830512",
+    "name": "Cripta Jesuítica del Noviciado Viejo",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4132766,
+    "lon": -64.184395,
+    "tags": {
+      "is_in:city": "Córdoba",
+      "is_in:state": "Córdoba",
+      "museum": "history",
+      "museum_type": "municipal",
+      "name": "Cripta Jesuítica del Noviciado Viejo",
+      "opening_hours": "Mo-Fr 09:00-18:30",
+      "tourism": "museum",
+      "wikidata": "Q5790994",
+      "wikimedia_commons": "Category:Cripta Jesuítica Córdoba",
+      "wikipedia": "es:Cripta Jesuítica"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4876803921",
+    "name": "Cristal",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4184228,
+    "lon": -64.1841862,
+    "tags": {
+      "name": "Cristal",
+      "name:es": "Cristal",
+      "tourism": "hotel"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "hotel",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4659513190",
+    "name": "Cristobal 2 y arturo",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Boulevard Arturo Illia 554",
+    "lat": -31.4228894,
+    "lon": -64.1785557,
+    "tags": {
+      "addr:housenumber": "554",
+      "addr:street": "Boulevard Arturo Illia",
+      "amenity": "restaurant",
+      "name": "Cristobal 2 y arturo",
+      "name:es": "Cristobal 2 y arturo"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:restaurant",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4264878912",
+    "name": "CrossFit",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Obispo Trejo y Sanabria 619",
+    "lat": -31.4230931,
+    "lon": -64.1886216,
+    "tags": {
+      "addr:housenumber": "619",
+      "addr:street": "Obispo Trejo y Sanabria",
+      "branch": "FB",
+      "brand": "CrossFit",
+      "brand:wikidata": "Q2072840",
+      "leisure": "fitness_centre",
+      "name": "CrossFit"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "fitness,crossfit",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4074507761",
+    "name": "Cuartel de Bomberos",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Mariano Moreno 240",
+    "lat": -31.41472,
+    "lon": -64.1986152,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "240",
+      "addr:postcode": "5000",
+      "addr:street": "Mariano Moreno",
+      "amenity": "fire_station",
+      "name": "Cuartel de Bomberos"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4379872643",
+    "name": "Cuartel de bomberos Malvinas Argentinas",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "San Martín Norte",
+    "lat": -31.3695419,
+    "lon": -64.0531287,
+    "tags": {
+      "addr:city": "Malvinas Argentinas",
+      "addr:postcode": "5125",
+      "addr:street": "San Martín Norte",
+      "amenity": "fire_station",
+      "name": "Cuartel de bomberos Malvinas Argentinas",
+      "operator": "Roxana Gribaudo"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1502351845",
+    "name": "Cuartel de Bomberos Marques de sobremonte- (Lilya)",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Juan Barragán",
+    "lat": -31.3644429,
+    "lon": -64.1964899,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:postcode": "5008",
+      "addr:street": "Juan Barragán",
+      "amenity": "fire_station",
+      "description": "Zona de diferentes Instituciones del Barrio, incluyendo el cuartel de los bomberos.",
+      "name": "Cuartel de Bomberos Marques de sobremonte- (Lilya)"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "bar",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4168403289",
+    "name": "Cuates - Tacos y Lomos",
+    "website": "",
+    "email": "",
+    "phone": "+54 3543 42 3879",
+    "direccion": "Tomás Garzón 7704",
+    "lat": -31.3474062,
+    "lon": -64.2673777,
+    "tags": {
+      "addr:housenumber": "7704",
+      "addr:street": "Tomás Garzón",
+      "amenity": "fast_food",
+      "name": "Cuates - Tacos y Lomos",
+      "opening_hours": "Mo-Su 12:00-14:30",
+      "phone": "+54 3543 42 3879"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:fast_food",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4358197248",
+    "name": "Cuba Inc",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.421728,
+    "lon": -64.1913507,
+    "tags": {
+      "amenity": "nightclub",
+      "name": "Cuba Inc"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4349060592",
+    "name": "Cunde Amor",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Elias Yofre 1243",
+    "lat": -31.4507528,
+    "lon": -64.1781158,
+    "tags": {
+      "addr:housenumber": "1243",
+      "addr:street": "Elias Yofre",
+      "name": "Cunde Amor",
+      "shop": "confectionery"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3639474621",
+    "name": "Cura José Gabriel Brochero",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4164372,
+    "lon": -64.1851863,
+    "tags": {
+      "artwork_type": "statue",
+      "name": "Cura José Gabriel Brochero",
+      "short_name": "Cura Brochero",
+      "source": "http://www.lavoz.com.ar/ciudadanos/inauguraron-una-estatua-del-cura-brochero",
+      "start_date": "11-MAR-2015",
+      "tourism": "artwork"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4477420218",
+    "name": "D'Carnes",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3205074,
+    "lon": -64.2718078,
+    "tags": {
+      "name": "D'Carnes",
+      "shop": "butcher"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:butcher",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4476049764",
+    "name": "DA-NA",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3193899,
+    "lon": -64.2576912,
+    "tags": {
+      "description": "Fotocopias y Utiles",
+      "name": "DA-NA",
+      "shop": "books"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:books",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4319221089",
+    "name": "Dada Mini",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4244094,
+    "lon": -64.1914204,
+    "tags": {
+      "amenity": "bar",
+      "name": "Dada Mini"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:bar",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4775902420",
+    "name": "de botanas",
+    "website": "",
+    "email": "",
+    "phone": "+54 351 481 8776",
+    "direccion": "Luis José de Tejeda 4050",
+    "lat": -31.3725698,
+    "lon": -64.2323451,
+    "tags": {
+      "addr:housenumber": "4050",
+      "addr:street": "Luis José de Tejeda",
+      "amenity": "restaurant",
+      "name": "de botanas",
+      "opening_hours": "Mo-Su 18:00-02:00, 09:00-14:00",
+      "phone": "+54 351 481 8776"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:restaurant",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4574144289",
+    "name": "De Claudio",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Soconcho",
+    "lat": -31.4569826,
+    "lon": -64.1603616,
+    "tags": {
+      "addr:street": "Soconcho",
+      "amenity": "pharmacy",
+      "healthcare": "pharmacy",
+      "name": "De Claudio",
+      "name:es": "De Claudio"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "791746730",
+    "name": "Del boulevard",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.421919,
+    "lon": -64.183903,
+    "tags": {
+      "is_in": "Córdoba",
+      "name": "Del boulevard",
+      "tourism": "hotel"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "hotel",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "2431629765",
+    "name": "Del Clínicas",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4065425,
+    "lon": -64.2033291,
+    "tags": {
+      "amenity": "pharmacy",
+      "healthcare": "pharmacy",
+      "name": "Del Clínicas"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "717587771",
+    "name": "Del Pilar",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.427521,
+    "lon": -64.1875509,
+    "tags": {
+      "name": "Del Pilar",
+      "shop": "bakery"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:bakery",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "791743845",
+    "name": "Del sanatorio",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4247533,
+    "lon": -64.1868736,
+    "tags": {
+      "amenity": "pharmacy",
+      "healthcare": "pharmacy",
+      "name": "Del sanatorio"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "705466795",
+    "name": "Del Sol",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Obispo Oro",
+    "lat": -31.4255224,
+    "lon": -64.1834099,
+    "tags": {
+      "addr:street": "Obispo Oro",
+      "amenity": "pharmacy",
+      "healthcare": "pharmacy",
+      "name": "Del Sol",
+      "shop": "chemist"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:chemist",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4485340680",
+    "name": "DeRose Method - Sede Córdoba",
+    "website": "",
+    "email": "",
+    "phone": "+54 351 422 2781",
+    "direccion": "",
+    "lat": -31.4255064,
+    "lon": -64.1867028,
+    "tags": {
+      "amenity": "college",
+      "name": "DeRose Method - Sede Córdoba",
+      "name:es": "Método DeRose - Sede Córdoba",
+      "network": "DeRose Method",
+      "phone": "+54 351 422 2781",
+      "training": "DeRose Method"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3279629340",
+    "name": "Despensa",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4270387,
+    "lon": -64.2458326,
+    "tags": {
+      "name": "Despensa",
+      "shop": "convenience"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:convenience",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4478171333",
+    "name": "Despensa Adriana",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3256492,
+    "lon": -64.2619305,
+    "tags": {
+      "name": "Despensa Adriana",
+      "shop": "convenience"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:convenience",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3279106717",
+    "name": "Despensa Loly",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3863916,
+    "lon": -64.1696881,
+    "tags": {
+      "name": "Despensa Loly",
+      "shop": "convenience"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:convenience",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3279652059",
+    "name": "Despensa Tota",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4356349,
+    "lon": -64.2460752,
+    "tags": {
+      "name": "Despensa Tota",
+      "shop": "convenience"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:convenience",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3284395364",
+    "name": "Despensa-Kiosco",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3631185,
+    "lon": -64.1752094,
+    "tags": {
+      "amenity": "marketplace",
+      "name": "Despensa-Kiosco"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "kiosco",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3279654027",
+    "name": "Despensa-Pollería",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4380144,
+    "lon": -64.2459372,
+    "tags": {
+      "butcher": "poultry",
+      "name": "Despensa-Pollería",
+      "shop": "butcher"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:butcher",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4364122750",
+    "name": "Diarios Y Revistas",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4361954,
+    "lon": -64.1688501,
+    "tags": {
+      "name": "Diarios Y Revistas",
+      "shop": "books"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:books",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4477456486",
+    "name": "dIEGO",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3182096,
+    "lon": -64.2731143,
+    "tags": {
+      "name": "dIEGO",
+      "shop": "hardware"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:hardware",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1742179778",
+    "name": "Dinosaurio",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3675422,
+    "lon": -64.2186006,
+    "tags": {
+      "name": "Dinosaurio",
+      "shop": "supermarket"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:supermarket",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1216929390",
+    "name": "Dinosaurio 3D",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4288499,
+    "lon": -64.212912,
+    "tags": {
+      "amenity": "cinema",
+      "name": "Dinosaurio 3D"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "643269288",
+    "name": "Dinosaurio Mall",
+    "website": "https://www.grupodinosaurio.com/",
+    "email": "info@grupodinosaurio.com",
+    "phone": "+54 351 526 1500",
+    "direccion": "Rodríguez del Busto 4086",
+    "lat": -31.3670883,
+    "lon": -64.219337,
+    "tags": {
+      "addr:housenumber": "4086",
+      "addr:street": "Rodríguez del Busto",
+      "description": "Dinosaurio (Rofriguez del Busto)",
+      "name": "Dinosaurio Mall",
+      "opening_hours": "Mo-Su 10:00-22:00",
+      "phone": "+54 351 526 1500",
+      "shop": "mall",
+      "toilets": "yes",
+      "website": "https://www.grupodinosaurio.com/"
+    },
+    "website_final": "https://grupodinosaurio.com/",
+    "email_source": "sitio_web",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "requiere_decision"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4219904290",
+    "name": "Dipensario n° 11",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4398012,
+    "lon": -64.164244,
+    "tags": {
+      "amenity": "clinic",
+      "healthcare": "clinic",
+      "name": "Dipensario n° 11"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:clinic",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "2701620719",
+    "name": "Dirección General de Rentas - Receptoría",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Saavedra 206",
+    "lat": -31.293618,
+    "lon": -64.2956653,
+    "tags": {
+      "addr:city": "Villa Allende",
+      "addr:housenumber": "206",
+      "addr:postcode": "5105",
+      "addr:street": "Saavedra",
+      "name": "Dirección General de Rentas - Receptoría",
+      "office": "government"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "717587764",
+    "name": "Disco",
+    "website": "",
+    "email": "",
+    "phone": "+54 351 433-3004",
+    "direccion": "Avenida José Manuel Estrada 66",
+    "lat": -31.4276672,
+    "lon": -64.1880643,
+    "tags": {
+      "addr:housenumber": "66",
+      "addr:postcode": "5000",
+      "addr:street": "Avenida José Manuel Estrada",
+      "alt_name": "Disco Estrada 66",
+      "brand": "Disco",
+      "brand:wikidata": "Q6135978",
+      "brand:wikipedia": "es:Disco (supermercado de Argentina)",
+      "contact:phone": "+54 351 433-3004",
+      "delivery": "yes",
+      "name": "Disco",
+      "opening_hours": "Mo-Sa 08:00-21:00; Su,PH 09:00-21:00",
+      "payment:american_express": "yes",
+      "payment:argencard": "yes",
+      "payment:cabal": "yes",
+      "payment:diners_club": "yes",
+      "payment:gift_card": "yes",
+      "payment:italcred": "yes",
+      "payment:maestro": "yes",
+      "payment:mastercard": "yes",
+      "payment:mastercard_debit": "yes",
+      "payment:meal_voucher": "yes",
+      "payment:naranja": "yes",
+      "payment:nativa": "yes",
+      "payment:tarjeta_shopping": "yes",
+      "payment:visa": "yes",
+      "payment:visa_debit": "yes",
+      "prepayment:cencosud": "yes",
+      "shop": "supermarket"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:supermarket",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3306918500",
+    "name": "Dispensario Saldàn",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3158206,
+    "lon": -64.3125972,
+    "tags": {
+      "amenity": "doctors",
+      "healthcare": "doctor",
+      "name": "Dispensario Saldàn"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3816393434",
+    "name": "DISPENSARIO ZONAL",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3573475,
+    "lon": -64.1206875,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "DISPENSARIO ZONAL"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1913014012",
+    "name": "Don Bosco",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Avenida Mahatma Ghandi",
+    "lat": -31.3851331,
+    "lon": -64.2690863,
+    "tags": {
+      "addr:street": "Avenida Mahatma Ghandi",
+      "amenity": "pharmacy",
+      "dispensing": "yes",
+      "healthcare": "pharmacy",
+      "name": "Don Bosco",
+      "source": "survey"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3984348296",
+    "name": "Don Casimiro",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4043387,
+    "lon": -64.1943962,
+    "tags": {
+      "name": "Don Casimiro",
+      "shop": "butcher"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:butcher",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1836081776",
+    "name": "Don Paco",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3902157,
+    "lon": -64.2049447,
+    "tags": {
+      "name": "Don Paco",
+      "shop": "butcher"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:butcher",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "2103241721",
+    "name": "Don Rogelio",
+    "website": "http://www.circuitogastronomico.net/restaurante/73/Don-Rogelio.html",
+    "email": "",
+    "phone": "",
+    "direccion": "Félix Olmedo 201",
+    "lat": -31.4367035,
+    "lon": -64.1783582,
+    "tags": {
+      "addr:housenumber": "201",
+      "addr:postcode": "5000",
+      "addr:street": "Félix Olmedo",
+      "amenity": "restaurant",
+      "cuisine": "regional",
+      "name": "Don Rogelio",
+      "website": "http://www.circuitogastronomico.net/restaurante/73/Don-Rogelio.html"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:restaurant",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4364103510",
+    "name": "Drugstore Kira",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4229063,
+    "lon": -64.1767796,
+    "tags": {
+      "name": "Drugstore Kira",
+      "shop": "kiosk"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:kiosk",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "791743853",
+    "name": "Ecco Emergencia y prevencion",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Boulevard Arturo Illia 235",
+    "lat": -31.4215463,
+    "lon": -64.1827248,
+    "tags": {
+      "addr:housenumber": "235",
+      "addr:postcode": "5000",
+      "addr:street": "Boulevard Arturo Illia",
+      "amenity": "pharmacy",
+      "healthcare": "pharmacy",
+      "is_in:city": "Córdoba",
+      "name": "Ecco Emergencia y prevencion"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4477360382",
+    "name": "ECOlogia",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Avenida Donato Álvarez 8710",
+    "lat": -31.3229107,
+    "lon": -64.2697346,
+    "tags": {
+      "addr:housenumber": "8710",
+      "addr:street": "Avenida Donato Álvarez",
+      "amenity": "veterinary",
+      "name": "ECOlogia"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:veterinary",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4512893281",
+    "name": "El Atajo",
+    "website": "",
+    "email": "",
+    "phone": "+54 351 6207882",
+    "direccion": "Nicanor Carranza 3408",
+    "lat": -31.3826666,
+    "lon": -64.2262966,
+    "tags": {
+      "addr:housenumber": "3408",
+      "addr:street": "Nicanor Carranza",
+      "amenity": "bar",
+      "check_date": "2026-08-01",
+      "contact:instagram": "elatajo",
+      "name": "El Atajo",
+      "phone": "+54 351 6207882"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:bar",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4679449839",
+    "name": "El Bosque",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4304056,
+    "lon": -64.1773751,
+    "tags": {
+      "amenity": "restaurant",
+      "name": "El Bosque",
+      "toilets": "yes"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:restaurant",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4477511494",
+    "name": "El Chino",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3176383,
+    "lon": -64.2557059,
+    "tags": {
+      "name": "El Chino",
+      "shop": "convenience"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:convenience",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3982803563",
+    "name": "El Club de la milanesa",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3602972,
+    "lon": -64.2382685,
+    "tags": {
+      "amenity": "restaurant",
+      "fixme": "unable to confirm exsistence",
+      "name": "El Club de la milanesa",
+      "note": "unable to confirm exsistence"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:restaurant",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4407017301",
+    "name": "El Comedor",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4228222,
+    "lon": -64.1808242,
+    "tags": {
+      "amenity": "restaurant",
+      "name": "El Comedor",
+      "name:es": "El Comedor"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:restaurant",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4512892786",
+    "name": "El Doce TV",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.380996,
+    "lon": -64.2251097,
+    "tags": {
+      "name": "El Doce TV",
+      "office": "telecommunication"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4478139231",
+    "name": "El Emporio del Huevo",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3322884,
+    "lon": -64.2621946,
+    "tags": {
+      "name": "El Emporio del Huevo",
+      "shop": "greengrocer"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "2962009748",
+    "name": "El Fogón de los Arrieros",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3658534,
+    "lon": -64.2191119,
+    "tags": {
+      "amenity": "restaurant",
+      "name": "El Fogón de los Arrieros",
+      "operator": "steak_house",
+      "smoking": "outside"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:restaurant",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1262265825",
+    "name": "El Ruedo",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.416547,
+    "lon": -64.1858508,
+    "tags": {
+      "amenity": "bar",
+      "name": "El Ruedo"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:bar",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3819741963",
+    "name": "El Sargento",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Sargento Cabral",
+    "lat": -31.4271044,
+    "lon": -64.1507925,
+    "tags": {
+      "addr:city": "Cordoba Capital",
+      "addr:postcode": "5014",
+      "addr:street": "Sargento Cabral",
+      "amenity": "nightclub",
+      "name": "El Sargento",
+      "opening_hours": "23:00-05:00",
+      "operator": "Carlos \"la Mona\" Gimenez"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4784938061",
+    "name": "El Sitio Canino",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.2974606,
+    "lon": -64.2360086,
+    "tags": {
+      "amenity": "veterinary",
+      "name": "El Sitio Canino"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:veterinary",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1108489882",
+    "name": "El Sotano",
+    "website": "",
+    "email": "",
+    "phone": "+54 351 4256819",
+    "direccion": "",
+    "lat": -31.413131,
+    "lon": -64.1811669,
+    "tags": {
+      "name": "El Sotano",
+      "phone": "+54 351 4256819",
+      "shop": "hardware"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:hardware",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4477458216",
+    "name": "El Tucu",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3177102,
+    "lon": -64.2737835,
+    "tags": {
+      "name": "El Tucu",
+      "shop": "car_parts"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:car_parts",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3728568263",
+    "name": "El Vergel",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Avenida Monseñor Pablo Cabrera 2885",
+    "lat": -31.3776393,
+    "lon": -64.2071611,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:country": "AR",
+      "addr:housenumber": "2885",
+      "addr:postcode": "X5008",
+      "addr:street": "Avenida Monseñor Pablo Cabrera",
+      "amenity": "cafe",
+      "cuisine": "coffee_shop",
+      "description": "elvergel.digital@gmail.com",
+      "name": "El Vergel"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:cafe",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4367950783",
+    "name": "El vergel-LeoniDaniela",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4028611,
+    "lon": -64.2369538,
+    "tags": {
+      "name": "El vergel-LeoniDaniela",
+      "shop": "bakery"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:bakery",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1262261349",
+    "name": "El Virrey",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Bulevar Mitre 227",
+    "lat": -31.4072243,
+    "lon": -64.1839573,
+    "tags": {
+      "addr:housenumber": "227",
+      "addr:street": "Bulevar Mitre",
+      "internet_access": "wlan",
+      "name": "El Virrey",
+      "tourism": "hotel"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "hotel",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "717115511",
+    "name": "Electronia",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.423609,
+    "lon": -64.181717,
+    "tags": {
+      "is_in": "Córdoba",
+      "name": "Electronia",
+      "shop": "computer"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:computer",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1836086387",
+    "name": "Embragues Córdoba",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4056268,
+    "lon": -64.1891843,
+    "tags": {
+      "name": "Embragues Córdoba",
+      "shop": "car_repair"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:car_repair",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4747007321",
+    "name": "Emir bin",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4208009,
+    "lon": -64.1857353,
+    "tags": {
+      "amenity": "restaurant",
+      "cuisine": "arab",
+      "name": "Emir bin"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:restaurant",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3821998198",
+    "name": "empresa de tanques",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3732697,
+    "lon": -64.1093679,
+    "tags": {
+      "name": "empresa de tanques",
+      "office": "company"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3976628346",
+    "name": "Enrique",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.351229,
+    "lon": -64.2498752,
+    "tags": {
+      "name": "Enrique",
+      "shop": "bicycle",
+      "wheelchair": "limited"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:bicycle",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3966514900",
+    "name": "Ente Regulador de los Servicios Públicos",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4227027,
+    "lon": -64.175445,
+    "tags": {
+      "name": "Ente Regulador de los Servicios Públicos",
+      "office": "government"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4677518389",
+    "name": "EOL SECCIÓN CORDOBA",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Caseros 950",
+    "lat": -31.4142397,
+    "lon": -64.1977775,
+    "tags": {
+      "addr:housenumber": "950",
+      "addr:street": "Caseros",
+      "amenity": "school",
+      "name": "EOL SECCIÓN CORDOBA"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "716005867",
+    "name": "Equus",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.42355,
+    "lon": -64.181043,
+    "tags": {
+      "is_in": "Córdoba",
+      "name": "Equus",
+      "shop": "video"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4741418423",
+    "name": "Era Veggie Deleite",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4182654,
+    "lon": -64.1806622,
+    "tags": {
+      "amenity": "restaurant",
+      "diet:vegetarian": "yes",
+      "name": "Era Veggie Deleite",
+      "name:en": "Era Veggie Delight"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:restaurant",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1671374894",
+    "name": "Espacio Cultural",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3663442,
+    "lon": -64.2184757,
+    "tags": {
+      "amenity": "library",
+      "name": "Espacio Cultural"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "spa",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3586965280",
+    "name": "Espacio San Miguel",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3962448,
+    "lon": -64.2510693,
+    "tags": {
+      "amenity": "restaurant",
+      "name": "Espacio San Miguel",
+      "wheelchair": "yes"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:restaurant",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3740230170",
+    "name": "Estación San Benito",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Avenida San Martín",
+    "lat": -31.3708057,
+    "lon": -64.0531257,
+    "tags": {
+      "addr:postcode": "5125",
+      "addr:street": "Avenida San Martín",
+      "amenity": "fuel",
+      "brand": "Bandera Blanca",
+      "fuel:cng": "yes",
+      "name": "Estación San Benito",
+      "operator": "DUCOIN TARCISIO OMAR",
+      "source": "https://www.enargas.gov.ar/secciones/gas-natural-comprimido/sujetos.php"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:fuel",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4367941296",
+    "name": "Esteban Manuel Pizarro",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.402607,
+    "lon": -64.2383324,
+    "tags": {
+      "amenity": "school",
+      "name": "Esteban Manuel Pizarro"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3460723793",
+    "name": "Estudiantil",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "General Juan José Viamonte",
+    "lat": -31.4139477,
+    "lon": -64.1646945,
+    "tags": {
+      "addr:street": "General Juan José Viamonte",
+      "name": "Estudiantil",
+      "shop": "books"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:books",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3460717492",
+    "name": "ESTUDIANTINA",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "General Juan José Viamonte 185",
+    "lat": -31.4138287,
+    "lon": -64.1647374,
+    "tags": {
+      "addr:housenumber": "185",
+      "addr:street": "General Juan José Viamonte",
+      "amenity": "cafe",
+      "name": "ESTUDIANTINA"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:cafe",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1502499123",
+    "name": "Ex Cárcel Barrio San Martín",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.3909268,
+    "lon": -64.1977786,
+    "tags": {
+      "name": "Ex Cárcel Barrio San Martín",
+      "reservation": "no",
+      "tourism": "attraction"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "bar",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4375903791",
+    "name": "Ex-Legislatura de la Provincia de Córdoba",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Deán Funes 64",
+    "lat": -31.4154751,
+    "lon": -64.1850482,
+    "tags": {
+      "addr:housenumber": "64",
+      "addr:street": "Deán Funes",
+      "name": "Ex-Legislatura de la Provincia de Córdoba",
+      "office": "government"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3728570625",
+    "name": "Fabrica de Sandwich",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Bulevar Los Granaderos",
+    "lat": -31.3763645,
+    "lon": -64.2074042,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:country": "AR",
+      "addr:postcode": "X5008",
+      "addr:street": "Bulevar Los Granaderos",
+      "amenity": "fast_food",
+      "cuisine": "sandwich",
+      "name": "Fabrica de Sandwich"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:fast_food",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4329407217",
+    "name": "fabrica de soda y agua cristalina",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4078518,
+    "lon": -64.2252303,
+    "tags": {
+      "amenity": "drinking_water",
+      "name": "fabrica de soda y agua cristalina"
+    },
+    "tipo": "dudoso",
+    "clasificacion_motivo": "sin_indicio_suficiente",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1502484033",
+    "name": "Farmacia Estrella",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.362915,
+    "lon": -64.2046139,
+    "tags": {
+      "amenity": "pharmacy",
+      "healthcare": "pharmacy",
+      "name": "Farmacia Estrella"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1783175593",
+    "name": "Farmacia Moderna 5",
+    "website": "https://www.redmoderna.com.ar/",
+    "email": "",
+    "phone": "+54 351 568 0181",
+    "direccion": "Boulevard Chacabuco 502",
+    "lat": -31.4232863,
+    "lon": -64.1827451,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "502",
+      "addr:postcode": "5000",
+      "addr:street": "Boulevard Chacabuco",
+      "amenity": "pharmacy",
+      "healthcare": "pharmacy",
+      "name": "Farmacia Moderna 5",
+      "phone": "+54 351 568 0181",
+      "website": "https://www.redmoderna.com.ar/"
+    },
+    "website_final": "https://www.redmoderna.com.ar/",
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3460717489",
+    "name": "Farmacia Rodriguez",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Avenida 24 de Septiembre 1398",
+    "lat": -31.4135894,
+    "lon": -64.1648839,
+    "tags": {
+      "addr:housenumber": "1398",
+      "addr:street": "Avenida 24 de Septiembre",
+      "amenity": "pharmacy",
+      "healthcare": "pharmacy",
+      "name": "Farmacia Rodriguez"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1836081902",
+    "name": "Farmacias ECONOMED",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Bulevar Los Granaderos",
+    "lat": -31.3823077,
+    "lon": -64.1991835,
+    "tags": {
+      "addr:street": "Bulevar Los Granaderos",
+      "amenity": "pharmacy",
+      "healthcare": "pharmacy",
+      "name": "Farmacias ECONOMED"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1836087097",
+    "name": "Farmacity",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4004094,
+    "lon": -64.1973704,
+    "tags": {
+      "amenity": "pharmacy",
+      "brand": "Farmacity",
+      "brand:wikidata": "Q5856076",
+      "brand:wikipedia": "es:Farmacity",
+      "check_date": "2025-11-01",
+      "healthcare": "pharmacy",
+      "name": "Farmacity"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4408977595",
+    "name": "Farmagroup",
+    "website": "",
+    "email": "",
+    "phone": "+54 351 589 0950",
+    "direccion": "Nazaret 3182",
+    "lat": -31.3914639,
+    "lon": -64.2258353,
+    "tags": {
+      "addr:housenumber": "3182",
+      "addr:postcode": "5009",
+      "addr:street": "Nazaret",
+      "amenity": "pharmacy",
+      "healthcare": "pharmacy",
+      "name": "Farmagroup",
+      "name:es": "farmagroup",
+      "phone": "+54 351 589 0950"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1836081034",
+    "name": "Farmaservis",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "Bulevar Los Granaderos",
+    "lat": -31.3801072,
+    "lon": -64.2018618,
+    "tags": {
+      "addr:street": "Bulevar Los Granaderos",
+      "amenity": "pharmacy",
+      "healthcare": "pharmacy",
+      "name": "Farmaservis"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3986618317",
+    "name": "Farmavirtual",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4169347,
+    "lon": -64.185531,
+    "tags": {
+      "amenity": "pharmacy",
+      "healthcare": "pharmacy",
+      "name": "Farmavirtual"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:pharmacy",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3966301058",
+    "name": "Fate Neumaticos",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4342805,
+    "lon": -64.1949039,
+    "tags": {
+      "name": "Fate Neumaticos",
+      "shop": "car_repair"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:car_repair",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4642461192",
+    "name": "Felix Paz 196",
+    "website": "",
+    "email": "",
+    "phone": "+54 9 351 489-3099",
+    "direccion": "Félix Paz 196",
+    "lat": -31.4043012,
+    "lon": -64.2287454,
+    "tags": {
+      "addr:housenumber": "196",
+      "addr:postcode": "5000",
+      "addr:street": "Félix Paz",
+      "name": "Felix Paz 196",
+      "name:en": "Español",
+      "name:es": "Felix Paz 196",
+      "opening_hours": "Mo-Fr 09:00-09:00, 18:00-18:00",
+      "operator": "Juan",
+      "phone": "+54 9 351 489-3099",
+      "tourism": "guest_house"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "tourism:guest_house",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3279071027",
+    "name": "Ferretería Alem",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.389029,
+    "lon": -64.1619682,
+    "tags": {
+      "name": "Ferretería Alem",
+      "shop": "hardware"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:hardware",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "3984348298",
+    "name": "Floreria Para ti",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4011994,
+    "lon": -64.1966452,
+    "tags": {
+      "name": "Floreria Para ti",
+      "shop": "florist"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "shop:florist",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "4620633789",
+    "name": "FoodLab",
+    "website": "",
+    "email": "",
+    "phone": "+54 9 2901 555060",
+    "direccion": "Duarte Quirós 77",
+    "lat": -31.419181,
+    "lon": -64.1863015,
+    "tags": {
+      "addr:housenumber": "77",
+      "addr:street": "Duarte Quirós",
+      "amenity": "fast_food",
+      "name": "FoodLab",
+      "name:es": "La Candela",
+      "opening_hours": "Mo-Sa 12:00-15:00; Mo-Su 19:30-23:30",
+      "phone": "+54 9 2901 555060"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "amenity:fast_food",
     "estado": "sin_email"
   }
 ]

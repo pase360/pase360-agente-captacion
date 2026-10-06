@@ -5,36 +5,6 @@
     "email": "aikidomedina@gmail.com"
   },
   {
-    "name": "ESCUELA PROVINCIA DE FORMOSA",
-    "tipo": "generador",
-    "email": "primariaformosa@hotmail.com.ar"
-  },
-  {
-    "name": "Instituto Privado DEÁN FUNES",
-    "tipo": "generador",
-    "email": "direccion@institutodeanfunes.edu.ar"
-  },
-  {
-    "name": "Instituto Privado Deán Funes",
-    "tipo": "generador",
-    "email": "info@institutodeanfunes.edu.com"
-  },
-  {
-    "name": "Jardín Infantes Juan Mantovani",
-    "tipo": "generador",
-    "email": "informes@mantovani.edu.ar"
-  },
-  {
-    "name": "Puente de Estrellas",
-    "tipo": "generador",
-    "email": "puentedeestrellas.micael@gmail.com"
-  },
-  {
-    "name": "Área de Formación Docente y Producción Educativa",
-    "tipo": "generador",
-    "email": "edudis@eco.unc.edu.ar"
-  },
-  {
     "name": "Azur Real Hotel Boutique",
     "tipo": "comercio",
     "email": "info@azurrealhotel.com"
@@ -60,19 +30,9 @@
     "email": "chevromaxs@gmail.com"
   },
   {
-    "name": "Cineclub Municipal Hugo del Carril",
-    "tipo": "comercio",
-    "email": "administracion@cineclubmunicipal.org.ar"
-  },
-  {
     "name": "Club Milanesa",
     "tipo": "comercio",
     "email": "info@elclubdelamilanesa.com"
-  },
-  {
-    "name": "Comedor Universitario",
-    "tipo": "comercio",
-    "email": "comedor@bienestar.unc.edu.ar"
   },
   {
     "name": "Cordoba Inn",
