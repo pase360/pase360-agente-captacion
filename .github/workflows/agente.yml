@@ -1,0 +1,92 @@
+name: Pase 360 - Agente
+
+on:
+  workflow_dispatch:
+    inputs:
+      accion:
+        description: AcciÃ³n a ejecutar
+        required: true
+        default: diagnostico
+        type: choice
+        options:
+          - diagnostico
+          - captar
+          - preguntas
+          - seguimiento
+          - reporte
+  schedule:
+    - cron: "00 09 * * 1-5"
+      timezone: "America/Argentina/Cordoba"
+    - cron: "00 18 * * 1-5"
+      timezone: "America/Argentina/Cordoba"
+    - cron: "00 20 * * 1-5"
+      timezone: "America/Argentina/Cordoba"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: pase360-agente
+  cancel-in-progress: false
+
+jobs:
+  ejecutar:
+    runs-on: ubuntu-latest
+    env:
+      ODOO_URL: ${{ secrets.ODOO_URL }}
+      ODOO_DB: ${{ secrets.ODOO_DB }}
+      ODOO_USER: ${{ secrets.ODOO_USER }}
+      ODOO_API_KEY: ${{ secrets.ODOO_API_KEY }}
+      ODOO_COMPANY_ID: ${{ secrets.ODOO_COMPANY_ID }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
+      OWNER_NAME: ${{ secrets.OWNER_NAME }}
+      OWNER_EMAIL: ${{ secrets.OWNER_EMAIL }}
+      SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+      MODO_PRUEBA: ${{ secrets.MODO_PRUEBA }}
+      META_CONTACTOS: ${{ secrets.META_CONTACTOS }}
+      MAX_CANDIDATOS_SCAN: ${{ secrets.MAX_CANDIDATOS_SCAN }}
+      GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+      GITHUB_TOKEN: ${{ github.token }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v5
+      - name: Python 3.12
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+      - name: Determinar acciÃ³n
+        id: accion
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "accion=${{ inputs.accion }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "00 18 * * 1-5" ]; then
+            echo "accion=seguimiento" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "00 20 * * 1-5" ]; then
+            echo "accion=reporte" >> "$GITHUB_OUTPUT"
+          else
+            echo "accion=captar" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Ejecutar agente
+        run: python -m agente.main "${{ steps.accion.outputs.accion }}"
+      - name: Guardar resultados
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pase360-resultados-${{ github.run_number }}
+          path: datos/
+          if-no-files-found: ignore
+      - name: Guardar estado en el repositorio
+        if: always() && github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          git config user.name "Pase 360 Agent"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add datos/
+          git diff --cached --quiet || git commit -m "Agente: actualizar estado y reportes"
+          git push
