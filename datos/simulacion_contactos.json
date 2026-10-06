@@ -1,18 +1,8 @@
 [
   {
-    "name": "Asociación Cordobesa de Aikido",
-    "tipo": "generador",
-    "email": "aikidomedina@gmail.com"
-  },
-  {
-    "name": "Azur Real Hotel Boutique",
+    "name": "Casa Manrique",
     "tipo": "comercio",
-    "email": "info@azurrealhotel.com"
-  },
-  {
-    "name": "Café Martínez",
-    "tipo": "comercio",
-    "email": "cordoba@cafemartinez.com.ar"
+    "email": "ecommerce@casamanrique.com.ar"
   },
   {
     "name": "Catalina Calzados",
@@ -20,9 +10,9 @@
     "email": "catalinacalzados@outlook.com.ar"
   },
   {
-    "name": "Centro Médico Vitus",
+    "name": "Centro Motor sa TOYOTA",
     "tipo": "comercio",
-    "email": "info@vitus.com.ar"
+    "email": "turnostaller@centromotorsa.com.ar"
   },
   {
     "name": "Chevromaxs",
@@ -30,19 +20,24 @@
     "email": "chevromaxs@gmail.com"
   },
   {
-    "name": "Club Milanesa",
+    "name": "Córdoba digital",
     "tipo": "comercio",
-    "email": "info@elclubdelamilanesa.com"
-  },
-  {
-    "name": "Cordoba Inn",
-    "tipo": "comercio",
-    "email": "reservas@cordobainn.com"
+    "email": "consultas@cordobadigital.net"
   },
   {
     "name": "Deportes Iguazu",
     "tipo": "comercio",
     "email": "deportesiguazu@gmail.com"
+  },
+  {
+    "name": "DS Store Córdoba",
+    "tipo": "comercio",
+    "email": "info@dsstorecordoba.com"
+  },
+  {
+    "name": "El Espejo Libros",
+    "tipo": "comercio",
+    "email": "espejoventas@elespejolibros.com.ar"
   },
   {
     "name": "Fabrica Pc",
@@ -55,14 +50,24 @@
     "email": "santinogigena@gmail.com"
   },
   {
-    "name": "Hotel Garden",
+    "name": "La Tasca",
     "tipo": "comercio",
-    "email": "reservas@hotelgarden.com.ar"
+    "email": "press@linktr.ee"
   },
   {
-    "name": "L'AEREO - Taller Aeronáutico",
+    "name": "Las 2 Hermanas",
     "tipo": "comercio",
-    "email": "tarlaereo@gmail.com"
+    "email": "librerialasdoshermanas@gmail.com"
+  },
+  {
+    "name": "Librería Blackpool",
+    "tipo": "comercio",
+    "email": "blackpool@arnet.com.ar"
+  },
+  {
+    "name": "Marosi Bikes",
+    "tipo": "comercio",
+    "email": "marosibikes@gmail.com"
   },
   {
     "name": "Marozzi distribuidora",
@@ -70,9 +75,19 @@
     "email": "ventas@bateriasmarozzi.com.ar"
   },
   {
+    "name": "Megatone",
+    "tipo": "comercio",
+    "email": "atencionalcliente@megatone.net"
+  },
+  {
     "name": "Mercadito Natural",
     "tipo": "comercio",
     "email": "info.mercaditonatural@gmail.com"
+  },
+  {
+    "name": "Merlino",
+    "tipo": "comercio",
+    "email": "vtex.render-server@8.181.0"
   },
   {
     "name": "mini Super",
@@ -80,19 +95,34 @@
     "email": "minisuperas@gmail.com"
   },
   {
+    "name": "Nunatak",
+    "tipo": "comercio",
+    "email": "info@nunatakmountain.com.ar"
+  },
+  {
+    "name": "Paseo La Toscana",
+    "tipo": "comercio",
+    "email": "administracion@paseolatoscana.com"
+  },
+  {
     "name": "Quimica Halac",
     "tipo": "comercio",
     "email": "info@quimicahalac.com.ar"
   },
   {
-    "name": "Starbucks",
+    "name": "Rapanui",
     "tipo": "comercio",
-    "email": "info@starbucks.com.ar"
+    "email": "contacto@rapanui.com.ar"
   },
   {
-    "name": "SushiClub",
+    "name": "RM Insumos",
     "tipo": "comercio",
-    "email": "contacto@sushiclub.com.ar"
+    "email": "ventas@rminsumos.com"
+  },
+  {
+    "name": "Service Impresoras",
+    "tipo": "comercio",
+    "email": "simpresoras@gmail.com"
   },
   {
     "name": "Systel S.A Balanzas y Basculas",
@@ -100,8 +130,13 @@
     "email": "contacto@systel-global.com"
   },
   {
-    "name": "Wöllen",
+    "name": "Unifit",
     "tipo": "comercio",
-    "email": "info@wollen.com.ar"
+    "email": "hola@unifit.ar"
+  },
+  {
+    "name": "Venex Computacion",
+    "tipo": "comercio",
+    "email": "consultas@venexcomputacion.com"
   }
 ]

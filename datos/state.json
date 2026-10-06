@@ -151,7 +151,13 @@
     "name:centro de salud 60 - marques anexo": "categoria_excluida:municipal",
     "name:jardin de infantes juan ramon jimenez": "categoria_excluida:jardin de infantes,jardín de infantes",
     "name:la iglesia de jesucristo de los santos de los ultimos dias": "categoria_excluida:iglesia",
-    "email:museopalaciodionisi@gmail.com": "categoria_excluida:museo"
+    "email:museopalaciodionisi@gmail.com": "categoria_excluida:museo",
+    "name:iglesia mision cristiana": "categoria_excluida:iglesia",
+    "name:frigorifico la plaza": "categoria_excluida:plaza",
+    "name:plaza espana": "categoria_excluida:plaza",
+    "name:plaza hermanos": "categoria_excluida:plaza",
+    "name:la plaza": "categoria_excluida:plaza",
+    "name:parque de las tejas": "categoria_excluida:municipalidad,municipal"
   },
   "preguntas": {},
   "seguimientos": {}

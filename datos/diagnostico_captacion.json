@@ -1,162 +1,29 @@
 {
   "por_tipo": {
-    "comercio": 476,
-    "generador": 15,
-    "dudoso": 216,
-    "descartado": 146,
+    "comercio": 678,
+    "generador": 0,
+    "dudoso": 185,
+    "descartado": 7,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 21,
-    "sin_email": 669,
-    "requiere_decision": 17
+    "listo_para_contactar": 28,
+    "sin_email": 650,
+    "requiere_decision": 185,
+    "descartado": 7
+  },
+  "sin_email_por_tipo": {
+    "comercio": 650,
+    "generador": 0,
+    "otro": 0
   },
   "descartados_por_motivo": {
-    "categoria_excluida:basílica,basilica": 2,
-    "categoria_excluida:municipal": 14,
-    "categoria_excluida:iglesia": 10,
-    "categoria_excluida:parking,estacionamiento": 4,
-    "categoria_excluida:nacional,universidad": 1,
-    "categoria_excluida:comisaria,comisaría": 9,
-    "categoria_excluida:museo": 2,
-    "categoria_excluida:plaza": 3,
-    "categoria_excluida:municipalidad,municipal": 6,
-    "categoria_excluida:provincial": 2,
-    "categoria_excluida:parroquia": 9,
-    "categoria_excluida:jardin de infantes,jardín de infantes": 8,
-    "categoria_excluida:escuela": 48,
-    "categoria_excluida:templo": 1,
-    "categoria_excluida:museo,universidad": 1,
-    "categoria_excluida:secretaria de,secretaría de": 1,
-    "categoria_excluida:parking": 4,
-    "categoria_excluida:ministerio": 1,
-    "categoria_excluida:museo,gobierno": 1,
-    "categoria_excluida:policia,policía": 1,
-    "categoria_excluida:policia,policía,comisaria": 1,
-    "categoria_excluida:parroquia,escuela": 2,
-    "categoria_excluida:municipal,escuela": 2,
-    "categoria_excluida:ministerio,provincial,escuela": 1,
-    "categoria_excluida:jardin de infantes,jardín de infantes,escuela": 1,
-    "categoria_excluida:capilla": 6,
-    "categoria_excluida:iglesia,templo": 1,
-    "categoria_excluida:provincial,escuela": 1,
-    "categoria_excluida:estacionamiento": 1,
-    "categoria_excluida:facultad": 1,
-    "categoria_excluida:parroquia,plaza": 1
+    "categoria_excluida:plaza": 5,
+    "categoria_excluida:iglesia": 1,
+    "categoria_excluida:municipalidad,municipal": 1
   },
-  "generadores_muestra": [
-    {
-      "name": "Club Estudiantes",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Polideportivo Carlos Ceruti",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Club",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "TDS",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Movimiento Activo",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Asociación Cordobesa de Aikido",
-      "email": "aikidomedina@gmail.com",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Centro Vecinal de Villa Adela - Playón deportivo",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "María Pía Gym",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Fundación José Gabriel Condorcanqui",
-      "email": "",
-      "motivo": "institucional:fundacion,fundación"
-    },
-    {
-      "name": "SEP - Sindicato de Empleados Públicos",
-      "email": "",
-      "motivo": "institucional:sindicato"
-    },
-    {
-      "name": "Club Colegio de Ingenieros Civiles",
-      "email": "",
-      "motivo": "colegio_profesional"
-    },
-    {
-      "name": "Club Atlético Yapeyú",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Polideportivo Corral de Palos",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Club Atlético General Paz -Junior´s",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Cooperativa de Servicios",
-      "email": "",
-      "motivo": "institucional:cooperativa"
-    }
-  ],
+  "generadores_muestra": [],
   "comercios_muestra": [
-    {
-      "name": "Aca Villa Allende",
-      "email": "",
-      "motivo": "amenity:fuel"
-    },
-    {
-      "name": "Axion",
-      "email": "",
-      "motivo": "amenity:fuel"
-    },
-    {
-      "name": "CorGas",
-      "email": "",
-      "motivo": "amenity:fuel"
-    },
-    {
-      "name": "Shell",
-      "email": "",
-      "motivo": "amenity:fuel"
-    },
-    {
-      "name": "Puma",
-      "email": "",
-      "motivo": "amenity:fuel"
-    },
-    {
-      "name": "YPF",
-      "email": "",
-      "motivo": "amenity:fuel"
-    },
-    {
-      "name": "Che Salguero",
-      "email": "",
-      "motivo": "tourism:hostel"
-    },
     {
       "name": "Vea",
       "email": "",
@@ -173,46 +40,6 @@
       "motivo": "shop:chemist"
     },
     {
-      "name": "Pachonga",
-      "email": "",
-      "motivo": "tourism:hostel"
-    },
-    {
-      "name": "Club Milanesa",
-      "email": "info@elclubdelamilanesa.com",
-      "motivo": "amenity:restaurant"
-    },
-    {
-      "name": "Strega",
-      "email": "",
-      "motivo": "amenity:restaurant"
-    },
-    {
-      "name": "Milanesas del Mariscal",
-      "email": "",
-      "motivo": "amenity:restaurant"
-    },
-    {
-      "name": "Saint Andrews",
-      "email": "",
-      "motivo": "amenity:bar"
-    },
-    {
-      "name": "Bonanza",
-      "email": "",
-      "motivo": "amenity:bar"
-    },
-    {
-      "name": "Grido",
-      "email": "",
-      "motivo": "amenity:ice_cream"
-    },
-    {
-      "name": "Mostachis",
-      "email": "",
-      "motivo": "amenity:fast_food"
-    },
-    {
       "name": "Las mejores del mundo",
       "email": "",
       "motivo": "shop:alcohol"
@@ -221,64 +48,84 @@
       "name": "Electronia",
       "email": "",
       "motivo": "shop:computer"
+    },
+    {
+      "name": "Disco",
+      "email": "",
+      "motivo": "shop:supermarket"
+    },
+    {
+      "name": "Del Pilar",
+      "email": "",
+      "motivo": "shop:bakery"
+    },
+    {
+      "name": "Pafua",
+      "email": "",
+      "motivo": "shop:bakery"
+    },
+    {
+      "name": "Buenos Días",
+      "email": "",
+      "motivo": "shop:supermarket"
+    },
+    {
+      "name": "Todo Suspensión",
+      "email": "",
+      "motivo": "shop:car_parts"
+    },
+    {
+      "name": "El Sotano",
+      "email": "",
+      "motivo": "shop:hardware"
+    },
+    {
+      "name": "Supermercado La Anonima Poeta Lugones",
+      "email": "",
+      "motivo": "shop:supermarket"
+    },
+    {
+      "name": "Supermercado chino",
+      "email": "",
+      "motivo": "shop:supermarket"
+    },
+    {
+      "name": "Black sheep",
+      "email": "",
+      "motivo": "shop:alcohol"
+    },
+    {
+      "name": "Renault Minuto",
+      "email": "",
+      "motivo": "shop:car_repair"
+    },
+    {
+      "name": "mini Super",
+      "email": "minisuperas@gmail.com",
+      "motivo": "shop:supermarket"
+    },
+    {
+      "name": "Cordiez",
+      "email": "",
+      "motivo": "shop:supermarket"
+    },
+    {
+      "name": "Dinosaurio",
+      "email": "",
+      "motivo": "shop:supermarket"
+    },
+    {
+      "name": "Don Paco",
+      "email": "",
+      "motivo": "shop:butcher"
+    },
+    {
+      "name": "Embragues Córdoba",
+      "email": "",
+      "motivo": "shop:car_repair"
     }
   ],
   "sin_email_muestra": [
-    {
-      "name": "Aca Villa Allende",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Axion",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "CorGas",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Shell",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Puma",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "YPF",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Hombre Urbano",
-      "tipo": "dudoso",
-      "website": "https://turismo.cordoba.gob.ar/hombre-urbano/"
-    },
-    {
-      "name": "Mujer Urbana",
-      "tipo": "dudoso",
-      "website": "https://turismo.cordoba.gob.ar/mujer-urbana/"
-    },
-    {
-      "name": "Che Salguero",
-      "tipo": "comercio",
-      "website": "http://www.chesalguero.com"
-    },
-    {
-      "name": "Banco Santander",
-      "tipo": "dudoso",
-      "website": "https://www.santander.com.ar"
-    },
-    {
-      "name": "BBVA",
-      "tipo": "dudoso",
-      "website": "https://www.bbva.com.ar"
-    },
     {
       "name": "Vea",
       "tipo": "comercio",
@@ -295,32 +142,87 @@
       "website": ""
     },
     {
-      "name": "Pachonga",
+      "name": "Las mejores del mundo",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Strega",
+      "name": "Electronia",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Milanesas del Mariscal",
+      "name": "Disco",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Saint Andrews",
+      "name": "Del Pilar",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Bonanza",
+      "name": "Pafua",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Grido",
+      "name": "Buenos Días",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Todo Suspensión",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "El Sotano",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Supermercado La Anonima Poeta Lugones",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Supermercado chino",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Black sheep",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Renault Minuto",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Cordiez",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Dinosaurio",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Don Paco",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Embragues Córdoba",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Piaccere",
       "tipo": "comercio",
       "website": ""
     }
@@ -332,28 +234,38 @@
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Sanatorio Allende",
-      "email": "atpacientecerro@sanatorioallende.com",
+      "name": "Equus",
+      "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Galicia",
-      "email": "bancogalicia@bancogalicia.com.ar",
+      "name": "Lave-Rap",
+      "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Correo Argentino",
-      "email": "webmaster@correoargentino.com.ar",
+      "name": "Conte Motos",
+      "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Incutex",
-      "email": "info@incutex.com.ar",
+      "name": "Maxi Vac",
+      "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Global Vip Transfer S.A.",
-      "email": "reservas@global-vip-transfer.com",
+      "name": "Punto banca tabaqueria",
+      "email": "",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Motos CR",
+      "email": "",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Forrajería",
+      "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
@@ -362,23 +274,28 @@
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Instituto Privado DEÁN FUNES",
-      "email": "direccion@institutodeanfunes.edu.ar",
+      "name": "Gran Rex",
+      "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "APADIM",
-      "email": "apadim@apadim.org",
+      "name": "Wow! Papeleria",
+      "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Jardín Infantes Juan Mantovani",
-      "email": "informes@mantovani.edu.ar",
+      "name": "Antiguo",
+      "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Consulado de Francia",
-      "email": "sonzini@arnet.com.ar",
+      "name": "Lavarropa",
+      "email": "",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Fotocopiadora",
+      "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
@@ -387,39 +304,47 @@
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Banco de Córdoba",
-      "email": "museoybiblioteca@bancor.com.ar",
+      "name": "Los Monos",
+      "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "ATLARES Crowdfunding Bitcoin & Networking",
-      "email": "info@atlares.com",
+      "name": "Augustus",
+      "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Instituto Privado Deán Funes",
-      "email": "info@institutodeanfunes.edu.com",
+      "name": "Cunde Amor",
+      "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Poeta Soho",
-      "email": "poetasoho@gmail.com",
+      "name": "Kiosko",
+      "email": "",
       "motivo": "sin_indicio_suficiente"
     },
     {
-      "name": "Puente de Estrellas",
-      "email": "puentedeestrellas.micael@gmail.com",
+      "name": "Siglo XXI",
+      "email": "",
       "motivo": "sin_indicio_suficiente"
     }
   ],
-  "duplicados": 147,
+  "duplicados": 130,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "listos_comercio": 20,
-  "listos_generador": 1,
+  "clasificados": 870,
+  "cuadre": {
+    "clasificacion_total": 870,
+    "estado_total": 870,
+    "cuadra": true
+  },
+  "listos_detectados": 28,
+  "listos_seleccionados": 28,
+  "listos_comercio": 28,
+  "listos_generador": 0,
   "encontrados": 5176,
   "procesados": 1000,
-  "nuevos": 707,
-  "listos": 21,
-  "descartados": 146
+  "nuevos": 863,
+  "descartados": 7,
+  "excluidos": 130
 }
