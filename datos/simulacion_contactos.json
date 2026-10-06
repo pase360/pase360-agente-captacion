@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Asociación Cordobesa de Aikido",
+    "tipo": "generador",
+    "email": "//cdn.jsdelivr.net/npm/photoswipe@5.4.3"
+  },
+  {
+    "name": "Cineclub Municipal Hugo del Carril",
+    "tipo": "generador",
+    "email": "administracion@cineclubmunicipal.org.ar"
+  },
+  {
+    "name": "Club Milanesa",
+    "tipo": "generador",
+    "email": "info@elclubdelamilanesa.com"
+  },
+  {
+    "name": "Instituto Privado DEÁN FUNES",
+    "tipo": "generador",
+    "email": "direccion@institutodeanfunes.edu.ar"
+  },
+  {
+    "name": "Instituto Privado Deán Funes",
+    "tipo": "generador",
+    "email": "info@institutodeanfunes.edu.com"
+  },
+  {
+    "name": "SushiClub",
+    "tipo": "generador",
+    "email": "contacto@sushiclub.com.ar"
+  },
+  {
+    "name": "Azur Real Hotel Boutique",
+    "tipo": "comercio",
+    "email": "info@azurrealhotel.com"
+  },
+  {
+    "name": "Fabrica Pc",
+    "tipo": "comercio",
+    "email": "rvlevet@gmail.com"
+  },
+  {
+    "name": "Farmacia Moderna 5",
+    "tipo": "comercio",
+    "email": "//cdn.jsdelivr.net/npm/bootstrap@5.0.2"
+  },
+  {
+    "name": "Hotel Garden",
+    "tipo": "comercio",
+    "email": "reservas@hotelgarden.com.ar"
+  },
+  {
+    "name": "L'AEREO - Taller Aeronáutico",
+    "tipo": "comercio",
+    "email": "tarlaereo@gmail.com"
+  },
+  {
+    "name": "Systel S.A Balanzas y Basculas",
+    "tipo": "comercio",
+    "email": "contacto@systel-global.com"
+  }
+]
