@@ -164,7 +164,7 @@ CLUB_WORDS = (
 
 # ============================================================
 
-# CONTEXTOS INSTITUCIONALES
+# INSTITUCIONES QUE REUNEN PERSONAS / AFILIADOS
 
 # ============================================================
 
@@ -386,7 +386,7 @@ GENERATOR_AMENITIES = {
 "social_centre",
 }
 
-# No se consideran generadores automáticamente.
+# Las instalaciones deportivas solas NO son generadores.
 
 GENERATOR_LEISURE = set()
 
@@ -420,10 +420,7 @@ partes = [
 ]
 
 return normalizar_texto(
-    " ".join(
-        str(x or "")
-        for x in partes
-    )
+    " ".join(str(x or "") for x in partes)
 )
 ```
 
@@ -464,18 +461,12 @@ return resultado
 
 def _es_colegio_profesional(texto):
 return bool(
-_contiene(
-texto,
-PROFESSIONAL_COLLEGE_WORDS,
-)
+_contiene(texto, PROFESSIONAL_COLLEGE_WORDS)
 )
 
 def _es_asociacion_profesional(texto):
 return bool(
-_contiene(
-texto,
-PROFESSIONAL_ASSOCIATION_WORDS,
-)
+_contiene(texto, PROFESSIONAL_ASSOCIATION_WORDS)
 )
 
 def _es_generador_institucional(texto):
@@ -486,11 +477,15 @@ GENERATOR_STRONG,
 
 ```
 if encontrados:
-    # "gremio" solo no es suficiente:
-    # evita falsos positivos como "Gremio Galería".
+    # "Gremio" aislado no alcanza.
+    # Esto evita falsos positivos como "Gremio Galería".
     solo_gremio = all(
-        x in {"gremio", "gremial", "gremiales"}
-        for x in encontrados
+        palabra in {
+            "gremio",
+            "gremial",
+            "gremiales",
+        }
+        for palabra in encontrados
     )
 
     if solo_gremio:
@@ -559,20 +554,18 @@ def _es_club_deportivo(c, texto):
 tags = _tags(c)
 
 ```
-# Clubes con denominación deportiva/social explícita.
+# Denominaciones deportivas/sociales claras.
 if _contiene(texto, CLUB_WORDS):
     return True
 
-# Todo nombre que comience con "Club " se considera
-# candidato institucional, salvo que sea claramente
-# una actividad comercial.
+# Un nombre que comienza con "Club " identifica
+# normalmente una institución y no una instalación.
 nombre = normalizar_texto(c.get("name", ""))
 
 if nombre.startswith("club "):
     return True
 
-# Si OSM identifica explícitamente "club" y además
-# existe información deportiva, también es válido.
+# Si OSM aporta deporte asociado, también es un club válido.
 if "club" in texto:
     if tags["sport"] or tags["sports"]:
         return True
@@ -700,7 +693,7 @@ excluidos = _contiene(
 )
 
 if excluidos:
-    # Los colegios profesionales son una excepción válida.
+    # Un colegio profesional sigue siendo válido.
     if not _es_colegio_profesional(texto):
         return (
             "descartado",
@@ -867,10 +860,11 @@ if tags["tourism"] in {
     )
 
 # --------------------------------------------------------
-# 14. TODO LO DEMÁS
+# 14. SIN EVIDENCIA
 # --------------------------------------------------------
 
 return (
     "dudoso",
     "sin_indicio_suficiente",
 )
+```
