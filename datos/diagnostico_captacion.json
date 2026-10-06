@@ -1,0 +1,485 @@
+{
+  "por_tipo": {
+    "comercio": 101,
+    "generador": 39,
+    "dudoso": 700,
+    "descartado": 13,
+    "otro": 0
+  },
+  "por_estado": {
+    "listo_para_contactar": 12,
+    "sin_email": 792,
+    "requiere_decision": 36
+  },
+  "descartados_por_motivo": {
+    "categoria_excluida": 13
+  },
+  "generadores_muestra": [
+    {
+      "name": "Cineclub Municipal Hugo del Carril",
+      "email": "administracion@cineclubmunicipal.org.ar",
+      "motivo": "club"
+    },
+    {
+      "name": "Club Milanesa",
+      "email": "info@elclubdelamilanesa.com",
+      "motivo": "club"
+    },
+    {
+      "name": "Bongó Club Saldan",
+      "email": "",
+      "motivo": "club"
+    },
+    {
+      "name": "Colegio San José",
+      "email": "",
+      "motivo": "colegio"
+    },
+    {
+      "name": "Club Estudiantes",
+      "email": "",
+      "motivo": "club"
+    },
+    {
+      "name": "Instituto Provincial de Enseñanza Media 20 Rodolfo Walsh",
+      "email": "",
+      "motivo": "instituto"
+    },
+    {
+      "name": "Club",
+      "email": "",
+      "motivo": "club"
+    },
+    {
+      "name": "Zen",
+      "email": "",
+      "motivo": "club"
+    },
+    {
+      "name": "Colegio San José Parroquial",
+      "email": "",
+      "motivo": "colegio"
+    },
+    {
+      "name": "Asociación Cordobesa de Aikido",
+      "email": "//cdn.jsdelivr.net/npm/photoswipe@5.4.3",
+      "motivo": "asociacion"
+    },
+    {
+      "name": "Fundación José Gabriel Condorcanqui",
+      "email": "",
+      "motivo": "fundacion"
+    },
+    {
+      "name": "SEP - Sindicato de Empleados Públicos",
+      "email": "",
+      "motivo": "sindicato"
+    },
+    {
+      "name": "Colegio Santo Domingo",
+      "email": "",
+      "motivo": "colegio"
+    },
+    {
+      "name": "Instituto Privado DEÁN FUNES",
+      "email": "direccion@institutodeanfunes.edu.ar",
+      "motivo": "instituto"
+    },
+    {
+      "name": "Club Colegio de Ingenieros Civiles",
+      "email": "",
+      "motivo": "colegio de,club,colegio"
+    },
+    {
+      "name": "Club Atlético Yapeyú",
+      "email": "",
+      "motivo": "club"
+    },
+    {
+      "name": "Colegio Cristiano Evangelico William C. Morris",
+      "email": "",
+      "motivo": "colegio"
+    },
+    {
+      "name": "Instituto Oulton",
+      "email": "",
+      "motivo": "instituto"
+    },
+    {
+      "name": "Colegio Nuestra Señora de Loreto",
+      "email": "",
+      "motivo": "colegio"
+    },
+    {
+      "name": "El Sargento",
+      "email": "",
+      "motivo": "club"
+    },
+    {
+      "name": "Colegio Nuestra Señora del Huerto",
+      "email": "",
+      "motivo": "colegio"
+    },
+    {
+      "name": "Instituto de Educación Córdoba (primario)",
+      "email": "",
+      "motivo": "instituto"
+    },
+    {
+      "name": "Instituto Don Orione",
+      "email": "",
+      "motivo": "instituto"
+    },
+    {
+      "name": "SushiClub",
+      "email": "contacto@sushiclub.com.ar",
+      "motivo": "club"
+    },
+    {
+      "name": "Bosco Club",
+      "email": "",
+      "motivo": "club"
+    },
+    {
+      "name": "El Club de la milanesa",
+      "email": "",
+      "motivo": "club"
+    },
+    {
+      "name": "Instituto Inmaculada Concepción",
+      "email": "",
+      "motivo": "instituto"
+    },
+    {
+      "name": "Instituto de Educación Superior \"Doctor Domingo Cabred\"",
+      "email": "",
+      "motivo": "instituto"
+    },
+    {
+      "name": "Instituto Superior Mariano Moreno",
+      "email": "",
+      "motivo": "instituto"
+    },
+    {
+      "name": "Sociedad Arabe Musulmana",
+      "email": "",
+      "motivo": "sociedad"
+    }
+  ],
+  "comercios_muestra": [
+    {
+      "name": "Saint Andrews",
+      "email": "",
+      "motivo": "bar"
+    },
+    {
+      "name": "Bonanza",
+      "email": "",
+      "motivo": "bar"
+    },
+    {
+      "name": "Electronia",
+      "email": "",
+      "motivo": "electro"
+    },
+    {
+      "name": "Supermercado La Anonima Poeta Lugones",
+      "email": "",
+      "motivo": "supermercado"
+    },
+    {
+      "name": "Biblioteca Popular Barrio Talleres (Hugo Wast)",
+      "email": "",
+      "motivo": "bar,taller"
+    },
+    {
+      "name": "El Ruedo",
+      "email": "",
+      "motivo": "bar"
+    },
+    {
+      "name": "Hotel El Fundador",
+      "email": "",
+      "motivo": "hotel"
+    },
+    {
+      "name": "Farmacia Estrella",
+      "email": "",
+      "motivo": "farmacia"
+    },
+    {
+      "name": "1+1",
+      "email": "",
+      "motivo": "hotel"
+    },
+    {
+      "name": "Supermercado chino",
+      "email": "",
+      "motivo": "supermercado"
+    },
+    {
+      "name": "Ex Cárcel Barrio San Martín",
+      "email": "",
+      "motivo": "bar"
+    },
+    {
+      "name": "Farmacia Moderna 5",
+      "email": "//cdn.jsdelivr.net/npm/bootstrap@5.0.2",
+      "motivo": "farmacia"
+    },
+    {
+      "name": "Farmacias ECONOMED",
+      "email": "",
+      "motivo": "farmacia"
+    },
+    {
+      "name": "Bar CEICIN",
+      "email": "",
+      "motivo": "bar"
+    },
+    {
+      "name": "Peluquería Giorgio",
+      "email": "",
+      "motivo": "peluquer"
+    },
+    {
+      "name": "GPS MUNDO",
+      "email": "",
+      "motivo": "electro"
+    },
+    {
+      "name": "Hotel Garden",
+      "email": "reservas@hotelgarden.com.ar",
+      "motivo": "hotel"
+    },
+    {
+      "name": "Azur Real Hotel Boutique",
+      "email": "info@azurrealhotel.com",
+      "motivo": "hotel"
+    },
+    {
+      "name": "RepensarMe - Consultorio Psicologico",
+      "email": "",
+      "motivo": "consultorio"
+    },
+    {
+      "name": "Consultorios Médicos Privados Tablada",
+      "email": "",
+      "motivo": "consultorio"
+    }
+  ],
+  "sin_email_muestra": [
+    {
+      "name": "Aca Villa Allende",
+      "tipo": "dudoso",
+      "website": ""
+    },
+    {
+      "name": "Axion",
+      "tipo": "dudoso",
+      "website": ""
+    },
+    {
+      "name": "CorGas",
+      "tipo": "dudoso",
+      "website": ""
+    },
+    {
+      "name": "Shell",
+      "tipo": "dudoso",
+      "website": ""
+    },
+    {
+      "name": "Puma",
+      "tipo": "dudoso",
+      "website": ""
+    },
+    {
+      "name": "YPF",
+      "tipo": "dudoso",
+      "website": ""
+    },
+    {
+      "name": "Basílica de La Merced",
+      "tipo": "dudoso",
+      "website": ""
+    },
+    {
+      "name": "Basílica de Santo Domingo",
+      "tipo": "dudoso",
+      "website": ""
+    },
+    {
+      "name": "Iglesia de San Francisco",
+      "tipo": "dudoso",
+      "website": ""
+    },
+    {
+      "name": "Che Salguero",
+      "tipo": "dudoso",
+      "website": "http://www.chesalguero.com"
+    },
+    {
+      "name": "Banco Santander",
+      "tipo": "dudoso",
+      "website": "https://www.santander.com.ar"
+    },
+    {
+      "name": "BBVA",
+      "tipo": "dudoso",
+      "website": "https://www.bbva.com.ar"
+    },
+    {
+      "name": "Vea",
+      "tipo": "dudoso",
+      "website": ""
+    },
+    {
+      "name": "Hipermercado La Anonima",
+      "tipo": "dudoso",
+      "website": ""
+    },
+    {
+      "name": "Del Sol",
+      "tipo": "dudoso",
+      "website": ""
+    },
+    {
+      "name": "Pachonga",
+      "tipo": "dudoso",
+      "website": ""
+    },
+    {
+      "name": "Strega",
+      "tipo": "dudoso",
+      "website": ""
+    },
+    {
+      "name": "Milanesas del Mariscal",
+      "tipo": "dudoso",
+      "website": ""
+    },
+    {
+      "name": "Saint Andrews",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Bonanza",
+      "tipo": "comercio",
+      "website": ""
+    }
+  ],
+  "dudosos_muestra": [
+    {
+      "name": "Hombre Urbano",
+      "email": "//cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Mujer Urbana",
+      "email": "//cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Dinosaurio Mall",
+      "email": "info@grupodinosaurio.com",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Sanatorio Allende",
+      "email": "atpacientecerro@sanatorioallende.com",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Comedor Universitario",
+      "email": "comedor@bienestar.unc.edu.ar",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Banco Nación",
+      "email": "//unpkg.com/leaflet@1.6.0",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Galicia",
+      "email": "bancogalicia@bancogalicia.com.ar",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "mini Super",
+      "email": "minisuperas@gmail.com",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Hostel Aldea",
+      "email": "//www.google.com/maps/place/aldea+hostel+%26+caf%c3%a9/@-31.4111095",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Cordoba Inn",
+      "email": "reservas@cordobainn.com",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Correo Argentino",
+      "email": "webmaster@correoargentino.com.ar",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Café Martínez",
+      "email": "cordoba@cafemartinez.com.ar",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Incutex",
+      "email": "info@incutex.com.ar",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Global Vip Transfer S.A.",
+      "email": "reservas@global-vip-transfer.com",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Starbucks",
+      "email": "info@starbucks.com.ar",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Manifesto",
+      "email": "info@manifesto.com.ar",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "ESCUELA PROVINCIA DE FORMOSA",
+      "email": "primariaformosa@hotmail.com.ar",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "APADIM",
+      "email": "apadim@apadim.org",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Jardín Infantes Juan Mantovani",
+      "email": "informes@mantovani.edu.ar",
+      "motivo": "sin_indicio_suficiente"
+    },
+    {
+      "name": "Consulado de Francia",
+      "email": "sonzini@arnet.com.ar",
+      "motivo": "sin_indicio_suficiente"
+    }
+  ],
+  "duplicados": 147,
+  "ya_contactados": 0,
+  "sin_nombre": 0,
+  "listos_comercio": 6,
+  "listos_generador": 6,
+  "encontrados": 5176,
+  "procesados": 1000,
+  "nuevos": 840,
+  "listos": 12,
+  "descartados": 13
+}
