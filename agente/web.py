@@ -1,5 +1,5 @@
 import re
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -12,21 +12,6 @@ EMAIL_RE = re.compile(
     r"\b[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+"
     r"@[A-Za-z0-9-]+"
     r"(?:\.[A-Za-z0-9-]+)+\b"
-)
-
-HINTS = (
-    "contacto",
-    "contact",
-    "contactanos",
-    "contactenos",
-    "nosotros",
-    "institucional",
-    "empresa",
-    "about",
-    "quienes",
-    "comunicacion",
-    "prensa",
-    "atencion",
 )
 
 BAD_EMAIL_DOMAINS = {
@@ -49,15 +34,6 @@ SEARCH_DOMAINS = {
     "google.com",
     "maps.google.com",
     "bing.com",
-}
-
-NO_OFICIAL_DOMAINS = SEARCH_DOMAINS | {
-    "pinterest.com",
-    "yelp.com",
-    "paginasamarillas.com.ar",
-    "guia.clarin.com",
-    "argentina.gob.ar",
-    "wikipedia.org",
 }
 
 GENERIC_NAME_TOKENS = {
@@ -90,7 +66,17 @@ GENERIC_NAME_TOKENS = {
 }
 
 BING_SEARCH_URL = "https://www.bing.com/search"
-BING_TIMEOUT = min(max(C.WEB_TIMEOUT, 8), 12)
+
+# Seguridad de tiempo:
+# no hacemos cientos de búsquedas externas en una sola ejecución.
+MAX_BUSQUEDAS_PUBLICAS = 60
+
+BING_TIMEOUT = min(
+    max(C.WEB_TIMEOUT, 5),
+    8,
+)
+
+_busquedas_realizadas = 0
 
 
 def _es_email_real(value):
@@ -137,22 +123,6 @@ def _emails(text):
     return encontrados
 
 
-def _fetch(url, timeout=None):
-    return requests.get(
-        url,
-        headers={
-            "User-Agent": C.USER_AGENT,
-            "Accept": (
-                "text/html,application/xhtml+xml,"
-                "application/xml;q=0.9,*/*;q=0.8"
-            ),
-            "Accept-Language": "es-AR,es;q=0.9,en;q=0.7",
-        },
-        timeout=timeout or C.WEB_TIMEOUT,
-        allow_redirects=True,
-    )
-
-
 def _dominio_base(url):
     try:
         host = urlparse(url).netloc.lower().split("@")[-1]
@@ -164,144 +134,6 @@ def _dominio_base(url):
 
     except Exception:
         return ""
-
-
-def _es_dominio_no_oficial(url):
-    host = _dominio_base(url)
-
-    if not host:
-        return True
-
-    for blocked in NO_OFICIAL_DOMAINS:
-        if host == blocked or host.endswith("." + blocked):
-            return True
-
-    return False
-
-
-def _links_relevantes(soup):
-    links = []
-
-    for a in soup.find_all("a", href=True):
-        href = str(a.get("href") or "").strip()
-
-        if not href:
-            continue
-
-        label = (
-            a.get_text(" ", strip=True)
-            + " "
-            + href
-        ).lower()
-
-        if any(h in label for h in HINTS):
-            links.append(href)
-
-    resultado = []
-    vistos = set()
-
-    for href in links:
-        if href not in vistos:
-            vistos.add(href)
-            resultado.append(href)
-
-    return resultado[:15]
-
-
-def _buscar_en_pagina(url, profundidad=0):
-    try:
-        r = _fetch(url)
-
-        content_type = r.headers.get(
-            "content-type",
-            "",
-        ).lower()
-
-        if r.status_code >= 400:
-            return [], r.url
-
-        if "text/html" not in content_type:
-            return [], r.url
-
-        soup = BeautifulSoup(
-            r.text,
-            "html.parser",
-        )
-
-        emails = []
-
-        for a in soup.find_all("a", href=True):
-            href = str(a.get("href") or "").strip()
-
-            if href.lower().startswith("mailto:"):
-                value = href[len("mailto:")].split("?", 1)[0]
-
-                email = _es_email_real(value)
-
-                if email and email not in emails:
-                    emails.append(email)
-
-        for email in _emails(r.text):
-            if email not in emails:
-                emails.append(email)
-
-        if emails:
-            return emails, r.url
-
-        if profundidad >= 1:
-            return [], r.url
-
-        base_host = _dominio_base(r.url)
-
-        for href in _links_relevantes(soup):
-            try:
-                target = urljoin(r.url, href)
-
-                if _dominio_base(target) != base_host:
-                    continue
-
-                encontrados, final_url = _buscar_en_pagina(
-                    target,
-                    profundidad=1,
-                )
-
-                if encontrados:
-                    return encontrados, final_url
-
-            except Exception:
-                continue
-
-        rutas = (
-            "/contacto",
-            "/contactanos",
-            "/contactenos",
-            "/contact",
-            "/institucional",
-            "/nosotros",
-        )
-
-        for ruta in rutas:
-            try:
-                target = urljoin(r.url, ruta)
-
-                if _dominio_base(target) != base_host:
-                    continue
-
-                encontrados, final_url = _buscar_en_pagina(
-                    target,
-                    profundidad=1,
-                )
-
-                if encontrados:
-                    return encontrados, final_url
-
-            except Exception:
-                continue
-
-        return [], r.url
-
-    except Exception:
-        return [], url
 
 
 def _extraer_datos_osm(c):
@@ -337,7 +169,7 @@ def _tokens_nombre(nombre):
     ]
 
 
-def _resultado_score(c, title, snippet, url):
+def _resultado_score(c, title, snippet):
     nombre = normalizar_texto(
         c.get("name")
     )
@@ -347,7 +179,6 @@ def _resultado_score(c, title, snippet, url):
             [
                 title or "",
                 snippet or "",
-                url or "",
             ]
         )
     )
@@ -368,13 +199,13 @@ def _resultado_score(c, title, snippet, url):
         coincidencias / len(tokens)
     )
 
-    score = cobertura * 0.65
+    score = cobertura * 0.70
 
     if (
         nombre
         and nombre in normalizar_texto(title)
     ):
-        score += 0.25
+        score += 0.20
 
     if (
         "cordoba" in texto
@@ -382,30 +213,18 @@ def _resultado_score(c, title, snippet, url):
     ):
         score += 0.10
 
-    direccion = normalizar_texto(
-        c.get("direccion")
-    )
-
-    if direccion:
-        direccion_tokens = [
-            x
-            for x in re.findall(
-                r"[a-z0-9]+",
-                direccion,
-            )
-            if len(x) >= 4
-        ]
-
-        if any(
-            x in texto
-            for x in direccion_tokens[:4]
-        ):
-            score += 0.10
-
     return min(score, 1.0)
 
 
 def _buscar_resultados_bing(c):
+    global _busquedas_realizadas
+
+    if (
+        _busquedas_realizadas
+        >= MAX_BUSQUEDAS_PUBLICAS
+    ):
+        return []
+
     nombre = str(
         c.get("name") or ""
     ).strip()
@@ -421,9 +240,6 @@ def _buscar_resultados_bing(c):
         c.get("telefono") or ""
     ).strip()
 
-    # Una sola búsqueda por candidato.
-    # La prioridad es encontrar un contacto público,
-    # no necesariamente una página web.
     consulta = (
         f'"{nombre}" Córdoba '
         "email OR correo OR contacto"
@@ -434,7 +250,7 @@ def _buscar_resultados_bing(c):
     elif telefono:
         consulta += f' "{telefono}"'
 
-    resultados = []
+    _busquedas_realizadas += 1
 
     try:
         r = requests.get(
@@ -448,7 +264,8 @@ def _buscar_resultados_bing(c):
             headers={
                 "User-Agent": C.USER_AGENT,
                 "Accept": (
-                    "text/html,application/xhtml+xml"
+                    "text/html,"
+                    "application/xhtml+xml"
                 ),
                 "Accept-Language": (
                     "es-AR,es;q=0.9"
@@ -465,6 +282,8 @@ def _buscar_resultados_bing(c):
             r.text,
             "html.parser",
         )
+
+        resultados = []
 
         for item in soup.select(
             "li.b_algo"
@@ -508,22 +327,21 @@ def _buscar_resultados_bing(c):
                 )
             )
 
+            texto_resultado = " ".join(
+                [
+                    title,
+                    snippet,
+                ]
+            )
+
+            emails = _emails(
+                texto_resultado
+            )
+
             score = _resultado_score(
                 c,
                 title,
                 snippet,
-                href,
-            )
-
-            # El email puede aparecer directamente
-            # en el resultado aunque no exista una web.
-            emails = _emails(
-                " ".join(
-                    [
-                        title,
-                        snippet,
-                    ]
-                )
             )
 
             resultados.append(
@@ -533,36 +351,70 @@ def _buscar_resultados_bing(c):
                     "snippet": snippet,
                     "score": score,
                     "emails": emails,
-                    "blocked_domain": (
-                        _es_dominio_no_oficial(
-                            href
-                        )
-                    ),
                 }
             )
 
+        return sorted(
+            resultados,
+            key=lambda x: (
+                bool(x["emails"]),
+                x["score"],
+            ),
+            reverse=True,
+        )
+
     except Exception:
         return []
-
-    return sorted(
-        resultados,
-        key=lambda x: (
-            bool(x["emails"]),
-            x["score"],
-        ),
-        reverse=True,
-    )
 
 
 def _contacto_desde_resultados(
     c,
     resultados,
 ):
-    # Primero usamos emails visibles en la fuente.
-    # NO exigimos que el dominio coincida con el negocio.
+    """
+    Acepta solamente emails que aparezcan
+    públicamente asociados al resultado buscado.
+
+    No exige que el dominio del email sea igual
+    al dominio de la empresa.
+
+    Ejemplo válido:
+    Distribuidora Santiago
+    -> jlvidela@hotmail.com
+    """
+
+    nombre = normalizar_texto(
+        c.get("name")
+    )
+
     for item in resultados:
         if item["score"] < 0.72:
             continue
+
+        texto = normalizar_texto(
+            " ".join(
+                [
+                    item.get("title", ""),
+                    item.get("snippet", ""),
+                ]
+            )
+        )
+
+        # El resultado debe contener alguna
+        # coincidencia razonable con el nombre.
+        if nombre:
+            tokens = _tokens_nombre(
+                c.get("name")
+            )
+
+            if tokens:
+                coincidencias = sum(
+                    token in texto
+                    for token in tokens
+                )
+
+                if coincidencias == 0:
+                    continue
 
         for email in item.get(
             "emails",
@@ -582,94 +434,41 @@ def _contacto_desde_resultados(
 
             return True
 
-    # Si el resultado no muestra el email,
-    # visitamos sólo las coincidencias fuertes.
-    for item in resultados[:4]:
-        if (
-            item["score"] < 0.78
-            or item["blocked_domain"]
-        ):
-            continue
-
-        emails, final_url = (
-            _buscar_en_pagina(
-                item["url"]
-            )
-        )
-
-        if emails:
-            c["email"] = emails[0]
-            c["email_source"] = (
-                "fuente_publica"
-            )
-            c["email_source_url"] = (
-                final_url
-            )
-            c["email_confidence"] = round(
-                item["score"],
-                2,
-            )
-
-            return True
-
     return False
 
 
-def _descubrir_sitio(c):
+def _descubrir_contacto(c):
     resultados = _buscar_resultados_bing(c)
 
     if not resultados:
         return c
 
-    # Primero intentamos encontrar el email.
-    # La web deja de ser un requisito.
-    if _contacto_desde_resultados(
+    _contacto_desde_resultados(
         c,
         resultados,
-    ):
-        return c
-
-    # Sólo si no encontramos email,
-    # guardamos una web con coincidencia fuerte.
-    for mejor in resultados[:3]:
-        if (
-            mejor["score"] < 0.82
-            or mejor["blocked_domain"]
-        ):
-            continue
-
-        url = mejor["url"]
-
-        c["website"] = url
-        c["website_final"] = url
-        c["website_source"] = "Bing"
-        c["website_confidence"] = round(
-            mejor["score"],
-            2,
-        )
-
-        emails, final_url = (
-            _buscar_en_pagina(url)
-        )
-
-        c["website_final"] = final_url
-
-        if emails:
-            c["email"] = emails[0]
-            c["email_source"] = (
-                "sitio_web_descubierto"
-            )
-            c["email_source_url"] = (
-                final_url
-            )
-
-            return c
+    )
 
     return c
 
 
 def completar(c):
-    # 1. Email publicado directamente en OSM.
+    """
+    Orden de búsqueda:
+
+    1. Email publicado directamente en OSM.
+    2. Web publicada en OSM, sólo para compatibilidad.
+    3. Búsqueda pública rápida.
+
+    IMPORTANTE:
+    Esta versión NO visita las webs encontradas
+    por Bing. Eso evita que cientos de candidatos
+    conviertan una ejecución en una espera de 20+ minutos.
+
+    El objetivo de esta etapa es encontrar emails
+    públicos aunque el negocio no tenga página web.
+    """
+
+    # 1. Email directo desde OSM.
     email_original = _extraer_datos_osm(c)
 
     if email_original:
@@ -681,35 +480,23 @@ def completar(c):
 
     c["email"] = ""
 
-    # 2. Web conocida directamente por OSM.
-    url = str(
-        c.get("website")
-        or c.get("contact:website")
-        or ""
-    ).strip()
+    # 2. Si OSM trae email oculto en otra variante.
+    posibles = (
+        c.get("contact:email"),
+        c.get("contact_email"),
+        c.get("contacto"),
+    )
 
-    if re.match(
-        r"^https?://",
-        url,
-        re.I,
-    ):
-        emails, final_url = (
-            _buscar_en_pagina(url)
-        )
+    for value in posibles:
+        email = _es_email_real(value)
 
-        c["website_final"] = final_url
-
-        if emails:
-            c["email"] = emails[0]
+        if email:
+            c["email"] = email
             c["email_source"] = (
-                "sitio_web"
+                "OpenStreetMap"
             )
-            c["email_source_url"] = (
-                final_url
-            )
-
             return c
 
-    # 3. Buscar contacto público aunque
-    # el negocio no tenga sitio web.
-    return _descubrir_sitio(c)
+    # 3. Búsqueda pública rápida.
+    return _descubrir_contacto(c)
+    
