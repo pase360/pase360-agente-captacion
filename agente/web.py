@@ -1,3 +1,5 @@
+# agente/web.py
+
 import re
 import time
 from urllib.parse import urljoin, urlparse, unquote
@@ -6,19 +8,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from . import config as C
-from .util import normalizar_email, normalizar_texto
 
-
-EMAIL_RE = re.compile(
-    r"\b[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+"
-    r"@[A-Za-z0-9-]+"
-    r"(?:\.[A-Za-z0-9-]+)+\b"
-)
-
-
-# ============================================================
-# CONFIGURACIÓN
-# ============================================================
 
 BING_URL = "https://www.bing.com/search"
 
@@ -33,41 +23,55 @@ _busquedas_realizadas = 0
 
 
 # ============================================================
-# DOMINIOS NO ÚTILES
+# EMAIL
 # ============================================================
 
-BAD_EMAIL_DOMAINS = {
+# IMPORTANTE:
+# No se permite "/" en la parte local.
+# Esto evita falsos positivos como:
+#
+# cdn.jsdelivr.net/npm/photoswipe@5.4...
+#
+# que NO es un email.
+EMAIL_RE = re.compile(
+    r"\b[A-Za-z0-9.!#$%&'*+=?^_`{|}~-]+"
+    r"@"
+    r"[A-Za-z0-9-]+"
+    r"(?:\.[A-Za-z0-9-]+)+\b"
+)
+
+
+DOMINIOS_EMAIL_DESCARTADOS = {
     "example.com",
     "example.org",
     "example.net",
-    "sentry.io",
-    "wixpress.com",
-    "schema.org",
-    "wordpress.org",
-    "wordpress.com",
-    "googleapis.com",
-    "gstatic.com",
-    "jsdelivr.net",
-    "cloudflare.com",
-    "cloudflareinsights.com",
+    "email.com",
+    "domain.com",
+    "test.com",
+    "test.org",
+    "localhost",
 }
 
-BAD_EMAIL_EXTENSIONS = (
-    ".js",
-    ".css",
+
+EXTENSIONES_DESCARTADAS = {
     ".png",
     ".jpg",
     ".jpeg",
     ".gif",
-    ".svg",
     ".webp",
-    ".ico",
+    ".svg",
+    ".css",
+    ".js",
+    ".json",
+    ".xml",
     ".woff",
     ".woff2",
     ".ttf",
-)
+    ".ico",
+}
 
-SOCIAL_DOMAINS = {
+
+DOMINIOS_SOCIALES = {
     "facebook.com",
     "instagram.com",
     "linkedin.com",
@@ -75,73 +79,213 @@ SOCIAL_DOMAINS = {
     "x.com",
     "youtube.com",
     "tiktok.com",
-    "tripadvisor.com",
-    "google.com",
-    "googleusercontent.com",
-    "bing.com",
+    "pinterest.com",
+    "threads.net",
 }
 
-DIRECTORIOS = (
-    "guiacordoba.com.ar",
-    "direccionario.com",
-    "dir.ar",
-)
+
+DOMINIOS_DIRECTORIOS = {
+    "google.com",
+    "googleusercontent.com",
+    "maps.google.com",
+    "bing.com",
+    "yahoo.com",
+    "tripadvisor.com",
+    "yelp.com",
+    "foursquare.com",
+    "yellowpages.com",
+    "paginasamarillas.com.ar",
+    "guiaoleo.com.ar",
+    "argentina.gob.ar",
+}
 
 
 # ============================================================
-# EMAIL
+# UTILIDADES
 # ============================================================
 
-def _email_real(value):
-    value = normalizar_email(value)
+def _texto(c):
+    partes = []
 
-    if not value or "@" not in value:
-        return ""
-
-    local, domain = value.rsplit("@", 1)
-
-    if not local or not domain:
-        return ""
-
-    domain = domain.lower().strip()
-
-    if domain in BAD_EMAIL_DOMAINS:
-        return ""
-
-    if domain in SOCIAL_DOMAINS:
-        return ""
-
-    if ".." in domain:
-        return ""
-
-    if any(
-        domain.endswith(ext)
-        for ext in BAD_EMAIL_EXTENSIONS
+    for clave in (
+        "name",
+        "nombre",
+        "display_name",
+        "direccion",
+        "address",
+        "descripcion",
+        "description",
+        "telefono",
+        "phone",
+        "website",
+        "url",
     ):
+        valor = c.get(clave)
+
+        if valor:
+            partes.append(str(valor))
+
+    tags = c.get("tags") or {}
+
+    if isinstance(tags, dict):
+        for clave in (
+            "name",
+            "official_name",
+            "short_name",
+            "description",
+            "operator",
+            "brand",
+            "website",
+            "contact:website",
+            "contact:email",
+            "email",
+            "phone",
+            "contact:phone",
+        ):
+            valor = tags.get(clave)
+
+            if valor:
+                partes.append(str(valor))
+
+    return " ".join(partes)
+
+
+def _normalizar(texto):
+    texto = str(texto or "").lower()
+
+    reemplazos = {
+        "á": "a",
+        "é": "e",
+        "í": "i",
+        "ó": "o",
+        "ú": "u",
+        "ü": "u",
+        "ñ": "n",
+    }
+
+    for viejo, nuevo in reemplazos.items():
+        texto = texto.replace(viejo, nuevo)
+
+    texto = re.sub(r"\s+", " ", texto)
+
+    return texto.strip()
+
+
+def _dominio(url):
+    try:
+        host = urlparse(url).netloc.lower().strip()
+
+        if host.startswith("www."):
+            host = host[4:]
+
+        return host
+    except Exception:
         return ""
 
-    if local.lower() in {
-        "noreply",
-        "no-reply",
-        "donotreply",
-        "no_reply",
-        "example",
-        "test",
-        "testing",
-    }:
+
+def _dominio_base(email):
+    try:
+        return email.rsplit("@", 1)[1].lower().strip()
+    except Exception:
         return ""
 
-    return value
+
+def _email_valido(email):
+    if not email:
+        return False
+
+    email = str(email).strip().lower()
+
+    # Nunca aceptar espacios.
+    if any(ch.isspace() for ch in email):
+        return False
+
+    # Nunca aceptar barras.
+    if "/" in email or "\\" in email:
+        return False
+
+    # Nunca aceptar query strings o fragmentos.
+    if "?" in email or "#" in email:
+        return False
+
+    # Validación estructural.
+    if not EMAIL_RE.fullmatch(email):
+        return False
+
+    try:
+        local, dominio = email.rsplit("@", 1)
+    except ValueError:
+        return False
+
+    if not local or not dominio:
+        return False
+
+    # Límites razonables.
+    if len(email) > 254:
+        return False
+
+    if len(local) > 64:
+        return False
+
+    # El dominio debe tener al menos un punto.
+    if "." not in dominio:
+        return False
+
+    # No permitir puntos consecutivos.
+    if ".." in email:
+        return False
+
+    # No permitir dominio con guiones incorrectos.
+    partes = dominio.split(".")
+
+    for parte in partes:
+        if not parte:
+            return False
+
+        if parte.startswith("-") or parte.endswith("-"):
+            return False
+
+    # No aceptar dominios de prueba.
+    if dominio in DOMINIOS_EMAIL_DESCARTADOS:
+        return False
+
+    # No aceptar extensiones de recursos web.
+    if any(dominio.endswith(ext) for ext in EXTENSIONES_DESCARTADAS):
+        return False
+
+    return True
 
 
-def _emails(texto):
+def _limpiar_email(email):
+    if not email:
+        return ""
+
+    email = unquote(str(email)).strip().lower()
+
+    # Quitar envolturas habituales.
+    email = email.strip(" <>[](){}'\".,;:")
+
+    # Nunca transformar una ruta en email.
+    if "/" in email or "\\" in email:
+        return ""
+
+    if _email_valido(email):
+        return email
+
+    return ""
+
+
+def _extraer_emails(texto):
+    if not texto:
+        return []
+
     encontrados = []
 
-    if not texto:
-        return encontrados
+    # Primero decodificamos entidades HTML.
+    texto = unquote(str(texto))
 
-    for valor in EMAIL_RE.findall(texto):
-        email = _email_real(valor)
+    for match in EMAIL_RE.findall(texto):
+        email = _limpiar_email(match)
 
         if email and email not in encontrados:
             encontrados.append(email)
@@ -149,610 +293,372 @@ def _emails(texto):
     return encontrados
 
 
-# ============================================================
-# URL / DOMINIO
-# ============================================================
+def _emails_de_pagina(soup):
+    encontrados = []
 
-def _dominio(url):
-    try:
-        host = urlparse(url).netloc.lower()
+    if not soup:
+        return encontrados
 
-        if host.startswith("www."):
-            host = host[4:]
+    # Texto visible.
+    texto = soup.get_text(" ", strip=True)
 
-        return host
+    for email in _extraer_emails(texto):
+        if email not in encontrados:
+            encontrados.append(email)
 
-    except Exception:
-        return ""
+    # mailto:
+    for enlace in soup.find_all("a", href=True):
+        href = str(enlace.get("href") or "").strip()
 
+        if href.lower().startswith("mailto:"):
+            valor = href[7:]
 
-def _es_directorio(url):
-    dominio = _dominio(url)
+            # El mailto puede contener ?subject=...
+            valor = valor.split("?", 1)[0]
 
-    return any(
-        dominio == d
-        or dominio.endswith("." + d)
-        for d in DIRECTORIOS
-    )
+            for email in _extraer_emails(valor):
+                if email not in encontrados:
+                    encontrados.append(email)
 
-
-def _es_social(url):
-    dominio = _dominio(url)
-
-    return any(
-        dominio == d
-        or dominio.endswith("." + d)
-        for d in SOCIAL_DOMAINS
-    )
+    return encontrados
 
 
 # ============================================================
-# IDENTIDAD DEL CANDIDATO
+# IDENTIDAD
 # ============================================================
 
-GENERICOS = {
-    "club",
-    "centro",
-    "asociacion",
-    "asociación",
-    "sociedad",
-    "grupo",
-    "empresa",
-    "servicios",
-    "comercio",
-    "comercial",
-    "colegio",
-    "profesional",
-    "instituto",
-    "municipal",
-    "municipalidad",
-    "san",
-    "santa",
-    "del",
-    "de",
-    "la",
-    "el",
-    "los",
-    "las",
-    "y",
-    "cordoba",
-    "córdoba",
-}
+def _tokens(texto):
+    texto = _normalizar(texto)
 
-
-def _tokens(nombre):
-    texto = normalizar_texto(nombre)
-
-    return [
+    return {
         token
-        for token in re.findall(
-            r"[a-z0-9]+",
-            texto,
-        )
-        if len(token) >= 3
-        and token not in GENERICOS
-    ]
+        for token in re.findall(r"[a-z0-9]{3,}", texto)
+        if token not in {
+            "www",
+            "com",
+            "org",
+            "net",
+            "argentina",
+            "cordoba",
+            "córdoba",
+        }
+    }
 
 
 def _identidad_score(c, texto):
-    nombre = normalizar_texto(
-        c.get("name")
+    base = " ".join(
+        [
+            str(c.get("name", "")),
+            str(c.get("nombre", "")),
+            str(c.get("display_name", "")),
+        ]
     )
 
-    texto_normalizado = normalizar_texto(
-        texto
-    )
+    tokens_base = _tokens(base)
+    tokens_texto = _tokens(texto)
 
-    tokens = _tokens(
-        c.get("name")
-    )
+    if not tokens_base or not tokens_texto:
+        return 0
 
-    if not tokens:
-        return 0.0
+    interseccion = tokens_base & tokens_texto
 
-    coincidencias = sum(
-        token in texto_normalizado
-        for token in tokens
-    )
+    if not interseccion:
+        return 0
 
-    cobertura = (
-        coincidencias / len(tokens)
-    )
-
-    score = cobertura * 0.75
-
-    if (
-        nombre
-        and nombre in texto_normalizado
-    ):
-        score += 0.20
-
-    if (
-        "cordoba" in texto_normalizado
-        or "córdoba" in texto_normalizado
-    ):
-        score += 0.05
-
-    return min(score, 1.0)
+    return len(interseccion) / max(1, len(tokens_base))
 
 
 def _identidad_fuerte(c, texto):
-    score = _identidad_score(
-        c,
-        texto,
-    )
+    score = _identidad_score(c, texto)
 
-    tokens = _tokens(
-        c.get("name")
-    )
-
-    if not tokens:
-        return False
-
-    texto_n = normalizar_texto(
-        texto
-    )
-
-    coincidencias = sum(
-        token in texto_n
-        for token in tokens
-    )
-
-    if len(tokens) == 1:
-        return (
-            coincidencias >= 1
-            and score >= 0.65
-        )
-
-    nombre = normalizar_texto(
-        c.get("name")
-    )
-
-    if nombre and nombre in texto_n:
+    if score >= 0.35:
         return True
 
-    return (
-        coincidencias >= 2
-        and score >= 0.55
-    )
+    # Si aparece el nombre completo, es una señal fuerte.
+    nombre = str(
+        c.get("name")
+        or c.get("nombre")
+        or ""
+    ).strip()
+
+    if nombre:
+        nombre_n = _normalizar(nombre)
+
+        if len(nombre_n) >= 5 and nombre_n in _normalizar(texto):
+            return True
+
+    return False
 
 
 # ============================================================
 # HTTP
 # ============================================================
 
-def _get(url):
+def _get(url, headers=None):
     try:
-        return requests.get(
+        response = requests.get(
             url,
-            headers={
+            headers=headers or {
                 "User-Agent": C.USER_AGENT,
-                "Accept": (
-                    "text/html,"
-                    "application/xhtml+xml"
-                ),
-                "Accept-Language": (
-                    "es-AR,es;q=0.9"
-                ),
+                "Accept-Language": "es-AR,es;q=0.9,en;q=0.7",
             },
-            timeout=max(
-                min(C.WEB_TIMEOUT, 12),
-                8,
-            ),
+            timeout=C.WEB_TIMEOUT,
             allow_redirects=True,
         )
+
+        if response.status_code >= 400:
+            return None
+
+        return response
 
     except Exception:
         return None
 
 
 # ============================================================
-# EMAIL DESDE UNA PÁGINA
+# PÁGINA WEB
 # ============================================================
 
-def _emails_de_pagina(c, response):
-    if not response:
-        return []
+def _enlaces_contacto(soup, base_url):
+    resultados = []
 
-    if response.status_code >= 400:
-        return []
+    if not soup:
+        return resultados
 
-    html = response.text or ""
+    palabras = (
+        "contact",
+        "contacto",
+        "about",
+        "nosotros",
+        "quienes",
+        "empresa",
+        "institucional",
+        "info",
+        "informacion",
+        "información",
+    )
 
-    encontrados = []
+    for enlace in soup.find_all("a", href=True):
+        href = str(enlace.get("href") or "").strip()
+        texto = _normalizar(enlace.get_text(" ", strip=True))
 
-    for email in _emails(html):
-        if email not in encontrados:
-            encontrados.append(email)
+        combinado = f"{texto} {href.lower()}"
 
-    try:
-        soup = BeautifulSoup(
-            html,
-            "html.parser",
-        )
+        if any(palabra in combinado for palabra in palabras):
+            try:
+                url = urljoin(base_url, href)
 
-        for tag in soup(
-            [
-                "script",
-                "style",
-                "noscript",
-            ]
-        ):
-            tag.extract()
+                if url.startswith("http"):
+                    if url not in resultados:
+                        resultados.append(url)
+            except Exception:
+                pass
 
-        texto = soup.get_text(
-            " ",
-            strip=True,
-        )
+    return resultados[:MAX_PAGINAS_POR_RESULTADO]
 
-        for email in _emails(texto):
-            if email not in encontrados:
-                encontrados.append(email)
-
-        for enlace in soup.find_all(
-            "a",
-            href=True,
-        ):
-            href = str(
-                enlace.get("href") or ""
-            ).strip()
-
-            if not href.lower().startswith(
-                "mailto:"
-            ):
-                continue
-
-            valor = unquote(
-                href[7:]
-            ).split(
-                "?",
-                1,
-            )[0]
-
-            email = _email_real(
-                valor
-            )
-
-            if (
-                email
-                and email not in encontrados
-            ):
-                encontrados.append(email)
-
-    except Exception:
-        pass
-
-    return encontrados
-
-
-# ============================================================
-# ENLACES DE CONTACTO
-# ============================================================
-
-CONTACT_WORDS = (
-    "contact",
-    "contacto",
-    "contactanos",
-    "contactenos",
-    "contactá",
-    "contacta",
-    "correo",
-    "email",
-    "mail",
-    "nosotros",
-    "institucional",
-    "quienes somos",
-    "quienes-somos",
-    "ubicacion",
-    "ubicación",
-)
-
-
-def _enlaces_contacto(response):
-    if not response:
-        return []
-
-    try:
-        soup = BeautifulSoup(
-            response.text,
-            "html.parser",
-        )
-
-    except Exception:
-        return []
-
-    resultado = []
-    vistos = set()
-
-    for a in soup.find_all(
-        "a",
-        href=True,
-    ):
-        href = str(
-            a.get("href") or ""
-        ).strip()
-
-        if not href:
-            continue
-
-        texto = normalizar_texto(
-            a.get_text(
-                " ",
-                strip=True,
-            )
-        )
-
-        href_n = normalizar_texto(
-            href
-        )
-
-        if not any(
-            palabra in texto
-            or palabra in href_n
-            for palabra in CONTACT_WORDS
-        ):
-            continue
-
-        url = urljoin(
-            response.url,
-            href,
-        )
-
-        if url in vistos:
-            continue
-
-        vistos.add(url)
-        resultado.append(url)
-
-    return resultado
-
-
-# ============================================================
-# ANALIZAR SITIO WEB
-# ============================================================
 
 def _analizar_web(c, url):
     if not url:
         return []
 
-    if not url.startswith(
-        (
-            "http://",
-            "https://",
-        )
-    ):
-        url = "https://" + url
+    if not str(url).startswith(("http://", "https://")):
+        url = "https://" + str(url).lstrip("/")
 
     response = _get(url)
 
     if not response:
         return []
 
-    if response.status_code >= 400:
+    final_url = response.url or url
+
+    try:
+        soup = BeautifulSoup(
+            response.text,
+            "html.parser",
+        )
+    except Exception:
         return []
 
-    contenido = (
-        response.url
-        + " "
-        + response.text
-    )
+    texto = soup.get_text(" ", strip=True)
 
-    identidad = _identidad_score(
-        c,
-        contenido,
-    )
-
-    es_directorio = _es_directorio(
-        response.url
-    )
-
-    if not es_directorio:
-        if identidad < 0.45:
-            return []
-
-    resultados = []
-
-    for email in _emails_de_pagina(
-        c,
-        response,
-    ):
-        resultados.append(
-            (
-                email,
-                response.url,
-                identidad,
-            )
+    # La página debe guardar relación con el candidato.
+    if not _identidad_fuerte(c, texto):
+        # Algunas páginas institucionales tienen poco texto visible.
+        # En ese caso aceptamos solamente si el dominio coincide con
+        # el website declarado por el candidato.
+        declarado = str(
+            c.get("website")
+            or (c.get("tags") or {}).get("website")
+            or ""
         )
 
-    # Buscar página de contacto solamente
-    # si la página principal no dio email.
-    if not resultados:
-        enlaces = _enlaces_contacto(
-            response
-        )
+        if declarado:
+            if _dominio(declarado) != _dominio(final_url):
+                return []
 
-        for enlace in enlaces[
-            :MAX_PAGINAS_POR_RESULTADO
-        ]:
-            time.sleep(
-                PAUSA_ENTRE_PAGINAS
-            )
+    encontrados = []
 
-            pagina = _get(enlace)
+    for email in _emails_de_pagina(soup):
+        if email not in encontrados:
+            encontrados.append(email)
 
-            if not pagina:
+    # Buscar páginas de contacto si todavía no apareció email.
+    if not encontrados:
+        for contacto_url in _enlaces_contacto(
+            soup,
+            final_url,
+        ):
+            time.sleep(PAUSA_ENTRE_PAGINAS)
+
+            response_contacto = _get(contacto_url)
+
+            if not response_contacto:
                 continue
 
-            if pagina.status_code >= 400:
-                continue
-
-            contenido_pagina = (
-                pagina.url
-                + " "
-                + pagina.text
-            )
-
-            identidad_pagina = (
-                _identidad_score(
-                    c,
-                    contenido_pagina,
+            try:
+                soup_contacto = BeautifulSoup(
+                    response_contacto.text,
+                    "html.parser",
                 )
-            )
-
-            if (
-                not es_directorio
-                and identidad_pagina < 0.45
-            ):
+            except Exception:
                 continue
 
             for email in _emails_de_pagina(
-                c,
-                pagina,
+                soup_contacto
             ):
-                resultados.append(
-                    (
-                        email,
-                        pagina.url,
-                        max(
-                            identidad,
-                            identidad_pagina,
-                        ),
-                    )
-                )
+                if email not in encontrados:
+                    encontrados.append(email)
 
-            if resultados:
+            if encontrados:
                 break
 
-    return resultados
+    return encontrados
 
 
 # ============================================================
-# CONSULTAS PÚBLICAS
+# BING
 # ============================================================
 
 def _consultas_base(c):
-    """
-    Primer nivel: pocas búsquedas, pero de alto rendimiento.
-    """
-
     nombre = str(
-        c.get("name") or ""
+        c.get("name")
+        or c.get("nombre")
+        or ""
     ).strip()
 
     direccion = str(
-        c.get("direccion") or ""
+        c.get("address")
+        or c.get("direccion")
+        or ""
     ).strip()
 
     telefono = str(
-        c.get("phone") or ""
+        c.get("phone")
+        or c.get("telefono")
+        or ""
     ).strip()
 
     consultas = []
 
     if nombre:
-        consultas.append(
-            f'"{nombre}" Córdoba email'
+        consultas.extend(
+            [
+                f'"{nombre}" email',
+                f'"{nombre}" contacto',
+                f'"{nombre}" correo',
+                f'"{nombre}" Córdoba email',
+            ]
         )
 
-        consultas.append(
-            f'"{nombre}" Córdoba contacto'
-        )
-
-    if direccion:
+    if nombre and direccion:
         consultas.append(
             f'"{nombre}" "{direccion}" email'
         )
 
-    if telefono:
+    if nombre and telefono:
         consultas.append(
             f'"{nombre}" "{telefono}" email'
         )
 
-    for dominio in DIRECTORIOS:
-        if nombre:
-            consultas.append(
-                f'"{nombre}" Córdoba '
-                f'email site:{dominio}'
-            )
+    if nombre:
+        consultas.extend(
+            [
+                f'"{nombre}" "@gmail.com"',
+                f'"{nombre}" "@hotmail.com"',
+                f'"{nombre}" "@outlook.com"',
+            ]
+        )
 
     return consultas
 
 
 def _consultas_persona(c):
-    """
-    Segundo nivel: solamente se ejecuta si las búsquedas
-    generales no encontraron un email.
-
-    Busca personas públicamente asociadas a la organización.
-    Nunca inventa emails.
-    """
-
     nombre = str(
-        c.get("name") or ""
+        c.get("name")
+        or c.get("nombre")
+        or ""
     ).strip()
 
     direccion = str(
-        c.get("direccion") or ""
+        c.get("address")
+        or c.get("direccion")
+        or ""
     ).strip()
 
     telefono = str(
-        c.get("phone") or ""
+        c.get("phone")
+        or c.get("telefono")
+        or ""
     ).strip()
 
-    consultas = []
+    if not nombre:
+        return []
 
-    roles = (
+    roles = [
         "dueño",
         "propietario",
         "responsable",
+        "encargado",
         "titular",
         "director",
         "administrador",
-        "encargado",
+        "contacto",
+    ]
+
+    consultas = []
+
+    # Agrupamos los roles para no disparar una consulta por cada uno.
+    roles_texto = " OR ".join(
+        f'"{rol}"'
+        for rol in roles
     )
 
-    if nombre:
-        consultas.append(
-            f'"{nombre}" Córdoba '
-            f'(dueño OR propietario OR responsable) email'
-        )
+    consultas.append(
+        f'"{nombre}" ({roles_texto}) email'
+    )
 
+    consultas.append(
+        f'"{nombre}" ({roles_texto}) correo'
+    )
+
+    if direccion:
         consultas.append(
-            f'"{nombre}" Córdoba '
-            f'(titular OR director OR administrador) email'
+            f'"{nombre}" "{direccion}" ({roles_texto}) email'
         )
 
     if telefono:
         consultas.append(
-            f'"{telefono}" '
-            f'(dueño OR propietario OR responsable) email'
-        )
-
-    if direccion:
-        consultas.append(
-            f'"{direccion}" '
-            f'(dueño OR propietario OR responsable) email'
+            f'"{nombre}" "{telefono}" ({roles_texto}) email'
         )
 
     return consultas
 
 
-# ============================================================
-# BÚSQUEDA BING
-# ============================================================
-
 def _ejecutar_busqueda(c, consulta):
     global _busquedas_realizadas
 
-    if (
-        _busquedas_realizadas
-        >= MAX_BUSQUEDAS_PUBLICAS
-    ):
+    if _busquedas_realizadas >= MAX_BUSQUEDAS_PUBLICAS:
         return []
-
-    _busquedas_realizadas += 1
-
-    resultados = []
 
     try:
         response = requests.get(
@@ -761,506 +667,312 @@ def _ejecutar_busqueda(c, consulta):
                 "q": consulta,
                 "count": MAX_RESULTADOS_BING,
                 "setlang": "es-AR",
-                "cc": "ar",
             },
             headers={
                 "User-Agent": C.USER_AGENT,
-                "Accept": "text/html",
-                "Accept-Language": (
-                    "es-AR,es;q=0.9"
-                ),
+                "Accept-Language": "es-AR,es;q=0.9,en;q=0.7",
             },
-            timeout=max(
-                min(C.WEB_TIMEOUT, 10),
-                7,
-            ),
+            timeout=C.WEB_TIMEOUT,
         )
 
-        if response.status_code >= 400:
-            return []
+        _busquedas_realizadas += 1
 
+    except Exception:
+        _busquedas_realizadas += 1
+        return []
+
+    if response.status_code >= 400:
+        return []
+
+    try:
         soup = BeautifulSoup(
             response.text,
             "html.parser",
         )
+    except Exception:
+        return []
 
-        items = soup.select(
-            "li.b_algo"
-        )
+    resultados = []
 
-        vistos = set()
+    for item in soup.select("li.b_algo"):
+        enlace = item.select_one("h2 a")
 
-        for item in items:
-            a = item.select_one(
-                "h2 a"
-            )
+        if not enlace:
+            continue
 
-            if not a:
-                continue
+        href = enlace.get("href")
 
-            href = str(
-                a.get("href") or ""
-            ).strip()
+        if not href:
+            continue
 
-            if not href.startswith("http"):
-                continue
+        titulo = enlace.get_text(" ", strip=True)
 
-            if href in vistos:
-                continue
+        descripcion = ""
 
-            vistos.add(href)
+        p = item.select_one(".b_caption p")
 
-            title = a.get_text(
+        if p:
+            descripcion = p.get_text(
                 " ",
                 strip=True,
             )
 
-            p = item.select_one(
-                ".b_caption p"
-            )
-
-            snippet = (
-                p.get_text(
-                    " ",
-                    strip=True,
-                )
-                if p
-                else item.get_text(
-                    " ",
-                    strip=True,
-                )
-            )
-
-            contenido = (
-                title
-                + " "
-                + snippet
-                + " "
-                + href
-            )
-
-            score = _identidad_score(
-                c,
-                contenido,
-            )
-
-            resultados.append(
-                {
-                    "url": href,
-                    "title": title,
-                    "snippet": snippet,
-                    "score": score,
-                    "emails": _emails(
-                        contenido
-                    ),
-                    "consulta": consulta,
-                }
-            )
-
-    except Exception:
-        return []
-
-    finally:
-        time.sleep(
-            PAUSA_ENTRE_BUSQUEDAS
+        resultados.append(
+            {
+                "url": href,
+                "title": titulo,
+                "description": descripcion,
+            }
         )
 
+    time.sleep(PAUSA_ENTRE_BUSQUEDAS)
+
     return resultados
+
+
+def _resultado_valido(c, resultado):
+    url = str(resultado.get("url") or "")
+
+    titulo = str(resultado.get("title") or "")
+
+    descripcion = str(
+        resultado.get("description")
+        or ""
+    )
+
+    texto = f"{titulo} {descripcion}"
+
+    dominio = _dominio(url)
+
+    if not dominio:
+        return False
+
+    # No usamos resultados de redes sociales como fuente de email.
+    if dominio in DOMINIOS_SOCIALES:
+        return False
+
+    # Tampoco confiamos en directorios genéricos como identidad final.
+    if dominio in DOMINIOS_DIRECTORIOS:
+        return False
+
+    # Debe guardar relación con el candidato.
+    if not _identidad_fuerte(c, texto):
+        return False
+
+    return True
 
 
 def _buscar_bing(c):
-    """
-    Búsqueda escalonada.
+    consultas = _consultas_base(c)
 
-    Nivel 1:
-        búsquedas generales.
-
-    Nivel 2:
-        personas vinculadas solamente si Nivel 1
-        no produjo un email válido.
-
-    Esto evita gastar el presupuesto de 1.000 búsquedas
-    en un solo candidato.
-    """
-
-    global _busquedas_realizadas
-
-    resultados = []
-    vistos = set()
-
-    # --------------------------------------------------------
-    # NIVEL 1
-    # --------------------------------------------------------
-
-    for consulta in _consultas_base(c):
-        if (
-            _busquedas_realizadas
-            >= MAX_BUSQUEDAS_PUBLICAS
-        ):
-            break
-
-        nuevos = _ejecutar_busqueda(
+    # Primera etapa: buscar email institucional/comercial.
+    for consulta in consultas:
+        resultados = _ejecutar_busqueda(
             c,
             consulta,
         )
 
-        for resultado in nuevos:
-            url = resultado.get(
-                "url",
-                "",
+        for resultado in resultados:
+            texto = " ".join(
+                [
+                    str(resultado.get("title") or ""),
+                    str(resultado.get("description") or ""),
+                    str(resultado.get("url") or ""),
+                ]
             )
 
-            if url in vistos:
+            if not _resultado_valido(
+                c,
+                resultado,
+            ):
                 continue
 
-            vistos.add(url)
-            resultados.append(resultado)
+            emails = _extraer_emails(texto)
 
-    # --------------------------------------------------------
-    # ¿YA ENCONTRAMOS UN EMAIL?
-    # --------------------------------------------------------
+            if emails:
+                return emails
 
-    for resultado in resultados:
-        if not _resultado_valido(
-            c,
-            resultado,
-        ):
-            continue
+    # Segunda etapa: buscar personas responsables.
+    consultas_persona = _consultas_persona(c)
 
-        if resultado.get("emails"):
-            return resultados
-
-    # --------------------------------------------------------
-    # NIVEL 2: PERSONA VINCULADA
-    # --------------------------------------------------------
-
-    for consulta in _consultas_persona(c):
-        if (
-            _busquedas_realizadas
-            >= MAX_BUSQUEDAS_PUBLICAS
-        ):
-            break
-
-        nuevos = _ejecutar_busqueda(
+    for consulta in consultas_persona:
+        resultados = _ejecutar_busqueda(
             c,
             consulta,
         )
 
-        for resultado in nuevos:
-            url = resultado.get(
-                "url",
-                "",
+        for resultado in resultados:
+            texto = " ".join(
+                [
+                    str(resultado.get("title") or ""),
+                    str(resultado.get("description") or ""),
+                    str(resultado.get("url") or ""),
+                ]
             )
 
-            if url in vistos:
+            if not _resultado_valido(
+                c,
+                resultado,
+            ):
                 continue
 
-            vistos.add(url)
-            resultados.append(resultado)
+            emails = _extraer_emails(texto)
 
-    return resultados
+            if emails:
+                return emails
 
-
-# ============================================================
-# VALIDACIÓN DE RESULTADO
-# ============================================================
-
-def _resultado_valido(c, resultado):
-    url = resultado.get(
-        "url",
-        "",
-    )
-
-    title = resultado.get(
-        "title",
-        "",
-    )
-
-    snippet = resultado.get(
-        "snippet",
-        "",
-    )
-
-    contenido = " ".join(
-        [
-            title,
-            snippet,
-            url,
-        ]
-    )
-
-    score = _identidad_score(
-        c,
-        contenido,
-    )
-
-    if _es_directorio(url):
-        return (
-            score >= 0.45
-            or normalizar_texto(
-                c.get("name")
-            )
-            in normalizar_texto(
-                contenido
-            )
-        )
-
-    return score >= 0.55
+    return []
 
 
 # ============================================================
-# DESCUBRIMIENTO PROFUNDO
+# DESCUBRIMIENTO
 # ============================================================
 
 def _descubrir(c):
-    resultados = _buscar_bing(c)
+    # Primero buscar directamente en Bing.
+    emails = _buscar_bing(c)
 
-    # --------------------------------------------------------
-    # 1. EMAIL VISIBLE DIRECTAMENTE EN EL RESULTADO
-    # --------------------------------------------------------
+    if emails:
+        return emails
 
-    candidatos_email = []
-
-    for resultado in resultados:
-        if not _resultado_valido(
-            c,
-            resultado,
-        ):
-            continue
-
-        for email in resultado.get(
-            "emails",
-            [],
-        ):
-            candidatos_email.append(
-                (
-                    email,
-                    resultado.get(
-                        "url",
-                        "",
-                    ),
-                    resultado.get(
-                        "score",
-                        0,
-                    ),
-                )
-            )
-
-    if candidatos_email:
-        candidatos_email.sort(
-            key=lambda x: (
-                x[2],
-                _es_directorio(x[1]),
-            ),
-            reverse=True,
-        )
-
-        email, origen, score = (
-            candidatos_email[0]
-        )
-
-        c["email"] = email
-        c["email_source"] = (
-            "busqueda_publica"
-        )
-        c["email_source_url"] = origen
-        c["email_confidence"] = round(
-            max(
-                score,
-                0.60,
-            ),
-            2,
-        )
-
-        return c
-
-    # --------------------------------------------------------
-    # 2. VISITAR RESULTADOS RELEVANTES
-    # --------------------------------------------------------
-
-    mejores = [
-        r
-        for r in resultados
-        if _resultado_valido(
-            c,
-            r,
-        )
-    ]
-
-    mejores.sort(
-        key=lambda r: (
-            bool(
-                r.get("emails")
-            ),
-            _es_directorio(
-                r.get(
-                    "url",
-                    "",
-                )
-            ),
-            r.get(
-                "score",
-                0,
-            ),
-        ),
-        reverse=True,
-    )
-
-    vistos = set()
-
-    for resultado in mejores[
-        :MAX_RESULTADOS_BING
-    ]:
-        url = resultado.get(
-            "url",
-            "",
-        )
-
-        if not url:
-            continue
-
-        if url in vistos:
-            continue
-
-        vistos.add(url)
-
-        # Las redes sociales no se usan como fuente
-        # directa de email.
-        if _es_social(url):
-            continue
-
-        encontrados = _analizar_web(
-            c,
-            url,
-        )
-
-        if not encontrados:
-            continue
-
-        encontrados.sort(
-            key=lambda x: (
-                x[2],
-                x[0].startswith("info@"),
-                x[0].startswith("contact"),
-            ),
-            reverse=True,
-        )
-
-        email, origen, identidad = (
-            encontrados[0]
-        )
-
-        c["email"] = email
-
-        c["email_source"] = (
-            "directorio_publico"
-            if _es_directorio(origen)
-            else "web_publica"
-        )
-
-        c["email_source_url"] = origen
-
-        c["email_confidence"] = round(
-            max(
-                identidad,
-                0.60,
-            ),
-            2,
-        )
-
-        return c
-
-    return c
-
-
-# ============================================================
-# ENRIQUECIMIENTO PRINCIPAL
-# ============================================================
-
-def completar(c):
-
-    # --------------------------------------------------------
-    # 1. EMAIL YA PUBLICADO EN OSM
-    # --------------------------------------------------------
-
-    campos = (
-        "email",
-        "contact:email",
-        "contact_email",
-        "contacto",
-    )
-
-    for campo in campos:
-        email = _email_real(
-            c.get(campo)
-        )
-
-        if email:
-            c["email"] = email
-            c["email_source"] = (
-                "OpenStreetMap"
-            )
-            c["email_confidence"] = 1.0
-            return c
-
-    c["email"] = ""
-
-    # --------------------------------------------------------
-    # 2. SITIO WEB DEL CANDIDATO
-    # --------------------------------------------------------
-
+    # Después visitar website declarado.
     website = str(
-        c.get("website") or ""
+        c.get("website")
+        or ""
     ).strip()
 
+    if not website:
+        tags = c.get("tags") or {}
+
+        if isinstance(tags, dict):
+            website = str(
+                tags.get("website")
+                or tags.get("contact:website")
+                or ""
+            ).strip()
+
     if website:
-
-        if not website.startswith(
-            (
-                "http://",
-                "https://",
-            )
-        ):
-            website = (
-                "https://"
-                + website
-            )
-
-        encontrados = _analizar_web(
+        emails = _analizar_web(
             c,
             website,
         )
 
-        if encontrados:
-            encontrados.sort(
-                key=lambda x: (
-                    x[2],
-                    x[0].startswith("info@"),
-                ),
-                reverse=True,
+        if emails:
+            return emails
+
+    return []
+
+
+# ============================================================
+# COMPLETAR CANDIDATO
+# ============================================================
+
+def completar(c):
+    """
+    Intenta completar el email público del candidato.
+
+    Orden:
+      1. email de OSM
+      2. email de tags
+      3. website declarado
+      4. búsqueda pública web
+      5. búsqueda de responsable/persona asociada
+    """
+
+    # --------------------------------------------------------
+    # 1. EMAIL YA PRESENTE EN EL CANDIDATO
+    # --------------------------------------------------------
+
+    posibles = []
+
+    for clave in (
+        "email",
+        "contact_email",
+        "correo",
+    ):
+        valor = c.get(clave)
+
+        if valor:
+            posibles.extend(
+                _extraer_emails(str(valor))
             )
 
-            email, origen, identidad = (
-                encontrados[0]
-            )
+    tags = c.get("tags") or {}
 
-            c["email"] = email
-            c["email_source"] = (
-                "web_publica"
-            )
-            c["email_source_url"] = origen
-            c["email_confidence"] = round(
-                max(
-                    identidad,
-                    0.75,
-                ),
-                2,
-            )
+    if isinstance(tags, dict):
+        for clave in (
+            "email",
+            "contact:email",
+        ):
+            valor = tags.get(clave)
 
+            if valor:
+                posibles.extend(
+                    _extraer_emails(str(valor))
+                )
+
+    # Validar y deduplicar.
+    emails_validos = []
+
+    for email in posibles:
+        email = _limpiar_email(email)
+
+        if email and email not in emails_validos:
+            emails_validos.append(email)
+
+    if emails_validos:
+        c["email"] = emails_validos[0]
+        c["email_fuente"] = "osm"
+        c["contactable"] = True
+        return c
+
+    # --------------------------------------------------------
+    # 2. WEBSITE
+    # --------------------------------------------------------
+
+    website = str(
+        c.get("website")
+        or ""
+    ).strip()
+
+    if not website and isinstance(tags, dict):
+        website = str(
+            tags.get("website")
+            or tags.get("contact:website")
+            or ""
+        ).strip()
+
+    if website:
+        emails = _analizar_web(
+            c,
+            website,
+        )
+
+        if emails:
+            c["email"] = emails[0]
+            c["email_fuente"] = "website"
+            c["contactable"] = True
+            c["website"] = website
             return c
 
     # --------------------------------------------------------
-    # 3. BÚSQUEDA PÚBLICA ESCALONADA
+    # 3. BÚSQUEDA PÚBLICA
     # --------------------------------------------------------
 
-    return _descubrir(c)
+    emails = _descubrir(c)
+
+    if emails:
+        c["email"] = emails[0]
+        c["email_fuente"] = "busqueda_publica"
+        c["contactable"] = True
+        return c
+
+    # --------------------------------------------------------
+    # 4. SIN EMAIL PÚBLICO ENCONTRADO
+    # --------------------------------------------------------
+
+    c["email"] = ""
+    c["contactable"] = False
+    c["email_fuente"] = ""
+
+    return c
