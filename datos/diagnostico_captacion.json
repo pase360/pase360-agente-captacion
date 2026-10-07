@@ -1,387 +1,357 @@
 {
   "por_tipo": {
-    "comercio": 2530,
-    "generador": 113,
-    "dudoso": 234,
-    "descartado": 19,
+    "comercio": 2554,
+    "generador": 163,
+    "dudoso": 242,
+    "descartado": 26,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 100,
-    "no_contactable_publicamente": 175,
-    "requiere_decision": 234,
-    "descartado": 19
+    "listo_para_contactar": 95,
+    "no_contactable_publicamente": 2622,
+    "requiere_decision": 242,
+    "descartado": 26
   },
   "sin_email_por_tipo": {
-    "comercio": 67,
-    "generador": 108,
+    "comercio": 2462,
+    "generador": 160,
     "otro": 0
   },
   "descartados_por_motivo": {
-    "institución educativa": 19
+    "Institución educativa": 26
   },
   "generadores_muestra": [
     {
-      "name": "CBA X Escalada",
-      "email": "programa.cbax@gmail.com",
-      "motivo": "organización con afiliados, asociados o beneficiarios"
-    },
-    {
       "name": "Club Universitario de Córdoba",
       "email": "administracion@clubuniversitariocba.com",
-      "motivo": "club/institución deportiva con comunidad de miembros"
+      "motivo": "Club o institución deportiva identificada"
     },
     {
       "name": "Fundación Mueve",
       "email": "fundacion@mueve.org.ar",
-      "motivo": "organización con afiliados, asociados o beneficiarios"
+      "motivo": "Organización con capacidad de agrupar beneficiarios"
     },
     {
-      "name": "Club Milanesa",
-      "email": "info@elclubdelamilanesa.com",
-      "motivo": "club/institución deportiva con comunidad de miembros"
+      "name": "Capilla Santa Teresita",
+      "email": "vicariasantateresita@gmail.com",
+      "motivo": "OSM identifica una organización social/comunitaria"
     },
     {
-      "name": "Asociación Cordobesa de Aikido",
-      "email": "cdn.jsdelivr.net/npm/photoswipe@5.4.3",
-      "motivo": "OSM: institución deportiva con actividad deportiva"
+      "name": "Fundación Universitaria de Oficios",
+      "email": "",
+      "motivo": "Organización con capacidad de agrupar beneficiarios"
     },
     {
       "name": "Fundación Despegar",
       "email": "",
-      "motivo": "organización con afiliados, asociados o beneficiarios"
+      "motivo": "Organización con capacidad de agrupar beneficiarios"
+    },
+    {
+      "name": "Club Deportivo Alta Córdoba",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Córdoba Lawn Tenis",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
     },
     {
       "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
       "email": "",
-      "motivo": "organización con afiliados, asociados o beneficiarios"
+      "motivo": "Organización con capacidad de agrupar beneficiarios"
     },
     {
-      "name": "Arabian",
+      "name": "Club Social y Deportivo Los Amigos",
       "email": "",
-      "motivo": "OSM: institución deportiva con actividad deportiva"
-    },
-    {
-      "name": "Córdoba Paddle",
-      "email": "",
-      "motivo": "OSM: institución deportiva con actividad deportiva"
-    },
-    {
-      "name": "Espacio O2",
-      "email": "",
-      "motivo": "OSM: institución deportiva con actividad deportiva"
-    },
-    {
-      "name": "Guasa Mila Club",
-      "email": "",
-      "motivo": "club/institución deportiva con comunidad de miembros"
-    },
-    {
-      "name": "Hindu Club",
-      "email": "",
-      "motivo": "club/institución deportiva con comunidad de miembros"
-    },
-    {
-      "name": "La Raquette",
-      "email": "",
-      "motivo": "OSM: institución deportiva con actividad deportiva"
-    },
-    {
-      "name": "Lomo Club",
-      "email": "",
-      "motivo": "club/institución deportiva con comunidad de miembros"
-    },
-    {
-      "name": "Sanatorio Sindical Suoem",
-      "email": "",
-      "motivo": "organización con afiliados, asociados o beneficiarios"
-    },
-    {
-      "name": "UPAS 8 - Barrio La Floresta",
-      "email": "",
-      "motivo": "organización social con comunidad de miembros"
-    },
-    {
-      "name": "Centro de Salud 71 - Cooperativa El Arco",
-      "email": "",
-      "motivo": "organización con afiliados, asociados o beneficiarios"
+      "motivo": "Club o institución deportiva identificada"
     },
     {
       "name": "Club de Boxeadores",
       "email": "",
-      "motivo": "club/institución deportiva con comunidad de miembros"
+      "motivo": "Club o institución deportiva identificada"
     },
     {
-      "name": "Arabian Paddle Club",
+      "name": "Centro de Jubilados",
       "email": "",
-      "motivo": "club/institución deportiva con comunidad de miembros"
+      "motivo": "Centro vecinal, jubilados u organización social"
+    },
+    {
+      "name": "Centro de jubilados y Hogar de día Barrio Belgrano",
+      "email": "",
+      "motivo": "Centro vecinal, jubilados u organización social"
+    },
+    {
+      "name": "CENTRO VECINAL BARRIO ATE",
+      "email": "",
+      "motivo": "Centro vecinal, jubilados u organización social"
+    },
+    {
+      "name": "Centro Vecinal Barrio Parque Vélez Sarsfield",
+      "email": "",
+      "motivo": "Centro vecinal, jubilados u organización social"
+    },
+    {
+      "name": "Centro Vecinal B° Kennedy",
+      "email": "",
+      "motivo": "Centro vecinal, jubilados u organización social"
+    },
+    {
+      "name": "Centro Vecinal Don Bosco",
+      "email": "",
+      "motivo": "Centro vecinal, jubilados u organización social"
     },
     {
       "name": "centro vecinal Parque República",
       "email": "",
-      "motivo": "organización social con comunidad de miembros"
+      "motivo": "Centro vecinal, jubilados u organización social"
+    },
+    {
+      "name": "Centro vecinal Santa Clara de Asis",
+      "email": "",
+      "motivo": "Centro vecinal, jubilados u organización social"
+    },
+    {
+      "name": "Centro Vecinal Villa Paez",
+      "email": "",
+      "motivo": "Centro vecinal, jubilados u organización social"
+    },
+    {
+      "name": "Centro Vecinal Villa Rivera Indarte",
+      "email": "",
+      "motivo": "Centro vecinal, jubilados u organización social"
+    },
+    {
+      "name": "Centro Vecinal Villa Wacalde - Alto Hermoso",
+      "email": "",
+      "motivo": "Centro vecinal, jubilados u organización social"
+    },
+    {
+      "name": "Centro Vecinal Yofre Norte",
+      "email": "",
+      "motivo": "Centro vecinal, jubilados u organización social"
+    },
+    {
+      "name": "Centro Vecinal Yofre Sud",
+      "email": "",
+      "motivo": "Centro vecinal, jubilados u organización social"
+    },
+    {
+      "name": "CIRSE",
+      "email": "",
+      "motivo": "OSM identifica una asociación u organización"
     },
     {
       "name": "Club Atlético General Paz -Junior´s",
       "email": "",
-      "motivo": "club/institución deportiva con comunidad de miembros"
+      "motivo": "Club o institución deportiva identificada"
     },
     {
       "name": "Club Atlético Huracán",
       "email": "",
-      "motivo": "club/institución deportiva con comunidad de miembros"
+      "motivo": "Club o institución deportiva identificada"
     },
     {
       "name": "Club Atlético Racing de Córdoba",
       "email": "",
-      "motivo": "club/institución deportiva con comunidad de miembros"
+      "motivo": "Club o institución deportiva identificada"
     },
     {
       "name": "Club Atlético Villa Azalais",
       "email": "",
-      "motivo": "club/institución deportiva con comunidad de miembros"
+      "motivo": "Club o institución deportiva identificada"
     },
     {
       "name": "Club Atlético Yapeyú",
       "email": "",
-      "motivo": "club/institución deportiva con comunidad de miembros"
+      "motivo": "Club o institución deportiva identificada"
     },
     {
       "name": "Club Barrio Parque",
       "email": "",
-      "motivo": "club/institución deportiva con comunidad de miembros"
-    },
-    {
-      "name": "Club Colegio de Ingenieros Civiles",
-      "email": "",
-      "motivo": "colegio profesional"
-    },
-    {
-      "name": "Club Comunicaciones",
-      "email": "",
-      "motivo": "club/institución deportiva con comunidad de miembros"
-    },
-    {
-      "name": "Club de Amigos Gym",
-      "email": "",
-      "motivo": "club/institución deportiva con comunidad de miembros"
-    },
-    {
-      "name": "Club House Las Delicias",
-      "email": "",
-      "motivo": "club/institución deportiva con comunidad de miembros"
+      "motivo": "Club o institución deportiva identificada"
     }
   ],
   "comercios_muestra": [
     {
-      "name": "Alas Centro de Rehabilitación Integral Infantojuvenil",
-      "email": "info@centroalas.com.ar",
-      "motivo": "OSM: healthcare"
-    },
-    {
       "name": "ALB",
       "email": "ventas@albamoblamientos.com.ar",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Alquiler Auto Aero-Cordoba",
+      "email": "info@alquilerautocordoba.com.ar",
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Ames Motos",
       "email": "ventas@amesmotos.com.ar",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "ATLARES Crowdfunding Bitcoin & Networking",
       "email": "info@atlares.com",
-      "motivo": "OSM: oficina comercial/profesional"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Avant",
       "email": "marketing@avantpeugeot.com.ar",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "BAfarma - Farmacia Bosque Alvarez",
       "email": "contacto@bafarma.com",
-      "motivo": "OSM: servicio/comercio"
-    },
-    {
-      "name": "Banco de Sangre – Instituto de Hematología y Hemoterapia  (UNC)",
-      "email": "direccionmedica@ihh.unc.edu.ar",
-      "motivo": "OSM: healthcare"
+      "motivo": "Servicio sanitario/comercial aunque pertenezca a una organización"
     },
     {
       "name": "Bondio",
       "email": "motosonline@bondio.com.ar",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Café Martínez",
       "email": "cordoba@cafemartinez.com.ar",
-      "motivo": "OSM: servicio/comercio"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Chevromaxs",
       "email": "chevromaxs@gmail.com",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Clinica Privada Gallia",
       "email": "info@centrogallia.com",
-      "motivo": "OSM: servicio/comercio"
+      "motivo": "Servicio sanitario/comercial aunque pertenezca a una organización"
     },
     {
       "name": "Delivery Paint",
       "email": "deliverypaint@gmail.com",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "El Espejo Libros",
       "email": "espejoventas@elespejolibros.com.ar",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Fabrica Pc",
       "email": "rvlevet@gmail.com",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Hotel Dr. César Carman",
+      "email": "hotelcba@aca.org.ar",
+      "motivo": "Actividad comercial/servicio identificada por nombre"
+    },
+    {
+      "name": "Hotel Garden",
+      "email": "reservas@hotelgarden.com.ar",
+      "motivo": "Actividad comercial/servicio identificada por nombre"
     },
     {
       "name": "Luminotecnia",
       "email": "info@luminotecnia.com.ar",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "OlmedoOdontologia",
       "email": "consultorioolmedo@hotmail.com",
-      "motivo": "OSM: servicio/comercio"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Ópticas Lauricella",
       "email": "opticas.lauricella@gmail.com",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Paseo La Toscana",
       "email": "administracion@paseolatoscana.com",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Quimica Halac",
       "email": "info@quimicahalac.com.ar",
-      "motivo": "OSM: etiqueta shop"
-    },
-    {
-      "name": "Qumana",
-      "email": "info@espacioqumana.com.ar",
-      "motivo": "OSM: healthcare"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Roma Motos",
       "email": "info@romamotos.com.ar",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Service Impresoras",
       "email": "simpresoras@gmail.com",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Tagle",
       "email": "info@taglerenault.com.ar",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Tecnoplus Casa Informática",
       "email": "tecnoplus@live.com.ar",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Tienda Florencia",
       "email": "florenciagrowshop@gmail.com",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Tienda Lexico - Moda y Complementos - Carteras, Mochilas, Valijas y Accesorios",
       "email": "tiendalexico@mhtendencias.com.ar",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Torralba",
       "email": "info@torralba.com.ar",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Unifit",
       "email": "hola@unifit.ar",
-      "motivo": "OSM: etiqueta shop"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Xipa",
       "email": "info.xipa@gmail.com",
-      "motivo": "OSM: oficina comercial/profesional"
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "Global Vip Transfer S.A.",
       "email": "reservas@global-vip-transfer.com",
-      "motivo": "actividad comercial identificable"
+      "motivo": "Actividad comercial/servicio identificada por nombre"
     }
   ],
   "sin_email_muestra": [
+    {
+      "name": "Fundación Universitaria de Oficios",
+      "tipo": "generador",
+      "website": "https://fuoficios.com.ar/"
+    },
     {
       "name": "Fundación Despegar",
       "tipo": "generador",
       "website": "www.despegar.org.ar"
     },
     {
+      "name": "Club Deportivo Alta Córdoba",
+      "tipo": "generador",
+      "website": "https://www.facebook.com/people/Club-Deportivo-Alta-C%C3%B3rdoba/100076633227264/"
+    },
+    {
+      "name": "Córdoba Lawn Tenis",
+      "tipo": "generador",
+      "website": "https://www.cordobalawntenis.com.ar/"
+    },
+    {
       "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
       "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Arabian",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Córdoba Paddle",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Espacio O2",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Guasa Mila Club",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Hindu Club",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "La Raquette",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Lomo Club",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Sanatorio Sindical Suoem",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "UPAS 8 - Barrio La Floresta",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Centro de Salud 71 - Cooperativa El Arco",
+      "name": "Club Social y Deportivo Los Amigos",
       "tipo": "generador",
       "website": ""
     },
@@ -391,12 +361,72 @@
       "website": ""
     },
     {
-      "name": "Arabian Paddle Club",
+      "name": "Centro de Jubilados",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Centro de jubilados y Hogar de día Barrio Belgrano",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "CENTRO VECINAL BARRIO ATE",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Centro Vecinal Barrio Parque Vélez Sarsfield",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Centro Vecinal B° Kennedy",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Centro Vecinal Don Bosco",
       "tipo": "generador",
       "website": ""
     },
     {
       "name": "centro vecinal Parque República",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Centro vecinal Santa Clara de Asis",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Centro Vecinal Villa Paez",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Centro Vecinal Villa Rivera Indarte",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Centro Vecinal Villa Wacalde - Alto Hermoso",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Centro Vecinal Yofre Norte",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Centro Vecinal Yofre Sud",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "CIRSE",
       "tipo": "generador",
       "website": ""
     },
@@ -441,37 +471,7 @@
       "website": ""
     },
     {
-      "name": "Club de Amigos Gym",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Club House Las Delicias",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Consultorio de Salud Integral",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "El Club De La Milanesa",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Estadio Monumental Presidente Perón",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Farmacia Sindical",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "FUNDACION CAIP CENTRO DE ATENCION INTEGRAL PRIVADO",
+      "name": "Club Poeta Lugones",
       "tipo": "generador",
       "website": ""
     }
@@ -479,146 +479,146 @@
   "dudosos_muestra": [
     {
       "name": "Consulado de Francia",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
-      "name": "Capilla Santa Teresita",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "name": "L'AEREO - Taller Aeronáutico",
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
       "name": "Instituto Privado Deán Funes",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
       "name": "Puente de Estrellas",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+    },
+    {
+      "name": "Museo Palacio Dionisi",
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
       "name": "Parroquia Nuestra Señora del Carmen",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+    },
+    {
+      "name": "Casa de Mark",
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+    },
+    {
+      "name": "On Apart",
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+    },
+    {
+      "name": "ECOS Estudio Arquitectura y Adminstración",
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+    },
+    {
+      "name": "CBA X Escalada",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
     },
     {
       "name": "InfoNegocios",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
       "name": "Cremolatti",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
-      "name": "RentAuto Atgentina",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "name": "P&T Fitness",
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
-      "name": "Alquiler Auto Aero-Cordoba",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "Academia Arguello",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "name": "Banco de Sangre – Instituto de Hematología y Hemoterapia  (UNC)",
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
       "name": "Centro de Investigaciones y Estudios sobre Cultura y Sociedad (CIECS)",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "motivo": "Organización identificada pero sin evidencia suficiente para clasificarla"
+    },
+    {
+      "name": "Alas Centro de Rehabilitación Integral Infantojuvenil",
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
       "name": "Quinto Deva",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+    },
+    {
+      "name": "Qumana",
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+    },
+    {
+      "name": "Centro de Investigaciones y Estudios sobre Cultura y Sociedad CIECS",
+      "motivo": "Organización identificada pero sin evidencia suficiente para clasificarla"
+    },
+    {
+      "name": "Museo Provincial de Ciencias Naturales \"Dr. Arturo Umberto Illía\"",
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+    },
+    {
+      "name": "ITV Chateau (Inspección Técnica Vehicular)",
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+    },
+    {
+      "name": "Insituto Secundario El Salvador",
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
       "name": "Colegio Gabriel Taborín",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
       "name": "Colegio Santa Teresita",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
       "name": "IPET N° 249 Nicolás Copérnico",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
       "name": "Colegio Fasta Cura Brochero",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+    },
+    {
+      "name": "Leistung",
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
       "name": "Colegio Nacional de Monserrat",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
       "name": "ANSES",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
       "name": "Oficina de Licencias de Conducir",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "Dirección General de Rentas - Receptoría",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "Ministerio de Ciencia y Tecnología de la Provincia de Córdoba",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "Registro Civil",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "Dirección de Policía Fiscal",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "Global Visum",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "CENTRO EDUCATIVO OBISPO ESQUIU- 250 alumnos",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "Consulado de Bolivia",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "CNRT",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "Consulado General de Perú",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "Centro de Atención Integral al Ciudadano",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "Instituto de Educación Superior \"Doctor Domingo Cabred\"",
-      "motivo": "sin evidencia suficiente para clasificar"
+      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     }
   ],
   "duplicados": 15,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "enriquecidos": 275,
-  "emails_encontrados": 100,
-  "listos_detectados": 100,
-  "listos_seleccionados": 100,
-  "listos_comercio": 95,
-  "listos_generador": 5,
-  "clasificados": 2896,
+  "enriquecidos": 2717,
+  "emails_encontrados": 95,
+  "listos_detectados": 95,
+  "listos_seleccionados": 95,
+  "listos_comercio": 92,
+  "listos_generador": 3,
+  "clasificados": 2985,
   "cuadre": {
-    "clasificacion_total": 2896,
-    "estado_total": 528,
-    "cuadra": false
+    "clasificacion_total": 2985,
+    "estado_total": 2985,
+    "cuadra": true
   },
-  "encontrados": 2911,
-  "procesados": 2911,
-  "nuevos": 2877,
-  "descartados": 19,
+  "encontrados": 3037,
+  "procesados": 3000,
+  "nuevos": 2959,
+  "descartados": 26,
   "excluidos": 15,
-  "meta_alcanzada": true,
-  "faltantes_para_meta": 0,
+  "meta_alcanzada": false,
+  "faltantes_para_meta": 5,
   "busquedas_publicas_realizadas": 1000
 }
