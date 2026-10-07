@@ -1,3 +1,4 @@
+```python
 import re
 from urllib.parse import urljoin, urlparse
 
@@ -417,143 +418,202 @@ def _buscar_resultados_bing(c):
         c.get("direccion") or ""
     ).strip()
 
-    consultas = [
-        f'"{nombre}" Córdoba Argentina',
-    ]
+    telefono = str(
+        c.get("telefono") or ""
+    ).strip()
+
+    # Una sola búsqueda por candidato.
+    # La prioridad es encontrar un contacto público,
+    # no necesariamente una página web.
+    consulta = (
+        f'"{nombre}" Córdoba '
+        "email OR correo OR contacto"
+    )
 
     if direccion:
-        consultas.append(
-            f'"{nombre}" "{direccion}" Córdoba'
-        )
-    else:
-        consultas.append(
-            f'"{nombre}" Córdoba contacto'
-        )
+        consulta += f' "{direccion}"'
+    elif telefono:
+        consulta += f' "{telefono}"'
 
     resultados = []
 
-    for consulta in consultas:
-        try:
-            r = requests.get(
-                BING_SEARCH_URL,
-                params={
-                    "q": consulta,
-                    "count": 5,
-                    "setlang": "es-AR",
-                    "cc": "ar",
-                },
-                headers={
-                    "User-Agent": C.USER_AGENT,
-                    "Accept": (
-                        "text/html,"
-                        "application/xhtml+xml"
-                    ),
-                    "Accept-Language": (
-                        "es-AR,es;q=0.9"
-                    ),
-                },
-                timeout=BING_TIMEOUT,
-                allow_redirects=True,
+    try:
+        r = requests.get(
+            BING_SEARCH_URL,
+            params={
+                "q": consulta,
+                "count": 8,
+                "setlang": "es-AR",
+                "cc": "ar",
+            },
+            headers={
+                "User-Agent": C.USER_AGENT,
+                "Accept": (
+                    "text/html,application/xhtml+xml"
+                ),
+                "Accept-Language": (
+                    "es-AR,es;q=0.9"
+                ),
+            },
+            timeout=BING_TIMEOUT,
+            allow_redirects=True,
+        )
+
+        if r.status_code >= 400:
+            return []
+
+        soup = BeautifulSoup(
+            r.text,
+            "html.parser",
+        )
+
+        for item in soup.select(
+            "li.b_algo"
+        ):
+            a = item.select_one(
+                "h2 a"
             )
 
-            if r.status_code >= 400:
+            if not a:
                 continue
 
-            soup = BeautifulSoup(
-                r.text,
-                "html.parser",
+            href = str(
+                a.get("href") or ""
+            ).strip()
+
+            if not re.match(
+                r"^https?://",
+                href,
+                re.I,
+            ):
+                continue
+
+            title = a.get_text(
+                " ",
+                strip=True,
             )
 
-            for item in soup.select(
-                "li.b_algo"
-            ):
-                a = item.select_one(
-                    "h2 a"
-                )
+            p = item.select_one(
+                ".b_caption p"
+            )
 
-                if not a:
-                    continue
-
-                href = str(
-                    a.get("href") or ""
-                ).strip()
-
-                if not re.match(
-                    r"^https?://",
-                    href,
-                    re.I,
-                ):
-                    continue
-
-                if _es_dominio_no_oficial(
-                    href
-                ):
-                    continue
-
-                title = a.get_text(
+            snippet = (
+                p.get_text(
                     " ",
                     strip=True,
                 )
-
-                p = item.select_one(
-                    ".b_caption p"
+                if p
+                else item.get_text(
+                    " ",
+                    strip=True,
                 )
+            )
 
-                snippet = (
-                    p.get_text(
-                        " ",
-                        strip=True,
-                    )
-                    if p
-                    else item.get_text(
-                        " ",
-                        strip=True,
-                    )
+            score = _resultado_score(
+                c,
+                title,
+                snippet,
+                href,
+            )
+
+            # El email puede aparecer directamente
+            # en el resultado aunque no exista una web.
+            emails = _emails(
+                " ".join(
+                    [
+                        title,
+                        snippet,
+                    ]
                 )
+            )
 
-                score = _resultado_score(
-                    c,
-                    title,
-                    snippet,
-                    href,
-                )
+            resultados.append(
+                {
+                    "url": href,
+                    "title": title,
+                    "snippet": snippet,
+                    "score": score,
+                    "emails": emails,
+                    "blocked_domain": (
+                        _es_dominio_no_oficial(
+                            href
+                        )
+                    ),
+                }
+            )
 
-                resultados.append(
-                    {
-                        "url": href,
-                        "title": title,
-                        "snippet": snippet,
-                        "score": score,
-                    }
-                )
-
-        except Exception:
-            continue
-
-    unicos = {}
-
-    for item in resultados:
-        host = _dominio_base(
-            item["url"]
-        )
-
-        if not host:
-            continue
-
-        anterior = unicos.get(host)
-
-        if (
-            not anterior
-            or item["score"]
-            > anterior["score"]
-        ):
-            unicos[host] = item
+    except Exception:
+        return []
 
     return sorted(
-        unicos.values(),
-        key=lambda x: x["score"],
+        resultados,
+        key=lambda x: (
+            bool(x["emails"]),
+            x["score"],
+        ),
         reverse=True,
     )
+
+
+def _contacto_desde_resultados(
+    c,
+    resultados,
+):
+    # Primero usamos emails visibles en la fuente.
+    # NO exigimos que el dominio coincida con el negocio.
+    for item in resultados:
+        if item["score"] < 0.72:
+            continue
+
+        for email in item.get(
+            "emails",
+            [],
+        ):
+            c["email"] = email
+            c["email_source"] = (
+                "buscador_publico"
+            )
+            c["email_source_url"] = (
+                item["url"]
+            )
+            c["email_confidence"] = round(
+                item["score"],
+                2,
+            )
+
+            return True
+
+    # Si el resultado no muestra el email,
+    # visitamos sólo las coincidencias fuertes.
+    for item in resultados[:4]:
+        if (
+            item["score"] < 0.78
+            or item["blocked_domain"]
+        ):
+            continue
+
+        emails, final_url = (
+            _buscar_en_pagina(
+                item["url"]
+            )
+        )
+
+        if emails:
+            c["email"] = emails[0]
+            c["email_source"] = (
+                "fuente_publica"
+            )
+            c["email_source_url"] = (
+                final_url
+            )
+            c["email_confidence"] = round(
+                item["score"],
+                2,
+            )
+
+            return True
+
+    return False
 
 
 def _descubrir_sitio(c):
@@ -562,41 +622,55 @@ def _descubrir_sitio(c):
     if not resultados:
         return c
 
-    mejor = resultados[0]
-
-    # Umbral alto para evitar asociar
-    # una web de otra entidad.
-    if mejor["score"] < 0.78:
+    # Primero intentamos encontrar el email.
+    # La web deja de ser un requisito.
+    if _contacto_desde_resultados(
+        c,
+        resultados,
+    ):
         return c
 
-    url = mejor["url"]
+    # Sólo si no encontramos email,
+    # guardamos una web con coincidencia fuerte.
+    for mejor in resultados[:3]:
+        if (
+            mejor["score"] < 0.82
+            or mejor["blocked_domain"]
+        ):
+            continue
 
-    c["website"] = url
-    c["website_final"] = url
-    c["website_source"] = "Bing"
-    c["website_confidence"] = round(
-        mejor["score"],
-        2,
-    )
+        url = mejor["url"]
 
-    emails, final_url = _buscar_en_pagina(
-        url
-    )
-
-    c["website_final"] = final_url
-
-    if emails:
-        c["email"] = emails[0]
-        c["email_source"] = (
-            "sitio_web_descubierto"
+        c["website"] = url
+        c["website_final"] = url
+        c["website_source"] = "Bing"
+        c["website_confidence"] = round(
+            mejor["score"],
+            2,
         )
+
+        emails, final_url = (
+            _buscar_en_pagina(url)
+        )
+
+        c["website_final"] = final_url
+
+        if emails:
+            c["email"] = emails[0]
+            c["email_source"] = (
+                "sitio_web_descubierto"
+            )
+            c["email_source_url"] = (
+                final_url
+            )
+
+            return c
 
     return c
 
 
 def completar(c):
-    # 1. Email publicado directamente
-    # en OpenStreetMap.
+    # 1. Email publicado directamente en OSM.
     email_original = _extraer_datos_osm(c)
 
     if email_original:
@@ -608,7 +682,7 @@ def completar(c):
 
     c["email"] = ""
 
-    # 2. Sitio web conocido por OSM.
+    # 2. Web conocida directamente por OSM.
     url = str(
         c.get("website")
         or c.get("contact:website")
@@ -631,8 +705,13 @@ def completar(c):
             c["email_source"] = (
                 "sitio_web"
             )
+            c["email_source_url"] = (
+                final_url
+            )
+
             return c
 
-    # 3. Si OSM no tenía web,
-    # descubrir sitio oficial.
+    # 3. Buscar contacto público aunque
+    # el negocio no tenga sitio web.
     return _descubrir_sitio(c)
+```
