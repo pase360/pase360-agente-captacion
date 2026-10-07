@@ -169,7 +169,13 @@
     "name:museo superior de bellas artes evita": "categoria_excluida:museo",
     "name:centro de salud municipal": "categoria_excluida:municipal",
     "name:centro de salud 21 - barrio marques de sobremonte": "categoria_excluida:municipal",
-    "name:centro de salud 63 - barrio parque republica": "categoria_excluida:municipal"
+    "name:centro de salud 63 - barrio parque republica": "categoria_excluida:municipal",
+    "identidad:s.u.m de la escuela almirante g. brown||zavalia": "institución educativa",
+    "identidad:escuela de deporte marcelo bonetto||": "institución educativa",
+    "identidad:escuela de natacion swim||": "institución educativa",
+    "identidad:caps yofre sur||padre luis monti": "institución educativa",
+    "identidad:caps villa boedo||": "institución educativa",
+    "identidad:caps panamericano|+54 9 0351 156310155|soto 919": "institución educativa"
   },
   "preguntas": {},
   "seguimientos": {}
