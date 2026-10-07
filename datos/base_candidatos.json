@@ -32338,5 +32338,23 @@
       "shop": "supermarket",
       "type": "multipolygon"
     }
+  },
+  {
+    "name": "colegio Vergonjeanne",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_colegios",
+    "source_id": "node:14086511666",
+    "grupo_fuente": "generador",
+    "lat": -31.306068,
+    "lon": -64.2847048,
+    "tags": {
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "colegio Vergonjeanne",
+      "public_transport": "platform"
+    }
   }
 ]

@@ -2,406 +2,577 @@
   {
     "name": "Fundación Mueve",
     "tipo": "generador",
-    "email": "fundacion@mueve.org.ar"
-  },
-  {
-    "name": "SushiClub",
-    "tipo": "generador",
-    "email": "contacto@sushiclub.com.ar"
+    "email": "fundacion@mueve.org.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Alas Centro de Rehabilitación Integral Infantojuvenil",
     "tipo": "comercio",
-    "email": "info@centroalas.com.ar"
+    "email": "info@centroalas.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "ALB",
     "tipo": "comercio",
-    "email": "ventas@albamoblamientos.com.ar"
+    "email": "ventas@albamoblamientos.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Ames Motos",
     "tipo": "comercio",
-    "email": "ventas@amesmotos.com.ar"
+    "email": "ventas@amesmotos.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "ATLARES Crowdfunding Bitcoin & Networking",
     "tipo": "comercio",
-    "email": "info@atlares.com"
+    "email": "info@atlares.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Avant",
     "tipo": "comercio",
-    "email": "marketing@avantpeugeot.com.ar"
+    "email": "marketing@avantpeugeot.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "BAfarma - Farmacia Bosque Alvarez",
     "tipo": "comercio",
-    "email": "contacto@bafarma.com"
+    "email": "contacto@bafarma.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Banco de Sangre – Instituto de Hematología y Hemoterapia  (UNC)",
     "tipo": "comercio",
-    "email": "direccionmedica@ihh.unc.edu.ar"
+    "email": "direccionmedica@ihh.unc.edu.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Bondio",
     "tipo": "comercio",
-    "email": "motosonline@bondio.com.ar"
+    "email": "motosonline@bondio.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Café Martínez",
     "tipo": "comercio",
-    "email": "cordoba@cafemartinez.com.ar"
-  },
-  {
-    "name": "Capilla Santa Teresita",
-    "tipo": "comercio",
-    "email": "vicariasantateresita@gmail.com"
+    "email": "cordoba@cafemartinez.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Casa Manrique",
     "tipo": "comercio",
-    "email": "ecommerce@casamanrique.com.ar"
+    "email": "ecommerce@casamanrique.com.ar",
+    "email_source": "web_publica",
+    "email_source_url": "https://casamanriqueweb.com.ar/contacto/",
+    "email_confidence": 1.0
   },
   {
     "name": "Catalina Calzados",
     "tipo": "comercio",
-    "email": "catalinacalzados@outlook.com.ar"
-  },
-  {
-    "name": "Centro de Investigaciones y Estudios sobre Cultura y Sociedad (CIECS)",
-    "tipo": "comercio",
-    "email": "secretariaciecs@gmail.com"
+    "email": "catalinacalzados@outlook.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Centro para la salud Integral de la Mujer",
     "tipo": "comercio",
-    "email": "sacra@sacracordoba.com.ar"
+    "email": "sacra@sacracordoba.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Chevromaxs",
     "tipo": "comercio",
-    "email": "chevromaxs@gmail.com"
+    "email": "chevromaxs@gmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Clinica Privada Gallia",
     "tipo": "comercio",
-    "email": "info@centrogallia.com"
-  },
-  {
-    "name": "Colegio Gabriel Taborín",
-    "tipo": "comercio",
-    "email": "direcciongeneral@taborin.edu.ar"
-  },
-  {
-    "name": "Colegio Nacional de Monserrat",
-    "tipo": "comercio",
-    "email": "monserrat@cnm.unc.edu.ar"
-  },
-  {
-    "name": "Colegio Santa Teresita",
-    "tipo": "comercio",
-    "email": "monseadriana@live.com"
+    "email": "info@centrogallia.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Córdoba digital",
     "tipo": "comercio",
-    "email": "consultas@cordobadigital.net"
+    "email": "consultas@cordobadigital.net",
+    "email_source": "web_publica",
+    "email_source_url": "https://www.cordobadigital.net/",
+    "email_confidence": 1.0
   },
   {
     "name": "Delivery Paint",
     "tipo": "comercio",
-    "email": "deliverypaint@gmail.com"
+    "email": "deliverypaint@gmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Deportes Iguazu",
     "tipo": "comercio",
-    "email": "deportesiguazu@gmail.com"
+    "email": "deportesiguazu@gmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "DS Store Córdoba",
     "tipo": "comercio",
-    "email": "info@dsstorecordoba.com"
+    "email": "info@dsstorecordoba.com",
+    "email_source": "web_publica",
+    "email_source_url": "https://dsstorecordoba.com/",
+    "email_confidence": 1.0
   },
   {
     "name": "El Espejo Libros",
     "tipo": "comercio",
-    "email": "espejoventas@elespejolibros.com.ar"
+    "email": "espejoventas@elespejolibros.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Fabrica Pc",
     "tipo": "comercio",
-    "email": "rvlevet@gmail.com"
+    "email": "rvlevet@gmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Farmacia Pedernera",
     "tipo": "comercio",
-    "email": "pedernerafarmacia@gmail.com"
+    "email": "pedernerafarmacia@gmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Full technology",
     "tipo": "comercio",
-    "email": "unpkg.com/web-vitals@3.5.2"
+    "email": "unpkg.com/web-vitals@3.5.2",
+    "email_source": "web_publica",
+    "email_source_url": "https://www.fulltechnology.com.ar/",
+    "email_confidence": 1.0
   },
   {
     "name": "Gestor de Cordoba. Autos. Motos. Gonzalo 3512205097",
     "tipo": "comercio",
-    "email": "santinogigena@gmail.com"
+    "email": "santinogigena@gmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Global Vip Transfer S.A.",
     "tipo": "comercio",
-    "email": "reservas@global-vip-transfer.com"
+    "email": "reservas@global-vip-transfer.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Hospital Veterinario Córdoba",
     "tipo": "comercio",
-    "email": "hospitalveterinariocba@gmail.com"
+    "email": "hospitalveterinariocba@gmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Imprenta Arguello",
     "tipo": "comercio",
-    "email": "laimprenta.arguello@gmail.com"
+    "email": "laimprenta.arguello@gmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Incutex",
     "tipo": "comercio",
-    "email": "info@incutex.com.ar"
-  },
-  {
-    "name": "InfoNegocios",
-    "tipo": "comercio",
-    "email": "correo@infonegocios.info"
+    "email": "info@incutex.com.ar",
+    "email_source": "web_publica",
+    "email_source_url": "https://www.incutex.com.ar/",
+    "email_confidence": 1.0
   },
   {
     "name": "ITV Chateau (Inspección Técnica Vehicular)",
     "tipo": "comercio",
-    "email": "itv.cordoba@opuslatam.com"
+    "email": "itv.cordoba@opuslatam.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "La Hilda",
     "tipo": "comercio",
-    "email": "formatjs/intl-segmenter@11.7.10"
+    "email": "formatjs/intl-segmenter@11.7.10",
+    "email_source": "web_publica",
+    "email_source_url": "https://embotelladoralahil.wixsite.com/aguaslahilda",
+    "email_confidence": 1.0
   },
   {
     "name": "La Tasca",
     "tipo": "comercio",
-    "email": "www.google.com/maps/place/panader%c3%ada+la+tasca+suc.+1/@-31.4108941"
+    "email": "www.google.com/maps/place/panader%c3%ada+la+tasca+suc.+1/@-31.4108941",
+    "email_source": "web_publica",
+    "email_source_url": "https://linktr.ee/panaderialatasca",
+    "email_confidence": 1.0
   },
   {
     "name": "Las 2 Hermanas",
     "tipo": "comercio",
-    "email": "librerialasdoshermanas@gmail.com"
+    "email": "librerialasdoshermanas@gmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Librería Blackpool",
     "tipo": "comercio",
-    "email": "blackpool@arnet.com.ar"
+    "email": "blackpool@arnet.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Luminotecnia",
     "tipo": "comercio",
-    "email": "info@luminotecnia.com.ar"
+    "email": "info@luminotecnia.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Maestre",
     "tipo": "comercio",
-    "email": "info@maestreiluminacion.com.ar"
+    "email": "info@maestreiluminacion.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Manifesto",
     "tipo": "comercio",
-    "email": "info@manifesto.com.ar"
+    "email": "info@manifesto.com.ar",
+    "email_source": "web_publica",
+    "email_source_url": "https://www.manifesto.com.ar/",
+    "email_confidence": 1.0
   },
   {
     "name": "Marozzi distribuidora",
     "tipo": "comercio",
-    "email": "ventas@bateriasmarozzi.com.ar"
+    "email": "ventas@bateriasmarozzi.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Megatone",
     "tipo": "comercio",
-    "email": "atencionalcliente@megatone.net"
+    "email": "atencionalcliente@megatone.net",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Merlino",
     "tipo": "comercio",
-    "email": "vtex.render-server@8.181.0"
+    "email": "vtex.render-server@8.181.0",
+    "email_source": "web_publica",
+    "email_source_url": "https://www.merlinosrl.com.ar/",
+    "email_confidence": 1.0
   },
   {
     "name": "mini Super",
     "tipo": "comercio",
-    "email": "minisuperas@gmail.com"
+    "email": "minisuperas@gmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Motcor",
     "tipo": "comercio",
-    "email": "motcor@motcor.com.ar"
+    "email": "motcor@motcor.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Nunatak",
     "tipo": "comercio",
-    "email": "info@nunatakmountain.com.ar"
+    "email": "info@nunatakmountain.com.ar",
+    "email_source": "web_publica",
+    "email_source_url": "https://www.nunatakmountain.com.ar/contacto",
+    "email_confidence": 1.0
   },
   {
     "name": "Olmedo Odontología & Estética",
     "tipo": "comercio",
-    "email": "odontologiayestetica.cba@gmail.com"
+    "email": "odontologiayestetica.cba@gmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "OlmedoOdontologia",
     "tipo": "comercio",
-    "email": "consultorioolmedo@hotmail.com"
+    "email": "consultorioolmedo@hotmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Ópticas Lauricella",
     "tipo": "comercio",
-    "email": "opticas.lauricella@gmail.com"
+    "email": "opticas.lauricella@gmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Paseo La Toscana",
     "tipo": "comercio",
-    "email": "administracion@paseolatoscana.com"
+    "email": "administracion@paseolatoscana.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Poeta Soho",
     "tipo": "comercio",
-    "email": "poetasoho@gmail.com"
-  },
-  {
-    "name": "Puente de Estrellas",
-    "tipo": "comercio",
-    "email": "puentedeestrellas.micael@gmail.com"
+    "email": "poetasoho@gmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Quimica Halac",
     "tipo": "comercio",
-    "email": "info@quimicahalac.com.ar"
-  },
-  {
-    "name": "Quinto Deva",
-    "tipo": "comercio",
-    "email": "productoraquintodeva@gmail.com"
+    "email": "info@quimicahalac.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Qumana",
     "tipo": "comercio",
-    "email": "info@espacioqumana.com.ar"
+    "email": "info@espacioqumana.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Rapanui",
     "tipo": "comercio",
-    "email": "contacto@rapanui.com.ar"
+    "email": "contacto@rapanui.com.ar",
+    "email_source": "web_publica",
+    "email_source_url": "https://www.rapanui.com.ar/",
+    "email_confidence": 1.0
   },
   {
     "name": "Ríe Simona",
     "tipo": "comercio",
-    "email": "unpkg.com/web-vitals@3.5.2"
+    "email": "unpkg.com/web-vitals@3.5.2",
+    "email_source": "web_publica",
+    "email_source_url": "https://www.riesimona.com.ar/",
+    "email_confidence": 1.0
   },
   {
     "name": "Roma Motos",
     "tipo": "comercio",
-    "email": "info@romamotos.com.ar"
+    "email": "info@romamotos.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Service Impresoras",
     "tipo": "comercio",
-    "email": "simpresoras@gmail.com"
+    "email": "simpresoras@gmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Sex Cordoba Shop",
     "tipo": "comercio",
-    "email": "info@sexcordobashop.com.ar"
+    "email": "info@sexcordobashop.com.ar",
+    "email_source": "web_publica",
+    "email_source_url": "https://sexcordobashop.com.ar/",
+    "email_confidence": 1.0
   },
   {
     "name": "Starbucks",
     "tipo": "comercio",
-    "email": "info@starbucks.com.ar"
+    "email": "info@starbucks.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Stock In - Mayorista Multimarcas - Lexico, Oreiro Love y muchas más.",
     "tipo": "comercio",
-    "email": "pedidos@mhtendencias.com.ar"
+    "email": "pedidos@mhtendencias.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
+  },
+  {
+    "name": "SushiClub",
+    "tipo": "comercio",
+    "email": "contacto@sushiclub.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Szumik",
     "tipo": "comercio",
-    "email": "info@szumik.com.ar"
+    "email": "info@szumik.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Tagle",
     "tipo": "comercio",
-    "email": "info@taglerenault.com.ar"
+    "email": "info@taglerenault.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Tecnoplus Casa Informática",
     "tipo": "comercio",
-    "email": "tecnoplus@live.com.ar"
+    "email": "tecnoplus@live.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Tienda Florencia",
     "tipo": "comercio",
-    "email": "florenciagrowshop@gmail.com"
+    "email": "florenciagrowshop@gmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Tienda Lexico - Moda y Complementos - Carteras, Mochilas, Valijas y Accesorios",
     "tipo": "comercio",
-    "email": "tiendalexico@mhtendencias.com.ar"
+    "email": "tiendalexico@mhtendencias.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Torralba",
     "tipo": "comercio",
-    "email": "info@torralba.com.ar"
+    "email": "info@torralba.com.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Unifit",
     "tipo": "comercio",
-    "email": "hola@unifit.ar"
+    "email": "hola@unifit.ar",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Venex Computacion",
     "tipo": "comercio",
-    "email": "consultas@venexcomputacion.com"
+    "email": "consultas@venexcomputacion.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Virmanic SA",
     "tipo": "comercio",
-    "email": "jvalles@virmanicsa.com"
+    "email": "jvalles@virmanicsa.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Xipa",
     "tipo": "comercio",
-    "email": "info.xipa@gmail.com"
+    "email": "info.xipa@gmail.com",
+    "email_source": "OpenStreetMap",
+    "email_source_url": null,
+    "email_confidence": 1.0
   },
   {
     "name": "Marosi Bikes",
     "tipo": "comercio",
-    "email": "marosibikes@gmail.com"
+    "email": "marosibikes@gmail.com",
+    "email_source": "web_publica",
+    "email_source_url": "https://marosibikes.com/contacto/",
+    "email_confidence": 0.95
   },
   {
     "name": "RM Insumos",
     "tipo": "comercio",
-    "email": "ventas@rminsumos.com"
-  },
-  {
-    "name": "Sony",
-    "tipo": "comercio",
-    "email": "pspodcast@sony.com"
+    "email": "ventas@rminsumos.com",
+    "email_source": "web_publica",
+    "email_source_url": "https://www.rminsumos.com/",
+    "email_confidence": 0.95
   },
   {
     "name": "Centro Motor sa TOYOTA",
     "tipo": "comercio",
-    "email": "info@centromotorsa.com.ar"
+    "email": "info@centromotorsa.com.ar",
+    "email_source": "web_publica",
+    "email_source_url": "https://www.centromotorsa.com.ar/",
+    "email_confidence": 0.8
   },
   {
     "name": "Dinosaurio Mall",
     "tipo": "comercio",
-    "email": "info@grupodinosaurio.com"
+    "email": "info@grupodinosaurio.com",
+    "email_source": "web_publica",
+    "email_source_url": "https://grupodinosaurio.com/",
+    "email_confidence": 0.8
   },
   {
     "name": "Systel S.A Balanzas y Basculas",
     "tipo": "comercio",
-    "email": "contacto@systel-global.com"
+    "email": "contacto@systel-global.com",
+    "email_source": "web_publica",
+    "email_source_url": "https://systel-global.com/argentina/",
+    "email_confidence": 0.75
   }
 ]

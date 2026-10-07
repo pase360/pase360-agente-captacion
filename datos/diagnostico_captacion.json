@@ -1,19 +1,19 @@
 {
   "por_tipo": {
-    "comercio": 927,
-    "generador": 9,
-    "dudoso": 52,
+    "comercio": 915,
+    "generador": 8,
+    "dudoso": 65,
     "descartado": 10,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 81,
-    "sin_email": 855,
-    "requiere_decision": 52,
+    "listo_para_contactar": 72,
+    "no_contactable_publicamente": 851,
+    "requiere_decision": 65,
     "descartado": 10
   },
   "sin_email_por_tipo": {
-    "comercio": 848,
+    "comercio": 844,
     "generador": 7,
     "otro": 0
   },
@@ -22,24 +22,14 @@
   },
   "generadores_muestra": [
     {
-      "name": "SushiClub",
-      "email": "contacto@sushiclub.com.ar",
-      "motivo": "club/institución deportiva con comunidad de miembros"
-    },
-    {
       "name": "Fundación Mueve",
       "email": "fundacion@mueve.org.ar",
       "motivo": "organización con afiliados, asociados o beneficiarios"
     },
     {
-      "name": "Cooperativa de Servicios",
+      "name": "Fundación Despegar",
       "email": "",
       "motivo": "organización con afiliados, asociados o beneficiarios"
-    },
-    {
-      "name": "Centro Vecinal Marcelo T. De alvear",
-      "email": "",
-      "motivo": "organización social con comunidad de miembros"
     },
     {
       "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
@@ -52,12 +42,12 @@
       "motivo": "organización con afiliados, asociados o beneficiarios"
     },
     {
-      "name": "Fundación Despegar",
+      "name": "Centro Vecinal Marcelo T. De alvear",
       "email": "",
-      "motivo": "organización con afiliados, asociados o beneficiarios"
+      "motivo": "organización social con comunidad de miembros"
     },
     {
-      "name": "Semacor - Mutual de SubOficiales del Ejercito",
+      "name": "Cooperativa de Servicios",
       "email": "",
       "motivo": "organización con afiliados, asociados o beneficiarios"
     },
@@ -65,57 +55,27 @@
       "name": "Jockey Club",
       "email": "",
       "motivo": "club/institución deportiva con comunidad de miembros"
+    },
+    {
+      "name": "Semacor - Mutual de SubOficiales del Ejercito",
+      "email": "",
+      "motivo": "organización con afiliados, asociados o beneficiarios"
     }
   ],
   "comercios_muestra": [
     {
-      "name": "mini Super",
-      "email": "minisuperas@gmail.com",
+      "name": "Alas Centro de Rehabilitación Integral Infantojuvenil",
+      "email": "info@centroalas.com.ar",
+      "motivo": "OSM: healthcare"
+    },
+    {
+      "name": "ALB",
+      "email": "ventas@albamoblamientos.com.ar",
       "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Café Martínez",
-      "email": "cordoba@cafemartinez.com.ar",
-      "motivo": "OSM: servicio/comercio"
-    },
-    {
-      "name": "Global Vip Transfer S.A.",
-      "email": "reservas@global-vip-transfer.com",
-      "motivo": "actividad comercial identificable"
-    },
-    {
-      "name": "Starbucks",
-      "email": "info@starbucks.com.ar",
-      "motivo": "OSM: servicio/comercio"
-    },
-    {
-      "name": "Quimica Halac",
-      "email": "info@quimicahalac.com.ar",
-      "motivo": "OSM: etiqueta shop"
-    },
-    {
-      "name": "Los Monos",
-      "email": "",
-      "motivo": "OSM: etiqueta shop"
-    },
-    {
-      "name": "Marozzi distribuidora",
-      "email": "ventas@bateriasmarozzi.com.ar",
-      "motivo": "OSM: etiqueta shop"
-    },
-    {
-      "name": "Capilla Santa Teresita",
-      "email": "vicariasantateresita@gmail.com",
-      "motivo": "actividad comercial identificable"
-    },
-    {
-      "name": "Fabrica Pc",
-      "email": "rvlevet@gmail.com",
-      "motivo": "OSM: etiqueta shop"
-    },
-    {
-      "name": "Gestor de Cordoba. Autos. Motos. Gonzalo 3512205097",
-      "email": "santinogigena@gmail.com",
+      "name": "Ames Motos",
+      "email": "ventas@amesmotos.com.ar",
       "motivo": "OSM: etiqueta shop"
     },
     {
@@ -124,24 +84,29 @@
       "motivo": "OSM: oficina comercial/profesional"
     },
     {
-      "name": "Deportes Iguazu",
-      "email": "deportesiguazu@gmail.com",
+      "name": "Avant",
+      "email": "marketing@avantpeugeot.com.ar",
       "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Poeta Soho",
-      "email": "poetasoho@gmail.com",
+      "name": "BAfarma - Farmacia Bosque Alvarez",
+      "email": "contacto@bafarma.com",
+      "motivo": "OSM: servicio/comercio"
+    },
+    {
+      "name": "Banco de Sangre – Instituto de Hematología y Hemoterapia  (UNC)",
+      "email": "direccionmedica@ihh.unc.edu.ar",
+      "motivo": "OSM: healthcare"
+    },
+    {
+      "name": "Bondio",
+      "email": "motosonline@bondio.com.ar",
       "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Puente de Estrellas",
-      "email": "puentedeestrellas.micael@gmail.com",
-      "motivo": "actividad comercial identificable"
-    },
-    {
-      "name": "Catalina Calzados",
-      "email": "catalinacalzados@outlook.com.ar",
-      "motivo": "OSM: etiqueta craft"
+      "name": "Café Martínez",
+      "email": "cordoba@cafemartinez.com.ar",
+      "motivo": "OSM: servicio/comercio"
     },
     {
       "name": "Chevromaxs",
@@ -149,23 +114,38 @@
       "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Farmacia Pedernera",
-      "email": "pedernerafarmacia@gmail.com",
+      "name": "Clinica Privada Gallia",
+      "email": "info@centrogallia.com",
       "motivo": "OSM: servicio/comercio"
     },
     {
-      "name": "Virmanic SA",
-      "email": "jvalles@virmanicsa.com",
-      "motivo": "OSM: oficina comercial/profesional"
-    },
-    {
-      "name": "Librería Blackpool",
-      "email": "blackpool@arnet.com.ar",
+      "name": "Delivery Paint",
+      "email": "deliverypaint@gmail.com",
       "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Venex Computacion",
-      "email": "consultas@venexcomputacion.com",
+      "name": "El Espejo Libros",
+      "email": "espejoventas@elespejolibros.com.ar",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Fabrica Pc",
+      "email": "rvlevet@gmail.com",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Luminotecnia",
+      "email": "info@luminotecnia.com.ar",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "OlmedoOdontologia",
+      "email": "consultorioolmedo@hotmail.com",
+      "motivo": "OSM: servicio/comercio"
+    },
+    {
+      "name": "Ópticas Lauricella",
+      "email": "opticas.lauricella@gmail.com",
       "motivo": "OSM: etiqueta shop"
     },
     {
@@ -174,29 +154,14 @@
       "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Las 2 Hermanas",
-      "email": "librerialasdoshermanas@gmail.com",
+      "name": "Quimica Halac",
+      "email": "info@quimicahalac.com.ar",
       "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "InfoNegocios",
-      "email": "correo@infonegocios.info",
-      "motivo": "actividad comercial identificable"
-    },
-    {
-      "name": "Imprenta Arguello",
-      "email": "laimprenta.arguello@gmail.com",
-      "motivo": "OSM: etiqueta shop"
-    },
-    {
-      "name": "Olmedo Odontología & Estética",
-      "email": "odontologiayestetica.cba@gmail.com",
-      "motivo": "OSM: servicio/comercio"
-    },
-    {
-      "name": "Centro para la salud Integral de la Mujer",
-      "email": "sacra@sacracordoba.com.ar",
-      "motivo": "OSM: servicio/comercio"
+      "name": "Qumana",
+      "email": "info@espacioqumana.com.ar",
+      "motivo": "OSM: healthcare"
     },
     {
       "name": "Roma Motos",
@@ -204,171 +169,201 @@
       "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Szumik",
-      "email": "info@szumik.com.ar",
+      "name": "Service Impresoras",
+      "email": "simpresoras@gmail.com",
       "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Maestre",
-      "email": "info@maestreiluminacion.com.ar",
+      "name": "Tagle",
+      "email": "info@taglerenault.com.ar",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Tecnoplus Casa Informática",
+      "email": "tecnoplus@live.com.ar",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Tienda Florencia",
+      "email": "florenciagrowshop@gmail.com",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Tienda Lexico - Moda y Complementos - Carteras, Mochilas, Valijas y Accesorios",
+      "email": "tiendalexico@mhtendencias.com.ar",
       "motivo": "OSM: etiqueta shop"
     },
     {
       "name": "Torralba",
       "email": "info@torralba.com.ar",
       "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Unifit",
+      "email": "hola@unifit.ar",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Xipa",
+      "email": "info.xipa@gmail.com",
+      "motivo": "OSM: oficina comercial/profesional"
+    },
+    {
+      "name": "Global Vip Transfer S.A.",
+      "email": "reservas@global-vip-transfer.com",
+      "motivo": "actividad comercial identificable"
     }
   ],
   "sin_email_muestra": [
+    {
+      "name": "Fundación Despegar",
+      "tipo": "generador",
+      "website": "www.despegar.org.ar"
+    },
+    {
+      "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "SUTEP Sindicato Espect. públicos",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Centro Vecinal Marcelo T. De alvear",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Cooperativa de Servicios",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Jockey Club",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Semacor - Mutual de SubOficiales del Ejercito",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Afema S.A",
+      "tipo": "comercio",
+      "website": "https://www.afema.com.ar/"
+    },
+    {
+      "name": "BORO CASA GOURMET",
+      "tipo": "comercio",
+      "website": "WWW.BORO.COM.AR"
+    },
+    {
+      "name": "Brüder Amoblamientos",
+      "tipo": "comercio",
+      "website": "http://wwww.brudervanguardia.com.ar/"
+    },
+    {
+      "name": "Guay Buby",
+      "tipo": "comercio",
+      "website": "https://guaybuby.com/10-juguetes-"
+    },
+    {
+      "name": "LIZI",
+      "tipo": "comercio",
+      "website": "https://www.instagram.com/lizi.cba"
+    },
     {
       "name": "Los Monos",
       "tipo": "comercio",
       "website": "www.cristiancabanillas"
     },
     {
-      "name": "Vea",
+      "name": "Maxikiosco Tortuga",
       "tipo": "comercio",
-      "website": ""
+      "website": "http://www.facebook.com/maxikioscotortuga"
     },
     {
-      "name": "Hipermercado La Anonima",
+      "name": "Reset Argentina",
       "tipo": "comercio",
-      "website": ""
+      "website": "https://resetargentina.com.ar/"
     },
     {
-      "name": "Del Sol",
+      "name": "Rockería Trashed",
       "tipo": "comercio",
-      "website": ""
+      "website": "https://www.facebook.com/rockeriatrashed"
     },
     {
-      "name": "Las mejores del mundo",
+      "name": "Ruben Libros",
       "tipo": "comercio",
-      "website": ""
+      "website": "web.facebook.com/RubenLibros/"
     },
     {
-      "name": "Equus",
+      "name": "Top Ten 10",
       "tipo": "comercio",
-      "website": ""
+      "website": "https://topten10cba.mitiendanube.com/"
     },
     {
-      "name": "Electronia",
+      "name": "Zona de Cactus",
       "tipo": "comercio",
-      "website": ""
+      "website": "https://zonadecactus.com.ar/"
     },
     {
-      "name": "Disco",
+      "name": "Nails & Co.",
       "tipo": "comercio",
-      "website": ""
+      "website": "https://nailsandco.com.ar/"
     },
     {
-      "name": "Del Pilar",
+      "name": "Pallás",
       "tipo": "comercio",
-      "website": ""
+      "website": "http://www.santiagopallas.com.ar/"
     },
     {
-      "name": "Pafua",
+      "name": "Estado Play",
       "tipo": "comercio",
-      "website": ""
+      "website": "https://estado-play.business.site/"
     },
     {
-      "name": "Disco",
+      "name": "Garbarino",
       "tipo": "comercio",
-      "website": ""
+      "website": "https://www.garbarino.com/"
     },
     {
-      "name": "Buenos Días",
+      "name": "Garbarino",
       "tipo": "comercio",
-      "website": ""
+      "website": "https://ar.garbarinoviajes.com/"
     },
     {
-      "name": "Todo Suspensión",
+      "name": "Gosur",
       "tipo": "comercio",
-      "website": ""
+      "website": "http://www.gosur.com"
     },
     {
-      "name": "El Sotano",
+      "name": "Neumaticos El Dany",
       "tipo": "comercio",
-      "website": ""
+      "website": "https://www.eldanyneumaticos.com.ar/"
     },
     {
-      "name": "El Sotano",
+      "name": "Procel Mayorista",
       "tipo": "comercio",
-      "website": ""
+      "website": "https://www.procel-accesorios.com.ar/"
     },
     {
-      "name": "Supermercado La Anonima Poeta Lugones",
+      "name": "Tattoo Amilkar",
       "tipo": "comercio",
-      "website": ""
+      "website": "https://m.facebook.com/AmilkarTattooEstudio"
     },
     {
-      "name": "Supermercado chino",
+      "name": "Clickylisto",
       "tipo": "comercio",
-      "website": ""
+      "website": "https://clickylisto.com.ar/"
     },
     {
-      "name": "Black sheep",
+      "name": "Lobbyx",
       "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Renault Minuto",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Cordiez",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Dinosaurio",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Lave-Rap",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Don Paco",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Embragues Córdoba",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Piaccere",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Ones",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Trezzeri",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Los Kane",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Alejandra",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Lucho",
-      "tipo": "comercio",
-      "website": ""
+      "website": "https://xiaomicordoba.com.ar/"
     }
   ],
   "dudosos_muestra": [
@@ -377,11 +372,23 @@
       "motivo": "sin evidencia suficiente para clasificar"
     },
     {
+      "name": "Capilla Santa Teresita",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
       "name": "Instituto Privado Deán Funes",
       "motivo": "sin evidencia suficiente para clasificar"
     },
     {
+      "name": "Puente de Estrellas",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
       "name": "Parroquia Nuestra Señora del Carmen",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "InfoNegocios",
       "motivo": "sin evidencia suficiente para clasificar"
     },
     {
@@ -398,7 +405,23 @@
     },
     {
       "name": "Academia Arguello",
-      "motivo": "organización sin evidencia suficiente"
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Centro de Investigaciones y Estudios sobre Cultura y Sociedad (CIECS)",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Quinto Deva",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Colegio Gabriel Taborín",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Colegio Santa Teresita",
+      "motivo": "sin evidencia suficiente para clasificar"
     },
     {
       "name": "IPET N° 249 Nicolás Copérnico",
@@ -409,11 +432,19 @@
       "motivo": "sin evidencia suficiente para clasificar"
     },
     {
+      "name": "Colegio Nacional de Monserrat",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
       "name": "ANSES",
       "motivo": "sin evidencia suficiente para clasificar"
     },
     {
       "name": "Oficina de Licencias de Conducir",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Dirección General de Rentas - Receptoría",
       "motivo": "sin evidencia suficiente para clasificar"
     },
     {
@@ -455,60 +486,29 @@
     {
       "name": "Instituto de Educación Superior \"Doctor Domingo Cabred\"",
       "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "Ex-Legislatura de la Provincia de Córdoba",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "B Com 141",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "El Doce TV",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "Instituto Superior de Formacón Docenete Reneé Trettel de Fabián",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "seccionweb",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "Consulado General de España",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "Consulado de Chile",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "KIRI",
-      "motivo": "sin evidencia suficiente para clasificar"
-    },
-    {
-      "name": "CIRSE",
-      "motivo": "sin evidencia suficiente para clasificar"
     }
   ],
   "duplicados": 2,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "listos_detectados": 81,
-  "listos_seleccionados": 81,
-  "listos_comercio": 79,
-  "listos_generador": 2,
+  "enriquecidos": 923,
+  "emails_encontrados": 72,
+  "listos_detectados": 72,
+  "listos_seleccionados": 72,
+  "listos_comercio": 71,
+  "listos_generador": 1,
   "clasificados": 998,
   "cuadre": {
     "clasificacion_total": 998,
     "estado_total": 998,
     "cuadra": true
   },
-  "encontrados": 1732,
+  "encontrados": 1733,
   "procesados": 1000,
   "nuevos": 988,
   "descartados": 10,
-  "excluidos": 2
+  "excluidos": 2,
+  "meta_alcanzada": false,
+  "faltantes_para_meta": 28,
+  "busquedas_publicas_realizadas": 1000
 }
