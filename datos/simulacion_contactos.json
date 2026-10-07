@@ -404,7 +404,7 @@
     "tipo": "comercio",
     "email": "unpkg.com/web-vitals@3.5.2",
     "email_source": "web_publica",
-    "email_source_url": "https://www.riesimona.com.ar/",
+    "email_source_url": "https://riesimona.com.ar/",
     "email_confidence": 1.0
   },
   {
@@ -541,6 +541,14 @@
     "email": "marosibikes@gmail.com",
     "email_source": "web_publica",
     "email_source_url": "https://marosibikes.com/contacto/",
+    "email_confidence": 0.95
+  },
+  {
+    "name": "Mercadito Natural",
+    "tipo": "comercio",
+    "email": "info.mercaditonatural@gmail.com",
+    "email_source": "web_publica",
+    "email_source_url": "http://mercaditonatural.blogspot.com/",
     "email_confidence": 0.95
   },
   {

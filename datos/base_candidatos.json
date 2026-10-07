@@ -7475,7 +7475,7 @@
       "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
       "office": "association",
       "opening_hours": "Mo-Fr 09:00-18:45",
-      "phone": "+54 351 480 1139"
+      "phone": "0351 480-1139"
     }
   },
   {
@@ -32355,6 +32355,1893 @@
       "highway": "bus_stop",
       "name": "colegio Vergonjeanne",
       "public_transport": "platform"
+    }
+  },
+  {
+    "name": "Club Estudiantes",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:1502351834",
+    "grupo_fuente": "generador",
+    "lat": -31.3655204,
+    "lon": -64.1974984,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Estudiantes"
+    }
+  },
+  {
+    "name": "Polideportivo Carlos Ceruti",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Martín Alonso Pinzón 1050, Ciudad de Cordoba",
+    "source": "generadores_clubes",
+    "source_id": "node:1502500177",
+    "grupo_fuente": "generador",
+    "lat": -31.3916961,
+    "lon": -64.1937445,
+    "tags": {
+      "addr:city": "Ciudad de Cordoba",
+      "addr:housenumber": "1050",
+      "addr:postcode": "5000",
+      "addr:street": "Martín Alonso Pinzón",
+      "alt_name": "Polideportivo Municipal Carlos Cerutti",
+      "capacity": "3500",
+      "description": "Estadio cubierto. Su atracción principal es basquet, también se pueden practicar deportes como: el voley, gimnasia rítmica y handbal.",
+      "leisure": "sports_centre",
+      "name": "Polideportivo Carlos Ceruti",
+      "sport": "basketball;volleyball;handball",
+      "wikidata": "Q7209718",
+      "wikipedia": "es:Polideportivo Municipal Carlos Cerutti"
+    }
+  },
+  {
+    "name": "TDS",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:1912984924",
+    "grupo_fuente": "generador",
+    "lat": -31.3655689,
+    "lon": -64.2788834,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "TDS",
+      "sport": "gymnastics"
+    }
+  },
+  {
+    "name": "Movimiento Activo",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Avenida del Piamonte 5022, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "node:1912987815",
+    "grupo_fuente": "generador",
+    "lat": -31.3770692,
+    "lon": -64.2561695,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "5022",
+      "addr:postcode": "5021",
+      "addr:street": "Avenida del Piamonte",
+      "leisure": "sports_centre",
+      "name": "Movimiento Activo",
+      "source": "survey",
+      "sport": "gymnastics"
+    }
+  },
+  {
+    "name": "Asociación Cordobesa de Aikido",
+    "email": "",
+    "website": "http://www.aikidoaikido.com.ar/",
+    "phone": "",
+    "direccion": "Avenida Marcelo T. de Alvear 577, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "node:3043602734",
+    "grupo_fuente": "generador",
+    "lat": -31.4212527,
+    "lon": -64.1906053,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "577",
+      "addr:street": "Avenida Marcelo T. de Alvear",
+      "leisure": "sports_centre",
+      "name": "Asociación Cordobesa de Aikido",
+      "opening_hours": "Mo,We,Fr 18:30-20:45; Tu,Th 11:00-12:00",
+      "source": "http://www.aikidoaikido.com.ar/",
+      "sport": "aikido;judo;kendo;iaido",
+      "website": "http://www.aikidoaikido.com.ar/"
+    }
+  },
+  {
+    "name": "Centro Vecinal de Villa Adela - Playón deportivo",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:3085039447",
+    "grupo_fuente": "generador",
+    "lat": -31.4369698,
+    "lon": -64.2472271,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Centro Vecinal de Villa Adela - Playón deportivo",
+      "sport": "basketball"
+    }
+  },
+  {
+    "name": "María Pía Gym",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:3279552571",
+    "grupo_fuente": "generador",
+    "lat": -31.2994477,
+    "lon": -64.2850267,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "María Pía Gym"
+    }
+  },
+  {
+    "name": "SEP - Sindicato de Empleados Públicos",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:3306920013",
+    "grupo_fuente": "generador",
+    "lat": -31.3071052,
+    "lon": -64.3094975,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "SEP - Sindicato de Empleados Públicos"
+    }
+  },
+  {
+    "name": "Club Atlético Yapeyú",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Juan Roque",
+    "source": "generadores_clubes",
+    "source_id": "node:3684839383",
+    "grupo_fuente": "generador",
+    "lat": -31.4138186,
+    "lon": -64.1511546,
+    "tags": {
+      "addr:housename": "150",
+      "addr:street": "Juan Roque",
+      "leisure": "sports_centre",
+      "name": "Club Atlético Yapeyú"
+    }
+  },
+  {
+    "name": "S.U.M de la Escuela Almirante G. Brown",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Zavalía, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "node:3742053637",
+    "grupo_fuente": "generador",
+    "lat": -31.392174,
+    "lon": -64.1382594,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:country": "AR",
+      "addr:postcode": "5012",
+      "addr:street": "Zavalía",
+      "leisure": "sports_centre",
+      "lit": "yes",
+      "name": "S.U.M de la Escuela Almirante G. Brown",
+      "source": "María Eugenia Cesar",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Polideportivo Corral de Palos",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Ernesto Enrique Guastoni 3498, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "node:4096433529",
+    "grupo_fuente": "generador",
+    "lat": -31.4394202,
+    "lon": -64.1411236,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housename": "Polideportivo Corral de Palos",
+      "addr:housenumber": "3498",
+      "addr:postcode": "5014",
+      "addr:street": "Ernesto Enrique Guastoni",
+      "building": "public",
+      "designation": "Polideportivo",
+      "leisure": "sports_centre",
+      "name": "Polideportivo Corral de Palos"
+    }
+  },
+  {
+    "name": "Escuela de Deporte Marcelo Bonetto",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:4219904292",
+    "grupo_fuente": "generador",
+    "lat": -31.4406107,
+    "lon": -64.1643093,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Escuela de Deporte Marcelo Bonetto"
+    }
+  },
+  {
+    "name": "Club Atlético General Paz -Junior´s",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Avenida Álvarez de Arenales 520, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "node:4371647772",
+    "grupo_fuente": "generador",
+    "lat": -31.4222833,
+    "lon": -64.168093,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "520",
+      "addr:postcode": "5000",
+      "addr:street": "Avenida Álvarez de Arenales",
+      "description": "Abierto de 8:00-0:00 de Domingo a Sábado. Tel 0351-4512093 http://gralpazjuniors.com.ar Excelente club familiar que cuenta con diversas actividades. Actualmente mejorando el estado de sus canchas de handball y basquet, vestuarios y la seguridad.",
+      "leisure": "sports_centre",
+      "name": "Club Atlético General Paz -Junior´s"
+    }
+  },
+  {
+    "name": "Soccer World. Complejo deportivo Las Casuarinas",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:5972982842",
+    "grupo_fuente": "generador",
+    "lat": -31.3042783,
+    "lon": -64.1273894,
+    "tags": {
+      "alt_name": "La Pepa",
+      "leisure": "sports_centre",
+      "name": "Soccer World. Complejo deportivo Las Casuarinas",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Polideportivo UTN",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:6104758567",
+    "grupo_fuente": "generador",
+    "lat": -31.490275,
+    "lon": -64.2514334,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Polideportivo UTN"
+    }
+  },
+  {
+    "name": "CBA X Escalada",
+    "email": "programa.cbax@gmail.com",
+    "website": "https://cbax.cba.gov.ar/federacion-tierra/escalada/",
+    "phone": "+54 351 434 8360; +54 351 434 8367",
+    "direccion": "Bulevar Parque del Kempes, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "node:8047907288",
+    "grupo_fuente": "generador",
+    "lat": -31.3634304,
+    "lon": -64.2436389,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:postcode": "X5021",
+      "addr:street": "Bulevar Parque del Kempes",
+      "email": "programa.cbax@gmail.com",
+      "leisure": "sports_centre",
+      "name": "CBA X Escalada",
+      "operator": "Gobierno de Córdoba",
+      "operator:type": "government",
+      "phone": "+54 351 434 8360; +54 351 434 8367",
+      "sport": "climbing",
+      "website": "https://cbax.cba.gov.ar/federacion-tierra/escalada/"
+    }
+  },
+  {
+    "name": "Don Tito",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "De las Cortaderas, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "node:11126553100",
+    "grupo_fuente": "generador",
+    "lat": -31.3683082,
+    "lon": -64.1200039,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:street": "De las Cortaderas",
+      "contact:facebook": "https://www.facebook.com/complejodontino/",
+      "leisure": "sports_centre",
+      "name": "Don Tito"
+    }
+  },
+  {
+    "name": "Avista",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:12138112970",
+    "grupo_fuente": "generador",
+    "lat": -31.4252461,
+    "lon": -64.1933687,
+    "tags": {
+      "check_date": "2024-08-24",
+      "leisure": "sports_centre",
+      "name": "Avista",
+      "sport": "climbing"
+    }
+  },
+  {
+    "name": "Club Atlético Palermo",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:13255857595",
+    "grupo_fuente": "generador",
+    "lat": -31.4264297,
+    "lon": -64.1436538,
+    "tags": {
+      "club": "sport",
+      "leisure": "sports_centre",
+      "name": "Club Atlético Palermo"
+    }
+  },
+  {
+    "name": "La Raquette",
+    "email": "",
+    "website": "",
+    "phone": "+54 9 3512 94-1013",
+    "direccion": "Mariano Moreno 376, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "node:14042840990",
+    "grupo_fuente": "generador",
+    "lat": -31.4166034,
+    "lon": -64.199265,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "376",
+      "addr:street": "Mariano Moreno",
+      "leisure": "sports_centre",
+      "name": "La Raquette",
+      "phone": "+54 9 3512 94-1013",
+      "sport": "padel;soccer;squash;table_tennis"
+    }
+  },
+  {
+    "name": "Estadio Monumental Presidente Perón",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Jujuy 2602, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "way:31474812",
+    "grupo_fuente": "generador",
+    "lat": -31.38367,
+    "lon": -64.180403,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "2602",
+      "addr:street": "Jujuy",
+      "leisure": "stadium",
+      "name": "Estadio Monumental Presidente Perón",
+      "sport": "soccer",
+      "wikidata": "Q3495828",
+      "wikimedia_commons": "Category:Estadio Juan Domingo Perón (Instituto)",
+      "wikipedia": "es:Estadio Juan Domingo Perón"
+    }
+  },
+  {
+    "name": "Estadio Francisco Cabasés",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:68461127",
+    "grupo_fuente": "generador",
+    "lat": -31.4492419,
+    "lon": -64.1753053,
+    "tags": {
+      "alt_name": "La Boutique",
+      "leisure": "stadium",
+      "name": "Estadio Francisco Cabasés",
+      "operator": "Club Atlético Talleres",
+      "sport": "soccer",
+      "wikidata": "Q1369082",
+      "wikipedia": "es:Estadio Francisco Cabasés"
+    }
+  },
+  {
+    "name": "UN Paddle Club",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:139314466",
+    "grupo_fuente": "generador",
+    "lat": -31.4368823,
+    "lon": -64.181956,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "UN Paddle Club"
+    }
+  },
+  {
+    "name": "Estadio Mario Alberto Kempes",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:154248210",
+    "grupo_fuente": "generador",
+    "lat": -31.3689196,
+    "lon": -64.2461537,
+    "tags": {
+      "leisure": "stadium",
+      "name": "Estadio Mario Alberto Kempes",
+      "sport": "multi",
+      "wikidata": "Q1062157",
+      "wikimedia_commons": "Category:Estadio Córdoba",
+      "wikipedia": "es:Estadio Mario Alberto Kempes"
+    }
+  },
+  {
+    "name": "Complejo Don Balon",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:154253279",
+    "grupo_fuente": "generador",
+    "lat": -31.3554324,
+    "lon": -64.2304242,
+    "tags": {
+      "landuse": "meadow",
+      "leisure": "sports_centre",
+      "name": "Complejo Don Balon",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Jockey Club Córdoba",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:163098853",
+    "grupo_fuente": "generador",
+    "lat": -31.4545858,
+    "lon": -64.1818369,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Jockey Club Córdoba",
+      "wikidata": "Q8430339",
+      "wikipedia": "es:Jockey Club Córdoba"
+    }
+  },
+  {
+    "name": "Club Universitario de Córdoba",
+    "email": "administracion@clubuniversitariocba.com",
+    "website": "https://clubuniversitariocba.com/",
+    "phone": "",
+    "direccion": "Hipólito Vieytes 550, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "way:163732495",
+    "grupo_fuente": "generador",
+    "lat": -31.4125646,
+    "lon": -64.2156586,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "550",
+      "addr:street": "Hipólito Vieytes",
+      "contact:instagram": "clubuniversitariocba.oficial",
+      "email": "administracion@clubuniversitariocba.com",
+      "leisure": "sports_centre",
+      "mobile": "+5493517164160",
+      "name": "Club Universitario de Córdoba",
+      "short_name": "La U",
+      "sport": "basketball;soccer;tennis;swimming;volleyball;field_hockey;rugby_league;handball",
+      "website": "https://clubuniversitariocba.com/"
+    }
+  },
+  {
+    "name": "Club Argentino Peñarol",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:164608684",
+    "grupo_fuente": "generador",
+    "lat": -31.3271601,
+    "lon": -64.2585458,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Argentino Peñarol",
+      "sport": "soccer",
+      "surface": "gravel"
+    }
+  },
+  {
+    "name": "ACV",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:164874619",
+    "grupo_fuente": "generador",
+    "lat": -31.2807059,
+    "lon": -64.2357453,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "ACV",
+      "sport": "motor"
+    }
+  },
+  {
+    "name": "Estadio Julio César Villagra",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:182759265",
+    "grupo_fuente": "generador",
+    "lat": -31.4034972,
+    "lon": -64.206305,
+    "tags": {
+      "leisure": "stadium",
+      "name": "Estadio Julio César Villagra",
+      "sport": "soccer",
+      "wheelchair": "limited",
+      "wikidata": "Q1369290",
+      "wikimedia_commons": "Category:Estadio Julio César Villagra",
+      "wikipedia": "es:Estadio Julio César Villagra"
+    }
+  },
+  {
+    "name": "Estadio La Talquera",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:182766546",
+    "grupo_fuente": "generador",
+    "lat": -31.4206585,
+    "lon": -64.126826,
+    "tags": {
+      "leisure": "stadium",
+      "name": "Estadio La Talquera",
+      "operator": "C.A. Unión San Vicente",
+      "operator:wikidata": "Q5774886",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Club General Paz Juniors",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:182768557",
+    "grupo_fuente": "generador",
+    "lat": -31.4221043,
+    "lon": -64.1676923,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club General Paz Juniors",
+      "sport": "multi"
+    }
+  },
+  {
+    "name": "La Gran 7",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:183183622",
+    "grupo_fuente": "generador",
+    "lat": -31.4348503,
+    "lon": -64.1812498,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "La Gran 7",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Club Barrio Parque",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Lagunilla",
+    "source": "generadores_clubes",
+    "source_id": "way:189400292",
+    "grupo_fuente": "generador",
+    "lat": -31.4375327,
+    "lon": -64.2182088,
+    "tags": {
+      "addr:street": "Lagunilla",
+      "leisure": "sports_centre",
+      "name": "Club Barrio Parque",
+      "sport": "soccer;basketball;tennis",
+      "wikidata": "Q16549717",
+      "wikimedia_commons": "Category:Club Atlético Barrio Parque",
+      "wikipedia": "es:Club Atlético Barrio Parque"
+    }
+  },
+  {
+    "name": "Estadio Club Atalaya",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:208364438",
+    "grupo_fuente": "generador",
+    "lat": -31.3376834,
+    "lon": -64.2525086,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Estadio Club Atalaya"
+    }
+  },
+  {
+    "name": "Polideportivo Padre Luis Maria Monti",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:208507520",
+    "grupo_fuente": "generador",
+    "lat": -31.3841484,
+    "lon": -64.2172351,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Polideportivo Padre Luis Maria Monti",
+      "sport": "multi"
+    }
+  },
+  {
+    "name": "Club La Tablada",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:208508478",
+    "grupo_fuente": "generador",
+    "lat": -31.3867091,
+    "lon": -64.2334506,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club La Tablada"
+    }
+  },
+  {
+    "name": "Club Atlético Las Palmas",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:210687215",
+    "grupo_fuente": "generador",
+    "lat": -31.4049027,
+    "lon": -64.2382731,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Atlético Las Palmas"
+    }
+  },
+  {
+    "name": "Club Quilmes - Villa Allende",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:234370161",
+    "grupo_fuente": "generador",
+    "lat": -31.2839876,
+    "lon": -64.2993553,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Quilmes - Villa Allende",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Tala Rugby Club",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:235666749",
+    "grupo_fuente": "generador",
+    "lat": -31.340302,
+    "lon": -64.2971459,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Tala Rugby Club",
+      "sport": "rugby_union;field_hockey;tennis",
+      "wikidata": "Q7678745",
+      "wikimedia_commons": "Category:Tala Rugby Club",
+      "wikipedia": "es:Tala Rugby Club"
+    }
+  },
+  {
+    "name": "Club Atlético Racing de Córdoba",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Hernán Huberman 1750, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "way:238810815",
+    "grupo_fuente": "generador",
+    "lat": -31.3895435,
+    "lon": -64.1433822,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "1750",
+      "addr:postcode": "5000",
+      "addr:street": "Hernán Huberman",
+      "alt_name": "Estadio Miguel Sancho",
+      "leisure": "stadium",
+      "name": "Club Atlético Racing de Córdoba",
+      "sport": "soccer",
+      "wikidata": "Q5848146",
+      "wikipedia": "es:Estadio Miguel Sancho"
+    }
+  },
+  {
+    "name": "Club Banco de Córdoba",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:238822107",
+    "grupo_fuente": "generador",
+    "lat": -31.3395536,
+    "lon": -64.2755281,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Banco de Córdoba"
+    }
+  },
+  {
+    "name": "Campo de Deportes La Salle",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:239154835",
+    "grupo_fuente": "generador",
+    "lat": -31.3548226,
+    "lon": -64.2626468,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Campo de Deportes La Salle",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "name": "Natación",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:241676026",
+    "grupo_fuente": "generador",
+    "lat": -31.4133436,
+    "lon": -64.2155445,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Natación",
+      "sport": "swimming"
+    }
+  },
+  {
+    "name": "Espacio Quality",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:248393806",
+    "grupo_fuente": "generador",
+    "lat": -31.4446777,
+    "lon": -64.1953359,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Espacio Quality"
+    }
+  },
+  {
+    "name": "Hindu Club",
+    "email": "",
+    "website": "",
+    "phone": "+54 351 451 9402",
+    "direccion": "Sarmiento 1250, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "way:265237835",
+    "grupo_fuente": "generador",
+    "lat": -31.4110822,
+    "lon": -64.1676231,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "1250",
+      "addr:postcode": "X5004EYP",
+      "addr:street": "Sarmiento",
+      "leisure": "sports_centre",
+      "name": "Hindu Club",
+      "phone": "+54 351 451 9402"
+    }
+  },
+  {
+    "name": "Club All Boys",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:286697254",
+    "grupo_fuente": "generador",
+    "lat": -31.439678,
+    "lon": -64.2264513,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club All Boys"
+    }
+  },
+  {
+    "name": "Club Atlético Bella Vista",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:286698290",
+    "grupo_fuente": "generador",
+    "lat": -31.4312236,
+    "lon": -64.2046357,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Atlético Bella Vista",
+      "wikidata": "Q16491022",
+      "wikipedia": "es:Club Atlético Bella Vista (Córdoba)"
+    }
+  },
+  {
+    "name": "Club Atlético Huracán",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Rafael Candia, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "way:286702493",
+    "grupo_fuente": "generador",
+    "lat": -31.3729078,
+    "lon": -64.2120239,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:postcode": "5000",
+      "addr:street": "Rafael Candia",
+      "leisure": "sports_centre",
+      "name": "Club Atlético Huracán",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Club Alas Argentinas",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:286710524",
+    "grupo_fuente": "generador",
+    "lat": -31.4190885,
+    "lon": -64.2285762,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Alas Argentinas"
+    }
+  },
+  {
+    "name": "Anexo Tala Rugby Club",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:287164410",
+    "grupo_fuente": "generador",
+    "lat": -31.3382214,
+    "lon": -64.3075201,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Anexo Tala Rugby Club"
+    }
+  },
+  {
+    "name": "UCFA",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:287799146",
+    "grupo_fuente": "generador",
+    "lat": -31.3218004,
+    "lon": -64.1896389,
+    "tags": {
+      "int_name": "Union Cordobesa de Fútbol Amateur",
+      "leisure": "sports_centre",
+      "name": "UCFA",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Córdoba Paddle",
+    "email": "",
+    "website": "",
+    "phone": "+543514649853",
+    "direccion": "Del Comercio 857",
+    "source": "generadores_clubes",
+    "source_id": "way:295761430",
+    "grupo_fuente": "generador",
+    "lat": -31.4432385,
+    "lon": -64.1835664,
+    "tags": {
+      "addr:housenumber": "857",
+      "addr:street": "Del Comercio",
+      "leisure": "sports_centre",
+      "name": "Córdoba Paddle",
+      "phone": "+543514649853",
+      "sport": "paddle_tennis"
+    }
+  },
+  {
+    "name": "Arabian",
+    "email": "",
+    "website": "",
+    "phone": "+5493515398206",
+    "direccion": "República del Libano 399",
+    "source": "generadores_clubes",
+    "source_id": "way:295761431",
+    "grupo_fuente": "generador",
+    "lat": -31.3959751,
+    "lon": -64.173389,
+    "tags": {
+      "addr:housenumber": "399",
+      "addr:street": "República del Libano",
+      "leisure": "sports_centre",
+      "name": "Arabian",
+      "phone": "+5493515398206",
+      "sport": "paddle_tennis"
+    }
+  },
+  {
+    "name": "Espacio O2",
+    "email": "",
+    "website": "",
+    "phone": "+543514715307",
+    "direccion": "Faustino Allende 1045",
+    "source": "generadores_clubes",
+    "source_id": "way:295761432",
+    "grupo_fuente": "generador",
+    "lat": -31.399115,
+    "lon": -64.1921644,
+    "tags": {
+      "addr:housenumber": "1045",
+      "addr:street": "Faustino Allende",
+      "leisure": "sports_centre",
+      "name": "Espacio O2",
+      "phone": "+543514715307",
+      "sport": "multi"
+    }
+  },
+  {
+    "name": "Córdoba Athletic Club",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:304037670",
+    "grupo_fuente": "generador",
+    "lat": -31.4505291,
+    "lon": -64.1742986,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Córdoba Athletic Club",
+      "sport": "rugby_union;tennis",
+      "wikidata": "Q5202720",
+      "wikipedia": "es:Córdoba Athletic Club"
+    }
+  },
+  {
+    "name": "Club Atlético Las Flores",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:304038366",
+    "grupo_fuente": "generador",
+    "lat": -31.4558242,
+    "lon": -64.1949639,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Atlético Las Flores",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Club Palermo Bajo",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:304121094",
+    "grupo_fuente": "generador",
+    "lat": -31.3374228,
+    "lon": -64.2340667,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Palermo Bajo",
+      "sport": "rugby_union"
+    }
+  },
+  {
+    "name": "Club Atlético Villa Azalais",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Avenida Arturo Capdevila, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "way:304140982",
+    "grupo_fuente": "generador",
+    "lat": -31.3783789,
+    "lon": -64.155073,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:postcode": "5000",
+      "addr:street": "Avenida Arturo Capdevila",
+      "leisure": "sports_centre",
+      "name": "Club Atlético Villa Azalais",
+      "sport": "multi"
+    }
+  },
+  {
+    "name": "Estadio Emeterio Farías",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:307246166",
+    "grupo_fuente": "generador",
+    "lat": -31.3336623,
+    "lon": -64.184769,
+    "tags": {
+      "leisure": "stadium",
+      "name": "Estadio Emeterio Farías",
+      "note": "Estadio de la Liga Cordobesa de Fútbol",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Club Defensores Juveniles",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:307820339",
+    "grupo_fuente": "generador",
+    "lat": -31.3310469,
+    "lon": -64.2151189,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Defensores Juveniles"
+    }
+  },
+  {
+    "name": "Club Teléfonos Córdoba",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:308827634",
+    "grupo_fuente": "generador",
+    "lat": -31.3693708,
+    "lon": -64.2401955,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Teléfonos Córdoba"
+    }
+  },
+  {
+    "name": "Club Atlético Argentino Central \"La Charla\"",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:314518006",
+    "grupo_fuente": "generador",
+    "lat": -31.3857741,
+    "lon": -64.1665338,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Atlético Argentino Central \"La Charla\"",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Club Villa Retiro",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:317146191",
+    "grupo_fuente": "generador",
+    "lat": -31.3428342,
+    "lon": -64.148376,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Villa Retiro"
+    }
+  },
+  {
+    "name": "Club Comunicaciones",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Avenida Don Bosco, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "way:354900596",
+    "grupo_fuente": "generador",
+    "lat": -31.4005663,
+    "lon": -64.2592175,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:postcode": "5003",
+      "addr:street": "Avenida Don Bosco",
+      "leisure": "sports_centre",
+      "name": "Club Comunicaciones",
+      "sport": "club"
+    }
+  },
+  {
+    "name": "Club Deportivo Lasallano",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:358451189",
+    "grupo_fuente": "generador",
+    "lat": -31.3532366,
+    "lon": -64.262499,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Deportivo Lasallano",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "name": "Instituto Atlético Central Córdoba",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Jujuy 2602, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "way:375116725",
+    "grupo_fuente": "generador",
+    "lat": -31.3840308,
+    "lon": -64.1804155,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "2602",
+      "addr:street": "Jujuy",
+      "leisure": "sports_centre",
+      "name": "Instituto Atlético Central Córdoba",
+      "sport": "soccer;swimming"
+    }
+  },
+  {
+    "name": "La Rufina Club",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:402045268",
+    "grupo_fuente": "generador",
+    "lat": -31.3486447,
+    "lon": -64.310945,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "La Rufina Club"
+    }
+  },
+  {
+    "name": "Area de deportes Colegio Dante Alighieri - Ex Club YPF",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:428999208",
+    "grupo_fuente": "generador",
+    "lat": -31.443771,
+    "lon": -64.1906084,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Area de deportes Colegio Dante Alighieri - Ex Club YPF"
+    }
+  },
+  {
+    "name": "Gimnasio",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:438077774",
+    "grupo_fuente": "generador",
+    "lat": -31.4365146,
+    "lon": -64.1849279,
+    "tags": {
+      "building": "yes",
+      "leisure": "sports_centre",
+      "name": "Gimnasio"
+    }
+  },
+  {
+    "name": "Sindicato de Farmacia",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:484722115",
+    "grupo_fuente": "generador",
+    "lat": -31.486466,
+    "lon": -64.1725052,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Sindicato de Farmacia",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Arabian Paddle Club",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "República del Libano",
+    "source": "generadores_clubes",
+    "source_id": "way:556132592",
+    "grupo_fuente": "generador",
+    "lat": -31.3957244,
+    "lon": -64.1745752,
+    "tags": {
+      "addr:street": "República del Libano",
+      "leisure": "sports_centre",
+      "name": "Arabian Paddle Club"
+    }
+  },
+  {
+    "name": "Club Audax Córdoba",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:575367059",
+    "grupo_fuente": "generador",
+    "lat": -31.4370265,
+    "lon": -64.1243434,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Audax Córdoba"
+    }
+  },
+  {
+    "name": "Les Courts",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:673760307",
+    "grupo_fuente": "generador",
+    "lat": -31.3609205,
+    "lon": -64.246639,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Les Courts"
+    }
+  },
+  {
+    "name": "Escuela de Natación Swim",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:673760313",
+    "grupo_fuente": "generador",
+    "lat": -31.3620884,
+    "lon": -64.2547663,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Escuela de Natación Swim",
+      "sport": "swimming"
+    }
+  },
+  {
+    "name": "El Balcón",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:685153532",
+    "grupo_fuente": "generador",
+    "lat": -31.3809641,
+    "lon": -64.2124543,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "El Balcón",
+      "sport": "paddle"
+    }
+  },
+  {
+    "name": "El Potrero",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:686996034",
+    "grupo_fuente": "generador",
+    "lat": -31.3497996,
+    "lon": -64.2348744,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "El Potrero"
+    }
+  },
+  {
+    "name": "Complejo  Atalaya",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:746522632",
+    "grupo_fuente": "generador",
+    "lat": -31.3388935,
+    "lon": -64.2538729,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Complejo  Atalaya",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Centro Deportivo Talleres Oeste",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1038125232",
+    "grupo_fuente": "generador",
+    "lat": -31.3897998,
+    "lon": -64.1548967,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Centro Deportivo Talleres Oeste"
+    }
+  },
+  {
+    "name": "Parque Educativo Norte",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1066234480",
+    "grupo_fuente": "generador",
+    "lat": -31.3723376,
+    "lon": -64.1923833,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Parque Educativo Norte"
+    }
+  },
+  {
+    "name": "Club Municipalidad de Córdoba",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1083294018",
+    "grupo_fuente": "generador",
+    "lat": -31.3834636,
+    "lon": -64.1871359,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Municipalidad de Córdoba"
+    }
+  },
+  {
+    "name": "Club Villa Siburu",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1093708444",
+    "grupo_fuente": "generador",
+    "lat": -31.3950314,
+    "lon": -64.2300442,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Villa Siburu"
+    }
+  },
+  {
+    "name": "Club Atlético Los Andes",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1104542365",
+    "grupo_fuente": "generador",
+    "lat": -31.4430923,
+    "lon": -64.1338308,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Atlético Los Andes"
+    }
+  },
+  {
+    "name": "Direccion de Deporte y Recreacion Municipal",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1136051817",
+    "grupo_fuente": "generador",
+    "lat": -31.3121984,
+    "lon": -64.299447,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Direccion de Deporte y Recreacion Municipal"
+    }
+  },
+  {
+    "name": "Polideportivo Saldan",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1144114334",
+    "grupo_fuente": "generador",
+    "lat": -31.3134463,
+    "lon": -64.305607,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Polideportivo Saldan"
+    }
+  },
+  {
+    "name": "Club Colegio de Ingenieros Civiles",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Bulevar Los Alemanes 6600, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "way:1144561632",
+    "grupo_fuente": "generador",
+    "lat": -31.3404899,
+    "lon": -64.2533574,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "6600",
+      "addr:street": "Bulevar Los Alemanes",
+      "leisure": "sports_centre",
+      "name": "Club Colegio de Ingenieros Civiles"
+    }
+  },
+  {
+    "name": "Polideportivo Villa Rivera Indarte",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Laguna Larga 9060, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "way:1181895700",
+    "grupo_fuente": "generador",
+    "lat": -31.3169108,
+    "lon": -64.2934083,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "9060",
+      "addr:postcode": "X5018",
+      "addr:street": "Laguna Larga",
+      "leisure": "sports_centre",
+      "name": "Polideportivo Villa Rivera Indarte",
+      "sport": "basketball;volleyball;fitness;futsal;gymnastics;handball"
+    }
+  },
+  {
+    "name": "Elenia Sports",
+    "email": "",
+    "website": "https://www.instagram.com/eleniasports/",
+    "phone": "+54 351 875 5555",
+    "direccion": "Avenida Colón 5852, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "way:1182317772",
+    "grupo_fuente": "generador",
+    "lat": -31.3931408,
+    "lon": -64.2576209,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "5852",
+      "addr:street": "Avenida Colón",
+      "leisure": "sports_centre",
+      "name": "Elenia Sports",
+      "phone": "+54 351 875 5555",
+      "website": "https://www.instagram.com/eleniasports/"
+    }
+  },
+  {
+    "name": "Polideportivo social parque república",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1240935980",
+    "grupo_fuente": "generador",
+    "lat": -31.4160007,
+    "lon": -64.2583922,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Polideportivo social parque república"
+    }
+  },
+  {
+    "name": "Macabi Noar",
+    "email": "",
+    "website": "https://macabinoar.com.ar/",
+    "phone": "",
+    "direccion": "Duarte Quirós, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "way:1336575220",
+    "grupo_fuente": "generador",
+    "lat": -31.4011804,
+    "lon": -64.2460753,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:street": "Duarte Quirós",
+      "leisure": "sports_centre",
+      "name": "Macabi Noar",
+      "website": "https://macabinoar.com.ar/"
+    }
+  },
+  {
+    "name": "Club TG",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1341691633",
+    "grupo_fuente": "generador",
+    "lat": -31.5227333,
+    "lon": -64.1651098,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club TG",
+      "operator": "Torneo Golden",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Complejo Deportivo ATACC",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1384474892",
+    "grupo_fuente": "generador",
+    "lat": -31.4808316,
+    "lon": -64.1244036,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Complejo Deportivo ATACC"
+    }
+  },
+  {
+    "name": "Córdoba Athletic Club Campo de Deportes Alberto Bimbo Rizzuto",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1384474903",
+    "grupo_fuente": "generador",
+    "lat": -31.4840425,
+    "lon": -64.1571555,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Córdoba Athletic Club Campo de Deportes Alberto Bimbo Rizzuto"
+    }
+  },
+  {
+    "name": "Centro de Alto Rendimiento Club Atlético Talleres",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1384474948",
+    "grupo_fuente": "generador",
+    "lat": -31.4673,
+    "lon": -64.1543765,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Centro de Alto Rendimiento Club Atlético Talleres"
+    }
+  },
+  {
+    "name": "Atalaya",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1426464923",
+    "grupo_fuente": "generador",
+    "lat": -31.3386886,
+    "lon": -64.2538123,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Atalaya"
+    }
+  },
+  {
+    "name": "Club Deportivo Banfield Cordoba Estadio Mito Diaz",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1427942592",
+    "grupo_fuente": "generador",
+    "lat": -31.4240064,
+    "lon": -64.0964849,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Deportivo Banfield Cordoba Estadio Mito Diaz"
+    }
+  },
+  {
+    "name": "Sindicato de Camioneros",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1451358420",
+    "grupo_fuente": "generador",
+    "lat": -31.490537,
+    "lon": -64.2540672,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Sindicato de Camioneros"
+    }
+  },
+  {
+    "name": "Complejo AOITA",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1451358421",
+    "grupo_fuente": "generador",
+    "lat": -31.4886751,
+    "lon": -64.2522043,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Complejo AOITA"
+    }
+  },
+  {
+    "name": "Club Atletico Las Palmas",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1459124145",
+    "grupo_fuente": "generador",
+    "lat": -31.4210099,
+    "lon": -64.2713078,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Atletico Las Palmas"
+    }
+  },
+  {
+    "name": "Polideportivo De Villa union",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1459124155",
+    "grupo_fuente": "generador",
+    "lat": -31.428012,
+    "lon": -64.2702929,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Polideportivo De Villa union"
+    }
+  },
+  {
+    "name": "Torneo Pro Cordoba",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1460161811",
+    "grupo_fuente": "generador",
+    "lat": -31.3631346,
+    "lon": -64.1250763,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Torneo Pro Cordoba"
+    }
+  },
+  {
+    "name": "Predio Armando Pérez",
+    "email": "",
+    "website": "https://www.belgranocordoba.com/",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1460161812",
+    "grupo_fuente": "generador",
+    "lat": -31.3604978,
+    "lon": -64.1249468,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Predio Armando Pérez",
+      "official_name": "Predio Armando Pérez (Belgrano)",
+      "website": "https://www.belgranocordoba.com/"
+    }
+  },
+  {
+    "name": "La Sagrada",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1462578316",
+    "grupo_fuente": "generador",
+    "lat": -31.3900623,
+    "lon": -64.2317739,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "La Sagrada"
+    }
+  },
+  {
+    "name": "La Sede",
+    "email": "",
+    "website": "https://www.instagram.com/lasede.complejodeportivo/?hl=es",
+    "phone": "",
+    "direccion": "Avenida Enrique Bodereau 9049",
+    "source": "generadores_clubes",
+    "source_id": "way:1463174215",
+    "grupo_fuente": "generador",
+    "lat": -31.3176565,
+    "lon": -64.2887077,
+    "tags": {
+      "addr:housenumber": "9049",
+      "addr:street": "Avenida Enrique Bodereau",
+      "leisure": "sports_centre",
+      "name": "La Sede",
+      "website": "https://www.instagram.com/lasede.complejodeportivo/?hl=es"
+    }
+  },
+  {
+    "name": "Club Atlético San Lorenzo",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "relation:6296459",
+    "grupo_fuente": "generador",
+    "lat": -31.4546294,
+    "lon": -64.1972243,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Atlético San Lorenzo",
+      "type": "multipolygon"
     }
   }
 ]

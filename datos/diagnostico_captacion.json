@@ -7,13 +7,13 @@
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 72,
-    "no_contactable_publicamente": 851,
+    "listo_para_contactar": 73,
+    "no_contactable_publicamente": 850,
     "requiere_decision": 65,
     "descartado": 10
   },
   "sin_email_por_tipo": {
-    "comercio": 844,
+    "comercio": 843,
     "generador": 7,
     "otro": 0
   },
@@ -492,10 +492,10 @@
   "ya_contactados": 0,
   "sin_nombre": 0,
   "enriquecidos": 923,
-  "emails_encontrados": 72,
-  "listos_detectados": 72,
-  "listos_seleccionados": 72,
-  "listos_comercio": 71,
+  "emails_encontrados": 73,
+  "listos_detectados": 73,
+  "listos_seleccionados": 73,
+  "listos_comercio": 72,
   "listos_generador": 1,
   "clasificados": 998,
   "cuadre": {
@@ -503,12 +503,12 @@
     "estado_total": 998,
     "cuadra": true
   },
-  "encontrados": 1733,
+  "encontrados": 1838,
   "procesados": 1000,
   "nuevos": 988,
   "descartados": 10,
   "excluidos": 2,
   "meta_alcanzada": false,
-  "faltantes_para_meta": 28,
+  "faltantes_para_meta": 27,
   "busquedas_publicas_realizadas": 1000
 }

@@ -2186,6 +2186,29 @@
     "estado": "listo_para_contactar"
   },
   {
+    "name": "Mercadito Natural",
+    "email": "info.mercaditonatural@gmail.com",
+    "website": "http://www.mercaditonatural.blogspot.com.ar/",
+    "phone": "",
+    "direccion": "",
+    "source": "comercios_shop",
+    "source_id": "node:2514354008",
+    "grupo_fuente": "comercio",
+    "lat": -31.437766,
+    "lon": -64.1422711,
+    "tags": {
+      "name": "Mercadito Natural",
+      "shop": "convenience",
+      "website": "http://www.mercaditonatural.blogspot.com.ar/"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "OSM: etiqueta shop",
+    "email_source": "web_publica",
+    "email_source_url": "http://mercaditonatural.blogspot.com/",
+    "email_confidence": 0.95,
+    "estado": "listo_para_contactar"
+  },
+  {
     "name": "ANSES",
     "email": "",
     "website": "http://www.anses.gob.ar/",
@@ -2706,7 +2729,7 @@
     "tipo": "comercio",
     "clasificacion_motivo": "OSM: etiqueta shop",
     "email_source": "web_publica",
-    "email_source_url": "https://www.riesimona.com.ar/",
+    "email_source_url": "https://riesimona.com.ar/",
     "email_confidence": 1.0,
     "estado": "listo_para_contactar"
   },
@@ -4610,26 +4633,6 @@
     },
     "tipo": "comercio",
     "clasificacion_motivo": "OSM: oficina comercial/profesional",
-    "estado": "no_contactable_publicamente"
-  },
-  {
-    "name": "Mercadito Natural",
-    "email": "",
-    "website": "http://www.mercaditonatural.blogspot.com.ar/",
-    "phone": "",
-    "direccion": "",
-    "source": "comercios_shop",
-    "source_id": "node:2514354008",
-    "grupo_fuente": "comercio",
-    "lat": -31.437766,
-    "lon": -64.1422711,
-    "tags": {
-      "name": "Mercadito Natural",
-      "shop": "convenience",
-      "website": "http://www.mercaditonatural.blogspot.com.ar/"
-    },
-    "tipo": "comercio",
-    "clasificacion_motivo": "OSM: etiqueta shop",
     "estado": "no_contactable_publicamente"
   },
   {
@@ -9377,7 +9380,7 @@
       "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
       "office": "association",
       "opening_hours": "Mo-Fr 09:00-18:45",
-      "phone": "+54 351 480 1139"
+      "phone": "0351 480-1139"
     },
     "tipo": "generador",
     "clasificacion_motivo": "organización con afiliados, asociados o beneficiarios",
@@ -14136,6 +14139,25 @@
     "tags": {
       "name": "Lotería de Córdoba",
       "shop": "lottery"
+    },
+    "tipo": "comercio",
+    "clasificacion_motivo": "OSM: etiqueta shop",
+    "estado": "no_contactable_publicamente"
+  },
+  {
+    "name": "Dan'is",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "comercios_shop",
+    "source_id": "node:9435284924",
+    "grupo_fuente": "comercio",
+    "lat": -31.4100045,
+    "lon": -64.2181416,
+    "tags": {
+      "name": "Dan'is",
+      "shop": "hairdresser"
     },
     "tipo": "comercio",
     "clasificacion_motivo": "OSM: etiqueta shop",
