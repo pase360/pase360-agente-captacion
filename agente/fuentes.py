@@ -5,238 +5,179 @@ from . import config as C
 from .util import log
 
 
-# -------------------------------------------------------------------
-# CAPTACIÓN PASE 360
-#
-# Busca comercios y generadores de Córdoba Capital mediante Overpass.
-#
-# Esta versión prioriza:
-#   - mantener las 8 fuentes/consultas actuales
-#   - evitar ciclos de reintentos largos
-#   - no esperar una segunda ronda completa
-#   - rotar servidores Overpass
-#   - continuar aunque alguna consulta falle
-#   - conservar la mezcla comercio/generador
-# -------------------------------------------------------------------
-
-
-CONSULTAS_COMERCIOS = [
-    f"""
-    [out:json][timeout:25];
-    (
-      nwr["name"]["shop"]({C.BBOX});
-    );
-    out center tags 180;
-    """,
-
-    f"""
-    [out:json][timeout:25];
-    (
-      nwr["name"]["craft"]({C.BBOX});
-      nwr["name"]["office"~"company|commercial"]({C.BBOX});
-    );
-    out center tags 140;
-    """,
-
-    f"""
-    [out:json][timeout:25];
-    (
-      nwr["name"]["amenity"~"restaurant|cafe|fast_food|bar|pub|food_court"]({C.BBOX});
-    );
-    out center tags 140;
-    """,
-
-    f"""
-    [out:json][timeout:25];
-    (
-      nwr["name"]["amenity"~"clinic|doctors|dentist|pharmacy|veterinary"]({C.BBOX});
-      nwr["name"]["healthcare"]({C.BBOX});
-    );
-    out center tags 120;
-    """,
-]
-
-
-CONSULTAS_GENERADORES = [
-    f"""
-    [out:json][timeout:25];
-    (
-      nwr["name"]["office"="association"]({C.BBOX});
-      nwr["name"]["amenity"="social_centre"]({C.BBOX});
-      nwr["name"]["amenity"="community_centre"]({C.BBOX});
-    );
-    out center tags 160;
-    """,
-
-    f"""
-    [out:json][timeout:25];
-    (
-      nwr["name"~"sindicato|sindicatos|gremio|gremial|union de trabajadores|union de empleados|mutual|mutualidad|federacion|federación",i]({C.BBOX});
-    );
-    out center tags 140;
-    """,
-
-    f"""
-    [out:json][timeout:25];
-    (
-      nwr["name"~"colegio de abogados|colegio de escribanos|colegio de arquitectos|colegio de ingenieros|colegio de contadores|colegio de medicos|colegio de médicos|colegio de odontologos|colegio de odontólogos|colegio de psicologos|colegio de psicólogos|colegio de veterinarios|colegio de farmacéuticos|colegio de farmaceuticos|colegio profesional|consejo profesional|asociacion de profesionales|asociación de profesionales",i]({C.BBOX});
-    );
-    out center tags 140;
-    """,
-
-    f"""
-    [out:json][timeout:25];
-    (
-      nwr["name"]["club"]({C.BBOX});
-      nwr["name"]["leisure"~"sports_centre|stadium|sports_hall|pitch"]({C.BBOX});
-      nwr["name"]["amenity"="arts_centre"]({C.BBOX});
-    );
-    out center tags 140;
-    """,
-]
-
-
-TODAS_LAS_CONSULTAS = (
-    [
-        ("comercio", q)
-        for q in CONSULTAS_COMERCIOS
-    ]
-    + [
-        ("generador", q)
-        for q in CONSULTAS_GENERADORES
-    ]
-)
-
-
-# -------------------------------------------------------------------
-# SERVIDORES OVERPASS
-# -------------------------------------------------------------------
-
-SERVIDORES_OVERPASS = list(C.OVERPASS_URLS)
-
 PAUSA_ENTRE_CONSULTAS = 1
 PAUSA_ENTRE_SERVIDORES = 1
 
+SERVIDORES_OVERPASS = list(
+    C.OVERPASS_URLS
+)
 
-# -------------------------------------------------------------------
-# POST A OVERPASS
-# -------------------------------------------------------------------
+
+# ------------------------------------------------------------
+# CONSULTAS
+# ------------------------------------------------------------
+
+CONSULTAS = [
+    (
+        "comercio",
+        f"""
+        [out:json][timeout:30];
+        (
+          nwr["name"]["shop"]({C.BBOX});
+          nwr["name"]["craft"]({C.BBOX});
+          nwr["name"]["office"~"company|commercial|estate_agent|insurance|lawyer|accountant"]({C.BBOX});
+        );
+        out center tags;
+        """,
+    ),
+    (
+        "comercio",
+        f"""
+        [out:json][timeout:30];
+        (
+          nwr["name"]["amenity"~"restaurant|cafe|fast_food|bar|pub|food_court|pharmacy|clinic|doctors|dentist|veterinary"]({C.BBOX});
+          nwr["name"]["healthcare"]({C.BBOX});
+        );
+        out center tags;
+        """,
+    ),
+    (
+        "generador",
+        f"""
+        [out:json][timeout:30];
+        (
+          nwr["name"~"sindicato|sindicatos|gremio|gremial|mutual|mutualidad|federacion|federación|cooperativa|cooperativas",i]({C.BBOX});
+          nwr["name"]["office"="association"]({C.BBOX});
+        );
+        out center tags;
+        """,
+    ),
+    (
+        "generador",
+        f"""
+        [out:json][timeout:30];
+        (
+          nwr["name"~"colegio de abogados|colegio de escribanos|colegio de arquitectos|colegio de ingenieros|colegio de contadores|colegio de médicos|colegio de medicos|colegio de odontólogos|colegio de odontologos|colegio de psicólogos|colegio de psicologos|colegio de veterinarios|colegio de farmacéuticos|colegio de farmaceuticos|colegio profesional|consejo profesional|asociacion de profesionales|asociación de profesionales",i]({C.BBOX});
+        );
+        out center tags;
+        """,
+    ),
+    (
+        "generador",
+        f"""
+        [out:json][timeout:30];
+        (
+          nwr["name"]["club"]({C.BBOX});
+          nwr["name"~"club atletico|club atlético|club deportivo|club social|club de barrio|institucion deportiva|institución deportiva|asociacion deportiva|asociación deportiva|liga deportiva|entidad deportiva",i]({C.BBOX});
+          nwr["leisure"~"sports_centre|stadium|sports_hall"]["name"]({C.BBOX});
+        );
+        out center tags;
+        """,
+    ),
+    (
+        "generador",
+        f"""
+        [out:json][timeout:30];
+        (
+          nwr["name"~"centro vecinal|centro de jubilados|centro de pensionados|centro de trabajadores|centro de empleados|asociacion civil|asociación civil|fundacion|fundación",i]({C.BBOX});
+          nwr["amenity"~"community_centre|social_centre"]["name"]({C.BBOX});
+        );
+        out center tags;
+        """,
+    ),
+]
+
 
 def _post(url, query):
-    """
-    Ejecuta la consulta Overpass y devuelve el JSON.
-
-    IMPORTANTE:
-    requests.post() devuelve un objeto Response.
-    engine/fuentes necesita el contenido JSON de esa respuesta,
-    por eso hacemos raise_for_status() y luego r.json().
-    """
-
-    r = requests.post(
+    response = requests.post(
         url,
-        data={
-            "data": query
-        },
+        data={"data": query},
         headers={
             "User-Agent": C.USER_AGENT,
             "Accept": "application/json",
         },
         timeout=max(
-            min(C.REQUEST_TIMEOUT, 30),
-            25,
+            min(C.REQUEST_TIMEOUT, 35),
+            30,
         ),
-        allow_redirects=True,
     )
 
-    r.raise_for_status()
+    response.raise_for_status()
 
-    return r.json()
+    return response.json()
 
 
-# -------------------------------------------------------------------
-# CONVERSIÓN DE ELEMENTOS OSM
-# -------------------------------------------------------------------
-
-def _element_to_candidate(el):
-    tags = el.get("tags") or {}
-    center = el.get("center") or {}
+def _element_to_candidate(elemento):
+    tags = elemento.get("tags") or {}
+    center = elemento.get("center") or {}
 
     return {
         "source": "OpenStreetMap",
-        "source_id": str(
-            el.get("id", "")
+        "source_id": (
+            f'{elemento.get("type", "")}:'
+            f'{elemento.get("id", "")}'
         ),
-        "name": (
-            tags.get("name")
-            or ""
+        "name": str(
+            tags.get("name") or ""
         ).strip(),
-        "website": (
+        "website": str(
             tags.get("website")
             or tags.get("contact:website")
             or ""
         ).strip(),
-        "email": (
+        "email": str(
             tags.get("email")
             or tags.get("contact:email")
             or ""
         ).strip(),
-        "phone": (
+        "phone": str(
             tags.get("phone")
             or tags.get("contact:phone")
             or ""
         ).strip(),
         "direccion": " ".join(
             x
-            for x in [
+            for x in (
                 tags.get("addr:street", ""),
                 tags.get("addr:housenumber", ""),
-            ]
+            )
             if x
         ).strip(),
         "lat": (
-            el.get("lat")
+            elemento.get("lat")
             or center.get("lat")
         ),
         "lon": (
-            el.get("lon")
+            elemento.get("lon")
             or center.get("lon")
         ),
         "tags": tags,
     }
 
 
-# -------------------------------------------------------------------
-# CLAVE ÚNICA DEL ELEMENTO
-# -------------------------------------------------------------------
-
-def _clave_elemento(el):
-    elemento_id = str(
-        el.get("id", "")
+def _clave(elemento):
+    tipo = str(
+        elemento.get("type") or ""
     ).strip()
 
-    tipo = str(
-        el.get("type", "")
+    elemento_id = str(
+        elemento.get("id") or ""
     ).strip()
 
     if tipo and elemento_id:
-        return f"{tipo}:{elemento_id}"
+        return (
+            tipo,
+            elemento_id,
+        )
 
-    tags = el.get("tags") or {}
-
-    nombre = str(
-        tags.get("name", "")
-    ).strip().lower()
+    tags = elemento.get("tags") or {}
 
     return (
-        nombre,
-        el.get("lat"),
-        el.get("lon"),
+        str(tags.get("name") or "").strip().lower(),
+        elemento.get("lat"),
+        elemento.get("lon"),
     )
 
-
-# -------------------------------------------------------------------
-# ROTACIÓN DE SERVIDORES
-# -------------------------------------------------------------------
 
 def _servidores_rotados(indice):
     if not SERVIDORES_OVERPASS:
@@ -253,49 +194,23 @@ def _servidores_rotados(indice):
     )
 
 
-# -------------------------------------------------------------------
-# CONSULTA CON ROTACIÓN DE SERVIDORES
-# -------------------------------------------------------------------
-
-def _consultar_con_reintentos(
-    query,
-    etiqueta,
-    indice,
-    total,
-):
-    """
-    Una única vuelta por los servidores disponibles.
-
-    No existe una segunda ronda completa.
-    Si un servidor falla, se pasa al siguiente.
-    """
-
+def _consultar(query, etiqueta, indice):
     ultimo_error = None
 
-    servidores = _servidores_rotados(
-        indice
-    )
-
-    if not servidores:
-        raise RuntimeError(
-            "No hay servidores Overpass configurados."
-        )
-
-    for numero, url in enumerate(
-        servidores,
+    for numero, servidor in enumerate(
+        _servidores_rotados(indice),
         start=1,
     ):
         try:
             log(
                 f"[fuente] {etiqueta} "
-                f"{indice}/{total} "
-                f"consultando servidor "
-                f"{numero}/{len(servidores)}: "
-                f"{url}"
+                f"{indice}/{len(CONSULTAS)} "
+                f"servidor {numero}/"
+                f"{len(SERVIDORES_OVERPASS)}"
             )
 
             data = _post(
-                url,
+                servidor,
                 query,
             )
 
@@ -305,9 +220,8 @@ def _consultar_con_reintentos(
             )
 
             log(
-                f"[fuente] {etiqueta} "
-                f"{indice}/{total}: "
-                f"{len(elementos)} elementos recibidos"
+                f"[fuente] {etiqueta}: "
+                f"{len(elementos)} elementos"
             )
 
             return elementos
@@ -322,151 +236,111 @@ def _consultar_con_reintentos(
             )
 
             log(
-                f"[fuente] {etiqueta} "
-                f"{indice}/{total} "
-                f"falló en {url} "
-                f"(HTTP {codigo})"
+                f"[fuente] {etiqueta}: "
+                f"HTTP {codigo}"
             )
-
-            if codigo == 429:
-                log(
-                    "[fuente] 429: "
-                    "se continúa con el siguiente servidor."
-                )
-
-            if numero < len(servidores):
-                time.sleep(
-                    PAUSA_ENTRE_SERVIDORES
-                )
 
         except requests.Timeout as exc:
             ultimo_error = exc
 
             log(
-                f"[fuente] {etiqueta} "
-                f"{indice}/{total} "
-                f"timeout en {url}"
+                f"[fuente] {etiqueta}: timeout"
             )
-
-            if numero < len(servidores):
-                time.sleep(
-                    PAUSA_ENTRE_SERVIDORES
-                )
 
         except Exception as exc:
             ultimo_error = exc
 
             log(
-                f"[fuente] {etiqueta} "
-                f"{indice}/{total} "
-                f"falló en {url}: {exc}"
+                f"[fuente] {etiqueta}: "
+                f"error {exc}"
             )
 
-            if numero < len(servidores):
-                time.sleep(
-                    PAUSA_ENTRE_SERVIDORES
-                )
+        time.sleep(
+            PAUSA_ENTRE_SERVIDORES
+        )
 
     raise RuntimeError(
-        f"No se pudo obtener "
-        f"{etiqueta} {indice}/{total}: "
+        f"No se pudo consultar {etiqueta}: "
         f"{ultimo_error}"
     )
 
 
-# -------------------------------------------------------------------
-# MEZCLA COMERCIOS / GENERADORES
-# -------------------------------------------------------------------
-
-def _mezclar_por_tipo(
-    candidatos_comercio,
-    candidatos_generador,
-):
-    """
-    Alterna generadores y comercios para que
-    engine.py no reciba primero cientos de
-    candidatos de un solo tipo.
-    """
-
+def _mezclar(comercios, generadores):
     resultado = []
 
-    max_len = max(
-        len(candidatos_comercio),
-        len(candidatos_generador),
-    )
+    i = 0
+    j = 0
 
-    for i in range(max_len):
-
-        if i < len(candidatos_generador):
+    while (
+        i < len(comercios)
+        or j < len(generadores)
+    ):
+        if j < len(generadores):
             resultado.append(
-                candidatos_generador[i]
+                generadores[j]
             )
+            j += 1
 
-        if i < len(candidatos_comercio):
+        if i < len(comercios):
             resultado.append(
-                candidatos_comercio[i]
+                comercios[i]
             )
+            i += 1
 
     return resultado
 
 
-# -------------------------------------------------------------------
-# BÚSQUEDA PRINCIPAL
-# -------------------------------------------------------------------
-
 def buscar():
-    todos = {}
+    elementos_unicos = {}
 
-    resultados_comercio = []
-    resultados_generador = []
+    comercios = []
+    generadores = []
 
     errores = []
 
-    total = len(
-        TODAS_LAS_CONSULTAS
-    )
-
     for indice, (grupo, query) in enumerate(
-        TODAS_LAS_CONSULTAS,
+        CONSULTAS,
         start=1,
     ):
-
         if indice > 1:
             time.sleep(
                 PAUSA_ENTRE_CONSULTAS
             )
 
         try:
-            elementos = _consultar_con_reintentos(
+            elementos = _consultar(
                 query,
                 grupo,
                 indice,
-                total,
-            )
-
-            destino = (
-                resultados_generador
-                if grupo == "generador"
-                else resultados_comercio
             )
 
             for elemento in elementos:
+                clave = _clave(elemento)
 
-                clave = _clave_elemento(
-                    elemento
-                )
-
-                if clave in todos:
+                if clave in elementos_unicos:
                     continue
 
-                todos[clave] = elemento
+                elementos_unicos[clave] = True
 
-                destino.append(
-                    elemento
+                candidato = (
+                    _element_to_candidate(
+                        elemento
+                    )
                 )
 
-        except Exception as exc:
+                if not candidato["name"]:
+                    continue
 
+                if grupo == "generador":
+                    generadores.append(
+                        candidato
+                    )
+                else:
+                    comercios.append(
+                        candidato
+                    )
+
+        except Exception as exc:
             errores.append(
                 {
                     "grupo": grupo,
@@ -476,82 +350,39 @@ def buscar():
             )
 
             log(
-                f"[fuente] consulta "
-                f"{grupo} {indice}/{total} "
-                f"no disponible: {exc}"
+                f"[fuente] se continúa: "
+                f"{exc}"
             )
 
-    # ----------------------------------------------------------------
-    # CONVERTIR A CANDIDATOS
-    # ----------------------------------------------------------------
-
-    comercios = [
-        _element_to_candidate(el)
-        for el in resultados_comercio
-    ]
-
-    generadores = [
-        _element_to_candidate(el)
-        for el in resultados_generador
-    ]
-
-    # Nunca pasamos candidatos sin nombre.
-
-    comercios = [
-        x
-        for x in comercios
-        if x["name"]
-    ]
-
-    generadores = [
-        x
-        for x in generadores
-        if x["name"]
-    ]
-
-    # ----------------------------------------------------------------
-    # MEZCLA FINAL
-    # ----------------------------------------------------------------
-
-    rows = _mezclar_por_tipo(
+    resultado = _mezclar(
         comercios,
         generadores,
     )
 
     log(
-        f"[fuente] comercios candidatos: "
+        f"[fuente] comercios: "
         f"{len(comercios)}"
     )
 
     log(
-        f"[fuente] generadores candidatos: "
+        f"[fuente] generadores: "
         f"{len(generadores)}"
     )
 
     log(
-        f"[fuente] total final: "
-        f"{len(rows)} lugares únicos recibidos"
+        f"[fuente] únicos: "
+        f"{len(resultado)}"
     )
-
-    # ----------------------------------------------------------------
-    # SI ALGUNA CONSULTA FALLÓ, CONTINUAMOS CON LO DISPONIBLE
-    # ----------------------------------------------------------------
 
     if errores:
         log(
-            f"[fuente] advertencia: "
-            f"{len(errores)} consulta(s) fallaron; "
-            f"se continúa con los datos disponibles."
+            f"[fuente] consultas con error: "
+            f"{len(errores)}"
         )
 
-    # ----------------------------------------------------------------
-    # SI FALLÓ TODO, DETENER LA CAPTACIÓN
-    # ----------------------------------------------------------------
-
-    if not rows:
+    if not resultado:
         raise RuntimeError(
-            "Ninguna consulta de Overpass pudo "
-            "devolver lugares."
+            "Overpass no devolvió candidatos."
         )
 
-    return rows
+    return resultado
