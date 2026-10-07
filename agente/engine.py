@@ -220,12 +220,15 @@ def _nuevo_diagnostico():
 
 def _prioridad_enriquecimiento(c):
     """
-    Ordena los candidatos para que el agente
-    intente primero los que tienen mejores
-    posibilidades de producir un contacto real.
+    Prioriza los candidatos con mayor posibilidad
+    de convertirse en un contacto real.
 
-    No significa que se descarte a los demás:
-    solamente define por dónde empezar.
+    Orden:
+    1. Generadores antes que comercios.
+    2. Candidatos con email existente.
+    3. Candidatos con web.
+    4. Candidatos con teléfono.
+    5. Candidatos con dirección.
     """
 
     tiene_email = bool(
@@ -257,8 +260,8 @@ def _prioridad_enriquecimiento(c):
     tipo = c.get("tipo")
 
     return (
-        not tiene_email,
         tipo != "generador",
+        not tiene_email,
         not tiene_web,
         not tiene_telefono,
         not tiene_direccion,
@@ -337,17 +340,25 @@ def capturar():
     # 1. CLASIFICACIÓN
     # ---------------------------------------------------------
     #
-    # Clasificamos el universo disponible hasta el límite
-    # configurado. La búsqueda de emails se hará después
-    # de forma selectiva.
+    # Ahora permitimos recorrer un universo mucho mayor.
+    #
+    # La fuente puede tener ~18.000 registros acumulados, pero
+    # eso NO significa que el motor deba quedarse trabajando
+    # sobre los primeros 1.000 para siempre.
+    #
+    # Los candidatos nuevos ya vienen primero desde fuentes.py.
+    # Aquí ampliamos todavía más el límite.
     # ---------------------------------------------------------
+
+    limite_configurado = max(
+        C.MAX_CANDIDATOS_SCAN,
+        C.META_CONTACTOS * 20,
+        3000,
+    )
 
     limite_scan = min(
         len(rows),
-        max(
-            C.MAX_CANDIDATOS_SCAN,
-            C.META_CONTACTOS * 5,
-        ),
+        limite_configurado,
     )
 
     for original in rows[
@@ -457,13 +468,6 @@ def capturar():
     # ---------------------------------------------------------
     # 2. SELECCIONAR CANDIDATOS PARA BUSCAR EMAIL
     # ---------------------------------------------------------
-    #
-    # NO intentamos buscar email de todos indiscriminadamente.
-    #
-    # Primero los ordenamos para aprovechar mejor las búsquedas.
-    # El objetivo es conseguir contactos reales, no acumular
-    # cientos de "sin_email".
-    # ---------------------------------------------------------
 
     enriquecibles = [
         c
@@ -479,19 +483,21 @@ def capturar():
     )
 
     # ---------------------------------------------------------
-    # 3. ENRIQUECIMIENTO HASTA CONSEGUIR LA META
+    # 3. ENRIQUECIMIENTO
     # ---------------------------------------------------------
     #
-    # Los que no tienen email NO cuentan.
+    # Seguimos hasta llegar a 100 contactos.
     #
-    # El agente sigue con el siguiente candidato.
-    # Solamente termina antes si se agotaron los candidatos
-    # que puede revisar en esta ejecución.
+    # Si no se llega a 100, continúa hasta terminar el universo
+    # que fue seleccionado para esta ejecución.
+    #
+    # Un candidato sin email NO cuenta.
     # ---------------------------------------------------------
 
     listos = []
 
     for c in enriquecibles:
+
         if len(listos) >= C.META_CONTACTOS:
             break
 
@@ -521,12 +527,6 @@ def capturar():
             listos.append(c)
 
         else:
-            # No lo consideramos contacto.
-            #
-            # Tampoco lo llamamos simplemente "sin_email":
-            # significa que el agente buscó fuentes públicas
-            # disponibles y no encontró un email públicamente
-            # verificable en esta ejecución.
             c["estado"] = (
                 "no_contactable_publicamente"
             )
@@ -578,19 +578,19 @@ def capturar():
         )
 
     # ---------------------------------------------------------
-    # 4. ORDEN FINAL DE LOS CONTACTOS
+    # 4. ORDEN FINAL
     # ---------------------------------------------------------
 
     listos.sort(
         key=lambda c: (
             c.get("tipo")
             != "generador",
-            -(float(
+            -float(
                 c.get(
                     "email_confidence",
                     0,
-                )
-            )),
+                ) or 0
+            ),
             normalizar_texto(
                 c.get("name")
             ),
@@ -646,13 +646,6 @@ def capturar():
     # ---------------------------------------------------------
     # 5. REPORTES
     # ---------------------------------------------------------
-    #
-    # candidatos.json conserva la información necesaria
-    # para preguntas/seguimiento.
-    #
-    # Pero simulacion_contactos.json contiene ÚNICAMENTE
-    # contactos realmente listos.
-    # ---------------------------------------------------------
 
     candidatos_reportar = []
 
@@ -668,12 +661,6 @@ def capturar():
         }:
             candidatos_reportar.append(c)
 
-    # Los no-contactables quedan registrados solamente
-    # si fueron útiles para el diagnóstico, pero nunca
-    # entran en la lista de contactos a enviar.
-    #
-    # Conservamos como máximo 500 para no inflar
-    # innecesariamente el archivo.
     no_contactables = [
         c
         for c in candidatos
