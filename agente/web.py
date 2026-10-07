@@ -1,4 +1,3 @@
-```python
 import re
 import time
 from urllib.parse import quote, urljoin
@@ -363,4 +362,3 @@ def completar(c):
         c["email_source"] = "busqueda_web"
 
     return c
-```
