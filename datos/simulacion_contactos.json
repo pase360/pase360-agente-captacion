@@ -1,43 +1,18 @@
 [
   {
-    "name": "Club Milanesa",
+    "name": "CBA X Escalada",
     "tipo": "generador",
-    "email": "info@elclubdelamilanesa.com"
+    "email": "programa.cbax@gmail.com"
   },
   {
-    "name": "SushiClub",
+    "name": "Club Universitario de Córdoba",
     "tipo": "generador",
-    "email": "contacto@sushiclub.com.ar"
+    "email": "administracion@clubuniversitariocba.com"
   },
   {
-    "name": "ATLARES Crowdfunding Bitcoin & Networking",
+    "name": "Fabrica Pc",
     "tipo": "comercio",
-    "email": "info@atlares.com"
-  },
-  {
-    "name": "Café Martínez",
-    "tipo": "comercio",
-    "email": "cordoba@cafemartinez.com.ar"
-  },
-  {
-    "name": "Catalina Calzados",
-    "tipo": "comercio",
-    "email": "catalinacalzados@outlook.com.ar"
-  },
-  {
-    "name": "Centro Médico Vitus",
-    "tipo": "comercio",
-    "email": "info@vitus.com.ar"
-  },
-  {
-    "name": "Chamtac",
-    "tipo": "comercio",
-    "email": "bundler=rspack@1.6.8"
-  },
-  {
-    "name": "Farmacia Juarez Ruffino IV",
-    "tipo": "comercio",
-    "email": "hola@farmaciajuarezruffino.com"
+    "email": "rvlevet@gmail.com"
   },
   {
     "name": "Farmacia Pedernera",
@@ -45,38 +20,23 @@
     "email": "pedernerafarmacia@gmail.com"
   },
   {
-    "name": "Incutex",
+    "name": "Marozzi distribuidora",
     "tipo": "comercio",
-    "email": "info@incutex.com.ar"
+    "email": "ventas@bateriasmarozzi.com.ar"
   },
   {
-    "name": "Rapanui",
+    "name": "mini Super",
     "tipo": "comercio",
-    "email": "contacto@rapanui.com.ar"
+    "email": "minisuperas@gmail.com"
   },
   {
-    "name": "Sanatorio Allende",
+    "name": "Quimica Halac",
     "tipo": "comercio",
-    "email": "atpacientecerro@sanatorioallende.com"
+    "email": "info@quimicahalac.com.ar"
   },
   {
-    "name": "Starbucks",
+    "name": "Quinto Deva",
     "tipo": "comercio",
-    "email": "info@starbucks.com.ar"
-  },
-  {
-    "name": "Virmanic SA",
-    "tipo": "comercio",
-    "email": "jvalles@virmanicsa.com"
-  },
-  {
-    "name": "Wöllen",
-    "tipo": "comercio",
-    "email": "info@wollen.com.ar"
-  },
-  {
-    "name": "Xipa",
-    "tipo": "comercio",
-    "email": "info.xipa@gmail.com"
+    "email": "productoraquintodeva@gmail.com"
   }
 ]

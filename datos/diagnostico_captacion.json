@@ -1,334 +1,499 @@
 {
   "por_tipo": {
-    "comercio": 293,
-    "generador": 16,
-    "dudoso": 1,
-    "descartado": 1,
+    "comercio": 277,
+    "generador": 73,
+    "dudoso": 49,
+    "descartado": 2,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 16,
-    "sin_email": 293,
-    "requiere_decision": 1,
-    "descartado": 1
+    "listo_para_contactar": 8,
+    "sin_email": 342,
+    "requiere_decision": 49,
+    "descartado": 2
   },
   "sin_email_por_tipo": {
-    "comercio": 279,
-    "generador": 14,
+    "comercio": 271,
+    "generador": 71,
     "otro": 0
   },
   "descartados_por_motivo": {
-    "institución educativa": 1
+    "institución educativa": 2
   },
   "generadores_muestra": [
+    {
+      "name": "Club Estudiantes",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Centro Vecinal de Villa Adela - Playón deportivo",
+      "email": "",
+      "motivo": "centro social de miembros"
+    },
     {
       "name": "SEP - Sindicato de Empleados Públicos",
       "email": "",
       "motivo": "organización de afiliados/mutual/gremial/profesional"
     },
     {
-      "name": "Mutual de los Docentes",
-      "email": "",
-      "motivo": "organización de afiliados/mutual/gremial/profesional"
-    },
-    {
-      "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
-      "email": "",
-      "motivo": "organización de afiliados/mutual/gremial/profesional"
-    },
-    {
-      "name": "Semacor - Mutual de SubOficiales del Ejercito",
-      "email": "",
-      "motivo": "organización de afiliados/mutual/gremial/profesional"
-    },
-    {
-      "name": "Sindicato de Camioneros",
-      "email": "",
-      "motivo": "organización de afiliados/mutual/gremial/profesional"
-    },
-    {
-      "name": "Sindicato Regional de Luz y Fuerza",
-      "email": "",
-      "motivo": "organización de afiliados/mutual/gremial/profesional"
-    },
-    {
-      "name": "Sindicato de Trabajadores de Estaciones de Servicio, Playas de Estacionamiento, Garages, Lavanderos, Gomeras y Anexos de La Provincia de Córdoba",
-      "email": "",
-      "motivo": "organización de afiliados/mutual/gremial/profesional"
-    },
-    {
-      "name": "Sindicato de Farmacia",
-      "email": "",
-      "motivo": "organización de afiliados/mutual/gremial/profesional"
-    },
-    {
-      "name": "Club Colegio de Ingenieros Civiles",
-      "email": "",
-      "motivo": "colegio profesional"
-    },
-    {
-      "name": "Colegio de Escribanos",
-      "email": "",
-      "motivo": "colegio profesional"
-    },
-    {
-      "name": "SUTEP Sindicato Espect. públicos",
-      "email": "",
-      "motivo": "organización de afiliados/mutual/gremial/profesional"
-    },
-    {
-      "name": "Jockey Club",
+      "name": "Club Atlético Yapeyú",
       "email": "",
       "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Club Milanesa",
-      "email": "info@elclubdelamilanesa.com",
-      "motivo": "club/institución deportiva o social"
+      "name": "Centro Vecinal Crisol Sur",
+      "email": "",
+      "motivo": "centro social de miembros"
     },
     {
-      "name": "Bongó Club Saldan",
+      "name": "Club Las Palmas-LeoniDaniela",
       "email": "",
       "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "SushiClub",
-      "email": "contacto@sushiclub.com.ar",
+      "name": "Club Atlético General Paz -Junior´s",
+      "email": "",
       "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "El Club de la milanesa",
+      "name": "Grupo Scout Martín Fierro",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Niño Jesús de Praga",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout José Hernández",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Miguel de Cervantes Saavedra",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Talita Cum",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Virgen Inmaculada de la Montaña",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Claudio Pocho Lepratti",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Nuestra Señora de Itatí",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Cutaquelen",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Tambor de Tacuarí",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Divino Niño",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Arakatz",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Los Gauchos de Güemes",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Polo Godoy Rojo",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Perito Moreno",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Granaderos de San Martín",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Pedro Ignacio de Castro Barro",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Enrique Angelelli",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Pehumayén",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Cura Gaucho",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Nuestra Señora Madre de Dios",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Gabriela Mistral",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Grupo Scout Cura Brochero",
       "email": "",
       "motivo": "club/institución deportiva o social"
     }
   ],
   "comercios_muestra": [
     {
-      "name": "Communication Partner SRL",
+      "name": "Dinosaurio Mall",
       "email": "",
-      "motivo": "OSM: oficina comercial/profesional"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Ciampagna y Asoc. S.A.",
+      "name": "Vea",
       "email": "",
-      "motivo": "OSM: oficina comercial/profesional"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Incutex",
-      "email": "info@incutex.com.ar",
-      "motivo": "OSM: oficina comercial/profesional"
-    },
-    {
-      "name": "empresa de tanques",
+      "name": "Hipermercado La Anonima",
       "email": "",
-      "motivo": "OSM: oficina comercial/profesional"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Siscard S.A.",
+      "name": "Del Sol",
       "email": "",
-      "motivo": "OSM: oficina comercial/profesional"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Compostura de Calzado",
+      "name": "Las mejores del mundo",
       "email": "",
-      "motivo": "OSM: etiqueta craft"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Gosur",
+      "name": "Equus",
       "email": "",
-      "motivo": "OSM: oficina comercial/profesional"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Gestoría del automotor",
+      "name": "Electronia",
       "email": "",
-      "motivo": "OSM: oficina comercial/profesional"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "ATLARES Crowdfunding Bitcoin & Networking",
-      "email": "info@atlares.com",
-      "motivo": "OSM: oficina comercial/profesional"
-    },
-    {
-      "name": "Catalina Calzados",
-      "email": "catalinacalzados@outlook.com.ar",
-      "motivo": "OSM: etiqueta craft"
-    },
-    {
-      "name": "Virmanic SA",
-      "email": "jvalles@virmanicsa.com",
-      "motivo": "OSM: oficina comercial/profesional"
-    },
-    {
-      "name": "TUS Transportes Unidos del Sud",
+      "name": "Disco",
       "email": "",
-      "motivo": "OSM: oficina comercial/profesional"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "xrp | Müller & Asociados SRL",
+      "name": "Casa 13",
       "email": "",
-      "motivo": "OSM: oficina comercial/profesional"
+      "motivo": "nombre/texto con actividad comercial"
     },
     {
-      "name": "José Luis",
+      "name": "Del Pilar",
       "email": "",
-      "motivo": "OSM: etiqueta craft"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Gambrinus",
+      "name": "Pafua",
       "email": "",
-      "motivo": "OSM: etiqueta craft"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Electroingeniería",
+      "name": "Buenos Días",
       "email": "",
-      "motivo": "OSM: oficina comercial/profesional"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Volt Motors",
+      "name": "Todo Suspensión",
       "email": "",
-      "motivo": "OSM: oficina comercial/profesional"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "DVS Logística Y Transporte",
+      "name": "El Sotano",
       "email": "",
-      "motivo": "OSM: oficina comercial/profesional"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Mercado Libre SA",
+      "name": "Supermercado La Anonima Poeta Lugones",
       "email": "",
-      "motivo": "OSM: oficina comercial/profesional"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "McAffey",
+      "name": "Supermercado chino",
       "email": "",
-      "motivo": "OSM: oficina comercial/profesional"
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Revolución CC",
+      "email": "",
+      "motivo": "nombre/texto con actividad comercial"
+    },
+    {
+      "name": "Black sheep",
+      "email": "",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "The Tech Pub",
+      "email": "",
+      "motivo": "nombre/texto con actividad comercial"
+    },
+    {
+      "name": "Renault Minuto",
+      "email": "",
+      "motivo": "OSM: etiqueta shop"
     }
   ],
   "sin_email_muestra": [
+    {
+      "name": "Club Estudiantes",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Dinosaurio Mall",
+      "tipo": "comercio",
+      "website": "https://www.grupodinosaurio.com/"
+    },
+    {
+      "name": "Vea",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Hipermercado La Anonima",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Del Sol",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Las mejores del mundo",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Centro Vecinal de Villa Adela - Playón deportivo",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Equus",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Electronia",
+      "tipo": "comercio",
+      "website": ""
+    },
     {
       "name": "SEP - Sindicato de Empleados Públicos",
       "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Communication Partner SRL",
+      "name": "Disco",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Mutual de los Docentes",
-      "tipo": "generador",
-      "website": ""
+      "name": "Casa 13",
+      "tipo": "comercio",
+      "website": "http://casa13.org.ar/"
     },
     {
-      "name": "Ciampagna y Asoc. S.A.",
+      "name": "Del Pilar",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "empresa de tanques",
+      "name": "Pafua",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Semacor - Mutual de SubOficiales del Ejercito",
+      "name": "Club Atlético Yapeyú",
       "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Siscard S.A.",
+      "name": "Buenos Días",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Sindicato de Camioneros",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Compostura de Calzado",
+      "name": "Todo Suspensión",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Sindicato Regional de Luz y Fuerza",
+      "name": "Centro Vecinal Crisol Sur",
       "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Gosur",
-      "tipo": "comercio",
-      "website": "http://www.gosur.com"
-    },
-    {
-      "name": "Sindicato de Trabajadores de Estaciones de Servicio, Playas de Estacionamiento, Garages, Lavanderos, Gomeras y Anexos de La Provincia de Córdoba",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Gestoría del automotor",
+      "name": "El Sotano",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Sindicato de Farmacia",
+      "name": "Club Las Palmas-LeoniDaniela",
       "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Club Colegio de Ingenieros Civiles",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Colegio de Escribanos",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "SUTEP Sindicato Espect. públicos",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "TUS Transportes Unidos del Sud",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "xrp | Müller & Asociados SRL",
-      "tipo": "comercio",
       "website": ""
     }
   ],
   "dudosos_muestra": [
     {
-      "name": "Gremio Galeria",
+      "name": "Polideportivo Carlos Ceruti",
       "email": "",
-      "motivo": "gremio sin contexto laboral suficiente"
+      "motivo": "OSM: instalación deportiva, no demuestra que sea generador"
+    },
+    {
+      "name": "TDS",
+      "email": "",
+      "motivo": "OSM: instalación deportiva, no demuestra que sea generador"
+    },
+    {
+      "name": "Movimiento Activo",
+      "email": "",
+      "motivo": "OSM: instalación deportiva, no demuestra que sea generador"
+    },
+    {
+      "name": "Asociación Cordobesa de Aikido",
+      "email": "",
+      "motivo": "OSM: instalación deportiva, no demuestra que sea generador"
+    },
+    {
+      "name": "María Pía Gym",
+      "email": "",
+      "motivo": "OSM: instalación deportiva, no demuestra que sea generador"
+    },
+    {
+      "name": "POLIDEPORTIVO GENERAL PAZ",
+      "email": "",
+      "motivo": "OSM: instalación deportiva, no demuestra que sea generador"
+    },
+    {
+      "name": "Polideportivo Corral de Palos",
+      "email": "",
+      "motivo": "OSM: instalación deportiva, no demuestra que sea generador"
+    },
+    {
+      "name": "Soccer World. Complejo deportivo Las Casuarinas",
+      "email": "",
+      "motivo": "OSM: instalación deportiva, no demuestra que sea generador"
+    },
+    {
+      "name": "Polideportivo UTN",
+      "email": "",
+      "motivo": "OSM: instalación deportiva, no demuestra que sea generador"
+    },
+    {
+      "name": "Parque",
+      "email": "",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Ferroviario",
+      "email": "",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Rollers Salom",
+      "email": "",
+      "motivo": "OSM: instalación deportiva, no demuestra que sea generador"
+    },
+    {
+      "name": "Grupo Scout 353 - Vírgen Inmaculada de la Montaña",
+      "email": "",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Canchas Güemes",
+      "email": "",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Infinito Xtreme Park",
+      "email": "",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Don Tito",
+      "email": "",
+      "motivo": "OSM: instalación deportiva, no demuestra que sea generador"
+    },
+    {
+      "name": "Avista",
+      "email": "",
+      "motivo": "OSM: instalación deportiva, no demuestra que sea generador"
+    },
+    {
+      "name": "La Raquette",
+      "email": "",
+      "motivo": "OSM: instalación deportiva, no demuestra que sea generador"
+    },
+    {
+      "name": "Estadio Monumental Presidente Perón",
+      "email": "",
+      "motivo": "OSM: instalación deportiva, no demuestra que sea generador"
+    },
+    {
+      "name": "Paseo del Buen Pastor",
+      "email": "",
+      "motivo": "sin evidencia suficiente para clasificar"
     }
   ],
-  "duplicados": 25,
+  "duplicados": 37,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "clasificados": 311,
+  "clasificados": 401,
   "cuadre": {
-    "clasificacion_total": 311,
-    "estado_total": 311,
+    "clasificacion_total": 401,
+    "estado_total": 401,
     "cuadra": true
   },
-  "listos_detectados": 16,
-  "listos_seleccionados": 16,
-  "listos_comercio": 14,
+  "listos_detectados": 8,
+  "listos_seleccionados": 8,
+  "listos_comercio": 6,
   "listos_generador": 2,
-  "encontrados": 336,
-  "procesados": 336,
-  "nuevos": 310,
-  "descartados": 1,
-  "excluidos": 25
+  "encontrados": 438,
+  "procesados": 438,
+  "nuevos": 399,
+  "descartados": 2,
+  "excluidos": 37
 }
