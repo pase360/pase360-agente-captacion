@@ -1,19 +1,19 @@
 {
   "por_tipo": {
-    "comercio": 452,
-    "generador": 109,
-    "dudoso": 79,
+    "comercio": 455,
+    "generador": 110,
+    "dudoso": 78,
     "descartado": 3,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 24,
-    "sin_email": 537,
-    "requiere_decision": 79,
+    "listo_para_contactar": 25,
+    "sin_email": 540,
+    "requiere_decision": 78,
     "descartado": 3
   },
   "sin_email_por_tipo": {
-    "comercio": 431,
+    "comercio": 434,
     "generador": 106,
     "otro": 0
   },
@@ -481,19 +481,19 @@
   "duplicados": 55,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "clasificados": 643,
+  "clasificados": 646,
   "cuadre": {
-    "clasificacion_total": 643,
-    "estado_total": 643,
+    "clasificacion_total": 646,
+    "estado_total": 646,
     "cuadra": true
   },
-  "listos_detectados": 24,
-  "listos_seleccionados": 24,
+  "listos_detectados": 25,
+  "listos_seleccionados": 25,
   "listos_comercio": 21,
-  "listos_generador": 3,
-  "encontrados": 698,
-  "procesados": 698,
-  "nuevos": 640,
+  "listos_generador": 4,
+  "encontrados": 701,
+  "procesados": 701,
+  "nuevos": 643,
   "descartados": 3,
   "excluidos": 55
 }

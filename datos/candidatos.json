@@ -5,7 +5,7 @@
     "name": "CBA X Escalada",
     "website": "https://cbax.cba.gov.ar/federacion-tierra/escalada/",
     "email": "programa.cbax@gmail.com",
-    "phone": "0351 4348360/7",
+    "phone": "+54 351 434 8360; +54 351 434 8367",
     "direccion": "Bulevar Parque del Kempes",
     "lat": -31.3634304,
     "lon": -64.2436389,
@@ -18,7 +18,7 @@
       "name": "CBA X Escalada",
       "operator": "Gobierno de Córdoba",
       "operator:type": "government",
-      "phone": "0351 4348360/7",
+      "phone": "+54 351 434 8360; +54 351 434 8367",
       "sport": "climbing",
       "website": "https://cbax.cba.gov.ar/federacion-tierra/escalada/"
     },
@@ -53,6 +53,34 @@
     },
     "website_final": "https://elclubdelamilanesa.com/",
     "email_source": "sitio_web",
+    "tipo": "generador",
+    "clasificacion_motivo": "club/institución deportiva o social",
+    "estado": "listo_para_contactar"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "163732495",
+    "name": "Club Universitario de Córdoba",
+    "website": "https://clubuniversitariocba.com/",
+    "email": "administracion@clubuniversitariocba.com",
+    "phone": "",
+    "direccion": "Hipólito Vieytes 550",
+    "lat": -31.4125646,
+    "lon": -64.2156586,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "550",
+      "addr:street": "Hipólito Vieytes",
+      "contact:instagram": "clubuniversitariocba.oficial",
+      "email": "administracion@clubuniversitariocba.com",
+      "leisure": "sports_centre",
+      "mobile": "+5493517164160",
+      "name": "Club Universitario de Córdoba",
+      "short_name": "La U",
+      "sport": "basketball;soccer;tennis;swimming;volleyball;field_hockey;rugby_league;handball",
+      "website": "https://clubuniversitariocba.com/"
+    },
+    "email_source": "OpenStreetMap",
     "tipo": "generador",
     "clasificacion_motivo": "club/institución deportiva o social",
     "estado": "listo_para_contactar"
@@ -99,7 +127,7 @@
     "name": "ATLARES Crowdfunding Bitcoin & Networking",
     "website": "www.atlares.com",
     "email": "info@atlares.com",
-    "phone": "351 347 5840",
+    "phone": "+54 351 347 5840",
     "direccion": "Ferroviarios 1456",
     "lat": -31.4290127,
     "lon": -64.1655274,
@@ -112,7 +140,7 @@
       "email": "info@atlares.com",
       "name": "ATLARES Crowdfunding Bitcoin & Networking",
       "office": "company",
-      "phone": "351 347 5840",
+      "phone": "+54 351 347 5840",
       "website": "www.atlares.com"
     },
     "email_source": "OpenStreetMap",
@@ -200,7 +228,6 @@
     "lat": -31.3762095,
     "lon": -64.2303493,
     "tags": {
-      "addr:city": "Córdoba",
       "addr:housenumber": "3863",
       "addr:street": "Fernando Fader",
       "amenity": "clinic",
@@ -221,7 +248,7 @@
     "source_id": "13425557432",
     "name": "Chamtac",
     "website": "https://www.impermeabilizacionestechoscordoba.com/",
-    "email": "emilio@impermeabilizacionestechoscordoba.com",
+    "email": "bundler=rspack@1.6.8",
     "phone": "+54 351 663 4850",
     "direccion": "Rivera Indarte 350",
     "lat": -31.411627,
@@ -297,32 +324,6 @@
     "email_source": "OpenStreetMap",
     "tipo": "comercio",
     "clasificacion_motivo": "OSM: etiqueta shop",
-    "estado": "listo_para_contactar"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "5379864474",
-    "name": "Farmacia Juarez Ruffino IV",
-    "website": "https://www.farmaciajuarezruffino.com/",
-    "email": "hola@farmaciajuarezruffino.com",
-    "phone": "+54 351 476 0300",
-    "direccion": "Bulevar Los Granaderos 2068",
-    "lat": -31.3808564,
-    "lon": -64.2009322,
-    "tags": {
-      "addr:housenumber": "2068",
-      "addr:street": "Bulevar Los Granaderos",
-      "amenity": "pharmacy",
-      "drive_through": "yes",
-      "healthcare": "pharmacy",
-      "name": "Farmacia Juarez Ruffino IV",
-      "phone": "+54 351 476 0300",
-      "website": "https://www.farmaciajuarezruffino.com/"
-    },
-    "website_final": "https://www.farmaciajuarezruffino.com/",
-    "email_source": "sitio_web",
-    "tipo": "comercio",
-    "clasificacion_motivo": "OSM: servicio/comercio",
     "estado": "listo_para_contactar"
   },
   {
@@ -475,6 +476,29 @@
     "email_source": "OpenStreetMap",
     "tipo": "comercio",
     "clasificacion_motivo": "OSM: etiqueta shop",
+    "estado": "listo_para_contactar"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "14109764770",
+    "name": "Quinto Deva",
+    "website": "https://quintodeva.blogspot.com/",
+    "email": "productoraquintodeva@gmail.com",
+    "phone": "",
+    "direccion": "Pasaje Agustín Pérez 10",
+    "lat": -31.4053106,
+    "lon": -64.1779094,
+    "tags": {
+      "addr:housenumber": "10",
+      "addr:street": "Pasaje Agustín Pérez",
+      "amenity": "arts_centre",
+      "email": "productoraquintodeva@gmail.com",
+      "name": "Quinto Deva",
+      "website": "https://quintodeva.blogspot.com/"
+    },
+    "email_source": "OpenStreetMap",
+    "tipo": "comercio",
+    "clasificacion_motivo": "nombre/texto con actividad comercial",
     "estado": "listo_para_contactar"
   },
   {
@@ -684,7 +708,7 @@
     "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
     "website": "",
     "email": "",
-    "phone": "0351 480-1139",
+    "phone": "+54 351 480 1139",
     "direccion": "Italia 2472",
     "lat": -31.3867835,
     "lon": -64.2116705,
@@ -695,7 +719,7 @@
       "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
       "office": "association",
       "opening_hours": "Mo-Fr 09:00-18:45",
-      "phone": "0351 480-1139"
+      "phone": "+54 351 480 1139"
     },
     "tipo": "generador",
     "clasificacion_motivo": "organización de afiliados/mutual/gremial/profesional",
@@ -867,6 +891,27 @@
     "tags": {
       "amenity": "arts_centre",
       "name": "Centro Vecinal Crisol Sur"
+    },
+    "tipo": "generador",
+    "clasificacion_motivo": "centro social de miembros",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "1531282320",
+    "name": "Centro vecinal de Quintas Capillitas",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4529956,
+    "lon": -64.0736512,
+    "tags": {
+      "amenity": "community_centre",
+      "building": "yes",
+      "building:levels": "1",
+      "community_centre": "community_hall",
+      "name": "Centro vecinal de Quintas Capillitas"
     },
     "tipo": "generador",
     "clasificacion_motivo": "centro social de miembros",
@@ -1438,6 +1483,27 @@
   },
   {
     "source": "OpenStreetMap",
+    "source_id": "14070562569",
+    "name": "Club de Boxeadores",
+    "website": "",
+    "email": "",
+    "phone": "+54 351 557 5868",
+    "direccion": "",
+    "lat": -31.4097195,
+    "lon": -64.177065,
+    "tags": {
+      "club": "sport",
+      "name": "Club de Boxeadores",
+      "panoramax": "b4cada8a-511e-410d-9280-f4ae877337ef",
+      "phone": "+54 351 557 5868",
+      "sport": "boxing"
+    },
+    "tipo": "generador",
+    "clasificacion_motivo": "club/institución deportiva o social",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
     "source_id": "402045266",
     "name": "Club de Escribanos",
     "website": "",
@@ -1609,24 +1675,6 @@
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "163732495",
-    "name": "Club Universitario",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "",
-    "lat": -31.4125646,
-    "lon": -64.2156586,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Club Universitario"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club/institución deportiva o social",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
     "source_id": "985579509",
     "name": "Colegio de Escribanos",
     "website": "",
@@ -1693,8 +1741,8 @@
     "email": "",
     "phone": "",
     "direccion": "",
-    "lat": -31.3376749,
-    "lon": -64.2525236,
+    "lat": -31.3376834,
+    "lon": -64.2525086,
     "tags": {
       "leisure": "sports_centre",
       "name": "Estadio Club Atalaya"
@@ -2154,32 +2202,6 @@
       "network": "Scouts de Argentina",
       "opening_hours": "Sa 15:00-18:00",
       "ref": "378"
-    },
-    "tipo": "generador",
-    "clasificacion_motivo": "club/institución deportiva o social",
-    "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "6693597155",
-    "name": "Grupo Scout Juan XXIII",
-    "website": "",
-    "email": "",
-    "phone": "",
-    "direccion": "Vera y Zárate 3075",
-    "lat": -31.3800045,
-    "lon": -64.2183595,
-    "tags": {
-      "addr:housenumber": "3075",
-      "addr:street": "Vera y Zárate",
-      "amenity": "community_centre",
-      "club": "scout",
-      "community_centre": "home_club",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout Juan XXIII",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "196"
     },
     "tipo": "generador",
     "clasificacion_motivo": "club/institución deportiva o social",
@@ -3188,7 +3210,7 @@
     "name": "Afema S.A",
     "website": "https://www.afema.com.ar/",
     "email": "",
-    "phone": "3517371862",
+    "phone": "+54 351 737 1862",
     "direccion": "Amalia Celia Figueredo de Pietra 1537",
     "lat": -31.3418772,
     "lon": -64.1501335,
@@ -3200,7 +3222,7 @@
       "name": "Afema S.A",
       "office": "company",
       "opening_hours": "Mo-Fr 08:00-17:00",
-      "phone": "3517371862",
+      "phone": "+54 351 737 1862",
       "website": "https://www.afema.com.ar/"
     },
     "website_final": "https://www.afema.com.ar/",
@@ -3472,6 +3494,7 @@
       "source": "http://www.cervezaantares.com/shops.php?iId=63",
       "website": "http://www.cervezaantares.com/shops.php?iId=63"
     },
+    "website_final": "https://www.cervezaantares.com/shops.php?iId=63",
     "tipo": "comercio",
     "clasificacion_motivo": "OSM: servicio/comercio",
     "estado": "sin_email"
@@ -3579,28 +3602,6 @@
     "tipo": "comercio",
     "clasificacion_motivo": "OSM: servicio/comercio",
     "estado": "sin_email"
-  },
-  {
-    "source": "OpenStreetMap",
-    "source_id": "295761431",
-    "name": "Arabian",
-    "website": "",
-    "email": "",
-    "phone": "+5493515398206",
-    "direccion": "República del Libano 399",
-    "lat": -31.3959751,
-    "lon": -64.173389,
-    "tags": {
-      "addr:housenumber": "399",
-      "addr:street": "República del Libano",
-      "leisure": "sports_centre",
-      "name": "Arabian",
-      "phone": "+5493515398206",
-      "sport": "paddle_tennis"
-    },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "OSM: instalación deportiva, no demuestra que sea generador",
-    "estado": "requiere_decision"
   },
   {
     "source": "OpenStreetMap",
@@ -3866,7 +3867,7 @@
       "survey:date": "2024-12-01",
       "website": "https://bitcoinschoolar.com/"
     },
-    "web_error": "HTTPSConnectionPool(host='bitcoinschoolar.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='bitcoinschoolar.com', port=443) at",
+    "website_final": "https://bitcoinschoolar.com/",
     "tipo": "dudoso",
     "clasificacion_motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios",
     "estado": "requiere_decision"
@@ -4400,7 +4401,7 @@
     "name": "Capilla Santa Teresita",
     "website": "",
     "email": "vicariasantateresita@gmail.com",
-    "phone": "03514974197",
+    "phone": "+54 351 497 4197",
     "direccion": "Avenida 11 de Septiembre km7",
     "lat": -31.48342,
     "lon": -64.1480971,
@@ -4412,7 +4413,7 @@
       "email": "vicariasantateresita@gmail.com",
       "name": "Capilla Santa Teresita",
       "opening_hours": "Mo-Su 10:00-22:00",
-      "phone": "03514974197"
+      "phone": "+54 351 497 4197"
     },
     "email_source": "OpenStreetMap",
     "tipo": "dudoso",
@@ -4524,7 +4525,7 @@
       "name:es": "Casa 13",
       "website": "http://casa13.org.ar/"
     },
-    "web_error": "HTTPConnectionPool(host='casa13.org.ar', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='casa13.org.ar', port=80): Failed to resolve",
+    "website_final": "http://casa13.org.ar/",
     "tipo": "comercio",
     "clasificacion_motivo": "nombre/texto con actividad comercial",
     "estado": "sin_email"
@@ -4574,14 +4575,14 @@
     "name": "Casa Pueblo Sur",
     "website": "https://www.facebook.com/casa.pueblosur/",
     "email": "",
-    "phone": "+54 0351 672 6074",
+    "phone": "+54 351 672 6074",
     "direccion": "",
     "lat": -31.4746392,
     "lon": -64.2071368,
     "tags": {
       "amenity": "community_centre",
       "name": "Casa Pueblo Sur",
-      "phone": "+54 0351 672 6074",
+      "phone": "+54 351 672 6074",
       "website": "https://www.facebook.com/casa.pueblosur/"
     },
     "website_final": "https://www.facebook.com/casa.pueblosur/",
@@ -4733,7 +4734,7 @@
     "name": "Centro Cultural Córdoba",
     "website": "",
     "email": "",
-    "phone": "03514343518",
+    "phone": "+54 351 434 3518",
     "direccion": "Leopoldo Lugones 401",
     "lat": -31.4275853,
     "lon": -64.1822555,
@@ -4744,7 +4745,7 @@
       "amenity": "community_centre",
       "name": "Centro Cultural Córdoba",
       "opening_hours": "Tu-Su 10:00-13:00 17:30-20:30",
-      "phone": "03514343518"
+      "phone": "+54 351 434 3518"
     },
     "tipo": "dudoso",
     "clasificacion_motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios",
@@ -4842,7 +4843,7 @@
     "name": "Centro de Salud 17 - Barrio Villa Azalais Oeste",
     "website": "",
     "email": "",
-    "phone": "+54 351 433 5109",
+    "phone": "+54 0351 4335109",
     "direccion": "Acampes 3898",
     "lat": -31.3662616,
     "lon": -64.1751108,
@@ -4860,7 +4861,7 @@
       "opening_hours": "07:00-14:00",
       "operator": "Municipalidad de Cordoba",
       "operator:type": "public",
-      "phone": "+54 351 433 5109",
+      "phone": "+54 0351 4335109",
       "ref:sisa_codigo": "50140142133191",
       "ref:sisa_tipologia": "ESSIDT"
     },
@@ -4874,7 +4875,7 @@
     "name": "Centro de Salud 21 - Barrio Marqués De Sobremonte",
     "website": "",
     "email": "",
-    "phone": "+54 351 433 5105",
+    "phone": "+54 0351 4335105",
     "direccion": "Nuflo de Aguilar 550",
     "lat": -31.362855,
     "lon": -64.19551,
@@ -4891,7 +4892,7 @@
       "opening_hours:covid19": "Mo-Su 07:00-14:00",
       "operator": "Municipal",
       "operator:type": "public",
-      "phone": "+54 351 433 5105",
+      "phone": "+54 0351 4335105",
       "ref:sisa_codigo": "50140142233273",
       "ref:sisa_tipologia": "ESSIDT"
     },
@@ -4905,7 +4906,7 @@
     "name": "Centro de Salud 4 - Barrio Nueva Italia",
     "website": "",
     "email": "",
-    "phone": "+54 351 433 5123",
+    "phone": "+54 0351 4335123",
     "direccion": "José Quevedo",
     "lat": -31.3819325,
     "lon": -64.1425277,
@@ -4921,7 +4922,7 @@
       "opening_hours": "07:00-17:00",
       "operator": "Municipal",
       "operator:type": "public",
-      "phone": "+54 351 433 5123",
+      "phone": "+54 0351 4335123",
       "ref:sisa_codigo": "50140142133187",
       "ref:sisa_tipologia": "ESSIDT"
     },
@@ -5002,7 +5003,7 @@
       "amenity": "clinic",
       "healthcare": "clinic",
       "name": "Centro de Salud 63 - Barrio Parque Republica",
-      "opening_hours": "07:00-14:00",
+      "opening_hours": "7:00-14:00",
       "operator": "Municipal",
       "operator:type": "public",
       "phone": "+54 351 4337818",
@@ -5019,7 +5020,7 @@
     "name": "Centro de Salud 67 - 16 de Noviembre",
     "website": "",
     "email": "",
-    "phone": "+54 3543 44 9431",
+    "phone": "+54 03543 449431",
     "direccion": "Cauque SN",
     "lat": -31.3132449,
     "lon": -64.2617769,
@@ -5037,7 +5038,7 @@
       "opening_hours": "07:00-14:00",
       "operator": "Municipal",
       "operator:type": "public",
-      "phone": "+54 3543 44 9431",
+      "phone": "+54 03543 449431",
       "ref:sisa_codigo": "50140142233265",
       "ref:sisa_tipologia": "ESSIDT"
     },
@@ -5636,7 +5637,7 @@
     "name": "Consultorios Médicos Privados Tablada",
     "website": "",
     "email": "",
-    "phone": "+54 3543 43 3864",
+    "phone": "03543 433864",
     "direccion": "",
     "lat": -31.2932601,
     "lon": -64.2968446,
@@ -5645,7 +5646,7 @@
       "description": "Centro de estética y salud",
       "healthcare": "doctor",
       "name": "Consultorios Médicos Privados Tablada",
-      "phone": "+54 3543 43 3864",
+      "phone": "03543 433864",
       "wheelchair": "no"
     },
     "tipo": "comercio",
@@ -6497,6 +6498,7 @@
       "name": "Don Rogelio",
       "website": "http://www.circuitogastronomico.net/restaurante/73/Don-Rogelio.html"
     },
+    "website_final": "http://www.circuitogastronomico.net/restaurante/73/Don-Rogelio.html",
     "tipo": "comercio",
     "clasificacion_motivo": "OSM: servicio/comercio",
     "estado": "sin_email"
@@ -6558,6 +6560,30 @@
     },
     "tipo": "comercio",
     "clasificacion_motivo": "OSM: etiqueta shop",
+    "estado": "sin_email"
+  },
+  {
+    "source": "OpenStreetMap",
+    "source_id": "13928697043",
+    "name": "Duo0 Limpieza",
+    "website": "https://duo0.co/",
+    "email": "",
+    "phone": "+54 351 819 0145",
+    "direccion": "",
+    "lat": -31.4167093,
+    "lon": -64.1839984,
+    "tags": {
+      "addr:city": "Córdoba",
+      "craft": "cleaning",
+      "name": "Duo0 Limpieza",
+      "opening_hours": "Mo-Sa 08:00-19:00",
+      "operator": "Duo0",
+      "phone": "+54 351 819 0145",
+      "website": "https://duo0.co/"
+    },
+    "website_final": "https://duo0.co/",
+    "tipo": "comercio",
+    "clasificacion_motivo": "OSM: etiqueta craft",
     "estado": "sin_email"
   },
   {
@@ -6806,7 +6832,7 @@
     "name": "Electricista Matriculado",
     "website": "",
     "email": "",
-    "phone": "3512079320",
+    "phone": "+54 351 207 9320",
     "direccion": "José thompson 653",
     "lat": -31.4670297,
     "lon": -64.0867519,
@@ -6815,7 +6841,7 @@
       "addr:street": "José thompson",
       "craft": "electrician",
       "name": "Electricista Matriculado",
-      "phone": "3512079320"
+      "phone": "+54 351 207 9320"
     },
     "tipo": "comercio",
     "clasificacion_motivo": "OSM: etiqueta craft",
@@ -7009,21 +7035,17 @@
   },
   {
     "source": "OpenStreetMap",
-    "source_id": "295761432",
-    "name": "Espacio O2",
+    "source_id": "248393806",
+    "name": "Espacio Quality",
     "website": "",
     "email": "",
-    "phone": "+543514715307",
-    "direccion": "Faustino Allende 1045",
-    "lat": -31.399115,
-    "lon": -64.1921644,
+    "phone": "",
+    "direccion": "",
+    "lat": -31.4446777,
+    "lon": -64.1953359,
     "tags": {
-      "addr:housenumber": "1045",
-      "addr:street": "Faustino Allende",
       "leisure": "sports_centre",
-      "name": "Espacio O2",
-      "phone": "+543514715307",
-      "sport": "multi"
+      "name": "Espacio Quality"
     },
     "tipo": "dudoso",
     "clasificacion_motivo": "OSM: instalación deportiva, no demuestra que sea generador",

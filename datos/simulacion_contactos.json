@@ -10,6 +10,11 @@
     "email": "info@elclubdelamilanesa.com"
   },
   {
+    "name": "Club Universitario de Córdoba",
+    "tipo": "generador",
+    "email": "administracion@clubuniversitariocba.com"
+  },
+  {
     "name": "SushiClub",
     "tipo": "generador",
     "email": "contacto@sushiclub.com.ar"
@@ -37,7 +42,7 @@
   {
     "name": "Chamtac",
     "tipo": "comercio",
-    "email": "emilio@impermeabilizacionestechoscordoba.com"
+    "email": "bundler=rspack@1.6.8"
   },
   {
     "name": "Dinosaurio Mall",
@@ -48,11 +53,6 @@
     "name": "Fabrica Pc",
     "tipo": "comercio",
     "email": "rvlevet@gmail.com"
-  },
-  {
-    "name": "Farmacia Juarez Ruffino IV",
-    "tipo": "comercio",
-    "email": "hola@farmaciajuarezruffino.com"
   },
   {
     "name": "Farmacia Pedernera",
@@ -83,6 +83,11 @@
     "name": "Quimica Halac",
     "tipo": "comercio",
     "email": "info@quimicahalac.com.ar"
+  },
+  {
+    "name": "Quinto Deva",
+    "tipo": "comercio",
+    "email": "productoraquintodeva@gmail.com"
   },
   {
     "name": "Rapanui",
