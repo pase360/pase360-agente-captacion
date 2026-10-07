@@ -75,6 +75,91 @@ def _campos_csv(rows):
     return campos
 
 
+def _clasificar(c):
+    """
+    Clasifica primero al candidato.
+
+    La búsqueda/enriquecimiento web NO se realiza aquí.
+    Eso se hace solamente después de obtener una clasificación
+    válida de comercio o generador.
+    """
+
+    tipo, motivo = clasificador.clasificar(c)
+
+    c["tipo"] = tipo
+    c["clasificacion_motivo"] = motivo
+
+    # Si la clasificación es dudosa, intentar resolverla mediante IA.
+    if tipo == "dudoso" and ia.disponible():
+        try:
+            ai = ia.revisar(c)
+
+            ai_tipo = ai.get("tipo")
+            ai_confianza = float(
+                ai.get("confianza", 0)
+            )
+
+            if (
+                ai_tipo
+                in {
+                    "comercio",
+                    "generador",
+                    "descartado",
+                }
+                and ai_confianza >= 0.80
+            ):
+                c["tipo"] = ai_tipo
+                c["clasificacion_motivo"] = (
+                    "IA: "
+                    + str(
+                        ai.get(
+                            "motivo",
+                            "",
+                        )
+                    )
+                )
+
+        except Exception as e:
+            # Si la IA falla, conservamos la clasificación
+            # original. Nunca convertimos un candidato por
+            # error técnico en comercio o generador.
+            c["clasificacion_motivo"] = (
+                str(c.get("clasificacion_motivo", ""))
+                + " | IA no disponible: "
+                + str(e)
+            )
+
+    return c
+
+
+def _enriquecer_email(c):
+    """
+    Busca/completa email únicamente para candidatos que ya
+    fueron clasificados como comercio o generador.
+
+    Esto evita gastar consultas web en descartados o dudosos.
+    """
+
+    if c.get("tipo") not in {
+        "comercio",
+        "generador",
+    }:
+        return c
+
+    try:
+        c = web.completar(c)
+    except Exception as e:
+        # Un error de enriquecimiento nunca debe romper
+        # la captación completa.
+        c["email_enrichment_error"] = str(e)
+
+    c["email"] = normalizar_email(
+        c.get("email")
+    )
+
+    return c
+
+
 def capturar():
     s = _historial()
     rows = fuentes.buscar()
@@ -105,7 +190,6 @@ def capturar():
         },
 
         # Sin email por tipo.
-        # Sirve para saber exactamente quiénes no tienen email.
         "sin_email_por_tipo": {
             "comercio": 0,
             "generador": 0,
@@ -143,82 +227,26 @@ def capturar():
 
         seen.add(k)
 
-        # Completar email desde el sitio web.
-        c = web.completar(c)
+        # ---------------------------------------------------------
+        # 1. CLASIFICAR PRIMERO
+        # ---------------------------------------------------------
+        #
+        # IMPORTANTE:
+        # Todavía NO buscamos email.
+        #
 
-        # Clasificación inicial.
-        tipo, motivo = clasificador.clasificar(c)
-
-        c["tipo"] = tipo
-        c["clasificacion_motivo"] = motivo
-
-        # Si es dudoso, intentar resolverlo mediante IA.
-        if tipo == "dudoso" and ia.disponible():
-            ai = ia.revisar(c)
-
-            if (
-                ai.get("tipo")
-                in {"comercio", "generador", "descartado"}
-                and float(ai.get("confianza", 0)) >= 0.80
-            ):
-                c["tipo"] = ai["tipo"]
-                c["clasificacion_motivo"] = (
-                    "IA: " + str(ai.get("motivo", ""))
-                )
-
-        c["email"] = normalizar_email(c.get("email"))
+        c = _clasificar(c)
 
         tipo_final = c.get("tipo", "otro")
 
-        # ---------------------------------------------------------
-        # 1. CLASIFICACIÓN
-        # ---------------------------------------------------------
-
-        if tipo_final in diagnostico["por_tipo"]:
-            diagnostico["por_tipo"][tipo_final] += 1
-        else:
+        if tipo_final not in diagnostico["por_tipo"]:
             tipo_final = "otro"
             c["tipo"] = "otro"
-            diagnostico["por_tipo"]["otro"] += 1
+
+        diagnostico["por_tipo"][tipo_final] += 1
 
         # ---------------------------------------------------------
-        # MUESTRAS
-        # ---------------------------------------------------------
-
-        if (
-            tipo_final == "generador"
-            and len(diagnostico["generadores_muestra"]) < 30
-        ):
-            diagnostico["generadores_muestra"].append(
-                {
-                    "name": c.get("name"),
-                    "email": c.get("email"),
-                    "motivo": c.get("clasificacion_motivo"),
-                }
-            )
-
-        if (
-            tipo_final == "comercio"
-            and len(diagnostico["comercios_muestra"]) < 20
-        ):
-            diagnostico["comercios_muestra"].append(
-                {
-                    "name": c.get("name"),
-                    "email": c.get("email"),
-                    "motivo": c.get("clasificacion_motivo"),
-                }
-            )
-
-        # ---------------------------------------------------------
-        # 2. ESTADO
-        #
-        # IMPORTANTE:
-        # - descartado -> descartado
-        # - dudoso -> requiere_decision
-        # - comercio/generador sin email -> sin_email
-        # - comercio/generador con email -> listo
-        #
-        # De esta manera cada candidato tiene UN SOLO estado.
+        # 2. DESCARTADOS
         # ---------------------------------------------------------
 
         if tipo_final == "descartado":
@@ -243,8 +271,13 @@ def capturar():
 
             s["descartados"][k] = motivo_desc
 
-            # Los descartados NO pasan a candidatos utilizables.
+            # No busca email.
+            # No entra como candidato utilizable.
             continue
+
+        # ---------------------------------------------------------
+        # 3. DUDOSOS
+        # ---------------------------------------------------------
 
         if tipo_final == "dudoso":
             c["estado"] = "requiere_decision"
@@ -253,7 +286,9 @@ def capturar():
                 "requiere_decision"
             ] += 1
 
-            if len(diagnostico["dudosos_muestra"]) < 20:
+            if len(
+                diagnostico["dudosos_muestra"]
+            ) < 20:
                 diagnostico["dudosos_muestra"].append(
                     {
                         "name": c.get("name"),
@@ -264,10 +299,66 @@ def capturar():
                     }
                 )
 
-        elif not c["email"]:
+            # MUY IMPORTANTE:
+            # No hacemos búsqueda web de email para dudosos.
+            nuevos.append(c)
+            continue
+
+        # ---------------------------------------------------------
+        # 4. COMERCIO / GENERADOR
+        # ---------------------------------------------------------
+        #
+        # Recién ahora se permite el enriquecimiento web.
+        #
+
+        c = _enriquecer_email(c)
+
+        # ---------------------------------------------------------
+        # 5. MUESTRAS
+        # ---------------------------------------------------------
+
+        if (
+            tipo_final == "generador"
+            and len(
+                diagnostico["generadores_muestra"]
+            ) < 30
+        ):
+            diagnostico["generadores_muestra"].append(
+                {
+                    "name": c.get("name"),
+                    "email": c.get("email"),
+                    "motivo": c.get(
+                        "clasificacion_motivo"
+                    ),
+                }
+            )
+
+        if (
+            tipo_final == "comercio"
+            and len(
+                diagnostico["comercios_muestra"]
+            ) < 20
+        ):
+            diagnostico["comercios_muestra"].append(
+                {
+                    "name": c.get("name"),
+                    "email": c.get("email"),
+                    "motivo": c.get(
+                        "clasificacion_motivo"
+                    ),
+                }
+            )
+
+        # ---------------------------------------------------------
+        # 6. ESTADO
+        # ---------------------------------------------------------
+
+        if not c.get("email"):
             c["estado"] = "sin_email"
 
-            diagnostico["por_estado"]["sin_email"] += 1
+            diagnostico["por_estado"][
+                "sin_email"
+            ] += 1
 
             if tipo_final in {
                 "comercio",
@@ -277,7 +368,9 @@ def capturar():
                     tipo_final
                 ] += 1
 
-            if len(diagnostico["sin_email_muestra"]) < 20:
+            if len(
+                diagnostico["sin_email_muestra"]
+            ) < 20:
                 diagnostico["sin_email_muestra"].append(
                     {
                         "name": c.get("name"),
@@ -315,7 +408,10 @@ def capturar():
     diagnostico["cuadre"] = {
         "clasificacion_total": clasificados,
         "estado_total": estados_clasificados,
-        "cuadra": clasificados == estados_clasificados,
+        "cuadra": (
+            clasificados
+            == estados_clasificados
+        ),
     }
 
     # -------------------------------------------------------------
@@ -324,7 +420,8 @@ def capturar():
 
     nuevos.sort(
         key=lambda x: (
-            x.get("estado") != "listo_para_contactar",
+            x.get("estado")
+            != "listo_para_contactar",
             x.get("tipo") != "generador",
             x.get("name", "").lower(),
         )
@@ -334,17 +431,23 @@ def capturar():
     todos_los_listos = [
         x
         for x in nuevos
-        if x["estado"] == "listo_para_contactar"
+        if x.get("estado")
+        == "listo_para_contactar"
     ]
 
     diagnostico["listos_detectados"] = len(
         todos_los_listos
     )
 
-    # Máximo de contactos que se seleccionan para esta ejecución.
-    listos = todos_los_listos[: C.META_CONTACTOS]
+    # Máximo de contactos que se seleccionan para
+    # esta ejecución.
+    listos = todos_los_listos[
+        : C.META_CONTACTOS
+    ]
 
-    diagnostico["listos_seleccionados"] = len(listos)
+    diagnostico["listos_seleccionados"] = len(
+        listos
+    )
 
     diagnostico["listos_comercio"] = sum(
         x.get("tipo") == "comercio"
@@ -413,13 +516,15 @@ def capturar():
 
     diagnostico["encontrados"] = len(rows)
 
-    diagnostico["procesados"] = len(procesados)
+    diagnostico["procesados"] = len(
+        procesados
+    )
 
     diagnostico["nuevos"] = len(nuevos)
 
-    diagnostico["descartados"] = diagnostico[
-        "por_tipo"
-    ]["descartado"]
+    diagnostico["descartados"] = (
+        diagnostico["por_tipo"]["descartado"]
+    )
 
     diagnostico["excluidos"] = (
         diagnostico["duplicados"]
