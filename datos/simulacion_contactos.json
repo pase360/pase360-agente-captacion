@@ -1,8 +1,23 @@
 [
   {
-    "name": "Club Universitario de Córdoba",
+    "name": "CBA X Escalada",
     "tipo": "generador",
-    "email": "administracion@clubuniversitariocba.com"
+    "email": "programa.cbax@gmail.com"
+  },
+  {
+    "name": "Club Milanesa",
+    "tipo": "generador",
+    "email": "info@elclubdelamilanesa.com"
+  },
+  {
+    "name": "SushiClub",
+    "tipo": "generador",
+    "email": "contacto@sushiclub.com.ar"
+  },
+  {
+    "name": "ATLARES Crowdfunding Bitcoin & Networking",
+    "tipo": "comercio",
+    "email": "info@atlares.com"
   },
   {
     "name": "Café Martínez",
@@ -25,9 +40,14 @@
     "email": "emilio@impermeabilizacionestechoscordoba.com"
   },
   {
-    "name": "Club Milanesa",
+    "name": "Dinosaurio Mall",
     "tipo": "comercio",
-    "email": "info@elclubdelamilanesa.com"
+    "email": "info@grupodinosaurio.com"
+  },
+  {
+    "name": "Fabrica Pc",
+    "tipo": "comercio",
+    "email": "rvlevet@gmail.com"
   },
   {
     "name": "Farmacia Juarez Ruffino IV",
@@ -40,9 +60,44 @@
     "email": "pedernerafarmacia@gmail.com"
   },
   {
+    "name": "Incutex",
+    "tipo": "comercio",
+    "email": "info@incutex.com.ar"
+  },
+  {
+    "name": "Manifesto",
+    "tipo": "comercio",
+    "email": "info@manifesto.com.ar"
+  },
+  {
+    "name": "Marozzi distribuidora",
+    "tipo": "comercio",
+    "email": "ventas@bateriasmarozzi.com.ar"
+  },
+  {
+    "name": "mini Super",
+    "tipo": "comercio",
+    "email": "minisuperas@gmail.com"
+  },
+  {
+    "name": "Quimica Halac",
+    "tipo": "comercio",
+    "email": "info@quimicahalac.com.ar"
+  },
+  {
     "name": "Rapanui",
     "tipo": "comercio",
     "email": "contacto@rapanui.com.ar"
+  },
+  {
+    "name": "Sanatorio Allende",
+    "tipo": "comercio",
+    "email": "atpacientecerro@sanatorioallende.com"
+  },
+  {
+    "name": "Sex Cordoba Shop",
+    "tipo": "comercio",
+    "email": "info@sexcordobashop.com.ar"
   },
   {
     "name": "Starbucks",
@@ -50,13 +105,18 @@
     "email": "info@starbucks.com.ar"
   },
   {
-    "name": "SushiClub",
+    "name": "Virmanic SA",
     "tipo": "comercio",
-    "email": "contacto@sushiclub.com.ar"
+    "email": "jvalles@virmanicsa.com"
   },
   {
     "name": "Wöllen",
     "tipo": "comercio",
     "email": "info@wollen.com.ar"
+  },
+  {
+    "name": "Xipa",
+    "tipo": "comercio",
+    "email": "info.xipa@gmail.com"
   }
 ]

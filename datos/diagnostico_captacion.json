@@ -1,388 +1,378 @@
 {
   "por_tipo": {
-    "comercio": 255,
-    "generador": 34,
-    "dudoso": 177,
-    "descartado": 28,
+    "comercio": 452,
+    "generador": 109,
+    "dudoso": 79,
+    "descartado": 3,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 12,
-    "sin_email": 277,
-    "requiere_decision": 177,
-    "descartado": 28
+    "listo_para_contactar": 24,
+    "sin_email": 537,
+    "requiere_decision": 79,
+    "descartado": 3
   },
   "sin_email_por_tipo": {
-    "comercio": 244,
-    "generador": 33,
+    "comercio": 431,
+    "generador": 106,
     "otro": 0
   },
   "descartados_por_motivo": {
-    "categoria_excluida:capilla": 1,
-    "categoria_excluida:plaza": 1,
-    "categoria_excluida:gobierno": 3,
-    "categoria_excluida:municipalidad,municipal": 4,
-    "categoria_excluida:municipal": 12,
-    "categoria_excluida:nacional,universidad": 1,
-    "categoria_excluida:estacionamiento": 1,
-    "categoria_excluida:escuela": 2,
-    "categoria_excluida:iglesia": 1,
-    "categoria_excluida:museo": 1,
-    "categoria_excluida:provincial": 1
+    "institución educativa": 3
   },
   "generadores_muestra": [
     {
-      "name": "SUTEP Sindicato Espect. públicos",
+      "name": "Centro Vecinal Yofre Sud",
       "email": "",
-      "motivo": "institucional:sindicato"
+      "motivo": "centro social de miembros"
+    },
+    {
+      "name": "Centro Vecinal Don Bosco",
+      "email": "",
+      "motivo": "centro social de miembros"
+    },
+    {
+      "name": "Club 25 de Mayo",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Club Sociedad Belgrano",
+      "email": "",
+      "motivo": "club/institución deportiva o social"
+    },
+    {
+      "name": "Centro vecinal Santa Clara de Asis",
+      "email": "",
+      "motivo": "centro social de miembros"
+    },
+    {
+      "name": "Centro Vecinal Yofre Norte",
+      "email": "",
+      "motivo": "centro social de miembros"
+    },
+    {
+      "name": "Centro Vecinal Marcelo T. De alvear",
+      "email": "",
+      "motivo": "centro social de miembros"
+    },
+    {
+      "name": "centro vecinal Parque República",
+      "email": "",
+      "motivo": "centro social de miembros"
     },
     {
       "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
       "email": "",
-      "motivo": "institucional:mutual"
+      "motivo": "organización de afiliados/mutual/gremial/profesional"
     },
     {
-      "name": "Club Deportivo Alta Córdoba",
+      "name": "Centro Vecinal Barrio Parque Vélez Sarsfield",
       "email": "",
-      "motivo": "club_deportivo"
+      "motivo": "centro social de miembros"
     },
     {
-      "name": "SUTIAGA",
+      "name": "Grupo Scout Martín Fierro",
       "email": "",
-      "motivo": "institucional:sindicato"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "SEP - Sindicato de Empleados Públicos",
+      "name": "Grupo Scout Niño Jesús de Praga",
       "email": "",
-      "motivo": "institucional:sindicato"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Mutual de los Docentes",
+      "name": "Grupo Scout José Hernández",
       "email": "",
-      "motivo": "institucional:mutual"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Gremio Galeria",
+      "name": "Grupo Scout Miguel de Cervantes Saavedra",
       "email": "",
-      "motivo": "institucional:gremio"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Semacor - Mutual de SubOficiales del Ejercito",
+      "name": "Grupo Scout Talita Cum",
       "email": "",
-      "motivo": "institucional:mutual"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Sindicato de Camioneros",
+      "name": "Grupo Scout Virgen Inmaculada de la Montaña",
       "email": "",
-      "motivo": "institucional:sindicato"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Sindicato Regional de Luz y Fuerza",
+      "name": "Grupo Scout Claudio Pocho Lepratti",
       "email": "",
-      "motivo": "institucional:sindicato"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Sindicato de Farmacia",
+      "name": "Grupo Scout Nuestra Señora de Itatí",
       "email": "",
-      "motivo": "institucional:sindicato"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Club Colegio de Ingenieros Civiles",
+      "name": "Grupo Scout Cutaquelen",
       "email": "",
-      "motivo": "colegio_profesional"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Colegio de Escribanos",
+      "name": "Grupo Scout Tambor de Tacuarí",
       "email": "",
-      "motivo": "colegio_profesional"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Club Atlético Yapeyú",
+      "name": "Grupo Scout Divino Niño",
       "email": "",
-      "motivo": "club_deportivo"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Club Atlético General Paz -Junior´s",
+      "name": "Grupo Scout Arakatz",
       "email": "",
-      "motivo": "club_deportivo"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Club Atlético Juvenil Barrio...",
+      "name": "Grupo Scout Los Gauchos de Güemes",
       "email": "",
-      "motivo": "club_deportivo"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Club Atlético Defensores Central Córdoba",
+      "name": "Grupo Scout Polo Godoy Rojo",
       "email": "",
-      "motivo": "club_deportivo"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Club Social STIA",
+      "name": "Grupo Scout Perito Moreno",
       "email": "",
-      "motivo": "club_deportivo"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Córdoba Rugby Club",
+      "name": "Grupo Scout Granaderos de San Martín",
       "email": "",
-      "motivo": "club_deportivo"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Club Atlético Palermo",
+      "name": "Grupo Scout Pedro Ignacio de Castro Barro",
       "email": "",
-      "motivo": "club_deportivo"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Club de Boxeadores",
+      "name": "Grupo Scout Enrique Angelelli",
       "email": "",
-      "motivo": "club_deportivo"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Estadio Francisco Cabasés",
+      "name": "Grupo Scout Pehumayén",
       "email": "",
-      "motivo": "club_deportivo"
+      "motivo": "club/institución deportiva o social"
     },
     {
-      "name": "Club Universitario de Córdoba",
-      "email": "administracion@clubuniversitariocba.com",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Club Argentino Peñarol",
+      "name": "Grupo Scout Cura Gaucho",
       "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Club General Paz Juniors",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Club Atlético Libertad",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Club Barrio Parque",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Club Atlético Las Palmas",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Club Quilmes - Villa Allende",
-      "email": "",
-      "motivo": "club_deportivo"
-    },
-    {
-      "name": "Tala Rugby Club",
-      "email": "",
-      "motivo": "club_deportivo"
+      "motivo": "club/institución deportiva o social"
     }
   ],
   "comercios_muestra": [
     {
-      "name": "Centro Cultural Alta Córdoba. \"Efraín U. Bischoff\"",
-      "email": "",
-      "motivo": "taller"
+      "name": "Dinosaurio Mall",
+      "email": "info@grupodinosaurio.com",
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Compostura de Calzado",
+      "name": "Vea",
       "email": "",
-      "motivo": "craft:shoemaker"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Catalina Calzados",
-      "email": "catalinacalzados@outlook.com.ar",
-      "motivo": "craft:shoemaker"
+      "name": "Hipermercado La Anonima",
+      "email": "",
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Centro Vecinal Barrio Parque Vélez Sarsfield",
+      "name": "Del Sol",
       "email": "",
-      "motivo": "bar"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "José Luis",
+      "name": "Las mejores del mundo",
       "email": "",
-      "motivo": "craft:upholsterer"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "#Taller de oficios Cura Brochero",
+      "name": "Equus",
       "email": "",
-      "motivo": "taller"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Gambrinus",
+      "name": "Electronia",
       "email": "",
-      "motivo": "craft:brewery"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Electronica Brasca",
+      "name": "Disco",
       "email": "",
-      "motivo": "craft:electronics_repair"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Coretec Valle Mall",
+      "name": "Del Pilar",
       "email": "",
-      "motivo": "craft:electronics_repair"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Graciano",
+      "name": "Pafua",
       "email": "",
-      "motivo": "craft:winery"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "La 14",
+      "name": "Buenos Días",
       "email": "",
-      "motivo": "craft:winery"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Mae",
+      "name": "Todo Suspensión",
       "email": "",
-      "motivo": "craft:winery"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Estación Alberdi",
+      "name": "El Sotano",
       "email": "",
-      "motivo": "craft:winery"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "La Pulpería",
+      "name": "Supermercado La Anonima Poeta Lugones",
       "email": "",
-      "motivo": "craft:winery"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Entre Capas",
+      "name": "Supermercado chino",
       "email": "",
-      "motivo": "craft:winery"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Léon Blanco",
+      "name": "Black sheep",
       "email": "",
-      "motivo": "craft:winery"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Grupo Scout Pedro Ignacio de Castro Barro",
+      "name": "Renault Minuto",
       "email": "",
-      "motivo": "bar"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Las Mercedarias",
-      "email": "",
-      "motivo": "craft:key_cutter"
+      "name": "mini Super",
+      "email": "minisuperas@gmail.com",
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Vidriearía Patoco",
+      "name": "Cordiez",
       "email": "",
-      "motivo": "craft:glaziery"
+      "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Rey de Copas",
+      "name": "Dinosaurio",
       "email": "",
-      "motivo": "craft:winery"
+      "motivo": "OSM: etiqueta shop"
     }
   ],
   "sin_email_muestra": [
     {
-      "name": "Centro Cultural Alta Córdoba. \"Efraín U. Bischoff\"",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Compostura de Calzado",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "SUTEP Sindicato Espect. públicos",
+      "name": "Centro Vecinal Yofre Sud",
       "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Vea",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Hipermercado La Anonima",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Del Sol",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Centro Vecinal Don Bosco",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Las mejores del mundo",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Equus",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Club 25 de Mayo",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Electronia",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Club Sociedad Belgrano",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Disco",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Centro vecinal Santa Clara de Asis",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Del Pilar",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Centro Vecinal Yofre Norte",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Pafua",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Centro Vecinal Marcelo T. De alvear",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Buenos Días",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "centro vecinal Parque República",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Todo Suspensión",
+      "tipo": "comercio",
       "website": ""
     },
     {
       "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
       "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Centro Vecinal Barrio Parque Vélez Sarsfield",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "José Luis",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "#Taller de oficios Cura Brochero",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Gambrinus",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Electronica Brasca",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Coretec Valle Mall",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Graciano",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "La 14",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Mae",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Estación Alberdi",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "La Pulpería",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Entre Capas",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Léon Blanco",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Grupo Scout Pedro Ignacio de Castro Barro",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Las Mercedarias",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Vidriearía Patoco",
-      "tipo": "comercio",
       "website": ""
     }
   ],
@@ -390,120 +380,120 @@
     {
       "name": "CEFOC",
       "email": "",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Communication Partner SRL",
-      "email": "",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Centro Vecinal Yofre Sud",
-      "email": "",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Ciampagna y Asoc. S.A.",
-      "email": "",
-      "motivo": "sin_indicio_suficiente"
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
     },
     {
       "name": "Chibolo Pelotero",
       "email": "",
-      "motivo": "sin_indicio_suficiente"
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
     },
     {
-      "name": "Incutex",
-      "email": "info@incutex.com.ar",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "empresa de tanques",
+      "name": "Centro Cultural Alta Córdoba. \"Efraín U. Bischoff\"",
       "email": "",
-      "motivo": "sin_indicio_suficiente"
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
     },
     {
-      "name": "Centro Vecinal Don Bosco",
-      "email": "",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Siscard S.A.",
-      "email": "",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Club 25 de Mayo",
-      "email": "",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Gosur",
-      "email": "",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Club Sociedad Belgrano",
-      "email": "",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Gestoría del automotor",
-      "email": "",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Centro vecinal Santa Clara de Asis",
-      "email": "",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "ATLARES Crowdfunding Bitcoin & Networking",
-      "email": "info@atlares.com",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Centro Vecinal Yofre Norte",
-      "email": "",
-      "motivo": "sin_indicio_suficiente"
+      "name": "Capilla Santa Teresita",
+      "email": "vicariasantateresita@gmail.com",
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
     },
     {
       "name": "Mediatek S. A.",
       "email": "",
-      "motivo": "sin_indicio_suficiente"
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
     },
     {
-      "name": "Virmanic SA",
-      "email": "jvalles@virmanicsa.com",
-      "motivo": "sin_indicio_suficiente"
-    },
-    {
-      "name": "Centro Vecinal Marcelo T. De alvear",
+      "name": "Casita de Maldonado",
       "email": "",
-      "motivo": "sin_indicio_suficiente"
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
     },
     {
-      "name": "centro vecinal Parque República",
+      "name": "#Taller de oficios Cura Brochero",
       "email": "",
-      "motivo": "sin_indicio_suficiente"
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
+    },
+    {
+      "name": "CIRSE",
+      "email": "",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Casa Pueblo Sur",
+      "email": "",
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
+    },
+    {
+      "name": "Domo - Salón Comunitario",
+      "email": "",
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
+    },
+    {
+      "name": "Centro Cultural La Piojera",
+      "email": "",
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
+    },
+    {
+      "name": "Biblioteca Popular Alberdi",
+      "email": "",
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
+    },
+    {
+      "name": "Centro Cultural Córdoba",
+      "email": "",
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
+    },
+    {
+      "name": "Bitcoin School Argentina",
+      "email": "",
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
+    },
+    {
+      "name": "CPC Argüello",
+      "email": "",
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
+    },
+    {
+      "name": "Sociedad Catolica Popular Italiana",
+      "email": "",
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
+    },
+    {
+      "name": "CPC Empalme",
+      "email": "",
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
+    },
+    {
+      "name": "CPC Centro América",
+      "email": "",
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
+    },
+    {
+      "name": "Circulo Italiano",
+      "email": "",
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
+    },
+    {
+      "name": "CPC ( Centro participación Comunitario) Centro América",
+      "email": "",
+      "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
     }
   ],
-  "duplicados": 32,
+  "duplicados": 55,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "clasificados": 494,
+  "clasificados": 643,
   "cuadre": {
-    "clasificacion_total": 494,
-    "estado_total": 494,
+    "clasificacion_total": 643,
+    "estado_total": 643,
     "cuadra": true
   },
-  "listos_detectados": 12,
-  "listos_seleccionados": 12,
-  "listos_comercio": 11,
-  "listos_generador": 1,
-  "encontrados": 526,
-  "procesados": 526,
-  "nuevos": 466,
-  "descartados": 28,
-  "excluidos": 32
+  "listos_detectados": 24,
+  "listos_seleccionados": 24,
+  "listos_comercio": 21,
+  "listos_generador": 3,
+  "encontrados": 698,
+  "procesados": 698,
+  "nuevos": 640,
+  "descartados": 3,
+  "excluidos": 55
 }
