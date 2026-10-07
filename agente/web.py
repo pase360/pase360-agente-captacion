@@ -1,11 +1,12 @@
 import re
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
 
 from . import config as C
-from .util import normalizar_email
+from .util import normalizar_email, normalizar_texto
+
 
 EMAIL_RE = re.compile(
     r"\b[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+"
@@ -47,7 +48,49 @@ SEARCH_DOMAINS = {
     "tripadvisor.com",
     "google.com",
     "maps.google.com",
+    "bing.com",
 }
+
+NO_OFICIAL_DOMAINS = SEARCH_DOMAINS | {
+    "pinterest.com",
+    "yelp.com",
+    "paginasamarillas.com.ar",
+    "guia.clarin.com",
+    "argentina.gob.ar",
+    "wikipedia.org",
+}
+
+GENERIC_NAME_TOKENS = {
+    "club",
+    "centro",
+    "asociacion",
+    "asociación",
+    "sociedad",
+    "grupo",
+    "empresa",
+    "servicios",
+    "comercio",
+    "comercial",
+    "colegio",
+    "profesional",
+    "instituto",
+    "municipal",
+    "municipalidad",
+    "san",
+    "santa",
+    "del",
+    "de",
+    "la",
+    "el",
+    "los",
+    "las",
+    "y",
+    "cordoba",
+    "córdoba",
+}
+
+BING_SEARCH_URL = "https://www.bing.com/search"
+BING_TIMEOUT = min(max(C.WEB_TIMEOUT, 8), 12)
 
 
 def _es_email_real(value):
@@ -94,7 +137,7 @@ def _emails(text):
     return encontrados
 
 
-def _fetch(url):
+def _fetch(url, timeout=None):
     return requests.get(
         url,
         headers={
@@ -105,9 +148,35 @@ def _fetch(url):
             ),
             "Accept-Language": "es-AR,es;q=0.9,en;q=0.7",
         },
-        timeout=C.WEB_TIMEOUT,
+        timeout=timeout or C.WEB_TIMEOUT,
         allow_redirects=True,
     )
+
+
+def _dominio_base(url):
+    try:
+        host = urlparse(url).netloc.lower().split("@")[-1]
+
+        if host.startswith("www."):
+            host = host[4:]
+
+        return host
+
+    except Exception:
+        return ""
+
+
+def _es_dominio_no_oficial(url):
+    host = _dominio_base(url)
+
+    if not host:
+        return True
+
+    for blocked in NO_OFICIAL_DOMAINS:
+        if host == blocked or host.endswith("." + blocked):
+            return True
+
+    return False
 
 
 def _links_relevantes(soup):
@@ -161,7 +230,6 @@ def _buscar_en_pagina(url, profundidad=0):
 
         emails = []
 
-        # Buscar mailto:
         for a in soup.find_all("a", href=True):
             href = str(a.get("href") or "").strip()
 
@@ -173,7 +241,6 @@ def _buscar_en_pagina(url, profundidad=0):
                 if email and email not in emails:
                     emails.append(email)
 
-        # Buscar correos visibles en HTML.
         for email in _emails(r.text):
             if email not in emails:
                 emails.append(email)
@@ -181,19 +248,16 @@ def _buscar_en_pagina(url, profundidad=0):
         if emails:
             return emails, r.url
 
-        # Solo una segunda profundidad.
         if profundidad >= 1:
             return [], r.url
 
-        base_host = r.url.split("/", 3)[2].lower()
+        base_host = _dominio_base(r.url)
 
-        # Buscar enlaces de contacto.
         for href in _links_relevantes(soup):
             try:
                 target = urljoin(r.url, href)
-                target_host = target.split("/", 3)[2].lower()
 
-                if target_host != base_host:
+                if _dominio_base(target) != base_host:
                     continue
 
                 encontrados, final_url = _buscar_en_pagina(
@@ -207,7 +271,6 @@ def _buscar_en_pagina(url, profundidad=0):
             except Exception:
                 continue
 
-        # Rutas convencionales.
         rutas = (
             "/contacto",
             "/contactanos",
@@ -221,7 +284,7 @@ def _buscar_en_pagina(url, profundidad=0):
             try:
                 target = urljoin(r.url, ruta)
 
-                if target.split("/", 3)[2].lower() != base_host:
+                if _dominio_base(target) != base_host:
                     continue
 
                 encontrados, final_url = _buscar_en_pagina(
@@ -258,13 +321,289 @@ def _extraer_datos_osm(c):
     return ""
 
 
+def _tokens_nombre(nombre):
+    texto = normalizar_texto(nombre)
+
+    tokens = re.findall(
+        r"[a-z0-9]+",
+        texto,
+    )
+
+    return [
+        token
+        for token in tokens
+        if len(token) >= 3
+        and token not in GENERIC_NAME_TOKENS
+    ]
+
+
+def _resultado_score(c, title, snippet, url):
+    nombre = normalizar_texto(
+        c.get("name")
+    )
+
+    texto = normalizar_texto(
+        " ".join(
+            [
+                title or "",
+                snippet or "",
+                url or "",
+            ]
+        )
+    )
+
+    tokens = _tokens_nombre(
+        c.get("name")
+    )
+
+    if not tokens:
+        return 0.0
+
+    coincidencias = sum(
+        token in texto
+        for token in tokens
+    )
+
+    cobertura = (
+        coincidencias / len(tokens)
+    )
+
+    score = cobertura * 0.65
+
+    if (
+        nombre
+        and nombre in normalizar_texto(title)
+    ):
+        score += 0.25
+
+    if (
+        "cordoba" in texto
+        or "córdoba" in texto
+    ):
+        score += 0.10
+
+    direccion = normalizar_texto(
+        c.get("direccion")
+    )
+
+    if direccion:
+        direccion_tokens = [
+            x
+            for x in re.findall(
+                r"[a-z0-9]+",
+                direccion,
+            )
+            if len(x) >= 4
+        ]
+
+        if any(
+            x in texto
+            for x in direccion_tokens[:4]
+        ):
+            score += 0.10
+
+    return min(score, 1.0)
+
+
+def _buscar_resultados_bing(c):
+    nombre = str(
+        c.get("name") or ""
+    ).strip()
+
+    if not nombre:
+        return []
+
+    direccion = str(
+        c.get("direccion") or ""
+    ).strip()
+
+    consultas = [
+        f'"{nombre}" Córdoba Argentina',
+    ]
+
+    if direccion:
+        consultas.append(
+            f'"{nombre}" "{direccion}" Córdoba'
+        )
+    else:
+        consultas.append(
+            f'"{nombre}" Córdoba contacto'
+        )
+
+    resultados = []
+
+    for consulta in consultas:
+        try:
+            r = requests.get(
+                BING_SEARCH_URL,
+                params={
+                    "q": consulta,
+                    "count": 5,
+                    "setlang": "es-AR",
+                    "cc": "ar",
+                },
+                headers={
+                    "User-Agent": C.USER_AGENT,
+                    "Accept": (
+                        "text/html,"
+                        "application/xhtml+xml"
+                    ),
+                    "Accept-Language": (
+                        "es-AR,es;q=0.9"
+                    ),
+                },
+                timeout=BING_TIMEOUT,
+                allow_redirects=True,
+            )
+
+            if r.status_code >= 400:
+                continue
+
+            soup = BeautifulSoup(
+                r.text,
+                "html.parser",
+            )
+
+            for item in soup.select(
+                "li.b_algo"
+            ):
+                a = item.select_one(
+                    "h2 a"
+                )
+
+                if not a:
+                    continue
+
+                href = str(
+                    a.get("href") or ""
+                ).strip()
+
+                if not re.match(
+                    r"^https?://",
+                    href,
+                    re.I,
+                ):
+                    continue
+
+                if _es_dominio_no_oficial(
+                    href
+                ):
+                    continue
+
+                title = a.get_text(
+                    " ",
+                    strip=True,
+                )
+
+                p = item.select_one(
+                    ".b_caption p"
+                )
+
+                snippet = (
+                    p.get_text(
+                        " ",
+                        strip=True,
+                    )
+                    if p
+                    else item.get_text(
+                        " ",
+                        strip=True,
+                    )
+                )
+
+                score = _resultado_score(
+                    c,
+                    title,
+                    snippet,
+                    href,
+                )
+
+                resultados.append(
+                    {
+                        "url": href,
+                        "title": title,
+                        "snippet": snippet,
+                        "score": score,
+                    }
+                )
+
+        except Exception:
+            continue
+
+    unicos = {}
+
+    for item in resultados:
+        host = _dominio_base(
+            item["url"]
+        )
+
+        if not host:
+            continue
+
+        anterior = unicos.get(host)
+
+        if (
+            not anterior
+            or item["score"]
+            > anterior["score"]
+        ):
+            unicos[host] = item
+
+    return sorted(
+        unicos.values(),
+        key=lambda x: x["score"],
+        reverse=True,
+    )
+
+
+def _descubrir_sitio(c):
+    resultados = _buscar_resultados_bing(c)
+
+    if not resultados:
+        return c
+
+    mejor = resultados[0]
+
+    # Umbral alto para evitar asociar
+    # una web de otra entidad.
+    if mejor["score"] < 0.78:
+        return c
+
+    url = mejor["url"]
+
+    c["website"] = url
+    c["website_final"] = url
+    c["website_source"] = "Bing"
+    c["website_confidence"] = round(
+        mejor["score"],
+        2,
+    )
+
+    emails, final_url = _buscar_en_pagina(
+        url
+    )
+
+    c["website_final"] = final_url
+
+    if emails:
+        c["email"] = emails[0]
+        c["email_source"] = (
+            "sitio_web_descubierto"
+        )
+
+    return c
+
+
 def completar(c):
-    # 1. Email publicado directamente en OpenStreetMap.
+    # 1. Email publicado directamente
+    # en OpenStreetMap.
     email_original = _extraer_datos_osm(c)
 
     if email_original:
         c["email"] = email_original
-        c["email_source"] = "OpenStreetMap"
+        c["email_source"] = (
+            "OpenStreetMap"
+        )
         return c
 
     c["email"] = ""
@@ -276,16 +615,24 @@ def completar(c):
         or ""
     ).strip()
 
-    if re.match(r"^https?://", url, re.I):
-        emails, final_url = _buscar_en_pagina(url)
+    if re.match(
+        r"^https?://",
+        url,
+        re.I,
+    ):
+        emails, final_url = (
+            _buscar_en_pagina(url)
+        )
 
         c["website_final"] = final_url
 
         if emails:
             c["email"] = emails[0]
-            c["email_source"] = "sitio_web"
+            c["email_source"] = (
+                "sitio_web"
+            )
             return c
 
-    # No hacer búsquedas masivas en buscadores externos.
-    # Evitamos demoras enormes y asociaciones incorrectas.
-    return c
+    # 3. Si OSM no tenía web,
+    # descubrir sitio oficial.
+    return _descubrir_sitio(c)
