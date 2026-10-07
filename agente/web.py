@@ -1,4 +1,3 @@
-```python
 import re
 from urllib.parse import urljoin, urlparse
 
@@ -714,4 +713,3 @@ def completar(c):
     # 3. Buscar contacto público aunque
     # el negocio no tenga sitio web.
     return _descubrir_sitio(c)
-```
