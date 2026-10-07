@@ -1,4 +1,3 @@
-```python
 import time
 import requests
 
@@ -505,4 +504,3 @@ def buscar():
         )
 
     return rows
-```
