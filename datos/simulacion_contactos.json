@@ -10,11 +10,6 @@
     "email": "info@elclubdelamilanesa.com"
   },
   {
-    "name": "Club Universitario de Córdoba",
-    "tipo": "generador",
-    "email": "administracion@clubuniversitariocba.com"
-  },
-  {
     "name": "SushiClub",
     "tipo": "generador",
     "email": "contacto@sushiclub.com.ar"
@@ -55,6 +50,11 @@
     "email": "rvlevet@gmail.com"
   },
   {
+    "name": "Farmacia Juarez Ruffino IV",
+    "tipo": "comercio",
+    "email": "hola@farmaciajuarezruffino.com"
+  },
+  {
     "name": "Farmacia Pedernera",
     "tipo": "comercio",
     "email": "pedernerafarmacia@gmail.com"
@@ -83,11 +83,6 @@
     "name": "Quimica Halac",
     "tipo": "comercio",
     "email": "info@quimicahalac.com.ar"
-  },
-  {
-    "name": "Quinto Deva",
-    "tipo": "comercio",
-    "email": "productoraquintodeva@gmail.com"
   },
   {
     "name": "Rapanui",

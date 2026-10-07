@@ -1,20 +1,20 @@
 {
   "por_tipo": {
-    "comercio": 455,
+    "comercio": 456,
     "generador": 110,
-    "dudoso": 78,
+    "dudoso": 79,
     "descartado": 3,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 25,
-    "sin_email": 540,
-    "requiere_decision": 78,
+    "listo_para_contactar": 24,
+    "sin_email": 542,
+    "requiere_decision": 79,
     "descartado": 3
   },
   "sin_email_por_tipo": {
-    "comercio": 434,
-    "generador": 106,
+    "comercio": 435,
+    "generador": 107,
     "otro": 0
   },
   "descartados_por_motivo": {
@@ -184,7 +184,7 @@
       "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Hipermercado La Anonima",
+      "name": "Hipermercado Libertad",
       "email": "",
       "motivo": "OSM: etiqueta shop"
     },
@@ -229,17 +229,12 @@
       "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Todo Suspensión",
-      "email": "",
-      "motivo": "OSM: etiqueta shop"
-    },
-    {
       "name": "El Sotano",
       "email": "",
       "motivo": "OSM: etiqueta shop"
     },
     {
-      "name": "Supermercado La Anonima Poeta Lugones",
+      "name": "Hipermercado Libertad Poeta Lugones",
       "email": "",
       "motivo": "OSM: etiqueta shop"
     },
@@ -272,6 +267,11 @@
       "name": "Dinosaurio",
       "email": "",
       "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Lave-Rap",
+      "email": "",
+      "motivo": "OSM: etiqueta shop"
     }
   ],
   "sin_email_muestra": [
@@ -286,7 +286,7 @@
       "website": ""
     },
     {
-      "name": "Hipermercado La Anonima",
+      "name": "Hipermercado Libertad",
       "tipo": "comercio",
       "website": ""
     },
@@ -366,7 +366,7 @@
       "website": ""
     },
     {
-      "name": "Todo Suspensión",
+      "name": "El Sotano",
       "tipo": "comercio",
       "website": ""
     },
@@ -478,22 +478,22 @@
       "motivo": "OSM: organización social, falta evidencia de miembros/beneficiarios"
     }
   ],
-  "duplicados": 55,
+  "duplicados": 56,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "clasificados": 646,
+  "clasificados": 648,
   "cuadre": {
-    "clasificacion_total": 646,
-    "estado_total": 646,
+    "clasificacion_total": 648,
+    "estado_total": 648,
     "cuadra": true
   },
-  "listos_detectados": 25,
-  "listos_seleccionados": 25,
+  "listos_detectados": 24,
+  "listos_seleccionados": 24,
   "listos_comercio": 21,
-  "listos_generador": 4,
-  "encontrados": 701,
-  "procesados": 701,
-  "nuevos": 643,
+  "listos_generador": 3,
+  "encontrados": 704,
+  "procesados": 704,
+  "nuevos": 645,
   "descartados": 3,
-  "excluidos": 55
+  "excluidos": 56
 }
