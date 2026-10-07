@@ -1,24 +1,6 @@
 from .util import normalizar_texto
 
 
-# ============================================================
-# PASE 360 — CLASIFICADOR DE CANDIDATOS
-# ============================================================
-#
-# Objetivo:
-#   - comercio  -> empresa/local que puede ofrecer beneficios
-#   - generador -> organización que puede distribuir beneficios
-#   - dudoso    -> no hay evidencia suficiente
-#   - descartado -> claramente no corresponde
-#
-# Reglas importantes:
-#   - "colegio" significa colegio profesional, NO escuela.
-#   - Las cámaras NO son generadores.
-#   - Un gimnasio/estadio/centro deportivo por sí solo NO es generador.
-#   - "gremio" solo no alcanza: debe existir contexto laboral/gremial.
-# ============================================================
-
-
 GENERADOR_FUERTE = (
     "sindicato",
     "sindicatos",
@@ -29,14 +11,17 @@ GENERADOR_FUERTE = (
     "mutualidad",
     "federacion",
     "federaciones",
+    "federación",
+    "federaciones",
+    "cooperativa",
+    "cooperativas",
     "asociacion profesional",
     "asociacion de profesionales",
     "asociación profesional",
     "asociación de profesionales",
-    "cooperativa",
-    "cooperativas",
+    "fundacion",
+    "fundación",
 )
-
 
 COLEGIOS_PROFESIONALES = (
     "colegio de abogados",
@@ -44,19 +29,18 @@ COLEGIOS_PROFESIONALES = (
     "colegio de arquitectos",
     "colegio de ingenieros",
     "colegio de contadores",
-    "colegio de medicos",
     "colegio de médicos",
-    "colegio de odontologos",
+    "colegio de medicos",
     "colegio de odontólogos",
-    "colegio de psicologos",
+    "colegio de odontologos",
     "colegio de psicólogos",
+    "colegio de psicologos",
     "colegio de veterinarios",
     "colegio de farmacéuticos",
     "colegio de farmaceuticos",
     "colegio profesional",
     "consejo profesional",
 )
-
 
 CONTEXTO_GREMIAL = (
     "trabajador",
@@ -75,26 +59,28 @@ CONTEXTO_GREMIAL = (
     "afiliados",
     "afiliacion",
     "afiliación",
+    "delegado",
     "delegados",
     "delegacion",
     "delegación",
 )
 
-
 CONTEXTO_MIEMBROS = (
     "afiliado",
     "afiliados",
+    "asociado",
     "asociados",
     "asociadas",
     "socios",
     "socias",
+    "miembro",
     "miembros",
+    "beneficiario",
     "beneficiarios",
     "profesionales",
     "matriculados",
     "matriculadas",
 )
-
 
 CENTROS_SOCIALES_VALIDOS = (
     "centro de jubilados",
@@ -104,22 +90,39 @@ CENTROS_SOCIALES_VALIDOS = (
     "centro de empleados",
     "centro de profesionales",
     "centro vecinal",
+    "asociacion vecinal",
+    "asociación vecinal",
 )
 
-
-CLUBES = (
-    "club ",
-    "club deportivo",
-    "club social",
+INSTITUCIONES_DEPORTIVAS = (
+    "club",
     "club atletico",
     "club atlético",
+    "club deportivo",
+    "club social",
     "club de barrio",
     "club de futbol",
     "club de fútbol",
     "club de rugby",
     "club de hockey",
+    "club de basquet",
+    "club de básquet",
+    "club social y deportivo",
+    "institucion deportiva",
+    "institución deportiva",
+    "asociacion deportiva",
+    "asociación deportiva",
+    "federacion deportiva",
+    "federación deportiva",
+    "liga deportiva",
+    "liga de futbol",
+    "liga de fútbol",
+    "liga de basquet",
+    "liga de básquet",
+    "entidad deportiva",
+    "entidad social y deportiva",
+    "sociedad deportiva",
 )
-
 
 PALABRAS_COMERCIO = (
     "tienda",
@@ -178,10 +181,11 @@ PALABRAS_COMERCIO = (
     "consultoría",
 )
 
-
 PALABRAS_DESCARTAR = (
     "escuela",
     "escuelas",
+    "escuela primaria",
+    "escuela secundaria",
     "colegio secundario",
     "colegio primario",
     "jardin de infantes",
@@ -190,6 +194,20 @@ PALABRAS_DESCARTAR = (
     "facultad",
     "instituto educativo",
     "instituto educacional",
+    "institucion educativa",
+    "institución educativa",
+)
+
+INSTALACIONES_DEPORTIVAS = (
+    "polideportivo",
+    "polideportiva",
+    "estadio municipal",
+    "playon deportivo",
+    "playón deportivo",
+    "sports centre",
+    "sports center",
+    "gimnasio municipal",
+    "cancha municipal",
 )
 
 
@@ -205,87 +223,120 @@ def _texto(c):
         " ".join(str(v) for v in tags.values()),
     ]
 
-    return normalizar_texto(" ".join(str(x) for x in partes if x))
+    return normalizar_texto(
+        " ".join(
+            str(x)
+            for x in partes
+            if x
+        )
+    )
 
 
 def _tags(c):
     return c.get("tags") or {}
 
 
+def _contiene(texto, palabras):
+    return any(
+        palabra in texto
+        for palabra in palabras
+    )
+
+
 def _es_camara(texto):
-    return (
-        "camara de comercio" in texto
-        or "camara empresarial" in texto
-        or "camara empresaria" in texto
-        or "camara industrial" in texto
-        or "camara de industriales" in texto
-        or "camara de comerciantes" in texto
-        or "camara de comercio e industria" in texto
-        or "cámara de comercio" in texto
-        or "cámara empresarial" in texto
-        or "cámara empresaria" in texto
-        or "cámara industrial" in texto
+    return any(
+        palabra in texto
+        for palabra in (
+            "camara de comercio",
+            "camara empresarial",
+            "camara empresaria",
+            "camara industrial",
+            "camara de industriales",
+            "camara de comerciantes",
+            "camara de comercio e industria",
+            "cámara de comercio",
+            "cámara empresarial",
+            "cámara empresaria",
+            "cámara industrial",
+            "cámara de industriales",
+            "cámara de comerciantes",
+        )
     )
 
 
 def _es_educativo(texto):
-    return any(palabra in texto for palabra in PALABRAS_DESCARTAR)
+    return _contiene(
+        texto,
+        PALABRAS_DESCARTAR,
+    )
 
 
 def _es_colegio_profesional(texto):
-    return any(palabra in texto for palabra in COLEGIOS_PROFESIONALES)
+    return _contiene(
+        texto,
+        COLEGIOS_PROFESIONALES,
+    )
 
 
-def _es_generador_fuerte(texto):
-    return any(palabra in texto for palabra in GENERADOR_FUERTE)
+def _es_club_o_institucion_deportiva(texto):
+    return _contiene(
+        texto,
+        INSTITUCIONES_DEPORTIVAS,
+    )
+
+
+def _es_instalacion_deportiva(texto):
+    return _contiene(
+        texto,
+        INSTALACIONES_DEPORTIVAS,
+    )
 
 
 def _es_contexto_gremial(texto):
-    return any(palabra in texto for palabra in CONTEXTO_GREMIAL)
+    return _contiene(
+        texto,
+        CONTEXTO_GREMIAL,
+    )
 
 
 def _es_contexto_miembros(texto):
-    return any(palabra in texto for palabra in CONTEXTO_MIEMBROS)
+    return _contiene(
+        texto,
+        CONTEXTO_MIEMBROS,
+    )
 
 
 def _es_centro_social_valido(texto):
-    return any(palabra in texto for palabra in CENTROS_SOCIALES_VALIDOS)
-
-
-def _es_club(texto):
-    if any(palabra in texto for palabra in CLUBES):
-        return True
-
-    return (
-        "club" in texto
-        and any(
-            palabra in texto
-            for palabra in (
-                "atletico",
-                "atlético",
-                "deportivo",
-                "social",
-                "rugby",
-                "futbol",
-                "fútbol",
-                "hockey",
-                "basquet",
-                "básquet",
-                "sport",
-            )
-        )
+    return _contiene(
+        texto,
+        CENTROS_SOCIALES_VALIDOS,
     )
 
 
 def _tipo_por_tags(c):
     tags = _tags(c)
 
-    amenity = normalizar_texto(tags.get("amenity", ""))
-    shop = normalizar_texto(tags.get("shop", ""))
-    craft = normalizar_texto(tags.get("craft", ""))
-    office = normalizar_texto(tags.get("office", ""))
-    leisure = normalizar_texto(tags.get("leisure", ""))
-    healthcare = normalizar_texto(tags.get("healthcare", ""))
+    amenity = normalizar_texto(
+        tags.get("amenity", "")
+    )
+    shop = normalizar_texto(
+        tags.get("shop", "")
+    )
+    craft = normalizar_texto(
+        tags.get("craft", "")
+    )
+    office = normalizar_texto(
+        tags.get("office", "")
+    )
+    leisure = normalizar_texto(
+        tags.get("leisure", "")
+    )
+    healthcare = normalizar_texto(
+        tags.get("healthcare", "")
+    )
+    sport = normalizar_texto(
+        tags.get("sport", "")
+    )
 
     if shop:
         return "comercio", "OSM: etiqueta shop"
@@ -321,154 +372,177 @@ def _tipo_por_tags(c):
     if healthcare:
         return "comercio", "OSM: healthcare"
 
+    if amenity in {
+        "association",
+        "social_centre",
+        "community_centre",
+    }:
+        return "", ""
+
     if leisure in {
         "sports_centre",
-        "sports_hall",
         "stadium",
-        "pitch",
+        "sports_hall",
     }:
-        return "dudoso", "OSM: instalación deportiva, no demuestra que sea generador"
+        if sport:
+            return (
+                "generador",
+                "OSM: institución deportiva con actividad deportiva",
+            )
 
-    if amenity in {
-        "community_centre",
-        "social_centre",
-        "association",
-    }:
-        return "dudoso", "OSM: organización social, falta evidencia de miembros/beneficiarios"
+        return "", ""
+
+    if leisure == "pitch":
+        return "", ""
 
     return "", ""
 
 
 def _es_asociacion_con_miembros(texto):
-    asociacion = (
+    asociaciones = (
         "asociacion civil" in texto
-        or "asociacion civil sin fines de lucro" in texto
         or "asociación civil" in texto
+        or "asociacion civil sin fines de lucro" in texto
         or "asociación civil sin fines de lucro" in texto
     )
 
-    if asociacion and _es_contexto_miembros(texto):
-        return True
-
-    return False
+    return (
+        asociaciones
+        and _es_contexto_miembros(texto)
+    )
 
 
 def clasificar(c):
     texto = _texto(c)
 
     if not texto:
-        return "dudoso", "sin información suficiente"
+        return (
+            "dudoso",
+            "sin información suficiente",
+        )
 
-    # --------------------------------------------------------
-    # 1. Educación: nunca convertir una escuela/colegio
-    #    educativo en generador.
-    # --------------------------------------------------------
+    # 1. Instituciones educativas.
     if _es_educativo(texto):
-        return "descartado", "institución educativa"
+        return (
+            "descartado",
+            "institución educativa",
+        )
 
-    # --------------------------------------------------------
-    # 2. Cámaras: son fuente potencial de comercios,
-    #    pero NO son generadores.
-    # --------------------------------------------------------
+    # 2. Cámaras: nunca son generadores.
     if _es_camara(texto):
-        return "dudoso", "cámara: puede ser fuente de comercios, no generador"
+        return (
+            "dudoso",
+            "cámara: puede ser fuente de comercios, no generador",
+        )
 
-    # --------------------------------------------------------
     # 3. Colegios profesionales.
-    # --------------------------------------------------------
     if _es_colegio_profesional(texto):
-        return "generador", "colegio profesional"
+        return (
+            "generador",
+            "colegio profesional",
+        )
 
-    # --------------------------------------------------------
-    # 4. Generadores inequívocos.
-    # --------------------------------------------------------
-    if _es_generador_fuerte(texto):
-        # "gremio" solo puede producir falsos positivos.
+    # 4. Clubes e instituciones deportivas.
+    #
+    # REGLA DEFINITIVA DE PASE 360:
+    # los clubes e instituciones deportivas
+    # SON GENERADORES.
+    if _es_club_o_institucion_deportiva(texto):
+        return (
+            "generador",
+            "club/institución deportiva con comunidad de miembros",
+        )
+
+    # 5. Generadores fuertes.
+    if _contiene(
+        texto,
+        GENERADOR_FUERTE,
+    ):
         if (
             "gremio" in texto
             or "gremial" in texto
         ):
             if not _es_contexto_gremial(texto):
-                # Excepción: si además hay una organización
-                # claramente sindical/mutual, se conserva.
-                if not any(
-                    palabra in texto
-                    for palabra in (
+                if not _contiene(
+                    texto,
+                    (
                         "sindicato",
                         "mutual",
                         "federacion",
                         "federación",
-                    )
+                    ),
                 ):
-                    return "dudoso", "gremio sin contexto laboral suficiente"
+                    return (
+                        "dudoso",
+                        "gremio sin contexto laboral suficiente",
+                    )
 
-        return "generador", "organización de afiliados/mutual/gremial/profesional"
+        return (
+            "generador",
+            "organización con afiliados, asociados o beneficiarios",
+        )
 
-    # --------------------------------------------------------
-    # 5. Asociaciones profesionales.
-    # --------------------------------------------------------
-    if (
-        "asociacion profesional" in texto
-        or "asociacion de profesionales" in texto
-        or "asociación profesional" in texto
-        or "asociación de profesionales" in texto
-        or "consejo profesional" in texto
-    ):
-        return "generador", "organización de profesionales"
-
-    # --------------------------------------------------------
-    # 6. Asociaciones civiles con miembros/beneficiarios.
-    # --------------------------------------------------------
-    if _es_asociacion_con_miembros(texto):
-        return "generador", "asociación con miembros/beneficiarios"
-
-    # --------------------------------------------------------
-    # 7. Centros sociales que claramente agrupan personas.
-    # --------------------------------------------------------
+    # 6. Centros sociales válidos.
     if _es_centro_social_valido(texto):
-        return "generador", "centro social de miembros"
+        return (
+            "generador",
+            "organización social con comunidad de miembros",
+        )
 
-    # --------------------------------------------------------
-    # 8. Clubes.
-    # --------------------------------------------------------
-    if _es_club(texto):
-        return "generador", "club/institución deportiva o social"
+    # 7. Asociaciones con miembros.
+    if _es_asociacion_con_miembros(texto):
+        return (
+            "generador",
+            "asociación con miembros/beneficiarios",
+        )
 
-    # --------------------------------------------------------
-    # 9. Tags estructurados de comercio.
-    # --------------------------------------------------------
+    # 8. Tags OSM.
     tipo_tags, motivo_tags = _tipo_por_tags(c)
 
     if tipo_tags:
-        return tipo_tags, motivo_tags
+        return (
+            tipo_tags,
+            motivo_tags,
+        )
 
-    # --------------------------------------------------------
-    # 10. Evidencia comercial por nombre/texto.
-    # --------------------------------------------------------
-    if any(palabra in texto for palabra in PALABRAS_COMERCIO):
-        return "comercio", "nombre/texto con actividad comercial"
+    # 9. Instalación deportiva sin evidencia
+    # de una organización detrás.
+    if _es_instalacion_deportiva(texto):
+        return (
+            "dudoso",
+            "instalación deportiva: falta evidencia de organización generadora",
+        )
 
-    # --------------------------------------------------------
-    # 11. Si parece organización pero no podemos determinar
-    #     si realmente puede actuar como generador.
-    # --------------------------------------------------------
-    if any(
-        palabra in texto
-        for palabra in (
+    # 10. Comercio.
+    if _contiene(
+        texto,
+        PALABRAS_COMERCIO,
+    ):
+        return (
+            "comercio",
+            "actividad comercial identificable",
+        )
+
+    # 11. Otras organizaciones.
+    if _contiene(
+        texto,
+        (
             "asociacion",
             "asociación",
             "union",
             "unión",
             "fundacion",
             "fundación",
-            "centro",
             "institucion",
             "institución",
-        )
+        ),
     ):
-        return "dudoso", "organización sin evidencia suficiente de capacidad de generación"
+        return (
+            "dudoso",
+            "organización sin evidencia suficiente",
+        )
 
-    # --------------------------------------------------------
-    # 12. Sin evidencia suficiente.
-    # --------------------------------------------------------
-    return "dudoso", "sin evidencia suficiente para clasificar"
+    return (
+        "dudoso",
+        "sin evidencia suficiente para clasificar",
+    )
