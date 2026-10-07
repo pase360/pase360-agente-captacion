@@ -1,6 +1,5 @@
 import re
-import time
-from urllib.parse import quote, urljoin
+from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
@@ -26,6 +25,7 @@ HINTS = (
     "quienes",
     "comunicacion",
     "prensa",
+    "atencion",
 )
 
 BAD_EMAIL_DOMAINS = {
@@ -49,8 +49,10 @@ SEARCH_DOMAINS = {
     "maps.google.com",
 }
 
+
 def _es_email_real(value):
     value = normalizar_email(value)
+
     if not value:
         return ""
 
@@ -72,6 +74,9 @@ def _es_email_real(value):
         return ""
 
     if ".." in domain:
+        return ""
+
+    if domain in SEARCH_DOMAINS:
         return ""
 
     return value
@@ -123,7 +128,6 @@ def _links_relevantes(soup):
         if any(h in label for h in HINTS):
             links.append(href)
 
-    # Quitar duplicados conservando orden.
     resultado = []
     vistos = set()
 
@@ -132,95 +136,112 @@ def _links_relevantes(soup):
             vistos.add(href)
             resultado.append(href)
 
-    return resultado[:12]
+    return resultado[:15]
 
 
-def _buscar_en_pagina(url):
-    emails = []
-
+def _buscar_en_pagina(url, profundidad=0):
     try:
         r = _fetch(url)
 
         content_type = r.headers.get(
-            "content-type", ""
+            "content-type",
+            "",
         ).lower()
 
         if r.status_code >= 400:
-            return emails, r.url
+            return [], r.url
 
         if "text/html" not in content_type:
-            return emails, r.url
+            return [], r.url
 
         soup = BeautifulSoup(
             r.text,
             "html.parser",
         )
 
-        # mailto:
+        emails = []
+
+        # Buscar mailto:
         for a in soup.find_all("a", href=True):
-            href = str(
-                a.get("href") or ""
-            ).strip()
+            href = str(a.get("href") or "").strip()
 
             if href.lower().startswith("mailto:"):
-                value = (
-                    href[len("mailto:")]
-                    .split("?", 1)[0]
-                )
+                value = href[len("mailto:")].split("?", 1)[0]
 
                 email = _es_email_real(value)
 
                 if email and email not in emails:
                     emails.append(email)
 
-        # Texto visible / código HTML.
+        # Buscar correos visibles en HTML.
         for email in _emails(r.text):
             if email not in emails:
                 emails.append(email)
 
-        # Páginas internas de contacto.
-        if not emails:
-            for href in _links_relevantes(soup):
-                try:
-                    target = urljoin(
-                        r.url,
-                        href,
-                    )
+        if emails:
+            return emails, r.url
 
-                    rr = _fetch(target)
+        # Solo una segunda profundidad.
+        if profundidad >= 1:
+            return [], r.url
 
-                    rr_type = rr.headers.get(
-                        "content-type",
-                        "",
-                    ).lower()
+        base_host = r.url.split("/", 3)[2].lower()
 
-                    if rr.status_code >= 400:
-                        continue
+        # Buscar enlaces de contacto.
+        for href in _links_relevantes(soup):
+            try:
+                target = urljoin(r.url, href)
+                target_host = target.split("/", 3)[2].lower()
 
-                    if "text/html" not in rr_type:
-                        continue
-
-                    for email in _emails(rr.text):
-                        if email not in emails:
-                            emails.append(email)
-
-                    if emails:
-                        break
-
-                except Exception:
+                if target_host != base_host:
                     continue
 
-        return emails, r.url
+                encontrados, final_url = _buscar_en_pagina(
+                    target,
+                    profundidad=1,
+                )
+
+                if encontrados:
+                    return encontrados, final_url
+
+            except Exception:
+                continue
+
+        # Rutas convencionales.
+        rutas = (
+            "/contacto",
+            "/contactanos",
+            "/contactenos",
+            "/contact",
+            "/institucional",
+            "/nosotros",
+        )
+
+        for ruta in rutas:
+            try:
+                target = urljoin(r.url, ruta)
+
+                if target.split("/", 3)[2].lower() != base_host:
+                    continue
+
+                encontrados, final_url = _buscar_en_pagina(
+                    target,
+                    profundidad=1,
+                )
+
+                if encontrados:
+                    return encontrados, final_url
+
+            except Exception:
+                continue
+
+        return [], r.url
 
     except Exception:
-        return emails, url
+        return [], url
 
 
 def _extraer_datos_osm(c):
-    """
-    Recupera emails que pueden venir en distintas etiquetas
-    de OSM. Algunas fuentes usan email, otras contact:email.
-    """
     posibles = (
         c.get("email"),
         c.get("contact:email"),
@@ -237,97 +258,8 @@ def _extraer_datos_osm(c):
     return ""
 
 
-def _buscar_en_duckduckgo(c):
-    """
-    Búsqueda web complementaria.
-
-    Se usa solamente cuando OSM y el sitio web no aportaron
-    un email. Busca el nombre exacto + Córdoba y extrae
-    emails publicados en los resultados.
-
-    No clasifica al candidato ni convierte un resultado dudoso
-    en contacto: solamente aporta un posible email.
-    """
-    nombre = str(c.get("name") or "").strip()
-
-    if not nombre:
-        return ""
-
-    consultas = [
-        f'"{nombre}" Córdoba email',
-        f'"{nombre}" Córdoba contacto',
-    ]
-
-    for consulta in consultas:
-        try:
-            url = (
-                "https://html.duckduckgo.com/html/?q="
-                + quote(consulta)
-            )
-
-            r = requests.get(
-                url,
-                headers={
-                    "User-Agent": C.USER_AGENT,
-                    "Accept": "text/html,application/xhtml+xml",
-                    "Accept-Language": "es-AR,es;q=0.9",
-                },
-                timeout=C.WEB_TIMEOUT,
-            )
-
-            if r.status_code >= 400:
-                continue
-
-            soup = BeautifulSoup(
-                r.text,
-                "html.parser",
-            )
-
-            # Revisamos solamente resultados orgánicos.
-            resultados = soup.select(
-                ".result, .results_links"
-            )
-
-            textos = []
-
-            if resultados:
-                for resultado in resultados[:8]:
-                    textos.append(
-                        resultado.get_text(
-                            " ",
-                            strip=True,
-                        )
-                    )
-            else:
-                textos.append(
-                    soup.get_text(
-                        " ",
-                        strip=True,
-                    )
-                )
-
-            for texto in textos:
-                for email in _emails(texto):
-                    dominio = email.rsplit("@", 1)[1]
-
-                    # Evitar correos genéricos de la plataforma
-                    # de búsqueda o basura.
-                    if dominio in SEARCH_DOMAINS:
-                        continue
-
-                    return email
-
-            # Pequeña pausa para no bombardear el buscador.
-            time.sleep(1)
-
-        except Exception:
-            continue
-
-    return ""
-
-
 def completar(c):
-    # 1. Primero: email existente en OSM.
+    # 1. Email publicado directamente en OpenStreetMap.
     email_original = _extraer_datos_osm(c)
 
     if email_original:
@@ -337,7 +269,7 @@ def completar(c):
 
     c["email"] = ""
 
-    # 2. Buscar el sitio web conocido por OSM.
+    # 2. Sitio web conocido por OSM.
     url = str(
         c.get("website")
         or c.get("contact:website")
@@ -354,11 +286,6 @@ def completar(c):
             c["email_source"] = "sitio_web"
             return c
 
-    # 3. Último recurso: búsqueda web por nombre.
-    email_busqueda = _buscar_en_duckduckgo(c)
-
-    if email_busqueda:
-        c["email"] = email_busqueda
-        c["email_source"] = "busqueda_web"
-
+    # No hacer búsquedas masivas en buscadores externos.
+    # Evitamos demoras enormes y asociaciones incorrectas.
     return c
