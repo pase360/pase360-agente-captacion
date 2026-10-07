@@ -114,19 +114,29 @@ TODAS_LAS_CONSULTAS = (
 
 SERVIDORES_OVERPASS = list(C.OVERPASS_URLS)
 
-# Mucho menor que los 4 segundos anteriores.
-# Las consultas ya tienen timeout propio.
 PAUSA_ENTRE_CONSULTAS = 1
-
-# No hacemos una segunda ronda completa.
-# Si falla un servidor, se prueba el siguiente.
 PAUSA_ENTRE_SERVIDORES = 1
 
 
+# -------------------------------------------------------------------
+# POST A OVERPASS
+# -------------------------------------------------------------------
+
 def _post(url, query):
-    return requests.post(
+    """
+    Ejecuta la consulta Overpass y devuelve el JSON.
+
+    IMPORTANTE:
+    requests.post() devuelve un objeto Response.
+    engine/fuentes necesita el contenido JSON de esa respuesta,
+    por eso hacemos raise_for_status() y luego r.json().
+    """
+
+    r = requests.post(
         url,
-        data={"data": query},
+        data={
+            "data": query
+        },
         headers={
             "User-Agent": C.USER_AGENT,
             "Accept": "application/json",
@@ -138,6 +148,14 @@ def _post(url, query):
         allow_redirects=True,
     )
 
+    r.raise_for_status()
+
+    return r.json()
+
+
+# -------------------------------------------------------------------
+# CONVERSIÓN DE ELEMENTOS OSM
+# -------------------------------------------------------------------
 
 def _element_to_candidate(el):
     tags = el.get("tags") or {}
@@ -187,6 +205,10 @@ def _element_to_candidate(el):
     }
 
 
+# -------------------------------------------------------------------
+# CLAVE ÚNICA DEL ELEMENTO
+# -------------------------------------------------------------------
+
 def _clave_elemento(el):
     elemento_id = str(
         el.get("id", "")
@@ -212,6 +234,10 @@ def _clave_elemento(el):
     )
 
 
+# -------------------------------------------------------------------
+# ROTACIÓN DE SERVIDORES
+# -------------------------------------------------------------------
+
 def _servidores_rotados(indice):
     if not SERVIDORES_OVERPASS:
         return []
@@ -227,6 +253,10 @@ def _servidores_rotados(indice):
     )
 
 
+# -------------------------------------------------------------------
+# CONSULTA CON ROTACIÓN DE SERVIDORES
+# -------------------------------------------------------------------
+
 def _consultar_con_reintentos(
     query,
     etiqueta,
@@ -236,10 +266,8 @@ def _consultar_con_reintentos(
     """
     Una única vuelta por los servidores disponibles.
 
-    IMPORTANTE:
     No existe una segunda ronda completa.
-    Eso era lo que podía llevar una ejecución
-    a 20 minutos o más.
+    Si un servidor falla, se pasa al siguiente.
     """
 
     ultimo_error = None
@@ -300,8 +328,6 @@ def _consultar_con_reintentos(
                 f"(HTTP {codigo})"
             )
 
-            # 429: pasar directamente al siguiente servidor.
-            # No esperamos una segunda ronda.
             if codigo == 429:
                 log(
                     "[fuente] 429: "
@@ -348,6 +374,10 @@ def _consultar_con_reintentos(
     )
 
 
+# -------------------------------------------------------------------
+# MEZCLA COMERCIOS / GENERADORES
+# -------------------------------------------------------------------
+
 def _mezclar_por_tipo(
     candidatos_comercio,
     candidatos_generador,
@@ -379,6 +409,10 @@ def _mezclar_por_tipo(
 
     return resultado
 
+
+# -------------------------------------------------------------------
+# BÚSQUEDA PRINCIPAL
+# -------------------------------------------------------------------
 
 def buscar():
     todos = {}
@@ -447,6 +481,10 @@ def buscar():
                 f"no disponible: {exc}"
             )
 
+    # ----------------------------------------------------------------
+    # CONVERTIR A CANDIDATOS
+    # ----------------------------------------------------------------
+
     comercios = [
         _element_to_candidate(el)
         for el in resultados_comercio
@@ -458,6 +496,7 @@ def buscar():
     ]
 
     # Nunca pasamos candidatos sin nombre.
+
     comercios = [
         x
         for x in comercios
@@ -469,6 +508,10 @@ def buscar():
         for x in generadores
         if x["name"]
     ]
+
+    # ----------------------------------------------------------------
+    # MEZCLA FINAL
+    # ----------------------------------------------------------------
 
     rows = _mezclar_por_tipo(
         comercios,
@@ -490,12 +533,20 @@ def buscar():
         f"{len(rows)} lugares únicos recibidos"
     )
 
+    # ----------------------------------------------------------------
+    # SI ALGUNA CONSULTA FALLÓ, CONTINUAMOS CON LO DISPONIBLE
+    # ----------------------------------------------------------------
+
     if errores:
         log(
             f"[fuente] advertencia: "
             f"{len(errores)} consulta(s) fallaron; "
             f"se continúa con los datos disponibles."
         )
+
+    # ----------------------------------------------------------------
+    # SI FALLÓ TODO, DETENER LA CAPTACIÓN
+    # ----------------------------------------------------------------
 
     if not rows:
         raise RuntimeError(
