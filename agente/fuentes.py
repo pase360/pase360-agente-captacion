@@ -1,3 +1,4 @@
+```python
 import time
 import requests
 
@@ -6,24 +7,23 @@ from .util import log
 
 
 # -------------------------------------------------------------------
-# ESTRATEGIA DE CAPTACIÓN
+# CAPTACIÓN PASE 360
 #
-# Busca comercios y generadores en Córdoba Capital mediante Overpass.
+# Busca comercios y generadores de Córdoba Capital mediante Overpass.
 #
-# Esta versión:
-#   - mantiene las 8 consultas actuales
-#   - distribuye las consultas entre servidores Overpass
-#   - evita repetir inmediatamente el mismo servidor
-#   - reduce los reintentos que provocaban 429
-#   - espera entre consultas para no saturar Overpass
-#   - continúa si una consulta falla
-#   - mantiene la mezcla comercio/generador
+# Esta versión prioriza:
+#   - mantener las 8 fuentes/consultas actuales
+#   - evitar ciclos de reintentos largos
+#   - no esperar una segunda ronda completa
+#   - rotar servidores Overpass
+#   - continuar aunque alguna consulta falle
+#   - conservar la mezcla comercio/generador
 # -------------------------------------------------------------------
 
 
 CONSULTAS_COMERCIOS = [
     f"""
-    [out:json][timeout:50];
+    [out:json][timeout:25];
     (
       nwr["name"]["shop"]({C.BBOX});
     );
@@ -31,7 +31,7 @@ CONSULTAS_COMERCIOS = [
     """,
 
     f"""
-    [out:json][timeout:50];
+    [out:json][timeout:25];
     (
       nwr["name"]["craft"]({C.BBOX});
       nwr["name"]["office"~"company|commercial"]({C.BBOX});
@@ -40,7 +40,7 @@ CONSULTAS_COMERCIOS = [
     """,
 
     f"""
-    [out:json][timeout:50];
+    [out:json][timeout:25];
     (
       nwr["name"]["amenity"~"restaurant|cafe|fast_food|bar|pub|food_court"]({C.BBOX});
     );
@@ -48,7 +48,7 @@ CONSULTAS_COMERCIOS = [
     """,
 
     f"""
-    [out:json][timeout:50];
+    [out:json][timeout:25];
     (
       nwr["name"]["amenity"~"clinic|doctors|dentist|pharmacy|veterinary"]({C.BBOX});
       nwr["name"]["healthcare"]({C.BBOX});
@@ -60,7 +60,7 @@ CONSULTAS_COMERCIOS = [
 
 CONSULTAS_GENERADORES = [
     f"""
-    [out:json][timeout:50];
+    [out:json][timeout:25];
     (
       nwr["name"]["office"="association"]({C.BBOX});
       nwr["name"]["amenity"="social_centre"]({C.BBOX});
@@ -70,7 +70,7 @@ CONSULTAS_GENERADORES = [
     """,
 
     f"""
-    [out:json][timeout:50];
+    [out:json][timeout:25];
     (
       nwr["name"~"sindicato|sindicatos|gremio|gremial|union de trabajadores|union de empleados|mutual|mutualidad|federacion|federación",i]({C.BBOX});
     );
@@ -78,7 +78,7 @@ CONSULTAS_GENERADORES = [
     """,
 
     f"""
-    [out:json][timeout:50];
+    [out:json][timeout:25];
     (
       nwr["name"~"colegio de abogados|colegio de escribanos|colegio de arquitectos|colegio de ingenieros|colegio de contadores|colegio de medicos|colegio de médicos|colegio de odontologos|colegio de odontólogos|colegio de psicologos|colegio de psicólogos|colegio de veterinarios|colegio de farmacéuticos|colegio de farmaceuticos|colegio profesional|consejo profesional|asociacion de profesionales|asociación de profesionales",i]({C.BBOX});
     );
@@ -86,7 +86,7 @@ CONSULTAS_GENERADORES = [
     """,
 
     f"""
-    [out:json][timeout:50];
+    [out:json][timeout:25];
     (
       nwr["name"]["club"]({C.BBOX});
       nwr["name"]["leisure"~"sports_centre|stadium|sports_hall|pitch"]({C.BBOX});
@@ -110,39 +110,34 @@ TODAS_LAS_CONSULTAS = (
 
 
 # -------------------------------------------------------------------
-# CONTROL DE SERVIDORES
-# -------------------------------------------------------------------
-#
-# No hacemos:
-#
-#   servidor A -> A -> A -> B -> B -> B
-#
-# porque eso fue una de las causas de los 429.
-#
-# En cambio, vamos rotando los servidores disponibles.
+# SERVIDORES OVERPASS
 # -------------------------------------------------------------------
 
 SERVIDORES_OVERPASS = list(C.OVERPASS_URLS)
 
-PAUSA_ENTRE_CONSULTAS = 4
-PAUSA_ENTRE_REINTENTOS = 8
+# Mucho menor que los 4 segundos anteriores.
+# Las consultas ya tienen timeout propio.
+PAUSA_ENTRE_CONSULTAS = 1
+
+# No hacemos una segunda ronda completa.
+# Si falla un servidor, se prueba el siguiente.
+PAUSA_ENTRE_SERVIDORES = 1
 
 
 def _post(url, query):
-    r = requests.post(
+    return requests.post(
         url,
         data={"data": query},
         headers={
             "User-Agent": C.USER_AGENT,
             "Accept": "application/json",
         },
-        timeout=max(C.REQUEST_TIMEOUT, 50),
+        timeout=max(
+            min(C.REQUEST_TIMEOUT, 30),
+            25,
+        ),
         allow_redirects=True,
     )
-
-    r.raise_for_status()
-
-    return r.json()
 
 
 def _element_to_candidate(el):
@@ -222,7 +217,10 @@ def _servidores_rotados(indice):
     if not SERVIDORES_OVERPASS:
         return []
 
-    posicion = (indice - 1) % len(SERVIDORES_OVERPASS)
+    posicion = (
+        (indice - 1)
+        % len(SERVIDORES_OVERPASS)
+    )
 
     return (
         SERVIDORES_OVERPASS[posicion:]
@@ -236,12 +234,26 @@ def _consultar_con_reintentos(
     indice,
     total,
 ):
+    """
+    Una única vuelta por los servidores disponibles.
+
+    IMPORTANTE:
+    No existe una segunda ronda completa.
+    Eso era lo que podía llevar una ejecución
+    a 20 minutos o más.
+    """
+
     ultimo_error = None
 
-    servidores = _servidores_rotados(indice)
+    servidores = _servidores_rotados(
+        indice
+    )
 
-    # Primera ronda:
-    # probamos cada servidor una sola vez.
+    if not servidores:
+        raise RuntimeError(
+            "No hay servidores Overpass configurados."
+        )
+
     for numero, url in enumerate(
         servidores,
         start=1,
@@ -286,18 +298,35 @@ def _consultar_con_reintentos(
                 f"[fuente] {etiqueta} "
                 f"{indice}/{total} "
                 f"falló en {url} "
-                f"(HTTP {codigo}): {exc}"
+                f"(HTTP {codigo})"
             )
 
-            # Un 429 significa que ese servidor pide bajar
-            # el ritmo. No insistimos inmediatamente.
+            # 429: pasar directamente al siguiente servidor.
+            # No esperamos una segunda ronda.
             if codigo == 429:
                 log(
-                    "[fuente] servidor respondió 429; "
+                    "[fuente] 429: "
                     "se continúa con el siguiente servidor."
                 )
 
-            time.sleep(2)
+            if numero < len(servidores):
+                time.sleep(
+                    PAUSA_ENTRE_SERVIDORES
+                )
+
+        except requests.Timeout as exc:
+            ultimo_error = exc
+
+            log(
+                f"[fuente] {etiqueta} "
+                f"{indice}/{total} "
+                f"timeout en {url}"
+            )
+
+            if numero < len(servidores):
+                time.sleep(
+                    PAUSA_ENTRE_SERVIDORES
+                )
 
         except Exception as exc:
             ultimo_error = exc
@@ -308,63 +337,10 @@ def _consultar_con_reintentos(
                 f"falló en {url}: {exc}"
             )
 
-            time.sleep(2)
-
-    # Segunda oportunidad:
-    #
-    # Solamente hacemos UNA nueva ronda y con una espera previa.
-    # Esto evita el ciclo anterior de 6 intentos consecutivos
-    # sobre los servidores.
-    log(
-        f"[fuente] todos los servidores fallaron para "
-        f"{etiqueta} {indice}/{total}; "
-        f"esperando antes de una segunda ronda..."
-    )
-
-    time.sleep(PAUSA_ENTRE_REINTENTOS)
-
-    for numero, url in enumerate(
-        servidores,
-        start=1,
-    ):
-        try:
-            log(
-                f"[fuente] {etiqueta} "
-                f"{indice}/{total} "
-                f"segunda ronda "
-                f"{numero}/{len(servidores)}: "
-                f"{url}"
-            )
-
-            data = _post(
-                url,
-                query,
-            )
-
-            elementos = data.get(
-                "elements",
-                [],
-            )
-
-            log(
-                f"[fuente] {etiqueta} "
-                f"{indice}/{total}: "
-                f"{len(elementos)} elementos recibidos"
-            )
-
-            return elementos
-
-        except Exception as exc:
-            ultimo_error = exc
-
-            log(
-                f"[fuente] {etiqueta} "
-                f"{indice}/{total} "
-                f"segunda ronda falló en {url}: "
-                f"{exc}"
-            )
-
-            time.sleep(2)
+            if numero < len(servidores):
+                time.sleep(
+                    PAUSA_ENTRE_SERVIDORES
+                )
 
     raise RuntimeError(
         f"No se pudo obtener "
@@ -378,11 +354,9 @@ def _mezclar_por_tipo(
     candidatos_generador,
 ):
     """
-    Mezcla los dos grupos en forma alternada.
-
-    Esto es importante porque engine.py posteriormente aplica
-    MAX_CANDIDATOS_SCAN. Así los primeros candidatos contienen
-    ambos tipos.
+    Alterna generadores y comercios para que
+    engine.py no reciba primero cientos de
+    candidatos de un solo tipo.
     """
 
     resultado = []
@@ -424,14 +398,7 @@ def buscar():
         start=1,
     ):
 
-        # Pausa entre consultas para reducir 429.
         if indice > 1:
-            log(
-                f"[fuente] pausa de "
-                f"{PAUSA_ENTRE_CONSULTAS}s "
-                f"antes de la siguiente consulta..."
-            )
-
             time.sleep(
                 PAUSA_ENTRE_CONSULTAS
             )
@@ -481,10 +448,6 @@ def buscar():
                 f"no disponible: {exc}"
             )
 
-    # ---------------------------------------------------------------
-    # Convertimos los elementos OSM a candidatos.
-    # ---------------------------------------------------------------
-
     comercios = [
         _element_to_candidate(el)
         for el in resultados_comercio
@@ -495,8 +458,7 @@ def buscar():
         for el in resultados_generador
     ]
 
-    # Quitamos registros sin nombre.
-
+    # Nunca pasamos candidatos sin nombre.
     comercios = [
         x
         for x in comercios
@@ -508,15 +470,6 @@ def buscar():
         for x in generadores
         if x["name"]
     ]
-
-    # Mezcla deliberada:
-    #
-    # generador
-    # comercio
-    # generador
-    # comercio
-    #
-    # etc.
 
     rows = _mezclar_por_tipo(
         comercios,
@@ -538,17 +491,18 @@ def buscar():
         f"{len(rows)} lugares únicos recibidos"
     )
 
+    if errores:
+        log(
+            f"[fuente] advertencia: "
+            f"{len(errores)} consulta(s) fallaron; "
+            f"se continúa con los datos disponibles."
+        )
+
     if not rows:
         raise RuntimeError(
             "Ninguna consulta de Overpass pudo "
             "devolver lugares."
         )
 
-    if errores:
-        log(
-            f"[fuente] advertencia: "
-            f"{len(errores)} consulta(s) fallaron, "
-            f"pero se continúa con los datos obtenidos."
-        )
-
     return rows
+```
