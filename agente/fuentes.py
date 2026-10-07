@@ -10,94 +10,49 @@ from .util import cargar, guardar, log, normalizar_email
 
 CACHE_FILE = "base_candidatos.json"
 
-
 # ============================================================
-# BÚSQUEDA PRIORITARIA DE CONTACTOS YA PUBLICADOS EN OSM
-# ============================================================
-
-CONSULTAS_EMAIL = [
-    (
-        "comercios_email",
-        """
-        [out:json][timeout:45];
-        (
-          nwr["name"]["shop"]["email"]({bbox});
-          nwr["name"]["shop"]["contact:email"]({bbox});
-          nwr["name"]["craft"]["email"]({bbox});
-          nwr["name"]["craft"]["contact:email"]({bbox});
-          nwr["name"]["amenity"]["email"]({bbox});
-          nwr["name"]["amenity"]["contact:email"]({bbox});
-          nwr["name"]["healthcare"]["email"]({bbox});
-          nwr["name"]["healthcare"]["contact:email"]({bbox});
-          nwr["name"]["office"]["email"]({bbox});
-          nwr["name"]["office"]["contact:email"]({bbox});
-        );
-        out tags center;
-        """,
-        "comercio",
-    ),
-    (
-        "generadores_email_organizaciones",
-        """
-        [out:json][timeout:35];
-        (
-          nwr["name"~"sindicato|gremio|mutual|federacion|federación|cooperativa|fundacion|fundación"]["email"]({bbox});
-          nwr["name"~"sindicato|gremio|mutual|federacion|federación|cooperativa|fundacion|fundación"]["contact:email"]({bbox});
-          nwr["office"="association"]["email"]({bbox});
-          nwr["office"="association"]["contact:email"]({bbox});
-        );
-        out tags center;
-        """,
-        "generador",
-    ),
-    (
-        "generadores_email_profesionales",
-        """
-        [out:json][timeout:35];
-        (
-          nwr["name"~"colegio profesional|colegio de |consejo profesional|consejo de |asociacion profesional|asociación profesional"]["email"]({bbox});
-          nwr["name"~"colegio profesional|colegio de |consejo profesional|consejo de |asociacion profesional|asociación profesional"]["contact:email"]({bbox});
-        );
-        out tags center;
-        """,
-        "generador",
-    ),
-    (
-        "generadores_email_deportivos",
-        """
-        [out:json][timeout:35];
-        (
-          nwr["name"~"club deportivo|club social|club de |jockey club|atletico|atlético|deportivo|deportiva|liga deportiva|federacion deportiva|federación deportiva"]["email"]({bbox});
-          nwr["name"~"club deportivo|club social|club de |jockey club|atletico|atlético|deportivo|deportiva|liga deportiva|federacion deportiva|federación deportiva"]["contact:email"]({bbox});
-        );
-        out tags center;
-        """,
-        "generador",
-    ),
-]
-
-
-# ============================================================
-# BÚSQUEDA GENERAL
+# CONSULTAS OVERPASS
 #
-# Las consultas están separadas para evitar consultas gigantes
-# que terminan en HTTP 504/time-out.
+# Se redujeron deliberadamente:
+# - menos consultas
+# - menos regex gigantes
+# - prioridad a etiquetas estructuradas
+# - fallback entre servidores solamente cuando hace falta
+#
+# La clasificación fina la hace clasificador.py.
 # ============================================================
 
-CONSULTAS_COMPLETAS = [
+CONSULTAS = [
 
     # --------------------------------------------------------
-    # COMERCIOS
+    # 1. CONTACTOS PUBLICADOS EN OSM
+    # --------------------------------------------------------
+
+    (
+        "osm_email",
+        """
+        [out:json][timeout:25];
+        (
+          nwr["email"]({bbox});
+          nwr["contact:email"]({bbox});
+        );
+        out tags center;
+        """,
+        "mixto",
+    ),
+
+    # --------------------------------------------------------
+    # 2. COMERCIOS
     # --------------------------------------------------------
 
     (
         "comercios_shop",
         """
-        [out:json][timeout:45];
+        [out:json][timeout:30];
         (
-          nwr["name"]["shop"]({bbox});
-          nwr["name"]["craft"]({bbox});
-          nwr["name"]["office"]({bbox});
+          nwr["shop"]["name"]({bbox});
+          nwr["craft"]["name"]({bbox});
+          nwr["office"]["name"]({bbox});
         );
         out tags center;
         """,
@@ -105,12 +60,12 @@ CONSULTAS_COMPLETAS = [
     ),
 
     (
-        "comercios_amenity",
+        "comercios_servicios",
         """
-        [out:json][timeout:35];
+        [out:json][timeout:30];
         (
-          nwr["name"]["amenity"~"restaurant|cafe|fast_food|bar|pub|food_court|pharmacy|clinic|doctors|dentist|veterinary"]({bbox});
-          nwr["name"]["healthcare"]({bbox});
+          nwr["amenity"~"restaurant|cafe|fast_food|bar|pub|food_court|pharmacy|clinic|doctors|dentist|veterinary"]["name"]({bbox});
+          nwr["healthcare"]["name"]({bbox});
         );
         out tags center;
         """,
@@ -118,16 +73,48 @@ CONSULTAS_COMPLETAS = [
     ),
 
     # --------------------------------------------------------
-    # GENERADORES FUERTES
+    # 3. GENERADORES POR ETIQUETA OSM
     # --------------------------------------------------------
 
     (
-        "generadores_sindicatos",
+        "generadores_asociaciones",
         """
-        [out:json][timeout:35];
+        [out:json][timeout:30];
         (
-          nwr["name"~"sindicato|gremio|union de trabajadores|unión de trabajadores|sindical"]({bbox});
-          nwr["office"="association"]["name"~"sindicato|gremio|union|unión"]({bbox});
+          nwr["office"="association"]["name"]({bbox});
+          nwr["office"="foundation"]["name"]({bbox});
+        );
+        out tags center;
+        """,
+        "generador",
+    ),
+
+    (
+        "generadores_clubes",
+        """
+        [out:json][timeout:30];
+        (
+          nwr["club"]["name"]({bbox});
+          nwr["leisure"="sports_club"]["name"]({bbox});
+        );
+        out tags center;
+        """,
+        "generador",
+    ),
+
+    # --------------------------------------------------------
+    # 4. GENERADORES IMPORTANTES POR NOMBRE
+    #
+    # Se mantienen solamente grupos pequeños para evitar que
+    # Overpass tenga que procesar expresiones enormes.
+    # --------------------------------------------------------
+
+    (
+        "generadores_sindicales",
+        """
+        [out:json][timeout:30];
+        (
+          nwr["name"~"sindicato|gremio|union de trabajadores|unión de trabajadores",i]({bbox});
         );
         out tags center;
         """,
@@ -137,10 +124,9 @@ CONSULTAS_COMPLETAS = [
     (
         "generadores_mutuales",
         """
-        [out:json][timeout:35];
+        [out:json][timeout:30];
         (
-          nwr["name"~"mutual|asociacion mutual|asociación mutual"]({bbox});
-          nwr["office"="association"]["name"~"mutual"]({bbox});
+          nwr["name"~"mutual|asociacion mutual|asociación mutual",i]({bbox});
         );
         out tags center;
         """,
@@ -150,9 +136,9 @@ CONSULTAS_COMPLETAS = [
     (
         "generadores_cooperativas",
         """
-        [out:json][timeout:35];
+        [out:json][timeout:30];
         (
-          nwr["name"~"cooperativa|cooperativa de servicios|cooperativa de trabajo|cooperativa obrera"]({bbox});
+          nwr["name"~"cooperativa",i]({bbox});
         );
         out tags center;
         """,
@@ -160,88 +146,11 @@ CONSULTAS_COMPLETAS = [
     ),
 
     (
-        "generadores_federaciones",
+        "generadores_profesionales",
         """
-        [out:json][timeout:35];
+        [out:json][timeout:30];
         (
-          nwr["name"~"federacion|federación|confederacion|confederación"]({bbox});
-        );
-        out tags center;
-        """,
-        "generador",
-    ),
-
-    (
-        "generadores_asociaciones",
-        """
-        [out:json][timeout:35];
-        (
-          nwr["office"="association"]["name"]({bbox});
-          nwr["name"~"asociacion civil|asociación civil|asociacion profesional|asociación profesional"]({bbox});
-        );
-        out tags center;
-        """,
-        "generador",
-    ),
-
-    (
-        "generadores_fundaciones",
-        """
-        [out:json][timeout:35];
-        (
-          nwr["name"~"fundacion|fundación"]({bbox});
-          nwr["office"~"foundation|association"]["name"~"fundacion|fundación"]({bbox});
-        );
-        out tags center;
-        """,
-        "generador",
-    ),
-
-    # --------------------------------------------------------
-    # COLEGIOS Y CONSEJOS PROFESIONALES
-    # --------------------------------------------------------
-
-    (
-        "generadores_colegios_profesionales",
-        """
-        [out:json][timeout:35];
-        (
-          nwr["name"~"colegio profesional|colegio de abogados|colegio de arquitectos|colegio de ingenieros|colegio de contadores|colegio de escribanos|colegio de médicos|colegio de medicos|colegio de odontologos|colegio de odontólogos|colegio de psicologos|colegio de psicólogos|colegio de farmacéuticos|colegio de farmaceuticos|colegio profesional"]({bbox});
-        );
-        out tags center;
-        """,
-        "generador",
-    ),
-
-    (
-        "generadores_consejos_profesionales",
-        """
-        [out:json][timeout:35];
-        (
-          nwr["name"~"consejo profesional|consejo de profesionales|consejo de abogados|consejo de ciencias economicas|consejo de ciencias económicas"]({bbox});
-        );
-        out tags center;
-        """,
-        "generador",
-    ),
-
-    # --------------------------------------------------------
-    # CLUBES E INSTITUCIONES DEPORTIVAS
-    #
-    # IMPORTANTE:
-    # No buscamos todos los sports_centre/stadium/sports_hall,
-    # porque eso mete instalaciones que no necesariamente son
-    # organizaciones de afiliados.
-    # --------------------------------------------------------
-
-    (
-        "generadores_clubes",
-        """
-        [out:json][timeout:35];
-        (
-          nwr["name"~"club deportivo|club social|club de futbol|club de fútbol|club de rugby|club de hockey|club de basquet|club de básquet|jockey club|club atletico|club atlético"]({bbox});
-          nwr["club"]["name"]({bbox});
-          nwr["club"="sport"]["name"]({bbox});
+          nwr["name"~"colegio profesional|colegio de |consejo profesional|consejo de ",i]({bbox});
         );
         out tags center;
         """,
@@ -251,26 +160,9 @@ CONSULTAS_COMPLETAS = [
     (
         "generadores_deportivos",
         """
-        [out:json][timeout:35];
+        [out:json][timeout:30];
         (
-          nwr["name"~"liga deportiva|federacion deportiva|federación deportiva|asociacion deportiva|asociación deportiva|union deportiva|unión deportiva"]({bbox});
-          nwr["sport"]["name"]({bbox});
-        );
-        out tags center;
-        """,
-        "generador",
-    ),
-
-    # --------------------------------------------------------
-    # ORGANIZACIONES SOCIALES
-    # --------------------------------------------------------
-
-    (
-        "generadores_centros_vecinales",
-        """
-        [out:json][timeout:35];
-        (
-          nwr["name"~"centro vecinal|centro barrial|centro comunitario|centro comunitaria"]({bbox});
+          nwr["name"~"club deportivo|club social|club de futbol|club de fútbol|club de rugby|club de hockey|club de basquet|club de básquet|jockey club|club atletico|club atlético|liga deportiva|federacion deportiva|federación deportiva",i]({bbox});
         );
         out tags center;
         """,
@@ -278,23 +170,11 @@ CONSULTAS_COMPLETAS = [
     ),
 
     (
-        "generadores_jubilados",
+        "generadores_sociales",
         """
-        [out:json][timeout:35];
+        [out:json][timeout:30];
         (
-          nwr["name"~"centro de jubilados|centro de pensionados|jubilados y pensionados|pensionados"]({bbox});
-        );
-        out tags center;
-        """,
-        "generador",
-    ),
-
-    (
-        "generadores_sociedades",
-        """
-        [out:json][timeout:35];
-        (
-          nwr["name"~"sociedad de fomento|sociedad civil|circulo|círculo|union de |unión de |agrupacion|agrupación"]({bbox});
+          nwr["name"~"centro vecinal|centro barrial|centro comunitario|centro de jubilados|centro de pensionados|sociedad de fomento|asociacion civil|asociación civil|fundacion|fundación|federacion|federación|confederacion|confederación",i]({bbox});
         );
         out tags center;
         """,
@@ -316,23 +196,24 @@ def _post_overpass(url, query):
                 "User-Agent": C.USER_AGENT,
                 "Content-Type": "application/x-www-form-urlencoded",
             },
-            timeout=C.REQUEST_TIMEOUT + 25,
+            timeout=C.REQUEST_TIMEOUT + 15,
         )
 
-        if respuesta.status_code != 200:
-            log(
-                f"[fuente] {url} respondió HTTP "
-                f"{respuesta.status_code}"
-            )
-            return None
+        if respuesta.status_code == 200:
+            try:
+                return respuesta.json()
+            except Exception:
+                log(
+                    f"[fuente] respuesta JSON inválida: {url}"
+                )
+                return None
 
-        try:
-            return respuesta.json()
-        except Exception:
-            log(
-                f"[fuente] respuesta inválida de {url}"
-            )
-            return None
+        log(
+            f"[fuente] {url} respondió HTTP "
+            f"{respuesta.status_code}"
+        )
+
+        return None
 
     except requests.RequestException as e:
         log(
@@ -355,9 +236,13 @@ def _consultar(nombre, plantilla, grupo):
         C.BBOX,
     )
 
-    for url in C.OVERPASS_URLS:
+    # Se intenta cada servidor como fallback.
+    # No se repite indefinidamente el mismo servidor.
+    for indice, url in enumerate(C.OVERPASS_URLS):
+
         log(
-            f"[fuente] {nombre} -> {url}"
+            f"[fuente] {nombre} -> "
+            f"servidor {indice + 1}/{len(C.OVERPASS_URLS)}"
         )
 
         data = _post_overpass(
@@ -365,7 +250,10 @@ def _consultar(nombre, plantilla, grupo):
             query,
         )
 
-        if not data:
+        if data is None:
+            # Espera corta antes del siguiente servidor.
+            if indice < len(C.OVERPASS_URLS) - 1:
+                time.sleep(1.5)
             continue
 
         elementos = data.get(
@@ -373,31 +261,30 @@ def _consultar(nombre, plantilla, grupo):
             [],
         )
 
-        if elementos:
+        if not elementos:
             log(
-                f"[fuente] {nombre}: "
-                f"{len(elementos)} lugares recibidos"
+                f"[fuente] {nombre}: 0 lugares"
+            )
+            return []
+
+        resultado = []
+
+        for elemento in elementos:
+            candidato = _element_to_candidate(
+                elemento,
+                grupo,
+                nombre,
             )
 
-            resultado = []
-
-            for elemento in elementos:
-                candidato = _element_to_candidate(
-                    elemento,
-                    grupo,
-                    nombre,
-                )
-
-                if candidato:
-                    resultado.append(
-                        candidato
-                    )
-
-            return resultado
+            if candidato:
+                resultado.append(candidato)
 
         log(
-            f"[fuente] {nombre}: 0 lugares"
+            f"[fuente] {nombre}: "
+            f"{len(resultado)} lugares recibidos"
         )
+
+        return resultado
 
     return []
 
@@ -426,9 +313,7 @@ def _element_to_candidate(
     lat = elemento.get("lat")
     lon = elemento.get("lon")
 
-    center = elemento.get(
-        "center"
-    ) or {}
+    center = elemento.get("center") or {}
 
     if lat is None:
         lat = center.get("lat")
@@ -455,9 +340,7 @@ def _element_to_candidate(
         or ""
     ).strip()
 
-    direccion = _direccion(
-        tags
-    )
+    direccion = _direccion(tags)
 
     source_id = (
         f"{elemento.get('type', '')}:"
@@ -511,23 +394,22 @@ def _direccion(tags):
         else:
             partes.append(number)
 
-    if city and city.lower() not in (
-        " ".join(partes).lower()
-    ):
-        partes.append(city)
+    if city:
+        ciudad_actual = " ".join(partes).lower()
+
+        if city.lower() not in ciudad_actual:
+            partes.append(city)
 
     return ", ".join(partes)
 
 
 # ============================================================
-# CLAVES Y FUSIÓN
+# CLAVES
 # ============================================================
 
 def _clave(candidato):
     source_id = str(
-        candidato.get(
-            "source_id"
-        ) or ""
+        candidato.get("source_id") or ""
     ).strip()
 
     if source_id:
@@ -541,21 +423,18 @@ def _clave(candidato):
         return f"email:{email}"
 
     name = str(
-        candidato.get("name")
-        or ""
+        candidato.get("name") or ""
     ).strip().lower()
 
     website = str(
-        candidato.get("website")
-        or ""
+        candidato.get("website") or ""
     ).strip().lower()
 
     phone = re.sub(
         r"\D+",
         "",
         str(
-            candidato.get("phone")
-            or ""
+            candidato.get("phone") or ""
         ),
     )
 
@@ -563,8 +442,7 @@ def _clave(candidato):
         r"\s+",
         " ",
         str(
-            candidato.get("direccion")
-            or ""
+            candidato.get("direccion") or ""
         ).strip().lower(),
     )
 
@@ -586,14 +464,12 @@ def _clave_flexible(candidato):
         r"\s+",
         " ",
         str(
-            candidato.get("name")
-            or ""
+            candidato.get("name") or ""
         ).strip().lower(),
     )
 
     website = str(
-        candidato.get("website")
-        or ""
+        candidato.get("website") or ""
     ).strip().lower()
 
     if website:
@@ -614,8 +490,7 @@ def _clave_flexible(candidato):
         r"\D+",
         "",
         str(
-            candidato.get("phone")
-            or ""
+            candidato.get("phone") or ""
         ),
     )
 
@@ -623,8 +498,7 @@ def _clave_flexible(candidato):
         r"\s+",
         " ",
         str(
-            candidato.get("direccion")
-            or ""
+            candidato.get("direccion") or ""
         ).strip().lower(),
     )
 
@@ -635,24 +509,25 @@ def _clave_flexible(candidato):
     )
 
 
+# ============================================================
+# FUSIÓN
+# ============================================================
+
 def _fusionar(candidatos):
     resultado = {}
 
     for candidato in candidatos:
+
         if not candidato:
             continue
 
         if not candidato.get("name"):
             continue
 
-        clave = _clave(
-            candidato
-        )
+        clave = _clave(candidato)
 
         if clave not in resultado:
-            resultado[clave] = dict(
-                candidato
-            )
+            resultado[clave] = dict(candidato)
             continue
 
         actual = resultado[clave]
@@ -672,29 +547,24 @@ def _fusionar(candidatos):
                 actual[campo] = candidato[campo]
 
         tags_actuales = (
-            actual.get("tags")
-            or {}
+            actual.get("tags") or {}
         )
 
         tags_nuevos = (
-            candidato.get("tags")
-            or {}
+            candidato.get("tags") or {}
         )
 
         if tags_nuevos:
             tags_actuales.update(
                 tags_nuevos
             )
-            actual["tags"] = (
-                tags_actuales
-            )
+            actual["tags"] = tags_actuales
 
     finales = {}
 
     for candidato in resultado.values():
-        clave = _clave_flexible(
-            candidato
-        )
+
+        clave = _clave_flexible(candidato)
 
         if clave not in finales:
             finales[clave] = candidato
@@ -716,13 +586,11 @@ def _fusionar(candidatos):
         ):
             finales[clave] = candidato
 
-    return list(
-        finales.values()
-    )
+    return list(finales.values())
 
 
 # ============================================================
-# BASE PERSISTENTE DE ESTE AGENTE
+# BASE PERSISTENTE
 # ============================================================
 
 def _cargar_base():
@@ -731,30 +599,24 @@ def _cargar_base():
         [],
     )
 
-    if not isinstance(
-        base,
-        list,
-    ):
+    if not isinstance(base, list):
         return []
 
     resultado = []
 
     for candidato in base:
+
         if (
             isinstance(candidato, dict)
             and candidato.get("name")
         ):
-            resultado.append(
-                candidato
-            )
+            resultado.append(candidato)
 
     return resultado
 
 
 def _guardar_base(candidatos):
-    candidatos = _fusionar(
-        candidatos
-    )
+    candidatos = _fusionar(candidatos)
 
     if len(candidatos) > 20000:
         candidatos = candidatos[:20000]
@@ -776,34 +638,22 @@ def _guardar_base(candidatos):
 # ============================================================
 
 def buscar():
-    """
-    1. Busca primero contactos publicados directamente en OSM.
-    2. Busca comercios.
-    3. Busca generadores por categorías pequeñas.
-    4. Pone los candidatos NUEVOS antes de la base histórica.
-    5. Fusiona sin perder los datos existentes.
-    6. Si Overpass falla, conserva la base disponible.
-    """
 
     encontrados = []
 
     consultas_ok = 0
     consultas_error = 0
 
-    # --------------------------------------------------------
-    # ETAPA 1 - EMAIL PUBLICADO
-    # --------------------------------------------------------
-
     log(
-        "[fuente] etapa 1: "
-        "búsqueda prioritaria con email"
+        "[fuente] iniciando captación "
+        "desde fuentes públicas"
     )
 
     for (
         nombre,
         plantilla,
         grupo,
-    ) in CONSULTAS_EMAIL:
+    ) in CONSULTAS:
 
         resultado = _consultar(
             nombre,
@@ -813,62 +663,21 @@ def buscar():
 
         if resultado:
             consultas_ok += 1
-            encontrados.extend(
-                resultado
-            )
+            encontrados.extend(resultado)
         else:
             consultas_error += 1
 
-        time.sleep(0.4)
+        # Pequeña pausa para no golpear
+        # continuamente al servidor.
+        time.sleep(0.7)
 
     log(
-        f"[fuente] email-first: "
-        f"{len(encontrados)} candidatos"
+        f"[fuente] candidatos nuevos "
+        f"obtenidos: {len(encontrados)}"
     )
-
-    # --------------------------------------------------------
-    # ETAPA 2 - AMPLIACIÓN
-    # --------------------------------------------------------
-
-    log(
-        "[fuente] etapa 2: "
-        "ampliación de candidatos"
-    )
-
-    for (
-        nombre,
-        plantilla,
-        grupo,
-    ) in CONSULTAS_COMPLETAS:
-
-        resultado = _consultar(
-            nombre,
-            plantilla,
-            grupo,
-        )
-
-        if resultado:
-            consultas_ok += 1
-            encontrados.extend(
-                resultado
-            )
-        else:
-            consultas_error += 1
-
-        time.sleep(0.4)
 
     # --------------------------------------------------------
     # BASE PERSISTENTE
-    #
-    # IMPORTANTE:
-    # Los nuevos van PRIMERO.
-    #
-    # Antes era:
-    #     base_actual + encontrados
-    #
-    # Eso hacía que una base de ~18.000 registros pudiera
-    # ocultar los candidatos recién encontrados cuando el
-    # motor limitaba el escaneo.
     # --------------------------------------------------------
 
     base_actual = _cargar_base()
@@ -876,38 +685,45 @@ def buscar():
     if base_actual:
         log(
             f"[fuente] base persistente "
-            f"del agente encontrada: "
+            f"encontrada: "
             f"{len(base_actual)} candidatos"
         )
 
+    # Los nuevos tienen prioridad.
     combinados = _fusionar(
         encontrados + base_actual
     )
 
     if combinados:
-        _guardar_base(
-            combinados
-        )
+        _guardar_base(combinados)
 
     # --------------------------------------------------------
-    # FALLBACK
+    # FALLBACK SI TODAS LAS FUENTES FALLAN
     # --------------------------------------------------------
 
     if not encontrados:
 
         if base_actual:
             log(
-                "[fuente] Overpass no "
-                "entregó candidatos nuevos. "
-                "Se conserva la base persistente."
+                "[fuente] no hubo candidatos "
+                "nuevos; se conserva la base "
+                "persistente."
+            )
+
+            log(
+                f"[fuente] consultas OK="
+                f"{consultas_ok} "
+                f"errores="
+                f"{consultas_error}"
             )
 
             return base_actual
 
         raise RuntimeError(
-            "Overpass no devolvió "
-            "candidatos y todavía "
-            "no existe una base persistente."
+            "Las fuentes públicas no "
+            "devolvieron candidatos y "
+            "todavía no existe una base "
+            "persistente."
         )
 
     log(
