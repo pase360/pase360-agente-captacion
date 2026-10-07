@@ -1,4 +1,3 @@
-import json
 import re
 import time
 from urllib.parse import urlparse
@@ -11,8 +10,7 @@ from .util import cargar, guardar, log, normalizar_email
 
 CACHE_FILE = "base_candidatos.json"
 
-# Consultas livianas: primero buscamos lugares que YA tengan email público
-# cargado en OpenStreetMap.
+
 CONSULTAS_EMAIL = [
     (
         "comercios_email",
@@ -54,8 +52,7 @@ CONSULTAS_EMAIL = [
     ),
 ]
 
-# Consultas amplias: se usan para ampliar la base cuando las consultas
-# email-first no alcanzan.
+
 CONSULTAS_COMPLETAS = [
     (
         "comercios_shop",
@@ -134,10 +131,6 @@ CONSULTAS_COMPLETAS = [
 ]
 
 
-def _bbox():
-    return C.BBOX
-
-
 def _post_overpass(url, query):
     try:
         respuesta = requests.post(
@@ -173,17 +166,28 @@ def _post_overpass(url, query):
 
 
 def _consultar(nombre, plantilla, grupo):
-    query = plantilla.replace("{bbox}", _bbox())
+    query = plantilla.replace(
+        "{bbox}",
+        C.BBOX,
+    )
 
     for url in C.OVERPASS_URLS:
-        log(f"[fuente] {nombre} -> {url}")
+        log(
+            f"[fuente] {nombre} -> {url}"
+        )
 
-        data = _post_overpass(url, query)
+        data = _post_overpass(
+            url,
+            query,
+        )
 
         if not data:
             continue
 
-        elementos = data.get("elements", [])
+        elementos = data.get(
+            "elements",
+            [],
+        )
 
         if elementos:
             log(
@@ -201,32 +205,44 @@ def _consultar(nombre, plantilla, grupo):
                 )
 
                 if candidato:
-                    resultado.append(candidato)
+                    resultado.append(
+                        candidato
+                    )
 
             return resultado
 
-        log(f"[fuente] {nombre}: 0 lugares")
+        log(
+            f"[fuente] {nombre}: 0 lugares"
+        )
 
     return []
 
 
-def _element_to_candidate(elemento, grupo, fuente):
+def _element_to_candidate(
+    elemento,
+    grupo,
+    fuente,
+):
     tags = elemento.get("tags") or {}
 
-    nombre = (
+    # IMPORTANTE:
+    # engine.py utiliza estos nombres exactos.
+    name = (
         tags.get("name")
         or tags.get("official_name")
         or tags.get("short_name")
         or ""
     ).strip()
 
-    if not nombre:
+    if not name:
         return None
 
     lat = elemento.get("lat")
     lon = elemento.get("lon")
 
-    center = elemento.get("center") or {}
+    center = elemento.get(
+        "center"
+    ) or {}
 
     if lat is None:
         lat = center.get("lat")
@@ -253,7 +269,9 @@ def _element_to_candidate(elemento, grupo, fuente):
         or ""
     ).strip()
 
-    address = _direccion(tags)
+    direccion = _direccion(
+        tags
+    )
 
     source_id = (
         f"{elemento.get('type', '')}:"
@@ -261,14 +279,17 @@ def _element_to_candidate(elemento, grupo, fuente):
     )
 
     return {
-        "source_id": source_id,
-        "fuente": fuente,
-        "grupo_fuente": grupo,
-        "nombre": nombre,
+        # Campos que engine.py necesita
+        "name": name,
         "email": email,
         "website": website,
-        "telefono": phone,
-        "direccion": address,
+        "phone": phone,
+        "direccion": direccion,
+        "source": fuente,
+        "source_id": source_id,
+
+        # Información auxiliar
+        "grupo_fuente": grupo,
         "lat": lat,
         "lon": lon,
         "tags": tags,
@@ -297,68 +318,162 @@ def _direccion(tags):
     ).strip()
 
     if street:
-        partes.append(street)
+        partes.append(
+            street
+        )
 
     if number:
         if partes:
-            partes[-1] = f"{partes[-1]} {number}"
+            partes[-1] = (
+                f"{partes[-1]} {number}"
+            )
         else:
-            partes.append(number)
+            partes.append(
+                number
+            )
 
-    if city and city.lower() not in " ".join(partes).lower():
-        partes.append(city)
+    if city and city.lower() not in (
+        " ".join(partes).lower()
+    ):
+        partes.append(
+            city
+        )
 
-    return ", ".join(partes)
+    return ", ".join(
+        partes
+    )
 
 
 def _clave(candidato):
-    source_id = str(candidato.get("source_id") or "").strip()
+    source_id = str(
+        candidato.get(
+            "source_id"
+        ) or ""
+    ).strip()
 
     if source_id:
-        return f"osm:{source_id}"
+        return (
+            f"osm:{source_id}"
+        )
 
-    nombre = str(candidato.get("nombre") or "").strip().lower()
-    lat = str(candidato.get("lat") or "")
-    lon = str(candidato.get("lon") or "")
-
-    return f"base:{nombre}|{lat}|{lon}"
-
-
-def _clave_flexible(candidato):
-    email = normalizar_email(candidato.get("email"))
-
-    if email:
-        return f"email:{email}"
-
-    nombre = re.sub(
-        r"\s+",
-        " ",
-        str(candidato.get("nombre") or "").strip().lower(),
+    email = normalizar_email(
+        candidato.get("email")
     )
 
-    website = str(candidato.get("website") or "").strip().lower()
+    if email:
+        return (
+            f"email:{email}"
+        )
 
-    if website:
-        try:
-            host = urlparse(website).netloc.lower()
-            host = host.removeprefix("www.")
-        except Exception:
-            host = website
-        return f"web:{nombre}|{host}"
+    name = str(
+        candidato.get("name")
+        or ""
+    ).strip().lower()
 
-    telefono = re.sub(
+    website = str(
+        candidato.get("website")
+        or ""
+    ).strip().lower()
+
+    phone = re.sub(
         r"\D+",
         "",
-        str(candidato.get("telefono") or ""),
+        str(
+            candidato.get(
+                "phone"
+            )
+            or ""
+        ),
     )
 
     direccion = re.sub(
         r"\s+",
         " ",
-        str(candidato.get("direccion") or "").strip().lower(),
+        str(
+            candidato.get(
+                "direccion"
+            )
+                or ""
+        ).strip().lower(),
     )
 
-    return f"nombre:{nombre}|tel:{telefono}|dir:{direccion}"
+    return (
+        f"{name}|{website}|"
+        f"{phone}|{direccion}"
+    )
+
+
+def _clave_flexible(candidato):
+    email = normalizar_email(
+        candidato.get("email")
+    )
+
+    if email:
+        return (
+            f"email:{email}"
+        )
+
+    name = re.sub(
+        r"\s+",
+        " ",
+        str(
+            candidato.get(
+                "name"
+            )
+            or ""
+        ).strip().lower(),
+    )
+
+    website = str(
+        candidato.get(
+            "website"
+        )
+        or ""
+    ).strip().lower()
+
+    if website:
+        try:
+            host = urlparse(
+                website
+            ).netloc.lower()
+
+            host = host.removeprefix(
+                "www."
+            )
+        except Exception:
+            host = website
+
+        return (
+            f"web:{name}|{host}"
+        )
+
+    phone = re.sub(
+        r"\D+",
+        "",
+        str(
+            candidato.get(
+                "phone"
+            )
+            or ""
+        ),
+    )
+
+    direccion = re.sub(
+        r"\s+",
+        " ",
+        str(
+            candidato.get(
+                "direccion"
+            )
+            or ""
+        ).strip().lower(),
+    )
+
+    return (
+        f"nombre:{name}|"
+        f"tel:{phone}|"
+        f"dir:{direccion}"
+    )
 
 
 def _fusionar(candidatos):
@@ -368,78 +483,162 @@ def _fusionar(candidatos):
         if not candidato:
             continue
 
-        clave = _clave(candidato)
-
-        if clave not in resultado:
-            resultado[clave] = candidato
+        if not candidato.get(
+            "name"
+        ):
             continue
 
-        actual = resultado[clave]
+        clave = _clave(
+            candidato
+        )
 
-        # Conservamos la información más completa.
+        if clave not in resultado:
+            resultado[
+                clave
+            ] = dict(candidato)
+            continue
+
+        actual = resultado[
+            clave
+        ]
+
         for campo in (
             "email",
             "website",
-            "telefono",
+            "phone",
             "direccion",
             "lat",
             "lon",
         ):
-            if not actual.get(campo) and candidato.get(campo):
-                actual[campo] = candidato[campo]
+            if (
+                not actual.get(
+                    campo
+                )
+                and candidato.get(
+                    campo
+                )
+            ):
+                actual[
+                    campo
+                ] = candidato[
+                    campo
+                ]
 
-        tags_actuales = actual.get("tags") or {}
-        tags_nuevos = candidato.get("tags") or {}
+        tags_actuales = (
+            actual.get(
+                "tags"
+            )
+            or {}
+        )
+
+        tags_nuevos = (
+            candidato.get(
+                "tags"
+            )
+            or {}
+        )
 
         if tags_nuevos:
-            tags_actuales.update(tags_nuevos)
-            actual["tags"] = tags_actuales
+            tags_actuales.update(
+                tags_nuevos
+            )
+            actual[
+                "tags"
+            ] = tags_actuales
 
-    # Segunda deduplicación por identidad práctica.
     finales = {}
+
     for candidato in resultado.values():
-        clave = _clave_flexible(candidato)
+        clave = _clave_flexible(
+            candidato
+        )
 
         if clave not in finales:
-            finales[clave] = candidato
+            finales[
+                clave
+            ] = candidato
             continue
 
-        actual = finales[clave]
+        actual = finales[
+            clave
+        ]
 
-        # Si una versión tiene email y la otra no,
-        # gana la que tiene email.
-        email_actual = normalizar_email(actual.get("email"))
-        email_nuevo = normalizar_email(candidato.get("email"))
+        email_actual = (
+            normalizar_email(
+                actual.get(
+                    "email"
+                )
+            )
+        )
 
-        if email_nuevo and not email_actual:
-            finales[clave] = candidato
+        email_nuevo = (
+            normalizar_email(
+                candidato.get(
+                    "email"
+                )
+            )
+        )
 
-    return list(finales.values())
+        if (
+            email_nuevo
+            and not email_actual
+        ):
+            finales[
+                clave
+            ] = candidato
+
+    return list(
+        finales.values()
+    )
 
 
 def _cargar_base():
-    base = cargar(CACHE_FILE, [])
+    base = cargar(
+        CACHE_FILE,
+        [],
+    )
 
-    if not isinstance(base, list):
+    if not isinstance(
+        base,
+        list,
+    ):
         return []
 
-    limpia = []
+    resultado = []
 
     for candidato in base:
-        if isinstance(candidato, dict) and candidato.get("nombre"):
-            limpia.append(candidato)
+        if (
+            isinstance(
+                candidato,
+                dict,
+            )
+            and candidato.get(
+                "name"
+            )
+        ):
+            resultado.append(
+                candidato
+            )
 
-    return limpia
+    return resultado
 
 
-def _guardar_base(candidatos):
-    candidatos = _fusionar(candidatos)
+def _guardar_base(
+    candidatos
+):
+    candidatos = _fusionar(
+        candidatos
+    )
 
-    # Evitamos que la base crezca indefinidamente por errores externos.
     if len(candidatos) > 20000:
-        candidatos = candidatos[:20000]
+        candidatos = candidatos[
+            :20000
+        ]
 
-    guardar(CACHE_FILE, candidatos)
+    guardar(
+        CACHE_FILE,
+        candidatos,
+    )
 
     log(
         f"[fuente] base persistente: "
@@ -449,31 +648,43 @@ def _guardar_base(candidatos):
 
 def buscar():
     """
-    Obtiene candidatos para captación.
-
-    Estrategia:
-    1. Primero intenta lugares que ya tienen email en OSM.
-    2. Después amplía con consultas normales.
-    3. Fusiona todo con la base persistente de ESTE agente.
-    4. Si Overpass falla completamente, devuelve la base persistente
-       en lugar de romper la captación.
+    1. Busca primero candidatos que ya tienen email en OSM.
+    2. Amplía con consultas normales.
+    3. Fusiona con la base persistente de ESTE agente.
+    4. Si Overpass falla completamente, usa la base persistente.
     """
 
     encontrados = []
+
     consultas_ok = 0
     consultas_error = 0
 
     # ---------------------------------------------------------
-    # ETAPA 1: EMAIL-FIRST
+    # ETAPA 1
     # ---------------------------------------------------------
-    log("[fuente] etapa 1: búsqueda prioritaria con email")
 
-    for nombre, plantilla, grupo in CONSULTAS_EMAIL:
-        resultado = _consultar(nombre, plantilla, grupo)
+    log(
+        "[fuente] etapa 1: "
+        "búsqueda prioritaria con email"
+    )
+
+    for (
+        nombre,
+        plantilla,
+        grupo,
+    ) in CONSULTAS_EMAIL:
+
+        resultado = _consultar(
+            nombre,
+            plantilla,
+            grupo,
+        )
 
         if resultado:
             consultas_ok += 1
-            encontrados.extend(resultado)
+            encontrados.extend(
+                resultado
+            )
         else:
             consultas_error += 1
 
@@ -485,55 +696,77 @@ def buscar():
     )
 
     # ---------------------------------------------------------
-    # ETAPA 2: AMPLIACIÓN
+    # ETAPA 2
     # ---------------------------------------------------------
-    log("[fuente] etapa 2: ampliación de candidatos")
 
-    for nombre, plantilla, grupo in CONSULTAS_COMPLETAS:
-        resultado = _consultar(nombre, plantilla, grupo)
+    log(
+        "[fuente] etapa 2: "
+        "ampliación de candidatos"
+    )
+
+    for (
+        nombre,
+        plantilla,
+        grupo,
+    ) in CONSULTAS_COMPLETAS:
+
+        resultado = _consultar(
+            nombre,
+            plantilla,
+            grupo,
+        )
 
         if resultado:
             consultas_ok += 1
-            encontrados.extend(resultado)
+            encontrados.extend(
+                resultado
+            )
         else:
             consultas_error += 1
 
         time.sleep(0.4)
 
     # ---------------------------------------------------------
-    # FUSIÓN CON BASE PERSISTENTE
+    # BASE PERSISTENTE
     # ---------------------------------------------------------
+
     base_anterior = _cargar_base()
 
     if base_anterior:
         log(
-            f"[fuente] base anterior encontrada: "
+            f"[fuente] base anterior "
+            f"encontrada: "
             f"{len(base_anterior)} candidatos"
         )
 
     combinados = _fusionar(
-        base_anterior + encontrados
+        base_anterior
+        + encontrados
     )
 
-    # ---------------------------------------------------------
-    # GUARDADO
-    # ---------------------------------------------------------
     if combinados:
-        _guardar_base(combinados)
+        _guardar_base(
+            combinados
+        )
 
     # ---------------------------------------------------------
     # FALLBACK
     # ---------------------------------------------------------
+
     if not encontrados:
+
         if base_anterior:
             log(
-                "[fuente] Overpass no entregó candidatos nuevos. "
+                "[fuente] Overpass no "
+                "entregó candidatos nuevos. "
                 "Se utiliza la base persistente."
             )
+
             return base_anterior
 
         raise RuntimeError(
-            "Overpass no devolvió candidatos y todavía "
+            "Overpass no devolvió "
+            "candidatos y todavía "
             "no existe una base persistente."
         )
 
@@ -543,8 +776,10 @@ def buscar():
     )
 
     log(
-        f"[fuente] consultas OK={consultas_ok} "
-        f"errores={consultas_error}"
+        f"[fuente] consultas OK="
+        f"{consultas_ok} "
+        f"errores="
+        f"{consultas_error}"
     )
 
     return combinados
