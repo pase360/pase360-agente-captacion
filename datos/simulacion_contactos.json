@@ -1,1 +1,407 @@
-[]
+[
+  {
+    "name": "Fundación Mueve",
+    "tipo": "generador",
+    "email": "fundacion@mueve.org.ar"
+  },
+  {
+    "name": "SushiClub",
+    "tipo": "generador",
+    "email": "contacto@sushiclub.com.ar"
+  },
+  {
+    "name": "Alas Centro de Rehabilitación Integral Infantojuvenil",
+    "tipo": "comercio",
+    "email": "info@centroalas.com.ar"
+  },
+  {
+    "name": "ALB",
+    "tipo": "comercio",
+    "email": "ventas@albamoblamientos.com.ar"
+  },
+  {
+    "name": "Ames Motos",
+    "tipo": "comercio",
+    "email": "ventas@amesmotos.com.ar"
+  },
+  {
+    "name": "ATLARES Crowdfunding Bitcoin & Networking",
+    "tipo": "comercio",
+    "email": "info@atlares.com"
+  },
+  {
+    "name": "Avant",
+    "tipo": "comercio",
+    "email": "marketing@avantpeugeot.com.ar"
+  },
+  {
+    "name": "BAfarma - Farmacia Bosque Alvarez",
+    "tipo": "comercio",
+    "email": "contacto@bafarma.com"
+  },
+  {
+    "name": "Banco de Sangre – Instituto de Hematología y Hemoterapia  (UNC)",
+    "tipo": "comercio",
+    "email": "direccionmedica@ihh.unc.edu.ar"
+  },
+  {
+    "name": "Bondio",
+    "tipo": "comercio",
+    "email": "motosonline@bondio.com.ar"
+  },
+  {
+    "name": "Café Martínez",
+    "tipo": "comercio",
+    "email": "cordoba@cafemartinez.com.ar"
+  },
+  {
+    "name": "Capilla Santa Teresita",
+    "tipo": "comercio",
+    "email": "vicariasantateresita@gmail.com"
+  },
+  {
+    "name": "Casa Manrique",
+    "tipo": "comercio",
+    "email": "ecommerce@casamanrique.com.ar"
+  },
+  {
+    "name": "Catalina Calzados",
+    "tipo": "comercio",
+    "email": "catalinacalzados@outlook.com.ar"
+  },
+  {
+    "name": "Centro de Investigaciones y Estudios sobre Cultura y Sociedad (CIECS)",
+    "tipo": "comercio",
+    "email": "secretariaciecs@gmail.com"
+  },
+  {
+    "name": "Centro para la salud Integral de la Mujer",
+    "tipo": "comercio",
+    "email": "sacra@sacracordoba.com.ar"
+  },
+  {
+    "name": "Chevromaxs",
+    "tipo": "comercio",
+    "email": "chevromaxs@gmail.com"
+  },
+  {
+    "name": "Clinica Privada Gallia",
+    "tipo": "comercio",
+    "email": "info@centrogallia.com"
+  },
+  {
+    "name": "Colegio Gabriel Taborín",
+    "tipo": "comercio",
+    "email": "direcciongeneral@taborin.edu.ar"
+  },
+  {
+    "name": "Colegio Nacional de Monserrat",
+    "tipo": "comercio",
+    "email": "monserrat@cnm.unc.edu.ar"
+  },
+  {
+    "name": "Colegio Santa Teresita",
+    "tipo": "comercio",
+    "email": "monseadriana@live.com"
+  },
+  {
+    "name": "Córdoba digital",
+    "tipo": "comercio",
+    "email": "consultas@cordobadigital.net"
+  },
+  {
+    "name": "Delivery Paint",
+    "tipo": "comercio",
+    "email": "deliverypaint@gmail.com"
+  },
+  {
+    "name": "Deportes Iguazu",
+    "tipo": "comercio",
+    "email": "deportesiguazu@gmail.com"
+  },
+  {
+    "name": "DS Store Córdoba",
+    "tipo": "comercio",
+    "email": "info@dsstorecordoba.com"
+  },
+  {
+    "name": "El Espejo Libros",
+    "tipo": "comercio",
+    "email": "espejoventas@elespejolibros.com.ar"
+  },
+  {
+    "name": "Fabrica Pc",
+    "tipo": "comercio",
+    "email": "rvlevet@gmail.com"
+  },
+  {
+    "name": "Farmacia Pedernera",
+    "tipo": "comercio",
+    "email": "pedernerafarmacia@gmail.com"
+  },
+  {
+    "name": "Full technology",
+    "tipo": "comercio",
+    "email": "unpkg.com/web-vitals@3.5.2"
+  },
+  {
+    "name": "Gestor de Cordoba. Autos. Motos. Gonzalo 3512205097",
+    "tipo": "comercio",
+    "email": "santinogigena@gmail.com"
+  },
+  {
+    "name": "Global Vip Transfer S.A.",
+    "tipo": "comercio",
+    "email": "reservas@global-vip-transfer.com"
+  },
+  {
+    "name": "Hospital Veterinario Córdoba",
+    "tipo": "comercio",
+    "email": "hospitalveterinariocba@gmail.com"
+  },
+  {
+    "name": "Imprenta Arguello",
+    "tipo": "comercio",
+    "email": "laimprenta.arguello@gmail.com"
+  },
+  {
+    "name": "Incutex",
+    "tipo": "comercio",
+    "email": "info@incutex.com.ar"
+  },
+  {
+    "name": "InfoNegocios",
+    "tipo": "comercio",
+    "email": "correo@infonegocios.info"
+  },
+  {
+    "name": "ITV Chateau (Inspección Técnica Vehicular)",
+    "tipo": "comercio",
+    "email": "itv.cordoba@opuslatam.com"
+  },
+  {
+    "name": "La Hilda",
+    "tipo": "comercio",
+    "email": "formatjs/intl-segmenter@11.7.10"
+  },
+  {
+    "name": "La Tasca",
+    "tipo": "comercio",
+    "email": "www.google.com/maps/place/panader%c3%ada+la+tasca+suc.+1/@-31.4108941"
+  },
+  {
+    "name": "Las 2 Hermanas",
+    "tipo": "comercio",
+    "email": "librerialasdoshermanas@gmail.com"
+  },
+  {
+    "name": "Librería Blackpool",
+    "tipo": "comercio",
+    "email": "blackpool@arnet.com.ar"
+  },
+  {
+    "name": "Luminotecnia",
+    "tipo": "comercio",
+    "email": "info@luminotecnia.com.ar"
+  },
+  {
+    "name": "Maestre",
+    "tipo": "comercio",
+    "email": "info@maestreiluminacion.com.ar"
+  },
+  {
+    "name": "Manifesto",
+    "tipo": "comercio",
+    "email": "info@manifesto.com.ar"
+  },
+  {
+    "name": "Marozzi distribuidora",
+    "tipo": "comercio",
+    "email": "ventas@bateriasmarozzi.com.ar"
+  },
+  {
+    "name": "Megatone",
+    "tipo": "comercio",
+    "email": "atencionalcliente@megatone.net"
+  },
+  {
+    "name": "Merlino",
+    "tipo": "comercio",
+    "email": "vtex.render-server@8.181.0"
+  },
+  {
+    "name": "mini Super",
+    "tipo": "comercio",
+    "email": "minisuperas@gmail.com"
+  },
+  {
+    "name": "Motcor",
+    "tipo": "comercio",
+    "email": "motcor@motcor.com.ar"
+  },
+  {
+    "name": "Nunatak",
+    "tipo": "comercio",
+    "email": "info@nunatakmountain.com.ar"
+  },
+  {
+    "name": "Olmedo Odontología & Estética",
+    "tipo": "comercio",
+    "email": "odontologiayestetica.cba@gmail.com"
+  },
+  {
+    "name": "OlmedoOdontologia",
+    "tipo": "comercio",
+    "email": "consultorioolmedo@hotmail.com"
+  },
+  {
+    "name": "Ópticas Lauricella",
+    "tipo": "comercio",
+    "email": "opticas.lauricella@gmail.com"
+  },
+  {
+    "name": "Paseo La Toscana",
+    "tipo": "comercio",
+    "email": "administracion@paseolatoscana.com"
+  },
+  {
+    "name": "Poeta Soho",
+    "tipo": "comercio",
+    "email": "poetasoho@gmail.com"
+  },
+  {
+    "name": "Puente de Estrellas",
+    "tipo": "comercio",
+    "email": "puentedeestrellas.micael@gmail.com"
+  },
+  {
+    "name": "Quimica Halac",
+    "tipo": "comercio",
+    "email": "info@quimicahalac.com.ar"
+  },
+  {
+    "name": "Quinto Deva",
+    "tipo": "comercio",
+    "email": "productoraquintodeva@gmail.com"
+  },
+  {
+    "name": "Qumana",
+    "tipo": "comercio",
+    "email": "info@espacioqumana.com.ar"
+  },
+  {
+    "name": "Rapanui",
+    "tipo": "comercio",
+    "email": "contacto@rapanui.com.ar"
+  },
+  {
+    "name": "Ríe Simona",
+    "tipo": "comercio",
+    "email": "unpkg.com/web-vitals@3.5.2"
+  },
+  {
+    "name": "Roma Motos",
+    "tipo": "comercio",
+    "email": "info@romamotos.com.ar"
+  },
+  {
+    "name": "Service Impresoras",
+    "tipo": "comercio",
+    "email": "simpresoras@gmail.com"
+  },
+  {
+    "name": "Sex Cordoba Shop",
+    "tipo": "comercio",
+    "email": "info@sexcordobashop.com.ar"
+  },
+  {
+    "name": "Starbucks",
+    "tipo": "comercio",
+    "email": "info@starbucks.com.ar"
+  },
+  {
+    "name": "Stock In - Mayorista Multimarcas - Lexico, Oreiro Love y muchas más.",
+    "tipo": "comercio",
+    "email": "pedidos@mhtendencias.com.ar"
+  },
+  {
+    "name": "Szumik",
+    "tipo": "comercio",
+    "email": "info@szumik.com.ar"
+  },
+  {
+    "name": "Tagle",
+    "tipo": "comercio",
+    "email": "info@taglerenault.com.ar"
+  },
+  {
+    "name": "Tecnoplus Casa Informática",
+    "tipo": "comercio",
+    "email": "tecnoplus@live.com.ar"
+  },
+  {
+    "name": "Tienda Florencia",
+    "tipo": "comercio",
+    "email": "florenciagrowshop@gmail.com"
+  },
+  {
+    "name": "Tienda Lexico - Moda y Complementos - Carteras, Mochilas, Valijas y Accesorios",
+    "tipo": "comercio",
+    "email": "tiendalexico@mhtendencias.com.ar"
+  },
+  {
+    "name": "Torralba",
+    "tipo": "comercio",
+    "email": "info@torralba.com.ar"
+  },
+  {
+    "name": "Unifit",
+    "tipo": "comercio",
+    "email": "hola@unifit.ar"
+  },
+  {
+    "name": "Venex Computacion",
+    "tipo": "comercio",
+    "email": "consultas@venexcomputacion.com"
+  },
+  {
+    "name": "Virmanic SA",
+    "tipo": "comercio",
+    "email": "jvalles@virmanicsa.com"
+  },
+  {
+    "name": "Xipa",
+    "tipo": "comercio",
+    "email": "info.xipa@gmail.com"
+  },
+  {
+    "name": "Marosi Bikes",
+    "tipo": "comercio",
+    "email": "marosibikes@gmail.com"
+  },
+  {
+    "name": "RM Insumos",
+    "tipo": "comercio",
+    "email": "ventas@rminsumos.com"
+  },
+  {
+    "name": "Sony",
+    "tipo": "comercio",
+    "email": "pspodcast@sony.com"
+  },
+  {
+    "name": "Centro Motor sa TOYOTA",
+    "tipo": "comercio",
+    "email": "info@centromotorsa.com.ar"
+  },
+  {
+    "name": "Dinosaurio Mall",
+    "tipo": "comercio",
+    "email": "info@grupodinosaurio.com"
+  },
+  {
+    "name": "Systel S.A Balanzas y Basculas",
+    "tipo": "comercio",
+    "email": "contacto@systel-global.com"
+  }
+]

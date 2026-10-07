@@ -64,7 +64,7 @@
     "name:jardin de infantes \"al agua pato\"": "categoria_excluida:jardin de infantes,jardín de infantes",
     "name:escuela mariano fragueiro": "categoria_excluida:escuela",
     "name:escuela primaria francisco vidal": "categoria_excluida:escuela",
-    "email:primariaformosa@hotmail.com.ar": "categoria_excluida:escuela",
+    "email:primariaformosa@hotmail.com.ar": "institución educativa",
     "name:san ramon nonato": "categoria_excluida:parroquia,escuela",
     "name:escuela doctor ernesto molinari romero": "categoria_excluida:municipal,escuela",
     "name:escuela 9 de julio": "categoria_excluida:escuela",
@@ -118,7 +118,7 @@
     "name:escuela mateo jose luque": "categoria_excluida:escuela",
     "name:escuela remedios de escalada de san martin": "categoria_excluida:escuela",
     "name:parroquia nuestra senora de la salette": "categoria_excluida:parroquia",
-    "email:edudis@eco.unc.edu.ar": "categoria_excluida:facultad",
+    "email:edudis@eco.unc.edu.ar": "institución educativa",
     "name:escuela de deporte marcelo bonetto": "institución educativa",
     "name:escuela vicente fidel lopez": "categoria_excluida:escuela",
     "name:jardin de infantes estados unidos de norte america": "categoria_excluida:jardin de infantes,jardín de infantes",
@@ -175,7 +175,14 @@
     "identidad:escuela de natacion swim||": "institución educativa",
     "identidad:caps yofre sur||padre luis monti": "institución educativa",
     "identidad:caps villa boedo||": "institución educativa",
-    "identidad:caps panamericano|+54 9 0351 156310155|soto 919": "institución educativa"
+    "identidad:caps panamericano|+54 9 0351 156310155|soto 919": "institución educativa",
+    "email:info@bmayor.unc.edu.ar": "institución educativa",
+    "email:rjcarcano@hotmail.com": "institución educativa",
+    "email:nogalhistorico@gmail.com": "institución educativa",
+    "email:ee0551659@me.cba.gov.ar": "institución educativa",
+    "email:ee0550709@me.cba.gov.ar.com.ar": "institución educativa",
+    "identidad:escuela republica de libano|+54 351 481 8533|hector alvarez igarzabal 1248, cordoba": "institución educativa",
+    "identidad:escuela vicente fidel lopez||juan c. tissera 1551, cordoba": "institución educativa"
   },
   "preguntas": {},
   "seguimientos": {}

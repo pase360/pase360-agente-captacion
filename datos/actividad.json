@@ -103,5 +103,12 @@
     "encontrados": 2723,
     "listos": 0,
     "nuevos": 0
+  },
+  {
+    "t": "2026-10-07T11:53:36-03:00",
+    "tipo": "captacion",
+    "encontrados": 1732,
+    "listos": 81,
+    "nuevos": 988
   }
 ]

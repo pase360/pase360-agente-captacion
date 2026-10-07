@@ -1,43 +1,514 @@
 {
   "por_tipo": {
-    "comercio": 0,
-    "generador": 0,
-    "dudoso": 0,
-    "descartado": 0,
+    "comercio": 927,
+    "generador": 9,
+    "dudoso": 52,
+    "descartado": 10,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 0,
-    "sin_email": 0,
-    "requiere_decision": 0,
-    "descartado": 0
+    "listo_para_contactar": 81,
+    "sin_email": 855,
+    "requiere_decision": 52,
+    "descartado": 10
   },
   "sin_email_por_tipo": {
-    "comercio": 0,
-    "generador": 0,
+    "comercio": 848,
+    "generador": 7,
     "otro": 0
   },
-  "descartados_por_motivo": {},
-  "generadores_muestra": [],
-  "comercios_muestra": [],
-  "sin_email_muestra": [],
-  "dudosos_muestra": [],
-  "duplicados": 0,
+  "descartados_por_motivo": {
+    "institución educativa": 10
+  },
+  "generadores_muestra": [
+    {
+      "name": "SushiClub",
+      "email": "contacto@sushiclub.com.ar",
+      "motivo": "club/institución deportiva con comunidad de miembros"
+    },
+    {
+      "name": "Fundación Mueve",
+      "email": "fundacion@mueve.org.ar",
+      "motivo": "organización con afiliados, asociados o beneficiarios"
+    },
+    {
+      "name": "Cooperativa de Servicios",
+      "email": "",
+      "motivo": "organización con afiliados, asociados o beneficiarios"
+    },
+    {
+      "name": "Centro Vecinal Marcelo T. De alvear",
+      "email": "",
+      "motivo": "organización social con comunidad de miembros"
+    },
+    {
+      "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
+      "email": "",
+      "motivo": "organización con afiliados, asociados o beneficiarios"
+    },
+    {
+      "name": "SUTEP Sindicato Espect. públicos",
+      "email": "",
+      "motivo": "organización con afiliados, asociados o beneficiarios"
+    },
+    {
+      "name": "Fundación Despegar",
+      "email": "",
+      "motivo": "organización con afiliados, asociados o beneficiarios"
+    },
+    {
+      "name": "Semacor - Mutual de SubOficiales del Ejercito",
+      "email": "",
+      "motivo": "organización con afiliados, asociados o beneficiarios"
+    },
+    {
+      "name": "Jockey Club",
+      "email": "",
+      "motivo": "club/institución deportiva con comunidad de miembros"
+    }
+  ],
+  "comercios_muestra": [
+    {
+      "name": "mini Super",
+      "email": "minisuperas@gmail.com",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Café Martínez",
+      "email": "cordoba@cafemartinez.com.ar",
+      "motivo": "OSM: servicio/comercio"
+    },
+    {
+      "name": "Global Vip Transfer S.A.",
+      "email": "reservas@global-vip-transfer.com",
+      "motivo": "actividad comercial identificable"
+    },
+    {
+      "name": "Starbucks",
+      "email": "info@starbucks.com.ar",
+      "motivo": "OSM: servicio/comercio"
+    },
+    {
+      "name": "Quimica Halac",
+      "email": "info@quimicahalac.com.ar",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Los Monos",
+      "email": "",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Marozzi distribuidora",
+      "email": "ventas@bateriasmarozzi.com.ar",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Capilla Santa Teresita",
+      "email": "vicariasantateresita@gmail.com",
+      "motivo": "actividad comercial identificable"
+    },
+    {
+      "name": "Fabrica Pc",
+      "email": "rvlevet@gmail.com",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Gestor de Cordoba. Autos. Motos. Gonzalo 3512205097",
+      "email": "santinogigena@gmail.com",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "ATLARES Crowdfunding Bitcoin & Networking",
+      "email": "info@atlares.com",
+      "motivo": "OSM: oficina comercial/profesional"
+    },
+    {
+      "name": "Deportes Iguazu",
+      "email": "deportesiguazu@gmail.com",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Poeta Soho",
+      "email": "poetasoho@gmail.com",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Puente de Estrellas",
+      "email": "puentedeestrellas.micael@gmail.com",
+      "motivo": "actividad comercial identificable"
+    },
+    {
+      "name": "Catalina Calzados",
+      "email": "catalinacalzados@outlook.com.ar",
+      "motivo": "OSM: etiqueta craft"
+    },
+    {
+      "name": "Chevromaxs",
+      "email": "chevromaxs@gmail.com",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Farmacia Pedernera",
+      "email": "pedernerafarmacia@gmail.com",
+      "motivo": "OSM: servicio/comercio"
+    },
+    {
+      "name": "Virmanic SA",
+      "email": "jvalles@virmanicsa.com",
+      "motivo": "OSM: oficina comercial/profesional"
+    },
+    {
+      "name": "Librería Blackpool",
+      "email": "blackpool@arnet.com.ar",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Venex Computacion",
+      "email": "consultas@venexcomputacion.com",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Paseo La Toscana",
+      "email": "administracion@paseolatoscana.com",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Las 2 Hermanas",
+      "email": "librerialasdoshermanas@gmail.com",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "InfoNegocios",
+      "email": "correo@infonegocios.info",
+      "motivo": "actividad comercial identificable"
+    },
+    {
+      "name": "Imprenta Arguello",
+      "email": "laimprenta.arguello@gmail.com",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Olmedo Odontología & Estética",
+      "email": "odontologiayestetica.cba@gmail.com",
+      "motivo": "OSM: servicio/comercio"
+    },
+    {
+      "name": "Centro para la salud Integral de la Mujer",
+      "email": "sacra@sacracordoba.com.ar",
+      "motivo": "OSM: servicio/comercio"
+    },
+    {
+      "name": "Roma Motos",
+      "email": "info@romamotos.com.ar",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Szumik",
+      "email": "info@szumik.com.ar",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Maestre",
+      "email": "info@maestreiluminacion.com.ar",
+      "motivo": "OSM: etiqueta shop"
+    },
+    {
+      "name": "Torralba",
+      "email": "info@torralba.com.ar",
+      "motivo": "OSM: etiqueta shop"
+    }
+  ],
+  "sin_email_muestra": [
+    {
+      "name": "Los Monos",
+      "tipo": "comercio",
+      "website": "www.cristiancabanillas"
+    },
+    {
+      "name": "Vea",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Hipermercado La Anonima",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Del Sol",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Las mejores del mundo",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Equus",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Electronia",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Disco",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Del Pilar",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Pafua",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Disco",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Buenos Días",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Todo Suspensión",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "El Sotano",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "El Sotano",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Supermercado La Anonima Poeta Lugones",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Supermercado chino",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Black sheep",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Renault Minuto",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Cordiez",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Dinosaurio",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Lave-Rap",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Don Paco",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Embragues Córdoba",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Piaccere",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Ones",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Trezzeri",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Los Kane",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Alejandra",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Lucho",
+      "tipo": "comercio",
+      "website": ""
+    }
+  ],
+  "dudosos_muestra": [
+    {
+      "name": "Consulado de Francia",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Instituto Privado Deán Funes",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Parroquia Nuestra Señora del Carmen",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Cremolatti",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "RentAuto Atgentina",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Alquiler Auto Aero-Cordoba",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Academia Arguello",
+      "motivo": "organización sin evidencia suficiente"
+    },
+    {
+      "name": "IPET N° 249 Nicolás Copérnico",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Colegio Fasta Cura Brochero",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "ANSES",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Oficina de Licencias de Conducir",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Ministerio de Ciencia y Tecnología de la Provincia de Córdoba",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Registro Civil",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Dirección de Policía Fiscal",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Global Visum",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "CENTRO EDUCATIVO OBISPO ESQUIU- 250 alumnos",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Consulado de Bolivia",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "CNRT",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Consulado General de Perú",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Centro de Atención Integral al Ciudadano",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Instituto de Educación Superior \"Doctor Domingo Cabred\"",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Ex-Legislatura de la Provincia de Córdoba",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "B Com 141",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "El Doce TV",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Instituto Superior de Formacón Docenete Reneé Trettel de Fabián",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "seccionweb",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Consulado General de España",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "Consulado de Chile",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "KIRI",
+      "motivo": "sin evidencia suficiente para clasificar"
+    },
+    {
+      "name": "CIRSE",
+      "motivo": "sin evidencia suficiente para clasificar"
+    }
+  ],
+  "duplicados": 2,
   "ya_contactados": 0,
-  "sin_nombre": 1000,
-  "listos_detectados": 0,
-  "listos_seleccionados": 0,
-  "listos_comercio": 0,
-  "listos_generador": 0,
-  "clasificados": 0,
+  "sin_nombre": 0,
+  "listos_detectados": 81,
+  "listos_seleccionados": 81,
+  "listos_comercio": 79,
+  "listos_generador": 2,
+  "clasificados": 998,
   "cuadre": {
-    "clasificacion_total": 0,
-    "estado_total": 0,
+    "clasificacion_total": 998,
+    "estado_total": 998,
     "cuadra": true
   },
-  "encontrados": 2723,
+  "encontrados": 1732,
   "procesados": 1000,
-  "nuevos": 0,
-  "descartados": 0,
-  "excluidos": 1000
+  "nuevos": 988,
+  "descartados": 10,
+  "excluidos": 2
 }
