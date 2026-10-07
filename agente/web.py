@@ -15,9 +15,10 @@ EMAIL_RE = re.compile(
     r"(?:\.[A-Za-z0-9-]+)+\b"
 )
 
-# ------------------------------------------------------------
-# DOMINIOS QUE NO SON EMAILS DE NEGOCIOS
-# ------------------------------------------------------------
+
+# ============================================================
+# DOMINIOS QUE NO SON EMAILS ÚTILES
+# ============================================================
 
 BAD_EMAIL_DOMAINS = {
     "example.com",
@@ -64,8 +65,11 @@ SOCIAL_DOMAINS = {
     "bing.com",
 }
 
-# Directorios públicos que pueden ayudar a localizar
-# comercios y organizaciones.
+
+# ============================================================
+# DIRECTORIOS PÚBLICOS
+# ============================================================
+
 DIRECTORIOS = (
     "guiacordoba.com.ar",
     "direccionario.com",
@@ -74,11 +78,7 @@ DIRECTORIOS = (
 
 BING_URL = "https://www.bing.com/search"
 
-# Aumentamos el margen de búsqueda porque ahora no buscamos
-# solamente el email institucional: también buscamos emails
-# públicos de personas vinculadas a la entidad.
 MAX_BUSQUEDAS_PUBLICAS = 1000
-
 MAX_RESULTADOS_BING = 10
 MAX_PAGINAS_POR_RESULTADO = 4
 
@@ -88,14 +88,17 @@ PAUSA_ENTRE_PAGINAS = 0.25
 _busquedas_realizadas = 0
 
 
-# ------------------------------------------------------------
+# ============================================================
 # EMAIL
-# ------------------------------------------------------------
+# ============================================================
 
 def _email_real(value):
     value = normalizar_email(value)
 
     if not value:
+        return ""
+
+    if "@" not in value:
         return ""
 
     local, domain = value.rsplit("@", 1)
@@ -120,7 +123,6 @@ def _email_real(value):
     ):
         return ""
 
-    # No aceptar direcciones claramente técnicas.
     if local.lower() in {
         "noreply",
         "no-reply",
@@ -141,21 +143,25 @@ def _emails(texto):
     if not texto:
         return encontrados
 
-    for valor in EMAIL_RE.findall(texto):
+    for valor in EMAIL_RE.findall(
+        texto
+    ):
         email = _email_real(valor)
 
         if (
             email
             and email not in encontrados
         ):
-            encontrados.append(email)
+            encontrados.append(
+                email
+            )
 
     return encontrados
 
 
-# ------------------------------------------------------------
+# ============================================================
 # URL / DOMINIO
-# ------------------------------------------------------------
+# ============================================================
 
 def _dominio(url):
     try:
@@ -194,9 +200,9 @@ def _es_social(url):
     )
 
 
-# ------------------------------------------------------------
-# IDENTIDAD DEL CANDIDATO
-# ------------------------------------------------------------
+# ============================================================
+# IDENTIDAD
+# ============================================================
 
 GENERICOS = {
     "club",
@@ -229,7 +235,9 @@ GENERICOS = {
 
 
 def _tokens(nombre):
-    texto = normalizar_texto(nombre)
+    texto = normalizar_texto(
+        nombre
+    )
 
     return [
         token
@@ -300,20 +308,23 @@ def _identidad_fuerte(c, texto):
     if not tokens:
         return False
 
+    texto_n = normalizar_texto(
+        texto
+    )
+
     coincidencias = sum(
-        token in normalizar_texto(texto)
+        token in texto_n
         for token in tokens
     )
 
     if len(tokens) == 1:
-        return coincidencias >= 1 and score >= 0.65
+        return (
+            coincidencias >= 1
+            and score >= 0.65
+        )
 
     nombre = normalizar_texto(
         c.get("name")
-    )
-
-    texto_n = normalizar_texto(
-        texto
     )
 
     if nombre in texto_n:
@@ -325,9 +336,9 @@ def _identidad_fuerte(c, texto):
     )
 
 
-# ------------------------------------------------------------
+# ============================================================
 # HTTP
-# ------------------------------------------------------------
+# ============================================================
 
 def _get(url):
     try:
@@ -354,9 +365,9 @@ def _get(url):
         return None
 
 
-# ------------------------------------------------------------
-# EMAIL DESDE UNA PÁGINA
-# ------------------------------------------------------------
+# ============================================================
+# EMAIL DESDE PÁGINA
+# ============================================================
 
 def _emails_de_pagina(
     c,
@@ -372,12 +383,20 @@ def _emails_de_pagina(
 
     encontrados = []
 
-    # 1. HTML completo.
+    # --------------------------------------------------------
+    # HTML COMPLETO
+    # --------------------------------------------------------
+
     for email in _emails(html):
         if email not in encontrados:
-            encontrados.append(email)
+            encontrados.append(
+                email
+            )
 
-    # 2. Texto visible.
+    # --------------------------------------------------------
+    # TEXTO VISIBLE + MAILTO
+    # --------------------------------------------------------
+
     try:
         soup = BeautifulSoup(
             html,
@@ -398,11 +417,14 @@ def _emails_de_pagina(
             strip=True,
         )
 
-        for email in _emails(texto):
+        for email in _emails(
+            texto
+        ):
             if email not in encontrados:
-                encontrados.append(email)
+                encontrados.append(
+                    email
+                )
 
-        # 3. mailto:
         for enlace in soup.find_all(
             "a",
             href=True,
@@ -411,24 +433,29 @@ def _emails_de_pagina(
                 enlace.get("href") or ""
             ).strip()
 
-            if href.lower().startswith(
+            if not href.lower().startswith(
                 "mailto:"
             ):
-                valor = unquote(
-                    href[7:]
-                ).split("?", 1)[0]
+                continue
 
-                email = _email_real(
-                    valor
-                )
+            valor = unquote(
+                href[7:]
+            ).split(
+                "?",
+                1,
+            )[0]
 
-                if (
+            email = _email_real(
+                valor
+            )
+
+            if (
+                email
+                and email not in encontrados
+            ):
+                encontrados.append(
                     email
-                    and email not in encontrados
-                ):
-                    encontrados.append(
-                        email
-                    )
+                )
 
     except Exception:
         pass
@@ -436,9 +463,9 @@ def _emails_de_pagina(
     return encontrados
 
 
-# ------------------------------------------------------------
+# ============================================================
 # ENLACES DE CONTACTO
-# ------------------------------------------------------------
+# ============================================================
 
 CONTACT_WORDS = (
     "contact",
@@ -459,9 +486,7 @@ CONTACT_WORDS = (
 )
 
 
-def _enlaces_contacto(
-    response,
-):
+def _enlaces_contacto(response):
     if not response:
         return []
 
@@ -520,9 +545,9 @@ def _enlaces_contacto(
     return resultado
 
 
-# ------------------------------------------------------------
+# ============================================================
 # ANALIZAR WEB
-# ------------------------------------------------------------
+# ============================================================
 
 def _analizar_web(
     c,
@@ -532,7 +557,10 @@ def _analizar_web(
         return []
 
     if not url.startswith(
-        ("http://", "https://")
+        (
+            "http://",
+            "https://",
+        )
     ):
         url = (
             "https://"
@@ -580,8 +608,10 @@ def _analizar_web(
             )
         )
 
-    # Si no apareció en portada,
-    # seguimos por páginas de contacto.
+    # --------------------------------------------------------
+    # PÁGINAS DE CONTACTO
+    # --------------------------------------------------------
+
     if not resultados:
         enlaces = _enlaces_contacto(
             response
@@ -644,9 +674,9 @@ def _analizar_web(
     return resultados
 
 
-# ------------------------------------------------------------
-# BÚSQUEDA PÚBLICA
-# ------------------------------------------------------------
+# ============================================================
+# CONSULTAS PÚBLICAS
+# ============================================================
 
 def _consultas(c):
     nombre = str(
@@ -664,15 +694,19 @@ def _consultas(c):
     consultas = []
 
     # --------------------------------------------------------
-    # 1. BÚSQUEDA GENERAL
+    # NEGOCIO / ORGANIZACIÓN
     # --------------------------------------------------------
 
     consultas.append(
-        f'"{nombre}" Córdoba email contacto'
+        f'"{nombre}" Córdoba email'
+    )
+
+    consultas.append(
+        f'"{nombre}" Córdoba contacto email'
     )
 
     # --------------------------------------------------------
-    # 2. IDENTIDAD POR DIRECCIÓN
+    # DIRECCIÓN
     # --------------------------------------------------------
 
     if direccion:
@@ -681,7 +715,7 @@ def _consultas(c):
         )
 
     # --------------------------------------------------------
-    # 3. IDENTIDAD POR TELÉFONO
+    # TELÉFONO
     # --------------------------------------------------------
 
     if telefono:
@@ -690,7 +724,7 @@ def _consultas(c):
         )
 
     # --------------------------------------------------------
-    # 4. DIRECTORIOS PÚBLICOS
+    # DIRECTORIOS
     # --------------------------------------------------------
 
     for dominio in DIRECTORIOS:
@@ -700,22 +734,25 @@ def _consultas(c):
         )
 
     # --------------------------------------------------------
-    # 5. PERSONA RESPONSABLE DEL NEGOCIO
+    # PERSONAS VINCULADAS
     #
-    # No inventamos ni inferimos un email.
-    # Buscamos solamente información pública
-    # donde aparezca una persona asociada
-    # explícitamente al negocio/organización.
+    # Buscamos solamente asociaciones públicas.
+    # Nunca generamos una dirección por nuestra cuenta.
     # --------------------------------------------------------
 
     roles = (
         "dueño",
+        "dueña",
         "propietario",
+        "propietaria",
         "responsable",
         "encargado",
+        "encargada",
         "titular",
         "director",
+        "directora",
         "administrador",
+        "administradora",
         "contacto",
     )
 
@@ -725,8 +762,7 @@ def _consultas(c):
         )
 
     # --------------------------------------------------------
-    # 6. COMBINACIONES CON TELÉFONO/DIRECCIÓN
-    # PARA ENCONTRAR A LA PERSONA ASOCIADA
+    # TELÉFONO + PERSONA
     # --------------------------------------------------------
 
     if telefono:
@@ -740,6 +776,10 @@ def _consultas(c):
             consultas.append(
                 f'"{telefono}" "{rol}" email'
             )
+
+    # --------------------------------------------------------
+    # DIRECCIÓN + PERSONA
+    # --------------------------------------------------------
 
     if direccion:
         for rol in (
@@ -756,6 +796,10 @@ def _consultas(c):
     return consultas
 
 
+# ============================================================
+# BÚSQUEDA BING
+# ============================================================
+
 def _buscar_bing(c):
     global _busquedas_realizadas
 
@@ -770,36 +814,11 @@ def _buscar_bing(c):
 
     consultas = _consultas(c)
 
-    for indice, consulta in enumerate(
-        consultas
-    ):
+    for consulta in consultas:
+
         if (
             _busquedas_realizadas
             >= MAX_BUSQUEDAS_PUBLICAS
-        ):
-            break
-
-        # IMPORTANTE:
-        # No frenamos simplemente porque Bing
-        # haya devuelto páginas.
-        #
-        # Frenamos solamente cuando alguna de
-        # las búsquedas anteriores encontró un
-        # email público.
-        #
-        # Así podemos seguir buscando:
-        # - email del negocio
-        # - email del responsable
-        # - email del propietario
-        # - email asociado públicamente a la entidad
-        #
-        # sin inventar direcciones.
-        if (
-            indice > 0
-            and any(
-                r.get("emails")
-                for r in resultados
-            )
         ):
             break
 
@@ -840,6 +859,7 @@ def _buscar_bing(c):
             )
 
             for item in items:
+
                 a = item.select_one(
                     "h2 a"
                 )
@@ -920,9 +940,15 @@ def _buscar_bing(c):
                 x.get("emails")
             ),
             _es_directorio(
-                x.get("url", "")
+                x.get(
+                    "url",
+                    "",
+                )
             ),
-            x.get("score", 0),
+            x.get(
+                "score",
+                0,
+            ),
         ),
         reverse=True,
     )
@@ -930,9 +956,9 @@ def _buscar_bing(c):
     return resultados
 
 
-# ------------------------------------------------------------
-# VALIDACIÓN DEL RESULTADO
-# ------------------------------------------------------------
+# ============================================================
+# VALIDACIÓN
+# ============================================================
 
 def _resultado_valido(
     c,
@@ -980,20 +1006,21 @@ def _resultado_valido(
     return score >= 0.55
 
 
-# ------------------------------------------------------------
+# ============================================================
 # DESCUBRIMIENTO
-# ------------------------------------------------------------
+# ============================================================
 
 def _descubrir(c):
     resultados = _buscar_bing(c)
 
     # --------------------------------------------------------
-    # 1. EMAIL DIRECTAMENTE EN EL RESULTADO
+    # EMAIL YA VISIBLE EN LOS RESULTADOS
     # --------------------------------------------------------
 
     candidatos_email = []
 
     for resultado in resultados:
+
         if not _resultado_valido(
             c,
             resultado,
@@ -1022,7 +1049,9 @@ def _descubrir(c):
         candidatos_email.sort(
             key=lambda x: (
                 x[2],
-                _es_directorio(x[1]),
+                _es_directorio(
+                    x[1]
+                ),
             ),
             reverse=True,
         )
@@ -1035,7 +1064,9 @@ def _descubrir(c):
         c["email_source"] = (
             "busqueda_publica"
         )
-        c["email_source_url"] = origen
+        c["email_source_url"] = (
+            origen
+        )
         c["email_confidence"] = round(
             max(
                 score,
@@ -1047,7 +1078,7 @@ def _descubrir(c):
         return c
 
     # --------------------------------------------------------
-    # 2. VISITAR LOS RESULTADOS
+    # VISITAR RESULTADOS RELEVANTES
     # --------------------------------------------------------
 
     mejores = [
@@ -1062,10 +1093,16 @@ def _descubrir(c):
     mejores.sort(
         key=lambda r: (
             not _es_social(
-                r.get("url", "")
+                r.get(
+                    "url",
+                    "",
+                )
             ),
             _es_directorio(
-                r.get("url", "")
+                r.get(
+                    "url",
+                    "",
+                )
             ),
             r.get(
                 "score",
@@ -1080,6 +1117,7 @@ def _descubrir(c):
     for resultado in mejores[
         :MAX_RESULTADOS_BING
     ]:
+
         url = resultado.get(
             "url",
             "",
@@ -1122,6 +1160,7 @@ def _descubrir(c):
         )
 
         c["email"] = email
+
         c["email_source"] = (
             "directorio_publico"
             if _es_directorio(
@@ -1129,7 +1168,11 @@ def _descubrir(c):
             )
             else "web_publica"
         )
-        c["email_source_url"] = origen
+
+        c["email_source_url"] = (
+            origen
+        )
+
         c["email_confidence"] = round(
             max(
                 identidad,
@@ -1143,13 +1186,14 @@ def _descubrir(c):
     return c
 
 
-# ------------------------------------------------------------
+# ============================================================
 # ENRIQUECIMIENTO PRINCIPAL
-# ------------------------------------------------------------
+# ============================================================
 
 def completar(c):
+
     # --------------------------------------------------------
-    # 1. EMAIL YA PRESENTE EN OSM
+    # 1. EMAIL YA PUBLICADO EN OSM
     # --------------------------------------------------------
 
     campos = (
@@ -1160,6 +1204,7 @@ def completar(c):
     )
 
     for campo in campos:
+
         email = _email_real(
             c.get(campo)
         )
@@ -1176,7 +1221,7 @@ def completar(c):
     c["email"] = ""
 
     # --------------------------------------------------------
-    # 2. WEBSITE CONOCIDO
+    # 2. SITIO WEB DEL NEGOCIO / ORGANIZACIÓN
     # --------------------------------------------------------
 
     website = str(
@@ -1184,8 +1229,12 @@ def completar(c):
     ).strip()
 
     if website:
+
         if not website.startswith(
-            ("http://", "https://")
+            (
+                "http://",
+                "https://",
+            )
         ):
             website = (
                 "https://"
@@ -1198,6 +1247,7 @@ def completar(c):
         )
 
         if encontrados:
+
             encontrados.sort(
                 key=lambda x: (
                     x[2],
@@ -1213,12 +1263,15 @@ def completar(c):
             )
 
             c["email"] = email
+
             c["email_source"] = (
                 "web_publica"
             )
+
             c["email_source_url"] = (
                 origen
             )
+
             c["email_confidence"] = round(
                 max(
                     identidad,
@@ -1230,7 +1283,7 @@ def completar(c):
             return c
 
     # --------------------------------------------------------
-    # 3. BÚSQUEDA PÚBLICA MULTIFUENTE
+    # 3. BÚSQUEDA PÚBLICA PROFUNDA
     # --------------------------------------------------------
 
     return _descubrir(c)
