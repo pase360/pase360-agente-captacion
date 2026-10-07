@@ -1,30 +1,50 @@
 {
   "por_tipo": {
-    "comercio": 915,
-    "generador": 8,
-    "dudoso": 65,
-    "descartado": 10,
+    "comercio": 2530,
+    "generador": 113,
+    "dudoso": 234,
+    "descartado": 19,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 73,
-    "no_contactable_publicamente": 850,
-    "requiere_decision": 65,
-    "descartado": 10
+    "listo_para_contactar": 100,
+    "no_contactable_publicamente": 175,
+    "requiere_decision": 234,
+    "descartado": 19
   },
   "sin_email_por_tipo": {
-    "comercio": 843,
-    "generador": 7,
+    "comercio": 67,
+    "generador": 108,
     "otro": 0
   },
   "descartados_por_motivo": {
-    "institución educativa": 10
+    "institución educativa": 19
   },
   "generadores_muestra": [
+    {
+      "name": "CBA X Escalada",
+      "email": "programa.cbax@gmail.com",
+      "motivo": "organización con afiliados, asociados o beneficiarios"
+    },
+    {
+      "name": "Club Universitario de Córdoba",
+      "email": "administracion@clubuniversitariocba.com",
+      "motivo": "club/institución deportiva con comunidad de miembros"
+    },
     {
       "name": "Fundación Mueve",
       "email": "fundacion@mueve.org.ar",
       "motivo": "organización con afiliados, asociados o beneficiarios"
+    },
+    {
+      "name": "Club Milanesa",
+      "email": "info@elclubdelamilanesa.com",
+      "motivo": "club/institución deportiva con comunidad de miembros"
+    },
+    {
+      "name": "Asociación Cordobesa de Aikido",
+      "email": "cdn.jsdelivr.net/npm/photoswipe@5.4.3",
+      "motivo": "OSM: institución deportiva con actividad deportiva"
     },
     {
       "name": "Fundación Despegar",
@@ -37,29 +57,119 @@
       "motivo": "organización con afiliados, asociados o beneficiarios"
     },
     {
-      "name": "SUTEP Sindicato Espect. públicos",
+      "name": "Arabian",
       "email": "",
-      "motivo": "organización con afiliados, asociados o beneficiarios"
+      "motivo": "OSM: institución deportiva con actividad deportiva"
     },
     {
-      "name": "Centro Vecinal Marcelo T. De alvear",
+      "name": "Córdoba Paddle",
       "email": "",
-      "motivo": "organización social con comunidad de miembros"
+      "motivo": "OSM: institución deportiva con actividad deportiva"
     },
     {
-      "name": "Cooperativa de Servicios",
+      "name": "Espacio O2",
       "email": "",
-      "motivo": "organización con afiliados, asociados o beneficiarios"
+      "motivo": "OSM: institución deportiva con actividad deportiva"
     },
     {
-      "name": "Jockey Club",
+      "name": "Guasa Mila Club",
       "email": "",
       "motivo": "club/institución deportiva con comunidad de miembros"
     },
     {
-      "name": "Semacor - Mutual de SubOficiales del Ejercito",
+      "name": "Hindu Club",
+      "email": "",
+      "motivo": "club/institución deportiva con comunidad de miembros"
+    },
+    {
+      "name": "La Raquette",
+      "email": "",
+      "motivo": "OSM: institución deportiva con actividad deportiva"
+    },
+    {
+      "name": "Lomo Club",
+      "email": "",
+      "motivo": "club/institución deportiva con comunidad de miembros"
+    },
+    {
+      "name": "Sanatorio Sindical Suoem",
       "email": "",
       "motivo": "organización con afiliados, asociados o beneficiarios"
+    },
+    {
+      "name": "UPAS 8 - Barrio La Floresta",
+      "email": "",
+      "motivo": "organización social con comunidad de miembros"
+    },
+    {
+      "name": "Centro de Salud 71 - Cooperativa El Arco",
+      "email": "",
+      "motivo": "organización con afiliados, asociados o beneficiarios"
+    },
+    {
+      "name": "Club de Boxeadores",
+      "email": "",
+      "motivo": "club/institución deportiva con comunidad de miembros"
+    },
+    {
+      "name": "Arabian Paddle Club",
+      "email": "",
+      "motivo": "club/institución deportiva con comunidad de miembros"
+    },
+    {
+      "name": "centro vecinal Parque República",
+      "email": "",
+      "motivo": "organización social con comunidad de miembros"
+    },
+    {
+      "name": "Club Atlético General Paz -Junior´s",
+      "email": "",
+      "motivo": "club/institución deportiva con comunidad de miembros"
+    },
+    {
+      "name": "Club Atlético Huracán",
+      "email": "",
+      "motivo": "club/institución deportiva con comunidad de miembros"
+    },
+    {
+      "name": "Club Atlético Racing de Córdoba",
+      "email": "",
+      "motivo": "club/institución deportiva con comunidad de miembros"
+    },
+    {
+      "name": "Club Atlético Villa Azalais",
+      "email": "",
+      "motivo": "club/institución deportiva con comunidad de miembros"
+    },
+    {
+      "name": "Club Atlético Yapeyú",
+      "email": "",
+      "motivo": "club/institución deportiva con comunidad de miembros"
+    },
+    {
+      "name": "Club Barrio Parque",
+      "email": "",
+      "motivo": "club/institución deportiva con comunidad de miembros"
+    },
+    {
+      "name": "Club Colegio de Ingenieros Civiles",
+      "email": "",
+      "motivo": "colegio profesional"
+    },
+    {
+      "name": "Club Comunicaciones",
+      "email": "",
+      "motivo": "club/institución deportiva con comunidad de miembros"
+    },
+    {
+      "name": "Club de Amigos Gym",
+      "email": "",
+      "motivo": "club/institución deportiva con comunidad de miembros"
+    },
+    {
+      "name": "Club House Las Delicias",
+      "email": "",
+      "motivo": "club/institución deportiva con comunidad de miembros"
     }
   ],
   "comercios_muestra": [
@@ -226,144 +336,144 @@
       "website": ""
     },
     {
-      "name": "SUTEP Sindicato Espect. públicos",
+      "name": "Arabian",
       "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Centro Vecinal Marcelo T. De alvear",
+      "name": "Córdoba Paddle",
       "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Cooperativa de Servicios",
+      "name": "Espacio O2",
       "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Jockey Club",
+      "name": "Guasa Mila Club",
       "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Semacor - Mutual de SubOficiales del Ejercito",
+      "name": "Hindu Club",
       "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Afema S.A",
-      "tipo": "comercio",
-      "website": "https://www.afema.com.ar/"
+      "name": "La Raquette",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "BORO CASA GOURMET",
-      "tipo": "comercio",
-      "website": "WWW.BORO.COM.AR"
+      "name": "Lomo Club",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Brüder Amoblamientos",
-      "tipo": "comercio",
-      "website": "http://wwww.brudervanguardia.com.ar/"
+      "name": "Sanatorio Sindical Suoem",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Guay Buby",
-      "tipo": "comercio",
-      "website": "https://guaybuby.com/10-juguetes-"
+      "name": "UPAS 8 - Barrio La Floresta",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "LIZI",
-      "tipo": "comercio",
-      "website": "https://www.instagram.com/lizi.cba"
+      "name": "Centro de Salud 71 - Cooperativa El Arco",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Los Monos",
-      "tipo": "comercio",
-      "website": "www.cristiancabanillas"
+      "name": "Club de Boxeadores",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Maxikiosco Tortuga",
-      "tipo": "comercio",
-      "website": "http://www.facebook.com/maxikioscotortuga"
+      "name": "Arabian Paddle Club",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Reset Argentina",
-      "tipo": "comercio",
-      "website": "https://resetargentina.com.ar/"
+      "name": "centro vecinal Parque República",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Rockería Trashed",
-      "tipo": "comercio",
-      "website": "https://www.facebook.com/rockeriatrashed"
+      "name": "Club Atlético General Paz -Junior´s",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Ruben Libros",
-      "tipo": "comercio",
-      "website": "web.facebook.com/RubenLibros/"
+      "name": "Club Atlético Huracán",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Top Ten 10",
-      "tipo": "comercio",
-      "website": "https://topten10cba.mitiendanube.com/"
+      "name": "Club Atlético Racing de Córdoba",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Zona de Cactus",
-      "tipo": "comercio",
-      "website": "https://zonadecactus.com.ar/"
+      "name": "Club Atlético Villa Azalais",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Nails & Co.",
-      "tipo": "comercio",
-      "website": "https://nailsandco.com.ar/"
+      "name": "Club Atlético Yapeyú",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Pallás",
-      "tipo": "comercio",
-      "website": "http://www.santiagopallas.com.ar/"
+      "name": "Club Barrio Parque",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Estado Play",
-      "tipo": "comercio",
-      "website": "https://estado-play.business.site/"
+      "name": "Club Colegio de Ingenieros Civiles",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Garbarino",
-      "tipo": "comercio",
-      "website": "https://www.garbarino.com/"
+      "name": "Club Comunicaciones",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Garbarino",
-      "tipo": "comercio",
-      "website": "https://ar.garbarinoviajes.com/"
+      "name": "Club de Amigos Gym",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Gosur",
-      "tipo": "comercio",
-      "website": "http://www.gosur.com"
+      "name": "Club House Las Delicias",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Neumaticos El Dany",
-      "tipo": "comercio",
-      "website": "https://www.eldanyneumaticos.com.ar/"
+      "name": "Consultorio de Salud Integral",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Procel Mayorista",
-      "tipo": "comercio",
-      "website": "https://www.procel-accesorios.com.ar/"
+      "name": "El Club De La Milanesa",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Tattoo Amilkar",
-      "tipo": "comercio",
-      "website": "https://m.facebook.com/AmilkarTattooEstudio"
+      "name": "Estadio Monumental Presidente Perón",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Clickylisto",
-      "tipo": "comercio",
-      "website": "https://clickylisto.com.ar/"
+      "name": "Farmacia Sindical",
+      "tipo": "generador",
+      "website": ""
     },
     {
-      "name": "Lobbyx",
-      "tipo": "comercio",
-      "website": "https://xiaomicordoba.com.ar/"
+      "name": "FUNDACION CAIP CENTRO DE ATENCION INTEGRAL PRIVADO",
+      "tipo": "generador",
+      "website": ""
     }
   ],
   "dudosos_muestra": [
@@ -488,27 +598,27 @@
       "motivo": "sin evidencia suficiente para clasificar"
     }
   ],
-  "duplicados": 2,
+  "duplicados": 15,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "enriquecidos": 923,
-  "emails_encontrados": 73,
-  "listos_detectados": 73,
-  "listos_seleccionados": 73,
-  "listos_comercio": 72,
-  "listos_generador": 1,
-  "clasificados": 998,
+  "enriquecidos": 275,
+  "emails_encontrados": 100,
+  "listos_detectados": 100,
+  "listos_seleccionados": 100,
+  "listos_comercio": 95,
+  "listos_generador": 5,
+  "clasificados": 2896,
   "cuadre": {
-    "clasificacion_total": 998,
-    "estado_total": 998,
-    "cuadra": true
+    "clasificacion_total": 2896,
+    "estado_total": 528,
+    "cuadra": false
   },
-  "encontrados": 1838,
-  "procesados": 1000,
-  "nuevos": 988,
-  "descartados": 10,
-  "excluidos": 2,
-  "meta_alcanzada": false,
-  "faltantes_para_meta": 27,
+  "encontrados": 2911,
+  "procesados": 2911,
+  "nuevos": 2877,
+  "descartados": 19,
+  "excluidos": 15,
+  "meta_alcanzada": true,
+  "faltantes_para_meta": 0,
   "busquedas_publicas_realizadas": 1000
 }
