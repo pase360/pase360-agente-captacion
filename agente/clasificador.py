@@ -1,4 +1,3 @@
-```python
 from .util import normalizar_texto
 
 
@@ -473,4 +472,3 @@ def clasificar(c):
     # 12. Sin evidencia suficiente.
     # --------------------------------------------------------
     return "dudoso", "sin evidencia suficiente para clasificar"
-```
