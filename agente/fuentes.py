@@ -80,14 +80,15 @@ CONSULTAS_EMAIL = [
 # ============================================================
 # BÚSQUEDA GENERAL
 #
-# Las consultas de generadores están separadas para evitar
-# consultas gigantes que terminan en HTTP 504/time-out.
+# Las consultas están separadas para evitar consultas gigantes
+# que terminan en HTTP 504/time-out.
 # ============================================================
 
 CONSULTAS_COMPLETAS = [
-    # -------------------------
+
+    # --------------------------------------------------------
     # COMERCIOS
-    # -------------------------
+    # --------------------------------------------------------
 
     (
         "comercios_shop",
@@ -116,9 +117,9 @@ CONSULTAS_COMPLETAS = [
         "comercio",
     ),
 
-    # -------------------------
+    # --------------------------------------------------------
     # GENERADORES FUERTES
-    # -------------------------
+    # --------------------------------------------------------
 
     (
         "generadores_sindicatos",
@@ -196,9 +197,9 @@ CONSULTAS_COMPLETAS = [
         "generador",
     ),
 
-    # -------------------------
-    # PROFESIONALES
-    # -------------------------
+    # --------------------------------------------------------
+    # COLEGIOS Y CONSEJOS PROFESIONALES
+    # --------------------------------------------------------
 
     (
         "generadores_colegios_profesionales",
@@ -224,9 +225,14 @@ CONSULTAS_COMPLETAS = [
         "generador",
     ),
 
-    # -------------------------
+    # --------------------------------------------------------
     # CLUBES E INSTITUCIONES DEPORTIVAS
-    # -------------------------
+    #
+    # IMPORTANTE:
+    # No buscamos todos los sports_centre/stadium/sports_hall,
+    # porque eso mete instalaciones que no necesariamente son
+    # organizaciones de afiliados.
+    # --------------------------------------------------------
 
     (
         "generadores_clubes",
@@ -234,7 +240,8 @@ CONSULTAS_COMPLETAS = [
         [out:json][timeout:35];
         (
           nwr["name"~"club deportivo|club social|club de futbol|club de fútbol|club de rugby|club de hockey|club de basquet|club de básquet|jockey club|club atletico|club atlético"]({bbox});
-          nwr["leisure"~"sports_centre|stadium|sports_hall"]["name"]({bbox});
+          nwr["club"]["name"]({bbox});
+          nwr["club"="sport"]["name"]({bbox});
         );
         out tags center;
         """,
@@ -246,7 +253,7 @@ CONSULTAS_COMPLETAS = [
         """
         [out:json][timeout:35];
         (
-          nwr["name"~"deportivo|deportiva|atletico|atlético|liga deportiva|federacion deportiva|federación deportiva|asociacion deportiva|asociación deportiva"]({bbox});
+          nwr["name"~"liga deportiva|federacion deportiva|federación deportiva|asociacion deportiva|asociación deportiva|union deportiva|unión deportiva"]({bbox});
           nwr["sport"]["name"]({bbox});
         );
         out tags center;
@@ -254,9 +261,9 @@ CONSULTAS_COMPLETAS = [
         "generador",
     ),
 
-    # -------------------------
+    # --------------------------------------------------------
     # ORGANIZACIONES SOCIALES
-    # -------------------------
+    # --------------------------------------------------------
 
     (
         "generadores_centros_vecinales",
@@ -465,7 +472,6 @@ def _element_to_candidate(
         "direccion": direccion,
         "source": fuente,
         "source_id": source_id,
-
         "grupo_fuente": grupo,
         "lat": lat,
         "lon": lon,
@@ -774,8 +780,9 @@ def buscar():
     1. Busca primero contactos publicados directamente en OSM.
     2. Busca comercios.
     3. Busca generadores por categorías pequeñas.
-    4. Fusiona con la base persistente de este agente.
-    5. Si Overpass falla, conserva la base disponible.
+    4. Pone los candidatos NUEVOS antes de la base histórica.
+    5. Fusiona sin perder los datos existentes.
+    6. Si Overpass falla, conserva la base disponible.
     """
 
     encontrados = []
@@ -852,6 +859,16 @@ def buscar():
 
     # --------------------------------------------------------
     # BASE PERSISTENTE
+    #
+    # IMPORTANTE:
+    # Los nuevos van PRIMERO.
+    #
+    # Antes era:
+    #     base_actual + encontrados
+    #
+    # Eso hacía que una base de ~18.000 registros pudiera
+    # ocultar los candidatos recién encontrados cuando el
+    # motor limitaba el escaneo.
     # --------------------------------------------------------
 
     base_actual = _cargar_base()
@@ -864,7 +881,7 @@ def buscar():
         )
 
     combinados = _fusionar(
-        base_actual + encontrados
+        encontrados + base_actual
     )
 
     if combinados:
