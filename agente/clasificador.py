@@ -1,3 +1,5 @@
+import re
+
 from .util import normalizar_texto
 
 
@@ -237,16 +239,24 @@ def _tags(c):
 
 
 def _contiene(texto, palabras):
+    # Coincidencia por palabra/frase, no por subcadena.
+    # Evita falsos positivos como "SushiClub" -> "club".
+    texto = str(texto or "")
+
     return any(
-        palabra in texto
+        re.search(
+            r"(?<!\w)" + re.escape(str(palabra)) + r"(?!\w)",
+            texto,
+            flags=re.IGNORECASE,
+        )
         for palabra in palabras
     )
 
 
 def _es_camara(texto):
-    return any(
-        palabra in texto
-        for palabra in (
+    return _contiene(
+        texto,
+        (
             "camara de comercio",
             "camara empresarial",
             "camara empresaria",
@@ -260,7 +270,7 @@ def _es_camara(texto):
             "cámara industrial",
             "cámara de industriales",
             "cámara de comerciantes",
-        )
+        ),
     )
 
 
@@ -319,30 +329,42 @@ def _tipo_por_tags(c):
     amenity = normalizar_texto(
         tags.get("amenity", "")
     )
+
     shop = normalizar_texto(
         tags.get("shop", "")
     )
+
     craft = normalizar_texto(
         tags.get("craft", "")
     )
+
     office = normalizar_texto(
         tags.get("office", "")
     )
+
     leisure = normalizar_texto(
         tags.get("leisure", "")
     )
+
     healthcare = normalizar_texto(
         tags.get("healthcare", "")
     )
+
     sport = normalizar_texto(
         tags.get("sport", "")
     )
 
     if shop:
-        return "comercio", "OSM: etiqueta shop"
+        return (
+            "comercio",
+            "OSM: etiqueta shop",
+        )
 
     if craft:
-        return "comercio", "OSM: etiqueta craft"
+        return (
+            "comercio",
+            "OSM: etiqueta craft",
+        )
 
     if office in {
         "company",
@@ -352,7 +374,10 @@ def _tipo_por_tags(c):
         "lawyer",
         "accountant",
     }:
-        return "comercio", "OSM: oficina comercial/profesional"
+        return (
+            "comercio",
+            "OSM: oficina comercial/profesional",
+        )
 
     if amenity in {
         "restaurant",
@@ -367,10 +392,16 @@ def _tipo_por_tags(c):
         "dentist",
         "veterinary",
     }:
-        return "comercio", "OSM: servicio/comercio"
+        return (
+            "comercio",
+            "OSM: servicio/comercio",
+        )
 
     if healthcare:
-        return "comercio", "OSM: healthcare"
+        return (
+            "comercio",
+            "OSM: healthcare",
+        )
 
     if amenity in {
         "association",
@@ -443,10 +474,8 @@ def clasificar(c):
         )
 
     # 4. Clubes e instituciones deportivas.
-    #
     # REGLA DEFINITIVA DE PASE 360:
-    # los clubes e instituciones deportivas
-    # SON GENERADORES.
+    # los clubes e instituciones deportivas SON GENERADORES.
     if _es_club_o_institucion_deportiva(texto):
         return (
             "generador",
