@@ -74,10 +74,10 @@ DIRECTORIOS = (
 
 BING_URL = "https://www.bing.com/search"
 
-# Antes eran 180 búsquedas repartidas en 4 consultas.
-# Ahora son hasta 500 candidatos, una búsqueda principal
-# por candidato.
-MAX_BUSQUEDAS_PUBLICAS = 500
+# Aumentamos el margen de búsqueda porque ahora no buscamos
+# solamente el email institucional: también buscamos emails
+# públicos de personas vinculadas a la entidad.
+MAX_BUSQUEDAS_PUBLICAS = 1000
 
 MAX_RESULTADOS_BING = 10
 MAX_PAGINAS_POR_RESULTADO = 4
@@ -305,14 +305,9 @@ def _identidad_fuerte(c, texto):
         for token in tokens
     )
 
-    # Para nombres de una sola palabra,
-    # necesitamos una coincidencia fuerte.
     if len(tokens) == 1:
         return coincidencias >= 1 and score >= 0.65
 
-    # Para nombres de varias palabras,
-    # exigimos al menos dos coincidencias
-    # o coincidencia del nombre completo.
     nombre = normalizar_texto(
         c.get("name")
     )
@@ -552,8 +547,6 @@ def _analizar_web(
     if response.status_code >= 400:
         return []
 
-    # No aceptamos automáticamente cualquier
-    # email que aparezca en una página.
     contenido = (
         response.url
         + " "
@@ -569,8 +562,6 @@ def _analizar_web(
         response.url
     )
 
-    # Un sitio propio necesita una identidad
-    # razonablemente fuerte.
     if not es_directorio:
         if identidad < 0.45:
             return []
@@ -672,31 +663,95 @@ def _consultas(c):
 
     consultas = []
 
-    # Una consulta principal.
+    # --------------------------------------------------------
+    # 1. BÚSQUEDA GENERAL
+    # --------------------------------------------------------
+
     consultas.append(
         f'"{nombre}" Córdoba email contacto'
     )
 
-    # Si tenemos dirección, es muy útil para
-    # separar homónimos.
+    # --------------------------------------------------------
+    # 2. IDENTIDAD POR DIRECCIÓN
+    # --------------------------------------------------------
+
     if direccion:
         consultas.append(
             f'"{nombre}" "{direccion}" email'
         )
 
-    # Si tenemos teléfono, es una excelente
-    # clave de identidad.
+    # --------------------------------------------------------
+    # 3. IDENTIDAD POR TELÉFONO
+    # --------------------------------------------------------
+
     if telefono:
         consultas.append(
             f'"{nombre}" "{telefono}" email'
         )
 
-    # Directorios públicos.
+    # --------------------------------------------------------
+    # 4. DIRECTORIOS PÚBLICOS
+    # --------------------------------------------------------
+
     for dominio in DIRECTORIOS:
         consultas.append(
             f'"{nombre}" Córdoba '
             f'email site:{dominio}'
         )
+
+    # --------------------------------------------------------
+    # 5. PERSONA RESPONSABLE DEL NEGOCIO
+    #
+    # No inventamos ni inferimos un email.
+    # Buscamos solamente información pública
+    # donde aparezca una persona asociada
+    # explícitamente al negocio/organización.
+    # --------------------------------------------------------
+
+    roles = (
+        "dueño",
+        "propietario",
+        "responsable",
+        "encargado",
+        "titular",
+        "director",
+        "administrador",
+        "contacto",
+    )
+
+    for rol in roles:
+        consultas.append(
+            f'"{nombre}" Córdoba "{rol}" email'
+        )
+
+    # --------------------------------------------------------
+    # 6. COMBINACIONES CON TELÉFONO/DIRECCIÓN
+    # PARA ENCONTRAR A LA PERSONA ASOCIADA
+    # --------------------------------------------------------
+
+    if telefono:
+        for rol in (
+            "dueño",
+            "propietario",
+            "responsable",
+            "titular",
+            "director",
+        ):
+            consultas.append(
+                f'"{telefono}" "{rol}" email'
+            )
+
+    if direccion:
+        for rol in (
+            "dueño",
+            "propietario",
+            "responsable",
+            "titular",
+            "director",
+        ):
+            consultas.append(
+                f'"{direccion}" "{rol}" email'
+            )
 
     return consultas
 
@@ -715,10 +770,6 @@ def _buscar_bing(c):
 
     consultas = _consultas(c)
 
-    # IMPORTANTE:
-    # cada candidato tiene una consulta
-    # principal y solo se agregan búsquedas
-    # adicionales cuando el límite lo permite.
     for indice, consulta in enumerate(
         consultas
     ):
@@ -728,12 +779,27 @@ def _buscar_bing(c):
         ):
             break
 
-        # No gastar todas las búsquedas
-        # adicionales en el mismo candidato
-        # si la principal ya dio resultados.
+        # IMPORTANTE:
+        # No frenamos simplemente porque Bing
+        # haya devuelto páginas.
+        #
+        # Frenamos solamente cuando alguna de
+        # las búsquedas anteriores encontró un
+        # email público.
+        #
+        # Así podemos seguir buscando:
+        # - email del negocio
+        # - email del responsable
+        # - email del propietario
+        # - email asociado públicamente a la entidad
+        #
+        # sin inventar direcciones.
         if (
             indice > 0
-            and resultados
+            and any(
+                r.get("emails")
+                for r in resultados
+            )
         ):
             break
 
@@ -769,7 +835,6 @@ def _buscar_bing(c):
                 "html.parser",
             )
 
-            # Resultado tradicional de Bing.
             items = soup.select(
                 "li.b_algo"
             )
@@ -902,9 +967,6 @@ def _resultado_valido(
     )
 
     if _es_directorio(url):
-        # Los directorios pueden usar títulos
-        # algo diferentes, pero deben mostrar
-        # al menos una parte real del nombre.
         return (
             score >= 0.45
             or normalizar_texto(
@@ -997,10 +1059,6 @@ def _descubrir(c):
         )
     ]
 
-    # Priorizamos:
-    # - sitio propio
-    # - directorio
-    # - mayor coincidencia
     mejores.sort(
         key=lambda r: (
             not _es_social(
