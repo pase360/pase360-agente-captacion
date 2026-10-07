@@ -11,6 +11,10 @@ from .util import cargar, guardar, log, normalizar_email
 CACHE_FILE = "base_candidatos.json"
 
 
+# ============================================================
+# BÚSQUEDA PRIORITARIA DE CONTACTOS YA PUBLICADOS EN OSM
+# ============================================================
+
 CONSULTAS_EMAIL = [
     (
         "comercios_email",
@@ -33,18 +37,38 @@ CONSULTAS_EMAIL = [
         "comercio",
     ),
     (
-        "generadores_email",
+        "generadores_email_organizaciones",
         """
-        [out:json][timeout:45];
+        [out:json][timeout:35];
         (
-          nwr["name"~"sindicato|gremio|mutual|federacion|federación|cooperativa|asociacion|asociación|fundacion|fundación"]["email"]({bbox});
-          nwr["name"~"sindicato|gremio|mutual|federacion|federación|cooperativa|asociacion|asociación|fundacion|fundación"]["contact:email"]({bbox});
-
-          nwr["name"~"colegio"]["email"]({bbox});
-          nwr["name"~"colegio"]["contact:email"]({bbox});
-
-          nwr["name"~"club|deportivo|deportiva|liga"]["email"]({bbox});
-          nwr["name"~"club|deportivo|deportiva|liga"]["contact:email"]({bbox});
+          nwr["name"~"sindicato|gremio|mutual|federacion|federación|cooperativa|fundacion|fundación"]["email"]({bbox});
+          nwr["name"~"sindicato|gremio|mutual|federacion|federación|cooperativa|fundacion|fundación"]["contact:email"]({bbox});
+          nwr["office"="association"]["email"]({bbox});
+          nwr["office"="association"]["contact:email"]({bbox});
+        );
+        out tags center;
+        """,
+        "generador",
+    ),
+    (
+        "generadores_email_profesionales",
+        """
+        [out:json][timeout:35];
+        (
+          nwr["name"~"colegio profesional|colegio de |consejo profesional|consejo de |asociacion profesional|asociación profesional"]["email"]({bbox});
+          nwr["name"~"colegio profesional|colegio de |consejo profesional|consejo de |asociacion profesional|asociación profesional"]["contact:email"]({bbox});
+        );
+        out tags center;
+        """,
+        "generador",
+    ),
+    (
+        "generadores_email_deportivos",
+        """
+        [out:json][timeout:35];
+        (
+          nwr["name"~"club deportivo|club social|club de |jockey club|atletico|atlético|deportivo|deportiva|liga deportiva|federacion deportiva|federación deportiva"]["email"]({bbox});
+          nwr["name"~"club deportivo|club social|club de |jockey club|atletico|atlético|deportivo|deportiva|liga deportiva|federacion deportiva|federación deportiva"]["contact:email"]({bbox});
         );
         out tags center;
         """,
@@ -53,7 +77,18 @@ CONSULTAS_EMAIL = [
 ]
 
 
+# ============================================================
+# BÚSQUEDA GENERAL
+#
+# Las consultas de generadores están separadas para evitar
+# consultas gigantes que terminan en HTTP 504/time-out.
+# ============================================================
+
 CONSULTAS_COMPLETAS = [
+    # -------------------------
+    # COMERCIOS
+    # -------------------------
+
     (
         "comercios_shop",
         """
@@ -67,10 +102,11 @@ CONSULTAS_COMPLETAS = [
         """,
         "comercio",
     ),
+
     (
         "comercios_amenity",
         """
-        [out:json][timeout:45];
+        [out:json][timeout:35];
         (
           nwr["name"]["amenity"~"restaurant|cafe|fast_food|bar|pub|food_court|pharmacy|clinic|doctors|dentist|veterinary"]({bbox});
           nwr["name"]["healthcare"]({bbox});
@@ -79,50 +115,179 @@ CONSULTAS_COMPLETAS = [
         """,
         "comercio",
     ),
+
+    # -------------------------
+    # GENERADORES FUERTES
+    # -------------------------
+
     (
-        "generadores_organizaciones",
+        "generadores_sindicatos",
         """
-        [out:json][timeout:45];
+        [out:json][timeout:35];
         (
-          nwr["name"~"sindicato|gremio|mutual|federacion|federación|cooperativa"]({bbox});
-          nwr["name"~"asociacion profesional|asociación profesional|fundacion|fundación"]({bbox});
+          nwr["name"~"sindicato|gremio|union de trabajadores|unión de trabajadores|sindical"]({bbox});
+          nwr["office"="association"]["name"~"sindicato|gremio|union|unión"]({bbox});
+        );
+        out tags center;
+        """,
+        "generador",
+    ),
+
+    (
+        "generadores_mutuales",
+        """
+        [out:json][timeout:35];
+        (
+          nwr["name"~"mutual|asociacion mutual|asociación mutual"]({bbox});
+          nwr["office"="association"]["name"~"mutual"]({bbox});
+        );
+        out tags center;
+        """,
+        "generador",
+    ),
+
+    (
+        "generadores_cooperativas",
+        """
+        [out:json][timeout:35];
+        (
+          nwr["name"~"cooperativa|cooperativa de servicios|cooperativa de trabajo|cooperativa obrera"]({bbox});
+        );
+        out tags center;
+        """,
+        "generador",
+    ),
+
+    (
+        "generadores_federaciones",
+        """
+        [out:json][timeout:35];
+        (
+          nwr["name"~"federacion|federación|confederacion|confederación"]({bbox});
+        );
+        out tags center;
+        """,
+        "generador",
+    ),
+
+    (
+        "generadores_asociaciones",
+        """
+        [out:json][timeout:35];
+        (
           nwr["office"="association"]["name"]({bbox});
+          nwr["name"~"asociacion civil|asociación civil|asociacion profesional|asociación profesional"]({bbox});
         );
         out tags center;
         """,
         "generador",
     ),
+
     (
-        "generadores_colegios",
+        "generadores_fundaciones",
         """
-        [out:json][timeout:45];
+        [out:json][timeout:35];
         (
-          nwr["name"~"colegio"]({bbox});
+          nwr["name"~"fundacion|fundación"]({bbox});
+          nwr["office"~"foundation|association"]["name"~"fundacion|fundación"]({bbox});
         );
         out tags center;
         """,
         "generador",
     ),
+
+    # -------------------------
+    # PROFESIONALES
+    # -------------------------
+
+    (
+        "generadores_colegios_profesionales",
+        """
+        [out:json][timeout:35];
+        (
+          nwr["name"~"colegio profesional|colegio de abogados|colegio de arquitectos|colegio de ingenieros|colegio de contadores|colegio de escribanos|colegio de médicos|colegio de medicos|colegio de odontologos|colegio de odontólogos|colegio de psicologos|colegio de psicólogos|colegio de farmacéuticos|colegio de farmaceuticos|colegio profesional"]({bbox});
+        );
+        out tags center;
+        """,
+        "generador",
+    ),
+
+    (
+        "generadores_consejos_profesionales",
+        """
+        [out:json][timeout:35];
+        (
+          nwr["name"~"consejo profesional|consejo de profesionales|consejo de abogados|consejo de ciencias economicas|consejo de ciencias económicas"]({bbox});
+        );
+        out tags center;
+        """,
+        "generador",
+    ),
+
+    # -------------------------
+    # CLUBES E INSTITUCIONES DEPORTIVAS
+    # -------------------------
+
+    (
+        "generadores_clubes",
+        """
+        [out:json][timeout:35];
+        (
+          nwr["name"~"club deportivo|club social|club de futbol|club de fútbol|club de rugby|club de hockey|club de basquet|club de básquet|jockey club|club atletico|club atlético"]({bbox});
+          nwr["leisure"~"sports_centre|stadium|sports_hall"]["name"]({bbox});
+        );
+        out tags center;
+        """,
+        "generador",
+    ),
+
     (
         "generadores_deportivos",
         """
-        [out:json][timeout:45];
+        [out:json][timeout:35];
         (
-          nwr["name"~"club|deportivo|deportiva|liga"]({bbox});
-          nwr["leisure"~"sports_centre|stadium|sports_hall"]({bbox});
-          nwr["sport"]({bbox});
+          nwr["name"~"deportivo|deportiva|atletico|atlético|liga deportiva|federacion deportiva|federación deportiva|asociacion deportiva|asociación deportiva"]({bbox});
+          nwr["sport"]["name"]({bbox});
         );
         out tags center;
         """,
         "generador",
     ),
+
+    # -------------------------
+    # ORGANIZACIONES SOCIALES
+    # -------------------------
+
     (
-        "generadores_sociales",
+        "generadores_centros_vecinales",
         """
-        [out:json][timeout:45];
+        [out:json][timeout:35];
         (
-          nwr["name"~"centro vecinal|asociacion civil|asociación civil|fundacion|fundación"]({bbox});
-          nwr["office"="association"]({bbox});
+          nwr["name"~"centro vecinal|centro barrial|centro comunitario|centro comunitaria"]({bbox});
+        );
+        out tags center;
+        """,
+        "generador",
+    ),
+
+    (
+        "generadores_jubilados",
+        """
+        [out:json][timeout:35];
+        (
+          nwr["name"~"centro de jubilados|centro de pensionados|jubilados y pensionados|pensionados"]({bbox});
+        );
+        out tags center;
+        """,
+        "generador",
+    ),
+
+    (
+        "generadores_sociedades",
+        """
+        [out:json][timeout:35];
+        (
+          nwr["name"~"sociedad de fomento|sociedad civil|circulo|círculo|union de |unión de |agrupacion|agrupación"]({bbox});
         );
         out tags center;
         """,
@@ -130,6 +295,10 @@ CONSULTAS_COMPLETAS = [
     ),
 ]
 
+
+# ============================================================
+# OVERPASS
+# ============================================================
 
 def _post_overpass(url, query):
     try:
@@ -153,15 +322,23 @@ def _post_overpass(url, query):
         try:
             return respuesta.json()
         except Exception:
-            log(f"[fuente] respuesta inválida de {url}")
+            log(
+                f"[fuente] respuesta inválida de {url}"
+            )
             return None
 
     except requests.RequestException as e:
-        log(f"[fuente] error de conexión {url}: {e}")
+        log(
+            f"[fuente] error de conexión "
+            f"{url}: {e}"
+        )
         return None
 
     except Exception as e:
-        log(f"[fuente] error inesperado {url}: {e}")
+        log(
+            f"[fuente] error inesperado "
+            f"{url}: {e}"
+        )
         return None
 
 
@@ -218,6 +395,10 @@ def _consultar(nombre, plantilla, grupo):
     return []
 
 
+# ============================================================
+# CONVERSIÓN OSM -> CANDIDATO
+# ============================================================
+
 def _element_to_candidate(
     elemento,
     grupo,
@@ -225,8 +406,6 @@ def _element_to_candidate(
 ):
     tags = elemento.get("tags") or {}
 
-    # IMPORTANTE:
-    # engine.py utiliza estos nombres exactos.
     name = (
         tags.get("name")
         or tags.get("official_name")
@@ -279,7 +458,6 @@ def _element_to_candidate(
     )
 
     return {
-        # Campos que engine.py necesita
         "name": name,
         "email": email,
         "website": website,
@@ -288,7 +466,6 @@ def _element_to_candidate(
         "source": fuente,
         "source_id": source_id,
 
-        # Información auxiliar
         "grupo_fuente": grupo,
         "lat": lat,
         "lon": lon,
@@ -318,9 +495,7 @@ def _direccion(tags):
     ).strip()
 
     if street:
-        partes.append(
-            street
-        )
+        partes.append(street)
 
     if number:
         if partes:
@@ -328,21 +503,19 @@ def _direccion(tags):
                 f"{partes[-1]} {number}"
             )
         else:
-            partes.append(
-                number
-            )
+            partes.append(number)
 
     if city and city.lower() not in (
         " ".join(partes).lower()
     ):
-        partes.append(
-            city
-        )
+        partes.append(city)
 
-    return ", ".join(
-        partes
-    )
+    return ", ".join(partes)
 
+
+# ============================================================
+# CLAVES Y FUSIÓN
+# ============================================================
 
 def _clave(candidato):
     source_id = str(
@@ -352,18 +525,14 @@ def _clave(candidato):
     ).strip()
 
     if source_id:
-        return (
-            f"osm:{source_id}"
-        )
+        return f"osm:{source_id}"
 
     email = normalizar_email(
         candidato.get("email")
     )
 
     if email:
-        return (
-            f"email:{email}"
-        )
+        return f"email:{email}"
 
     name = str(
         candidato.get("name")
@@ -379,9 +548,7 @@ def _clave(candidato):
         r"\D+",
         "",
         str(
-            candidato.get(
-                "phone"
-            )
+            candidato.get("phone")
             or ""
         ),
     )
@@ -390,10 +557,8 @@ def _clave(candidato):
         r"\s+",
         " ",
         str(
-            candidato.get(
-                "direccion"
-            )
-                or ""
+            candidato.get("direccion")
+            or ""
         ).strip().lower(),
     )
 
@@ -409,25 +574,19 @@ def _clave_flexible(candidato):
     )
 
     if email:
-        return (
-            f"email:{email}"
-        )
+        return f"email:{email}"
 
     name = re.sub(
         r"\s+",
         " ",
         str(
-            candidato.get(
-                "name"
-            )
+            candidato.get("name")
             or ""
         ).strip().lower(),
     )
 
     website = str(
-        candidato.get(
-            "website"
-        )
+        candidato.get("website")
         or ""
     ).strip().lower()
 
@@ -443,17 +602,13 @@ def _clave_flexible(candidato):
         except Exception:
             host = website
 
-        return (
-            f"web:{name}|{host}"
-        )
+        return f"web:{name}|{host}"
 
     phone = re.sub(
         r"\D+",
         "",
         str(
-            candidato.get(
-                "phone"
-            )
+            candidato.get("phone")
             or ""
         ),
     )
@@ -462,9 +617,7 @@ def _clave_flexible(candidato):
         r"\s+",
         " ",
         str(
-            candidato.get(
-                "direccion"
-            )
+            candidato.get("direccion")
             or ""
         ).strip().lower(),
     )
@@ -483,9 +636,7 @@ def _fusionar(candidatos):
         if not candidato:
             continue
 
-        if not candidato.get(
-            "name"
-        ):
+        if not candidato.get("name"):
             continue
 
         clave = _clave(
@@ -493,14 +644,12 @@ def _fusionar(candidatos):
         )
 
         if clave not in resultado:
-            resultado[
-                clave
-            ] = dict(candidato)
+            resultado[clave] = dict(
+                candidato
+            )
             continue
 
-        actual = resultado[
-            clave
-        ]
+        actual = resultado[clave]
 
         for campo in (
             "email",
@@ -511,30 +660,18 @@ def _fusionar(candidatos):
             "lon",
         ):
             if (
-                not actual.get(
-                    campo
-                )
-                and candidato.get(
-                    campo
-                )
+                not actual.get(campo)
+                and candidato.get(campo)
             ):
-                actual[
-                    campo
-                ] = candidato[
-                    campo
-                ]
+                actual[campo] = candidato[campo]
 
         tags_actuales = (
-            actual.get(
-                "tags"
-            )
+            actual.get("tags")
             or {}
         )
 
         tags_nuevos = (
-            candidato.get(
-                "tags"
-            )
+            candidato.get("tags")
             or {}
         )
 
@@ -542,9 +679,9 @@ def _fusionar(candidatos):
             tags_actuales.update(
                 tags_nuevos
             )
-            actual[
-                "tags"
-            ] = tags_actuales
+            actual["tags"] = (
+                tags_actuales
+            )
 
     finales = {}
 
@@ -554,43 +691,33 @@ def _fusionar(candidatos):
         )
 
         if clave not in finales:
-            finales[
-                clave
-            ] = candidato
+            finales[clave] = candidato
             continue
 
-        actual = finales[
-            clave
-        ]
+        actual = finales[clave]
 
-        email_actual = (
-            normalizar_email(
-                actual.get(
-                    "email"
-                )
-            )
+        email_actual = normalizar_email(
+            actual.get("email")
         )
 
-        email_nuevo = (
-            normalizar_email(
-                candidato.get(
-                    "email"
-                )
-            )
+        email_nuevo = normalizar_email(
+            candidato.get("email")
         )
 
         if (
             email_nuevo
             and not email_actual
         ):
-            finales[
-                clave
-            ] = candidato
+            finales[clave] = candidato
 
     return list(
         finales.values()
     )
 
+
+# ============================================================
+# BASE PERSISTENTE DE ESTE AGENTE
+# ============================================================
 
 def _cargar_base():
     base = cargar(
@@ -608,13 +735,8 @@ def _cargar_base():
 
     for candidato in base:
         if (
-            isinstance(
-                candidato,
-                dict,
-            )
-            and candidato.get(
-                "name"
-            )
+            isinstance(candidato, dict)
+            and candidato.get("name")
         ):
             resultado.append(
                 candidato
@@ -623,17 +745,13 @@ def _cargar_base():
     return resultado
 
 
-def _guardar_base(
-    candidatos
-):
+def _guardar_base(candidatos):
     candidatos = _fusionar(
         candidatos
     )
 
     if len(candidatos) > 20000:
-        candidatos = candidatos[
-            :20000
-        ]
+        candidatos = candidatos[:20000]
 
     guardar(
         CACHE_FILE,
@@ -641,17 +759,23 @@ def _guardar_base(
     )
 
     log(
-        f"[fuente] base persistente: "
+        f"[fuente] base persistente "
+        f"de este agente: "
         f"{len(candidatos)} candidatos"
     )
 
 
+# ============================================================
+# FUNCIÓN PRINCIPAL
+# ============================================================
+
 def buscar():
     """
-    1. Busca primero candidatos que ya tienen email en OSM.
-    2. Amplía con consultas normales.
-    3. Fusiona con la base persistente de ESTE agente.
-    4. Si Overpass falla completamente, usa la base persistente.
+    1. Busca primero contactos publicados directamente en OSM.
+    2. Busca comercios.
+    3. Busca generadores por categorías pequeñas.
+    4. Fusiona con la base persistente de este agente.
+    5. Si Overpass falla, conserva la base disponible.
     """
 
     encontrados = []
@@ -659,9 +783,9 @@ def buscar():
     consultas_ok = 0
     consultas_error = 0
 
-    # ---------------------------------------------------------
-    # ETAPA 1
-    # ---------------------------------------------------------
+    # --------------------------------------------------------
+    # ETAPA 1 - EMAIL PUBLICADO
+    # --------------------------------------------------------
 
     log(
         "[fuente] etapa 1: "
@@ -695,9 +819,9 @@ def buscar():
         f"{len(encontrados)} candidatos"
     )
 
-    # ---------------------------------------------------------
-    # ETAPA 2
-    # ---------------------------------------------------------
+    # --------------------------------------------------------
+    # ETAPA 2 - AMPLIACIÓN
+    # --------------------------------------------------------
 
     log(
         "[fuente] etapa 2: "
@@ -726,22 +850,21 @@ def buscar():
 
         time.sleep(0.4)
 
-    # ---------------------------------------------------------
+    # --------------------------------------------------------
     # BASE PERSISTENTE
-    # ---------------------------------------------------------
+    # --------------------------------------------------------
 
-    base_anterior = _cargar_base()
+    base_actual = _cargar_base()
 
-    if base_anterior:
+    if base_actual:
         log(
-            f"[fuente] base anterior "
-            f"encontrada: "
-            f"{len(base_anterior)} candidatos"
+            f"[fuente] base persistente "
+            f"del agente encontrada: "
+            f"{len(base_actual)} candidatos"
         )
 
     combinados = _fusionar(
-        base_anterior
-        + encontrados
+        base_actual + encontrados
     )
 
     if combinados:
@@ -749,20 +872,20 @@ def buscar():
             combinados
         )
 
-    # ---------------------------------------------------------
+    # --------------------------------------------------------
     # FALLBACK
-    # ---------------------------------------------------------
+    # --------------------------------------------------------
 
     if not encontrados:
 
-        if base_anterior:
+        if base_actual:
             log(
                 "[fuente] Overpass no "
                 "entregó candidatos nuevos. "
-                "Se utiliza la base persistente."
+                "Se conserva la base persistente."
             )
 
-            return base_anterior
+            return base_actual
 
         raise RuntimeError(
             "Overpass no devolvió "
