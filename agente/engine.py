@@ -196,7 +196,7 @@ def _nuevo_diagnostico():
         },
         "por_estado": {
             "listo_para_contactar": 0,
-            "sin_email": 0,
+            "no_contactable_publicamente": 0,
             "requiere_decision": 0,
             "descartado": 0,
         },
@@ -213,7 +213,114 @@ def _nuevo_diagnostico():
         "duplicados": 0,
         "ya_contactados": 0,
         "sin_nombre": 0,
+        "enriquecidos": 0,
+        "emails_encontrados": 0,
     }
+
+
+def _prioridad_enriquecimiento(c):
+    """
+    Ordena los candidatos para que el agente
+    intente primero los que tienen mejores
+    posibilidades de producir un contacto real.
+
+    No significa que se descarte a los demás:
+    solamente define por dónde empezar.
+    """
+
+    tiene_email = bool(
+        normalizar_email(
+            c.get("email")
+        )
+    )
+
+    tiene_web = bool(
+        str(
+            c.get("website_final")
+            or c.get("website")
+            or ""
+        ).strip()
+    )
+
+    tiene_telefono = bool(
+        str(
+            c.get("phone") or ""
+        ).strip()
+    )
+
+    tiene_direccion = bool(
+        str(
+            c.get("direccion") or ""
+        ).strip()
+    )
+
+    tipo = c.get("tipo")
+
+    return (
+        not tiene_email,
+        tipo != "generador",
+        not tiene_web,
+        not tiene_telefono,
+        not tiene_direccion,
+        normalizar_texto(
+            c.get("name")
+        ),
+    )
+
+
+def _registrar_muestra(
+    diagnostico,
+    c,
+):
+    tipo = c.get("tipo")
+
+    if (
+        tipo == "generador"
+        and len(
+            diagnostico[
+                "generadores_muestra"
+            ]
+        ) < 30
+    ):
+        diagnostico[
+            "generadores_muestra"
+        ].append(
+            {
+                "name": c.get(
+                    "name"
+                ),
+                "email": c.get(
+                    "email"
+                ),
+                "motivo": c.get(
+                    "clasificacion_motivo"
+                ),
+            }
+        )
+
+    if (
+        tipo == "comercio"
+        and len(
+            diagnostico[
+                "comercios_muestra"
+            ]
+        ) < 30
+    ):
+        diagnostico[
+            "comercios_muestra"
+        ].append(
+            {
+                "name": c.get(
+                    "name"
+                ),
+                "email": c.get(
+                    "email"
+                ),
+                "motivo": c.get(
+                    "clasificacion_motivo"
+                ),
+            }
+        )
 
 
 def capturar():
@@ -226,9 +333,25 @@ def capturar():
     candidatos = []
     seen = set()
 
-    # Primero clasificamos todos.
+    # ---------------------------------------------------------
+    # 1. CLASIFICACIÓN
+    # ---------------------------------------------------------
+    #
+    # Clasificamos el universo disponible hasta el límite
+    # configurado. La búsqueda de emails se hará después
+    # de forma selectiva.
+    # ---------------------------------------------------------
+
+    limite_scan = min(
+        len(rows),
+        max(
+            C.MAX_CANDIDATOS_SCAN,
+            C.META_CONTACTOS * 5,
+        ),
+    )
+
     for original in rows[
-        : C.MAX_CANDIDATOS_SCAN
+        :limite_scan
     ]:
         c = dict(original)
 
@@ -332,19 +455,57 @@ def capturar():
         candidatos.append(c)
 
     # ---------------------------------------------------------
-    # AHORA buscamos emails.
+    # 2. SELECCIONAR CANDIDATOS PARA BUSCAR EMAIL
+    # ---------------------------------------------------------
+    #
+    # NO intentamos buscar email de todos indiscriminadamente.
+    #
+    # Primero los ordenamos para aprovechar mejor las búsquedas.
+    # El objetivo es conseguir contactos reales, no acumular
+    # cientos de "sin_email".
     # ---------------------------------------------------------
 
-    for c in candidatos:
-        if c.get("tipo") not in {
+    enriquecibles = [
+        c
+        for c in candidatos
+        if c.get("tipo") in {
             "comercio",
             "generador",
-        }:
-            continue
+        }
+    ]
+
+    enriquecibles.sort(
+        key=_prioridad_enriquecimiento
+    )
+
+    # ---------------------------------------------------------
+    # 3. ENRIQUECIMIENTO HASTA CONSEGUIR LA META
+    # ---------------------------------------------------------
+    #
+    # Los que no tienen email NO cuentan.
+    #
+    # El agente sigue con el siguiente candidato.
+    # Solamente termina antes si se agotaron los candidatos
+    # que puede revisar en esta ejecución.
+    # ---------------------------------------------------------
+
+    listos = []
+
+    for c in enriquecibles:
+        if len(listos) >= C.META_CONTACTOS:
+            break
 
         c = _enriquecer_email(c)
 
-        if c.get("email"):
+        diagnostico[
+            "enriquecidos"
+        ] += 1
+
+        email = normalizar_email(
+            c.get("email")
+        )
+
+        if email:
             c["estado"] = (
                 "listo_para_contactar"
             )
@@ -353,12 +514,26 @@ def capturar():
                 "por_estado"
             ]["listo_para_contactar"] += 1
 
+            diagnostico[
+                "emails_encontrados"
+            ] += 1
+
+            listos.append(c)
+
         else:
-            c["estado"] = "sin_email"
+            # No lo consideramos contacto.
+            #
+            # Tampoco lo llamamos simplemente "sin_email":
+            # significa que el agente buscó fuentes públicas
+            # disponibles y no encontró un email públicamente
+            # verificable en esta ejecución.
+            c["estado"] = (
+                "no_contactable_publicamente"
+            )
 
             diagnostico[
                 "por_estado"
-            ]["sin_email"] += 1
+            ]["no_contactable_publicamente"] += 1
 
             tipo = c.get(
                 "tipo",
@@ -397,75 +572,25 @@ def capturar():
                     }
                 )
 
-        tipo = c.get("tipo")
-
-        if (
-            tipo == "generador"
-            and len(
-                diagnostico[
-                    "generadores_muestra"
-                ]
-            ) < 30
-        ):
-            diagnostico[
-                "generadores_muestra"
-            ].append(
-                {
-                    "name": c.get(
-                        "name"
-                    ),
-                    "email": c.get(
-                        "email"
-                    ),
-                    "motivo": c.get(
-                        "clasificacion_motivo"
-                    ),
-                }
-            )
-
-        if (
-            tipo == "comercio"
-            and len(
-                diagnostico[
-                    "comercios_muestra"
-                ]
-            ) < 30
-        ):
-            diagnostico[
-                "comercios_muestra"
-            ].append(
-                {
-                    "name": c.get(
-                        "name"
-                    ),
-                    "email": c.get(
-                        "email"
-                    ),
-                    "motivo": c.get(
-                        "clasificacion_motivo"
-                    ),
-                }
-            )
+        _registrar_muestra(
+            diagnostico,
+            c,
+        )
 
     # ---------------------------------------------------------
-    # ORDENAR: primero generadores y comercios listos.
+    # 4. ORDEN FINAL DE LOS CONTACTOS
     # ---------------------------------------------------------
-
-    listos = [
-        c
-        for c in candidatos
-        if c.get("estado")
-        == "listo_para_contactar"
-    ]
 
     listos.sort(
         key=lambda c: (
             c.get("tipo")
             != "generador",
-            c.get(
-                "email_confidence",
-                0,
-            ) * -1,
+            -(float(
+                c.get(
+                    "email_confidence",
+                    0,
+                )
+            )),
             normalizar_texto(
                 c.get("name")
             ),
@@ -473,7 +598,7 @@ def capturar():
     )
 
     seleccionados = listos[
-        : C.META_CONTACTOS
+        :C.META_CONTACTOS
     ]
 
     diagnostico[
@@ -519,33 +644,62 @@ def capturar():
     }
 
     # ---------------------------------------------------------
-    # REPORTES
+    # 5. REPORTES
+    # ---------------------------------------------------------
+    #
+    # candidatos.json conserva la información necesaria
+    # para preguntas/seguimiento.
+    #
+    # Pero simulacion_contactos.json contiene ÚNICAMENTE
+    # contactos realmente listos.
     # ---------------------------------------------------------
 
-    todos_reportar = (
-        seleccionados
-        + [
-            c
-            for c in candidatos
-            if c not in seleccionados
-        ][:500]
+    candidatos_reportar = []
+
+    for c in candidatos:
+        estado = c.get(
+            "estado"
+        )
+
+        if estado in {
+            "listo_para_contactar",
+            "requiere_decision",
+            "descartado",
+        }:
+            candidatos_reportar.append(c)
+
+    # Los no-contactables quedan registrados solamente
+    # si fueron útiles para el diagnóstico, pero nunca
+    # entran en la lista de contactos a enviar.
+    #
+    # Conservamos como máximo 500 para no inflar
+    # innecesariamente el archivo.
+    no_contactables = [
+        c
+        for c in candidatos
+        if c.get("estado")
+        == "no_contactable_publicamente"
+    ]
+
+    candidatos_reportar.extend(
+        no_contactables[:500]
     )
 
     append_csv(
         "captacion.csv",
-        todos_reportar,
+        candidatos_reportar,
         _campos_csv(
-            todos_reportar
+            candidatos_reportar
         ),
     )
 
     guardar(
         "candidatos.json",
-        todos_reportar,
+        candidatos_reportar,
     )
 
     # ---------------------------------------------------------
-    # ENVÍO
+    # 6. ENVÍO
     # ---------------------------------------------------------
 
     if not C.MODO_PRUEBA:
@@ -572,10 +726,23 @@ def capturar():
                     "email": c.get(
                         "email"
                     ),
+                    "email_source": c.get(
+                        "email_source"
+                    ),
+                    "email_source_url": c.get(
+                        "email_source_url"
+                    ),
+                    "email_confidence": c.get(
+                        "email_confidence"
+                    ),
                 }
                 for c in seleccionados
             ],
         )
+
+    # ---------------------------------------------------------
+    # 7. RESUMEN
+    # ---------------------------------------------------------
 
     diagnostico[
         "encontrados"
@@ -583,10 +750,7 @@ def capturar():
 
     diagnostico[
         "procesados"
-    ] = min(
-        len(rows),
-        C.MAX_CANDIDATOS_SCAN,
-    )
+    ] = limite_scan
 
     diagnostico[
         "nuevos"
@@ -605,6 +769,25 @@ def capturar():
         + diagnostico["ya_contactados"]
         + diagnostico["sin_nombre"]
     )
+
+    diagnostico[
+        "meta_alcanzada"
+    ] = (
+        len(seleccionados)
+        >= C.META_CONTACTOS
+    )
+
+    diagnostico[
+        "faltantes_para_meta"
+    ] = max(
+        C.META_CONTACTOS
+        - len(seleccionados),
+        0,
+    )
+
+    diagnostico[
+        "busquedas_publicas_realizadas"
+    ] = web._busquedas_realizadas
 
     guardar(
         "diagnostico_captacion.json",
@@ -642,7 +825,7 @@ def capturar():
         ],
         "sin_email": diagnostico[
             "por_estado"
-        ]["sin_email"],
+        ]["no_contactable_publicamente"],
         "sin_email_por_tipo":
             diagnostico[
                 "sin_email_por_tipo"
@@ -674,6 +857,19 @@ def capturar():
         "cuadre": diagnostico[
             "cuadre"
         ],
+        "meta_alcanzada": diagnostico[
+            "meta_alcanzada"
+        ],
+        "faltantes_para_meta": diagnostico[
+            "faltantes_para_meta"
+        ],
+        "enriquecidos": diagnostico[
+            "enriquecidos"
+        ],
+        "busquedas_publicas":
+            diagnostico[
+                "busquedas_publicas_realizadas"
+            ],
         "generadores_muestra":
             diagnostico[
                 "generadores_muestra"
@@ -907,7 +1103,7 @@ def reporte():
         "sin_email_ultimo_scan":
             sum(
                 c.get("estado")
-                == "sin_email"
+                == "no_contactable_publicamente"
                 for c in candidatos
             ),
         "dudosos_ultimo_scan":
