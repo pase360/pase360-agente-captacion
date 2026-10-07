@@ -1,3 +1,4 @@
+```python
 import time
 import requests
 
@@ -8,17 +9,22 @@ from .util import log
 # -------------------------------------------------------------------
 # ESTRATEGIA DE CAPTACIÓN
 #
-# Cada corrida busca deliberadamente:
-#   - comercios de distintos rubros
-#   - generadores de distintos tipos
+# Busca comercios y generadores en Córdoba Capital mediante Overpass.
 #
-# Luego los resultados se mezclan para que engine.py no reciba
-# solamente los primeros resultados de OSM.
+# Esta versión:
+#   - mantiene las 8 consultas actuales
+#   - distribuye las consultas entre servidores Overpass
+#   - evita repetir inmediatamente el mismo servidor
+#   - reduce los reintentos que provocaban 429
+#   - espera entre consultas para no saturar Overpass
+#   - continúa si una consulta falla
+#   - mantiene la mezcla comercio/generador
 # -------------------------------------------------------------------
+
 
 CONSULTAS_COMERCIOS = [
     f"""
-    [out:json][timeout:60];
+    [out:json][timeout:50];
     (
       nwr["name"]["shop"]({C.BBOX});
     );
@@ -26,7 +32,7 @@ CONSULTAS_COMERCIOS = [
     """,
 
     f"""
-    [out:json][timeout:60];
+    [out:json][timeout:50];
     (
       nwr["name"]["craft"]({C.BBOX});
       nwr["name"]["office"~"company|commercial"]({C.BBOX});
@@ -35,7 +41,7 @@ CONSULTAS_COMERCIOS = [
     """,
 
     f"""
-    [out:json][timeout:60];
+    [out:json][timeout:50];
     (
       nwr["name"]["amenity"~"restaurant|cafe|fast_food|bar|pub|food_court"]({C.BBOX});
     );
@@ -43,7 +49,7 @@ CONSULTAS_COMERCIOS = [
     """,
 
     f"""
-    [out:json][timeout:60];
+    [out:json][timeout:50];
     (
       nwr["name"]["amenity"~"clinic|doctors|dentist|pharmacy|veterinary"]({C.BBOX});
       nwr["name"]["healthcare"]({C.BBOX});
@@ -55,7 +61,7 @@ CONSULTAS_COMERCIOS = [
 
 CONSULTAS_GENERADORES = [
     f"""
-    [out:json][timeout:60];
+    [out:json][timeout:50];
     (
       nwr["name"]["office"="association"]({C.BBOX});
       nwr["name"]["amenity"="social_centre"]({C.BBOX});
@@ -65,7 +71,7 @@ CONSULTAS_GENERADORES = [
     """,
 
     f"""
-    [out:json][timeout:60];
+    [out:json][timeout:50];
     (
       nwr["name"~"sindicato|sindicatos|gremio|gremial|union de trabajadores|union de empleados|mutual|mutualidad|federacion|federación",i]({C.BBOX});
     );
@@ -73,7 +79,7 @@ CONSULTAS_GENERADORES = [
     """,
 
     f"""
-    [out:json][timeout:60];
+    [out:json][timeout:50];
     (
       nwr["name"~"colegio de abogados|colegio de escribanos|colegio de arquitectos|colegio de ingenieros|colegio de contadores|colegio de medicos|colegio de médicos|colegio de odontologos|colegio de odontólogos|colegio de psicologos|colegio de psicólogos|colegio de veterinarios|colegio de farmacéuticos|colegio de farmaceuticos|colegio profesional|consejo profesional|asociacion de profesionales|asociación de profesionales",i]({C.BBOX});
     );
@@ -81,7 +87,7 @@ CONSULTAS_GENERADORES = [
     """,
 
     f"""
-    [out:json][timeout:60];
+    [out:json][timeout:50];
     (
       nwr["name"]["club"]({C.BBOX});
       nwr["name"]["leisure"~"sports_centre|stadium|sports_hall|pitch"]({C.BBOX});
@@ -104,6 +110,25 @@ TODAS_LAS_CONSULTAS = (
 )
 
 
+# -------------------------------------------------------------------
+# CONTROL DE SERVIDORES
+# -------------------------------------------------------------------
+#
+# No hacemos:
+#
+#   servidor A -> A -> A -> B -> B -> B
+#
+# porque eso fue una de las causas de los 429.
+#
+# En cambio, vamos rotando los servidores disponibles.
+# -------------------------------------------------------------------
+
+SERVIDORES_OVERPASS = list(C.OVERPASS_URLS)
+
+PAUSA_ENTRE_CONSULTAS = 4
+PAUSA_ENTRE_REINTENTOS = 8
+
+
 def _post(url, query):
     r = requests.post(
         url,
@@ -112,9 +137,12 @@ def _post(url, query):
             "User-Agent": C.USER_AGENT,
             "Accept": "application/json",
         },
-        timeout=max(C.REQUEST_TIMEOUT, 45),
+        timeout=max(C.REQUEST_TIMEOUT, 50),
+        allow_redirects=True,
     )
+
     r.raise_for_status()
+
     return r.json()
 
 
@@ -124,7 +152,9 @@ def _element_to_candidate(el):
 
     return {
         "source": "OpenStreetMap",
-        "source_id": str(el.get("id", "")),
+        "source_id": str(
+            el.get("id", "")
+        ),
         "name": (
             tags.get("name")
             or ""
@@ -189,6 +219,18 @@ def _clave_elemento(el):
     )
 
 
+def _servidores_rotados(indice):
+    if not SERVIDORES_OVERPASS:
+        return []
+
+    posicion = (indice - 1) % len(SERVIDORES_OVERPASS)
+
+    return (
+        SERVIDORES_OVERPASS[posicion:]
+        + SERVIDORES_OVERPASS[:posicion]
+    )
+
+
 def _consultar_con_reintentos(
     query,
     etiqueta,
@@ -197,51 +239,133 @@ def _consultar_con_reintentos(
 ):
     ultimo_error = None
 
-    for intento in range(2):
-        for url in C.OVERPASS_URLS:
-            try:
-                log(
-                    f"[fuente] {etiqueta} "
-                    f"{indice}/{total} "
-                    f"consultando {url} "
-                    f"(intento {intento + 1}/2)"
-                )
+    servidores = _servidores_rotados(indice)
 
-                data = _post(
-                    url,
-                    query,
-                )
-
-                elementos = data.get(
-                    "elements",
-                    [],
-                )
-
-                log(
-                    f"[fuente] {etiqueta} "
-                    f"{indice}/{total}: "
-                    f"{len(elementos)} elementos recibidos"
-                )
-
-                return elementos
-
-            except Exception as exc:
-                ultimo_error = exc
-
-                log(
-                    f"[fuente] {etiqueta} "
-                    f"{indice}/{total} "
-                    f"falló en {url}: {exc}"
-                )
-
-                time.sleep(2)
-
-        if intento == 0:
+    # Primera ronda:
+    # probamos cada servidor una sola vez.
+    for numero, url in enumerate(
+        servidores,
+        start=1,
+    ):
+        try:
             log(
-                f"[fuente] reintentando "
-                f"{etiqueta} {indice}/{total}..."
+                f"[fuente] {etiqueta} "
+                f"{indice}/{total} "
+                f"consultando servidor "
+                f"{numero}/{len(servidores)}: "
+                f"{url}"
             )
-            time.sleep(3)
+
+            data = _post(
+                url,
+                query,
+            )
+
+            elementos = data.get(
+                "elements",
+                [],
+            )
+
+            log(
+                f"[fuente] {etiqueta} "
+                f"{indice}/{total}: "
+                f"{len(elementos)} elementos recibidos"
+            )
+
+            return elementos
+
+        except requests.HTTPError as exc:
+            ultimo_error = exc
+
+            codigo = (
+                exc.response.status_code
+                if exc.response is not None
+                else None
+            )
+
+            log(
+                f"[fuente] {etiqueta} "
+                f"{indice}/{total} "
+                f"falló en {url} "
+                f"(HTTP {codigo}): {exc}"
+            )
+
+            # Un 429 significa que ese servidor pide bajar
+            # el ritmo. No insistimos inmediatamente.
+            if codigo == 429:
+                log(
+                    "[fuente] servidor respondió 429; "
+                    "se continúa con el siguiente servidor."
+                )
+
+            time.sleep(2)
+
+        except Exception as exc:
+            ultimo_error = exc
+
+            log(
+                f"[fuente] {etiqueta} "
+                f"{indice}/{total} "
+                f"falló en {url}: {exc}"
+            )
+
+            time.sleep(2)
+
+    # Segunda oportunidad:
+    #
+    # Solamente hacemos UNA nueva ronda y con una espera previa.
+    # Esto evita el ciclo anterior de 6 intentos consecutivos
+    # sobre los servidores.
+    log(
+        f"[fuente] todos los servidores fallaron para "
+        f"{etiqueta} {indice}/{total}; "
+        f"esperando antes de una segunda ronda..."
+    )
+
+    time.sleep(PAUSA_ENTRE_REINTENTOS)
+
+    for numero, url in enumerate(
+        servidores,
+        start=1,
+    ):
+        try:
+            log(
+                f"[fuente] {etiqueta} "
+                f"{indice}/{total} "
+                f"segunda ronda "
+                f"{numero}/{len(servidores)}: "
+                f"{url}"
+            )
+
+            data = _post(
+                url,
+                query,
+            )
+
+            elementos = data.get(
+                "elements",
+                [],
+            )
+
+            log(
+                f"[fuente] {etiqueta} "
+                f"{indice}/{total}: "
+                f"{len(elementos)} elementos recibidos"
+            )
+
+            return elementos
+
+        except Exception as exc:
+            ultimo_error = exc
+
+            log(
+                f"[fuente] {etiqueta} "
+                f"{indice}/{total} "
+                f"segunda ronda falló en {url}: "
+                f"{exc}"
+            )
+
+            time.sleep(2)
 
     raise RuntimeError(
         f"No se pudo obtener "
@@ -258,7 +382,7 @@ def _mezclar_por_tipo(
     Mezcla los dos grupos en forma alternada.
 
     Esto es importante porque engine.py posteriormente aplica
-    MAX_CANDIDATOS_SCAN. Así los primeros candidatos ya contienen
+    MAX_CANDIDATOS_SCAN. Así los primeros candidatos contienen
     ambos tipos.
     """
 
@@ -270,6 +394,7 @@ def _mezclar_por_tipo(
     )
 
     for i in range(max_len):
+
         if i < len(candidatos_generador):
             resultado.append(
                 candidatos_generador[i]
@@ -291,12 +416,27 @@ def buscar():
 
     errores = []
 
-    total = len(TODAS_LAS_CONSULTAS)
+    total = len(
+        TODAS_LAS_CONSULTAS
+    )
 
     for indice, (grupo, query) in enumerate(
         TODAS_LAS_CONSULTAS,
         start=1,
     ):
+
+        # Pausa entre consultas para reducir 429.
+        if indice > 1:
+            log(
+                f"[fuente] pausa de "
+                f"{PAUSA_ENTRE_CONSULTAS}s "
+                f"antes de la siguiente consulta..."
+            )
+
+            time.sleep(
+                PAUSA_ENTRE_CONSULTAS
+            )
+
         try:
             elementos = _consultar_con_reintentos(
                 query,
@@ -312,6 +452,7 @@ def buscar():
             )
 
             for elemento in elementos:
+
                 clave = _clave_elemento(
                     elemento
                 )
@@ -320,9 +461,13 @@ def buscar():
                     continue
 
                 todos[clave] = elemento
-                destino.append(elemento)
+
+                destino.append(
+                    elemento
+                )
 
         except Exception as exc:
+
             errores.append(
                 {
                     "grupo": grupo,
@@ -332,12 +477,15 @@ def buscar():
             )
 
             log(
-                f"[fuente] consulta {grupo} "
-                f"{indice}/{total} no disponible: "
-                f"{exc}"
+                f"[fuente] consulta "
+                f"{grupo} {indice}/{total} "
+                f"no disponible: {exc}"
             )
 
-    # Convertimos a candidatos.
+    # ---------------------------------------------------------------
+    # Convertimos los elementos OSM a candidatos.
+    # ---------------------------------------------------------------
+
     comercios = [
         _element_to_candidate(el)
         for el in resultados_comercio
@@ -349,6 +497,7 @@ def buscar():
     ]
 
     # Quitamos registros sin nombre.
+
     comercios = [
         x
         for x in comercios
@@ -362,7 +511,14 @@ def buscar():
     ]
 
     # Mezcla deliberada:
-    # generador, comercio, generador, comercio...
+    #
+    # generador
+    # comercio
+    # generador
+    # comercio
+    #
+    # etc.
+
     rows = _mezclar_por_tipo(
         comercios,
         generadores,
@@ -397,3 +553,4 @@ def buscar():
         )
 
     return rows
+```
