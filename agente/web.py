@@ -26,13 +26,6 @@ _busquedas_realizadas = 0
 # EMAIL
 # ============================================================
 
-# IMPORTANTE:
-# No se permite "/" en la parte local.
-# Esto evita falsos positivos como:
-#
-# cdn.jsdelivr.net/npm/photoswipe@5.4...
-#
-# que NO es un email.
 EMAIL_RE = re.compile(
     r"\b[A-Za-z0-9.!#$%&'*+=?^_`{|}~-]+"
     r"@"
@@ -196,19 +189,15 @@ def _email_valido(email):
 
     email = str(email).strip().lower()
 
-    # Nunca aceptar espacios.
     if any(ch.isspace() for ch in email):
         return False
 
-    # Nunca aceptar barras.
     if "/" in email or "\\" in email:
         return False
 
-    # Nunca aceptar query strings o fragmentos.
     if "?" in email or "#" in email:
         return False
 
-    # Validación estructural.
     if not EMAIL_RE.fullmatch(email):
         return False
 
@@ -220,22 +209,18 @@ def _email_valido(email):
     if not local or not dominio:
         return False
 
-    # Límites razonables.
     if len(email) > 254:
         return False
 
     if len(local) > 64:
         return False
 
-    # El dominio debe tener al menos un punto.
     if "." not in dominio:
         return False
 
-    # No permitir puntos consecutivos.
     if ".." in email:
         return False
 
-    # No permitir dominio con guiones incorrectos.
     partes = dominio.split(".")
 
     for parte in partes:
@@ -245,11 +230,9 @@ def _email_valido(email):
         if parte.startswith("-") or parte.endswith("-"):
             return False
 
-    # No aceptar dominios de prueba.
     if dominio in DOMINIOS_EMAIL_DESCARTADOS:
         return False
 
-    # No aceptar extensiones de recursos web.
     if any(dominio.endswith(ext) for ext in EXTENSIONES_DESCARTADAS):
         return False
 
@@ -262,10 +245,8 @@ def _limpiar_email(email):
 
     email = unquote(str(email)).strip().lower()
 
-    # Quitar envolturas habituales.
     email = email.strip(" <>[](){}'\".,;:")
 
-    # Nunca transformar una ruta en email.
     if "/" in email or "\\" in email:
         return ""
 
@@ -281,7 +262,6 @@ def _extraer_emails(texto):
 
     encontrados = []
 
-    # Primero decodificamos entidades HTML.
     texto = unquote(str(texto))
 
     for match in EMAIL_RE.findall(texto):
@@ -299,21 +279,18 @@ def _emails_de_pagina(soup):
     if not soup:
         return encontrados
 
-    # Texto visible.
     texto = soup.get_text(" ", strip=True)
 
     for email in _extraer_emails(texto):
         if email not in encontrados:
             encontrados.append(email)
 
-    # mailto:
     for enlace in soup.find_all("a", href=True):
         href = str(enlace.get("href") or "").strip()
 
         if href.lower().startswith("mailto:"):
             valor = href[7:]
 
-            # El mailto puede contener ?subject=...
             valor = valor.split("?", 1)[0]
 
             for email in _extraer_emails(valor):
@@ -374,7 +351,6 @@ def _identidad_fuerte(c, texto):
     if score >= 0.35:
         return True
 
-    # Si aparece el nombre completo, es una señal fuerte.
     nombre = str(
         c.get("name")
         or c.get("nombre")
@@ -436,11 +412,17 @@ def _enlaces_contacto(soup, base_url):
         "info",
         "informacion",
         "información",
+        "staff",
+        "equipo",
+        "autoridades",
     )
 
     for enlace in soup.find_all("a", href=True):
         href = str(enlace.get("href") or "").strip()
-        texto = _normalizar(enlace.get_text(" ", strip=True))
+
+        texto = _normalizar(
+            enlace.get_text(" ", strip=True)
+        )
 
         combinado = f"{texto} {href.lower()}"
 
@@ -448,9 +430,13 @@ def _enlaces_contacto(soup, base_url):
             try:
                 url = urljoin(base_url, href)
 
-                if url.startswith("http"):
-                    if url not in resultados:
-                        resultados.append(url)
+                if (
+                    url.startswith(("http://", "https://"))
+                    and _dominio(url) == _dominio(base_url)
+                    and url not in resultados
+                ):
+                    resultados.append(url)
+
             except Exception:
                 pass
 
@@ -461,7 +447,9 @@ def _analizar_web(c, url):
     if not url:
         return []
 
-    if not str(url).startswith(("http://", "https://")):
+    if not str(url).startswith(
+        ("http://", "https://")
+    ):
         url = "https://" + str(url).lstrip("/")
 
     response = _get(url)
@@ -481,11 +469,7 @@ def _analizar_web(c, url):
 
     texto = soup.get_text(" ", strip=True)
 
-    # La página debe guardar relación con el candidato.
     if not _identidad_fuerte(c, texto):
-        # Algunas páginas institucionales tienen poco texto visible.
-        # En ese caso aceptamos solamente si el dominio coincide con
-        # el website declarado por el candidato.
         declarado = str(
             c.get("website")
             or (c.get("tags") or {}).get("website")
@@ -502,35 +486,36 @@ def _analizar_web(c, url):
         if email not in encontrados:
             encontrados.append(email)
 
-    # Buscar páginas de contacto si todavía no apareció email.
-    if not encontrados:
-        for contacto_url in _enlaces_contacto(
-            soup,
-            final_url,
+    if encontrados:
+        return encontrados
+
+    for contacto_url in _enlaces_contacto(
+        soup,
+        final_url,
+    ):
+        time.sleep(PAUSA_ENTRE_PAGINAS)
+
+        response_contacto = _get(contacto_url)
+
+        if not response_contacto:
+            continue
+
+        try:
+            soup_contacto = BeautifulSoup(
+                response_contacto.text,
+                "html.parser",
+            )
+        except Exception:
+            continue
+
+        for email in _emails_de_pagina(
+            soup_contacto
         ):
-            time.sleep(PAUSA_ENTRE_PAGINAS)
+            if email not in encontrados:
+                encontrados.append(email)
 
-            response_contacto = _get(contacto_url)
-
-            if not response_contacto:
-                continue
-
-            try:
-                soup_contacto = BeautifulSoup(
-                    response_contacto.text,
-                    "html.parser",
-                )
-            except Exception:
-                continue
-
-            for email in _emails_de_pagina(
-                soup_contacto
-            ):
-                if email not in encontrados:
-                    encontrados.append(email)
-
-            if encontrados:
-                break
+        if encontrados:
+            break
 
     return encontrados
 
@@ -622,33 +607,33 @@ def _consultas_persona(c):
         "titular",
         "director",
         "administrador",
+        "presidente",
+        "secretario",
         "contacto",
     ]
 
     consultas = []
 
-    # Agrupamos los roles para no disparar una consulta por cada uno.
-    roles_texto = " OR ".join(
-        f'"{rol}"'
-        for rol in roles
-    )
-
-    consultas.append(
-        f'"{nombre}" ({roles_texto}) email'
-    )
-
-    consultas.append(
-        f'"{nombre}" ({roles_texto}) correo'
-    )
+    for rol in roles:
+        consultas.append(
+            f'"{nombre}" "{rol}" email'
+        )
 
     if direccion:
-        consultas.append(
-            f'"{nombre}" "{direccion}" ({roles_texto}) email'
+        consultas.extend(
+            [
+                f'"{nombre}" "{direccion}" responsable email',
+                f'"{nombre}" "{direccion}" dueño email',
+                f'"{nombre}" "{direccion}" propietario email',
+            ]
         )
 
     if telefono:
-        consultas.append(
-            f'"{nombre}" "{telefono}" ({roles_texto}) email'
+        consultas.extend(
+            [
+                f'"{nombre}" "{telefono}" responsable email',
+                f'"{nombre}" "{telefono}" dueño email',
+            ]
         )
 
     return consultas
@@ -705,11 +690,16 @@ def _ejecutar_busqueda(c, consulta):
         if not href:
             continue
 
-        titulo = enlace.get_text(" ", strip=True)
+        titulo = enlace.get_text(
+            " ",
+            strip=True,
+        )
 
         descripcion = ""
 
-        p = item.select_one(".b_caption p")
+        p = item.select_one(
+            ".b_caption p"
+        )
 
         if p:
             descripcion = p.get_text(
@@ -731,9 +721,15 @@ def _ejecutar_busqueda(c, consulta):
 
 
 def _resultado_valido(c, resultado):
-    url = str(resultado.get("url") or "")
+    url = str(
+        resultado.get("url")
+        or ""
+    )
 
-    titulo = str(resultado.get("title") or "")
+    titulo = str(
+        resultado.get("title")
+        or ""
+    )
 
     descripcion = str(
         resultado.get("description")
@@ -747,52 +743,114 @@ def _resultado_valido(c, resultado):
     if not dominio:
         return False
 
-    # No usamos resultados de redes sociales como fuente de email.
     if dominio in DOMINIOS_SOCIALES:
         return False
 
-    # Tampoco confiamos en directorios genéricos como identidad final.
     if dominio in DOMINIOS_DIRECTORIOS:
         return False
 
-    # Debe guardar relación con el candidato.
-    if not _identidad_fuerte(c, texto):
+    if not _identidad_fuerte(
+        c,
+        texto,
+    ):
         return False
 
     return True
 
 
+def _extraer_de_resultados(c, resultados):
+    """
+    Revisa resultados públicos relevantes.
+
+    Primero busca el email en el resultado.
+    Si no aparece, entra a la página real y busca
+    emails publicados en ella o en sus páginas de contacto.
+    """
+
+    for resultado in resultados:
+        if not _resultado_valido(
+            c,
+            resultado,
+        ):
+            continue
+
+        texto = " ".join(
+            [
+                str(
+                    resultado.get("title")
+                    or ""
+                ),
+                str(
+                    resultado.get("description")
+                    or ""
+                ),
+                str(
+                    resultado.get("url")
+                    or ""
+                ),
+            ]
+        )
+
+        # Email visible directamente en el resultado.
+        emails = _extraer_emails(texto)
+
+        if emails:
+            return emails
+
+        # Si no está en el resultado,
+        # visitar la página encontrada.
+        url = str(
+            resultado.get("url")
+            or ""
+        ).strip()
+
+        if not url:
+            continue
+
+        emails = _analizar_web(
+            c,
+            url,
+        )
+
+        if emails:
+            return emails
+
+    return []
+
+
 def _buscar_bing(c):
+    # --------------------------------------------------------
+    # PRIMERA ETAPA:
+    # NEGOCIO / ORGANIZACIÓN
+    # --------------------------------------------------------
+
     consultas = _consultas_base(c)
 
-    # Primera etapa: buscar email institucional/comercial.
     for consulta in consultas:
         resultados = _ejecutar_busqueda(
             c,
             consulta,
         )
 
-        for resultado in resultados:
-            texto = " ".join(
-                [
-                    str(resultado.get("title") or ""),
-                    str(resultado.get("description") or ""),
-                    str(resultado.get("url") or ""),
-                ]
-            )
+        emails = _extraer_de_resultados(
+            c,
+            resultados,
+        )
 
-            if not _resultado_valido(
-                c,
-                resultado,
-            ):
-                continue
+        if emails:
+            return emails
 
-            emails = _extraer_emails(texto)
+        if (
+            _busquedas_realizadas
+            >= MAX_BUSQUEDAS_PUBLICAS
+        ):
+            return []
 
-            if emails:
-                return emails
+    # --------------------------------------------------------
+    # SEGUNDA ETAPA:
+    # RESPONSABLE / PERSONA ASOCIADA
+    # --------------------------------------------------------
 
-    # Segunda etapa: buscar personas responsables.
     consultas_persona = _consultas_persona(c)
 
     for consulta in consultas_persona:
@@ -801,25 +859,19 @@ def _buscar_bing(c):
             consulta,
         )
 
-        for resultado in resultados:
-            texto = " ".join(
-                [
-                    str(resultado.get("title") or ""),
-                    str(resultado.get("description") or ""),
-                    str(resultado.get("url") or ""),
-                ]
-            )
+        emails = _extraer_de_resultados(
+            c,
+            resultados,
+        )
 
-            if not _resultado_valido(
-                c,
-                resultado,
-            ):
-                continue
+        if emails:
+            return emails
 
-            emails = _extraer_emails(texto)
-
-            if emails:
-                return emails
+        if (
+            _busquedas_realizadas
+            >= MAX_BUSQUEDAS_PUBLICAS
+        ):
+            return []
 
     return []
 
@@ -829,7 +881,7 @@ def _buscar_bing(c):
 # ============================================================
 
 def _descubrir(c):
-    # Primero buscar directamente en Bing.
+    # Primero buscar públicamente.
     emails = _buscar_bing(c)
 
     if emails:
@@ -872,15 +924,20 @@ def completar(c):
     Intenta completar el email público del candidato.
 
     Orden:
+
       1. email de OSM
       2. email de tags
       3. website declarado
-      4. búsqueda pública web
-      5. búsqueda de responsable/persona asociada
+      4. búsqueda pública del negocio
+      5. visita de páginas encontradas
+      6. búsqueda pública de responsables/personas
+
+    Nunca inventa ni construye emails.
+    Solo acepta direcciones que aparecen públicamente.
     """
 
     # --------------------------------------------------------
-    # 1. EMAIL YA PRESENTE EN EL CANDIDATO
+    # 1. EMAIL YA PRESENTE
     # --------------------------------------------------------
 
     posibles = []
@@ -894,7 +951,9 @@ def completar(c):
 
         if valor:
             posibles.extend(
-                _extraer_emails(str(valor))
+                _extraer_emails(
+                    str(valor)
+                )
             )
 
     tags = c.get("tags") or {}
@@ -908,16 +967,20 @@ def completar(c):
 
             if valor:
                 posibles.extend(
-                    _extraer_emails(str(valor))
+                    _extraer_emails(
+                        str(valor)
+                    )
                 )
 
-    # Validar y deduplicar.
     emails_validos = []
 
     for email in posibles:
         email = _limpiar_email(email)
 
-        if email and email not in emails_validos:
+        if (
+            email
+            and email not in emails_validos
+        ):
             emails_validos.append(email)
 
     if emails_validos:
@@ -927,7 +990,7 @@ def completar(c):
         return c
 
     # --------------------------------------------------------
-    # 2. WEBSITE
+    # 2. WEBSITE DECLARADO
     # --------------------------------------------------------
 
     website = str(
@@ -935,7 +998,10 @@ def completar(c):
         or ""
     ).strip()
 
-    if not website and isinstance(tags, dict):
+    if not website and isinstance(
+        tags,
+        dict,
+    ):
         website = str(
             tags.get("website")
             or tags.get("contact:website")
