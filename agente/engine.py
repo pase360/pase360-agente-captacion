@@ -14,20 +14,44 @@ from .odoo import Odoo
 
 
 def _key(c):
-    e = normalizar_email(c.get("email"))
-    if e:
-        return "email:" + e
+    email = normalizar_email(
+        c.get("email")
+    )
 
-    w = str(
+    if email:
+        return "email:" + email
+
+    website = str(
         c.get("website_final")
         or c.get("website")
         or ""
-    ).lower().strip().rstrip("/")
+    ).strip().lower().rstrip("/")
 
-    if w:
-        return "web:" + w
+    if website:
+        return "web:" + website
 
-    return "name:" + normalizar_texto(c.get("name"))
+    nombre = normalizar_texto(
+        c.get("name")
+    )
+
+    telefono = normalizar_texto(
+        c.get("phone")
+    )
+
+    direccion = normalizar_texto(
+        c.get("direccion")
+    )
+
+    return (
+        "identidad:"
+        + "|".join(
+            [
+                nombre,
+                telefono,
+                direccion,
+            ]
+        )
+    )
 
 
 def _historial():
@@ -43,15 +67,20 @@ def _historial():
 
 
 def _guardar_hist(s):
-    guardar("state.json", s)
+    guardar(
+        "state.json",
+        s,
+    )
 
 
 def _campos_csv(rows):
-    campos_base = [
+    campos = [
         "name",
         "tipo",
         "email",
         "email_source",
+        "email_source_url",
+        "email_confidence",
         "phone",
         "direccion",
         "website",
@@ -65,8 +94,6 @@ def _campos_csv(rows):
         "lon",
     ]
 
-    campos = list(campos_base)
-
     for row in rows:
         for campo in row.keys():
             if campo not in campos:
@@ -76,27 +103,29 @@ def _campos_csv(rows):
 
 
 def _clasificar(c):
-    """
-    Clasifica primero al candidato.
-
-    La búsqueda/enriquecimiento web NO se realiza aquí.
-    Eso se hace solamente después de obtener una clasificación
-    válida de comercio o generador.
-    """
-
-    tipo, motivo = clasificador.clasificar(c)
+    tipo, motivo = (
+        clasificador.clasificar(c)
+    )
 
     c["tipo"] = tipo
     c["clasificacion_motivo"] = motivo
 
-    # Si la clasificación es dudosa, intentar resolverla mediante IA.
-    if tipo == "dudoso" and ia.disponible():
+    if (
+        tipo == "dudoso"
+        and ia.disponible()
+    ):
         try:
-            ai = ia.revisar(c)
+            resultado = ia.revisar(c)
 
-            ai_tipo = ai.get("tipo")
-            ai_confianza = float(
-                ai.get("confianza", 0)
+            ai_tipo = resultado.get(
+                "tipo"
+            )
+
+            confianza = float(
+                resultado.get(
+                    "confianza",
+                    0,
+                )
             )
 
             if (
@@ -106,40 +135,35 @@ def _clasificar(c):
                     "generador",
                     "descartado",
                 }
-                and ai_confianza >= 0.80
+                and confianza >= 0.85
             ):
                 c["tipo"] = ai_tipo
                 c["clasificacion_motivo"] = (
                     "IA: "
                     + str(
-                        ai.get(
+                        resultado.get(
                             "motivo",
                             "",
                         )
                     )
                 )
 
-        except Exception as e:
-            # Si la IA falla, conservamos la clasificación
-            # original. Nunca convertimos un candidato por
-            # error técnico en comercio o generador.
+        except Exception as exc:
             c["clasificacion_motivo"] = (
-                str(c.get("clasificacion_motivo", ""))
+                str(
+                    c.get(
+                        "clasificacion_motivo",
+                        "",
+                    )
+                )
                 + " | IA no disponible: "
-                + str(e)
+                + str(exc)
             )
 
     return c
 
 
 def _enriquecer_email(c):
-    """
-    Busca/completa email únicamente para candidatos que ya
-    fueron clasificados como comercio o generador.
-
-    Esto evita gastar consultas web en descartados o dudosos.
-    """
-
     if c.get("tipo") not in {
         "comercio",
         "generador",
@@ -148,10 +172,11 @@ def _enriquecer_email(c):
 
     try:
         c = web.completar(c)
-    except Exception as e:
-        # Un error de enriquecimiento nunca debe romper
-        # la captación completa.
-        c["email_enrichment_error"] = str(e)
+
+    except Exception as exc:
+        c["email_enrichment_error"] = str(
+            exc
+        )
 
     c["email"] = normalizar_email(
         c.get("email")
@@ -160,17 +185,8 @@ def _enriquecer_email(c):
     return c
 
 
-def capturar():
-    s = _historial()
-    rows = fuentes.buscar()
-
-    nuevos = []
-    seen = set()
-
-    diagnostico = {
-        # Clasificación exclusiva.
-        # La suma de estos valores debe ser igual a
-        # "clasificados".
+def _nuevo_diagnostico():
+    return {
         "por_tipo": {
             "comercio": 0,
             "generador": 0,
@@ -178,319 +194,364 @@ def capturar():
             "descartado": 0,
             "otro": 0,
         },
-
-        # Estado exclusivo.
-        # La suma de estos valores debe ser igual a
-        # "clasificados".
         "por_estado": {
             "listo_para_contactar": 0,
             "sin_email": 0,
             "requiere_decision": 0,
             "descartado": 0,
         },
-
-        # Sin email por tipo.
         "sin_email_por_tipo": {
             "comercio": 0,
             "generador": 0,
             "otro": 0,
         },
-
         "descartados_por_motivo": {},
-
         "generadores_muestra": [],
         "comercios_muestra": [],
         "sin_email_muestra": [],
         "dudosos_muestra": [],
-
         "duplicados": 0,
         "ya_contactados": 0,
         "sin_nombre": 0,
     }
 
-    procesados = rows[: C.MAX_CANDIDATOS_SCAN]
 
-    for c in procesados:
-        k = _key(c)
+def capturar():
+    s = _historial()
+
+    rows = fuentes.buscar()
+
+    diagnostico = _nuevo_diagnostico()
+
+    candidatos = []
+    seen = set()
+
+    # Primero clasificamos todos.
+    for original in rows[
+        : C.MAX_CANDIDATOS_SCAN
+    ]:
+        c = dict(original)
 
         if not c.get("name"):
-            diagnostico["sin_nombre"] += 1
+            diagnostico[
+                "sin_nombre"
+            ] += 1
             continue
 
+        k = _key(c)
+
         if k in seen:
-            diagnostico["duplicados"] += 1
+            diagnostico[
+                "duplicados"
+            ] += 1
             continue
 
         if k in s["contactados"]:
-            diagnostico["ya_contactados"] += 1
+            diagnostico[
+                "ya_contactados"
+            ] += 1
             continue
 
         seen.add(k)
 
-        # ---------------------------------------------------------
-        # 1. CLASIFICAR PRIMERO
-        # ---------------------------------------------------------
-        #
-        # IMPORTANTE:
-        # Todavía NO buscamos email.
-        #
-
         c = _clasificar(c)
 
-        tipo_final = c.get("tipo", "otro")
+        tipo = c.get(
+            "tipo",
+            "otro",
+        )
 
-        if tipo_final not in diagnostico["por_tipo"]:
-            tipo_final = "otro"
-            c["tipo"] = "otro"
+        if tipo not in diagnostico[
+            "por_tipo"
+        ]:
+            tipo = "otro"
+            c["tipo"] = tipo
 
-        diagnostico["por_tipo"][tipo_final] += 1
+        diagnostico[
+            "por_tipo"
+        ][tipo] += 1
 
-        # ---------------------------------------------------------
-        # 2. DESCARTADOS
-        # ---------------------------------------------------------
-
-        if tipo_final == "descartado":
+        if tipo == "descartado":
             c["estado"] = "descartado"
 
-            diagnostico["por_estado"]["descartado"] += 1
+            diagnostico[
+                "por_estado"
+            ]["descartado"] += 1
 
-            motivo_desc = c.get(
+            motivo = c.get(
                 "clasificacion_motivo",
                 "",
             )
 
-            diagnostico["descartados_por_motivo"][
-                motivo_desc
-            ] = (
-                diagnostico["descartados_por_motivo"].get(
-                    motivo_desc,
+            diagnostico[
+                "descartados_por_motivo"
+            ][motivo] = (
+                diagnostico[
+                    "descartados_por_motivo"
+                ].get(
+                    motivo,
                     0,
                 )
                 + 1
             )
 
-            s["descartados"][k] = motivo_desc
+            s["descartados"][k] = motivo
 
-            # No busca email.
-            # No entra como candidato utilizable.
             continue
 
-        # ---------------------------------------------------------
-        # 3. DUDOSOS
-        # ---------------------------------------------------------
-
-        if tipo_final == "dudoso":
-            c["estado"] = "requiere_decision"
-
-            diagnostico["por_estado"][
+        if tipo == "dudoso":
+            c["estado"] = (
                 "requiere_decision"
-            ] += 1
+            )
+
+            diagnostico[
+                "por_estado"
+            ]["requiere_decision"] += 1
 
             if len(
-                diagnostico["dudosos_muestra"]
-            ) < 20:
-                diagnostico["dudosos_muestra"].append(
+                diagnostico[
+                    "dudosos_muestra"
+                ]
+            ) < 30:
+                diagnostico[
+                    "dudosos_muestra"
+                ].append(
                     {
-                        "name": c.get("name"),
-                        "email": c.get("email"),
+                        "name": c.get(
+                            "name"
+                        ),
                         "motivo": c.get(
                             "clasificacion_motivo"
                         ),
                     }
                 )
 
-            # MUY IMPORTANTE:
-            # No hacemos búsqueda web de email para dudosos.
-            nuevos.append(c)
+            candidatos.append(c)
             continue
 
-        # ---------------------------------------------------------
-        # 4. COMERCIO / GENERADOR
-        # ---------------------------------------------------------
-        #
-        # Recién ahora se permite el enriquecimiento web.
-        #
+        candidatos.append(c)
+
+    # ---------------------------------------------------------
+    # AHORA buscamos emails.
+    # ---------------------------------------------------------
+
+    for c in candidatos:
+        if c.get("tipo") not in {
+            "comercio",
+            "generador",
+        }:
+            continue
 
         c = _enriquecer_email(c)
 
-        # ---------------------------------------------------------
-        # 5. MUESTRAS
-        # ---------------------------------------------------------
-
-        if (
-            tipo_final == "generador"
-            and len(
-                diagnostico["generadores_muestra"]
-            ) < 30
-        ):
-            diagnostico["generadores_muestra"].append(
-                {
-                    "name": c.get("name"),
-                    "email": c.get("email"),
-                    "motivo": c.get(
-                        "clasificacion_motivo"
-                    ),
-                }
+        if c.get("email"):
+            c["estado"] = (
+                "listo_para_contactar"
             )
 
-        if (
-            tipo_final == "comercio"
-            and len(
-                diagnostico["comercios_muestra"]
-            ) < 20
-        ):
-            diagnostico["comercios_muestra"].append(
-                {
-                    "name": c.get("name"),
-                    "email": c.get("email"),
-                    "motivo": c.get(
-                        "clasificacion_motivo"
-                    ),
-                }
-            )
+            diagnostico[
+                "por_estado"
+            ]["listo_para_contactar"] += 1
 
-        # ---------------------------------------------------------
-        # 6. ESTADO
-        # ---------------------------------------------------------
-
-        if not c.get("email"):
+        else:
             c["estado"] = "sin_email"
 
-            diagnostico["por_estado"][
-                "sin_email"
-            ] += 1
+            diagnostico[
+                "por_estado"
+            ]["sin_email"] += 1
 
-            if tipo_final in {
+            tipo = c.get(
+                "tipo",
+                "otro",
+            )
+
+            if tipo in {
                 "comercio",
                 "generador",
             }:
-                diagnostico["sin_email_por_tipo"][
-                    tipo_final
-                ] += 1
+                diagnostico[
+                    "sin_email_por_tipo"
+                ][tipo] += 1
 
             if len(
-                diagnostico["sin_email_muestra"]
-            ) < 20:
-                diagnostico["sin_email_muestra"].append(
+                diagnostico[
+                    "sin_email_muestra"
+                ]
+            ) < 30:
+                diagnostico[
+                    "sin_email_muestra"
+                ].append(
                     {
-                        "name": c.get("name"),
-                        "tipo": c.get("tipo"),
+                        "name": c.get(
+                            "name"
+                        ),
+                        "tipo": tipo,
                         "website": (
-                            c.get("website_final")
-                            or c.get("website")
+                            c.get(
+                                "website_final"
+                            )
+                            or c.get(
+                                "website"
+                            )
                         ),
                     }
                 )
 
-        else:
-            c["estado"] = "listo_para_contactar"
+        tipo = c.get("tipo")
 
-            diagnostico["por_estado"][
-                "listo_para_contactar"
-            ] += 1
+        if (
+            tipo == "generador"
+            and len(
+                diagnostico[
+                    "generadores_muestra"
+                ]
+            ) < 30
+        ):
+            diagnostico[
+                "generadores_muestra"
+            ].append(
+                {
+                    "name": c.get(
+                        "name"
+                    ),
+                    "email": c.get(
+                        "email"
+                    ),
+                    "motivo": c.get(
+                        "clasificacion_motivo"
+                    ),
+                }
+            )
 
-        nuevos.append(c)
+        if (
+            tipo == "comercio"
+            and len(
+                diagnostico[
+                    "comercios_muestra"
+                ]
+            ) < 30
+        ):
+            diagnostico[
+                "comercios_muestra"
+            ].append(
+                {
+                    "name": c.get(
+                        "name"
+                    ),
+                    "email": c.get(
+                        "email"
+                    ),
+                    "motivo": c.get(
+                        "clasificacion_motivo"
+                    ),
+                }
+            )
 
-    # -------------------------------------------------------------
-    # CUADRE DE CLASIFICACIÓN
-    # -------------------------------------------------------------
+    # ---------------------------------------------------------
+    # ORDENAR: primero generadores y comercios listos.
+    # ---------------------------------------------------------
 
-    clasificados = sum(
-        diagnostico["por_tipo"].values()
-    )
-
-    estados_clasificados = sum(
-        diagnostico["por_estado"].values()
-    )
-
-    diagnostico["clasificados"] = clasificados
-
-    diagnostico["cuadre"] = {
-        "clasificacion_total": clasificados,
-        "estado_total": estados_clasificados,
-        "cuadra": (
-            clasificados
-            == estados_clasificados
-        ),
-    }
-
-    # -------------------------------------------------------------
-    # ORDEN DE LOS CANDIDATOS
-    # -------------------------------------------------------------
-
-    nuevos.sort(
-        key=lambda x: (
-            x.get("estado")
-            != "listo_para_contactar",
-            x.get("tipo") != "generador",
-            x.get("name", "").lower(),
-        )
-    )
-
-    # Todos los listos detectados.
-    todos_los_listos = [
-        x
-        for x in nuevos
-        if x.get("estado")
+    listos = [
+        c
+        for c in candidatos
+        if c.get("estado")
         == "listo_para_contactar"
     ]
 
-    diagnostico["listos_detectados"] = len(
-        todos_los_listos
+    listos.sort(
+        key=lambda c: (
+            c.get("tipo")
+            != "generador",
+            c.get(
+                "email_confidence",
+                0,
+            ) * -1,
+            normalizar_texto(
+                c.get("name")
+            ),
+        )
     )
 
-    # Máximo de contactos que se seleccionan para
-    # esta ejecución.
-    listos = todos_los_listos[
+    seleccionados = listos[
         : C.META_CONTACTOS
     ]
 
-    diagnostico["listos_seleccionados"] = len(
-        listos
+    diagnostico[
+        "listos_detectados"
+    ] = len(listos)
+
+    diagnostico[
+        "listos_seleccionados"
+    ] = len(seleccionados)
+
+    diagnostico[
+        "listos_comercio"
+    ] = sum(
+        c.get("tipo") == "comercio"
+        for c in seleccionados
     )
 
-    diagnostico["listos_comercio"] = sum(
-        x.get("tipo") == "comercio"
-        for x in listos
+    diagnostico[
+        "listos_generador"
+    ] = sum(
+        c.get("tipo") == "generador"
+        for c in seleccionados
     )
 
-    diagnostico["listos_generador"] = sum(
-        x.get("tipo") == "generador"
-        for x in listos
+    diagnostico[
+        "clasificados"
+    ] = sum(
+        diagnostico["por_tipo"].values()
     )
 
-    # -------------------------------------------------------------
+    estados = sum(
+        diagnostico["por_estado"].values()
+    )
+
+    diagnostico["cuadre"] = {
+        "clasificacion_total":
+            diagnostico["clasificados"],
+        "estado_total":
+            estados,
+        "cuadra":
+            diagnostico["clasificados"]
+            == estados,
+    }
+
+    # ---------------------------------------------------------
     # REPORTES
-    # -------------------------------------------------------------
+    # ---------------------------------------------------------
 
-    report_rows = (
-        listos
+    todos_reportar = (
+        seleccionados
         + [
-            x
-            for x in nuevos
-            if x not in listos
-        ][:300]
+            c
+            for c in candidatos
+            if c not in seleccionados
+        ][:500]
     )
 
     append_csv(
         "captacion.csv",
-        report_rows,
-        _campos_csv(report_rows),
+        todos_reportar,
+        _campos_csv(
+            todos_reportar
+        ),
     )
 
     guardar(
         "candidatos.json",
-        report_rows,
+        todos_reportar,
     )
 
-    # -------------------------------------------------------------
+    # ---------------------------------------------------------
     # ENVÍO
-    # -------------------------------------------------------------
+    # ---------------------------------------------------------
 
     if not C.MODO_PRUEBA:
         odoo = Odoo()
 
-        for c in listos:
+        for c in seleccionados:
             enviar_prospecto(
                 odoo,
                 c,
@@ -502,39 +563,48 @@ def capturar():
             "simulacion_contactos.json",
             [
                 {
-                    "name": c["name"],
-                    "tipo": c["tipo"],
-                    "email": c["email"],
+                    "name": c.get(
+                        "name"
+                    ),
+                    "tipo": c.get(
+                        "tipo"
+                    ),
+                    "email": c.get(
+                        "email"
+                    ),
                 }
-                for c in listos
+                for c in seleccionados
             ],
         )
 
-    # -------------------------------------------------------------
-    # CONTADORES GENERALES
-    # -------------------------------------------------------------
+    diagnostico[
+        "encontrados"
+    ] = len(rows)
 
-    diagnostico["encontrados"] = len(rows)
-
-    diagnostico["procesados"] = len(
-        procesados
+    diagnostico[
+        "procesados"
+    ] = min(
+        len(rows),
+        C.MAX_CANDIDATOS_SCAN,
     )
 
-    diagnostico["nuevos"] = len(nuevos)
+    diagnostico[
+        "nuevos"
+    ] = len(candidatos)
 
-    diagnostico["descartados"] = (
-        diagnostico["por_tipo"]["descartado"]
-    )
+    diagnostico[
+        "descartados"
+    ] = diagnostico[
+        "por_tipo"
+    ]["descartado"]
 
-    diagnostico["excluidos"] = (
+    diagnostico[
+        "excluidos"
+    ] = (
         diagnostico["duplicados"]
         + diagnostico["ya_contactados"]
         + diagnostico["sin_nombre"]
     )
-
-    # -------------------------------------------------------------
-    # GUARDADO
-    # -------------------------------------------------------------
 
     guardar(
         "diagnostico_captacion.json",
@@ -546,103 +616,86 @@ def capturar():
     actividad(
         "captacion",
         encontrados=len(rows),
-        listos=len(listos),
-        nuevos=len(nuevos),
+        listos=len(seleccionados),
+        nuevos=len(candidatos),
     )
-
-    # -------------------------------------------------------------
-    # RESULTADO
-    # -------------------------------------------------------------
 
     return {
         "encontrados": len(rows),
-        "procesados": len(procesados),
-
+        "procesados": diagnostico[
+            "procesados"
+        ],
         "clasificados": diagnostico[
             "clasificados"
         ],
-
-        "nuevos": len(nuevos),
-
-        "listos": len(listos),
-
-        "listos_detectados": diagnostico[
-            "listos_detectados"
-        ],
-
-        "listos_seleccionados": diagnostico[
-            "listos_seleccionados"
-        ],
-
+        "nuevos": len(candidatos),
+        "listos": len(seleccionados),
+        "listos_detectados": len(listos),
+        "listos_seleccionados": len(
+            seleccionados
+        ),
         "listos_comercio": diagnostico[
             "listos_comercio"
         ],
-
         "listos_generador": diagnostico[
             "listos_generador"
         ],
-
         "sin_email": diagnostico[
             "por_estado"
         ]["sin_email"],
-
-        "sin_email_por_tipo": diagnostico[
-            "sin_email_por_tipo"
-        ],
-
+        "sin_email_por_tipo":
+            diagnostico[
+                "sin_email_por_tipo"
+            ],
         "dudosos": diagnostico[
             "por_estado"
         ]["requiere_decision"],
-
         "descartados": diagnostico[
             "por_tipo"
         ]["descartado"],
-
         "duplicados": diagnostico[
             "duplicados"
         ],
-
         "ya_contactados": diagnostico[
             "ya_contactados"
         ],
-
         "sin_nombre": diagnostico[
             "sin_nombre"
         ],
-
         "excluidos": diagnostico[
             "excluidos"
         ],
-
         "por_tipo": diagnostico[
             "por_tipo"
         ],
-
         "por_estado": diagnostico[
             "por_estado"
         ],
-
         "cuadre": diagnostico[
             "cuadre"
         ],
-
-        "generadores_muestra": diagnostico[
-            "generadores_muestra"
-        ],
-
-        "sin_email_muestra": diagnostico[
-            "sin_email_muestra"
-        ],
-
-        "dudosos_muestra": diagnostico[
-            "dudosos_muestra"
-        ],
-
-        "modo_prueba": C.MODO_PRUEBA,
+        "generadores_muestra":
+            diagnostico[
+                "generadores_muestra"
+            ],
+        "sin_email_muestra":
+            diagnostico[
+                "sin_email_muestra"
+            ],
+        "dudosos_muestra":
+            diagnostico[
+                "dudosos_muestra"
+            ],
+        "modo_prueba":
+            C.MODO_PRUEBA,
     }
 
 
-def enviar_prospecto(odoo, c, s):
+def enviar_prospecto(
+    odoo,
+    c,
+    s,
+):
     lead_id = odoo.buscar_lead_email(
         c["email"]
     )
@@ -650,20 +703,25 @@ def enviar_prospecto(odoo, c, s):
     if not lead_id:
         lead_id = odoo.crear_lead(c)
 
-    asunto, cuerpo = correos.invitacion(c)
+    asunto, cuerpo = correos.invitacion(
+        c
+    )
 
-    result = odoo.enviar(
+    resultado = odoo.enviar(
         c["email"],
         asunto,
         cuerpo,
         lead_id,
     )
 
-    s["contactados"][_key(c)] = {
+    s["contactados"][
+        _key(c)
+    ] = {
         "fecha": datetime.now().isoformat(),
         "tipo": c["tipo"],
         "lead_id": lead_id,
-        "mail": result,
+        "mail": resultado,
+        "seguimiento": 0,
     }
 
 
@@ -675,13 +733,15 @@ def preguntas():
         }
 
     s = _historial()
-    created = []
+    creadas = []
 
     for c in cargar(
         "candidatos.json",
         [],
     ):
-        if c.get("estado") != "requiere_decision":
+        if c.get(
+            "estado"
+        ) != "requiere_decision":
             continue
 
         k = _key(c)
@@ -689,25 +749,34 @@ def preguntas():
         if k in s["preguntas"]:
             continue
 
-        result = github_issues.crear_pregunta(
-            c,
-            c.get(
-                "clasificacion_motivo",
-                "clasificación dudosa",
-            ),
+        resultado = (
+            github_issues.crear_pregunta(
+                c,
+                c.get(
+                    "clasificacion_motivo",
+                    "clasificación dudosa",
+                ),
+            )
         )
 
-        if result.get("ok"):
-            s["preguntas"][k] = result.get("url")
-            created.append(
-                result.get("url")
+        if resultado.get("ok"):
+            s["preguntas"][k] = (
+                resultado.get(
+                    "url"
+                )
+            )
+
+            creadas.append(
+                resultado.get(
+                    "url"
+                )
             )
 
     _guardar_hist(s)
 
     return {
-        "creadas": len(created),
-        "urls": created,
+        "creadas": len(creadas),
+        "urls": creadas,
     }
 
 
@@ -720,6 +789,7 @@ def seguimiento():
 
     s = _historial()
     odoo = Odoo()
+
     enviados = 0
 
     for c in cargar(
@@ -727,42 +797,45 @@ def seguimiento():
         [],
     ):
         k = _key(c)
-        info = s["contactados"].get(k)
 
-        if (
-            not info
-            or int(
-                info.get(
-                    "seguimiento",
-                    0,
-                )
-            )
-            >= 2
-        ):
+        info = s[
+            "contactados"
+        ].get(k)
+
+        if not info:
             continue
 
-        try:
-            dias = (
-                datetime.now()
-                - datetime.fromisoformat(
-                    info["fecha"]
-                )
-            ).days
-        except Exception:
-            dias = 999
-
-        n = int(
+        numero = int(
             info.get(
                 "seguimiento",
                 0,
             )
         )
 
+        if numero >= 2:
+            continue
+
+        try:
+            fecha = datetime.fromisoformat(
+                info["fecha"]
+            )
+
+            dias = (
+                datetime.now()
+                - fecha
+            ).days
+
+        except Exception:
+            dias = 999
+
         if (
-            n == 0
+            numero == 0
             and dias < 4
-        ) or (
-            n == 1
+        ):
+            continue
+
+        if (
+            numero == 1
             and dias < 8
         ):
             continue
@@ -777,9 +850,11 @@ def seguimiento():
         if not lead_id:
             continue
 
-        asunto, cuerpo = correos.seguimiento(
-            c,
-            n + 1,
+        asunto, cuerpo = (
+            correos.seguimiento(
+                c,
+                numero + 1,
+            )
         )
 
         odoo.enviar(
@@ -790,13 +865,7 @@ def seguimiento():
         )
 
         info["seguimiento"] = (
-            int(
-                info.get(
-                    "seguimiento",
-                    0,
-                )
-            )
-            + 1
+            numero + 1
         )
 
         enviados += 1
@@ -811,77 +880,76 @@ def seguimiento():
 def reporte():
     s = _historial()
 
-    candidates = cargar(
+    candidatos = cargar(
         "candidatos.json",
         [],
     )
 
-    result = {
-        "modo_prueba": C.MODO_PRUEBA,
-
-        "candidatos_guardados": len(
-            candidates
-        ),
-
-        "contactados_historicos": len(
-            s["contactados"]
-        ),
-
-        "preguntas_creadas": len(
-            s["preguntas"]
-        ),
-
-        "listos_ultimo_scan": sum(
-            x.get("estado")
-            == "listo_para_contactar"
-            for x in candidates
-        ),
-
-        "sin_email_ultimo_scan": sum(
-            x.get("estado")
-            == "sin_email"
-            for x in candidates
-        ),
-
-        "dudosos_ultimo_scan": sum(
-            x.get("estado")
-            == "requiere_decision"
-            for x in candidates
-        ),
-
-        "descartados_ultimo_scan": sum(
-            x.get("estado")
-            == "descartado"
-            for x in candidates
-        ),
+    resultado = {
+        "modo_prueba":
+            C.MODO_PRUEBA,
+        "candidatos_guardados":
+            len(candidatos),
+        "contactados_historicos":
+            len(
+                s["contactados"]
+            ),
+        "preguntas_creadas":
+            len(
+                s["preguntas"]
+            ),
+        "listos_ultimo_scan":
+            sum(
+                c.get("estado")
+                == "listo_para_contactar"
+                for c in candidatos
+            ),
+        "sin_email_ultimo_scan":
+            sum(
+                c.get("estado")
+                == "sin_email"
+                for c in candidatos
+            ),
+        "dudosos_ultimo_scan":
+            sum(
+                c.get("estado")
+                == "requiere_decision"
+                for c in candidatos
+            ),
+        "descartados_ultimo_scan":
+            sum(
+                c.get("estado")
+                == "descartado"
+                for c in candidatos
+            ),
     }
 
     guardar(
         "reporte.json",
-        result,
+        resultado,
     )
 
-    return result
+    return resultado
 
 
 def diagnostico():
-    out = {}
+    resultado = {}
 
     try:
         rows = fuentes.buscar()
 
-        out["osm"] = {
+        resultado["osm"] = {
             "ok": True,
             "lugares": len(rows),
         }
 
-    except Exception as e:
-        out["osm"] = {
+    except Exception as exc:
+        resultado["osm"] = {
             "ok": False,
-            "error": str(e),
+            "error": str(exc),
         }
 
-    out["gemini"] = {
+    resultado["gemini"] = {
         "ok": ia.disponible(),
         "configurado": bool(
             C.GEMINI_API_KEY
@@ -897,33 +965,37 @@ def diagnostico():
         ]
     ):
         try:
-            out["odoo"] = {
+            resultado["odoo"] = {
                 "ok": True,
                 "usuario": Odoo().test(),
             }
 
-        except Exception as e:
-            out["odoo"] = {
+        except Exception as exc:
+            resultado["odoo"] = {
                 "ok": False,
-                "error": str(e),
+                "error": str(exc),
             }
 
     else:
-        out["odoo"] = {
+        resultado["odoo"] = {
             "ok": False,
-            "error": "faltan secrets de Odoo",
+            "configurado": False,
         }
 
-    out["modo_prueba"] = C.MODO_PRUEBA
-
-    out["web"] = {
-        "comercio": C.WEB_COMERCIO,
-        "generador": C.WEB_GENERADOR,
-    }
-
-    guardar(
-        "diagnostico.json",
-        out,
+    resultado["modo_prueba"] = (
+        C.MODO_PRUEBA
     )
 
-    return out
+    resultado["meta_contactos"] = (
+        C.META_CONTACTOS
+    )
+
+    resultado["url_comercio"] = (
+        C.WEB_COMERCIO
+    )
+
+    resultado["url_generador"] = (
+        C.WEB_GENERADOR
+    )
+
+    return resultado
