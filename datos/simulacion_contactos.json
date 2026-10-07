@@ -1,10 +1,5 @@
 [
   {
-    "name": "CBA X Escalada",
-    "tipo": "generador",
-    "email": "programa.cbax@gmail.com"
-  },
-  {
     "name": "Club Milanesa",
     "tipo": "generador",
     "email": "info@elclubdelamilanesa.com"
@@ -40,16 +35,6 @@
     "email": "bundler=rspack@1.6.8"
   },
   {
-    "name": "Dinosaurio Mall",
-    "tipo": "comercio",
-    "email": "info@grupodinosaurio.com"
-  },
-  {
-    "name": "Fabrica Pc",
-    "tipo": "comercio",
-    "email": "rvlevet@gmail.com"
-  },
-  {
     "name": "Farmacia Juarez Ruffino IV",
     "tipo": "comercio",
     "email": "hola@farmaciajuarezruffino.com"
@@ -65,26 +50,6 @@
     "email": "info@incutex.com.ar"
   },
   {
-    "name": "Manifesto",
-    "tipo": "comercio",
-    "email": "info@manifesto.com.ar"
-  },
-  {
-    "name": "Marozzi distribuidora",
-    "tipo": "comercio",
-    "email": "ventas@bateriasmarozzi.com.ar"
-  },
-  {
-    "name": "mini Super",
-    "tipo": "comercio",
-    "email": "minisuperas@gmail.com"
-  },
-  {
-    "name": "Quimica Halac",
-    "tipo": "comercio",
-    "email": "info@quimicahalac.com.ar"
-  },
-  {
     "name": "Rapanui",
     "tipo": "comercio",
     "email": "contacto@rapanui.com.ar"
@@ -93,11 +58,6 @@
     "name": "Sanatorio Allende",
     "tipo": "comercio",
     "email": "atpacientecerro@sanatorioallende.com"
-  },
-  {
-    "name": "Sex Cordoba Shop",
-    "tipo": "comercio",
-    "email": "info@sexcordobashop.com.ar"
   },
   {
     "name": "Starbucks",
