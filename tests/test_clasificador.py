@@ -41,7 +41,7 @@ class TestClasificador(unittest.TestCase):
         self.assertEqual(clasificar(c)[0], "descartado")
 
     def test_escuela_identificada_por_tag_descartada(self):
-        c = {"name":"Centro Educativo San Martín","tags":{"amenity":"school"}}
+        c = {"name":"San Martín","tags":{"amenity":"school"}}
         self.assertEqual(clasificar(c)[0], "descartado")
 
     def test_colegio_profesional_sigue_como_generador(self):
