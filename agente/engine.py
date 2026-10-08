@@ -128,11 +128,15 @@ def _clasificar(c):
                 )
             )
 
+            # La IA puede resolver casos dudosos de comercio o descarte,
+            # pero NO puede convertir una organización dudosa en generador
+            # sin evidencia determinística suficiente. Esto evita falsos
+            # generadores como fundaciones, capillas, organismos públicos,
+            # asociaciones genéricas o similares.
             if (
                 ai_tipo
                 in {
                     "comercio",
-                    "generador",
                     "descartado",
                 }
                 and confianza >= 0.85
