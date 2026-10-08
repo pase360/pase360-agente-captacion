@@ -257,10 +257,33 @@ def capturar():
 
     diagnostico = _nuevo_diagnostico()
 
+    # IMPORTANTE: fuentes.buscar() devuelve primero muchos comercios
+    # de OSM. Si cortamos las primeras 1000 filas sin ordenarlas,
+    # los generadores quedan fuera del análisis y del enriquecimiento.
+    # Priorizamos fuentes explícitas de generadores antes de aplicar
+    # el límite de escaneo; luego comercios con email y demás comercios.
+    def _prioridad_captacion(candidato):
+        fuente = str(candidato.get("source") or "").lower()
+        grupo = str(candidato.get("grupo_fuente") or "").lower()
+        tipo_fuente = (
+            grupo == "generador"
+            or fuente.startswith("generadores_")
+        )
+        tiene_email = bool(
+            normalizar_email(candidato.get("email"))
+        )
+        return (
+            0 if tipo_fuente else 1,
+            0 if tiene_email else 1,
+            normalizar_texto(candidato.get("name")),
+        )
+
+    rows = sorted(rows, key=_prioridad_captacion)
+
     candidatos = []
     seen = set()
 
-    # Primero clasificamos todos.
+    # Primero clasificamos todos, después enriquecemos generadores primero.
     for original in rows[
         : C.MAX_CANDIDATOS_SCAN
     ]:
