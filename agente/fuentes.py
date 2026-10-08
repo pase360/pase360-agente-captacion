@@ -77,19 +77,6 @@ CONSULTAS = [
     # --------------------------------------------------------
 
     (
-        "generadores_asociaciones",
-        """
-        [out:json][timeout:30];
-        (
-          nwr["office"="association"]["name"]({bbox});
-          nwr["office"="foundation"]["name"]({bbox});
-        );
-        out tags center;
-        """,
-        "generador",
-    ),
-
-    (
         "generadores_clubes",
         """
         [out:json][timeout:30];
@@ -169,17 +156,6 @@ CONSULTAS = [
         "generador",
     ),
 
-    (
-        "generadores_sociales",
-        """
-        [out:json][timeout:30];
-        (
-          nwr["name"~"centro vecinal|centro barrial|centro comunitario|centro de jubilados|centro de pensionados|sociedad de fomento|asociacion civil|asociación civil|fundacion|fundación|federacion|federación|confederacion|confederación",i]({bbox});
-        );
-        out tags center;
-        """,
-        "generador",
-    ),
 ]
 
 
