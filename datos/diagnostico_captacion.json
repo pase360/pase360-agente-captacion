@@ -1,30 +1,40 @@
 {
   "por_tipo": {
-    "comercio": 939,
-    "generador": 1,
-    "dudoso": 40,
-    "descartado": 16,
+    "comercio": 904,
+    "generador": 3,
+    "dudoso": 76,
+    "descartado": 15,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 73,
-    "sin_email": 867,
-    "requiere_decision": 40,
-    "descartado": 16
+    "listo_para_contactar": 65,
+    "sin_email": 842,
+    "requiere_decision": 76,
+    "descartado": 15
   },
   "sin_email_por_tipo": {
-    "comercio": 867,
-    "generador": 0,
+    "comercio": 840,
+    "generador": 2,
     "otro": 0
   },
   "descartados_por_motivo": {
-    "Institución educativa": 16
+    "Institución educativa": 15
   },
   "generadores_muestra": [
     {
       "name": "Club Universitario de Córdoba",
       "email": "administracion@clubuniversitariocba.com",
       "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
+      "email": "",
+      "motivo": "Organización con capacidad de agrupar beneficiarios"
+    },
+    {
+      "name": "Semacor - Mutual de SubOficiales del Ejercito",
+      "email": "",
+      "motivo": "Organización con capacidad de agrupar beneficiarios"
     }
   ],
   "comercios_muestra": [
@@ -181,152 +191,152 @@
   ],
   "sin_email_muestra": [
     {
+      "name": "Vea",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
+      "name": "Hipermercado La Anonima",
+      "tipo": "comercio",
+      "website": ""
+    },
+    {
       "name": "Del Sol",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Strega",
+      "name": "Las mejores del mundo",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Milanesas del Mariscal",
+      "name": "Equus",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Saint Andrews",
+      "name": "Electronia",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Bonanza",
+      "name": "Disco",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Mostachis",
+      "name": "Del Pilar",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Campestre",
+      "name": "Pafua",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "icecream",
+      "name": "Disco",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Nueva Córdoba",
+      "name": "Buenos Días",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Aquarius",
+      "name": "Todo Suspensión",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Luis Darío garcia",
+      "name": "El Sotano",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Del sanatorio",
+      "name": "El Sotano",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Ecco Emergencia y prevencion",
+      "name": "Supermercado La Anonima Poeta Lugones",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Buenos Aires",
+      "name": "Supermercado chino",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Vermouth",
+      "name": "Black sheep",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Longo",
+      "name": "Renault Minuto",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Cipe",
+      "name": "Cordiez",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "McDonald's",
+      "name": "Dinosaurio",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Burger King",
+      "name": "Lave-Rap",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Borocco",
+      "name": "Don Paco",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Wilson",
+      "name": "Embragues Córdoba",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Influencias",
+      "name": "Piaccere",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Marconi",
+      "name": "Ones",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Bongó Club Saldan",
+      "name": "Trezzeri",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Mariachi",
+      "name": "Los Kane",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "El Ruedo",
+      "name": "Alejandra",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Farmacia Estrella",
+      "name": "Lucho",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Comedor",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Patio de Comidas Hiper Libertad",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Havanna",
+      "name": "Conte Motos",
       "tipo": "comercio",
       "website": ""
     }
@@ -453,22 +463,22 @@
       "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     }
   ],
-  "duplicados": 4,
+  "duplicados": 2,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "listos_detectados": 73,
-  "listos_seleccionados": 73,
-  "listos_comercio": 72,
+  "listos_detectados": 65,
+  "listos_seleccionados": 65,
+  "listos_comercio": 64,
   "listos_generador": 1,
-  "clasificados": 996,
+  "clasificados": 998,
   "cuadre": {
-    "clasificacion_total": 996,
-    "estado_total": 996,
+    "clasificacion_total": 998,
+    "estado_total": 998,
     "cuadra": true
   },
-  "encontrados": 3037,
+  "encontrados": 3038,
   "procesados": 1000,
-  "nuevos": 980,
-  "descartados": 16,
-  "excluidos": 4
+  "nuevos": 983,
+  "descartados": 15,
+  "excluidos": 2
 }
