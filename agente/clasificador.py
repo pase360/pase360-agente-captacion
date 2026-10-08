@@ -11,24 +11,13 @@ GENERADOR_FUERTE = [
     "sindicato",
     "sindicatos",
     "gremio",
-    "gremial",
     "gremios",
     "union de trabajadores",
     "unión de trabajadores",
     "mutual",
     "mutualidad",
-    "federacion",
-    "federación",
-    "asociacion civil",
-    "asociación civil",
-    "asociacion profesional",
-    "asociación profesional",
-    "asociacion de profesionales",
-    "asociación de profesionales",
     "cooperativa",
     "cooperativas",
-    "fundacion",
-    "fundación",
 ]
 
 
@@ -649,36 +638,13 @@ def _es_instalacion_deportiva(c):
 def _tipo_por_tags(c):
     tags = _tags(c)
 
-    # Comercio primero.
+    # Solo tags que por sí mismos representan una actividad
+    # comercial/servicio. No convertimos asociaciones genéricas
+    # en generadores automáticamente.
     if _es_comercio_por_tags(c):
         return (
             "comercio",
             "OSM identifica actividad comercial o de servicios",
-        )
-
-    if tags.get("club"):
-        return (
-            "generador",
-            "OSM identifica una organización tipo club",
-        )
-
-    if tags.get("amenity") in {
-        "social_centre",
-        "community_centre",
-        "association",
-    }:
-        return (
-            "generador",
-            "OSM identifica una organización social/comunitaria",
-        )
-
-    if tags.get("office") in {
-        "association",
-        "ngo",
-    }:
-        return (
-            "generador",
-            "OSM identifica una asociación u organización",
         )
 
     return (
@@ -792,8 +758,8 @@ def clasificar(c):
 
     if _es_centro_social(c):
         return (
-            "generador",
-            "Centro vecinal, jubilados u organización social",
+            "dudoso",
+            "Organización social: no alcanza evidencia para asumir que genera beneficios",
         )
 
     # --------------------------------------------------------
@@ -802,8 +768,8 @@ def clasificar(c):
 
     if _es_asociacion_con_miembros(c):
         return (
-            "generador",
-            "Asociación con miembros/afiliados identificados",
+            "dudoso",
+            "Asociación con miembros: requiere validación humana antes de contactar",
         )
 
     # --------------------------------------------------------
