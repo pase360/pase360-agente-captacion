@@ -223,6 +223,31 @@ PALABRAS_COMERCIO = [
 
 
 # ============================================================
+# ENTIDADES FUERA DEL PÚBLICO OBJETIVO
+# ============================================================
+
+ENTIDADES_EXCLUIDAS = [
+    "capilla",
+    "parroquia",
+    "iglesia",
+    "templo",
+    "consulado",
+    "embajada",
+    "ministerio",
+    "municipalidad",
+    "secretaria de gobierno",
+    "secretaría de gobierno",
+    "organismo publico",
+    "organismo público",
+    "museo",
+    "biblioteca publica",
+    "biblioteca pública",
+    "centro de investigacion",
+    "centro de investigación",
+]
+
+
+# ============================================================
 # NO GENERADORES
 # ============================================================
 
@@ -235,6 +260,13 @@ EDUCACION = [
     "colegio público",
     "instituto educativo",
     "instituto educacional",
+    "instituto privado",
+    "instituto secundario",
+    "instituto primario",
+    "colegio nacional",
+    "escuela tecnica",
+    "escuela técnica",
+    "ipet",
     "jardin de infantes",
     "jardín de infantes",
     "jardin maternal",
@@ -675,7 +707,17 @@ def clasificar(c):
         )
 
     # --------------------------------------------------------
-    # 1. EDUCACIÓN
+    # 1. ENTIDADES QUE NO DEBEN RECIBIR INVITACIÓN
+    # --------------------------------------------------------
+
+    if _contiene(texto, ENTIDADES_EXCLUIDAS):
+        return (
+            "descartado",
+            "Entidad fuera del público objetivo de Pase 360",
+        )
+
+    # --------------------------------------------------------
+    # 2. EDUCACIÓN
     # --------------------------------------------------------
 
     if _es_educacion(c):
