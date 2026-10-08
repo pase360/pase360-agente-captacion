@@ -40,5 +40,13 @@ class TestClasificador(unittest.TestCase):
         c = {"name":"Instituto Privado Deán Funes","tags":{"amenity":"school"}}
         self.assertEqual(clasificar(c)[0], "descartado")
 
+    def test_escuela_identificada_por_tag_descartada(self):
+        c = {"name":"Centro Educativo San Martín","tags":{"amenity":"school"}}
+        self.assertEqual(clasificar(c)[0], "descartado")
+
+    def test_colegio_profesional_sigue_como_generador(self):
+        c = {"name":"Colegio de Abogados de Córdoba","tags":{"office":"association"}}
+        self.assertEqual(clasificar(c)[0], "generador")
+
 if __name__ == "__main__":
     unittest.main()
