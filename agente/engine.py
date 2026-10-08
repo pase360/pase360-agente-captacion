@@ -54,6 +54,27 @@ def _key(c):
     )
 
 
+def _clave_identidad_estable(c):
+    """Clave estable aunque el enriquecimiento encuentre un email nuevo."""
+    source_id = str(c.get("source_id") or "").strip().lower()
+    if source_id:
+        return "source:" + source_id
+
+    website = str(
+        c.get("website_final")
+        or c.get("website")
+        or ""
+    ).strip().lower().rstrip("/")
+    if website:
+        return "web:" + website
+
+    return "identidad:" + "|".join([
+        normalizar_texto(c.get("name")),
+        normalizar_texto(c.get("phone")),
+        normalizar_texto(c.get("direccion")),
+    ])
+
+
 def _historial():
     s = cargar(
         "state.json",
@@ -101,6 +122,13 @@ def _sincronizar_decisiones(s):
             decision = ""
         if decision in {"comercio", "generador", "descartado"}:
             decisiones[clave] = decision
+            # Guardar también una clave que no dependa del email descubierto.
+            base = cargar("candidatos.json", [])
+            if isinstance(base, list):
+                for candidato in base:
+                    if isinstance(candidato, dict) and _key(candidato) == clave:
+                        decisiones[_clave_identidad_estable(candidato)] = decision
+                        break
             actualizadas += 1
 
     if actualizadas:
@@ -109,7 +137,11 @@ def _sincronizar_decisiones(s):
 
 
 def _aplicar_decision_humana(c, s):
-    decision = s.get("decisiones", {}).get(_key(c))
+    decisiones = s.get("decisiones", {})
+    decision = (
+        decisiones.get(_key(c))
+        or decisiones.get(_clave_identidad_estable(c))
+    )
     if decision not in {"comercio", "generador", "descartado"}:
         return c
     c["tipo"] = decision
@@ -853,8 +885,13 @@ def preguntas():
             continue
 
         k = _key(c)
+        clave_estable = _clave_identidad_estable(c)
 
-        if k in s["preguntas"]:
+        if (
+            k in s["preguntas"]
+            or k in s["decisiones"]
+            or clave_estable in s["decisiones"]
+        ):
             continue
 
         resultado = (
