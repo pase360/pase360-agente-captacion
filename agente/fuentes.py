@@ -133,6 +133,18 @@ CONSULTAS = [
     ),
 
     (
+        "generadores_cajas_profesionales",
+        """
+        [out:json][timeout:30];
+        (
+          nwr["name"~"caja de abogados|caja de profesionales|caja de previsión de abogados|caja de prevision de abogados|caja previsional de profesionales",i]({bbox});
+        );
+        out tags center;
+        """,
+        "generador",
+    ),
+
+    (
         "generadores_profesionales",
         """
         [out:json][timeout:30];
@@ -149,7 +161,7 @@ CONSULTAS = [
         """
         [out:json][timeout:30];
         (
-          nwr["name"~"club deportivo|club social|club de futbol|club de fútbol|club de rugby|club de hockey|club de basquet|club de básquet|jockey club|club atletico|club atlético|liga deportiva|federacion deportiva|federación deportiva",i]({bbox});
+          nwr["name"~"club deportivo|club social|club de futbol|club de fútbol|club de rugby|club de hockey|club de basquet|club de básquet|jockey club|club atletico|club atlético|asociacion deportiva|asociación deportiva|asociacion de futbol|asociación de fútbol|federacion deportiva|federación deportiva|federacion de futbol|federación de fútbol|liga deportiva|liga de futbol|liga de fútbol|entidad deportiva|entidad deportiva y social|asociacion atletica|asociación atlética|asociacion de atletismo|asociación de atletismo",i]({bbox});
         );
         out tags center;
         """,
