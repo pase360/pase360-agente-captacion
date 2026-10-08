@@ -575,7 +575,7 @@ def capturar():
 
     guardar(
         "candidatos.json",
-        todos_reportar,
+        _fusionar_base_candidatos(candidatos),
     )
 
     # ---------------------------------------------------------
