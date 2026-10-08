@@ -24,6 +24,18 @@ class TestClasificador(unittest.TestCase):
     def test_comercio(self):
         c = {"name":"Panadería Córdoba","tags":{"shop":"bakery"}}
         self.assertEqual(clasificar(c)[0], "comercio")
+
+    def test_club_de_la_milanesa_es_comercio(self):
+        self.assertEqual(
+            clasificar({"name": "Club de la Milanesa"})[0],
+            "comercio",
+        )
+
+    def test_sushiclub_es_comercio(self):
+        self.assertEqual(
+            clasificar({"name": "SushiClub"})[0],
+            "comercio",
+        )
     def test_exclusion(self):
         c = {"name":"Parking Centro","tags":{"amenity":"parking"}}
         self.assertEqual(clasificar(c)[0], "descartado")
