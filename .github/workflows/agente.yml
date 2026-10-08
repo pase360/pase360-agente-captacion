@@ -1,6 +1,9 @@
 name: Pase 360 - Agente
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
     inputs:
       accion:
@@ -31,7 +34,23 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  pruebas:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v5
+      - name: Python 3.12
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+      - name: Ejecutar pruebas automáticas
+        run: python -m unittest discover -s tests -v
+
   ejecutar:
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     env:
       ODOO_URL: ${{ secrets.ODOO_URL }}
