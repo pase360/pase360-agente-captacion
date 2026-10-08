@@ -126,7 +126,13 @@ def _sincronizar_decisiones(s):
             base = cargar("candidatos.json", [])
             if isinstance(base, list):
                 for candidato in base:
-                    if isinstance(candidato, dict) and _key(candidato) == clave:
+                    if (
+                        isinstance(candidato, dict)
+                        and (
+                            _key(candidato) == clave
+                            or _clave_identidad_estable(candidato) == clave
+                        )
+                    ):
                         decisiones[_clave_identidad_estable(candidato)] = decision
                         break
             actualizadas += 1
