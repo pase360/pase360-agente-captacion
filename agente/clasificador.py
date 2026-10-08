@@ -646,9 +646,6 @@ def _es_club_deportivo(c):
     if tags.get("club") in {
         "sport",
         "sports",
-        "society",
-        "association",
-        "club",
     }:
         return True
 
@@ -741,6 +738,31 @@ def clasificar(c):
     # --------------------------------------------------------
     # 1. ENTIDADES QUE NO DEBEN RECIBIR INVITACIÓN
     # --------------------------------------------------------
+
+    tags = _tags(c)
+
+    # Excluir por etiqueta OSM aunque el nombre sea genérico o no tenga
+    # palabras como "iglesia", "consulado" o "ministerio".
+    if (
+        tags.get("amenity") == "place_of_worship"
+        or tags.get("office") in {
+            "diplomatic",
+            "government",
+            "administrative",
+        }
+        or tags.get("government")
+        or tags.get("building") in {
+            "church",
+            "chapel",
+            "temple",
+            "mosque",
+            "synagogue",
+        }
+    ):
+        return (
+            "descartado",
+            "Entidad religiosa o gubernamental excluida por etiqueta",
+        )
 
     if _contiene(texto, ENTIDADES_EXCLUIDAS):
         return (
