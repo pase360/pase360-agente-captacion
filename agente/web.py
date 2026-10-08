@@ -824,7 +824,9 @@ def _buscar_bing(c):
     # NEGOCIO / ORGANIZACIÓN
     # --------------------------------------------------------
 
-    consultas = _consultas_base(c)
+    # Cuatro consultas institucionales/comerciales bien dirigidas como máximo.
+    # Evita agotar el presupuesto global de búsquedas en un solo candidato.
+    consultas = _consultas_base(c)[:4]
 
     for consulta in consultas:
         resultados = _ejecutar_busqueda(
