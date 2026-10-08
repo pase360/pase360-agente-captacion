@@ -45,6 +45,7 @@ jobs:
       OWNER_EMAIL: ${{ secrets.OWNER_EMAIL }}
       SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
       MODO_PRUEBA: ${{ secrets.MODO_PRUEBA }}
+      PERMITIR_ENVIO_REAL: ${{ secrets.PERMITIR_ENVIO_REAL }}
       META_CONTACTOS: ${{ secrets.META_CONTACTOS }}
       MAX_CANDIDATOS_SCAN: ${{ secrets.MAX_CANDIDATOS_SCAN }}
       GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
