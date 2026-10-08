@@ -1,342 +1,332 @@
 {
   "por_tipo": {
-    "comercio": 904,
-    "generador": 3,
-    "dudoso": 76,
-    "descartado": 15,
+    "comercio": 939,
+    "generador": 1,
+    "dudoso": 40,
+    "descartado": 16,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 65,
-    "sin_email": 842,
-    "requiere_decision": 76,
-    "descartado": 15
+    "listo_para_contactar": 73,
+    "sin_email": 867,
+    "requiere_decision": 40,
+    "descartado": 16
   },
   "sin_email_por_tipo": {
-    "comercio": 840,
-    "generador": 2,
+    "comercio": 867,
+    "generador": 0,
     "otro": 0
   },
   "descartados_por_motivo": {
-    "Institución educativa": 15
+    "Institución educativa": 16
   },
   "generadores_muestra": [
     {
       "name": "Club Universitario de Córdoba",
       "email": "administracion@clubuniversitariocba.com",
       "motivo": "Club o institución deportiva identificada"
-    },
-    {
-      "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
-      "email": "",
-      "motivo": "Organización con capacidad de agrupar beneficiarios"
-    },
-    {
-      "name": "Semacor - Mutual de SubOficiales del Ejercito",
-      "email": "",
-      "motivo": "Organización con capacidad de agrupar beneficiarios"
     }
   ],
   "comercios_muestra": [
     {
-      "name": "mini Super",
-      "email": "minisuperas@gmail.com",
+      "name": "#Lomo",
+      "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
-      "name": "Hotel Garden",
-      "email": "reservas@hotelgarden.com.ar",
-      "motivo": "Actividad comercial/servicio identificada por nombre"
-    },
-    {
-      "name": "Café Martínez",
-      "email": "cordoba@cafemartinez.com.ar",
+      "name": "100x100 Lomo",
+      "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
-      "name": "Global Vip Transfer S.A.",
-      "email": "reservas@global-vip-transfer.com",
-      "motivo": "Actividad comercial/servicio identificada por nombre"
-    },
-    {
-      "name": "Starbucks",
-      "email": "info@starbucks.com.ar",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "SushiClub",
-      "email": "contacto@sushiclub.com.ar",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Quimica Halac",
-      "email": "info@quimicahalac.com.ar",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Los Monos",
-      "email": "cristiancabanillas@hotmail.com",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Marozzi distribuidora",
-      "email": "ventas@bateriasmarozzi.com.ar",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Fabrica Pc",
-      "email": "rvlevet@gmail.com",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Gestor de Cordoba. Autos. Motos. Gonzalo 3512205097",
-      "email": "santinogigena@gmail.com",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "ATLARES Crowdfunding Bitcoin & Networking",
-      "email": "info@atlares.com",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Deportes Iguazu",
-      "email": "deportesiguazu@gmail.com",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Poeta Soho",
-      "email": "poetasoho@gmail.com",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Catalina Calzados",
-      "email": "catalinacalzados@outlook.com.ar",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Chevromaxs",
-      "email": "chevromaxs@gmail.com",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Farmacia Pedernera",
-      "email": "pedernerafarmacia@gmail.com",
+      "name": "107 Emergencias Médicas Municipal",
+      "email": "",
       "motivo": "Servicio sanitario/comercial aunque pertenezca a una organización"
     },
     {
-      "name": "Virmanic SA",
-      "email": "jvalles@virmanicsa.com",
+      "name": "5 elementos",
+      "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
-      "name": "Librería Blackpool",
-      "email": "blackpool@arnet.com.ar",
+      "name": "A Naselli",
+      "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
-      "name": "Venex Computacion",
-      "email": "consultas@venexcomputacion.com",
+      "name": "A&M",
+      "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
-      "name": "Paseo La Toscana",
-      "email": "administracion@paseolatoscana.com",
+      "name": "Acapulco",
+      "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
-      "name": "Las 2 Hermanas",
-      "email": "librerialasdoshermanas@gmail.com",
+      "name": "Activar",
+      "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
-      "name": "Imprenta Arguello",
-      "email": "laimprenta.arguello@gmail.com",
+      "name": "Actron",
+      "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
-      "name": "Olmedo Odontología & Estética",
-      "email": "odontologiayestetica.cba@gmail.com",
+      "name": "Agro veterinaria Fioreti",
+      "email": "",
       "motivo": "Servicio sanitario/comercial aunque pertenezca a una organización"
     },
     {
-      "name": "Centro para la salud Integral de la Mujer",
-      "email": "sacra@sacracordoba.com.ar",
+      "name": "Al Corta",
+      "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
-      "name": "Roma Motos",
-      "email": "info@romamotos.com.ar",
+      "name": "ALB",
+      "email": "ventas@albamoblamientos.com.ar",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
-      "name": "Szumik",
-      "email": "info@szumik.com.ar",
+      "name": "Alción",
+      "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
-      "name": "Maestre",
-      "email": "info@maestreiluminacion.com.ar",
+      "name": "Alcorta",
+      "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
-      "name": "RentAuto Atgentina",
-      "email": "info@rentautoargentina.com.ar",
+      "name": "Alem",
+      "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
-      "name": "Torralba",
-      "email": "info@torralba.com.ar",
+      "name": "Alemana",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Algo Light",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Alma casa vegana",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Alma Dórica",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "ALPA CAFÉ",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Alquiler Auto Aero-Cordoba",
+      "email": "info@alquilerautocordoba.com.ar",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Altos de Argüello",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Amazonas 2",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Ames Motos",
+      "email": "ventas@amesmotos.com.ar",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Amo Latere",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Antares",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Antares Cerro",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Anush Resto Bar",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Apartamento",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Approach",
+      "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     }
   ],
   "sin_email_muestra": [
     {
-      "name": "Vea",
+      "name": "#Lomo",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Hipermercado La Anonima",
+      "name": "100x100 Lomo",
+      "tipo": "comercio",
+      "website": "www.facebook.com/100x100Lomo"
+    },
+    {
+      "name": "107 Emergencias Médicas Municipal",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Del Sol",
+      "name": "5 elementos",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Las mejores del mundo",
+      "name": "A Naselli",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Equus",
+      "name": "A&M",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Electronia",
+      "name": "Acapulco",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Disco",
+      "name": "Activar",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Del Pilar",
+      "name": "Actron",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Pafua",
+      "name": "Agro veterinaria Fioreti",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Disco",
+      "name": "Al Corta",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Buenos Días",
+      "name": "Alción",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Todo Suspensión",
+      "name": "Alcorta",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "El Sotano",
+      "name": "Alem",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "El Sotano",
+      "name": "Alemana",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Supermercado La Anonima Poeta Lugones",
+      "name": "Algo Light",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Supermercado chino",
+      "name": "Alma casa vegana",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Black sheep",
+      "name": "Alma Dórica",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Renault Minuto",
+      "name": "ALPA CAFÉ",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Cordiez",
+      "name": "Altos de Argüello",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Dinosaurio",
+      "name": "Amazonas 2",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Lave-Rap",
+      "name": "Amo Latere",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Don Paco",
+      "name": "Antares",
+      "tipo": "comercio",
+      "website": "http://www.cervezaantares.com/shops.php?iId=63"
+    },
+    {
+      "name": "Antares Cerro",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Embragues Córdoba",
+      "name": "Anush Resto Bar",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Piaccere",
+      "name": "Apartamento",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Ones",
+      "name": "Approach",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Trezzeri",
+      "name": "Aquarius",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Los Kane",
+      "name": "Aranjuez",
       "tipo": "comercio",
       "website": ""
     },
     {
-      "name": "Alejandra",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Lucho",
-      "tipo": "comercio",
-      "website": ""
-    },
-    {
-      "name": "Conte Motos",
+      "name": "Aráoz III",
       "tipo": "comercio",
       "website": ""
     }
@@ -463,22 +453,22 @@
       "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     }
   ],
-  "duplicados": 2,
+  "duplicados": 4,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "listos_detectados": 65,
-  "listos_seleccionados": 65,
-  "listos_comercio": 64,
+  "listos_detectados": 73,
+  "listos_seleccionados": 73,
+  "listos_comercio": 72,
   "listos_generador": 1,
-  "clasificados": 998,
+  "clasificados": 996,
   "cuadre": {
-    "clasificacion_total": 998,
-    "estado_total": 998,
+    "clasificacion_total": 996,
+    "estado_total": 996,
     "cuadra": true
   },
-  "encontrados": 3038,
+  "encontrados": 3039,
   "procesados": 1000,
-  "nuevos": 983,
-  "descartados": 15,
-  "excluidos": 2
+  "nuevos": 980,
+  "descartados": 16,
+  "excluidos": 4
 }
