@@ -55,15 +55,28 @@ def _key(c):
 
 
 def _historial():
-    return cargar(
+    s = cargar(
         "state.json",
         {
             "contactados": {},
             "descartados": {},
             "preguntas": {},
             "seguimientos": {},
+            "decisiones": {},
         },
     )
+    if not isinstance(s, dict):
+        s = {}
+    for clave in (
+        "contactados",
+        "descartados",
+        "preguntas",
+        "seguimientos",
+        "decisiones",
+    ):
+        if not isinstance(s.get(clave), dict):
+            s[clave] = {}
+    return s
 
 
 def _guardar_hist(s):
@@ -71,6 +84,37 @@ def _guardar_hist(s):
         "state.json",
         s,
     )
+
+
+def _sincronizar_decisiones(s):
+    """Lee respuestas exactas de Issues ya creados y las guarda localmente."""
+    decisiones = s.setdefault("decisiones", {})
+    preguntas = s.setdefault("preguntas", {})
+    actualizadas = 0
+
+    for clave, url in list(preguntas.items()):
+        if clave in decisiones or not url:
+            continue
+        try:
+            decision = github_issues.leer_decision(url)
+        except Exception:
+            decision = ""
+        if decision in {"comercio", "generador", "descartado"}:
+            decisiones[clave] = decision
+            actualizadas += 1
+
+    if actualizadas:
+        _guardar_hist(s)
+    return actualizadas
+
+
+def _aplicar_decision_humana(c, s):
+    decision = s.get("decisiones", {}).get(_key(c))
+    if decision not in {"comercio", "generador", "descartado"}:
+        return c
+    c["tipo"] = decision
+    c["clasificacion_motivo"] = "Decisión humana registrada en GitHub"
+    return c
 
 
 def _campos_csv(rows):
@@ -252,6 +296,7 @@ def _fusionar_base_candidatos(candidatos_actuales):
 
 def capturar():
     s = _historial()
+    _sincronizar_decisiones(s)
 
     rows = fuentes.buscar()
 
@@ -312,6 +357,7 @@ def capturar():
         seen.add(k)
 
         c = _clasificar(c)
+        c = _aplicar_decision_humana(c, s)
 
         tipo = c.get(
             "tipo",
@@ -794,6 +840,7 @@ def enviar_prospecto(
 
 def preguntas():
     s = _historial()
+    _sincronizar_decisiones(s)
     creadas = []
 
     for c in cargar(
