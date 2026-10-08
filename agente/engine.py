@@ -726,12 +726,6 @@ def enviar_prospecto(
 
 
 def preguntas():
-    if C.MODO_PRUEBA:
-        return {
-            "creadas": 0,
-            "modo_prueba": True,
-        }
-
     s = _historial()
     creadas = []
 
@@ -777,6 +771,7 @@ def preguntas():
     return {
         "creadas": len(creadas),
         "urls": creadas,
+        "modo_prueba": C.MODO_PRUEBA,
     }
 
 
