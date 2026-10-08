@@ -846,33 +846,8 @@ def _buscar_bing(c):
         ):
             return []
 
-    # --------------------------------------------------------
-    # SEGUNDA ETAPA:
-    # RESPONSABLE / PERSONA ASOCIADA
-    # --------------------------------------------------------
-
-    consultas_persona = _consultas_persona(c)
-
-    for consulta in consultas_persona:
-        resultados = _ejecutar_busqueda(
-            c,
-            consulta,
-        )
-
-        emails = _extraer_de_resultados(
-            c,
-            resultados,
-        )
-
-        if emails:
-            return emails
-
-        if (
-            _busquedas_realizadas
-            >= MAX_BUSQUEDAS_PUBLICAS
-        ):
-            return []
-
+    # Evitar decenas de consultas por candidato. La búsqueda se
+    # mantiene acotada para que los generadores no queden sin turno.
     return []
 
 
@@ -881,38 +856,28 @@ def _buscar_bing(c):
 # ============================================================
 
 def _descubrir(c):
-    # Primero buscar públicamente.
-    emails = _buscar_bing(c)
-
-    if emails:
-        return emails
-
-    # Después visitar website declarado.
+    # Primero revisar la web oficial ya declarada: es más precisa
+    # y evita gastar búsquedas públicas innecesarias.
     website = str(
         c.get("website")
         or ""
     ).strip()
 
-    if not website:
-        tags = c.get("tags") or {}
-
-        if isinstance(tags, dict):
-            website = str(
-                tags.get("website")
-                or tags.get("contact:website")
-                or ""
-            ).strip()
+    tags = c.get("tags") or {}
+    if not website and isinstance(tags, dict):
+        website = str(
+            tags.get("website")
+            or tags.get("contact:website")
+            or ""
+        ).strip()
 
     if website:
-        emails = _analizar_web(
-            c,
-            website,
-        )
-
+        emails = _analizar_web(c, website)
         if emails:
             return emails
 
-    return []
+    # Solo si la web oficial no aporta email, buscar en fuentes públicas.
+    return _buscar_bing(c)
 
 
 # ============================================================
