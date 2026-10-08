@@ -150,3 +150,62 @@ def crear_pregunta(c, motivo):
             "ok": False,
             "motivo": str(exc),
         }
+
+
+def leer_decision(url):
+    """
+    Lee una respuesta humana de un Issue de decisión.
+    Solo acepta comandos exactos y no interpreta texto libre.
+    Devuelve comercio, generador, descartado o cadena vacía.
+    """
+    token, repo = _config()
+    if not token or not repo or not url:
+        return ""
+
+    import re
+    match = re.search(r"/issues/(\\d+)", str(url))
+    if not match:
+        return ""
+
+    numero = match.group(1)
+    headers = _headers(token)
+
+    try:
+        response = requests.get(
+            f"{API_BASE}/repos/{repo}/issues/{numero}/comments",
+            headers=headers,
+            params={"per_page": 100},
+            timeout=20,
+        )
+        response.raise_for_status()
+        comentarios = response.json()
+    except Exception:
+        return ""
+
+    decision = ""
+    for comentario in comentarios:
+        cuerpo = str(comentario.get("body") or "").strip().upper()
+        lineas = [line.strip().strip("`*_ ") for line in cuerpo.splitlines()]
+        if "APROBAR COMERCIO" in lineas:
+            decision = "comercio"
+        elif "APROBAR GENERADOR" in lineas:
+            decision = "generador"
+        elif "DESCARTAR" in lineas:
+            decision = "descartado"
+
+    if not decision:
+        return ""
+
+    try:
+        cerrar = requests.patch(
+            f"{API_BASE}/repos/{repo}/issues/{numero}",
+            headers=headers,
+            json={"state": "closed"},
+            timeout=20,
+        )
+        cerrar.raise_for_status()
+    except Exception:
+        # La decisión sigue siendo válida aunque el cierre del Issue falle.
+        pass
+
+    return decision
