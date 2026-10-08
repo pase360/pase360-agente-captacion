@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       accion:
-        description: AcciÃ³n a ejecutar
+        description: Accion a ejecutar
         required: true
         default: diagnostico
         type: choice
@@ -59,7 +59,7 @@ jobs:
           python-version: "3.12"
       - name: Instalar dependencias
         run: pip install -r requirements.txt
-      - name: Determinar acciÃ³n
+      - name: Determinar accion
         id: accion
         shell: bash
         run: |
@@ -72,6 +72,8 @@ jobs:
           else
             echo "accion=captar" >> "$GITHUB_OUTPUT"
           fi
+      - name: Verificar pruebas automaticas
+        run: python -m unittest discover -s tests -v
       - name: Ejecutar agente
         run: python -m agente.main "${{ steps.accion.outputs.accion }}"
       - name: Guardar resultados
