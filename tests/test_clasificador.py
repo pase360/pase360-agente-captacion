@@ -28,5 +28,17 @@ class TestClasificador(unittest.TestCase):
         c = {"name":"Parking Centro","tags":{"amenity":"parking"}}
         self.assertEqual(clasificar(c)[0], "descartado")
 
+    def test_parroquia_descartada(self):
+        c = {"name":"Parroquia Nuestra Señora del Carmen","tags":{"amenity":"place_of_worship"}}
+        self.assertEqual(clasificar(c)[0], "descartado")
+
+    def test_consulado_descartado(self):
+        c = {"name":"Consulado de Francia","tags":{"office":"diplomatic"}}
+        self.assertEqual(clasificar(c)[0], "descartado")
+
+    def test_instituto_secundario_descartado(self):
+        c = {"name":"Instituto Privado Deán Funes","tags":{"amenity":"school"}}
+        self.assertEqual(clasificar(c)[0], "descartado")
+
 if __name__ == "__main__":
     unittest.main()
