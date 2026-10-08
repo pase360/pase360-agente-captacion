@@ -220,6 +220,36 @@ def _nuevo_diagnostico():
     }
 
 
+def _fusionar_base_candidatos(candidatos_actuales):
+    """Conserva el historial de candidatos y actualiza con la captación actual."""
+    base = cargar("candidatos.json", [])
+    if not isinstance(base, list):
+        base = []
+
+    fusionados = {}
+
+    for candidato in base:
+        if not isinstance(candidato, dict):
+            continue
+        clave = _key(candidato)
+        if clave:
+            fusionados[clave] = candidato
+
+    for candidato in candidatos_actuales:
+        if not isinstance(candidato, dict):
+            continue
+        clave = _key(candidato)
+        if clave:
+            fusionados[clave] = candidato
+
+    resultado = list(fusionados.values())
+
+    if len(resultado) > 20000:
+        resultado = resultado[-20000:]
+
+    return resultado
+
+
 def capturar():
     s = _historial()
 
