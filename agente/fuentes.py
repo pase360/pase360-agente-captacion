@@ -614,6 +614,28 @@ def _fusionar(candidatos):
             )
             actual["tags"] = tags_actuales
 
+        # Un lugar con email puede aparecer primero en la consulta mixta
+        # osm_email y después en una consulta específica de generadores.
+        # Conservamos los datos ya encontrados, pero promovemos su fuente
+        # para que engine.py no lo trate como candidato mixto/comercial.
+        grupo_actual = str(
+            actual.get("grupo_fuente") or ""
+        ).lower()
+        grupo_nuevo = str(
+            candidato.get("grupo_fuente") or ""
+        ).lower()
+
+        if (
+            grupo_nuevo == "generador"
+            and grupo_actual != "generador"
+        ):
+            actual["grupo_fuente"] = candidato.get(
+                "grupo_fuente"
+            )
+            actual["source"] = candidato.get(
+                "source"
+            ) or actual.get("source")
+
     finales = {}
 
     for candidato in resultado.values():
