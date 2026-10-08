@@ -163,7 +163,7 @@ def leer_decision(url):
         return ""
 
     import re
-    match = re.search(r"/issues/(\\d+)", str(url))
+    match = re.search(r"/issues/(\d+)", str(url))
     if not match:
         return ""
 
