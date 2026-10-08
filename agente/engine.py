@@ -369,7 +369,17 @@ def capturar():
     # AHORA buscamos emails.
     # ---------------------------------------------------------
 
-    for c in candidatos:
+    # Prioridad de enriquecimiento: primero generadores, luego comercios.
+    # Así las búsquedas públicas limitadas no se consumen antes de procesarlos.
+    candidatos_para_enriquecer = sorted(
+        candidatos,
+        key=lambda candidato: (
+            candidato.get("tipo") != "generador",
+            normalizar_texto(candidato.get("name")),
+        ),
+    )
+
+    for c in candidatos_para_enriquecer:
         if c.get("tipo") not in {
             "comercio",
             "generador",
