@@ -2121,11 +2121,11 @@
       "sport": "basketball;soccer;tennis;swimming;volleyball;field_hockey;rugby_league;handball",
       "website": "https://clubuniversitariocba.com/"
     },
-    "tipo": "dudoso",
-    "clasificacion_motivo": "Generador anterior invalidado por clasificación estricta",
+    "tipo": "generador",
+    "clasificacion_motivo": "Club deportivo con múltiples disciplinas y membresía",
     "email_fuente": "osm",
-    "contactable": false,
-    "estado": "requiere_decision"
+    "contactable": true,
+    "estado": "listo_para_contactar"
   },
   {
     "name": "ITV Chateau (Inspección Técnica Vehicular)",
