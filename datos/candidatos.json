@@ -374,11 +374,11 @@
       "opening_hours": "Mo-Su 10:00-22:00",
       "phone": "+54 351 497 4197"
     },
-    "tipo": "generador",
-    "clasificacion_motivo": "OSM identifica una organización social/comunitaria",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "Generador anterior invalidado por clasificación estricta",
     "email_fuente": "osm",
-    "contactable": true,
-    "estado": "listo_para_contactar"
+    "contactable": false,
+    "estado": "requiere_decision"
   },
   {
     "name": "Fabrica Pc",
@@ -1719,11 +1719,11 @@
       "website": "https://mueve.org.ar/",
       "wheelchair": "no"
     },
-    "tipo": "generador",
-    "clasificacion_motivo": "Organización con capacidad de agrupar beneficiarios",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "Generador anterior invalidado por clasificación estricta",
     "email_fuente": "osm",
-    "contactable": true,
-    "estado": "listo_para_contactar"
+    "contactable": false,
+    "estado": "requiere_decision"
   },
   {
     "name": "Tecnoplus Casa Informática",
@@ -2121,11 +2121,11 @@
       "sport": "basketball;soccer;tennis;swimming;volleyball;field_hockey;rugby_league;handball",
       "website": "https://clubuniversitariocba.com/"
     },
-    "tipo": "generador",
-    "clasificacion_motivo": "Club o institución deportiva identificada",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "Generador anterior invalidado por clasificación estricta",
     "email_fuente": "osm",
-    "contactable": true,
-    "estado": "listo_para_contactar"
+    "contactable": false,
+    "estado": "requiere_decision"
   },
   {
     "name": "ITV Chateau (Inspección Técnica Vehicular)",
@@ -13711,11 +13711,11 @@
       "name": "Centro Vecinal Marcelo T. De alvear",
       "office": "association"
     },
-    "tipo": "generador",
-    "clasificacion_motivo": "Centro vecinal, jubilados u organización social",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "Generador anterior invalidado por clasificación estricta",
     "contactable": false,
     "email_fuente": "",
-    "estado": "no_contactable_publicamente"
+    "estado": "requiere_decision"
   },
   {
     "name": "Kiosko",
@@ -15060,11 +15060,11 @@
       "office": "foundation",
       "website": "www.despegar.org.ar"
     },
-    "tipo": "generador",
-    "clasificacion_motivo": "Organización con capacidad de agrupar beneficiarios",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "Generador anterior invalidado por clasificación estricta",
     "contactable": false,
     "email_fuente": "",
-    "estado": "no_contactable_publicamente"
+    "estado": "requiere_decision"
   },
   {
     "name": "Maipu Automotores Vw",
@@ -16820,11 +16820,11 @@
       "name": "CILSA",
       "office": "ngo"
     },
-    "tipo": "generador",
-    "clasificacion_motivo": "OSM identifica una asociación u organización",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "Generador anterior invalidado por clasificación estricta",
     "contactable": false,
     "email_fuente": "",
-    "estado": "no_contactable_publicamente"
+    "estado": "requiere_decision"
   },
   {
     "name": "Harmonía",
@@ -16872,11 +16872,11 @@
       "name": "CIRSE",
       "office": "association"
     },
-    "tipo": "generador",
-    "clasificacion_motivo": "OSM identifica una asociación u organización",
+    "tipo": "dudoso",
+    "clasificacion_motivo": "Generador anterior invalidado por clasificación estricta",
     "contactable": false,
     "email_fuente": "",
-    "estado": "no_contactable_publicamente"
+    "estado": "requiere_decision"
   },
   {
     "name": "Bulonera",
