@@ -1,5 +1,1089 @@
 [
   {
+    "name": "Centro Vecinal Marcelo T. De alvear",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_asociaciones",
+    "source_id": "node:4888705932",
+    "grupo_fuente": "generador",
+    "lat": -31.3671842,
+    "lon": -64.1725199,
+    "tags": {
+      "name": "Centro Vecinal Marcelo T. De alvear",
+      "office": "association"
+    }
+  },
+  {
+    "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
+    "email": "",
+    "website": "",
+    "phone": "+54 351 480 1139",
+    "direccion": "Italia 2472, Córdoba",
+    "source": "generadores_asociaciones",
+    "source_id": "node:5536777869",
+    "grupo_fuente": "generador",
+    "lat": -31.3867835,
+    "lon": -64.2116705,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "2472",
+      "addr:street": "Italia",
+      "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
+      "office": "association",
+      "opening_hours": "Mo-Fr 09:00-18:45",
+      "phone": "0351 480-1139"
+    }
+  },
+  {
+    "name": "Fundación Despegar",
+    "email": "",
+    "website": "www.despegar.org.ar",
+    "phone": "",
+    "direccion": "27 de Abril 991",
+    "source": "generadores_asociaciones",
+    "source_id": "node:5941756662",
+    "grupo_fuente": "generador",
+    "lat": -31.4134578,
+    "lon": -64.1977249,
+    "tags": {
+      "addr:housenumber": "991",
+      "addr:street": "27 de Abril",
+      "name": "Fundación Despegar",
+      "office": "foundation",
+      "website": "www.despegar.org.ar"
+    }
+  },
+  {
+    "name": "CIRSE",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "La Rioja 352, Córdoba",
+    "source": "generadores_asociaciones",
+    "source_id": "node:7117592302",
+    "grupo_fuente": "generador",
+    "lat": -31.4099227,
+    "lon": -64.1869128,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "352",
+      "addr:postcode": "X5000",
+      "addr:street": "La Rioja",
+      "name": "CIRSE",
+      "office": "association"
+    }
+  },
+  {
+    "name": "Fundación Mueve",
+    "email": "fundacion@mueve.org.ar",
+    "website": "https://mueve.org.ar/",
+    "phone": "",
+    "direccion": "Miguel Calixto del Corro 2417, Córdoba",
+    "source": "generadores_asociaciones",
+    "source_id": "node:13663093670",
+    "grupo_fuente": "generador",
+    "lat": -31.4398105,
+    "lon": -64.2032342,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "2417",
+      "addr:street": "Miguel Calixto del Corro",
+      "email": "fundacion@mueve.org.ar",
+      "name": "Fundación Mueve",
+      "office": "foundation",
+      "website": "https://mueve.org.ar/",
+      "wheelchair": "no"
+    }
+  },
+  {
+    "name": "SEP - Sindicato de Empleados Públicos",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sindicales",
+    "source_id": "node:3306920013",
+    "grupo_fuente": "generador",
+    "lat": -31.3071052,
+    "lon": -64.3094975,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "SEP - Sindicato de Empleados Públicos"
+    }
+  },
+  {
+    "name": "Gremio Galeria",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Avenida Pablo Ricchieri 3331",
+    "source": "generadores_sindicales",
+    "source_id": "node:5052437621",
+    "grupo_fuente": "generador",
+    "lat": -31.4512942,
+    "lon": -64.175831,
+    "tags": {
+      "addr:housenumber": "3331",
+      "addr:street": "Avenida Pablo Ricchieri",
+      "name": "Gremio Galeria",
+      "name:en": "Gremio Galeria",
+      "name:es": "Gremio Galeria",
+      "tourism": "attraction"
+    }
+  },
+  {
+    "name": "SUTEP Sindicato Espect. públicos",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Achával Rodríguez",
+    "source": "generadores_sindicales",
+    "source_id": "node:5606121221",
+    "grupo_fuente": "generador",
+    "lat": -31.4244598,
+    "lon": -64.1912236,
+    "tags": {
+      "addr:street": "Achával Rodríguez",
+      "name": "SUTEP Sindicato Espect. públicos",
+      "office": "company"
+    }
+  },
+  {
+    "name": "Sindicato de Camioneros",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Avenida José Manuel Estrada 107",
+    "source": "generadores_sindicales",
+    "source_id": "node:13127987757",
+    "grupo_fuente": "generador",
+    "lat": -31.4276734,
+    "lon": -64.1871832,
+    "tags": {
+      "addr:housenumber": "107",
+      "addr:street": "Avenida José Manuel Estrada",
+      "check_date": "2025-09-08",
+      "name": "Sindicato de Camioneros",
+      "office": "union",
+      "opening_hours": "Mo-Fr 08:15-17:00"
+    }
+  },
+  {
+    "name": "Sindicato Regional de Luz y Fuerza",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sindicales",
+    "source_id": "node:14070984252",
+    "grupo_fuente": "generador",
+    "lat": -31.4136986,
+    "lon": -64.1907222,
+    "tags": {
+      "check_date": "2026-07-30",
+      "name": "Sindicato Regional de Luz y Fuerza",
+      "office": "union",
+      "panoramax": "5ce1c903-1a13-4391-b14c-3e16906a5871"
+    }
+  },
+  {
+    "name": "Sindicato de Trabajadores de Estaciones de Servicio, Playas de Estacionamiento, Garages, Lavanderos, Gomeras y Anexos de La Provincia de Córdoba",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sindicales",
+    "source_id": "node:14071099248",
+    "grupo_fuente": "generador",
+    "lat": -31.4095717,
+    "lon": -64.1891438,
+    "tags": {
+      "check_date": "2026-07-30",
+      "name": "Sindicato de Trabajadores de Estaciones de Servicio, Playas de Estacionamiento, Garages, Lavanderos, Gomeras y Anexos de La Provincia de Córdoba",
+      "office": "union",
+      "panoramax": "5450f810-ed97-4e6f-b41d-bdd13836c205"
+    }
+  },
+  {
+    "name": "Sindicato de Farmacia",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sindicales",
+    "source_id": "way:484722115",
+    "grupo_fuente": "generador",
+    "lat": -31.486466,
+    "lon": -64.1725052,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Sindicato de Farmacia",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Sindicato de Camioneros",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sindicales",
+    "source_id": "way:1451358420",
+    "grupo_fuente": "generador",
+    "lat": -31.490537,
+    "lon": -64.2540672,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Sindicato de Camioneros"
+    }
+  },
+  {
+    "name": "Cooperativa El Hornero",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_cooperativas",
+    "source_id": "node:3009326847",
+    "grupo_fuente": "generador",
+    "lat": -31.348493,
+    "lon": -64.1835762,
+    "tags": {
+      "name": "Cooperativa El Hornero",
+      "place": "neighbourhood"
+    }
+  },
+  {
+    "name": "Cooperativa La Unidad",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_cooperativas",
+    "source_id": "node:3608178811",
+    "grupo_fuente": "generador",
+    "lat": -31.4292041,
+    "lon": -64.1124736,
+    "tags": {
+      "name": "Cooperativa La Unidad",
+      "place": "neighbourhood"
+    }
+  },
+  {
+    "name": "Cooperativa de Servicios",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_cooperativas",
+    "source_id": "node:4549744690",
+    "grupo_fuente": "generador",
+    "lat": -31.2946356,
+    "lon": -64.2988395,
+    "tags": {
+      "name": "Cooperativa de Servicios",
+      "name:es": "Cooperativa de Servicios",
+      "office": "yes"
+    }
+  },
+  {
+    "name": "Centro de Salud 71 - Cooperativa El Arco",
+    "email": "",
+    "website": "",
+    "phone": "+54 351 433 8631",
+    "direccion": "",
+    "source": "generadores_cooperativas",
+    "source_id": "node:10742537147",
+    "grupo_fuente": "generador",
+    "lat": -31.4522134,
+    "lon": -64.1330291,
+    "tags": {
+      "amenity": "clinic",
+      "healthcare": "clinic",
+      "name": "Centro de Salud 71 - Cooperativa El Arco",
+      "phone": "+54 351 433 8631"
+    }
+  },
+  {
+    "name": "Villa Cooperativa Atalaya",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_cooperativas",
+    "source_id": "node:11013306342",
+    "grupo_fuente": "generador",
+    "lat": -31.333816,
+    "lon": -64.249322,
+    "tags": {
+      "name": "Villa Cooperativa Atalaya",
+      "place": "neighbourhood"
+    }
+  },
+  {
+    "name": "Cooperativa 2 de Mayo",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_cooperativas",
+    "source_id": "way:164418465",
+    "grupo_fuente": "generador",
+    "lat": -31.3121291,
+    "lon": -64.2914551,
+    "tags": {
+      "highway": "residential",
+      "lanes": "2",
+      "name": "Cooperativa 2 de Mayo",
+      "oneway": "no",
+      "surface": "sett"
+    }
+  },
+  {
+    "name": "Cooperativa \"Huanqueros\"",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_cooperativas",
+    "source_id": "way:258938860",
+    "grupo_fuente": "generador",
+    "lat": -31.4085034,
+    "lon": -64.1358183,
+    "tags": {
+      "highway": "residential",
+      "name": "Cooperativa \"Huanqueros\"",
+      "surface": "asphalt"
+    }
+  },
+  {
+    "name": "Centro Vecinal Villa Allende Parque",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "node:1282764790",
+    "grupo_fuente": "generador",
+    "lat": -31.3158778,
+    "lon": -64.2831173,
+    "tags": {
+      "amenity": "townhall",
+      "name": "Centro Vecinal Villa Allende Parque"
+    }
+  },
+  {
+    "name": "Centro Vecinal Marques de Sobremonte",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "node:1502351831",
+    "grupo_fuente": "generador",
+    "lat": -31.3628088,
+    "lon": -64.1951327,
+    "tags": {
+      "building": "public",
+      "name": "Centro Vecinal Marques de Sobremonte"
+    }
+  },
+  {
+    "name": "Centro Vecinal de Villa Adela - Playón deportivo",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "node:3085039447",
+    "grupo_fuente": "generador",
+    "lat": -31.4369698,
+    "lon": -64.2472271,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Centro Vecinal de Villa Adela - Playón deportivo",
+      "sport": "basketball"
+    }
+  },
+  {
+    "name": "Fundación José Gabriel Condorcanqui",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "node:3279622061",
+    "grupo_fuente": "generador",
+    "lat": -31.4246462,
+    "lon": -64.2459065,
+    "tags": {
+      "alt_name": "C.E.A. nº 167",
+      "amenity": "social_facility",
+      "name": "Fundación José Gabriel Condorcanqui"
+    }
+  },
+  {
+    "name": "Centro Vecinal Yofre Sud",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Córdoba Capital",
+    "source": "generadores_sociales",
+    "source_id": "node:3742070427",
+    "grupo_fuente": "generador",
+    "lat": -31.3942141,
+    "lon": -64.1368608,
+    "tags": {
+      "addr:city": "Córdoba Capital",
+      "addr:postcode": "5012",
+      "amenity": "community_centre",
+      "name": "Centro Vecinal Yofre Sud"
+    }
+  },
+  {
+    "name": "Centro Vecinal Yapeyu",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "node:3758457089",
+    "grupo_fuente": "generador",
+    "lat": -31.4123082,
+    "lon": -64.1498956,
+    "tags": {
+      "building": "public",
+      "name": "Centro Vecinal Yapeyu"
+    }
+  },
+  {
+    "name": "Centro Vecinal de Bº Sta Rosa",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "node:4110462403",
+    "grupo_fuente": "generador",
+    "lat": -31.477291,
+    "lon": -64.2049395,
+    "tags": {
+      "description": "Diversidad de talleres para niños y jóvenes, entre ellos: folclore.",
+      "name": "Centro Vecinal de Bº Sta Rosa"
+    }
+  },
+  {
+    "name": "Centro Vecinal Crisol Sur",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "node:4219904291",
+    "grupo_fuente": "generador",
+    "lat": -31.4401454,
+    "lon": -64.1622154,
+    "tags": {
+      "amenity": "arts_centre",
+      "name": "Centro Vecinal Crisol Sur"
+    }
+  },
+  {
+    "name": "Centro Vecinal Don Bosco",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Avenida Ardizone",
+    "source": "generadores_sociales",
+    "source_id": "node:4255022589",
+    "grupo_fuente": "generador",
+    "lat": -31.3876375,
+    "lon": -64.2744075,
+    "tags": {
+      "addr:postcode": "5003",
+      "addr:street": "Avenida Ardizone",
+      "amenity": "community_centre",
+      "internet_access": "wlan",
+      "name": "Centro Vecinal Don Bosco"
+    }
+  },
+  {
+    "name": "Centro vecinal Santa Clara de Asis",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Oscariz Beaumont, Córdoba",
+    "source": "generadores_sociales",
+    "source_id": "node:4379967294",
+    "grupo_fuente": "generador",
+    "lat": -31.3828794,
+    "lon": -64.142146,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:postcode": "5012",
+      "addr:street": "Oscariz Beaumont",
+      "amenity": "community_centre",
+      "name": "Centro vecinal Santa Clara de Asis"
+    }
+  },
+  {
+    "name": "Centro Vecinal Yofre Norte",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Jacinto de Altoaguirre, Córdoba",
+    "source": "generadores_sociales",
+    "source_id": "node:4379967295",
+    "grupo_fuente": "generador",
+    "lat": -31.3831443,
+    "lon": -64.1343493,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:postcode": "5012",
+      "addr:street": "Jacinto de Altoaguirre",
+      "amenity": "community_centre",
+      "name": "Centro Vecinal Yofre Norte"
+    }
+  },
+  {
+    "name": "CENTRO VECINAL BARRIO ATE",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Uritorco 3225, Córdoba",
+    "source": "generadores_sociales",
+    "source_id": "node:5185100330",
+    "grupo_fuente": "generador",
+    "lat": -31.4342967,
+    "lon": -64.2313662,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "3225",
+      "addr:postcode": "5010",
+      "addr:street": "Uritorco",
+      "name": "CENTRO VECINAL BARRIO ATE"
+    }
+  },
+  {
+    "name": "centro vecinal",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "node:5188662865",
+    "grupo_fuente": "generador",
+    "lat": -31.4634003,
+    "lon": -64.1600062,
+    "tags": {
+      "name": "centro vecinal"
+    }
+  },
+  {
+    "name": "centro vecinal Parque República",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Paine",
+    "source": "generadores_sociales",
+    "source_id": "node:5194422273",
+    "grupo_fuente": "generador",
+    "lat": -31.4149523,
+    "lon": -64.2576241,
+    "tags": {
+      "addr:street": "Paine",
+      "amenity": "community_centre",
+      "community_centre": "community_hall",
+      "name": "centro vecinal Parque República"
+    }
+  },
+  {
+    "name": "Centro Vecinal Barrio Parque Vélez Sarsfield",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Avenida Naciones Unidas 452",
+    "source": "generadores_sociales",
+    "source_id": "node:6011618488",
+    "grupo_fuente": "generador",
+    "lat": -31.4419414,
+    "lon": -64.2021269,
+    "tags": {
+      "addr:housenumber": "452",
+      "addr:street": "Avenida Naciones Unidas",
+      "amenity": "community_centre",
+      "name": "Centro Vecinal Barrio Parque Vélez Sarsfield"
+    }
+  },
+  {
+    "name": "FUNDACION CAIP CENTRO DE ATENCION INTEGRAL PRIVADO",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Avenida del Carmen 879",
+    "source": "generadores_sociales",
+    "source_id": "node:6636030785",
+    "grupo_fuente": "generador",
+    "lat": -31.2874557,
+    "lon": -64.2956442,
+    "tags": {
+      "addr:housenumber": "879",
+      "addr:street": "Avenida del Carmen",
+      "amenity": "clinic",
+      "healthcare": "clinic",
+      "name": "FUNDACION CAIP CENTRO DE ATENCION INTEGRAL PRIVADO"
+    }
+  },
+  {
+    "name": "Centro comunitario de acompañamiento integral Padre José Nasser",
+    "email": "",
+    "website": "",
+    "phone": "+54 351 433 6021",
+    "direccion": "Paso de Uspallata 991, Córdoba",
+    "source": "generadores_sociales",
+    "source_id": "node:7513053881",
+    "grupo_fuente": "generador",
+    "lat": -31.3948905,
+    "lon": -64.1966324,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:full": "Uspallata 991",
+      "addr:housenumber": "991",
+      "addr:postcode": "5000",
+      "addr:street": "Paso de Uspallata",
+      "alt_name": "Centro de Salud 25 - Barrio San Martin",
+      "amenity": "clinic",
+      "healthcare": "clinic",
+      "name": "Centro comunitario de acompañamiento integral Padre José Nasser",
+      "operator": "Municipal",
+      "operator:type": "public",
+      "phone": "+54 351 433 6021",
+      "ref:sisa_codigo": "50140142133196",
+      "ref:sisa_tipologia": "ESSIDT"
+    }
+  },
+  {
+    "name": "Memorial de la Fundación",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "node:9501827366",
+    "grupo_fuente": "generador",
+    "lat": -31.4156069,
+    "lon": -64.1555377,
+    "tags": {
+      "historic": "memorial",
+      "name": "Memorial de la Fundación"
+    }
+  },
+  {
+    "name": "Fundación ProSalud",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "way:139191775",
+    "grupo_fuente": "generador",
+    "lat": -31.4049652,
+    "lon": -64.204195,
+    "tags": {
+      "building": "yes",
+      "name": "Fundación ProSalud"
+    }
+  },
+  {
+    "name": "Plaza de las Siete Fundaciones",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "way:215473215",
+    "grupo_fuente": "generador",
+    "lat": -31.3684751,
+    "lon": -64.1955957,
+    "tags": {
+      "leisure": "park",
+      "name": "Plaza de las Siete Fundaciones"
+    }
+  },
+  {
+    "name": "Centro Vecinal Barrio General Belgrano",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "way:321536692",
+    "grupo_fuente": "generador",
+    "lat": -31.3709207,
+    "lon": -64.1351521,
+    "tags": {
+      "building": "public",
+      "name": "Centro Vecinal Barrio General Belgrano"
+    }
+  },
+  {
+    "name": "Centro de jubilados y Hogar de día Barrio Belgrano",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Fernando Abramo 2595, Córdoba",
+    "source": "generadores_sociales",
+    "source_id": "way:338713297",
+    "grupo_fuente": "generador",
+    "lat": -31.3709183,
+    "lon": -64.1349424,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:country": "AR",
+      "addr:housenumber": "2595",
+      "addr:postcode": "5012",
+      "addr:street": "Fernando Abramo",
+      "amenity": "social_facility",
+      "building": "yes",
+      "name": "Centro de jubilados y Hogar de día Barrio Belgrano"
+    }
+  },
+  {
+    "name": "Plazoleta de la Fundación",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "way:380188803",
+    "grupo_fuente": "generador",
+    "lat": -31.4156838,
+    "lon": -64.155982,
+    "tags": {
+      "leisure": "park",
+      "name": "Plazoleta de la Fundación"
+    }
+  },
+  {
+    "name": "Centro Vecinal Villa Wacalde - Alto Hermoso",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "El Cuy",
+    "source": "generadores_sociales",
+    "source_id": "way:402045259",
+    "grupo_fuente": "generador",
+    "lat": -31.3370814,
+    "lon": -64.309265,
+    "tags": {
+      "addr:street": "El Cuy",
+      "amenity": "community_centre",
+      "check_date:opening_hours": "2022-10-03",
+      "name": "Centro Vecinal Villa Wacalde - Alto Hermoso",
+      "opening_hours:signed": "no"
+    }
+  },
+  {
+    "name": "Centro Vecinal B° Kennedy",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Angel Peñaloza 3946, Córdoba",
+    "source": "generadores_sociales",
+    "source_id": "way:702096278",
+    "grupo_fuente": "generador",
+    "lat": -31.4584936,
+    "lon": -64.1903593,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "3946",
+      "addr:postcode": "5016",
+      "addr:street": "Angel Peñaloza",
+      "building": "civic",
+      "building:levels": "0",
+      "name": "Centro Vecinal B° Kennedy",
+      "smoking": "outside",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "name": "Centro Vecinal Barrio General Paz",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "way:761526554",
+    "grupo_fuente": "generador",
+    "lat": -31.4099753,
+    "lon": -64.1713567,
+    "tags": {
+      "amenity": "community_centre",
+      "building": "yes",
+      "name": "Centro Vecinal Barrio General Paz"
+    }
+  },
+  {
+    "name": "Centro de Jubilados",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Rufino Cuervo 1467, Córdoba",
+    "source": "generadores_sociales",
+    "source_id": "way:803410572",
+    "grupo_fuente": "generador",
+    "lat": -31.3894945,
+    "lon": -64.2182956,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "1467",
+      "addr:postcode": "5009",
+      "addr:street": "Rufino Cuervo",
+      "building": "yes",
+      "building:levels": "2",
+      "height": "5",
+      "name": "Centro de Jubilados"
+    }
+  },
+  {
+    "name": "Plaza Centro Vecinal Lomas Sur",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "way:974796148",
+    "grupo_fuente": "generador",
+    "lat": -31.3017215,
+    "lon": -64.2807574,
+    "tags": {
+      "leisure": "park",
+      "name": "Plaza Centro Vecinal Lomas Sur"
+    }
+  },
+  {
+    "name": "Centro Vecinal Barrio San Rafael \"A\" y Barrio Primera Junta",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "way:1020328096",
+    "grupo_fuente": "generador",
+    "lat": -31.4259494,
+    "lon": -64.2261919,
+    "tags": {
+      "amenity": "community_centre",
+      "community_centre": "community_hall",
+      "name": "Centro Vecinal Barrio San Rafael \"A\" y Barrio Primera Junta"
+    }
+  },
+  {
+    "name": "Centro Vecinal Barrio Alto Verde",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "way:1072283666",
+    "grupo_fuente": "generador",
+    "lat": -31.3717785,
+    "lon": -64.2198384,
+    "tags": {
+      "amenity": "community_centre",
+      "building": "public",
+      "name": "Centro Vecinal Barrio Alto Verde"
+    }
+  },
+  {
+    "name": "Centro Vecinal de Alberdi",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "way:1095449225",
+    "grupo_fuente": "generador",
+    "lat": -31.4068749,
+    "lon": -64.2081163,
+    "tags": {
+      "amenity": "conference_centre",
+      "building": "yes",
+      "name": "Centro Vecinal de Alberdi"
+    }
+  },
+  {
+    "name": "Centro Vecinal Barrio Santa Isabel 2",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "way:1112139735",
+    "grupo_fuente": "generador",
+    "lat": -31.4800612,
+    "lon": -64.2359804,
+    "tags": {
+      "amenity": "community_centre",
+      "building": "yes",
+      "name": "Centro Vecinal Barrio Santa Isabel 2",
+      "operator": "Municipalidad de Córdoba"
+    }
+  },
+  {
+    "name": "Fundación Universitaria de Oficios",
+    "email": "",
+    "website": "https://fuoficios.com.ar/",
+    "phone": "+54 351 372 2487",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "way:1258905609",
+    "grupo_fuente": "generador",
+    "lat": -31.493785,
+    "lon": -64.2578526,
+    "tags": {
+      "amenity": "school",
+      "name": "Fundación Universitaria de Oficios",
+      "phone": "+54 351 372 2487",
+      "website": "https://fuoficios.com.ar/"
+    }
+  },
+  {
+    "name": "Fundación Universitaria de Oficios",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "way:1258905610",
+    "grupo_fuente": "generador",
+    "lat": -31.4937594,
+    "lon": -64.2578513,
+    "tags": {
+      "building": "university",
+      "building:levels": "3",
+      "name": "Fundación Universitaria de Oficios"
+    }
+  },
+  {
+    "name": "Centro Vecinal Mafekin",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "way:1445307314",
+    "grupo_fuente": "generador",
+    "lat": -31.4017294,
+    "lon": -64.2569961,
+    "tags": {
+      "building": "yes",
+      "building:levels": "1",
+      "name": "Centro Vecinal Mafekin",
+      "office": "ngo"
+    }
+  },
+  {
+    "name": "Fundacion La Casa Del Gaucho Argentino",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "way:1459124169",
+    "grupo_fuente": "generador",
+    "lat": -31.4212771,
+    "lon": -64.2385108,
+    "tags": {
+      "building": "yes",
+      "building:levels": "1",
+      "name": "Fundacion La Casa Del Gaucho Argentino"
+    }
+  },
+  {
+    "name": "Centro Vecinal Villa Rivera Indarte",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Iglesia Vieja 9110",
+    "source": "generadores_sociales",
+    "source_id": "way:1463162560",
+    "grupo_fuente": "generador",
+    "lat": -31.3211459,
+    "lon": -64.2935996,
+    "tags": {
+      "addr:housenumber": "9110",
+      "addr:street": "Iglesia Vieja",
+      "amenity": "community_centre",
+      "building": "yes",
+      "name": "Centro Vecinal Villa Rivera Indarte"
+    }
+  },
+  {
+    "name": "Centro Vecinal Villa Paez",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Doctor Faustino Tronge, Córdoba",
+    "source": "generadores_sociales",
+    "source_id": "way:1525542620",
+    "grupo_fuente": "generador",
+    "lat": -31.4000949,
+    "lon": -64.2079976,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:street": "Doctor Faustino Tronge",
+      "building": "public",
+      "building:levels": "0",
+      "name": "Centro Vecinal Villa Paez"
+    }
+  },
+  {
+    "name": "Centro Vecinal Villa Paez",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "way:1525542621",
+    "grupo_fuente": "generador",
+    "lat": -31.4002697,
+    "lon": -64.2080036,
+    "tags": {
+      "access": "yes",
+      "covered": "no",
+      "fee": "no",
+      "hoops": "2",
+      "indoor": "no",
+      "leisure": "pitch",
+      "lit": "yes",
+      "name": "Centro Vecinal Villa Paez",
+      "sport": "basketball",
+      "surface": "concrete"
+    }
+  },
+  {
+    "name": "Centro vecinal de Quintas Capillitas",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sociales",
+    "source_id": "way:1531282320",
+    "grupo_fuente": "generador",
+    "lat": -31.4529956,
+    "lon": -64.0736512,
+    "tags": {
+      "amenity": "community_centre",
+      "building": "yes",
+      "building:levels": "1",
+      "community_centre": "community_hall",
+      "name": "Centro vecinal de Quintas Capillitas"
+    }
+  },
+  {
     "name": "Comedor Universitario",
     "email": "comedor@bienestar.unc.edu.ar",
     "website": "https://www.unc.edu.ar/vida-estudiantil/direcci%C3%B3n-de-nutrici%C3%B3n-y-servicios-alimentarios",
@@ -1558,28 +2642,6 @@
       "opening_hours": "Mo-Fr 09:00-18:00",
       "operator": "Consejo Nacional de Investigaciones Científicas y Tecnológicas",
       "wheelchair": "yes"
-    }
-  },
-  {
-    "name": "Fundación Mueve",
-    "email": "fundacion@mueve.org.ar",
-    "website": "https://mueve.org.ar/",
-    "phone": "",
-    "direccion": "Miguel Calixto del Corro 2417, Córdoba",
-    "source": "osm_email",
-    "source_id": "node:13663093670",
-    "grupo_fuente": "mixto",
-    "lat": -31.4398105,
-    "lon": -64.2032342,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "2417",
-      "addr:street": "Miguel Calixto del Corro",
-      "email": "fundacion@mueve.org.ar",
-      "name": "Fundación Mueve",
-      "office": "foundation",
-      "website": "https://mueve.org.ar/",
-      "wheelchair": "no"
     }
   },
   {
@@ -6691,23 +7753,6 @@
     }
   },
   {
-    "name": "Cooperativa de Servicios",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "comercios_shop",
-    "source_id": "node:4549744690",
-    "grupo_fuente": "comercio",
-    "lat": -31.2946356,
-    "lon": -64.2988395,
-    "tags": {
-      "name": "Cooperativa de Servicios",
-      "name:es": "Cooperativa de Servicios",
-      "office": "yes"
-    }
-  },
-  {
     "name": "Casa de Sonia",
     "email": "",
     "website": "",
@@ -7062,22 +8107,6 @@
       "name": "Repuestos Chevromaxs",
       "name:en": "Chevromaxs Auto Parts",
       "shop": "car_parts"
-    }
-  },
-  {
-    "name": "Centro Vecinal Marcelo T. De alvear",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "comercios_shop",
-    "source_id": "node:4888705932",
-    "grupo_fuente": "comercio",
-    "lat": -31.3671842,
-    "lon": -64.1725199,
-    "tags": {
-      "name": "Centro Vecinal Marcelo T. De alvear",
-      "office": "association"
     }
   },
   {
@@ -7866,27 +8895,6 @@
     }
   },
   {
-    "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
-    "email": "",
-    "website": "",
-    "phone": "+54 351 480 1139",
-    "direccion": "Italia 2472, Córdoba",
-    "source": "comercios_shop",
-    "source_id": "node:5536777869",
-    "grupo_fuente": "comercio",
-    "lat": -31.3867835,
-    "lon": -64.2116705,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "2472",
-      "addr:street": "Italia",
-      "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
-      "office": "association",
-      "opening_hours": "Mo-Fr 09:00-18:45",
-      "phone": "0351 480-1139"
-    }
-  },
-  {
     "name": "Pintecord",
     "email": "",
     "website": "",
@@ -7901,23 +8909,6 @@
       "addr:street": "Avenida Ciudad de Valparaíso",
       "name": "Pintecord",
       "shop": "paint"
-    }
-  },
-  {
-    "name": "SUTEP Sindicato Espect. públicos",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Achával Rodríguez",
-    "source": "comercios_shop",
-    "source_id": "node:5606121221",
-    "grupo_fuente": "comercio",
-    "lat": -31.4244598,
-    "lon": -64.1912236,
-    "tags": {
-      "addr:street": "Achával Rodríguez",
-      "name": "SUTEP Sindicato Espect. públicos",
-      "office": "company"
     }
   },
   {
@@ -8205,25 +9196,6 @@
     "tags": {
       "name": "Lavandería",
       "shop": "dry_cleaning"
-    }
-  },
-  {
-    "name": "Fundación Despegar",
-    "email": "",
-    "website": "www.despegar.org.ar",
-    "phone": "",
-    "direccion": "27 de Abril 991",
-    "source": "comercios_shop",
-    "source_id": "node:5941756662",
-    "grupo_fuente": "comercio",
-    "lat": -31.4134578,
-    "lon": -64.1977249,
-    "tags": {
-      "addr:housenumber": "991",
-      "addr:street": "27 de Abril",
-      "name": "Fundación Despegar",
-      "office": "foundation",
-      "website": "www.despegar.org.ar"
     }
   },
   {
@@ -9650,26 +10622,6 @@
       "opening_hours": "Mo-Sa 09:30-14:00,17:00-21:00",
       "phone": "+54 351 522 4298",
       "shop": "health_food"
-    }
-  },
-  {
-    "name": "CIRSE",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "La Rioja 352, Córdoba",
-    "source": "comercios_shop",
-    "source_id": "node:7117592302",
-    "grupo_fuente": "comercio",
-    "lat": -31.4099227,
-    "lon": -64.1869128,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "352",
-      "addr:postcode": "X5000",
-      "addr:street": "La Rioja",
-      "name": "CIRSE",
-      "office": "association"
     }
   },
   {
@@ -22023,26 +22975,6 @@
     }
   },
   {
-    "name": "Sindicato de Camioneros",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Avenida José Manuel Estrada 107",
-    "source": "comercios_shop",
-    "source_id": "node:13127987757",
-    "grupo_fuente": "comercio",
-    "lat": -31.4276734,
-    "lon": -64.1871832,
-    "tags": {
-      "addr:housenumber": "107",
-      "addr:street": "Avenida José Manuel Estrada",
-      "check_date": "2025-09-08",
-      "name": "Sindicato de Camioneros",
-      "office": "union",
-      "opening_hours": "Mo-Fr 08:15-17:00"
-    }
-  },
-  {
     "name": "Tribunal de Cuentas de la Provincia de Córdoba",
     "email": "",
     "website": "https://www.tcpcordoba.gov.ar/",
@@ -25810,24 +26742,6 @@
     }
   },
   {
-    "name": "Sindicato Regional de Luz y Fuerza",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "comercios_shop",
-    "source_id": "node:14070984252",
-    "grupo_fuente": "comercio",
-    "lat": -31.4136986,
-    "lon": -64.1907222,
-    "tags": {
-      "check_date": "2026-07-30",
-      "name": "Sindicato Regional de Luz y Fuerza",
-      "office": "union",
-      "panoramax": "5ce1c903-1a13-4391-b14c-3e16906a5871"
-    }
-  },
-  {
     "name": "Asociación Empresaria Hotelera Gastronomica Córdoba",
     "email": "",
     "website": "",
@@ -26079,24 +26993,6 @@
       "name": "Century 21",
       "office": "estate_agent",
       "panoramax": "4f883f11-1e08-4907-9dce-149aa89739ed"
-    }
-  },
-  {
-    "name": "Sindicato de Trabajadores de Estaciones de Servicio, Playas de Estacionamiento, Garages, Lavanderos, Gomeras y Anexos de La Provincia de Córdoba",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "comercios_shop",
-    "source_id": "node:14071099248",
-    "grupo_fuente": "comercio",
-    "lat": -31.4095717,
-    "lon": -64.1891438,
-    "tags": {
-      "check_date": "2026-07-30",
-      "name": "Sindicato de Trabajadores de Estaciones de Servicio, Playas de Estacionamiento, Garages, Lavanderos, Gomeras y Anexos de La Provincia de Córdoba",
-      "office": "union",
-      "panoramax": "5450f810-ed97-4e6f-b41d-bdd13836c205"
     }
   },
   {
@@ -32507,24 +33403,6 @@
       "building:levels": "1",
       "name": "Super Suerte",
       "shop": "supermarket"
-    }
-  },
-  {
-    "name": "Centro Vecinal Mafekin",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "comercios_shop",
-    "source_id": "way:1445307314",
-    "grupo_fuente": "comercio",
-    "lat": -31.4017294,
-    "lon": -64.2569961,
-    "tags": {
-      "building": "yes",
-      "building:levels": "1",
-      "name": "Centro Vecinal Mafekin",
-      "office": "ngo"
     }
   },
   {
@@ -39037,25 +39915,6 @@
     }
   },
   {
-    "name": "FUNDACION CAIP CENTRO DE ATENCION INTEGRAL PRIVADO",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Avenida del Carmen 879",
-    "source": "comercios_servicios",
-    "source_id": "node:6636030785",
-    "grupo_fuente": "comercio",
-    "lat": -31.2874557,
-    "lon": -64.2956442,
-    "tags": {
-      "addr:housenumber": "879",
-      "addr:street": "Avenida del Carmen",
-      "amenity": "clinic",
-      "healthcare": "clinic",
-      "name": "FUNDACION CAIP CENTRO DE ATENCION INTEGRAL PRIVADO"
-    }
-  },
-  {
     "name": "La Esquinita",
     "email": "",
     "website": "",
@@ -40324,34 +41183,6 @@
       "operator:type": "public",
       "phone": "+54 351 433 8763",
       "ref:sisa_codigo": "50140142233656",
-      "ref:sisa_tipologia": "ESSIDT"
-    }
-  },
-  {
-    "name": "Centro comunitario de acompañamiento integral Padre José Nasser",
-    "email": "",
-    "website": "",
-    "phone": "+54 351 433 6021",
-    "direccion": "Paso de Uspallata 991, Córdoba",
-    "source": "comercios_servicios",
-    "source_id": "node:7513053881",
-    "grupo_fuente": "comercio",
-    "lat": -31.3948905,
-    "lon": -64.1966324,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:full": "Uspallata 991",
-      "addr:housenumber": "991",
-      "addr:postcode": "5000",
-      "addr:street": "Paso de Uspallata",
-      "alt_name": "Centro de Salud 25 - Barrio San Martin",
-      "amenity": "clinic",
-      "healthcare": "clinic",
-      "name": "Centro comunitario de acompañamiento integral Padre José Nasser",
-      "operator": "Municipal",
-      "operator:type": "public",
-      "phone": "+54 351 433 6021",
-      "ref:sisa_codigo": "50140142133196",
       "ref:sisa_tipologia": "ESSIDT"
     }
   },
@@ -44055,24 +44886,6 @@
       "name": "Zona Plus",
       "opening_hours": "24/7",
       "website": "https://www.facebook.com/zonaplusmultitiendas/"
-    }
-  },
-  {
-    "name": "Centro de Salud 71 - Cooperativa El Arco",
-    "email": "",
-    "website": "",
-    "phone": "+54 351 433 8631",
-    "direccion": "",
-    "source": "comercios_servicios",
-    "source_id": "node:10742537147",
-    "grupo_fuente": "comercio",
-    "lat": -31.4522134,
-    "lon": -64.1330291,
-    "tags": {
-      "amenity": "clinic",
-      "healthcare": "clinic",
-      "name": "Centro de Salud 71 - Cooperativa El Arco",
-      "phone": "+54 351 433 8631"
     }
   },
   {
@@ -54142,159 +54955,6 @@
     }
   },
   {
-    "name": "SEP - Sindicato de Empleados Públicos",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sindicales",
-    "source_id": "node:3306920013",
-    "grupo_fuente": "generador",
-    "lat": -31.3071052,
-    "lon": -64.3094975,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "SEP - Sindicato de Empleados Públicos"
-    }
-  },
-  {
-    "name": "Gremio Galeria",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Avenida Pablo Ricchieri 3331",
-    "source": "generadores_sindicales",
-    "source_id": "node:5052437621",
-    "grupo_fuente": "generador",
-    "lat": -31.4512942,
-    "lon": -64.175831,
-    "tags": {
-      "addr:housenumber": "3331",
-      "addr:street": "Avenida Pablo Ricchieri",
-      "name": "Gremio Galeria",
-      "name:en": "Gremio Galeria",
-      "name:es": "Gremio Galeria",
-      "tourism": "attraction"
-    }
-  },
-  {
-    "name": "Sindicato de Farmacia",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sindicales",
-    "source_id": "way:484722115",
-    "grupo_fuente": "generador",
-    "lat": -31.486466,
-    "lon": -64.1725052,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Sindicato de Farmacia",
-      "sport": "soccer"
-    }
-  },
-  {
-    "name": "Sindicato de Camioneros",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sindicales",
-    "source_id": "way:1451358420",
-    "grupo_fuente": "generador",
-    "lat": -31.490537,
-    "lon": -64.2540672,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Sindicato de Camioneros"
-    }
-  },
-  {
-    "name": "Cooperativa El Hornero",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_cooperativas",
-    "source_id": "node:3009326847",
-    "grupo_fuente": "generador",
-    "lat": -31.348493,
-    "lon": -64.1835762,
-    "tags": {
-      "name": "Cooperativa El Hornero",
-      "place": "neighbourhood"
-    }
-  },
-  {
-    "name": "Cooperativa La Unidad",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_cooperativas",
-    "source_id": "node:3608178811",
-    "grupo_fuente": "generador",
-    "lat": -31.4292041,
-    "lon": -64.1124736,
-    "tags": {
-      "name": "Cooperativa La Unidad",
-      "place": "neighbourhood"
-    }
-  },
-  {
-    "name": "Villa Cooperativa Atalaya",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_cooperativas",
-    "source_id": "node:11013306342",
-    "grupo_fuente": "generador",
-    "lat": -31.333816,
-    "lon": -64.249322,
-    "tags": {
-      "name": "Villa Cooperativa Atalaya",
-      "place": "neighbourhood"
-    }
-  },
-  {
-    "name": "Cooperativa 2 de Mayo",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_cooperativas",
-    "source_id": "way:164418465",
-    "grupo_fuente": "generador",
-    "lat": -31.3121291,
-    "lon": -64.2914551,
-    "tags": {
-      "highway": "residential",
-      "lanes": "2",
-      "name": "Cooperativa 2 de Mayo",
-      "oneway": "no",
-      "surface": "sett"
-    }
-  },
-  {
-    "name": "Cooperativa \"Huanqueros\"",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_cooperativas",
-    "source_id": "way:258938860",
-    "grupo_fuente": "generador",
-    "lat": -31.4085034,
-    "lon": -64.1358183,
-    "tags": {
-      "highway": "residential",
-      "name": "Cooperativa \"Huanqueros\"",
-      "surface": "asphalt"
-    }
-  },
-  {
     "name": "Club Colegio de Ingenieros Civiles",
     "email": "",
     "website": "",
@@ -54759,666 +55419,6 @@
       "leisure": "golf_course",
       "name": "Country Jockey Club Córdoba Golf",
       "type": "multipolygon"
-    }
-  },
-  {
-    "name": "Centro Vecinal Villa Allende Parque",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "node:1282764790",
-    "grupo_fuente": "generador",
-    "lat": -31.3158778,
-    "lon": -64.2831173,
-    "tags": {
-      "amenity": "townhall",
-      "name": "Centro Vecinal Villa Allende Parque"
-    }
-  },
-  {
-    "name": "Centro Vecinal Marques de Sobremonte",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "node:1502351831",
-    "grupo_fuente": "generador",
-    "lat": -31.3628088,
-    "lon": -64.1951327,
-    "tags": {
-      "building": "public",
-      "name": "Centro Vecinal Marques de Sobremonte"
-    }
-  },
-  {
-    "name": "Centro Vecinal de Villa Adela - Playón deportivo",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "node:3085039447",
-    "grupo_fuente": "generador",
-    "lat": -31.4369698,
-    "lon": -64.2472271,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Centro Vecinal de Villa Adela - Playón deportivo",
-      "sport": "basketball"
-    }
-  },
-  {
-    "name": "Fundación José Gabriel Condorcanqui",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "node:3279622061",
-    "grupo_fuente": "generador",
-    "lat": -31.4246462,
-    "lon": -64.2459065,
-    "tags": {
-      "alt_name": "C.E.A. nº 167",
-      "amenity": "social_facility",
-      "name": "Fundación José Gabriel Condorcanqui"
-    }
-  },
-  {
-    "name": "Centro Vecinal Yofre Sud",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Córdoba Capital",
-    "source": "generadores_sociales",
-    "source_id": "node:3742070427",
-    "grupo_fuente": "generador",
-    "lat": -31.3942141,
-    "lon": -64.1368608,
-    "tags": {
-      "addr:city": "Córdoba Capital",
-      "addr:postcode": "5012",
-      "amenity": "community_centre",
-      "name": "Centro Vecinal Yofre Sud"
-    }
-  },
-  {
-    "name": "Centro Vecinal Yapeyu",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "node:3758457089",
-    "grupo_fuente": "generador",
-    "lat": -31.4123082,
-    "lon": -64.1498956,
-    "tags": {
-      "building": "public",
-      "name": "Centro Vecinal Yapeyu"
-    }
-  },
-  {
-    "name": "Centro Vecinal de Bº Sta Rosa",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "node:4110462403",
-    "grupo_fuente": "generador",
-    "lat": -31.477291,
-    "lon": -64.2049395,
-    "tags": {
-      "description": "Diversidad de talleres para niños y jóvenes, entre ellos: folclore.",
-      "name": "Centro Vecinal de Bº Sta Rosa"
-    }
-  },
-  {
-    "name": "Centro Vecinal Crisol Sur",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "node:4219904291",
-    "grupo_fuente": "generador",
-    "lat": -31.4401454,
-    "lon": -64.1622154,
-    "tags": {
-      "amenity": "arts_centre",
-      "name": "Centro Vecinal Crisol Sur"
-    }
-  },
-  {
-    "name": "Centro Vecinal Don Bosco",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Avenida Ardizone",
-    "source": "generadores_sociales",
-    "source_id": "node:4255022589",
-    "grupo_fuente": "generador",
-    "lat": -31.3876375,
-    "lon": -64.2744075,
-    "tags": {
-      "addr:postcode": "5003",
-      "addr:street": "Avenida Ardizone",
-      "amenity": "community_centre",
-      "internet_access": "wlan",
-      "name": "Centro Vecinal Don Bosco"
-    }
-  },
-  {
-    "name": "Centro vecinal Santa Clara de Asis",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Oscariz Beaumont, Córdoba",
-    "source": "generadores_sociales",
-    "source_id": "node:4379967294",
-    "grupo_fuente": "generador",
-    "lat": -31.3828794,
-    "lon": -64.142146,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:postcode": "5012",
-      "addr:street": "Oscariz Beaumont",
-      "amenity": "community_centre",
-      "name": "Centro vecinal Santa Clara de Asis"
-    }
-  },
-  {
-    "name": "Centro Vecinal Yofre Norte",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Jacinto de Altoaguirre, Córdoba",
-    "source": "generadores_sociales",
-    "source_id": "node:4379967295",
-    "grupo_fuente": "generador",
-    "lat": -31.3831443,
-    "lon": -64.1343493,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:postcode": "5012",
-      "addr:street": "Jacinto de Altoaguirre",
-      "amenity": "community_centre",
-      "name": "Centro Vecinal Yofre Norte"
-    }
-  },
-  {
-    "name": "CENTRO VECINAL BARRIO ATE",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Uritorco 3225, Córdoba",
-    "source": "generadores_sociales",
-    "source_id": "node:5185100330",
-    "grupo_fuente": "generador",
-    "lat": -31.4342967,
-    "lon": -64.2313662,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "3225",
-      "addr:postcode": "5010",
-      "addr:street": "Uritorco",
-      "name": "CENTRO VECINAL BARRIO ATE"
-    }
-  },
-  {
-    "name": "centro vecinal",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "node:5188662865",
-    "grupo_fuente": "generador",
-    "lat": -31.4634003,
-    "lon": -64.1600062,
-    "tags": {
-      "name": "centro vecinal"
-    }
-  },
-  {
-    "name": "centro vecinal Parque República",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Paine",
-    "source": "generadores_sociales",
-    "source_id": "node:5194422273",
-    "grupo_fuente": "generador",
-    "lat": -31.4149523,
-    "lon": -64.2576241,
-    "tags": {
-      "addr:street": "Paine",
-      "amenity": "community_centre",
-      "community_centre": "community_hall",
-      "name": "centro vecinal Parque República"
-    }
-  },
-  {
-    "name": "Centro Vecinal Barrio Parque Vélez Sarsfield",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Avenida Naciones Unidas 452",
-    "source": "generadores_sociales",
-    "source_id": "node:6011618488",
-    "grupo_fuente": "generador",
-    "lat": -31.4419414,
-    "lon": -64.2021269,
-    "tags": {
-      "addr:housenumber": "452",
-      "addr:street": "Avenida Naciones Unidas",
-      "amenity": "community_centre",
-      "name": "Centro Vecinal Barrio Parque Vélez Sarsfield"
-    }
-  },
-  {
-    "name": "Memorial de la Fundación",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "node:9501827366",
-    "grupo_fuente": "generador",
-    "lat": -31.4156069,
-    "lon": -64.1555377,
-    "tags": {
-      "historic": "memorial",
-      "name": "Memorial de la Fundación"
-    }
-  },
-  {
-    "name": "Fundación ProSalud",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "way:139191775",
-    "grupo_fuente": "generador",
-    "lat": -31.4049652,
-    "lon": -64.204195,
-    "tags": {
-      "building": "yes",
-      "name": "Fundación ProSalud"
-    }
-  },
-  {
-    "name": "Plaza de las Siete Fundaciones",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "way:215473215",
-    "grupo_fuente": "generador",
-    "lat": -31.3684751,
-    "lon": -64.1955957,
-    "tags": {
-      "leisure": "park",
-      "name": "Plaza de las Siete Fundaciones"
-    }
-  },
-  {
-    "name": "Centro Vecinal Barrio General Belgrano",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "way:321536692",
-    "grupo_fuente": "generador",
-    "lat": -31.3709207,
-    "lon": -64.1351521,
-    "tags": {
-      "building": "public",
-      "name": "Centro Vecinal Barrio General Belgrano"
-    }
-  },
-  {
-    "name": "Centro de jubilados y Hogar de día Barrio Belgrano",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Fernando Abramo 2595, Córdoba",
-    "source": "generadores_sociales",
-    "source_id": "way:338713297",
-    "grupo_fuente": "generador",
-    "lat": -31.3709183,
-    "lon": -64.1349424,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:country": "AR",
-      "addr:housenumber": "2595",
-      "addr:postcode": "5012",
-      "addr:street": "Fernando Abramo",
-      "amenity": "social_facility",
-      "building": "yes",
-      "name": "Centro de jubilados y Hogar de día Barrio Belgrano"
-    }
-  },
-  {
-    "name": "Plazoleta de la Fundación",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "way:380188803",
-    "grupo_fuente": "generador",
-    "lat": -31.4156838,
-    "lon": -64.155982,
-    "tags": {
-      "leisure": "park",
-      "name": "Plazoleta de la Fundación"
-    }
-  },
-  {
-    "name": "Centro Vecinal Villa Wacalde - Alto Hermoso",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "El Cuy",
-    "source": "generadores_sociales",
-    "source_id": "way:402045259",
-    "grupo_fuente": "generador",
-    "lat": -31.3370814,
-    "lon": -64.309265,
-    "tags": {
-      "addr:street": "El Cuy",
-      "amenity": "community_centre",
-      "check_date:opening_hours": "2022-10-03",
-      "name": "Centro Vecinal Villa Wacalde - Alto Hermoso",
-      "opening_hours:signed": "no"
-    }
-  },
-  {
-    "name": "Centro Vecinal B° Kennedy",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Angel Peñaloza 3946, Córdoba",
-    "source": "generadores_sociales",
-    "source_id": "way:702096278",
-    "grupo_fuente": "generador",
-    "lat": -31.4584936,
-    "lon": -64.1903593,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "3946",
-      "addr:postcode": "5016",
-      "addr:street": "Angel Peñaloza",
-      "building": "civic",
-      "building:levels": "0",
-      "name": "Centro Vecinal B° Kennedy",
-      "smoking": "outside",
-      "wheelchair": "yes"
-    }
-  },
-  {
-    "name": "Centro Vecinal Barrio General Paz",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "way:761526554",
-    "grupo_fuente": "generador",
-    "lat": -31.4099753,
-    "lon": -64.1713567,
-    "tags": {
-      "amenity": "community_centre",
-      "building": "yes",
-      "name": "Centro Vecinal Barrio General Paz"
-    }
-  },
-  {
-    "name": "Centro de Jubilados",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Rufino Cuervo 1467, Córdoba",
-    "source": "generadores_sociales",
-    "source_id": "way:803410572",
-    "grupo_fuente": "generador",
-    "lat": -31.3894945,
-    "lon": -64.2182956,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "1467",
-      "addr:postcode": "5009",
-      "addr:street": "Rufino Cuervo",
-      "building": "yes",
-      "building:levels": "2",
-      "height": "5",
-      "name": "Centro de Jubilados"
-    }
-  },
-  {
-    "name": "Plaza Centro Vecinal Lomas Sur",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "way:974796148",
-    "grupo_fuente": "generador",
-    "lat": -31.3017215,
-    "lon": -64.2807574,
-    "tags": {
-      "leisure": "park",
-      "name": "Plaza Centro Vecinal Lomas Sur"
-    }
-  },
-  {
-    "name": "Centro Vecinal Barrio San Rafael \"A\" y Barrio Primera Junta",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "way:1020328096",
-    "grupo_fuente": "generador",
-    "lat": -31.4259494,
-    "lon": -64.2261919,
-    "tags": {
-      "amenity": "community_centre",
-      "community_centre": "community_hall",
-      "name": "Centro Vecinal Barrio San Rafael \"A\" y Barrio Primera Junta"
-    }
-  },
-  {
-    "name": "Centro Vecinal Barrio Alto Verde",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "way:1072283666",
-    "grupo_fuente": "generador",
-    "lat": -31.3717785,
-    "lon": -64.2198384,
-    "tags": {
-      "amenity": "community_centre",
-      "building": "public",
-      "name": "Centro Vecinal Barrio Alto Verde"
-    }
-  },
-  {
-    "name": "Centro Vecinal de Alberdi",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "way:1095449225",
-    "grupo_fuente": "generador",
-    "lat": -31.4068749,
-    "lon": -64.2081163,
-    "tags": {
-      "amenity": "conference_centre",
-      "building": "yes",
-      "name": "Centro Vecinal de Alberdi"
-    }
-  },
-  {
-    "name": "Centro Vecinal Barrio Santa Isabel 2",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "way:1112139735",
-    "grupo_fuente": "generador",
-    "lat": -31.4800612,
-    "lon": -64.2359804,
-    "tags": {
-      "amenity": "community_centre",
-      "building": "yes",
-      "name": "Centro Vecinal Barrio Santa Isabel 2",
-      "operator": "Municipalidad de Córdoba"
-    }
-  },
-  {
-    "name": "Fundación Universitaria de Oficios",
-    "email": "",
-    "website": "https://fuoficios.com.ar/",
-    "phone": "+54 351 372 2487",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "way:1258905609",
-    "grupo_fuente": "generador",
-    "lat": -31.493785,
-    "lon": -64.2578526,
-    "tags": {
-      "amenity": "school",
-      "name": "Fundación Universitaria de Oficios",
-      "phone": "+54 351 372 2487",
-      "website": "https://fuoficios.com.ar/"
-    }
-  },
-  {
-    "name": "Fundación Universitaria de Oficios",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "way:1258905610",
-    "grupo_fuente": "generador",
-    "lat": -31.4937594,
-    "lon": -64.2578513,
-    "tags": {
-      "building": "university",
-      "building:levels": "3",
-      "name": "Fundación Universitaria de Oficios"
-    }
-  },
-  {
-    "name": "Fundacion La Casa Del Gaucho Argentino",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "way:1459124169",
-    "grupo_fuente": "generador",
-    "lat": -31.4212771,
-    "lon": -64.2385108,
-    "tags": {
-      "building": "yes",
-      "building:levels": "1",
-      "name": "Fundacion La Casa Del Gaucho Argentino"
-    }
-  },
-  {
-    "name": "Centro Vecinal Villa Rivera Indarte",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Iglesia Vieja 9110",
-    "source": "generadores_sociales",
-    "source_id": "way:1463162560",
-    "grupo_fuente": "generador",
-    "lat": -31.3211459,
-    "lon": -64.2935996,
-    "tags": {
-      "addr:housenumber": "9110",
-      "addr:street": "Iglesia Vieja",
-      "amenity": "community_centre",
-      "building": "yes",
-      "name": "Centro Vecinal Villa Rivera Indarte"
-    }
-  },
-  {
-    "name": "Centro Vecinal Villa Paez",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Doctor Faustino Tronge, Córdoba",
-    "source": "generadores_sociales",
-    "source_id": "way:1525542620",
-    "grupo_fuente": "generador",
-    "lat": -31.4000949,
-    "lon": -64.2079976,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:street": "Doctor Faustino Tronge",
-      "building": "public",
-      "building:levels": "0",
-      "name": "Centro Vecinal Villa Paez"
-    }
-  },
-  {
-    "name": "Centro Vecinal Villa Paez",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "way:1525542621",
-    "grupo_fuente": "generador",
-    "lat": -31.4002697,
-    "lon": -64.2080036,
-    "tags": {
-      "access": "yes",
-      "covered": "no",
-      "fee": "no",
-      "hoops": "2",
-      "indoor": "no",
-      "leisure": "pitch",
-      "lit": "yes",
-      "name": "Centro Vecinal Villa Paez",
-      "sport": "basketball",
-      "surface": "concrete"
-    }
-  },
-  {
-    "name": "Centro vecinal de Quintas Capillitas",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sociales",
-    "source_id": "way:1531282320",
-    "grupo_fuente": "generador",
-    "lat": -31.4529956,
-    "lon": -64.0736512,
-    "tags": {
-      "amenity": "community_centre",
-      "building": "yes",
-      "building:levels": "1",
-      "community_centre": "community_hall",
-      "name": "Centro vecinal de Quintas Capillitas"
     }
   },
   {
