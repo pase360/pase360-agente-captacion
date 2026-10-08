@@ -450,6 +450,35 @@ def _tags(c):
 # ============================================================
 
 def _es_educacion(c):
+    """
+    Descarta instituciones educativas, sin confundirlas con colegios
+    y consejos profesionales que sí pueden ser generadores.
+    """
+    tags = _tags(c)
+
+    # La etiqueta estructurada permite descartar escuelas aunque el
+    # nombre no contenga palabras como "escuela" o "instituto".
+    if tags.get("amenity") in {
+        "school",
+        "university",
+        "college",
+        "kindergarten",
+        "preschool",
+    }:
+        return True
+
+    if tags.get("office") in {
+        "educational_institution",
+        "school",
+        "university",
+    }:
+        return True
+
+    # Los colegios/consejos profesionales no son instituciones educativas
+    # a estos efectos: son organizaciones con matriculados.
+    if _es_colegio_profesional(c):
+        return False
+
     return _contiene(
         _normalizar(_texto(c)),
         EDUCACION,
