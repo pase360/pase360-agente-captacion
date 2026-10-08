@@ -21,7 +21,7 @@ OWNER_NAME = env("OWNER_NAME", "Pase 360")
 OWNER_EMAIL = env("OWNER_EMAIL")
 SENDER_EMAIL = env("SENDER_EMAIL", OWNER_EMAIL)
 
-MODO_PRUEBA = env("MODO_PRUEBA", "si").lower() not in {"no", "false", "0", "produccion", "producción"}
+MODO_PRUEBA = (env("MODO_PRUEBA", "si").lower() not in {"no", "false", "0", "produccion", "producción"}) or (env("PERMITIR_ENVIO_REAL", "no").lower() not in {"si", "sí", "yes", "true", "1"})
 META_CONTACTOS = int(env("META_CONTACTOS", "100") or "100")
 MAX_CANDIDATOS_SCAN = int(env("MAX_CANDIDATOS_SCAN", "1000") or "1000")
 
