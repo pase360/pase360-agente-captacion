@@ -218,43 +218,48 @@ def _post_overpass(url, query):
         return None
 
 
-def _consultar(nombre, plantilla, grupo):
-    query = plantilla.replace(
-        "{bbox}",
-        C.BBOX,
-    )
+def _bbox_generador_fragmentos():
+    """
+    Fragmenta Córdoba en cuatro sectores solamente para las consultas
+    de generadores que fallan sobre el bbox completo.
 
-    # Se intenta cada servidor como fallback.
-    # No se repite indefinidamente el mismo servidor.
+    Esto reduce el trabajo que Overpass debe hacer por consulta sin
+    aumentar el volumen normal de consultas cuando el bbox completo
+    responde correctamente.
+    """
+    partes = C.BBOX.split(",")
+    if len(partes) != 4:
+        return [C.BBOX]
+
+    sur, oeste, norte, este = map(float, partes)
+    mitad_lat = (sur + norte) / 2
+    mitad_lon = (oeste + este) / 2
+
+    return [
+        f"{sur},{oeste},{mitad_lat},{mitad_lon}",
+        f"{sur},{mitad_lon},{mitad_lat},{este}",
+        f"{mitad_lat},{oeste},{norte},{mitad_lon}",
+        f"{mitad_lat},{mitad_lon},{norte},{este}",
+    ]
+
+
+def _consultar_una_area(nombre, plantilla, grupo, bbox):
+    query = plantilla.replace("{bbox}", bbox)
+
     for indice, url in enumerate(C.OVERPASS_URLS):
-
         log(
             f"[fuente] {nombre} -> "
             f"servidor {indice + 1}/{len(C.OVERPASS_URLS)}"
         )
 
-        data = _post_overpass(
-            url,
-            query,
-        )
+        data = _post_overpass(url, query)
 
         if data is None:
-            # Espera corta antes del siguiente servidor.
             if indice < len(C.OVERPASS_URLS) - 1:
                 time.sleep(1.5)
             continue
 
-        elementos = data.get(
-            "elements",
-            [],
-        )
-
-        if not elementos:
-            log(
-                f"[fuente] {nombre}: 0 lugares"
-            )
-            return []
-
+        elementos = data.get("elements", [])
         resultado = []
 
         for elemento in elementos:
@@ -263,18 +268,79 @@ def _consultar(nombre, plantilla, grupo):
                 grupo,
                 nombre,
             )
-
             if candidato:
                 resultado.append(candidato)
 
+        return resultado
+
+    return None
+
+
+def _consultar(nombre, plantilla, grupo):
+    resultado = _consultar_una_area(
+        nombre,
+        plantilla,
+        grupo,
+        C.BBOX,
+    )
+
+    # Si la consulta completa de un generador falla, se divide el
+    # territorio en cuatro sectores. Esto es un fallback, no una
+    # multiplicación permanente de consultas.
+    if resultado is not None:
         log(
             f"[fuente] {nombre}: "
             f"{len(resultado)} lugares recibidos"
         )
-
         return resultado
 
-    return []
+    if grupo != "generador":
+        return []
+
+    log(
+        f"[fuente] {nombre}: "
+        "consulta completa falló; "
+        "reintentando por sectores"
+    )
+
+    todos = []
+    fragmentos = _bbox_generador_fragmentos()
+
+    for indice, bbox in enumerate(fragmentos, start=1):
+        log(
+            f"[fuente] {nombre}: "
+            f"sector {indice}/{len(fragmentos)}"
+        )
+
+        sector = _consultar_una_area(
+            nombre,
+            plantilla,
+            grupo,
+            bbox,
+        )
+
+        if sector is None:
+            continue
+
+        todos.extend(sector)
+        time.sleep(0.8)
+
+    if not todos:
+        return []
+
+    # Un mismo objeto puede caer en el borde de dos sectores.
+    unicos = {}
+    for candidato in todos:
+        clave = _clave(candidato)
+        unicos[clave] = candidato
+
+    log(
+        f"[fuente] {nombre}: "
+        f"{len(unicos)} lugares recibidos "
+        "tras fragmentar"
+    )
+
+    return list(unicos.values())
 
 
 # ============================================================
