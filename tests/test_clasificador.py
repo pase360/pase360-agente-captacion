@@ -64,5 +64,21 @@ class TestClasificador(unittest.TestCase):
         c = {"name":"Colegio de Abogados de Córdoba","tags":{"office":"association"}}
         self.assertEqual(clasificar(c)[0], "generador")
 
+    def test_nuevos_colegios_profesionales_son_generadores(self):
+        nombres = [
+            "Colegio de Agrimensores de Córdoba",
+            "Colegio de Arquitectos de Córdoba",
+            "Colegio de Biólogos de Córdoba",
+            "Colegio de Escribanos de Córdoba",
+            "Colegio de Farmacéuticos de Córdoba",
+            "Colegio de Fonoaudiólogos de Córdoba",
+            "Colegio de Ingenieros Civiles de Córdoba",
+            "Colegio de Ingenieros Agrónomos de Córdoba",
+            "Colegio de Ingenieros Especialistas de Córdoba",
+        ]
+        for nombre in nombres:
+            with self.subTest(nombre=nombre):
+                self.assertEqual(clasificar({"name": nombre})[0], "generador")
+
 if __name__ == "__main__":
     unittest.main()
