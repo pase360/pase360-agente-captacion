@@ -335,6 +335,11 @@ INSTALACIONES_DEPORTIVAS = [
     "cancha municipal",
     "predio deportivo",
     "predio de deportes",
+    "cancha",
+    "canchas",
+    "centro de alto rendimiento",
+    "complejo de entrenamiento",
+    "predio de entrenamiento",
 ]
 
 
@@ -654,42 +659,40 @@ def _es_asociacion_con_miembros(c):
 def _es_club_deportivo(c):
     texto = _normalizar(_texto(c))
     tags = _tags(c)
+    nombre = _normalizar(
+        c.get("name") or c.get("nombre") or tags.get("name")
+        or tags.get("official_name") or ""
+    )
 
-    # Tag explícito de club.
-    if tags.get("club") in {
-        "sport",
-        "sports",
+    # Una instalación deportiva no es automáticamente una organización.
+    # Se permite la excepción cuando el nombre identifica claramente un club.
+    nombre_institucional = _contiene(nombre, [
+        "club atletico", "club deportivo", "club social y deportivo",
+        "club social deportivo", "club de futbol", "club de rugby",
+        "club de hockey", "club de basquet", "club de basket",
+        "club de tenis", "club nautico", "club de natacion",
+        "jockey club", "asociacion deportiva", "federacion deportiva",
+        "liga deportiva",
+    ])
+    if _es_instalacion_deportiva(c) and not nombre_institucional:
+        return False
+
+    if tags.get("club") in {"sport", "sports"}:
+        return True
+
+    if _contiene(texto, CLUBES_DEPORTIVOS_CLAROS):
+        return True
+
+    if _contiene(texto, INSTITUCIONES_DEPORTIVAS):
+        return True
+
+    # "club" aislado no basta; requiere evidencia adicional y no ser predio.
+    if _contiene(nombre, ["club"]) and tags.get("sport") and tags.get("leisure") not in {
+        "sports_centre", "sports_hall", "stadium", "pitch",
     }:
         return True
 
-    # Instituciones inequívocas.
-    if _contiene(
-        texto,
-        CLUBES_DEPORTIVOS_CLAROS,
-    ):
-        return True
-
-    if _contiene(
-        texto,
-        INSTITUCIONES_DEPORTIVAS,
-    ):
-        return True
-
-    # "club" solo NO alcanza.
-    if _contiene(texto, ["club"]):
-        sport = tags.get("sport", "")
-        leisure = tags.get("leisure", "")
-
-        if sport and leisure in {
-            "sports_centre",
-            "sports_hall",
-            "stadium",
-            "pitch",
-        }:
-            return True
-
     return False
-
 
 def _es_instalacion_deportiva(c):
     texto = _normalizar(_texto(c))
