@@ -1,10 +1,19 @@
 {
   "modo_prueba": true,
-  "candidatos_guardados": 2048,
+  "fecha_ultimo_escaneo": "2026-10-09T13:40:38.899935",
+  "candidatos_historicos_guardados": 2421,
   "contactados_historicos": 0,
-  "preguntas_creadas": 80,
-  "listos_ultimo_scan": 93,
-  "sin_email_ultimo_scan": 1703,
-  "dudosos_ultimo_scan": 250,
-  "descartados_ultimo_scan": 0
+  "preguntas_historicas_creadas": 205,
+  "ultimo_escaneo_clasificados": 996,
+  "ultimo_escaneo_encontrados": 3052,
+  "ultimo_escaneo_nuevos": 918,
+  "ultimo_escaneo_listos": 73,
+  "ultimo_escaneo_sin_email": 618,
+  "ultimo_escaneo_dudosos": 227,
+  "ultimo_escaneo_descartados": 78,
+  "ultimo_escaneo_cuadre": {
+    "clasificacion_total": 996,
+    "estado_total": 996,
+    "cuadra": true
+  }
 }
