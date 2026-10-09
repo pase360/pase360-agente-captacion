@@ -75,6 +75,9 @@ class TestClasificador(unittest.TestCase):
             "Colegio de Ingenieros Civiles de Córdoba",
             "Colegio de Ingenieros Agrónomos de Córdoba",
             "Colegio de Ingenieros Especialistas de Córdoba",
+            "Colegio de Ópticos de la Provincia de Córdoba",
+            "Colegio de Traductores Públicos de la Provincia de Córdoba",
+            "Consejo Profesional de Ciencias Económicas de Córdoba",
         ]
         for nombre in nombres:
             with self.subTest(nombre=nombre):
