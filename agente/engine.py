@@ -313,14 +313,14 @@ def _fusionar_base_candidatos(candidatos_actuales):
     for candidato in base:
         if not isinstance(candidato, dict):
             continue
-        clave = _key(candidato)
+        clave = _clave_identidad_estable(candidato)
         if clave:
             fusionados[clave] = candidato
 
     for candidato in candidatos_actuales:
         if not isinstance(candidato, dict):
             continue
-        clave = _key(candidato)
+        clave = _clave_identidad_estable(candidato)
         if clave:
             fusionados[clave] = candidato
 
