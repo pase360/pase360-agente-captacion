@@ -731,6 +731,9 @@ def _candidatos_institucionales():
         ("Colegio de Ingenieros Civiles de Córdoba", "https://www.civiles.org.ar"),
         ("Colegio de Ingenieros Agrónomos de Córdoba", "https://www.ciacordoba.org.ar"),
         ("Colegio de Ingenieros Especialistas de Córdoba", "https://www.ciec.com.ar"),
+        ("Consejo Profesional de Ciencias Económicas de Córdoba", "https://web.cpcecba.org.ar"),
+        ("Colegio de Ópticos de la Provincia de Córdoba", "https://colegiodeopticoscba.org.ar"),
+        ("Colegio de Traductores Públicos de la Provincia de Córdoba", "https://www.coltrad-cba.org.ar"),
     ]
 
     resultado = []
