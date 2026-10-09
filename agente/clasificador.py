@@ -230,6 +230,8 @@ PALABRAS_COMERCIO = [
 # ============================================================
 
 ENTIDADES_EXCLUIDAS = [
+    "parking",
+    "estacionamiento",
     "capilla",
     "parroquia",
     "iglesia",
