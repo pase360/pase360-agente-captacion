@@ -746,7 +746,10 @@ def clasificar(c):
     # Excluir por etiqueta OSM aunque el nombre sea genérico o no tenga
     # palabras como "iglesia", "consulado" o "ministerio".
     if (
-        tags.get("amenity") == "place_of_worship"
+        tags.get("amenity") in {
+            "place_of_worship",
+            "parking",
+        }
         or tags.get("office") in {
             "diplomatic",
             "government",
