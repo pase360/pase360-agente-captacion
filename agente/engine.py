@@ -897,6 +897,7 @@ def preguntas():
 
         if (
             k in s["preguntas"]
+            or clave_estable in s["preguntas"]
             or k in s["decisiones"]
             or clave_estable in s["decisiones"]
         ):
@@ -913,7 +914,7 @@ def preguntas():
         )
 
         if resultado.get("ok"):
-            s["preguntas"][k] = (
+            s["preguntas"][clave_estable] = (
                 resultado.get(
                     "url"
                 )
