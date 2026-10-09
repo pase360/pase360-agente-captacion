@@ -40,6 +40,10 @@ class TestClasificador(unittest.TestCase):
         c = {"name":"Parking Centro","tags":{"amenity":"parking"}}
         self.assertEqual(clasificar(c)[0], "descartado")
 
+    def test_estacionamiento_descartado_por_tag_aunque_nombre_sea_generico(self):
+        c = {"name": "Centro", "tags": {"amenity": "parking"}}
+        self.assertEqual(clasificar(c)[0], "descartado")
+
     def test_parroquia_descartada(self):
         c = {"name":"Parroquia Nuestra Señora del Carmen","tags":{"amenity":"place_of_worship"}}
         self.assertEqual(clasificar(c)[0], "descartado")
