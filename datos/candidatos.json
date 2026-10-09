@@ -26611,16 +26611,18 @@
     "phone": "",
     "direccion": "",
     "source": "generadores_deportivos",
-    "source_id": "node:11338994549",
+    "source_id": "relation:5297853",
     "grupo_fuente": "generador",
-    "lat": -31.4130733,
-    "lon": -64.1860156,
+    "lat": -31.4545734,
+    "lon": -64.1807634,
     "tags": {
+      "admin_level": "9",
+      "boundary": "administrative",
       "name": "Jockey Club",
-      "office": "company"
+      "type": "boundary"
     },
-    "tipo": "comercio",
-    "clasificacion_motivo": "OSM identifica actividad comercial o de servicios",
+    "tipo": "generador",
+    "clasificacion_motivo": "Club o institución deportiva identificada",
     "contactable": false,
     "email_fuente": "",
     "estado": "sin_email"
@@ -41058,9 +41060,9 @@
     "website": "",
     "phone": "+54 351 433 8631",
     "direccion": "",
-    "source": "comercios_servicios",
+    "source": "generadores_cooperativas",
     "source_id": "node:10742537147",
-    "grupo_fuente": "comercio",
+    "grupo_fuente": "generador",
     "lat": -31.4522134,
     "lon": -64.1330291,
     "tags": {
@@ -49893,7 +49895,7 @@
     "website": "",
     "phone": "",
     "direccion": "",
-    "source": "generadores_deportivos",
+    "source": "generadores_clubes",
     "source_id": "node:10927614380",
     "grupo_fuente": "generador",
     "lat": -31.3600393,
@@ -49965,7 +49967,7 @@
     "website": "",
     "phone": "",
     "direccion": "",
-    "source": "generadores_clubes",
+    "source": "generadores_deportivos",
     "source_id": "node:10232299898",
     "grupo_fuente": "generador",
     "lat": -31.4940669,
@@ -50003,19 +50005,19 @@
     "estado": "sin_email"
   },
   {
-    "name": "Club Atlético Las Palmas",
+    "name": "Club Atletico Las Palmas",
     "email": "",
     "website": "",
     "phone": "",
     "direccion": "",
     "source": "generadores_deportivos",
-    "source_id": "way:210687215",
+    "source_id": "way:1459124145",
     "grupo_fuente": "generador",
-    "lat": -31.4049027,
-    "lon": -64.2382731,
+    "lat": -31.4210099,
+    "lon": -64.2713078,
     "tags": {
       "leisure": "sports_centre",
-      "name": "Club Atlético Las Palmas"
+      "name": "Club Atletico Las Palmas"
     },
     "tipo": "generador",
     "clasificacion_motivo": "Club o institución deportiva identificada",
@@ -50072,7 +50074,7 @@
     "website": "",
     "phone": "",
     "direccion": "",
-    "source": "generadores_clubes",
+    "source": "generadores_deportivos",
     "source_id": "node:13255857595",
     "grupo_fuente": "generador",
     "lat": -31.4264297,
@@ -57458,5 +57460,265 @@
     "contactable": false,
     "email_fuente": "",
     "estado": "sin_email"
+  },
+  {
+    "name": "Colegio de Abogados de Córdoba",
+    "email": "",
+    "website": "https://www.abogado.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:abogado.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    },
+    "tipo": "generador",
+    "clasificacion_motivo": "Colegio o consejo profesional",
+    "contactable": false,
+    "email_fuente": "",
+    "estado": "sin_email"
+  },
+  {
+    "name": "Colegio de Agrimensores de Córdoba",
+    "email": "info@agrimcba.org.ar",
+    "website": "https://www.agrimensorescordoba.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:agrimensorescordoba.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    },
+    "tipo": "generador",
+    "clasificacion_motivo": "Colegio o consejo profesional",
+    "email_fuente": "website",
+    "contactable": true,
+    "estado": "listo_para_contactar"
+  },
+  {
+    "name": "Colegio de Arquitectos de Córdoba",
+    "email": "provincialcapc@gmail.com",
+    "website": "https://colegio-arquitectos.com.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:colegio-arquitectos.com.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    },
+    "tipo": "generador",
+    "clasificacion_motivo": "Colegio o consejo profesional",
+    "email_fuente": "website",
+    "contactable": true,
+    "estado": "listo_para_contactar"
+  },
+  {
+    "name": "Colegio de Biólogos de Córdoba",
+    "email": "colegio.biologos.cordoba@gmail.com",
+    "website": "https://www.colegiobiologoscba.com.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:colegiobiologoscba.com.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    },
+    "tipo": "generador",
+    "clasificacion_motivo": "Colegio o consejo profesional",
+    "email_fuente": "website",
+    "contactable": true,
+    "estado": "listo_para_contactar"
+  },
+  {
+    "name": "Colegio de Escribanos de Córdoba",
+    "email": "",
+    "website": "https://www.escribanos.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:escribanos.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    },
+    "tipo": "generador",
+    "clasificacion_motivo": "Colegio o consejo profesional",
+    "contactable": false,
+    "email_fuente": "",
+    "estado": "sin_email"
+  },
+  {
+    "name": "Colegio de Farmacéuticos de Córdoba",
+    "email": "turismo@colfacor.org.ar",
+    "website": "https://www.colfacor.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:colfacor.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    },
+    "tipo": "generador",
+    "clasificacion_motivo": "Colegio o consejo profesional",
+    "email_fuente": "website",
+    "contactable": true,
+    "estado": "listo_para_contactar"
+  },
+  {
+    "name": "Colegio de Fonoaudiólogos de Córdoba",
+    "email": "",
+    "website": "https://www.cfc-cordoba.org",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:cfc-cordoba.org",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    },
+    "tipo": "generador",
+    "clasificacion_motivo": "Colegio o consejo profesional",
+    "contactable": false,
+    "email_fuente": "",
+    "estado": "sin_email"
+  },
+  {
+    "name": "Colegio de Ingenieros Agrónomos de Córdoba",
+    "email": "",
+    "website": "https://www.ciacordoba.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:ciacordoba.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    },
+    "tipo": "generador",
+    "clasificacion_motivo": "Colegio o consejo profesional",
+    "contactable": false,
+    "email_fuente": "",
+    "estado": "sin_email"
+  },
+  {
+    "name": "Colegio de Ingenieros Civiles de Córdoba",
+    "email": "colegio@civiles.org.ar",
+    "website": "https://www.civiles.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:civiles.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    },
+    "tipo": "generador",
+    "clasificacion_motivo": "Colegio o consejo profesional",
+    "email_fuente": "website",
+    "contactable": true,
+    "estado": "listo_para_contactar"
+  },
+  {
+    "name": "Colegio de Ingenieros Especialistas de Córdoba",
+    "email": "ciec@ciec.com.ar",
+    "website": "https://www.ciec.com.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:ciec.com.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    },
+    "tipo": "generador",
+    "clasificacion_motivo": "Colegio o consejo profesional",
+    "email_fuente": "website",
+    "contactable": true,
+    "estado": "listo_para_contactar"
+  },
+  {
+    "name": "Colegio de Ópticos de la Provincia de Córdoba",
+    "email": "info@colegiodeopticoscba.org.ar",
+    "website": "https://colegiodeopticoscba.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:colegiodeopticoscba.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    },
+    "tipo": "generador",
+    "clasificacion_motivo": "Colegio o consejo profesional",
+    "email_fuente": "website",
+    "contactable": true,
+    "estado": "listo_para_contactar"
+  },
+  {
+    "name": "Colegio de Traductores Públicos de la Provincia de Córdoba",
+    "email": "",
+    "website": "https://www.coltrad-cba.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:coltrad-cba.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    },
+    "tipo": "generador",
+    "clasificacion_motivo": "Colegio o consejo profesional",
+    "contactable": false,
+    "email_fuente": "",
+    "estado": "sin_email"
+  },
+  {
+    "name": "Consejo Profesional de Ciencias Económicas de Córdoba",
+    "email": "cpcecba@cpcecba.org.ar",
+    "website": "https://web.cpcecba.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:web.cpcecba.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    },
+    "tipo": "generador",
+    "clasificacion_motivo": "Colegio o consejo profesional",
+    "email_fuente": "website",
+    "contactable": true,
+    "estado": "listo_para_contactar"
   }
 ]

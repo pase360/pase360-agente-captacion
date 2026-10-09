@@ -1,5 +1,1108 @@
 [
   {
+    "name": "Colegio de Abogados de Córdoba",
+    "email": "",
+    "website": "https://www.abogado.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:abogado.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    }
+  },
+  {
+    "name": "Colegio de Agrimensores de Córdoba",
+    "email": "",
+    "website": "https://www.agrimensorescordoba.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:agrimensorescordoba.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    }
+  },
+  {
+    "name": "Colegio de Arquitectos de Córdoba",
+    "email": "",
+    "website": "https://colegio-arquitectos.com.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:colegio-arquitectos.com.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    }
+  },
+  {
+    "name": "Colegio de Biólogos de Córdoba",
+    "email": "",
+    "website": "https://www.colegiobiologoscba.com.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:colegiobiologoscba.com.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    }
+  },
+  {
+    "name": "Colegio de Escribanos de Córdoba",
+    "email": "",
+    "website": "https://www.escribanos.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:escribanos.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    }
+  },
+  {
+    "name": "Colegio de Farmacéuticos de Córdoba",
+    "email": "",
+    "website": "https://www.colfacor.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:colfacor.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    }
+  },
+  {
+    "name": "Colegio de Fonoaudiólogos de Córdoba",
+    "email": "",
+    "website": "https://www.cfc-cordoba.org",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:cfc-cordoba.org",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    }
+  },
+  {
+    "name": "Colegio de Ingenieros Civiles de Córdoba",
+    "email": "",
+    "website": "https://www.civiles.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:civiles.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    }
+  },
+  {
+    "name": "Colegio de Ingenieros Agrónomos de Córdoba",
+    "email": "",
+    "website": "https://www.ciacordoba.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:ciacordoba.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    }
+  },
+  {
+    "name": "Colegio de Ingenieros Especialistas de Córdoba",
+    "email": "",
+    "website": "https://www.ciec.com.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:ciec.com.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    }
+  },
+  {
+    "name": "Consejo Profesional de Ciencias Económicas de Córdoba",
+    "email": "",
+    "website": "https://web.cpcecba.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:web.cpcecba.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    }
+  },
+  {
+    "name": "Colegio de Ópticos de la Provincia de Córdoba",
+    "email": "",
+    "website": "https://colegiodeopticoscba.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:colegiodeopticoscba.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    }
+  },
+  {
+    "name": "Colegio de Traductores Públicos de la Provincia de Córdoba",
+    "email": "",
+    "website": "https://www.coltrad-cba.org.ar",
+    "phone": "",
+    "direccion": "Córdoba Capital, Córdoba, Argentina",
+    "source": "directorio_institucional_invest_cordoba_2023",
+    "source_id": "institucional:coltrad-cba.org.ar",
+    "grupo_fuente": "generador",
+    "lat": null,
+    "lon": null,
+    "tags": {
+      "source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"
+    }
+  },
+  {
+    "name": "Grupo Scout Cutaquelen",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Cochabamba 2884",
+    "source": "generadores_clubes",
+    "source_id": "node:6693596697",
+    "grupo_fuente": "generador",
+    "lat": -31.3958661,
+    "lon": -64.1490841,
+    "tags": {
+      "addr:housenumber": "2884",
+      "addr:street": "Cochabamba",
+      "amenity": "community_centre",
+      "club": "scout",
+      "community_centre": "home_club",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout Cutaquelen",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "955"
+    }
+  },
+  {
+    "name": "Grupo Scout Ararat",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Avenida Patria 921",
+    "source": "generadores_clubes",
+    "source_id": "node:6693596702",
+    "grupo_fuente": "generador",
+    "lat": -31.4038439,
+    "lon": -64.1599993,
+    "tags": {
+      "addr:housenumber": "921",
+      "addr:street": "Avenida Patria",
+      "club": "scout",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout Ararat",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "770"
+    }
+  },
+  {
+    "name": "Grupo Scout Divino Niño",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:6693596729",
+    "grupo_fuente": "generador",
+    "lat": -31.3813724,
+    "lon": -64.1643822,
+    "tags": {
+      "amenity": "community_centre",
+      "club": "scout",
+      "community_centre": "home_club",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout Divino Niño",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "806"
+    }
+  },
+  {
+    "name": "Grupo Scout Arakatz",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Juan de Garay 2057",
+    "source": "generadores_clubes",
+    "source_id": "node:6693596804",
+    "grupo_fuente": "generador",
+    "lat": -31.4024966,
+    "lon": -64.1593482,
+    "tags": {
+      "addr:housenumber": "2057",
+      "addr:street": "Juan de Garay",
+      "amenity": "community_centre",
+      "club": "scout",
+      "community_centre": "home_club",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout Arakatz",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "507"
+    }
+  },
+  {
+    "name": "Grupo Scout Polo Godoy Rojo",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "José Antonio de Sucre 3663",
+    "source": "generadores_clubes",
+    "source_id": "node:6693596858",
+    "grupo_fuente": "generador",
+    "lat": -31.3719265,
+    "lon": -64.1798434,
+    "tags": {
+      "addr:housenumber": "3663",
+      "addr:street": "José Antonio de Sucre",
+      "amenity": "community_centre",
+      "club": "scout",
+      "community_centre": "home_club",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout Polo Godoy Rojo",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "1007"
+    }
+  },
+  {
+    "name": "Grupo Scout Perito Moreno",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Roma 155",
+    "source": "generadores_clubes",
+    "source_id": "node:6693596868",
+    "grupo_fuente": "generador",
+    "lat": -31.4135534,
+    "lon": -64.1634003,
+    "tags": {
+      "addr:housenumber": "155",
+      "addr:street": "Roma",
+      "amenity": "community_centre",
+      "club": "scout",
+      "community_centre": "home_club",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout Perito Moreno",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "1078"
+    }
+  },
+  {
+    "name": "Grupo Scout Nuestra Señora de Fátima",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Colomprea 1240",
+    "source": "generadores_clubes",
+    "source_id": "node:6693597048",
+    "grupo_fuente": "generador",
+    "lat": -31.3909986,
+    "lon": -64.160283,
+    "tags": {
+      "addr:housenumber": "1240",
+      "addr:street": "Colomprea",
+      "amenity": "community_centre",
+      "club": "scout",
+      "community_centre": "home_club",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout Nuestra Señora de Fátima",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "440"
+    }
+  },
+  {
+    "name": "Grupo Scout San Roque",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Díaz Colodrero 2840",
+    "source": "generadores_clubes",
+    "source_id": "node:6693597099",
+    "grupo_fuente": "generador",
+    "lat": -31.3772682,
+    "lon": -64.144668,
+    "tags": {
+      "addr:housenumber": "2840",
+      "addr:street": "Díaz Colodrero",
+      "club": "scout",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout San Roque",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "933"
+    }
+  },
+  {
+    "name": "Grupo Scout San Cayetano",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Méjico 1343",
+    "source": "generadores_clubes",
+    "source_id": "node:6693597139",
+    "grupo_fuente": "generador",
+    "lat": -31.3997999,
+    "lon": -64.1629888,
+    "tags": {
+      "addr:housenumber": "1343",
+      "addr:street": "Méjico",
+      "club": "scout",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout San Cayetano",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "3"
+    }
+  },
+  {
+    "name": "Grupo Scout Maestro Scout Tomás Alejandro Echevarría",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "24 de Septiembre 2398",
+    "source": "generadores_clubes",
+    "source_id": "node:6693597164",
+    "grupo_fuente": "generador",
+    "lat": -31.4101123,
+    "lon": -64.1524198,
+    "tags": {
+      "addr:housenumber": "2398",
+      "addr:street": "24 de Septiembre",
+      "club": "scout",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout Maestro Scout Tomás Alejandro Echevarría",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "389"
+    }
+  },
+  {
+    "name": "Grupo Scout Sagrado Corazón de Jesús",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:6693597218",
+    "grupo_fuente": "generador",
+    "lat": -31.389015,
+    "lon": -64.1535402,
+    "tags": {
+      "addr:full": "Punta del Sauce y Paysandú",
+      "amenity": "community_centre",
+      "club": "scout",
+      "community_centre": "home_club",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout Sagrado Corazón de Jesús",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "803"
+    }
+  },
+  {
+    "name": "Grupo Scout General Teófilo Iwanowski",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Luis Vernet 1850",
+    "source": "generadores_clubes",
+    "source_id": "node:6693597276",
+    "grupo_fuente": "generador",
+    "lat": -31.3767109,
+    "lon": -64.1470961,
+    "tags": {
+      "addr:housenumber": "1850",
+      "addr:street": "Luis Vernet",
+      "amenity": "community_centre",
+      "club": "scout",
+      "community_centre": "home_club",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout General Teófilo Iwanowski",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "1159"
+    }
+  },
+  {
+    "name": "Ferroviario",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:7067436132",
+    "grupo_fuente": "generador",
+    "lat": -31.3759874,
+    "lon": -64.1397936,
+    "tags": {
+      "club": "yes",
+      "name": "Ferroviario"
+    }
+  },
+  {
+    "name": "Infinito Xtreme Park",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:10911638052",
+    "grupo_fuente": "generador",
+    "lat": -31.4085396,
+    "lon": -64.1151871,
+    "tags": {
+      "club": "sport",
+      "name": "Infinito Xtreme Park"
+    }
+  },
+  {
+    "name": "Club Atlético Defensores Central Córdoba",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:10927614380",
+    "grupo_fuente": "generador",
+    "lat": -31.3600393,
+    "lon": -64.108282,
+    "tags": {
+      "club": "sport",
+      "name": "Club Atlético Defensores Central Córdoba"
+    }
+  },
+  {
+    "name": "Córdoba Rugby Club",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Avenida Juan B. Justo 6500, Córdoba",
+    "source": "generadores_clubes",
+    "source_id": "node:12456536685",
+    "grupo_fuente": "generador",
+    "lat": -31.3443508,
+    "lon": -64.1760055,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "6500",
+      "addr:street": "Avenida Juan B. Justo",
+      "club": "sport",
+      "name": "Córdoba Rugby Club"
+    }
+  },
+  {
+    "name": "Club de Boxeadores",
+    "email": "",
+    "website": "",
+    "phone": "+54 351 557 5868",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:14070562569",
+    "grupo_fuente": "generador",
+    "lat": -31.4097195,
+    "lon": -64.177065,
+    "tags": {
+      "club": "sport",
+      "name": "Club de Boxeadores",
+      "panoramax": "b4cada8a-511e-410d-9280-f4ae877337ef",
+      "phone": "+54 351 557 5868",
+      "sport": "boxing"
+    }
+  },
+  {
+    "name": "Mutual de los Docentes",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_mutuales",
+    "source_id": "node:4401595795",
+    "grupo_fuente": "generador",
+    "lat": -31.4572448,
+    "lon": -64.224327,
+    "tags": {
+      "name": "Mutual de los Docentes",
+      "place": "suburb"
+    }
+  },
+  {
+    "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
+    "email": "",
+    "website": "",
+    "phone": "+54 351 480 1139",
+    "direccion": "Italia 2472, Córdoba",
+    "source": "generadores_mutuales",
+    "source_id": "node:5536777869",
+    "grupo_fuente": "generador",
+    "lat": -31.3867835,
+    "lon": -64.2116705,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "2472",
+      "addr:street": "Italia",
+      "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
+      "office": "association",
+      "opening_hours": "Mo-Fr 09:00-18:45",
+      "phone": "0351 480-1139"
+    }
+  },
+  {
+    "name": "Semacor - Mutual de SubOficiales del Ejercito",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_mutuales",
+    "source_id": "node:7067931589",
+    "grupo_fuente": "generador",
+    "lat": -31.4020039,
+    "lon": -64.2154606,
+    "tags": {
+      "name": "Semacor - Mutual de SubOficiales del Ejercito",
+      "office": "yes"
+    }
+  },
+  {
+    "name": "Cooperativa La Unidad",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_cooperativas",
+    "source_id": "node:3608178811",
+    "grupo_fuente": "generador",
+    "lat": -31.4292041,
+    "lon": -64.1124736,
+    "tags": {
+      "name": "Cooperativa La Unidad",
+      "place": "neighbourhood"
+    }
+  },
+  {
+    "name": "Centro de Salud 71 - Cooperativa El Arco",
+    "email": "",
+    "website": "",
+    "phone": "+54 351 433 8631",
+    "direccion": "",
+    "source": "generadores_cooperativas",
+    "source_id": "node:10742537147",
+    "grupo_fuente": "generador",
+    "lat": -31.4522134,
+    "lon": -64.1330291,
+    "tags": {
+      "amenity": "clinic",
+      "healthcare": "clinic",
+      "name": "Centro de Salud 71 - Cooperativa El Arco",
+      "phone": "+54 351 433 8631"
+    }
+  },
+  {
+    "name": "Cooperativa de Servicios",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_cooperativas",
+    "source_id": "node:4549744690",
+    "grupo_fuente": "generador",
+    "lat": -31.2946356,
+    "lon": -64.2988395,
+    "tags": {
+      "name": "Cooperativa de Servicios",
+      "name:es": "Cooperativa de Servicios",
+      "office": "yes"
+    }
+  },
+  {
+    "name": "Villa Cooperativa Atalaya",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_cooperativas",
+    "source_id": "node:11013306342",
+    "grupo_fuente": "generador",
+    "lat": -31.333816,
+    "lon": -64.249322,
+    "tags": {
+      "name": "Villa Cooperativa Atalaya",
+      "place": "neighbourhood"
+    }
+  },
+  {
+    "name": "Cooperativa 2 de Mayo",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_cooperativas",
+    "source_id": "way:164418465",
+    "grupo_fuente": "generador",
+    "lat": -31.3121291,
+    "lon": -64.2914551,
+    "tags": {
+      "highway": "residential",
+      "lanes": "2",
+      "name": "Cooperativa 2 de Mayo",
+      "oneway": "no",
+      "surface": "sett"
+    }
+  },
+  {
+    "name": "Cooperativa El Hornero",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_cooperativas",
+    "source_id": "node:3009326847",
+    "grupo_fuente": "generador",
+    "lat": -31.348493,
+    "lon": -64.1835762,
+    "tags": {
+      "name": "Cooperativa El Hornero",
+      "place": "neighbourhood"
+    }
+  },
+  {
+    "name": "Cooperativa \"Huanqueros\"",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_cooperativas",
+    "source_id": "way:258938860",
+    "grupo_fuente": "generador",
+    "lat": -31.4085034,
+    "lon": -64.1358183,
+    "tags": {
+      "highway": "residential",
+      "name": "Cooperativa \"Huanqueros\"",
+      "surface": "asphalt"
+    }
+  },
+  {
+    "name": "Colegio de Escribanos",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_profesionales",
+    "source_id": "way:985579509",
+    "grupo_fuente": "generador",
+    "lat": -31.416831,
+    "lon": -64.1860831,
+    "tags": {
+      "building": "yes",
+      "building:levels": "11",
+      "name": "Colegio de Escribanos"
+    }
+  },
+  {
+    "name": "Club Atlético Juvenil Barrio...",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "node:10232299898",
+    "grupo_fuente": "generador",
+    "lat": -31.4940669,
+    "lon": -64.2096178,
+    "tags": {
+      "club": "sport",
+      "name": "Club Atlético Juvenil Barrio..."
+    }
+  },
+  {
+    "name": "Jockey Club Córdoba",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "way:163098853",
+    "grupo_fuente": "generador",
+    "lat": -31.4545858,
+    "lon": -64.1818369,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Jockey Club Córdoba",
+      "wikidata": "Q8430339",
+      "wikipedia": "es:Jockey Club Córdoba"
+    }
+  },
+  {
+    "name": "Club Atlético Bella Vista",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "way:286698290",
+    "grupo_fuente": "generador",
+    "lat": -31.4312236,
+    "lon": -64.2046357,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Atlético Bella Vista",
+      "wikidata": "Q16491022",
+      "wikipedia": "es:Club Atlético Bella Vista (Córdoba)"
+    }
+  },
+  {
+    "name": "Club Atlético Las Flores",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "way:304038366",
+    "grupo_fuente": "generador",
+    "lat": -31.4558242,
+    "lon": -64.1949639,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Atlético Las Flores",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Club Atletico Las Palmas",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "way:1459124145",
+    "grupo_fuente": "generador",
+    "lat": -31.4210099,
+    "lon": -64.2713078,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Atletico Las Palmas"
+    }
+  },
+  {
+    "name": "Jockey Club",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "relation:5297853",
+    "grupo_fuente": "generador",
+    "lat": -31.4545734,
+    "lon": -64.1807634,
+    "tags": {
+      "admin_level": "9",
+      "boundary": "administrative",
+      "name": "Jockey Club",
+      "type": "boundary"
+    }
+  },
+  {
+    "name": "Club Atlético San Lorenzo",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "relation:6296459",
+    "grupo_fuente": "generador",
+    "lat": -31.4546294,
+    "lon": -64.1972243,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Atlético San Lorenzo",
+      "type": "multipolygon"
+    }
+  },
+  {
+    "name": "Club Atlético General Paz -Junior´s",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Avenida Álvarez de Arenales 520, Córdoba",
+    "source": "generadores_deportivos",
+    "source_id": "node:4371647772",
+    "grupo_fuente": "generador",
+    "lat": -31.4222833,
+    "lon": -64.168093,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "520",
+      "addr:postcode": "5000",
+      "addr:street": "Avenida Álvarez de Arenales",
+      "description": "Abierto de 8:00-0:00 de Domingo a Sábado. Tel 0351-4512093 http://gralpazjuniors.com.ar Excelente club familiar que cuenta con diversas actividades. Actualmente mejorando el estado de sus canchas de handball y basquet, vestuarios y la seguridad.",
+      "leisure": "sports_centre",
+      "name": "Club Atlético General Paz -Junior´s"
+    }
+  },
+  {
+    "name": "Club Atlético Palermo",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "node:13255857595",
+    "grupo_fuente": "generador",
+    "lat": -31.4264297,
+    "lon": -64.1436538,
+    "tags": {
+      "club": "sport",
+      "leisure": "sports_centre",
+      "name": "Club Atlético Palermo"
+    }
+  },
+  {
+    "name": "Club Atlético Los Andes",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "way:1104542365",
+    "grupo_fuente": "generador",
+    "lat": -31.4430923,
+    "lon": -64.1338308,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Atlético Los Andes"
+    }
+  },
+  {
+    "name": "Centro de Alto Rendimiento Club Atlético Talleres",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "way:1384474948",
+    "grupo_fuente": "generador",
+    "lat": -31.4673,
+    "lon": -64.1543765,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Centro de Alto Rendimiento Club Atlético Talleres"
+    }
+  },
+  {
+    "name": "Club Deportivo Banfield Cordoba Estadio Mito Diaz",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "way:1427942592",
+    "grupo_fuente": "generador",
+    "lat": -31.4240064,
+    "lon": -64.0964849,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Deportivo Banfield Cordoba Estadio Mito Diaz"
+    }
+  },
+  {
+    "name": "Country Jockey Club",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "relation:5297850",
+    "grupo_fuente": "generador",
+    "lat": -31.4632624,
+    "lon": -64.177062,
+    "tags": {
+      "admin_level": "9",
+      "boundary": "administrative",
+      "name": "Country Jockey Club",
+      "postal_code": "X5016",
+      "type": "boundary"
+    }
+  },
+  {
+    "name": "Country Jockey Club Córdoba Golf",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "relation:15557350",
+    "grupo_fuente": "generador",
+    "lat": -31.4633728,
+    "lon": -64.1769915,
+    "tags": {
+      "leisure": "golf_course",
+      "name": "Country Jockey Club Córdoba Golf",
+      "type": "multipolygon"
+    }
+  },
+  {
+    "name": "Club Atlético Yapeyú",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Juan Roque",
+    "source": "generadores_deportivos",
+    "source_id": "node:3684839383",
+    "grupo_fuente": "generador",
+    "lat": -31.4138186,
+    "lon": -64.1511546,
+    "tags": {
+      "addr:housename": "150",
+      "addr:street": "Juan Roque",
+      "leisure": "sports_centre",
+      "name": "Club Atlético Yapeyú"
+    }
+  },
+  {
+    "name": "Club Deportivo Alta Córdoba",
+    "email": "",
+    "website": "https://www.facebook.com/people/Club-Deportivo-Alta-C%C3%B3rdoba/100076633227264/",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "node:12783743371",
+    "grupo_fuente": "generador",
+    "lat": -31.3886116,
+    "lon": -64.1790002,
+    "tags": {
+      "amenity": "community_centre",
+      "community_centre": "social_centre",
+      "name": "Club Deportivo Alta Córdoba",
+      "website": "https://www.facebook.com/people/Club-Deportivo-Alta-C%C3%B3rdoba/100076633227264/"
+    }
+  },
+  {
+    "name": "Club Atlético Libertad",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "way:182768945",
+    "grupo_fuente": "generador",
+    "lat": -31.403947,
+    "lon": -64.1294862,
+    "tags": {
+      "leisure": "pitch",
+      "name": "Club Atlético Libertad",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Club Atlético Racing de Córdoba",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Hernán Huberman 1750, Córdoba",
+    "source": "generadores_deportivos",
+    "source_id": "way:238810815",
+    "grupo_fuente": "generador",
+    "lat": -31.3895435,
+    "lon": -64.1433822,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "1750",
+      "addr:postcode": "5000",
+      "addr:street": "Hernán Huberman",
+      "alt_name": "Estadio Miguel Sancho",
+      "leisure": "stadium",
+      "name": "Club Atlético Racing de Córdoba",
+      "sport": "soccer",
+      "wikidata": "Q5848146",
+      "wikipedia": "es:Estadio Miguel Sancho"
+    }
+  },
+  {
+    "name": "Club Atlético Villa Azalais",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Avenida Arturo Capdevila, Córdoba",
+    "source": "generadores_deportivos",
+    "source_id": "way:304140982",
+    "grupo_fuente": "generador",
+    "lat": -31.3783789,
+    "lon": -64.155073,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:postcode": "5000",
+      "addr:street": "Avenida Arturo Capdevila",
+      "leisure": "sports_centre",
+      "name": "Club Atlético Villa Azalais",
+      "sport": "multi"
+    }
+  },
+  {
+    "name": "Club Atlético Argentino Central \"La Charla\"",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "way:314518006",
+    "grupo_fuente": "generador",
+    "lat": -31.3857741,
+    "lon": -64.1665338,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Atlético Argentino Central \"La Charla\"",
+      "sport": "soccer"
+    }
+  },
+  {
     "name": "Comedor Universitario",
     "email": "comedor@bienestar.unc.edu.ar",
     "website": "https://www.unc.edu.ar/vida-estudiantil/direcci%C3%B3n-de-nutrici%C3%B3n-y-servicios-alimentarios",
@@ -6692,23 +7795,6 @@
     }
   },
   {
-    "name": "Cooperativa de Servicios",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_cooperativas",
-    "source_id": "node:4549744690",
-    "grupo_fuente": "generador",
-    "lat": -31.2946356,
-    "lon": -64.2988395,
-    "tags": {
-      "name": "Cooperativa de Servicios",
-      "name:es": "Cooperativa de Servicios",
-      "office": "yes"
-    }
-  },
-  {
     "name": "Casa de Sonia",
     "email": "",
     "website": "",
@@ -7864,27 +8950,6 @@
     "tags": {
       "name": "H&H",
       "shop": "supermarket"
-    }
-  },
-  {
-    "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
-    "email": "",
-    "website": "",
-    "phone": "+54 351 480 1139",
-    "direccion": "Italia 2472, Córdoba",
-    "source": "generadores_mutuales",
-    "source_id": "node:5536777869",
-    "grupo_fuente": "generador",
-    "lat": -31.3867835,
-    "lon": -64.2116705,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "2472",
-      "addr:street": "Italia",
-      "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
-      "office": "association",
-      "opening_hours": "Mo-Fr 09:00-18:45",
-      "phone": "0351 480-1139"
     }
   },
   {
@@ -9500,22 +10565,6 @@
     "tags": {
       "name": "Imprenta Lugones",
       "shop": "photo"
-    }
-  },
-  {
-    "name": "Semacor - Mutual de SubOficiales del Ejercito",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_mutuales",
-    "source_id": "node:7067931589",
-    "grupo_fuente": "generador",
-    "lat": -31.4020039,
-    "lon": -64.2154606,
-    "tags": {
-      "name": "Semacor - Mutual de SubOficiales del Ejercito",
-      "office": "yes"
     }
   },
   {
@@ -17702,22 +18751,6 @@
     "tags": {
       "name": "Joyería La Casa de las Alianzas",
       "shop": "jewelry"
-    }
-  },
-  {
-    "name": "Jockey Club",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "node:11338994549",
-    "grupo_fuente": "generador",
-    "lat": -31.4130733,
-    "lon": -64.1860156,
-    "tags": {
-      "name": "Jockey Club",
-      "office": "company"
     }
   },
   {
@@ -32944,22 +33977,6 @@
     }
   },
   {
-    "name": "Club Atlético Juvenil Barrio...",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_clubes",
-    "source_id": "node:10232299898",
-    "grupo_fuente": "generador",
-    "lat": -31.4940669,
-    "lon": -64.2096178,
-    "tags": {
-      "club": "sport",
-      "name": "Club Atlético Juvenil Barrio..."
-    }
-  },
-  {
     "name": "Canchas Güemes",
     "email": "",
     "website": "",
@@ -33127,23 +34144,6 @@
       "addr:street": "Tosno",
       "club": "scout",
       "name": "Grupo Scout 353 - Vírgen Inmaculada de la Montaña"
-    }
-  },
-  {
-    "name": "Club Atlético Palermo",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_clubes",
-    "source_id": "node:13255857595",
-    "grupo_fuente": "generador",
-    "lat": -31.4264297,
-    "lon": -64.1436538,
-    "tags": {
-      "club": "sport",
-      "leisure": "sports_centre",
-      "name": "Club Atlético Palermo"
     }
   },
   {
@@ -33805,22 +34805,6 @@
     }
   },
   {
-    "name": "Mutual de los Docentes",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_mutuales",
-    "source_id": "node:4401595795",
-    "grupo_fuente": "generador",
-    "lat": -31.4572448,
-    "lon": -64.224327,
-    "tags": {
-      "name": "Mutual de los Docentes",
-      "place": "suburb"
-    }
-  },
-  {
     "name": "Club Colegio de Ingenieros Civiles",
     "email": "",
     "website": "",
@@ -33855,45 +34839,6 @@
       "building": "school",
       "name": "Colegio de María",
       "type": "multipolygon"
-    }
-  },
-  {
-    "name": "Club Atlético Yapeyú",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Juan Roque",
-    "source": "generadores_deportivos",
-    "source_id": "node:3684839383",
-    "grupo_fuente": "generador",
-    "lat": -31.4138186,
-    "lon": -64.1511546,
-    "tags": {
-      "addr:housename": "150",
-      "addr:street": "Juan Roque",
-      "leisure": "sports_centre",
-      "name": "Club Atlético Yapeyú"
-    }
-  },
-  {
-    "name": "Club Atlético General Paz -Junior´s",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Avenida Álvarez de Arenales 520, Córdoba",
-    "source": "generadores_deportivos",
-    "source_id": "node:4371647772",
-    "grupo_fuente": "generador",
-    "lat": -31.4222833,
-    "lon": -64.168093,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "520",
-      "addr:postcode": "5000",
-      "addr:street": "Avenida Álvarez de Arenales",
-      "description": "Abierto de 8:00-0:00 de Domingo a Sábado. Tel 0351-4512093 http://gralpazjuniors.com.ar Excelente club familiar que cuenta con diversas actividades. Actualmente mejorando el estado de sus canchas de handball y basquet, vestuarios y la seguridad.",
-      "leisure": "sports_centre",
-      "name": "Club Atlético General Paz -Junior´s"
     }
   },
   {
@@ -33932,75 +34877,6 @@
     }
   },
   {
-    "name": "Club Atlético Defensores Central Córdoba",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "node:10927614380",
-    "grupo_fuente": "generador",
-    "lat": -31.3600393,
-    "lon": -64.108282,
-    "tags": {
-      "club": "sport",
-      "name": "Club Atlético Defensores Central Córdoba"
-    }
-  },
-  {
-    "name": "Club Deportivo Alta Córdoba",
-    "email": "",
-    "website": "https://www.facebook.com/people/Club-Deportivo-Alta-C%C3%B3rdoba/100076633227264/",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "node:12783743371",
-    "grupo_fuente": "generador",
-    "lat": -31.3886116,
-    "lon": -64.1790002,
-    "tags": {
-      "amenity": "community_centre",
-      "community_centre": "social_centre",
-      "name": "Club Deportivo Alta Córdoba",
-      "website": "https://www.facebook.com/people/Club-Deportivo-Alta-C%C3%B3rdoba/100076633227264/"
-    }
-  },
-  {
-    "name": "Jockey Club Córdoba",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "way:163098853",
-    "grupo_fuente": "generador",
-    "lat": -31.4545858,
-    "lon": -64.1818369,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Jockey Club Córdoba",
-      "wikidata": "Q8430339",
-      "wikipedia": "es:Jockey Club Córdoba"
-    }
-  },
-  {
-    "name": "Club Atlético Libertad",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "way:182768945",
-    "grupo_fuente": "generador",
-    "lat": -31.403947,
-    "lon": -64.1294862,
-    "tags": {
-      "leisure": "pitch",
-      "name": "Club Atlético Libertad",
-      "sport": "soccer"
-    }
-  },
-  {
     "name": "Club Atlético Las Palmas",
     "email": "",
     "website": "",
@@ -34014,48 +34890,6 @@
     "tags": {
       "leisure": "sports_centre",
       "name": "Club Atlético Las Palmas"
-    }
-  },
-  {
-    "name": "Club Atlético Racing de Córdoba",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Hernán Huberman 1750, Córdoba",
-    "source": "generadores_deportivos",
-    "source_id": "way:238810815",
-    "grupo_fuente": "generador",
-    "lat": -31.3895435,
-    "lon": -64.1433822,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "1750",
-      "addr:postcode": "5000",
-      "addr:street": "Hernán Huberman",
-      "alt_name": "Estadio Miguel Sancho",
-      "leisure": "stadium",
-      "name": "Club Atlético Racing de Córdoba",
-      "sport": "soccer",
-      "wikidata": "Q5848146",
-      "wikipedia": "es:Estadio Miguel Sancho"
-    }
-  },
-  {
-    "name": "Club Atlético Bella Vista",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "way:286698290",
-    "grupo_fuente": "generador",
-    "lat": -31.4312236,
-    "lon": -64.2046357,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Club Atlético Bella Vista",
-      "wikidata": "Q16491022",
-      "wikipedia": "es:Club Atlético Bella Vista (Córdoba)"
     }
   },
   {
@@ -34079,43 +34913,6 @@
     }
   },
   {
-    "name": "Club Atlético Las Flores",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "way:304038366",
-    "grupo_fuente": "generador",
-    "lat": -31.4558242,
-    "lon": -64.1949639,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Club Atlético Las Flores",
-      "sport": "soccer"
-    }
-  },
-  {
-    "name": "Club Atlético Villa Azalais",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Avenida Arturo Capdevila, Córdoba",
-    "source": "generadores_deportivos",
-    "source_id": "way:304140982",
-    "grupo_fuente": "generador",
-    "lat": -31.3783789,
-    "lon": -64.155073,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:postcode": "5000",
-      "addr:street": "Avenida Arturo Capdevila",
-      "leisure": "sports_centre",
-      "name": "Club Atlético Villa Azalais",
-      "sport": "multi"
-    }
-  },
-  {
     "name": "Club Atlético Belgrano",
     "email": "",
     "website": "",
@@ -34136,23 +34933,6 @@
     }
   },
   {
-    "name": "Club Atlético Argentino Central \"La Charla\"",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "way:314518006",
-    "grupo_fuente": "generador",
-    "lat": -31.3857741,
-    "lon": -64.1665338,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Club Atlético Argentino Central \"La Charla\"",
-      "sport": "soccer"
-    }
-  },
-  {
     "name": "Club Deportivo Lasallano",
     "email": "",
     "website": "",
@@ -34167,123 +34947,6 @@
       "leisure": "sports_centre",
       "name": "Club Deportivo Lasallano",
       "wheelchair": "limited"
-    }
-  },
-  {
-    "name": "Club Atlético Los Andes",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "way:1104542365",
-    "grupo_fuente": "generador",
-    "lat": -31.4430923,
-    "lon": -64.1338308,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Club Atlético Los Andes"
-    }
-  },
-  {
-    "name": "Centro de Alto Rendimiento Club Atlético Talleres",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "way:1384474948",
-    "grupo_fuente": "generador",
-    "lat": -31.4673,
-    "lon": -64.1543765,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Centro de Alto Rendimiento Club Atlético Talleres"
-    }
-  },
-  {
-    "name": "Club Deportivo Banfield Cordoba Estadio Mito Diaz",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "way:1427942592",
-    "grupo_fuente": "generador",
-    "lat": -31.4240064,
-    "lon": -64.0964849,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Club Deportivo Banfield Cordoba Estadio Mito Diaz"
-    }
-  },
-  {
-    "name": "Club Atletico Las Palmas",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "way:1459124145",
-    "grupo_fuente": "generador",
-    "lat": -31.4210099,
-    "lon": -64.2713078,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Club Atletico Las Palmas"
-    }
-  },
-  {
-    "name": "Country Jockey Club",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "relation:5297850",
-    "grupo_fuente": "generador",
-    "lat": -31.4632624,
-    "lon": -64.177062,
-    "tags": {
-      "admin_level": "9",
-      "boundary": "administrative",
-      "name": "Country Jockey Club",
-      "postal_code": "X5016",
-      "type": "boundary"
-    }
-  },
-  {
-    "name": "Club Atlético San Lorenzo",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "relation:6296459",
-    "grupo_fuente": "generador",
-    "lat": -31.4546294,
-    "lon": -64.1972243,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Club Atlético San Lorenzo",
-      "type": "multipolygon"
-    }
-  },
-  {
-    "name": "Country Jockey Club Córdoba Golf",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "relation:15557350",
-    "grupo_fuente": "generador",
-    "lat": -31.4633728,
-    "lon": -64.1769915,
-    "tags": {
-      "leisure": "golf_course",
-      "name": "Country Jockey Club Córdoba Golf",
-      "type": "multipolygon"
     }
   },
   {
@@ -45595,24 +46258,6 @@
     }
   },
   {
-    "name": "Centro de Salud 71 - Cooperativa El Arco",
-    "email": "",
-    "website": "",
-    "phone": "+54 351 433 8631",
-    "direccion": "",
-    "source": "comercios_servicios",
-    "source_id": "node:10742537147",
-    "grupo_fuente": "comercio",
-    "lat": -31.4522134,
-    "lon": -64.1330291,
-    "tags": {
-      "amenity": "clinic",
-      "healthcare": "clinic",
-      "name": "Centro de Salud 71 - Cooperativa El Arco",
-      "phone": "+54 351 433 8631"
-    }
-  },
-  {
     "name": "Centro de Salud 95 - Camino a 60 Cuadras",
     "email": "",
     "website": "",
@@ -54350,91 +54995,6 @@
     }
   },
   {
-    "name": "Villa Cooperativa Atalaya",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_cooperativas",
-    "source_id": "node:11013306342",
-    "grupo_fuente": "generador",
-    "lat": -31.333816,
-    "lon": -64.249322,
-    "tags": {
-      "name": "Villa Cooperativa Atalaya",
-      "place": "neighbourhood"
-    }
-  },
-  {
-    "name": "Cooperativa 2 de Mayo",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_cooperativas",
-    "source_id": "way:164418465",
-    "grupo_fuente": "generador",
-    "lat": -31.3121291,
-    "lon": -64.2914551,
-    "tags": {
-      "highway": "residential",
-      "lanes": "2",
-      "name": "Cooperativa 2 de Mayo",
-      "oneway": "no",
-      "surface": "sett"
-    }
-  },
-  {
-    "name": "Cooperativa El Hornero",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_cooperativas",
-    "source_id": "node:3009326847",
-    "grupo_fuente": "generador",
-    "lat": -31.348493,
-    "lon": -64.1835762,
-    "tags": {
-      "name": "Cooperativa El Hornero",
-      "place": "neighbourhood"
-    }
-  },
-  {
-    "name": "Cooperativa \"Huanqueros\"",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_cooperativas",
-    "source_id": "way:258938860",
-    "grupo_fuente": "generador",
-    "lat": -31.4085034,
-    "lon": -64.1358183,
-    "tags": {
-      "highway": "residential",
-      "name": "Cooperativa \"Huanqueros\"",
-      "surface": "asphalt"
-    }
-  },
-  {
-    "name": "Colegio de Escribanos",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_profesionales",
-    "source_id": "way:985579509",
-    "grupo_fuente": "generador",
-    "lat": -31.416831,
-    "lon": -64.1860831,
-    "tags": {
-      "building": "yes",
-      "building:levels": "11",
-      "name": "Colegio de Escribanos"
-    }
-  },
-  {
     "name": "Complejo Pablo Pizurno",
     "email": "",
     "website": "",
@@ -54448,369 +55008,6 @@
     "tags": {
       "name": "Complejo Pablo Pizurno",
       "office": "yes"
-    }
-  },
-  {
-    "name": "Grupo Scout Cutaquelen",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Cochabamba 2884",
-    "source": "generadores_clubes",
-    "source_id": "node:6693596697",
-    "grupo_fuente": "generador",
-    "lat": -31.3958661,
-    "lon": -64.1490841,
-    "tags": {
-      "addr:housenumber": "2884",
-      "addr:street": "Cochabamba",
-      "amenity": "community_centre",
-      "club": "scout",
-      "community_centre": "home_club",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout Cutaquelen",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "955"
-    }
-  },
-  {
-    "name": "Grupo Scout Ararat",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Avenida Patria 921",
-    "source": "generadores_clubes",
-    "source_id": "node:6693596702",
-    "grupo_fuente": "generador",
-    "lat": -31.4038439,
-    "lon": -64.1599993,
-    "tags": {
-      "addr:housenumber": "921",
-      "addr:street": "Avenida Patria",
-      "club": "scout",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout Ararat",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "770"
-    }
-  },
-  {
-    "name": "Grupo Scout Divino Niño",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_clubes",
-    "source_id": "node:6693596729",
-    "grupo_fuente": "generador",
-    "lat": -31.3813724,
-    "lon": -64.1643822,
-    "tags": {
-      "amenity": "community_centre",
-      "club": "scout",
-      "community_centre": "home_club",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout Divino Niño",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "806"
-    }
-  },
-  {
-    "name": "Grupo Scout Arakatz",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Juan de Garay 2057",
-    "source": "generadores_clubes",
-    "source_id": "node:6693596804",
-    "grupo_fuente": "generador",
-    "lat": -31.4024966,
-    "lon": -64.1593482,
-    "tags": {
-      "addr:housenumber": "2057",
-      "addr:street": "Juan de Garay",
-      "amenity": "community_centre",
-      "club": "scout",
-      "community_centre": "home_club",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout Arakatz",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "507"
-    }
-  },
-  {
-    "name": "Grupo Scout Polo Godoy Rojo",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "José Antonio de Sucre 3663",
-    "source": "generadores_clubes",
-    "source_id": "node:6693596858",
-    "grupo_fuente": "generador",
-    "lat": -31.3719265,
-    "lon": -64.1798434,
-    "tags": {
-      "addr:housenumber": "3663",
-      "addr:street": "José Antonio de Sucre",
-      "amenity": "community_centre",
-      "club": "scout",
-      "community_centre": "home_club",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout Polo Godoy Rojo",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "1007"
-    }
-  },
-  {
-    "name": "Grupo Scout Perito Moreno",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Roma 155",
-    "source": "generadores_clubes",
-    "source_id": "node:6693596868",
-    "grupo_fuente": "generador",
-    "lat": -31.4135534,
-    "lon": -64.1634003,
-    "tags": {
-      "addr:housenumber": "155",
-      "addr:street": "Roma",
-      "amenity": "community_centre",
-      "club": "scout",
-      "community_centre": "home_club",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout Perito Moreno",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "1078"
-    }
-  },
-  {
-    "name": "Grupo Scout Nuestra Señora de Fátima",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Colomprea 1240",
-    "source": "generadores_clubes",
-    "source_id": "node:6693597048",
-    "grupo_fuente": "generador",
-    "lat": -31.3909986,
-    "lon": -64.160283,
-    "tags": {
-      "addr:housenumber": "1240",
-      "addr:street": "Colomprea",
-      "amenity": "community_centre",
-      "club": "scout",
-      "community_centre": "home_club",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout Nuestra Señora de Fátima",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "440"
-    }
-  },
-  {
-    "name": "Grupo Scout San Roque",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Díaz Colodrero 2840",
-    "source": "generadores_clubes",
-    "source_id": "node:6693597099",
-    "grupo_fuente": "generador",
-    "lat": -31.3772682,
-    "lon": -64.144668,
-    "tags": {
-      "addr:housenumber": "2840",
-      "addr:street": "Díaz Colodrero",
-      "club": "scout",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout San Roque",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "933"
-    }
-  },
-  {
-    "name": "Grupo Scout San Cayetano",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Méjico 1343",
-    "source": "generadores_clubes",
-    "source_id": "node:6693597139",
-    "grupo_fuente": "generador",
-    "lat": -31.3997999,
-    "lon": -64.1629888,
-    "tags": {
-      "addr:housenumber": "1343",
-      "addr:street": "Méjico",
-      "club": "scout",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout San Cayetano",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "3"
-    }
-  },
-  {
-    "name": "Grupo Scout Maestro Scout Tomás Alejandro Echevarría",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "24 de Septiembre 2398",
-    "source": "generadores_clubes",
-    "source_id": "node:6693597164",
-    "grupo_fuente": "generador",
-    "lat": -31.4101123,
-    "lon": -64.1524198,
-    "tags": {
-      "addr:housenumber": "2398",
-      "addr:street": "24 de Septiembre",
-      "club": "scout",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout Maestro Scout Tomás Alejandro Echevarría",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "389"
-    }
-  },
-  {
-    "name": "Grupo Scout Sagrado Corazón de Jesús",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_clubes",
-    "source_id": "node:6693597218",
-    "grupo_fuente": "generador",
-    "lat": -31.389015,
-    "lon": -64.1535402,
-    "tags": {
-      "addr:full": "Punta del Sauce y Paysandú",
-      "amenity": "community_centre",
-      "club": "scout",
-      "community_centre": "home_club",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout Sagrado Corazón de Jesús",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "803"
-    }
-  },
-  {
-    "name": "Grupo Scout General Teófilo Iwanowski",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Luis Vernet 1850",
-    "source": "generadores_clubes",
-    "source_id": "node:6693597276",
-    "grupo_fuente": "generador",
-    "lat": -31.3767109,
-    "lon": -64.1470961,
-    "tags": {
-      "addr:housenumber": "1850",
-      "addr:street": "Luis Vernet",
-      "amenity": "community_centre",
-      "club": "scout",
-      "community_centre": "home_club",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout General Teófilo Iwanowski",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "1159"
-    }
-  },
-  {
-    "name": "Ferroviario",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_clubes",
-    "source_id": "node:7067436132",
-    "grupo_fuente": "generador",
-    "lat": -31.3759874,
-    "lon": -64.1397936,
-    "tags": {
-      "club": "yes",
-      "name": "Ferroviario"
-    }
-  },
-  {
-    "name": "Infinito Xtreme Park",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_clubes",
-    "source_id": "node:10911638052",
-    "grupo_fuente": "generador",
-    "lat": -31.4085396,
-    "lon": -64.1151871,
-    "tags": {
-      "club": "sport",
-      "name": "Infinito Xtreme Park"
-    }
-  },
-  {
-    "name": "Córdoba Rugby Club",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Avenida Juan B. Justo 6500, Córdoba",
-    "source": "generadores_clubes",
-    "source_id": "node:12456536685",
-    "grupo_fuente": "generador",
-    "lat": -31.3443508,
-    "lon": -64.1760055,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "6500",
-      "addr:street": "Avenida Juan B. Justo",
-      "club": "sport",
-      "name": "Córdoba Rugby Club"
-    }
-  },
-  {
-    "name": "Club de Boxeadores",
-    "email": "",
-    "website": "",
-    "phone": "+54 351 557 5868",
-    "direccion": "",
-    "source": "generadores_clubes",
-    "source_id": "node:14070562569",
-    "grupo_fuente": "generador",
-    "lat": -31.4097195,
-    "lon": -64.177065,
-    "tags": {
-      "club": "sport",
-      "name": "Club de Boxeadores",
-      "panoramax": "b4cada8a-511e-410d-9280-f4ae877337ef",
-      "phone": "+54 351 557 5868",
-      "sport": "boxing"
-    }
-  },
-  {
-    "name": "Cooperativa La Unidad",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_cooperativas",
-    "source_id": "node:3608178811",
-    "grupo_fuente": "generador",
-    "lat": -31.4292041,
-    "lon": -64.1124736,
-    "tags": {
-      "name": "Cooperativa La Unidad",
-      "place": "neighbourhood"
     }
   },
   {

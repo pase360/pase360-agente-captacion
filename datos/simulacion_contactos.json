@@ -5,6 +5,46 @@
     "email": "administracion@clubuniversitariocba.com"
   },
   {
+    "name": "Colegio de Agrimensores de Córdoba",
+    "tipo": "generador",
+    "email": "info@agrimcba.org.ar"
+  },
+  {
+    "name": "Colegio de Arquitectos de Córdoba",
+    "tipo": "generador",
+    "email": "provincialcapc@gmail.com"
+  },
+  {
+    "name": "Colegio de Biólogos de Córdoba",
+    "tipo": "generador",
+    "email": "colegio.biologos.cordoba@gmail.com"
+  },
+  {
+    "name": "Colegio de Farmacéuticos de Córdoba",
+    "tipo": "generador",
+    "email": "turismo@colfacor.org.ar"
+  },
+  {
+    "name": "Colegio de Ingenieros Civiles de Córdoba",
+    "tipo": "generador",
+    "email": "colegio@civiles.org.ar"
+  },
+  {
+    "name": "Colegio de Ingenieros Especialistas de Córdoba",
+    "tipo": "generador",
+    "email": "ciec@ciec.com.ar"
+  },
+  {
+    "name": "Colegio de Ópticos de la Provincia de Córdoba",
+    "tipo": "generador",
+    "email": "info@colegiodeopticoscba.org.ar"
+  },
+  {
+    "name": "Consejo Profesional de Ciencias Económicas de Córdoba",
+    "tipo": "generador",
+    "email": "cpcecba@cpcecba.org.ar"
+  },
+  {
     "name": "ALB",
     "tipo": "comercio",
     "email": "ventas@albamoblamientos.com.ar"

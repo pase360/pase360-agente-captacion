@@ -1,20 +1,20 @@
 {
   "por_tipo": {
-    "comercio": 623,
-    "generador": 67,
-    "dudoso": 228,
+    "comercio": 610,
+    "generador": 81,
+    "dudoso": 227,
     "descartado": 78,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 65,
-    "sin_email": 625,
-    "requiere_decision": 228,
+    "listo_para_contactar": 73,
+    "sin_email": 618,
+    "requiere_decision": 227,
     "descartado": 78
   },
   "sin_email_por_tipo": {
-    "comercio": 559,
-    "generador": 66,
+    "comercio": 546,
+    "generador": 72,
     "otro": 0
   },
   "descartados_por_motivo": {
@@ -95,7 +95,7 @@
       "motivo": "Club o institución deportiva identificada"
     },
     {
-      "name": "Club Atlético Las Palmas",
+      "name": "Club Atletico Las Palmas",
       "email": "",
       "motivo": "Club o institución deportiva identificada"
     },
@@ -399,7 +399,7 @@
       "website": ""
     },
     {
-      "name": "Club Atlético Las Palmas",
+      "name": "Club Atletico Las Palmas",
       "tipo": "generador",
       "website": ""
     },
@@ -604,19 +604,20 @@
   "duplicados": 4,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "listos_detectados": 65,
-  "listos_seleccionados": 65,
+  "listos_detectados": 73,
+  "listos_seleccionados": 73,
   "listos_comercio": 64,
-  "listos_generador": 1,
+  "listos_generador": 9,
   "clasificados": 996,
   "cuadre": {
     "clasificacion_total": 996,
     "estado_total": 996,
     "cuadra": true
   },
-  "encontrados": 3039,
+  "encontrados": 3052,
   "procesados": 1000,
   "nuevos": 918,
   "descartados": 78,
-  "excluidos": 4
+  "excluidos": 4,
+  "fecha_ejecucion": "2026-10-09T13:40:38.899935"
 }
