@@ -31,7 +31,13 @@ class Odoo:
         return self.call("res.users", "read", [self.uid], fields=["name", "login"])
 
     def buscar_lead_email(self, email):
-        ids = self.call("crm.lead", "search", [["email_from","=",email]], limit=1)
+        # Solo reutilizar leads de Pase 360 o sin empresa asignada.
+        # Evita tomar un lead de Distribuidora Santiago por compartir la base.
+        domain = [
+            ["email_from", "=", email],
+            ["company_id", "in", [False, C.ODOO_COMPANY_ID]],
+        ]
+        ids = self.call("crm.lead", "search", domain, limit=1)
         return ids[0] if ids else None
 
     def crear_lead(self, c):
