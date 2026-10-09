@@ -550,7 +550,7 @@ def _consultas_base(c):
             [
                 f'"{nombre}" (email OR correo OR contacto) Córdoba',
                 f'"{nombre}" email',
-                f'"{nombre}" "@gmail.com" OR "@hotmail.com" OR "@outlook.com"',
+                f'"{nombre}" ("@gmail.com" OR "@hotmail.com" OR "@outlook.com")',
             ]
         )
 
@@ -951,7 +951,7 @@ def completar(c):
 
     if emails_validos:
         c["email"] = emails_validos[0]
-        c["email_fuente"] = "osm"
+        c["email_source"] = "osm"
         c["contactable"] = True
         return c
 
@@ -982,7 +982,7 @@ def completar(c):
 
         if emails:
             c["email"] = emails[0]
-            c["email_fuente"] = "website"
+            c["email_source"] = "website"
             c["contactable"] = True
             c["website"] = website
             return c
@@ -995,7 +995,7 @@ def completar(c):
 
     if emails:
         c["email"] = emails[0]
-        c["email_fuente"] = "busqueda_publica"
+        c["email_source"] = "busqueda_publica"
         c["contactable"] = True
         return c
 
@@ -1005,6 +1005,6 @@ def completar(c):
 
     c["email"] = ""
     c["contactable"] = False
-    c["email_fuente"] = ""
+    c["email_source"] = ""
 
     return c
