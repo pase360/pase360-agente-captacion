@@ -723,7 +723,7 @@ def _candidatos_institucionales():
     instituciones = [
         ("Colegio de Abogados de Córdoba", "https://www.abogado.org.ar"),
         ("Colegio de Agrimensores de Córdoba", "https://www.agrimensorescordoba.org.ar"),
-        ("Colegio de Arquitectos de Córdoba", "https://www.colegio-arquitectos.com.ar"),
+        ("Colegio de Arquitectos de Córdoba", "https://colegio-arquitectos.com.ar"),
         ("Colegio de Biólogos de Córdoba", "https://www.colegiobiologoscba.com.ar"),
         ("Colegio de Escribanos de Córdoba", "https://www.escribanos.org.ar"),
         ("Colegio de Farmacéuticos de Córdoba", "https://www.colfacor.org.ar"),
