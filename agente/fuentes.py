@@ -713,9 +713,48 @@ def _guardar_base(candidatos):
 # FUNCIÓN PRINCIPAL
 # ============================================================
 
+def _candidatos_institucionales():
+    """
+    Semillas de instituciones profesionales de Córdoba identificadas
+    en el Directorio de Servicios al Inversor de Invest Córdoba (edición
+    2023). No se precargan emails: web.completar debe encontrarlos y
+    atribuirles una fuente pública antes de considerar el candidato listo.
+    """
+    instituciones = [
+        ("Colegio de Abogados de Córdoba", "https://www.abogado.org.ar"),
+        ("Colegio de Agrimensores de Córdoba", "https://www.agrimcba.org.ar"),
+        ("Colegio de Arquitectos de Córdoba", "https://www.colegio-arquitectos.com.ar"),
+        ("Colegio de Biólogos de Córdoba", "https://www.colegiobiologoscba.com.ar"),
+        ("Colegio de Escribanos de Córdoba", "https://www.escribanos.org.ar"),
+        ("Colegio de Farmacéuticos de Córdoba", "https://www.colfacor.org.ar"),
+        ("Colegio de Fonoaudiólogos de Córdoba", "https://www.cfc-cordoba.org"),
+        ("Colegio de Ingenieros Civiles de Córdoba", "https://www.civiles.org.ar"),
+        ("Colegio de Ingenieros Agrónomos de Córdoba", "https://www.ciacordoba.org.ar"),
+        ("Colegio de Ingenieros Especialistas de Córdoba", "https://www.ciec.com.ar"),
+    ]
+
+    resultado = []
+    for nombre, website in instituciones:
+        dominio = urlparse(website).netloc.lower().removeprefix("www.")
+        resultado.append({
+            "name": nombre,
+            "email": "",
+            "website": website,
+            "phone": "",
+            "direccion": "Córdoba Capital, Córdoba, Argentina",
+            "source": "directorio_institucional_invest_cordoba_2023",
+            "source_id": f"institucional:{dominio}",
+            "grupo_fuente": "generador",
+            "lat": None,
+            "lon": None,
+            "tags": {"source_directory": "Invest Córdoba - Directorio de Servicios al Inversor 2023"},
+        })
+    return resultado
+
+
 def buscar():
 
-    encontrados = []
+    encontrados = _candidatos_institucionales()
 
     consultas_ok = 0
     consultas_error = 0
