@@ -82,11 +82,7 @@ class TestAplicacionDecisionHumana(unittest.TestCase):
             "decisiones": {},
         }
 
-        with patch.object(engine, "_historial", return_value=historial), \\
-             patch.object(engine, "_sincronizar_decisiones"), \\
-             patch.object(engine, "cargar", return_value=[candidato]), \\
-             patch.object(engine, "_guardar_hist"), \\
-             patch.object(engine.github_issues, "crear_pregunta") as crear:
+        with patch.object(engine, "_historial", return_value=historial), patch.object(engine, "_sincronizar_decisiones"), patch.object(engine, "cargar", return_value=[candidato]), patch.object(engine, "_guardar_hist"), patch.object(engine.github_issues, "crear_pregunta") as crear:
             resultado = engine.preguntas()
 
         self.assertEqual(resultado["creadas"], 0)
