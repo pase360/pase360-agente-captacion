@@ -23,6 +23,14 @@ GENERADOR_FUERTE = [
 
 COLEGIOS_PROFESIONALES = [
     "colegio de abogados",
+    "colegio de agrimensores",
+    "colegio de biologos",
+    "colegio de biólogos",
+    "colegio de fonoaudiologos",
+    "colegio de fonoaudiólogos",
+    "colegio de ingenieros agronomos",
+    "colegio de ingenieros agrónomos",
+    "colegio de ingenieros especialistas",
     "colegio de arquitectos",
     "colegio de contadores",
     "colegio de escribanos",
