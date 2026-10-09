@@ -66,7 +66,8 @@ jobs:
       OWNER_EMAIL: ${{ secrets.OWNER_EMAIL }}
       SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
       MODO_PRUEBA: ${{ secrets.MODO_PRUEBA }}
-      # Bloqueo temporal: no permitir envíos reales mientras se valida la captación.\n      PERMITIR_ENVIO_REAL: "no"
+      # Bloqueo temporal: no permitir envíos reales mientras se valida la captación.
+      PERMITIR_ENVIO_REAL: "no"
       META_CONTACTOS: ${{ secrets.META_CONTACTOS }}
       MAX_CANDIDATOS_SCAN: ${{ secrets.MAX_CANDIDATOS_SCAN }}
       GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
