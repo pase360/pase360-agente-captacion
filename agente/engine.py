@@ -757,6 +757,8 @@ def capturar():
         + diagnostico["sin_nombre"]
     )
 
+    diagnostico["fecha_ejecucion"] = datetime.now().isoformat()
+
     guardar(
         "diagnostico_captacion.json",
         diagnostico,
@@ -1031,49 +1033,39 @@ def seguimiento():
 
 def reporte():
     s = _historial()
-
     candidatos = cargar(
         "candidatos.json",
         [],
     )
+    ultimo = cargar(
+        "diagnostico_captacion.json",
+        {},
+    )
+    if not isinstance(ultimo, dict):
+        ultimo = {}
 
+    por_estado = ultimo.get("por_estado", {})
+    if not isinstance(por_estado, dict):
+        por_estado = {}
+
+    # Métricas acumuladas: reflejan toda la base histórica.
     resultado = {
-        "modo_prueba":
-            C.MODO_PRUEBA,
-        "candidatos_guardados":
-            len(candidatos),
-        "contactados_historicos":
-            len(
-                s["contactados"]
-            ),
-        "preguntas_creadas":
-            len(
-                s["preguntas"]
-            ),
-        "listos_ultimo_scan":
-            sum(
-                c.get("estado")
-                == "listo_para_contactar"
-                for c in candidatos
-            ),
-        "sin_email_ultimo_scan":
-            sum(
-                c.get("estado")
-                == "sin_email"
-                for c in candidatos
-            ),
-        "dudosos_ultimo_scan":
-            sum(
-                c.get("estado")
-                == "requiere_decision"
-                for c in candidatos
-            ),
-        "descartados_ultimo_scan":
-            sum(
-                c.get("estado")
-                == "descartado"
-                for c in candidatos
-            ),
+        "modo_prueba": C.MODO_PRUEBA,
+        "fecha_ultimo_escaneo": ultimo.get("fecha_ejecucion"),
+        "candidatos_historicos_guardados": len(candidatos),
+        "contactados_historicos": len(s["contactados"]),
+        "preguntas_historicas_creadas": len(s["preguntas"]),
+
+        # Métricas de la última captación: provienen de su diagnóstico,
+        # no de la base acumulada de candidatos.
+        "ultimo_escaneo_clasificados": ultimo.get("clasificados", 0),
+        "ultimo_escaneo_encontrados": ultimo.get("encontrados", 0),
+        "ultimo_escaneo_nuevos": ultimo.get("nuevos", 0),
+        "ultimo_escaneo_listos": por_estado.get("listo_para_contactar", 0),
+        "ultimo_escaneo_sin_email": por_estado.get("sin_email", 0),
+        "ultimo_escaneo_dudosos": por_estado.get("requiere_decision", 0),
+        "ultimo_escaneo_descartados": por_estado.get("descartado", 0),
+        "ultimo_escaneo_cuadre": ultimo.get("cuadre", {}),
     }
 
     guardar(
