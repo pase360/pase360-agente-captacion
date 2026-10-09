@@ -20,6 +20,8 @@ on:
   schedule:
     - cron: "00 09 * * 1-5"
       timezone: "America/Argentina/Cordoba"
+    - cron: "00 10 * * 1-5"
+      timezone: "America/Argentina/Cordoba"
     - cron: "00 18 * * 1-5"
       timezone: "America/Argentina/Cordoba"
     - cron: "00 20 * * 1-5"
@@ -85,6 +87,8 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "accion=${{ inputs.accion }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "00 10 * * 1-5" ]; then
+            echo "accion=preguntas" >> "$GITHUB_OUTPUT"
           elif [ "${{ github.event.schedule }}" = "00 18 * * 1-5" ]; then
             echo "accion=seguimiento" >> "$GITHUB_OUTPUT"
           elif [ "${{ github.event.schedule }}" = "00 20 * * 1-5" ]; then
