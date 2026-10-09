@@ -1,29 +1,177 @@
 {
   "por_tipo": {
-    "comercio": 939,
-    "generador": 1,
-    "dudoso": 40,
-    "descartado": 16,
+    "comercio": 623,
+    "generador": 67,
+    "dudoso": 228,
+    "descartado": 78,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 73,
-    "sin_email": 867,
-    "requiere_decision": 40,
-    "descartado": 16
+    "listo_para_contactar": 65,
+    "sin_email": 625,
+    "requiere_decision": 228,
+    "descartado": 78
   },
   "sin_email_por_tipo": {
-    "comercio": 867,
-    "generador": 0,
+    "comercio": 559,
+    "generador": 66,
     "otro": 0
   },
   "descartados_por_motivo": {
-    "Institución educativa": 16
+    "Entidad fuera del público objetivo de Pase 360": 9,
+    "Institución educativa": 21,
+    "Entidad religiosa o gubernamental excluida por etiqueta": 10,
+    "Decisión humana registrada en GitHub": 38
   },
   "generadores_muestra": [
     {
-      "name": "Club Universitario de Córdoba",
-      "email": "administracion@clubuniversitariocba.com",
+      "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
+      "email": "",
+      "motivo": "Organización con capacidad de agrupar beneficiarios"
+    },
+    {
+      "name": "Barranquitas Fútbol",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Canchas Güemes",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Centro de Alto Rendimiento Club Atlético Talleres",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Argentino Peñarol",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Argüello Juniors",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Atlético Argentino Central \"La Charla\"",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Atlético Belgrano",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Atlético Bella Vista",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Atlético Defensores Central Córdoba",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Atlético General Paz -Junior´s",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Atlético Huracán",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Atlético Juvenil Barrio...",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Atlético Las Flores",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Atlético Las Palmas",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Atlético Libertad",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Atlético Los Andes",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Atlético Palermo",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Atlético Racing de Córdoba",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Atlético San Lorenzo",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Atlético Villa Azalais",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Atlético Yapeyú",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Barrio Parque",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Colegio de Ingenieros Civiles",
+      "email": "",
+      "motivo": "Colegio o consejo profesional"
+    },
+    {
+      "name": "Club Comunicaciones",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club de Boxeadores",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Defensores Juveniles",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Deportivo Alta Córdoba",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Deportivo Banfield Cordoba Estadio Mito Diaz",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Deportivo Lasallano",
+      "email": "",
       "motivo": "Club o institución deportiva identificada"
     }
   ],
@@ -34,17 +182,62 @@
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
+      "name": "10 Años",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
       "name": "100x100 Lomo",
       "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
-      "name": "107 Emergencias Médicas Municipal",
+      "name": "27 Cabaña",
       "email": "",
-      "motivo": "Servicio sanitario/comercial aunque pertenezca a una organización"
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "318 Auto Partes",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "361 Casa De Pastas",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
       "name": "5 elementos",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "5áSec",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "707",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "727 Maxikioscos",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "8 y 8",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "9 de Julio",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "A Capella",
       "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
@@ -54,7 +247,47 @@
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
+      "name": "A y K",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
       "name": "A&M",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "A&M Librería",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Abastecimiento Gregorio's",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Abasto Alberdi",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "abc",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Aberturas Pizarro",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Abuelina",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Acaece",
       "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
@@ -62,6 +295,16 @@
       "name": "Acapulco",
       "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Accesorios Distribuidora Central",
+      "email": "",
+      "motivo": "OSM identifica actividad comercial o de servicios"
+    },
+    {
+      "name": "Aconcagua Sanatorio Privado",
+      "email": "",
+      "motivo": "Servicio sanitario/comercial aunque pertenezca a una organización"
     },
     {
       "name": "Activar",
@@ -74,391 +317,296 @@
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
-      "name": "Agro veterinaria Fioreti",
-      "email": "",
-      "motivo": "Servicio sanitario/comercial aunque pertenezca a una organización"
-    },
-    {
-      "name": "Al Corta",
+      "name": "Ada",
       "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     },
     {
-      "name": "ALB",
-      "email": "ventas@albamoblamientos.com.ar",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Alción",
-      "email": "",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Alcorta",
-      "email": "",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Alem",
-      "email": "",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Alemana",
-      "email": "",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Algo Light",
-      "email": "",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Alma casa vegana",
-      "email": "",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Alma Dórica",
-      "email": "",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "ALPA CAFÉ",
-      "email": "",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Alquiler Auto Aero-Cordoba",
-      "email": "info@alquilerautocordoba.com.ar",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Altos de Argüello",
-      "email": "",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Amazonas 2",
-      "email": "",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Ames Motos",
-      "email": "ventas@amesmotos.com.ar",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Amo Latere",
-      "email": "",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Antares",
-      "email": "",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Antares Cerro",
-      "email": "",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Anush Resto Bar",
-      "email": "",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Apartamento",
-      "email": "",
-      "motivo": "OSM identifica actividad comercial o de servicios"
-    },
-    {
-      "name": "Approach",
+      "name": "ADAARC",
       "email": "",
       "motivo": "OSM identifica actividad comercial o de servicios"
     }
   ],
   "sin_email_muestra": [
     {
-      "name": "#Lomo",
-      "tipo": "comercio",
+      "name": "A.MU.P.T.R.A. Asociación Mutual de Propietarios de Talleres de Reparación de Automotores",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "100x100 Lomo",
-      "tipo": "comercio",
-      "website": "www.facebook.com/100x100Lomo"
-    },
-    {
-      "name": "107 Emergencias Médicas Municipal",
-      "tipo": "comercio",
+      "name": "Barranquitas Fútbol",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "5 elementos",
-      "tipo": "comercio",
+      "name": "Canchas Güemes",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "A Naselli",
-      "tipo": "comercio",
+      "name": "Centro de Alto Rendimiento Club Atlético Talleres",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "A&M",
-      "tipo": "comercio",
+      "name": "Club Argentino Peñarol",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Acapulco",
-      "tipo": "comercio",
+      "name": "Club Argüello Juniors",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Activar",
-      "tipo": "comercio",
+      "name": "Club Atlético Argentino Central \"La Charla\"",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Actron",
-      "tipo": "comercio",
+      "name": "Club Atlético Belgrano",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Agro veterinaria Fioreti",
-      "tipo": "comercio",
+      "name": "Club Atlético Bella Vista",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Al Corta",
-      "tipo": "comercio",
+      "name": "Club Atlético Defensores Central Córdoba",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Alción",
-      "tipo": "comercio",
+      "name": "Club Atlético General Paz -Junior´s",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Alcorta",
-      "tipo": "comercio",
+      "name": "Club Atlético Huracán",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Alem",
-      "tipo": "comercio",
+      "name": "Club Atlético Juvenil Barrio...",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Alemana",
-      "tipo": "comercio",
+      "name": "Club Atlético Las Flores",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Algo Light",
-      "tipo": "comercio",
+      "name": "Club Atlético Las Palmas",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Alma casa vegana",
-      "tipo": "comercio",
+      "name": "Club Atlético Libertad",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Alma Dórica",
-      "tipo": "comercio",
+      "name": "Club Atlético Los Andes",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "ALPA CAFÉ",
-      "tipo": "comercio",
+      "name": "Club Atlético Palermo",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Altos de Argüello",
-      "tipo": "comercio",
+      "name": "Club Atlético Racing de Córdoba",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Amazonas 2",
-      "tipo": "comercio",
+      "name": "Club Atlético San Lorenzo",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Amo Latere",
-      "tipo": "comercio",
+      "name": "Club Atlético Villa Azalais",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Antares",
-      "tipo": "comercio",
-      "website": "http://www.cervezaantares.com/shops.php?iId=63"
-    },
-    {
-      "name": "Antares Cerro",
-      "tipo": "comercio",
+      "name": "Club Atlético Yapeyú",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Anush Resto Bar",
-      "tipo": "comercio",
+      "name": "Club Barrio Parque",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Apartamento",
-      "tipo": "comercio",
+      "name": "Club Colegio de Ingenieros Civiles",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Approach",
-      "tipo": "comercio",
+      "name": "Club Comunicaciones",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Aquarius",
-      "tipo": "comercio",
+      "name": "Club de Boxeadores",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Aranjuez",
-      "tipo": "comercio",
+      "name": "Club Defensores Juveniles",
+      "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Aráoz III",
-      "tipo": "comercio",
+      "name": "Club Deportivo Alta Córdoba",
+      "tipo": "generador",
+      "website": "https://www.facebook.com/people/Club-Deportivo-Alta-C%C3%B3rdoba/100076633227264/"
+    },
+    {
+      "name": "Club Deportivo Banfield Cordoba Estadio Mito Diaz",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Club Deportivo Lasallano",
+      "tipo": "generador",
       "website": ""
     }
   ],
   "dudosos_muestra": [
     {
-      "name": "Consulado de Francia",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
-    },
-    {
-      "name": "L'AEREO - Taller Aeronáutico",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
-    },
-    {
-      "name": "Capilla Santa Teresita",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
-    },
-    {
-      "name": "Instituto Privado Deán Funes",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
-    },
-    {
-      "name": "Puente de Estrellas",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
-    },
-    {
-      "name": "Museo Palacio Dionisi",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
-    },
-    {
-      "name": "Parroquia Nuestra Señora del Carmen",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
-    },
-    {
-      "name": "Casa de Mark",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
-    },
-    {
-      "name": "On Apart",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
-    },
-    {
-      "name": "ECOS Estudio Arquitectura y Adminstración",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
-    },
-    {
-      "name": "CBA X Escalada",
+      "name": "ACV",
       "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
     },
     {
-      "name": "InfoNegocios",
+      "name": "Anexo Tala Rugby Club",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
+    },
+    {
+      "name": "Arabian",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
+    },
+    {
+      "name": "Arabian Paddle Club",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
+    },
+    {
+      "name": "Area de deportes Colegio Dante Alighieri - Ex Club YPF",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
+    },
+    {
+      "name": "Área de Equinoterapia",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
+    },
+    {
+      "name": "Arena de Práctica",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
+    },
+    {
+      "name": "Asociación Cordobesa de Aikido",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
+    },
+    {
+      "name": "Atalaya",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
+    },
+    {
+      "name": "Avista",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
+    },
+    {
+      "name": "BestClub",
       "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
-      "name": "Cremolatti",
+      "name": "BMX",
       "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
-      "name": "P&T Fitness",
+      "name": "BMX Flatland",
       "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
-      "name": "Banco de Sangre – Instituto de Hematología y Hemoterapia  (UNC)",
+      "name": "BMX Freestyle Park",
       "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
-      "name": "Centro de Investigaciones y Estudios sobre Cultura y Sociedad (CIECS)",
-      "motivo": "Organización identificada pero sin evidencia suficiente para clasificarla"
-    },
-    {
-      "name": "Fundación Mueve",
+      "name": "BMX Race",
       "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     },
     {
-      "name": "Alas Centro de Rehabilitación Integral Infantojuvenil",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+      "name": "Campo de Deportes La Salle",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
     },
     {
-      "name": "Quinto Deva",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+      "name": "Cancha",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
     },
     {
-      "name": "Qumana",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+      "name": "Cancha Auxiliar",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
     },
     {
-      "name": "Centro de Investigaciones y Estudios sobre Cultura y Sociedad CIECS",
-      "motivo": "Organización identificada pero sin evidencia suficiente para clasificarla"
+      "name": "Cancha Barrial",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
     },
     {
-      "name": "Museo Provincial de Ciencias Naturales \"Dr. Arturo Umberto Illía\"",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+      "name": "Cancha de básquet",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
     },
     {
-      "name": "ITV Chateau (Inspección Técnica Vehicular)",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+      "name": "Cancha de Basquet B° Kennedy",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
     },
     {
-      "name": "Insituto Secundario El Salvador",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+      "name": "Cancha de fútbol",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
     },
     {
-      "name": "Colegio Gabriel Taborín",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+      "name": "Cancha de Fútbol La Carbonada;Cancha Tinglado de las 4 Esquinas - La Carbonada",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
     },
     {
-      "name": "Colegio Santa Teresita",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+      "name": "Cancha de Hockey Soledad García",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
     },
     {
-      "name": "IPET N° 249 Nicolás Copérnico",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+      "name": "Cancha Del Guano",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
     },
     {
-      "name": "Colegio Fasta Cura Brochero",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+      "name": "Cancha Mark Twain",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
     },
     {
-      "name": "Leistung",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+      "name": "Canchas de Fútbol Chica",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
     },
     {
-      "name": "Colegio Nacional de Monserrat",
+      "name": "Canchas de Fútbol Grande",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
+    },
+    {
+      "name": "Canchas Del Negro Claudio",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
+    },
+    {
+      "name": "Cartodromo Pque. San Martín",
       "motivo": "No hay evidencia suficiente para clasificar con seguridad"
     }
   ],
   "duplicados": 4,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "listos_detectados": 73,
-  "listos_seleccionados": 73,
-  "listos_comercio": 72,
+  "listos_detectados": 65,
+  "listos_seleccionados": 65,
+  "listos_comercio": 64,
   "listos_generador": 1,
   "clasificados": 996,
   "cuadre": {
@@ -468,7 +616,7 @@
   },
   "encontrados": 3039,
   "procesados": 1000,
-  "nuevos": 980,
-  "descartados": 16,
+  "nuevos": 918,
+  "descartados": 78,
   "excluidos": 4
 }

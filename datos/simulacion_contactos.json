@@ -15,6 +15,11 @@
     "email": "info@alquilerautocordoba.com.ar"
   },
   {
+    "name": "Ama Hogar",
+    "tipo": "comercio",
+    "email": "ventas@amahogar.com"
+  },
+  {
     "name": "Ames Motos",
     "tipo": "comercio",
     "email": "ventas@amesmotos.com.ar"
@@ -23,6 +28,11 @@
     "name": "ATLARES Crowdfunding Bitcoin & Networking",
     "tipo": "comercio",
     "email": "info@atlares.com"
+  },
+  {
+    "name": "AutoRep",
+    "tipo": "comercio",
+    "email": "chucaribba@gmail.com"
   },
   {
     "name": "Avant",
@@ -50,14 +60,34 @@
     "email": "catalinacalzados@outlook.com.ar"
   },
   {
+    "name": "Centro Médico Privado San Andres",
+    "tipo": "comercio",
+    "email": "info@centromedicosanandres.com"
+  },
+  {
     "name": "Centro Modelo",
     "tipo": "comercio",
     "email": "info@centromodelova.com"
   },
   {
+    "name": "Centro Motor sa TOYOTA",
+    "tipo": "comercio",
+    "email": "turnostaller@centromotorsa.com.ar"
+  },
+  {
+    "name": "Centro Oftalmológico Dr. Ernesto \"CHE\" Guevara",
+    "tipo": "comercio",
+    "email": "recepcion@operacionmilagro.org.ar"
+  },
+  {
     "name": "Centro para la salud Integral de la Mujer",
     "tipo": "comercio",
     "email": "sacra@sacracordoba.com.ar"
+  },
+  {
+    "name": "Chamtac",
+    "tipo": "comercio",
+    "email": "emilio@impermeabilizacionestechoscordoba.com"
   },
   {
     "name": "Chevromaxs",
@@ -80,6 +110,11 @@
     "email": "info@elclubdelamilanesa.com"
   },
   {
+    "name": "Cremolatti",
+    "tipo": "comercio",
+    "email": "info@cremolatti.com.ar"
+  },
+  {
     "name": "Delivery Paint",
     "tipo": "comercio",
     "email": "deliverypaint@gmail.com"
@@ -100,19 +135,9 @@
     "email": "rvlevet@gmail.com"
   },
   {
-    "name": "Farmacia Juarez Ruffino IV",
-    "tipo": "comercio",
-    "email": "hola@farmaciajuarezruffino.com"
-  },
-  {
     "name": "Farmacia Pedernera",
     "tipo": "comercio",
     "email": "pedernerafarmacia@gmail.com"
-  },
-  {
-    "name": "General Paz",
-    "tipo": "comercio",
-    "email": "tiendaonline@farmaciasgeneralpaz.com"
   },
   {
     "name": "Gestor de Cordoba. Autos. Motos. Gonzalo 3512205097",
@@ -123,21 +148,6 @@
     "name": "Global Vip Transfer S.A.",
     "tipo": "comercio",
     "email": "reservas@global-vip-transfer.com"
-  },
-  {
-    "name": "Hospital Córdoba",
-    "tipo": "comercio",
-    "email": "info@hospitalcordoba.com.ar"
-  },
-  {
-    "name": "Hospital Italiano",
-    "tipo": "comercio",
-    "email": "info@hospital-italiano.org.ar"
-  },
-  {
-    "name": "Hospital Militar Regional Córdoba",
-    "tipo": "comercio",
-    "email": "informes@hmcba.com.ar"
   },
   {
     "name": "Hospital Veterinario Córdoba",
@@ -155,24 +165,9 @@
     "email": "reservas@hotelgarden.com.ar"
   },
   {
-    "name": "Imgo Instituto Modelo Privado De Ginecologia Y Obstetricia Sa",
-    "tipo": "comercio",
-    "email": "consulta@imgo.com.ar"
-  },
-  {
     "name": "Imprenta Arguello",
     "tipo": "comercio",
     "email": "laimprenta.arguello@gmail.com"
-  },
-  {
-    "name": "Instituto Modelo de Cardiología",
-    "tipo": "comercio",
-    "email": "residencias@imcnet.com.ar"
-  },
-  {
-    "name": "IT! Italy Ristorante & Café & Bar",
-    "tipo": "comercio",
-    "email": "info@ititaly.us"
   },
   {
     "name": "Las 2 Hermanas",
@@ -183,21 +178,6 @@
     "name": "Librería Blackpool",
     "tipo": "comercio",
     "email": "blackpool@arnet.com.ar"
-  },
-  {
-    "name": "Lo de Jacinto",
-    "tipo": "comercio",
-    "email": "atencionalclienteldj@gmail.com"
-  },
-  {
-    "name": "Los Monos",
-    "tipo": "comercio",
-    "email": "cristiancabanillas@hotmail.com"
-  },
-  {
-    "name": "Los Valles",
-    "tipo": "comercio",
-    "email": "administracion@losvallessalud.com.ar"
   },
   {
     "name": "Luminotecnia",
@@ -245,14 +225,14 @@
     "email": "opticas.lauricella@gmail.com"
   },
   {
+    "name": "P&T Fitness",
+    "tipo": "comercio",
+    "email": "pytfitness@gmail.com"
+  },
+  {
     "name": "Paseo La Toscana",
     "tipo": "comercio",
     "email": "administracion@paseolatoscana.com"
-  },
-  {
-    "name": "Pizza Popular",
-    "tipo": "comercio",
-    "email": "comercial@grupo-popular.com"
   },
   {
     "name": "Poeta Soho",
@@ -273,16 +253,6 @@
     "name": "Roma Motos",
     "tipo": "comercio",
     "email": "info@romamotos.com.ar"
-  },
-  {
-    "name": "Sanatorio Allende",
-    "tipo": "comercio",
-    "email": "atpacientecerro@sanatorioallende.com"
-  },
-  {
-    "name": "Sanatorio del Salvador",
-    "tipo": "comercio",
-    "email": "info@sanatoriodelsalvador.com"
   },
   {
     "name": "Service Impresoras",
@@ -348,16 +318,6 @@
     "name": "Virmanic SA",
     "tipo": "comercio",
     "email": "jvalles@virmanicsa.com"
-  },
-  {
-    "name": "Weiss Córdoba",
-    "tipo": "comercio",
-    "email": "weissburgerbar@gmail.com"
-  },
-  {
-    "name": "Wöllen",
-    "tipo": "comercio",
-    "email": "info@wollen.com.ar"
   },
   {
     "name": "Xipa",
