@@ -83,5 +83,17 @@ class TestClasificador(unittest.TestCase):
             with self.subTest(nombre=nombre):
                 self.assertEqual(clasificar({"name": nombre})[0], "generador")
 
+    def test_canchas_con_tag_club_no_son_generador(self):
+        c = {"name": "Canchas Güemes", "tags": {"club": "sport", "sport": "soccer", "leisure": "pitch"}}
+        self.assertEqual(clasificar(c)[0], "dudoso")
+
+    def test_centro_alto_rendimiento_no_es_generador_por_club_atletico(self):
+        c = {"name": "Centro de Alto Rendimiento Club Atlético Talleres", "tags": {"leisure": "sports_centre", "sport": "soccer"}}
+        self.assertEqual(clasificar(c)[0], "dudoso")
+
+    def test_club_atletico_belgrano_sigue_como_generador(self):
+        c = {"name": "Club Atlético Belgrano", "tags": {"club": "sport", "sport": "soccer"}}
+        self.assertEqual(clasificar(c)[0], "generador")
+
 if __name__ == "__main__":
     unittest.main()
