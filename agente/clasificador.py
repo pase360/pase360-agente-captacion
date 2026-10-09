@@ -666,13 +666,13 @@ def _es_club_deportivo(c):
 
     # Una instalación deportiva no es automáticamente una organización.
     # Se permite la excepción cuando el nombre identifica claramente un club.
-    nombre_institucional = _contiene(nombre, [
-        "club atletico", "club deportivo", "club social y deportivo",
-        "club social deportivo", "club de futbol", "club de rugby",
-        "club de hockey", "club de basquet", "club de basket",
-        "club de tenis", "club nautico", "club de natacion",
-        "jockey club", "asociacion deportiva", "federacion deportiva",
-        "liga deportiva",
+    nombre_institucional = any(nombre.startswith(prefijo) for prefijo in [
+        "club atletico ", "club deportivo ", "club social y deportivo ",
+        "club social deportivo ", "club de futbol ", "club de rugby ",
+        "club de hockey ", "club de basquet ", "club de basket ",
+        "club de tenis ", "club nautico ", "club de natacion ",
+        "jockey club ", "asociacion deportiva ", "federacion deportiva ",
+        "liga deportiva ",
     ])
     if _es_instalacion_deportiva(c) and not nombre_institucional:
         return False
