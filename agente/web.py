@@ -548,10 +548,9 @@ def _consultas_base(c):
     if nombre:
         consultas.extend(
             [
+                f'"{nombre}" (email OR correo OR contacto) Córdoba',
                 f'"{nombre}" email',
-                f'"{nombre}" contacto',
-                f'"{nombre}" correo',
-                f'"{nombre}" Córdoba email',
+                f'"{nombre}" "@gmail.com" OR "@hotmail.com" OR "@outlook.com"',
             ]
         )
 
