@@ -1,20 +1,20 @@
 {
   "por_tipo": {
-    "comercio": 610,
-    "generador": 81,
-    "dudoso": 227,
+    "comercio": 611,
+    "generador": 66,
+    "dudoso": 241,
     "descartado": 78,
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 73,
-    "sin_email": 618,
-    "requiere_decision": 227,
+    "listo_para_contactar": 69,
+    "sin_email": 608,
+    "requiere_decision": 241,
     "descartado": 78
   },
   "sin_email_por_tipo": {
-    "comercio": 546,
-    "generador": 72,
+    "comercio": 549,
+    "generador": 59,
     "otro": 0
   },
   "descartados_por_motivo": {
@@ -35,17 +35,7 @@
       "motivo": "Club o institución deportiva identificada"
     },
     {
-      "name": "Canchas Güemes",
-      "email": "",
-      "motivo": "Club o institución deportiva identificada"
-    },
-    {
-      "name": "Centro de Alto Rendimiento Club Atlético Talleres",
-      "email": "",
-      "motivo": "Club o institución deportiva identificada"
-    },
-    {
-      "name": "Club Argentino Peñarol",
+      "name": "Club",
       "email": "",
       "motivo": "Club o institución deportiva identificada"
     },
@@ -95,7 +85,7 @@
       "motivo": "Club o institución deportiva identificada"
     },
     {
-      "name": "Club Atletico Las Palmas",
+      "name": "Club Atlético Las Palmas",
       "email": "",
       "motivo": "Club o institución deportiva identificada"
     },
@@ -135,27 +125,12 @@
       "motivo": "Club o institución deportiva identificada"
     },
     {
-      "name": "Club Barrio Parque",
-      "email": "",
-      "motivo": "Club o institución deportiva identificada"
-    },
-    {
       "name": "Club Colegio de Ingenieros Civiles",
       "email": "",
       "motivo": "Colegio o consejo profesional"
     },
     {
-      "name": "Club Comunicaciones",
-      "email": "",
-      "motivo": "Club o institución deportiva identificada"
-    },
-    {
       "name": "Club de Boxeadores",
-      "email": "",
-      "motivo": "Club o institución deportiva identificada"
-    },
-    {
-      "name": "Club Defensores Juveniles",
       "email": "",
       "motivo": "Club o institución deportiva identificada"
     },
@@ -173,6 +148,31 @@
       "name": "Club Deportivo Lasallano",
       "email": "",
       "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Poeta Lugones",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Poeta Lugones",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Social STIA",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Club Social y Deportivo Los Amigos",
+      "email": "",
+      "motivo": "Club o institución deportiva identificada"
+    },
+    {
+      "name": "Colegio de Abogados de Córdoba",
+      "email": "",
+      "motivo": "Colegio o consejo profesional"
     }
   ],
   "comercios_muestra": [
@@ -339,17 +339,7 @@
       "website": ""
     },
     {
-      "name": "Canchas Güemes",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Centro de Alto Rendimiento Club Atlético Talleres",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Club Argentino Peñarol",
+      "name": "Club",
       "tipo": "generador",
       "website": ""
     },
@@ -399,7 +389,7 @@
       "website": ""
     },
     {
-      "name": "Club Atletico Las Palmas",
+      "name": "Club Atlético Las Palmas",
       "tipo": "generador",
       "website": ""
     },
@@ -439,27 +429,12 @@
       "website": ""
     },
     {
-      "name": "Club Barrio Parque",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
       "name": "Club Colegio de Ingenieros Civiles",
       "tipo": "generador",
       "website": ""
     },
     {
-      "name": "Club Comunicaciones",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
       "name": "Club de Boxeadores",
-      "tipo": "generador",
-      "website": ""
-    },
-    {
-      "name": "Club Defensores Juveniles",
       "tipo": "generador",
       "website": ""
     },
@@ -477,6 +452,31 @@
       "name": "Club Deportivo Lasallano",
       "tipo": "generador",
       "website": ""
+    },
+    {
+      "name": "Club Poeta Lugones",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Club Poeta Lugones",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Club Social STIA",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Club Social y Deportivo Los Amigos",
+      "tipo": "generador",
+      "website": ""
+    },
+    {
+      "name": "Colegio de Abogados de Córdoba",
+      "tipo": "generador",
+      "website": "https://www.abogado.org.ar"
     }
   ],
   "dudosos_muestra": [
@@ -597,17 +597,17 @@
       "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
     },
     {
-      "name": "Cartodromo Pque. San Martín",
-      "motivo": "No hay evidencia suficiente para clasificar con seguridad"
+      "name": "Canchas Güemes",
+      "motivo": "Instalación deportiva sin evidencia suficiente de organización de miembros"
     }
   ],
   "duplicados": 4,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "listos_detectados": 73,
-  "listos_seleccionados": 73,
-  "listos_comercio": 64,
-  "listos_generador": 9,
+  "listos_detectados": 69,
+  "listos_seleccionados": 69,
+  "listos_comercio": 62,
+  "listos_generador": 7,
   "clasificados": 996,
   "cuadre": {
     "clasificacion_total": 996,
@@ -619,5 +619,5 @@
   "nuevos": 918,
   "descartados": 78,
   "excluidos": 4,
-  "fecha_ejecucion": "2026-10-09T13:40:38.899935"
+  "fecha_ejecucion": "2026-10-12T13:21:02.324949"
 }

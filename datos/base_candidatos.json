@@ -195,6 +195,460 @@
     }
   },
   {
+    "name": "Grupo Scout Virgen Inmaculada de la Montaña",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Tosno 2428",
+    "source": "generadores_clubes",
+    "source_id": "node:6693596657",
+    "grupo_fuente": "generador",
+    "lat": -31.4418878,
+    "lon": -64.1613757,
+    "tags": {
+      "addr:housenumber": "2428",
+      "addr:street": "Tosno",
+      "amenity": "community_centre",
+      "club": "scout",
+      "community_centre": "home_club",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout Virgen Inmaculada de la Montaña",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "35"
+    }
+  },
+  {
+    "name": "Grupo Scout Claudio Pocho Lepratti",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Doctor Salvador Mazza 7000",
+    "source": "generadores_clubes",
+    "source_id": "node:6693596685",
+    "grupo_fuente": "generador",
+    "lat": -31.4689323,
+    "lon": -64.0845916,
+    "tags": {
+      "addr:housenumber": "7000",
+      "addr:street": "Doctor Salvador Mazza",
+      "amenity": "community_centre",
+      "club": "scout",
+      "community_centre": "home_club",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout Claudio Pocho Lepratti",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "1119"
+    }
+  },
+  {
+    "name": "Grupo Scout Deán Funes",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:6693597054",
+    "grupo_fuente": "generador",
+    "lat": -31.4448943,
+    "lon": -64.1186616,
+    "tags": {
+      "amenity": "community_centre",
+      "club": "scout",
+      "community_centre": "home_club",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout Deán Funes",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "523"
+    }
+  },
+  {
+    "name": "Grupo Scout Juana de Arco",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Corrientes 392",
+    "source": "generadores_clubes",
+    "source_id": "node:6693597075",
+    "grupo_fuente": "generador",
+    "lat": -31.4209702,
+    "lon": -64.18042,
+    "tags": {
+      "addr:housenumber": "392",
+      "addr:street": "Corrientes",
+      "amenity": "community_centre",
+      "club": "scout",
+      "community_centre": "home_club",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout Juana de Arco",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "1232"
+    }
+  },
+  {
+    "name": "Grupo Scout Jerónimo Luis de Cabrera",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Río Segundo 1675",
+    "source": "generadores_clubes",
+    "source_id": "node:6693597195",
+    "grupo_fuente": "generador",
+    "lat": -31.428941,
+    "lon": -64.131114,
+    "tags": {
+      "addr:housenumber": "1675",
+      "addr:street": "Río Segundo",
+      "amenity": "community_centre",
+      "club": "scout",
+      "community_centre": "home_club",
+      "fixme": "revisar posición y direccón",
+      "name": "Grupo Scout Jerónimo Luis de Cabrera",
+      "network": "Scouts de Argentina",
+      "opening_hours": "Sa 15:00-18:00",
+      "ref": "504"
+    }
+  },
+  {
+    "name": "Grupo Scout 353 - Vírgen Inmaculada de la Montaña",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Tosno 2833",
+    "source": "generadores_clubes",
+    "source_id": "node:9439671561",
+    "grupo_fuente": "generador",
+    "lat": -31.4441609,
+    "lon": -64.161272,
+    "tags": {
+      "addr:housenumber": "2833",
+      "addr:street": "Tosno",
+      "club": "scout",
+      "name": "Grupo Scout 353 - Vírgen Inmaculada de la Montaña"
+    }
+  },
+  {
+    "name": "Club Atlético Palermo",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "node:13255857595",
+    "grupo_fuente": "generador",
+    "lat": -31.4264297,
+    "lon": -64.1436538,
+    "tags": {
+      "club": "sport",
+      "leisure": "sports_centre",
+      "name": "Club Atlético Palermo"
+    }
+  },
+  {
+    "name": "Córdoba Lawn Tenis",
+    "email": "",
+    "website": "https://www.cordobalawntenis.com.ar/",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:849501211",
+    "grupo_fuente": "generador",
+    "lat": -31.432676,
+    "lon": -64.1815891,
+    "tags": {
+      "club": "sport",
+      "name": "Córdoba Lawn Tenis",
+      "website": "https://www.cordobalawntenis.com.ar/"
+    }
+  },
+  {
+    "name": "Predio General Paz Juniors",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_clubes",
+    "source_id": "way:1174313595",
+    "grupo_fuente": "generador",
+    "lat": -31.4161639,
+    "lon": -64.1114946,
+    "tags": {
+      "club": "sport",
+      "name": "Predio General Paz Juniors"
+    }
+  },
+  {
+    "name": "SUTEP Sindicato Espect. públicos",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Achával Rodríguez",
+    "source": "generadores_sindicales",
+    "source_id": "node:5606121221",
+    "grupo_fuente": "generador",
+    "lat": -31.4244598,
+    "lon": -64.1912236,
+    "tags": {
+      "addr:street": "Achával Rodríguez",
+      "name": "SUTEP Sindicato Espect. públicos",
+      "office": "company"
+    }
+  },
+  {
+    "name": "Sindicato de Camioneros",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Avenida José Manuel Estrada 107",
+    "source": "generadores_sindicales",
+    "source_id": "node:13127987757",
+    "grupo_fuente": "generador",
+    "lat": -31.4276734,
+    "lon": -64.1871832,
+    "tags": {
+      "addr:housenumber": "107",
+      "addr:street": "Avenida José Manuel Estrada",
+      "check_date": "2025-09-08",
+      "name": "Sindicato de Camioneros",
+      "office": "union",
+      "opening_hours": "Mo-Fr 08:15-17:00"
+    }
+  },
+  {
+    "name": "Sindicato de Camioneros",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sindicales",
+    "source_id": "way:1451358420",
+    "grupo_fuente": "generador",
+    "lat": -31.490537,
+    "lon": -64.2540672,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Sindicato de Camioneros"
+    }
+  },
+  {
+    "name": "Gremio Galeria",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Avenida Pablo Ricchieri 3331",
+    "source": "generadores_sindicales",
+    "source_id": "node:5052437621",
+    "grupo_fuente": "generador",
+    "lat": -31.4512942,
+    "lon": -64.175831,
+    "tags": {
+      "addr:housenumber": "3331",
+      "addr:street": "Avenida Pablo Ricchieri",
+      "name": "Gremio Galeria",
+      "name:en": "Gremio Galeria",
+      "name:es": "Gremio Galeria",
+      "tourism": "attraction"
+    }
+  },
+  {
+    "name": "Sindicato de Farmacia",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_sindicales",
+    "source_id": "way:484722115",
+    "grupo_fuente": "generador",
+    "lat": -31.486466,
+    "lon": -64.1725052,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Sindicato de Farmacia",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Cooperativa La Unidad",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_cooperativas",
+    "source_id": "node:3608178811",
+    "grupo_fuente": "generador",
+    "lat": -31.4292041,
+    "lon": -64.1124736,
+    "tags": {
+      "name": "Cooperativa La Unidad",
+      "place": "neighbourhood"
+    }
+  },
+  {
+    "name": "Centro de Salud 71 - Cooperativa El Arco",
+    "email": "",
+    "website": "",
+    "phone": "+54 351 433 8631",
+    "direccion": "",
+    "source": "generadores_cooperativas",
+    "source_id": "node:10742537147",
+    "grupo_fuente": "generador",
+    "lat": -31.4522134,
+    "lon": -64.1330291,
+    "tags": {
+      "amenity": "clinic",
+      "healthcare": "clinic",
+      "name": "Centro de Salud 71 - Cooperativa El Arco",
+      "phone": "+54 351 433 8631"
+    }
+  },
+  {
+    "name": "Gimnasio Jockey Club Córdoba",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "node:4512884053",
+    "grupo_fuente": "generador",
+    "lat": -31.3809894,
+    "lon": -64.2290987,
+    "tags": {
+      "leisure": "fitness_centre",
+      "name": "Gimnasio Jockey Club Córdoba"
+    }
+  },
+  {
+    "name": "Club Social y Deportivo Los Amigos",
+    "email": "",
+    "website": "",
+    "phone": "+54 9 351 512 9282",
+    "direccion": "Bulevar Los Polacos, Córdoba",
+    "source": "generadores_deportivos",
+    "source_id": "node:4558073389",
+    "grupo_fuente": "generador",
+    "lat": -31.3177928,
+    "lon": -64.2324568,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:street": "Bulevar Los Polacos",
+      "building": "yes",
+      "name": "Club Social y Deportivo Los Amigos",
+      "phone": "+54 9 351 512 9282"
+    }
+  },
+  {
+    "name": "Jockey Club",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "node:11338994549",
+    "grupo_fuente": "generador",
+    "lat": -31.4130733,
+    "lon": -64.1860156,
+    "tags": {
+      "name": "Jockey Club",
+      "office": "company"
+    }
+  },
+  {
+    "name": "Club Social STIA",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Bulevar Los Alemanes 3701, Córdoba",
+    "source": "generadores_deportivos",
+    "source_id": "node:11564734193",
+    "grupo_fuente": "generador",
+    "lat": -31.3439211,
+    "lon": -64.2185411,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:housenumber": "3701",
+      "addr:postcode": "5000",
+      "addr:street": "Bulevar Los Alemanes",
+      "club": "sport",
+      "name": "Club Social STIA"
+    }
+  },
+  {
+    "name": "Club Atlético Las Palmas",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "way:210687215",
+    "grupo_fuente": "generador",
+    "lat": -31.4049027,
+    "lon": -64.2382731,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Atlético Las Palmas"
+    }
+  },
+  {
+    "name": "Club Atlético Huracán",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "Rafael Candia, Córdoba",
+    "source": "generadores_deportivos",
+    "source_id": "way:286702493",
+    "grupo_fuente": "generador",
+    "lat": -31.3729078,
+    "lon": -64.2120239,
+    "tags": {
+      "addr:city": "Córdoba",
+      "addr:postcode": "5000",
+      "addr:street": "Rafael Candia",
+      "leisure": "sports_centre",
+      "name": "Club Atlético Huracán",
+      "sport": "soccer"
+    }
+  },
+  {
+    "name": "Club Atlético Belgrano",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "way:304145625",
+    "grupo_fuente": "generador",
+    "lat": -31.4035027,
+    "lon": -64.2063021,
+    "tags": {
+      "access": "private",
+      "leisure": "pitch",
+      "lit": "yes",
+      "name": "Club Atlético Belgrano",
+      "sport": "soccer",
+      "surface": "grass"
+    }
+  },
+  {
+    "name": "Club Deportivo Lasallano",
+    "email": "",
+    "website": "",
+    "phone": "",
+    "direccion": "",
+    "source": "generadores_deportivos",
+    "source_id": "way:358451189",
+    "grupo_fuente": "generador",
+    "lat": -31.3532366,
+    "lon": -64.262499,
+    "tags": {
+      "leisure": "sports_centre",
+      "name": "Club Deportivo Lasallano",
+      "wheelchair": "limited"
+    }
+  },
+  {
     "name": "Grupo Scout Cutaquelen",
     "email": "",
     "website": "",
@@ -611,40 +1065,6 @@
     }
   },
   {
-    "name": "Cooperativa La Unidad",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_cooperativas",
-    "source_id": "node:3608178811",
-    "grupo_fuente": "generador",
-    "lat": -31.4292041,
-    "lon": -64.1124736,
-    "tags": {
-      "name": "Cooperativa La Unidad",
-      "place": "neighbourhood"
-    }
-  },
-  {
-    "name": "Centro de Salud 71 - Cooperativa El Arco",
-    "email": "",
-    "website": "",
-    "phone": "+54 351 433 8631",
-    "direccion": "",
-    "source": "generadores_cooperativas",
-    "source_id": "node:10742537147",
-    "grupo_fuente": "generador",
-    "lat": -31.4522134,
-    "lon": -64.1330291,
-    "tags": {
-      "amenity": "clinic",
-      "healthcare": "clinic",
-      "name": "Centro de Salud 71 - Cooperativa El Arco",
-      "phone": "+54 351 433 8631"
-    }
-  },
-  {
     "name": "Cooperativa de Servicios",
     "email": "",
     "website": "",
@@ -832,24 +1252,6 @@
     }
   },
   {
-    "name": "Jockey Club",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "relation:5297853",
-    "grupo_fuente": "generador",
-    "lat": -31.4545734,
-    "lon": -64.1807634,
-    "tags": {
-      "admin_level": "9",
-      "boundary": "administrative",
-      "name": "Jockey Club",
-      "type": "boundary"
-    }
-  },
-  {
     "name": "Club Atlético San Lorenzo",
     "email": "",
     "website": "",
@@ -885,23 +1287,6 @@
       "description": "Abierto de 8:00-0:00 de Domingo a Sábado. Tel 0351-4512093 http://gralpazjuniors.com.ar Excelente club familiar que cuenta con diversas actividades. Actualmente mejorando el estado de sus canchas de handball y basquet, vestuarios y la seguridad.",
       "leisure": "sports_centre",
       "name": "Club Atlético General Paz -Junior´s"
-    }
-  },
-  {
-    "name": "Club Atlético Palermo",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "node:13255857595",
-    "grupo_fuente": "generador",
-    "lat": -31.4264297,
-    "lon": -64.1436538,
-    "tags": {
-      "club": "sport",
-      "leisure": "sports_centre",
-      "name": "Club Atlético Palermo"
     }
   },
   {
@@ -8967,23 +9352,6 @@
       "addr:street": "Avenida Ciudad de Valparaíso",
       "name": "Pintecord",
       "shop": "paint"
-    }
-  },
-  {
-    "name": "SUTEP Sindicato Espect. públicos",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Achával Rodríguez",
-    "source": "generadores_sindicales",
-    "source_id": "node:5606121221",
-    "grupo_fuente": "generador",
-    "lat": -31.4244598,
-    "lon": -64.1912236,
-    "tags": {
-      "addr:street": "Achával Rodríguez",
-      "name": "SUTEP Sindicato Espect. públicos",
-      "office": "company"
     }
   },
   {
@@ -23056,26 +23424,6 @@
     }
   },
   {
-    "name": "Sindicato de Camioneros",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Avenida José Manuel Estrada 107",
-    "source": "generadores_sindicales",
-    "source_id": "node:13127987757",
-    "grupo_fuente": "generador",
-    "lat": -31.4276734,
-    "lon": -64.1871832,
-    "tags": {
-      "addr:housenumber": "107",
-      "addr:street": "Avenida José Manuel Estrada",
-      "check_date": "2025-09-08",
-      "name": "Sindicato de Camioneros",
-      "office": "union",
-      "opening_hours": "Mo-Fr 08:15-17:00"
-    }
-  },
-  {
     "name": "Tribunal de Cuentas de la Provincia de Córdoba",
     "email": "",
     "website": "https://www.tcpcordoba.gov.ar/",
@@ -34011,175 +34359,6 @@
     }
   },
   {
-    "name": "Grupo Scout Virgen Inmaculada de la Montaña",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Tosno 2428",
-    "source": "generadores_clubes",
-    "source_id": "node:6693596657",
-    "grupo_fuente": "generador",
-    "lat": -31.4418878,
-    "lon": -64.1613757,
-    "tags": {
-      "addr:housenumber": "2428",
-      "addr:street": "Tosno",
-      "amenity": "community_centre",
-      "club": "scout",
-      "community_centre": "home_club",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout Virgen Inmaculada de la Montaña",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "35"
-    }
-  },
-  {
-    "name": "Grupo Scout Claudio Pocho Lepratti",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Doctor Salvador Mazza 7000",
-    "source": "generadores_clubes",
-    "source_id": "node:6693596685",
-    "grupo_fuente": "generador",
-    "lat": -31.4689323,
-    "lon": -64.0845916,
-    "tags": {
-      "addr:housenumber": "7000",
-      "addr:street": "Doctor Salvador Mazza",
-      "amenity": "community_centre",
-      "club": "scout",
-      "community_centre": "home_club",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout Claudio Pocho Lepratti",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "1119"
-    }
-  },
-  {
-    "name": "Grupo Scout Deán Funes",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_clubes",
-    "source_id": "node:6693597054",
-    "grupo_fuente": "generador",
-    "lat": -31.4448943,
-    "lon": -64.1186616,
-    "tags": {
-      "amenity": "community_centre",
-      "club": "scout",
-      "community_centre": "home_club",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout Deán Funes",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "523"
-    }
-  },
-  {
-    "name": "Grupo Scout Juana de Arco",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Corrientes 392",
-    "source": "generadores_clubes",
-    "source_id": "node:6693597075",
-    "grupo_fuente": "generador",
-    "lat": -31.4209702,
-    "lon": -64.18042,
-    "tags": {
-      "addr:housenumber": "392",
-      "addr:street": "Corrientes",
-      "amenity": "community_centre",
-      "club": "scout",
-      "community_centre": "home_club",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout Juana de Arco",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "1232"
-    }
-  },
-  {
-    "name": "Grupo Scout Jerónimo Luis de Cabrera",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Río Segundo 1675",
-    "source": "generadores_clubes",
-    "source_id": "node:6693597195",
-    "grupo_fuente": "generador",
-    "lat": -31.428941,
-    "lon": -64.131114,
-    "tags": {
-      "addr:housenumber": "1675",
-      "addr:street": "Río Segundo",
-      "amenity": "community_centre",
-      "club": "scout",
-      "community_centre": "home_club",
-      "fixme": "revisar posición y direccón",
-      "name": "Grupo Scout Jerónimo Luis de Cabrera",
-      "network": "Scouts de Argentina",
-      "opening_hours": "Sa 15:00-18:00",
-      "ref": "504"
-    }
-  },
-  {
-    "name": "Grupo Scout 353 - Vírgen Inmaculada de la Montaña",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Tosno 2833",
-    "source": "generadores_clubes",
-    "source_id": "node:9439671561",
-    "grupo_fuente": "generador",
-    "lat": -31.4441609,
-    "lon": -64.161272,
-    "tags": {
-      "addr:housenumber": "2833",
-      "addr:street": "Tosno",
-      "club": "scout",
-      "name": "Grupo Scout 353 - Vírgen Inmaculada de la Montaña"
-    }
-  },
-  {
-    "name": "Córdoba Lawn Tenis",
-    "email": "",
-    "website": "https://www.cordobalawntenis.com.ar/",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_clubes",
-    "source_id": "way:849501211",
-    "grupo_fuente": "generador",
-    "lat": -31.432676,
-    "lon": -64.1815891,
-    "tags": {
-      "club": "sport",
-      "name": "Córdoba Lawn Tenis",
-      "website": "https://www.cordobalawntenis.com.ar/"
-    }
-  },
-  {
-    "name": "Predio General Paz Juniors",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_clubes",
-    "source_id": "way:1174313595",
-    "grupo_fuente": "generador",
-    "lat": -31.4161639,
-    "lon": -64.1114946,
-    "tags": {
-      "club": "sport",
-      "name": "Predio General Paz Juniors"
-    }
-  },
-  {
     "name": "Grupo Scout Martín Fierro",
     "email": "",
     "website": "",
@@ -34674,26 +34853,6 @@
     }
   },
   {
-    "name": "Club Social STIA",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Bulevar Los Alemanes 3701, Córdoba",
-    "source": "generadores_clubes",
-    "source_id": "node:11564734193",
-    "grupo_fuente": "generador",
-    "lat": -31.3439211,
-    "lon": -64.2185411,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:housenumber": "3701",
-      "addr:postcode": "5000",
-      "addr:street": "Bulevar Los Alemanes",
-      "club": "sport",
-      "name": "Club Social STIA"
-    }
-  },
-  {
     "name": "Club Argüello Juniors",
     "email": "",
     "website": "",
@@ -34839,114 +34998,6 @@
       "building": "school",
       "name": "Colegio de María",
       "type": "multipolygon"
-    }
-  },
-  {
-    "name": "Gimnasio Jockey Club Córdoba",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "node:4512884053",
-    "grupo_fuente": "generador",
-    "lat": -31.3809894,
-    "lon": -64.2290987,
-    "tags": {
-      "leisure": "fitness_centre",
-      "name": "Gimnasio Jockey Club Córdoba"
-    }
-  },
-  {
-    "name": "Club Social y Deportivo Los Amigos",
-    "email": "",
-    "website": "",
-    "phone": "+54 9 351 512 9282",
-    "direccion": "Bulevar Los Polacos, Córdoba",
-    "source": "generadores_deportivos",
-    "source_id": "node:4558073389",
-    "grupo_fuente": "generador",
-    "lat": -31.3177928,
-    "lon": -64.2324568,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:street": "Bulevar Los Polacos",
-      "building": "yes",
-      "name": "Club Social y Deportivo Los Amigos",
-      "phone": "+54 9 351 512 9282"
-    }
-  },
-  {
-    "name": "Club Atlético Las Palmas",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "way:210687215",
-    "grupo_fuente": "generador",
-    "lat": -31.4049027,
-    "lon": -64.2382731,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Club Atlético Las Palmas"
-    }
-  },
-  {
-    "name": "Club Atlético Huracán",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Rafael Candia, Córdoba",
-    "source": "generadores_deportivos",
-    "source_id": "way:286702493",
-    "grupo_fuente": "generador",
-    "lat": -31.3729078,
-    "lon": -64.2120239,
-    "tags": {
-      "addr:city": "Córdoba",
-      "addr:postcode": "5000",
-      "addr:street": "Rafael Candia",
-      "leisure": "sports_centre",
-      "name": "Club Atlético Huracán",
-      "sport": "soccer"
-    }
-  },
-  {
-    "name": "Club Atlético Belgrano",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "way:304145625",
-    "grupo_fuente": "generador",
-    "lat": -31.4035027,
-    "lon": -64.2063021,
-    "tags": {
-      "access": "private",
-      "leisure": "pitch",
-      "lit": "yes",
-      "name": "Club Atlético Belgrano",
-      "sport": "soccer",
-      "surface": "grass"
-    }
-  },
-  {
-    "name": "Club Deportivo Lasallano",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_deportivos",
-    "source_id": "way:358451189",
-    "grupo_fuente": "generador",
-    "lat": -31.3532366,
-    "lon": -64.262499,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Club Deportivo Lasallano",
-      "wheelchair": "limited"
     }
   },
   {
@@ -54919,59 +54970,6 @@
     "tags": {
       "leisure": "sports_centre",
       "name": "SEP - Sindicato de Empleados Públicos"
-    }
-  },
-  {
-    "name": "Gremio Galeria",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "Avenida Pablo Ricchieri 3331",
-    "source": "generadores_sindicales",
-    "source_id": "node:5052437621",
-    "grupo_fuente": "generador",
-    "lat": -31.4512942,
-    "lon": -64.175831,
-    "tags": {
-      "addr:housenumber": "3331",
-      "addr:street": "Avenida Pablo Ricchieri",
-      "name": "Gremio Galeria",
-      "name:en": "Gremio Galeria",
-      "name:es": "Gremio Galeria",
-      "tourism": "attraction"
-    }
-  },
-  {
-    "name": "Sindicato de Farmacia",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sindicales",
-    "source_id": "way:484722115",
-    "grupo_fuente": "generador",
-    "lat": -31.486466,
-    "lon": -64.1725052,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Sindicato de Farmacia",
-      "sport": "soccer"
-    }
-  },
-  {
-    "name": "Sindicato de Camioneros",
-    "email": "",
-    "website": "",
-    "phone": "",
-    "direccion": "",
-    "source": "generadores_sindicales",
-    "source_id": "way:1451358420",
-    "grupo_fuente": "generador",
-    "lat": -31.490537,
-    "lon": -64.2540672,
-    "tags": {
-      "leisure": "sports_centre",
-      "name": "Sindicato de Camioneros"
     }
   },
   {
