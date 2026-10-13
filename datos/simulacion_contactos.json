@@ -35,6 +35,11 @@
     "email": "info@colegiodeopticoscba.org.ar"
   },
   {
+    "name": "Consejo Profesional de Ciencias Económicas de Córdoba",
+    "tipo": "generador",
+    "email": "cpcecba@cpcecba.org.ar"
+  },
+  {
     "name": "ALB",
     "tipo": "comercio",
     "email": "ventas@albamoblamientos.com.ar"
@@ -90,6 +95,11 @@
     "email": "catalinacalzados@outlook.com.ar"
   },
   {
+    "name": "Centro Médico Privado San Andres",
+    "tipo": "comercio",
+    "email": "info@centromedicosanandres.com"
+  },
+  {
     "name": "Centro Modelo",
     "tipo": "comercio",
     "email": "info@centromodelova.com"
@@ -128,6 +138,11 @@
     "name": "Clinica y Maternidad Del Sol",
     "tipo": "comercio",
     "email": "comunicacionclinicadelsol@gmail.com"
+  },
+  {
+    "name": "Club Milanesa",
+    "tipo": "comercio",
+    "email": "info@elclubdelamilanesa.com"
   },
   {
     "name": "Cremolatti",

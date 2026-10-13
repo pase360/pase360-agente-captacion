@@ -5416,7 +5416,7 @@
   },
   {
     "name": "Club Milanesa",
-    "email": "",
+    "email": "info@elclubdelamilanesa.com",
     "website": "https://www.elclubdelamilanesa.com/",
     "phone": "+54 351 460 8080",
     "direccion": "Boulevard Chacabuco 895, Córdoba",
@@ -5441,9 +5441,9 @@
     },
     "tipo": "comercio",
     "clasificacion_motivo": "OSM identifica actividad comercial o de servicios",
-    "contactable": false,
-    "email_source": "",
-    "estado": "sin_email"
+    "email_source": "website",
+    "contactable": true,
+    "estado": "listo_para_contactar"
   },
   {
     "name": "Sanatorio Allende",
@@ -6193,7 +6193,7 @@
   },
   {
     "name": "Centro Médico Privado San Andres",
-    "email": "",
+    "email": "info@centromedicosanandres.com",
     "website": "https://centromedicosanandres.com/",
     "phone": "(351) 4256829 / 4256464 / 4257907",
     "direccion": "Nicolás Avellaneda 464",
@@ -6216,9 +6216,9 @@
     },
     "tipo": "comercio",
     "clasificacion_motivo": "Servicio sanitario/comercial aunque pertenezca a una organización",
-    "contactable": false,
-    "email_source": "",
-    "estado": "sin_email"
+    "email_source": "website",
+    "contactable": true,
+    "estado": "listo_para_contactar"
   },
   {
     "name": "Instituto del Quemado",
@@ -26576,7 +26576,7 @@
     "tipo": "generador",
     "clasificacion_motivo": "Club o institución deportiva identificada",
     "contactable": false,
-    "email_fuente": "",
+    "email_source": "",
     "estado": "sin_email"
   },
   {
@@ -49913,7 +49913,7 @@
     "website": "",
     "phone": "",
     "direccion": "",
-    "source": "generadores_deportivos",
+    "source": "generadores_clubes",
     "source_id": "node:10232299898",
     "grupo_fuente": "generador",
     "lat": -31.4940669,
@@ -49968,7 +49968,7 @@
     "tipo": "generador",
     "clasificacion_motivo": "Club o institución deportiva identificada",
     "contactable": false,
-    "email_fuente": "",
+    "email_source": "",
     "estado": "sin_email"
   },
   {
@@ -50020,7 +50020,7 @@
     "website": "",
     "phone": "",
     "direccion": "",
-    "source": "generadores_clubes",
+    "source": "generadores_deportivos",
     "source_id": "node:13255857595",
     "grupo_fuente": "generador",
     "lat": -31.4264297,
@@ -57625,7 +57625,7 @@
   },
   {
     "name": "Consejo Profesional de Ciencias Económicas de Córdoba",
-    "email": "",
+    "email": "cpcecba@cpcecba.org.ar",
     "website": "https://web.cpcecba.org.ar",
     "phone": "",
     "direccion": "Córdoba Capital, Córdoba, Argentina",
@@ -57639,9 +57639,9 @@
     },
     "tipo": "generador",
     "clasificacion_motivo": "Colegio o consejo profesional",
-    "contactable": false,
-    "email_source": "",
-    "estado": "sin_email"
+    "email_source": "website",
+    "contactable": true,
+    "estado": "listo_para_contactar"
   },
   {
     "name": "Club Atlético Las Palmas",
