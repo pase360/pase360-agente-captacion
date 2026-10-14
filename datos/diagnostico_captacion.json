@@ -1,20 +1,20 @@
 {
   "por_tipo": {
     "comercio": 610,
-    "generador": 67,
-    "dudoso": 241,
+    "generador": 66,
+    "dudoso": 242,
     "descartado": 78,
     "otro": 0
   },
   "por_estado": {
     "listo_para_contactar": 72,
-    "sin_email": 605,
-    "requiere_decision": 241,
+    "sin_email": 604,
+    "requiere_decision": 242,
     "descartado": 78
   },
   "sin_email_por_tipo": {
     "comercio": 546,
-    "generador": 59,
+    "generador": 58,
     "otro": 0
   },
   "descartados_por_motivo": {
@@ -85,7 +85,7 @@
       "motivo": "Club o institución deportiva identificada"
     },
     {
-      "name": "Club Atletico Las Palmas",
+      "name": "Club Atlético Las Palmas",
       "email": "",
       "motivo": "Club o institución deportiva identificada"
     },
@@ -389,7 +389,7 @@
       "website": ""
     },
     {
-      "name": "Club Atletico Las Palmas",
+      "name": "Club Atlético Las Palmas",
       "tipo": "generador",
       "website": ""
     },
@@ -614,10 +614,10 @@
     "estado_total": 996,
     "cuadra": true
   },
-  "encontrados": 3052,
+  "encontrados": 3063,
   "procesados": 1000,
   "nuevos": 918,
   "descartados": 78,
   "excluidos": 4,
-  "fecha_ejecucion": "2026-10-13T13:02:25.982402"
+  "fecha_ejecucion": "2026-10-14T13:01:15.063388"
 }
