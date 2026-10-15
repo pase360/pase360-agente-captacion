@@ -7,13 +7,13 @@
     "otro": 0
   },
   "por_estado": {
-    "listo_para_contactar": 72,
-    "sin_email": 604,
+    "listo_para_contactar": 73,
+    "sin_email": 603,
     "requiere_decision": 242,
     "descartado": 78
   },
   "sin_email_por_tipo": {
-    "comercio": 546,
+    "comercio": 545,
     "generador": 58,
     "otro": 0
   },
@@ -303,7 +303,7 @@
     },
     {
       "name": "Aconcagua Sanatorio Privado",
-      "email": "",
+      "email": "aconcagua.comunicacion@gmail.com",
       "motivo": "Servicio sanitario/comercial aunque pertenezca a una organización"
     },
     {
@@ -604,9 +604,9 @@
   "duplicados": 4,
   "ya_contactados": 0,
   "sin_nombre": 0,
-  "listos_detectados": 72,
-  "listos_seleccionados": 72,
-  "listos_comercio": 64,
+  "listos_detectados": 73,
+  "listos_seleccionados": 73,
+  "listos_comercio": 65,
   "listos_generador": 8,
   "clasificados": 996,
   "cuadre": {
@@ -614,10 +614,10 @@
     "estado_total": 996,
     "cuadra": true
   },
-  "encontrados": 3063,
+  "encontrados": 3061,
   "procesados": 1000,
   "nuevos": 918,
   "descartados": 78,
   "excluidos": 4,
-  "fecha_ejecucion": "2026-10-14T13:01:15.063388"
+  "fecha_ejecucion": "2026-10-15T12:51:25.866075"
 }
